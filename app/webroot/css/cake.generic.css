@@ -23,8 +23,14 @@
 }
 
 /** General Style Info **/
+
+html{
+	width: 810px;
+}
+
 body {
-	background: #003d4c;
+	width: 810px;
+	background-image: url(../img/back.png);
 	color: #fff;
 	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
 	font-size:90%;
@@ -72,8 +78,204 @@ ul, li {
 p {
 	margin: 0 0 1em 0;
 }
+/** - fangate **/
+.fangate{
+	width: 810px;
+}
+
+.header-fangate{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 810px;
+	height: 560px;
+	background-image: url(../img/nube1.png), url(../img/titulo1.png), url(../img/titulo2.png), url(../img/nube2.png), url(../img/nube3.png);
+	background-position: 0px -44px, center top, center 130px, 0px 0px, 0px 124px;
+	background-repeat: no-repeat;
+
+	/* Aqui colocamos la transicion para cada navegador */
+	-webkit-transition:all 4s ease-out;  /* Chrome y Safari */
+	-o-transition:all 4s ease-out;  /* Opera */
+	-moz-transition:all 4s ease-out;  /* Mozilla Firefox */
+	-ms-transition:all 4s ease-out;   /* Internet Explorer */
+	transition:all 4s ease-out;  /* W3C */
+}
+
+.like{
+	text-indent: -9999px;
+	height: 130px;
+	width: 372px;
+	position: absolute;
+	top:310px;
+	margin-left: 50%;
+	left: -186px;
+	background-image: url(../img/fangate_texto.png);
+}
+
+.footer-fangate{
+	position: absolute;
+	top: 550px;
+	left: 0;
+	width: 810px;
+	height: 320px;
+	background-image: url(../img/nube5.png), url(../img/nube4.png);
+	background-position: 0px 30px, right bottom;
+	background-repeat: no-repeat;
+
+	/* Aqui colocamos la transicion para cada navegador */
+	-webkit-transition:all 4s ease-out;  /* Chrome y Safari */
+	-o-transition:all 4s ease-out;  /* Opera */
+	-moz-transition:all 4s ease-out;  /* Mozilla Firefox */
+	-ms-transition:all 4s ease-out;   /* Internet Explorer */
+	transition:all 4s ease-out;  /* W3C */
+}
+
+#bienvenida_texto{
+	display: none;
+	background-image: url(../img/Bienvenida.png);
+	width: 676px;
+	height: 309px;
+	position: absolute;
+	top: 190px;
+	left: 60px
+;
+	/* Aqui colocamos la transicion para cada navegador */
+	-webkit-transition:all 4s ease-out;  /* Chrome y Safari */
+	-o-transition:all 4s ease-out;  /* Opera */
+	-moz-transition:all 4s ease-out;  /* Mozilla Firefox */
+	-ms-transition:all 4s ease-out;   /* Internet Explorer */
+	transition:all 4s ease-out;  /* W3C */
+}
+
+.estilos{
+	position: absolute;
+	top: 623px;
+	left: 29px;
+}
+
+
+#seleccionar_tema{
+	margin-left: 13px;
+	background-image: url(../img/selecciona_tema.png);
+	width: 707px;
+	height: 20px;
+	text-indent: -9999px;
+}
+
+.temas{
+	opacity: 0;
+	width: 784px;
+	height: 150px;
+	margin-top: 10px;
+}
+
+#tema1{
+	float: left;
+	background-image: url(../img/tema1_up.png);
+	width: 181px;
+	height: 149px;
+	text-indent: -9999px;
+}
+
+
+#tema1:hover{
+	background-image: url(../img/tema1_down.png);
+}
+
+#tema2{
+	float: left;
+	margin-left: 10px;
+	background-image: url(../img/tema2_up.png);
+	width: 181px;
+	height: 149px;
+	text-indent: -9999px;
+}
+
+
+#tema2:hover{
+	background-image: url(../img/tema2_down.png);
+}
+
+#tema3{
+	float: left;
+		margin-left: 10px;
+
+	background-image: url(../img/tema3_up.png);
+	width: 181px;
+	height: 149px;
+	text-indent: -9999px;
+}
+
+#tema3:hover{
+	background-image: url(../img/tema3_down.png);
+}
+
+#tema4{
+	float: left;
+		margin-left: 10px;
+
+	background-image: url(../img/tema4_up.png);
+	width: 181px;
+	height: 149px;
+	text-indent: -9999px;
+}
+
+#tema4:hover{
+	background-image: url(../img/tema4_down.png);
+}
 
 /** Layout **/
+.menu{
+	width: 129px;
+	height: 20px;
+	position: absolute;
+	top: 30px;
+	right: 10px;
+}
+
+.ask{
+	height: 20px;
+	width: 23px;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	float: left;
+	margin: 0;
+	background-image: url(../img/ayuda_down.png);
+}
+
+.ask:hover{
+	background-image: url(../img/ayuda_up.png);
+}
+
+.settings{
+	height: 20px;
+	width: 23px;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	float: left;
+	margin: 0px 15px;
+	background-image: url(../img/ajustes_down.png);
+
+}
+
+.settings:hover{
+	background-image: url(../img/ajustes_up.png);
+}
+
+.home{
+	height: 20px;
+	width: 23px;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	float: left;
+	margin: 0;
+	background-image: url(../img/home_down.png);
+}
+
+.home:hover{
+	background-image: url(../img/home_up.png);
+}
+
 #container {
 	text-align: left;
 }
