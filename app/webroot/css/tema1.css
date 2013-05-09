@@ -1,0 +1,192 @@
+@charset "utf-8";
+/**
+ *
+ * CSS Tema 1 / Memorias de Embarazo
+ *
+ * 
+ */
+
+body {
+	width: 810px;
+	background-image: url(../img/back.png);
+	color: #fff;
+	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
+	font-size:90%;
+	margin: 0;
+}
+
+
+.header{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 810px;
+	height: 190px;
+	background-image: url(../img/nube1.png), url(../img/titulo1.png), url(../img/titulo2.png), url(../img/nube2.png), url(../img/nube3.png);
+	background-position: 0px -87px, center -46px, center 82px, 0px -102px, 0px -500px;
+	background-repeat: no-repeat;
+
+	/* Aqui colocamos la transicion para cada navegador */
+	-webkit-transition:all 4s ease-out;  /* Chrome y Safari */
+	-o-transition:all 4s ease-out;  /* Opera */
+	-moz-transition:all 4s ease-out;  /* Mozilla Firefox */
+	-ms-transition:all 4s ease-out;   /* Internet Explorer */
+	transition:all 4s ease-out;  /* W3C */
+}
+
+.menu{
+	position: absolute;
+	top: 95px;
+	right: -12px;
+}
+
+.content{
+	position: absolute;
+	top: 190px;
+	left: 0px;
+}
+
+.cover_photo{
+	width: 392px;
+	height: 297px;
+	position: absolute;
+	left: 209px;
+	background-image: url(../img/marco.png), url(../img/marco_fondo.png);
+	background-position: top left, center center;
+	text-indent: -9999px;
+}
+
+.pick_fb{
+	background-image: url(../img/bt_elegir.png);
+	width: 107px;
+	height: 20px;
+	position: relative;
+	top: 130px;
+	left: 62px;
+}
+
+.upload_bt{
+	background-image: url(../img/bt_subir_foto.png);
+	width: 107px;
+	height: 20px;
+	position: relative;
+	top: 110px;
+	left: 200px;
+}
+
+p.whatdo{
+	background-image: url(../img/que-quieres-hacer.png);
+	width: 285px;
+	height: 34px;
+	position: absolute;
+	left: 262px;
+	text-indent: -9999px;
+	top: 300px;
+}
+
+.cover_menu{
+	width: 600px;
+	position: absolute;
+	left: 105px;
+	top: 350px;
+}
+
+.write_bt{
+	float: left;
+	background-image: url(../img/bt_escribir_up.png);
+	width: 188px;
+	height: 123px;
+	text-indent: -9999px;
+}
+
+.write_bt:hover{
+	background-image: url(../img/bt_escribir.png);
+}
+
+
+.share_bt{
+	float: left;
+	background-image: url(../img/bt_compartir_up.png);
+	width: 188px;
+	height: 130px;
+	text-indent: -9999px;
+}
+
+.share_bt:hover{
+	background-image: url(../img/bt_compartir.png);
+}
+
+
+.watch_bt{
+	float: left;
+	background-image: url(../img/bt_ver_up.png);
+	width: 188px;
+	height: 123px;
+	text-indent: -9999px;
+}
+
+.watch_bt:hover{
+	background-image: url(../img/bt_ver.png);
+}
+
+.instructions_bt{
+	position: absolute;
+	left: 287px;
+	width: 236px;
+	height: 76px;
+	background-image: url(../img/bt_instrucciones_up.png);
+	top: 520px;
+	text-indent: -9999px;
+}
+
+.instructions_bt:hover{
+	background-image: url(../img/bt_instrucciones.png);
+}
+
+.footer{
+	position: absolute;
+	top: 810px;
+	left: 0;
+	width: 810px;
+	height: 200px;
+	background-image: url(../img/nube5.png), url(../img/nube4.png);
+	background-position: 0px 4px, 0px 6px;
+	background-repeat: no-repeat;
+
+	/* Aqui colocamos la transicion para cada navegador */
+	-webkit-transition:all 4s ease-out;  /* Chrome y Safari */
+	-o-transition:all 4s ease-out;  /* Opera */
+	-moz-transition:all 4s ease-out;  /* Mozilla Firefox */
+	-ms-transition:all 4s ease-out;   /* Internet Explorer */
+	transition:all 4s ease-out;  /* W3C */
+}
+
+.footer_mtm{
+	background-image: url(../img/footer_logo.png);
+	width: 114px;
+	height: 29px;
+	text-indent: -9999px;
+	position: relative;
+	top: 157px;
+	left: 42px;
+}
+
+.footer_link{
+	background-image: url(../img/footer_site.png);
+	width: 113px;
+	height: 14px;
+	text-indent: -9999px;
+	position: absolute;
+	top: 170px;
+	right: 170px;
+}
+
+.footer_twitter{
+	background-image: url(../img/footer_twitter.png);
+	width: 100px;
+	height: 18	px;
+	text-indent: -9999px;
+	position: absolute;
+	top: 170px;
+	right: 20px;
+}
