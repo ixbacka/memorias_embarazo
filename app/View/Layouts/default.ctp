@@ -47,8 +47,54 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
+	
+
 </head>
 <body>
+
+	<div id="fb-root"></div>
+		<!-- solution for resizing ! *0* -->
+	<script type="text/javascript">  
+		   window.fbAsyncInit = function() {
+		    FB.init({
+		     appId: '163480813810636', 
+		     status: true, 
+		     cookie: true, 
+		     xfbml: true,
+		     frictionlessRequests: true,
+		     display: 'popup'
+		    });
+		    
+		    //this resizes the the i-frame 
+		    //on an interval of 100ms 
+		    //FB.Canvas.setAutoGrow();
+		 
+
+			FB.Canvas.setSize({height:900});
+			console.log('chekin g ..');
+			setTimeout("FB.Canvas.setAutoGrow()",500);
+		 
+		   };
+
+		   (function() {
+		    var e = document.createElement('script');
+		    e.async = true;
+		    e.src = document.location.protocol + 
+		     '//connect.facebook.net/en_US/all.js';
+		    document.getElementById('fb-root').appendChild(e);   
+		   }());
+
+		   // Load the SDK asynchronously
+  // (function(d, s, id){
+  //    var js, fjs = d.getElementsByTagName(s)[0];
+  //    if (d.getElementById(id)) {return;}
+  //    js = d.createElement(s); js.id = id;
+  //    js.src = "//connect.facebook.net/en_US/all.js";
+  //    fjs.parentNode.insertBefore(js, fjs);
+  //  }(document, 'script', 'facebook-jssdk'));
+
+		  
+		  </script> 
 		
 		<?php echo $this->Session->flash(); ?>
 		<?php echo $this->fetch('content'); ?>

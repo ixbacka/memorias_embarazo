@@ -1,10 +1,10 @@
 <?php
 App::uses('AppController', 'Controller');
 /**
- * FamilytreePages Controller
+ * FirstVisitPages Controller
  *
  */
-class FamilytreePagesController extends AppController {
+class FirstVisitPagesController extends AppController {
 
 /**
  * Scaffold

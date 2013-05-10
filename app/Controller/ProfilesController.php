@@ -44,7 +44,7 @@ class ProfilesController extends AppController {
 			$loginUrl = $facebook->getLoginUrl(
 			    array(
 			        'scope' => 'publish_actions,user_birthday,email,user_photos',
-			        //'redirect_uri' => 'https://www.facebook.com/pages/-/514166771955164?id=514166771955164&sk=app_419722851452946'     
+			        'redirect_uri' => 'https://www.facebook.com/pages/Nativo-Desarrollo/514166771955164?id=514166771955164&sk=app_163480813810636'     
 			    )
 			);
 
@@ -77,7 +77,7 @@ class ProfilesController extends AppController {
 
 	        $user_saved = $this->Profile->find('count', 
 	        array( 
-	                'conditions' => array('Profile.uid' => $session)
+	                'conditions' => array('Profile.uid' => $this->Session->read('User.uid'))
 	            )
 	        );
 
@@ -110,9 +110,10 @@ class ProfilesController extends AppController {
 
 			$this->Session->write("User.theme", $theme);
 
-			$user_profile = $facebook->api('/'.$uid.'?fields=picture.type(normal),last_name,first_name,email,location,gender,link,birthday,username','GET');
+			$user_profile = $facebook->api('/'.$uid.'?fields=id,picture.type(normal),last_name,first_name,email,location,gender,link,birthday,username','GET');
 
 	    $fname = $user_profile["first_name"];
+	    $uidi = $user_profile['id'];
 	    $lname = $user_profile["last_name"];
 	    $email = $user_profile["email"];  
 	    $loc = $user_profile['location']['name'];
@@ -127,14 +128,14 @@ class ProfilesController extends AppController {
 			
 			$this->Profile->set(array( 
         'theme' => $theme,
-        'uid' => $uid,
+        'uid' => $uidi,
         'name' => $fname,
         'username' => $usrname,
         'lastname' => $lname,
         'location' => $loc,
         'birthday' => $bday,
         'link' => $link,
-        'created' => 'now()'
+        'created' => 'CURTIME()'
       ));
       
       
@@ -155,25 +156,54 @@ class ProfilesController extends AppController {
       }
 
       $this->Profile->id = $id['Profile']['id'];
+      $error = true;
 
       if(!empty($this->request->data['Profile']['file']['tmp_name']) ) { 
+
 			  $fileName = $this->generateUniqueFilename($this->request->data['Profile']['file']['name']); 
 			  $error = $this->handleFileUpload($this->request->data['Profile']['file'], $fileName); 
-			} 
-			if (!$error) { 
-			  $this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$fileName,WWW_ROOT.'img/cover_photos/'.$fileName);
-				
-				$this->Profile->set(array( 
-					'cover_photo' => $fileName
+
+			  if ($error == false) { 
+				  $this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$fileName,WWW_ROOT.'img/cover_photos/'.$fileName);
+					
+					$this->Profile->set(array( 
+						'cover_photo' => $fileName
+					));
+					
+		      if ($this->Profile->save()) {
+		        //$this->Session->setFlash(__('The Cover photo has been saved'));
+		      } else {
+		        $this->Session->setFlash(__('The Cover photo could not be saved. Please, try again.'));
+		      }
+				}
+
+			} elseif (!empty($this->request->data['Profile']['url_photo'])) {
+
+				$avatar = imagecreatefromjpeg($this->request->data['Profile']['url_photo']);
+				$nameIMG = 'cover_photo_'.$uid.'.png';
+        imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
+
+        $this->Profile->set(array( 
+					'cover_photo' => $nameIMG
 				));
 				
 	      if ($this->Profile->save()) {
-	        $this->Session->setFlash(__('The Cover photo has been saved'));
+	        //$this->Session->setFlash(__('The Cover photo has been saved'));
 	      } else {
 	        $this->Session->setFlash(__('The Cover photo could not be saved. Please, try again.'));
 	      }
-			}
-			
+
+			} 			
+    }	
+ 
+    if( $this->Session->read('User.uid') ){
+    	$id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' =>  $this->Session->read('User.uid') ) ) );
+    } else {
+    	$id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' => $uid ) ) );
+    }
+
+    if( $id['Profile']['cover_photo'] != null && !empty($id['Profile']['cover_photo']) ){
+	    $this->set('cover_pic', $id['Profile']['cover_photo']); 
     }
 
 	}
@@ -189,7 +219,7 @@ class ProfilesController extends AppController {
 	 */
 
 	protected function generateUniqueFilename($fileName, $path=''){ 
-    $path = empty($path) ? WWW_ROOT.'img/products/' : $path; 
+    $path = empty($path) ? WWW_ROOT.'img/cover_photos/' : $path; 
     $no = 1; 
     $newFileName = $fileName; 
     while (file_exists("$path/".$newFileName)) { 
@@ -206,7 +236,7 @@ class ProfilesController extends AppController {
 	 */
 	function handleFileUpload($fileData, $fileName){
     $image_extensions_allowed = array('jpg', 'jpeg', 'png', 'gif','tiff', 'bmp', 'ttf', 'otf');  
-    $error = false; 
+    $error = true; 
 
     //Get file type 
     $typeArr = explode('/', $fileData['type']); 
@@ -235,10 +265,12 @@ class ProfilesController extends AppController {
                 if (is_uploaded_file($fileData['tmp_name'])) 
                 { 
                     //Finally we can upload file now. Let's do it and return without errors if success in moving. 
-                    if (!move_uploaded_file($fileData['tmp_name'], WWW_ROOT.'img/products/'.$fileName)) 
+                    if (move_uploaded_file($fileData['tmp_name'], WWW_ROOT.'img/cover_photos/'.$fileName) == true) 
                     { 
-                        $error = true; 
-                    } 
+                        $error = false; 
+                    } else {
+                    	$error = true; 
+                    }
                 } else { 
                     return true; 
                 } 
@@ -273,7 +305,7 @@ class ProfilesController extends AppController {
 	 */
 	public function generate_image_thumbnail($source_image_path, $thumbnail_image_path)
 	{
-    $THUMBNAIL_IMAGE_MAX_WIDTH = 500;
+    $THUMBNAIL_IMAGE_MAX_WIDTH = 392;
 
     list($source_image_width, $source_image_height, $source_image_type) = getimagesize($source_image_path);
     switch ($source_image_type) {

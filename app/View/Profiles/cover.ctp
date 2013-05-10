@@ -1,48 +1,110 @@
 <!-- cover.ctp -->
+<STYLE TYPE="text/css">
+<?php if( isset($cover_pic) ){ ?>
+
+.cover_photo{
+	width: 392px;
+	height: 297px;
+	position: absolute;
+	left: 209px;
+	background-image: url(../img/marco.png), url(../img/cover_photos/<?php echo str_replace(' ', '%20', $cover_pic); ?>);
+	background-position: top left, center center;
+	background-size: 392px 297px,  329px 265px;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+}
+<?php }?>
+/*#CSPhotoSelector_buttonOK{
+	display: block;
+}
+#CSPhotoSelector_buttonOK input[type="submit"]{
+	background: none;
+	border: none;
+	box-shadow: none;
+	padding: 0;
+
+}*/
+</STYLE>
 <?php echo $this->Html->css('PhotoSelector'); ?>
 <?php echo $this->Html->script('photo_selector'); ?>
 
-
-<div id="fb-root"></div>
 <script>
-  window.fbAsyncInit = function() {
-    // init the FB JS SDK
-    FB.init({
-      appId      : '163480813810636',                        // App ID from the app dashboard
-      status     : true,                                 // Check Facebook Login status
-      xfbml      : true                                  // Look for social plugins on the page
-    });
+  
+	var buttonOK = $('a#CSPhotoSelector_buttonOK');
+	var o = this;
+  
+fbphotoSelect = function(id) {
+		// if no user/friend id is sent, default to current user
+		if (!id) id = 'me';
+		
+		callbackAlbumSelected = function(albumId) {
+			var album, name;
+			album = CSPhotoSelector.getAlbumById(albumId);
+			// show album photos
+			selector.showPhotoSelector(null, album.id);
+		};
 
-    // Additional initialization code such as adding Event Listeners goes here
-  };
+		callbackAlbumUnselected = function(albumId) {
+			var album, name;
+			album = CSPhotoSelector.getAlbumById(albumId);
+		};
 
-  // Load the SDK asynchronously
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/all.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+		callbackPhotoSelected = function(photoId) {
+			var photo;
+			photo = CSPhotoSelector.getPhotoById(photoId);
+			buttonOK.show();
+			// console.log('is this working? ');
+			// buttonOK.css('display', 'inline-block');
+			// buttonOK.css('marginTop', -2);
+			// console.log(buttonOK);
+			$('a#CSPhotoSelector_buttonOK').css('display', 'block');
+			//logActivity('Selected ID: ' + photo.id);
+		};
 
-  CSPhotoSelector.init({debug: true});
+		callbackPhotoUnselected = function(photoId) {
+			var photo;
+			album = CSPhotoSelector.getPhotoById(photoId);
+			buttonOK.hide();
+			$('a#CSPhotoSelector_buttonOK').css('display', 'none');
 
-  	selector = CSPhotoSelector.newInstance({
-		    callbackAlbumSelected   : callbackAlbumSelected,
-		    callbackAlbumUnselected : callbackAlbumUnselected,
-		    callbackPhotoSelected   : callbackPhotoSelected,
-		    callbackPhotoUnselected : callbackPhotoUnselected,
-		    callbackSubmit          : callbackSubmit,
-		    maxSelection            : 1,
-		    albumsPerPage           : 6,
-		    photosPerPage           : 200,
-		    autoDeselection         : true
+		};
+
+		callbackSubmit = function(photoId) {
+			var photo;
+			photo = CSPhotoSelector.getPhotoById(photoId);
+
+			//logActivity('<br><strong>Submitted</strong><br> Photo ID: ' + photo.id + '<br>Photo URL: ' + photo.source + '<br>');
+			// guardar img como portada , agregar a hidden field , y que lo mande .. inmediately ? 
+			$('#url_photo_fb').val(photo.source);
+			$('.cover_photo').css('background-image','url(../img/marco.png), url('+photo.source+')');
+			$('.cover_photo').css('background-size', '392px 297px,  329px 265px');
+		};
+
+
+		// Initialise the Photo Selector with options that will apply to all instances
+		CSPhotoSelector.init({debug: true});
+
+		// Create Photo Selector instances
+		selector = CSPhotoSelector.newInstance({
+			callbackAlbumSelected	: callbackAlbumSelected,
+			callbackAlbumUnselected	: callbackAlbumUnselected,
+			callbackPhotoSelected	: callbackPhotoSelected,
+			callbackPhotoUnselected	: callbackPhotoUnselected,
+			callbackSubmit			: callbackSubmit,
+			maxSelection			: 1,
+			albumsPerPage			: 6,
+			photosPerPage			: 200,
+			autoDeselection			: true
 		});
 
+		// reset and show album selector
+		selector.reset();
+		selector.showAlbumSelector(id);
+	}
 
   $(document).ready(function(){
   	
-  	$(".photoSelect").click(function (e) {
+  	$(".pick_fb").click(function (e) {
 		    e.preventDefault();
 		    id = null;
 		    if ( $(this).attr('data-id') ) id = $(this).attr('data-id');
@@ -50,6 +112,17 @@
 		});
 
 	});
+
+	 function readURL(input) {
+      if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+                  $('.cover_photo').css('background-image','url(../img/marco.png), url('+e.target.result+')');
+									$('.cover_photo').css('background-size', '392px 297px,  329px 265px');
+          };
+          reader.readAsDataURL(input.files[0]);
+      }
+  }
 
 </script>
 
@@ -114,7 +187,25 @@
 			<p>Pon una foto de portada aqu&iacute;</p>
 
 			<div class="pick_fb">Elegir de Facebook</div>
-			<div class="upload_bt">Subir un archivo</div>
+			
+			<?php echo $this->Form->create('Profile', array('enctype' => 'multipart/form-data')); ?>
+				
+				<input type="hidden" name="data[Profile][url_photo]" id="url_photo_fb" value=""/>
+
+				<?php	
+
+					$options = array(
+				    'label' => 'OK',
+				    'div' => array(
+				    		'id' => 'send_OK'
+				    	)		    
+					);
+
+					echo $this->Form->file('file', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+				?>
+			<?php echo $this->Form->end($options); ?>
+
+			<!--div class="upload_bt">Subir un archivo</div-->
 		
 		</div>
 		<p class="whatdo">Qu&eacute; quieres hacer?</p>
@@ -122,15 +213,22 @@
 		<div class="cover_menu">
 			<div class="write_bt">Escribir diario</div>
 			<div class="share_bt">Compartir</div>
-			<div class="watch_bt">Ver Diario</div>
+			<?php
+				echo $this->Html->link(
+				    'Ver Diario',
+				    array('controller' => 'familytree_pages', 'action' => 'add'),
+				    array('class' => 'watch_bt')
+				);
+			 ?>
+			<!--div class="watch_bt">Ver Diario</div-->
 		</div>
 		<div class="instructions_bt">Instrucciones</div>
 
 	</div>
 	<div class="footer">
-		<div class="footer_mtm">Mom to mom , Consintiendo mi piel de mama</div>
-		<a href="http://www.momtomom.com.mx/" class="footer_link">www.momtomom.mx</a>
-		<a href="https://twitter.com/momtomommx" class="footer_twitter">@momtomommx</a>
+		<div class="footer_mtm">Mom to mom , Consintiendo mi piel de mam&aacute;</div>
+		<a href="http://www.momtomom.com.mx/" class="footer_link" target="_blank">www.momtomom.mx</a>
+		<a href="https://twitter.com/momtomommx" class="footer_twitter" target="_blank">@momtomommx</a>
 	</div>
 
 </div>

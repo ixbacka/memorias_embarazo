@@ -225,7 +225,7 @@
 }
 #CSPhotoSelector .CSPhotoSelector_dialog .CSPhotoSelector_footer #CSPhotoSelector_buttonOK,
 #CSPhotoSelector .CSPhotoSelector_dialog .CSPhotoSelector_footer #CSPhotoSelector_buttonCancel {
-	display: none;
+	/*display: none;*/
 	float: right;
 	background: #3B5998;
 	color: #fff;

@@ -54,6 +54,7 @@ body {
 	background-image: url(../img/marco.png), url(../img/marco_fondo.png);
 	background-position: top left, center center;
 	text-indent: -9999px;
+	background-repeat: no-repeat;
 }
 
 .pick_fb{
@@ -67,11 +68,18 @@ body {
 
 .upload_bt{
 	background-image: url(../img/bt_subir_foto.png);
-	width: 107px;
-	height: 20px;
-	position: relative;
-	top: 110px;
+	width: 99px;
+	height: 12px;
+	position: absolute;
+	top: 161px;
 	left: 200px;
+	text-indent: -9999px;
+}
+
+#send_OK input[type="submit"]{
+	position: absolute;
+	top: 200px;
+	left: 163px;
 }
 
 p.whatdo{
@@ -189,4 +197,89 @@ p.whatdo{
 	position: absolute;
 	top: 170px;
 	right: 20px;
+}
+
+/* trimestres menu */
+
+.menu_trims{
+	width: 810px;
+	height: 30px;
+}
+
+.first_trim{
+	background-image: url(../img/bt_primer.png);
+	width: 165px;
+	height: 30px;
+	text-indent: -9999px;
+	position: absolute;
+top: 0;
+left: 60px;
+}
+
+.first_trim:hover{
+	background-image: url(../img/bt_primer_up.png);
+}
+
+.second_trim{
+	background-image: url(../img/bt_segundo.png);
+	width: 177px;
+	height: 30px;
+	text-indent: -9999px;
+	position: absolute;
+	top: 0;
+	left: 300px;
+
+}
+
+.second_trim:hover{
+	background-image: url(../img/bt_segundo_up.png);
+}
+
+.third_trim{
+	background-image: url(../img/bt_tercer.png);
+	width: 165px;
+	height: 30px;
+	text-indent: -9999px;
+	position: absolute;
+top: 0;
+left: 547px;
+
+}
+
+.third_trim:hover{
+	background-image: url(../img/bt_tercer_up.png);
+}
+
+/** menu vertical ;S **/
+
+ul.vertical_menu_1{
+
+/* Safari */
+-webkit-transform: rotate(-90deg);
+/* Firefox */
+-moz-transform: rotate(-90deg);
+/* IE */
+-ms-transform: rotate(-90deg);
+/* Opera */
+-o-transform: rotate(-90deg);
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+position: absolute;
+right: 0px;
+top: 200px;
+
+}
+
+ul.vertical_menu_1 li{
+	color: #147cc1;
+	float: left;
+}
+
+ul.vertical_menu_1 li.selected{
+	color: #fff;
+}
+
+ul.vertical_menu_1 li{
+	color: #fff;
 }
