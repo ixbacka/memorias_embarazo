@@ -288,10 +288,17 @@ ul.vertical_menu_1 li{
 
 
 /** ARBOL GENEALOGICO **/
+
+form#familytreePageAddForm{
+	position: absolute;
+	top: 60px;
+	left: 0px;
+	width: 810px;
+}
+
 .familytreeFile{
 	width: 172px;
 	height: 171px;
-	position: absolute;
 	left: 10px;
 	background-image: url(../img/marco_circular.png), url(../img/marco_circular_back.png);
 	background-position: top left, center center;
@@ -317,9 +324,15 @@ ul.vertical_menu_1 li{
 	left: 35px;
 }
 
+/*fixed*/
 
-
-
+div.form, div.index, div.view {
+	float: left;
+	display: inline-block;
+	width: 100%;
+	border:none;
+	padding: 0;
+}
 
 
 

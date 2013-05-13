@@ -262,6 +262,20 @@ function readURL(input) {
 			echo $this->Form->file('grandpa_mom_file', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
 		?>
 	</div>
+	<div class="familytreeFile" id="grandma_dad">
+		<input type="hidden" name="data[FamilytreePage][grandma_dad][url_photo]" class="grandma_dad" value=""/>
+		<div class="pick_fb">Elegir de Facebook</div>
+		<?php
+			echo $this->Form->file('grandma_dad_file', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+		?>
+	</div>
+	<div class="familytreeFile" id="grandma_mom">
+		<input type="hidden" name="data[FamilytreePage][grandma_mom][url_photo]" class="grandma_mom" value=""/>
+		<div class="pick_fb">Elegir de Facebook</div>
+		<?php
+			echo $this->Form->file('grandma_mom_file', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+		?>
+	</div>	
 		<?php
 			/*echo $this->Form->input('grandpa_dad');
 			echo $this->Form->input('grandma_dad');
