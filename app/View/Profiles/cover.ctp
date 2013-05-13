@@ -211,16 +211,23 @@ fbphotoSelect = function(id) {
 		<p class="whatdo">Qu&eacute; quieres hacer?</p>
 
 		<div class="cover_menu">
-			<div class="write_bt">Escribir diario</div>
-			<div class="share_bt">Compartir</div>
 			<?php
 				echo $this->Html->link(
-				    'Ver Diario',
+				    'Escribir Diario',
 				    array('controller' => 'familytree_pages', 'action' => 'add'),
-				    array('class' => 'watch_bt')
+				    array('class' => 'write_bt')
 				);
 			 ?>
-			<!--div class="watch_bt">Ver Diario</div-->
+			<!-- <div class="write_bt">Escribir diario</div> -->
+			<div class="share_bt">Compartir</div>
+			<?php
+				// echo $this->Html->link(
+				//     'Ver Diario',
+				//     array('controller' => 'familytree_pages', 'action' => 'view'),
+				//     array('class' => 'watch_bt')
+				// );
+			 ?>
+			<div class="watch_bt">Ver Diario</div>
 		</div>
 		<div class="instructions_bt">Instrucciones</div>
 

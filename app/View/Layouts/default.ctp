@@ -68,13 +68,16 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		    //this resizes the the i-frame 
 		    //on an interval of 100ms 
 		    //FB.Canvas.setAutoGrow();
-		 
-
-			FB.Canvas.setSize({height:900});
+		 	<?php
+				if( strpos($_SERVER['REQUEST_URI'], 'welcome') == TRUE ){ 
+			?>
+			FB.Canvas.setSize({height:1000});
+			<?php } else { ?>
 			console.log('chekin g ..');
 			setTimeout("FB.Canvas.setAutoGrow()",500);
-		 
+		 <?php } ?>
 		   };
+		   
 
 		   (function() {
 		    var e = document.createElement('script');

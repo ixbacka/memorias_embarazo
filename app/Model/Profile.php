@@ -6,4 +6,5 @@ App::uses('AppModel', 'Model');
  */
 class Profile extends AppModel {
 
+	public $hasOne = 'FamilytreePage';
 }

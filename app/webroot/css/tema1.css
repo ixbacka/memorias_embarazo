@@ -145,10 +145,12 @@ p.whatdo{
 	background-image: url(../img/bt_instrucciones_up.png);
 	top: 520px;
 	text-indent: -9999px;
+	cursor: pointer;
 }
 
 .instructions_bt:hover{
 	background-image: url(../img/bt_instrucciones.png);
+	cursor: pointer;
 }
 
 .footer{
@@ -283,3 +285,46 @@ ul.vertical_menu_1 li.selected{
 ul.vertical_menu_1 li{
 	color: #fff;
 }
+
+
+/** ARBOL GENEALOGICO **/
+.familytreeFile{
+	width: 172px;
+	height: 171px;
+	position: absolute;
+	left: 10px;
+	background-image: url(../img/marco_circular.png), url(../img/marco_circular_back.png);
+	background-position: top left, center center;
+	text-indent: -9999px;
+	background-repeat: no-repeat;	
+	float: left;
+}
+
+.familytreeFile div.pick_fb{
+	background-image: url(../img/bt_elegir.png);
+	width: 92px;
+	height: 5px;
+	top: 55px;
+	left: 29px;
+}
+
+.familytreeFile input[type="file"].upload_bt {
+	background-image: url(../img/bt_subir_foto.png);
+	width: 107px;
+	height: 20px;
+	text-indent: -9999px;
+	top: 90px;
+	left: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

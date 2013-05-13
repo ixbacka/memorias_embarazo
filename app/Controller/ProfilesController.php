@@ -112,16 +112,56 @@ class ProfilesController extends AppController {
 
 			$user_profile = $facebook->api('/'.$uid.'?fields=id,picture.type(normal),last_name,first_name,email,location,gender,link,birthday,username','GET');
 
-	    $fname = $user_profile["first_name"];
-	    $uidi = $user_profile['id'];
-	    $lname = $user_profile["last_name"];
-	    $email = $user_profile["email"];  
-	    $loc = $user_profile['location']['name'];
-	    $gender = $user_profile['gender'];
-	    $link = $user_profile['link'];
-	    $bday = $user_profile['birthday'];
-	    $usrname = $user_profile['username'];
-	    $avi = $user_profile["picture"]["data"]["url"];
+			if( !empty($user_profile["first_name"] ) ){
+				$fname = $user_profile["first_name"];
+			} else {
+				$fname = NULL;
+			}
+			if( !empty($user_profile["id"] ) ){
+				$uidi = $user_profile["id"];
+			}else {
+				$uidi = NULL;
+			}
+			if( !empty($user_profile["last_name"] ) ){
+				$lname = $user_profile["last_name"];
+			}else {
+				$lname = NULL;
+			}
+			if( !empty($user_profile["email"] ) ){
+				$email = $user_profile["email"];
+			}else {
+				$email = NULL;
+			}
+			if( !empty($user_profile['location']['name'] ) ){
+				$loc = $user_profile['location']['name'];
+			}else {
+				$loc = NULL;
+			}
+			if( !empty($user_profile["gender"] ) ){
+				$gender = $user_profile["gender"];
+			}else {
+				$gender = NULL;
+			}
+			if( !empty($user_profile["link"] ) ){
+				$link = $user_profile["link"];
+			}else {
+				$link = NULL;
+			}
+			if( !empty($user_profile["birthday"] ) ){
+				$bday = $user_profile["birthday"];
+			}else {
+				$bday = NULL;
+			}
+			if( !empty($user_profile["username"] ) ){
+				$usrname = $user_profile["username"];
+			}else {
+				$usrname = NULL;
+			}
+			if( !empty($user_profile["picture"]["data"]["url"] ) ){
+				$avi = $user_profile["picture"]["data"]["url"];
+			}else {
+				$avi = NULL;
+			}
 			
 			//guardar selected theme!
 			$this->Profile->create();
@@ -130,19 +170,20 @@ class ProfilesController extends AppController {
         'theme' => $theme,
         'uid' => $uidi,
         'name' => $fname,
+        'email' => $email,
         'username' => $usrname,
         'lastname' => $lname,
         'location' => $loc,
         'birthday' => $bday,
         'link' => $link,
-        'created' => 'CURTIME()'
+        'created' => date('Y-m-d H:i:s')
       ));
       
       
       if ($this->Profile->save()) {
         $id = $this->Profile->id;
       } else {
-        $this->Session->setFlash(__('The Profile could not be saved. Please, try again.'));
+        $this->Session->setFlash(__('Tu perfil no se ha podido guardar.'));
       }
 
 		}

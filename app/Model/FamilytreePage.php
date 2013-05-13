@@ -6,4 +6,6 @@ App::uses('AppModel', 'Model');
  */
 class FamilytreePage extends AppModel {
 
+	public $belongsTo = 'Profile';
+	
 }

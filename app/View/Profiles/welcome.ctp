@@ -1,4 +1,11 @@
 <!-- welcome.ctp -->
+<style type="text/css">
+body{
+	position: fixed;
+	width: 810px;
+	height: 1200px;
+}
+</style>
 <?php
 // Start Session Fix
 if( isset($_GET["start_session"]) ){
