@@ -36,7 +36,7 @@ public function beforeFilter() {
       	$id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' => $uid ) ) );
       }
 
-      $leid = $id['Profile']['id'];
+      //$leid = $id['Profile']['id'];
       
       //got users id, return fields if they full, also, check if post or put and save
       if ($this->request->is('post') || $this->request->is('put')) {
@@ -47,8 +47,8 @@ public function beforeFilter() {
             }
       }
 
-      $this->set('familytree',$this->FamilytreePage->find('first', array( 'conditions' => array( 'FamilytreePage.profile_id' => $leid ) )));
-		  $this->set('profileid',$leid);
+    //   $this->set('familytree',$this->FamilytreePage->find('first', array( 'conditions' => array( 'FamilytreePage.profile_id' => $leid ) )));
+		  // $this->set('profileid',$leid);
 
 
 	}

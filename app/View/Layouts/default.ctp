@@ -74,6 +74,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			FB.Canvas.setSize({height:1000});
 			<?php } else { ?>
 			console.log('chekin g ..');
+			//FB.Canvas.setSize({height:800});
 			setTimeout("FB.Canvas.setAutoGrow()",500);
 		 <?php } ?>
 		   };

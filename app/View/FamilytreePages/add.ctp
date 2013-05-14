@@ -2,6 +2,15 @@
 <?php echo $this->Html->css('PhotoSelector'); ?>
 <?php echo $this->Html->script('photo_selector'); ?>
 
+<style type="text/css">
+body{
+	height: 1200px;
+}
+.footer{
+	position: absolute;
+	top: 950px;
+}
+</style>
 
 <script type="text/javascript">
 
@@ -153,7 +162,7 @@ function readURL(input) {
 <!-- Markup for Carson Shold's Photo Selector -->
 
 
-<div class="header">	
+	<div class="header">	
 		<ul class="menu">
 			<li class="ask">FAQ</li>
 			<li class="settings">Settings</li>
@@ -181,7 +190,7 @@ function readURL(input) {
 		<li>
 		<?php
 		echo $this->Html->link(
-				    'Qui&eacute;n soy',
+				    'Quién soy',
 				    array('controller' => 'whoami_pages', 'action' => 'add')
 				);
 		?>
@@ -189,7 +198,7 @@ function readURL(input) {
 		<li>
 		<?php
 		echo $this->Html->link(
-				    'Primeros s&iacute;ntomas',
+				    'Primeros síntomas',
 				    array('controller' => 'sintom_pages', 'action' => 'add')
 				);
 		?>
@@ -213,30 +222,32 @@ function readURL(input) {
 		<li>
 		<?php
 		echo $this->Html->link(
-				    'Mi &aacute;nimo',
+				    'Mi ánimo',
 				    array('controller' => 'animo_pages', 'action' => 'add')
 				);
 		?>
 		</li>
-		<li>
-		<?php
+</ul>
+<?php
 		echo $this->Html->link(
 				    'Add Moment',
-				    array('controller' => 'moment_pages', 'action' => 'add')
+				    array('controller' => 'moment_pages', 'action' => 'add'),
+				    array('class' => 'add_moment')
 				);
-	?></li>
-</ul>
+	?>
 
 <div class="content">
 	<div class="menu_trims">
 		<?php 
 			echo $this->Html->link(
 				    'Primer Trimestre',
-				    array('controller' => 'familytree_pages', 'action' => 'add')
+				    array('controller' => 'familytree_pages', 'action' => 'add'),
+				    array('class' => 'first_trim')
 				);
 			echo $this->Html->link(
 				    'Segundo Trimestre',
-				    array('controller' => 'familytree_pages', 'action' => 'add')
+				    array('controller' => 'familytree_pages', 'action' => 'add'),
+				    array( 'class' => 'second_trim')
 				);
 			echo $this->Html->link(
 				    'Tercer Trimestre',
@@ -245,6 +256,13 @@ function readURL(input) {
 				);
 		?>
 	</div>
+
+<div class="page_title">
+	<div class="ant">Anterior</div>
+	<div class="title_page">&aacute;rbol Familiar</div>
+	<div class="sig">Siguiente</div>
+</div>
+
 <div class="familytreePages form">
 
 <?php echo $this->Form->create('FamilytreePage', array('enctype' => 'multipart/form-data')); ?>
@@ -252,30 +270,58 @@ function readURL(input) {
 		<input type="hidden" name="data[FamilytreePage][grandpa_dad][url_photo]" class="grandpa_dad" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>
 		<?php
-			echo $this->Form->file('grandpa_dad_file', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+			echo $this->Form->file('grandpa_dad_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+			echo $this->Form->input('grandpa_dad', array('placeholder' => 'Nombre del abuelo', 'class' => 'name_input'));
 		?>
 	</div>
 	<div class="familytreeFile" id="grandpa_mom">
 		<input type="hidden" name="data[FamilytreePage][grandpa_mom][url_photo]" class="grandpa_mom" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>
 		<?php
-			echo $this->Form->file('grandpa_mom_file', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+			echo $this->Form->file('grandpa_mom_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+			echo $this->Form->input('grandpa_mom', array('placeholder' => 'Nombre de la abuela', 'class' => 'name_input'));
 		?>
 	</div>
 	<div class="familytreeFile" id="grandma_dad">
 		<input type="hidden" name="data[FamilytreePage][grandma_dad][url_photo]" class="grandma_dad" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>
 		<?php
-			echo $this->Form->file('grandma_dad_file', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+			echo $this->Form->file('grandma_dad_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+			echo $this->Form->input('grandma_dad', array('placeholder' => 'Nombre del abuelo', 'class' => 'name_input'));
 		?>
 	</div>
 	<div class="familytreeFile" id="grandma_mom">
 		<input type="hidden" name="data[FamilytreePage][grandma_mom][url_photo]" class="grandma_mom" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>
 		<?php
-			echo $this->Form->file('grandma_mom_file', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+			echo $this->Form->file('mom_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+			echo $this->Form->input('grandma_mom', array('placeholder' => 'Nombre de la abuela', 'class' => 'name_input'));
+		?>
+	</div>
+	<div class="familytreeFile" id="dad">
+		<input type="hidden" name="data[FamilytreePage][dad][url_photo]" class="dad" value=""/>
+		<div class="pick_fb">Elegir de Facebook</div>
+		<?php
+			echo $this->Form->file('dad_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+			echo $this->Form->input('dad', array('placeholder' => 'Nombre del padre', 'class' => 'name_input'));
 		?>
 	</div>	
+	<div class="familytreeFile" id="mom">
+		<input type="hidden" name="data[FamilytreePage][mom][url_photo]" class="mom" value=""/>
+		<div class="pick_fb">Elegir de Facebook</div>
+		<?php
+			echo $this->Form->file('mom_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+			echo $this->Form->input('mom', array('placeholder' => 'Nombre de la madre', 'class' => 'name_input'));
+		?>
+	</div>	<br>
+	<div class="familytreeFile" id="baby">
+		<input type="hidden" name="data[FamilytreePage][baby][url_photo]" class="baby" value=""/>
+		<div class="pick_fb">Elegir de Facebook</div>
+		<?php
+			echo $this->Form->file('baby_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+			echo $this->Form->input('baby', array('placeholder' => 'Nombre del bebé', 'class' => 'name_input'));
+		?>
+	</div>		
 		<?php
 			/*echo $this->Form->input('grandpa_dad');
 			echo $this->Form->input('grandma_dad');
@@ -291,7 +337,7 @@ function readURL(input) {
 			echo $this->Form->input('dad_img');
 			echo $this->Form->input('baby');
 			echo $this->Form->input('baby_img');*/
-			echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
+			echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => 'estaid'));//$profileid));
 		?>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>

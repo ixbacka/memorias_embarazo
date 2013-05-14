@@ -1,5 +1,9 @@
 <!-- cover.ctp -->
 <STYLE TYPE="text/css">
+
+body{
+	height: 1010px;
+}
 <?php if( isset($cover_pic) ){ ?>
 
 .cover_photo{
