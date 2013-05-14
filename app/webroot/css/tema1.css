@@ -289,6 +289,7 @@ top: 590px;
 z-index: 9999;
 margin: 0;
 list-style: none;
+right: -330px;
 }
 
 ul.vertical_menu_1 li{
