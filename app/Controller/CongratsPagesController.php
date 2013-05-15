@@ -6,11 +6,9 @@ App::uses('AppController', 'Controller');
  */
 class CongratsPagesController extends AppController {
 
-/**
- * Scaffold
- *
- * @var mixed
- */
-	public $scaffold;
+	
+	public function add(){
+
+	}
 
 }

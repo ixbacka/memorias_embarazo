@@ -230,12 +230,26 @@ p.whatdo{
 	height: 30px;
 	text-indent: -9999px;
 	position: absolute;
-top: 0;
-left: 60px;
+	top: 0;
+	left: 60px;
 }
 
 .first_trim:hover{
 	background-image: url(../img/bt_primer_up.png);
+}
+
+.first_trim_current{
+	
+	background-image: url(../img/bt_primer_up.png);
+	width: 165px;
+	height: 30px;
+	text-indent: -9999px;
+	position: absolute;
+	top: 0;
+	left: 60px;
+	padding-bottom: 5px;
+	padding-right: 7px;
+	border-bottom: 2px solid #fff;
 }
 
 .second_trim{
@@ -473,4 +487,9 @@ div.form, div.index, div.view {
 	text-transform: uppercase;
 	margin-left: 120px;
 	margin-top: -20px;
+}
+
+
+.title_page span{
+	font-size: 15px;
 }

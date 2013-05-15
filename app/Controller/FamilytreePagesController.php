@@ -36,21 +36,391 @@ public function beforeFilter() {
       	$id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' => $uid ) ) );
       }
 
-      //$leid = $id['Profile']['id'];
+      $leid = $id['Profile']['id'];
       
       //got users id, return fields if they full, also, check if post or put and save
       if ($this->request->is('post') || $this->request->is('put')) {
-      	//save new fields
-      	 if ($this->FamilytreePage->save($this->request->data)) {
-                $this->Session->setFlash('Your page has been saved.');
-                //$this->redirect(array('action' => 'index'));
-            }
+
+        $idf = $this->FamilytreePage->find('first', array( 'conditions' => array( 'FamilytreePage.profile_id' =>  $leid ) ) );
+        
+        if( !empty($idf['FamilytreePage']['id']) && !is_null($idf['FamilytreePage']['id'])){
+          $this->FamilytreePage->id = $idf['FamilytreePage']['id'];
+        }
+
+        $this->FamilytreePage->set(array( 
+            'mom' => $this->request->data['FamilytreePage']['mom'],
+            'dad' => $this->request->data['FamilytreePage']['dad'],
+            'grandpa_mom' => $this->request->data['FamilytreePage']['grandpa_mom'],
+            'grandpa_dad' => $this->request->data['FamilytreePage']['grandpa_dad'],
+            'grandma_mom' => $this->request->data['FamilytreePage']['grandma_mom'],
+            'grandma_dad' => $this->request->data['FamilytreePage']['grandma_dad'],
+            'baby' => $this->request->data['FamilytreePage']['baby'],
+            'profile_id' => $this->request->data['FamilytreePage']['profile_id']
+          ));
+
+        if(!empty($this->request->data['FamilytreePage']['grandma_dad_img']['tmp_name']) ) { 
+
+        $fileName = $this->generateUniqueFilename($this->request->data['FamilytreePage']['grandma_dad_img']['name']); 
+        $error = $this->handleFileUpload($this->request->data['FamilytreePage']['grandma_dad_img'], $fileName); 
+
+          if ($error == false) { 
+            $this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$fileName,WWW_ROOT.'img/cover_photos/'.$fileName);
+            
+            $this->FamilytreePage->set(array( 
+              'grandma_dad_img' => $fileName
+            ));
+            
+              if ($this->FamilytreePage->save()) {
+                //$this->Session->setFlash(__('The Cover photo has been saved'));
+              } else {
+                $this->Session->setFlash(__('The image photo could not be saved. Please, try again.'));
+              }
+          }
+
+        } elseif (!empty($this->request->data['FamilytreePage']['grandma_dad_url']['url_photo'])) {
+
+          $avatar = imagecreatefromjpeg($this->request->data['FamilytreePage']['grandma_dad_url']['url_photo']);
+          $nameIMG = 'grandma_dad_'.$uid.'.png';
+          imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
+
+          $this->FamilytreePage->set(array( 
+            'grandma_dad_img' => $nameIMG
+          ));
+          
+        }
+
+        if(!empty($this->request->data['FamilytreePage']['grandma_mom_img']['tmp_name']) ) { 
+
+        $fileName = $this->generateUniqueFilename($this->request->data['FamilytreePage']['grandma_mom_img']['name']); 
+        $error = $this->handleFileUpload($this->request->data['FamilytreePage']['grandma_mom_img'], $fileName); 
+
+          if ($error == false) { 
+            $this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$fileName,WWW_ROOT.'img/cover_photos/'.$fileName);
+            
+            $this->FamilytreePage->set(array( 
+              'grandma_mom_img' => $fileName
+            ));
+            
+              if ($this->FamilytreePage->save()) {
+                //$this->Session->setFlash(__('The Cover photo has been saved'));
+              } else {
+                $this->Session->setFlash(__('The image photo could not be saved. Please, try again.'));
+              }
+          }
+
+        } elseif (!empty($this->request->data['FamilytreePage']['grandma_mom_url']['url_photo'])) {
+
+          $avatar = imagecreatefromjpeg($this->request->data['FamilytreePage']['grandma_mom_url']['url_photo']);
+          $nameIMG = 'grandma_mom_'.$uid.'.png';
+          imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
+
+          $this->FamilytreePage->set(array( 
+            'grandma_mom_img' => $nameIMG
+          ));
+          
+        }
+
+        if(!empty($this->request->data['FamilytreePage']['grandpa_dad_img']['tmp_name']) ) { 
+
+        $fileName = $this->generateUniqueFilename($this->request->data['FamilytreePage']['grandpa_dad_img']['name']); 
+        $error = $this->handleFileUpload($this->request->data['FamilytreePage']['grandpa_dad_img'], $fileName); 
+
+          if ($error == false) { 
+            $this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$fileName,WWW_ROOT.'img/cover_photos/'.$fileName);
+            
+            $this->FamilytreePage->set(array( 
+              'grandpa_dad_img' => $fileName
+            ));
+            
+              if ($this->FamilytreePage->save()) {
+                //$this->Session->setFlash(__('The Cover photo has been saved'));
+              } else {
+                $this->Session->setFlash(__('The image photo could not be saved. Please, try again.'));
+              }
+          }
+
+        } elseif (!empty($this->request->data['FamilytreePage']['grandpa_dad_url']['url_photo'])) {
+
+          $avatar = imagecreatefromjpeg($this->request->data['FamilytreePage']['grandpa_dad_url']['url_photo']);
+          $nameIMG = 'grandpa_dad_'.$uid.'.png';
+          imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
+
+          $this->FamilytreePage->set(array( 
+            'grandpa_dad_img' => $nameIMG
+          ));
+          
+        }
+
+        if(!empty($this->request->data['FamilytreePage']['grandpa_mom_img']['tmp_name']) ) { 
+
+        $fileName = $this->generateUniqueFilename($this->request->data['FamilytreePage']['grandpa_mom_img']['name']); 
+        $error = $this->handleFileUpload($this->request->data['FamilytreePage']['grandpa_mom_img'], $fileName); 
+
+          if ($error == false) { 
+            $this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$fileName,WWW_ROOT.'img/cover_photos/'.$fileName);
+            
+            $this->FamilytreePage->set(array( 
+              'grandpa_mom_img' => $fileName
+            ));
+            
+              if ($this->FamilytreePage->save()) {
+                //$this->Session->setFlash(__('The Cover photo has been saved'));
+              } else {
+                $this->Session->setFlash(__('The image photo could not be saved. Please, try again.'));
+              }
+          }
+
+        } elseif (!empty($this->request->data['FamilytreePage']['grandpa_mom_url']['url_photo'])) {
+
+          $avatar = imagecreatefromjpeg($this->request->data['FamilytreePage']['grandpa_mom_url']['url_photo']);
+          $nameIMG = 'grandpa_mom_'.$uid.'.png';
+          imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
+
+          $this->FamilytreePage->set(array( 
+            'grandpa_mom_img' => $nameIMG
+          ));
+          
+        }
+
+        if(!empty($this->request->data['FamilytreePage']['dad_img']['tmp_name']) ) { 
+
+        $fileName = $this->generateUniqueFilename($this->request->data['FamilytreePage']['dad_img']['name']); 
+        $error = $this->handleFileUpload($this->request->data['FamilytreePage']['dad_img'], $fileName); 
+
+          if ($error == false) { 
+            $this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$fileName,WWW_ROOT.'img/cover_photos/'.$fileName);
+            
+            $this->FamilytreePage->set(array( 
+              'dad_img' => $fileName
+            ));
+            
+              if ($this->FamilytreePage->save()) {
+                //$this->Session->setFlash(__('The Cover photo has been saved'));
+              } else {
+                $this->Session->setFlash(__('The image photo could not be saved. Please, try again.'));
+              }
+          }
+
+        } elseif (!empty($this->request->data['FamilytreePage']['dad_url']['url_photo'])) {
+
+          $avatar = imagecreatefromjpeg($this->request->data['FamilytreePage']['dad_url']['url_photo']);
+          $nameIMG = 'dad_'.$uid.'.png';
+          imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
+
+          $this->FamilytreePage->set(array( 
+            'dad_img' => $nameIMG
+          ));
+          
+        }
+
+
+        if(!empty($this->request->data['FamilytreePage']['mom_img']['tmp_name']) ) { 
+
+        $fileName = $this->generateUniqueFilename($this->request->data['FamilytreePage']['mom_img']['name']); 
+        $error = $this->handleFileUpload($this->request->data['FamilytreePage']['mom_img'], $fileName); 
+
+          if ($error == false) { 
+            $this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$fileName,WWW_ROOT.'img/cover_photos/'.$fileName);
+            
+            $this->FamilytreePage->set(array( 
+              'mom_img' => $fileName
+            ));
+            
+              if ($this->FamilytreePage->save()) {
+                //$this->Session->setFlash(__('The Cover photo has been saved'));
+              } else {
+                $this->Session->setFlash(__('The image photo could not be saved. Please, try again.'));
+              }
+          }
+
+        } elseif (!empty($this->request->data['FamilytreePage']['mom_url']['url_photo'])) {
+
+          $avatar = imagecreatefromjpeg($this->request->data['FamilytreePage']['mom_url']['url_photo']);
+          $nameIMG = 'mom_'.$uid.'.png';
+          imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
+
+          $this->FamilytreePage->set(array( 
+            'mom_img' => $nameIMG
+          ));
+          
+        }
+
+        if(!empty($this->request->data['FamilytreePage']['baby_img']['tmp_name']) ) { 
+
+        $fileName = $this->generateUniqueFilename($this->request->data['FamilytreePage']['baby_img']['name']); 
+        $error = $this->handleFileUpload($this->request->data['FamilytreePage']['baby_img'], $fileName); 
+
+          if ($error == false) { 
+            $this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$fileName,WWW_ROOT.'img/cover_photos/'.$fileName);
+            
+            $this->FamilytreePage->set(array( 
+              'baby_img' => $fileName
+            ));
+            
+          }
+
+        } elseif (!empty($this->request->data['FamilytreePage']['baby_url']['url_photo'])) {
+
+          $avatar = imagecreatefromjpeg($this->request->data['FamilytreePage']['baby_url']['url_photo']);
+          $nameIMG = 'baby_'.$uid.'.png';
+          imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
+
+          $this->FamilytreePage->set(array( 
+            'baby_img' => $nameIMG
+          ));
+          
+        }
+
+
+
+        if ($this->FamilytreePage->save()) {
+          //$this->Session->setFlash(__('The Cover photo has been saved'));
+        } else {
+          $this->Session->setFlash(__('The Page could not be saved. Please, try again.'));
+        }
+
+
       }
 
-    //   $this->set('familytree',$this->FamilytreePage->find('first', array( 'conditions' => array( 'FamilytreePage.profile_id' => $leid ) )));
-		  // $this->set('profileid',$leid);
+       $this->set('familytree',$this->FamilytreePage->find('first', array( 'conditions' => array( 'FamilytreePage.profile_id' => $leid ) )));
+		   $this->set('profileid',$leid);
 
 
 	}
+
+
+
+
+ /**
+   * generateUniqueFilename method
+   *
+   * @return new file name
+   */
+
+  protected function generateUniqueFilename($fileName, $path=''){ 
+    $path = empty($path) ? WWW_ROOT.'img/cover_photos/' : $path; 
+    $no = 1; 
+    $newFileName = $fileName; 
+    while (file_exists("$path/".$newFileName)) { 
+      $no++; 
+      $newFileName = substr_replace($fileName, "_$no.", strrpos($fileName, "."), 1); 
+    } 
+    return $newFileName; 
+  } 
+
+  /**
+   * handleFileUpload method
+   *
+   * @return BOOL
+   */
+  function handleFileUpload($fileData, $fileName){
+    $image_extensions_allowed = array('jpg', 'jpeg', 'png', 'gif','tiff', 'bmp', 'ttf', 'otf');  
+    $error = true; 
+
+    //Get file type 
+    $typeArr = explode('/', $fileData['type']); 
+    
+    $ext = strtolower(substr(strrchr($fileName, "."), 1));
+    
+
+    //If size is provided for validation check with that size. Else compare the size with INI file 
+    if (($this->validateFile['size'] && $fileData['size'] > $this->validateFile['size']) || $fileData['error'] == UPLOAD_ERR_INI_SIZE) 
+    { 
+      $error = 'File is too large to upload'; 
+    } elseif(!in_array($ext, $image_extensions_allowed)){
+
+        $exts = implode(', ',$image_extensions_allowed);
+        $error = ' ojo: '.$ext.' = '.$fileName." You must upload a file with one of the following extensions: ".$exts;
+      } elseif ($this->validateFile['type'] && (strpos($this->validateFile['type'], strtolower($typeArr[1])) === false)) { 
+      //File type is not the one we are going to accept. Error!! 
+      $error = 'Invalid file type'; 
+    } else { 
+      //Data looks OK at this stage. Let's proceed. 
+        if ($fileData['error'] == UPLOAD_ERR_OK) { 
+        //Oops!! File size is zero. Error! 
+            if ($fileData['size'] == 0) { 
+                $error = 'Zero size file found.'; 
+            } else { 
+                if (is_uploaded_file($fileData['tmp_name'])) 
+                { 
+                    //Finally we can upload file now. Let's do it and return without errors if success in moving. 
+                    if (move_uploaded_file($fileData['tmp_name'], WWW_ROOT.'img/cover_photos/'.$fileName) == true) 
+                    { 
+                        $error = false; 
+                    } else {
+                      $error = true; 
+                    }
+                } else { 
+                    return true; 
+                } 
+            } 
+        } 
+    } 
+    return $error; 
+  }
+
+  /**
+   * deleteMovedFile method
+   *
+   * @return BOOL
+   */
+  function deleteMovedFile($fileName) 
+  { 
+    if (!$fileName || !is_file($fileName)){ 
+      return true; 
+    } 
+    if(unlink($fileName)) { 
+      return true; 
+    } 
+    return false; 
+  } 
+
+  /*
+   * PHP function to resize an image maintaining aspect ratio
+   * http://salman-w.blogspot.com/2008/10/resize-images-using-phpgd-library.html
+   *
+   * Creates a resized (e.g. thumbnail, small, medium, large)
+   * version of an image file and saves it as another file
+   */
+  public function generate_image_thumbnail($source_image_path, $thumbnail_image_path)
+  {
+    $THUMBNAIL_IMAGE_MAX_WIDTH = 170;
+
+    list($source_image_width, $source_image_height, $source_image_type) = getimagesize($source_image_path);
+    switch ($source_image_type) {
+      case IMAGETYPE_GIF:
+          $source_gd_image = imagecreatefromgif($source_image_path);
+          break;
+      case IMAGETYPE_JPEG:
+          $source_gd_image = imagecreatefromjpeg($source_image_path);
+          break;
+      case IMAGETYPE_PNG:
+          $source_gd_image = imagecreatefrompng($source_image_path);
+          break;
+    }
+    if ($source_gd_image === false) {
+      return false;
+    }
+    $source_aspect_ratio = $source_image_width / $source_image_height;
+
+    if ($source_image_width <= $THUMBNAIL_IMAGE_MAX_WIDTH) {
+      $thumbnail_image_width = $source_image_width;
+      $thumbnail_image_height = $source_image_height;
+    } else {
+      $thumbnail_image_width = $THUMBNAIL_IMAGE_MAX_WIDTH;
+      $thumbnail_image_height = (int) ($THUMBNAIL_IMAGE_MAX_WIDTH / $source_aspect_ratio);
+    }
+
+    $thumbnail_gd_image = imagecreatetruecolor($thumbnail_image_width, $thumbnail_image_height);
+    imagecopyresampled($thumbnail_gd_image, $source_gd_image, 0, 0, 0, 0, $thumbnail_image_width, $thumbnail_image_height, $source_image_width, $source_image_height);
+    imagejpeg($thumbnail_gd_image, $thumbnail_image_path, 90);
+    imagedestroy($source_gd_image);
+    imagedestroy($thumbnail_gd_image);
+    return true;
+  }
+
+
+
+
 
 }

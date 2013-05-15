@@ -4,12 +4,144 @@
 
 <style type="text/css">
 body{
-	height: 1200px;
+	height: 1170px;
 }
 .footer{
 	position: absolute;
-	top: 950px;
+	top: 970px;
+	left: 0px;
 }
+
+form div.submit{
+	position: absolute;
+	top: 765px;
+	left: 350px;
+	z-index: 9999;
+}
+
+form .submit input[type=submit]{
+	background-image: url(../img/bt_aceptar.png);
+width: 55px;
+height: 55px;
+border: none;
+background-color: transparent;
+box-shadow: none;
+text-indent: -9999px;
+cursor: pointer;
+}
+
+form .submit input[type=submit]:hover{
+	background-image: url(../img/bt_aceptar.png);
+	background-color: rgba(0,0,0,0.3);
+	border-radius: 25px;
+}
+
+
+<?php if( isset($familytree['FamilytreePage']['grandpa_dad_img']) ){ ?>
+#grandpa_dad{
+	background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_dad_img']); ?>);
+	background-size: 186px 186px,  120px 120px;
+	border-radius: 120px;
+	height: 150px;width: 150px;
+	border-radius: 150px;
+	background-position: -15px -15px, center 9px;
+	background-size: 186px 186px, 140px 140px;
+margin-left: 30px;
+margin-top: 50px;
+}
+<?php }?>
+
+
+<?php if( isset($familytree['FamilytreePage']['grandpa_mom_img']) ){ ?>
+#grandpa_mom{
+	background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_mom_img']); ?>);
+	background-size: 186px 186px,  120px 120px;
+	border-radius: 120px;
+	height: 150px;width: 150px;
+	border-radius: 150px;
+	background-position: -15px -15px, center 9px;
+	background-size: 186px 186px, 140px 140px;
+margin-left: 30px;
+margin-top: 50px;
+}
+<?php }?>
+
+
+<?php if( isset($familytree['FamilytreePage']['grandma_dad_img']) ){ ?>
+#grandma_dad{
+	background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_dad_img']); ?>);
+	background-size: 186px 186px,  120px 120px;
+	border-radius: 120px;
+	height: 150px;width: 150px;
+border-radius: 150px;
+background-position: -15px -15px, center 9px;
+background-size: 186px 186px, 140px 140px;
+margin-left: 30px;
+margin-top: 50px;
+}
+<?php }?>
+
+
+<?php if( isset($familytree['FamilytreePage']['grandma_mom_img']) ){ ?>
+#grandma_mom{
+	background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_mom_img']); ?>);
+	background-size: 186px 186px,  120px 120px;
+	border-radius: 120px;
+	height: 150px;width: 150px;
+border-radius: 150px;
+background-position: -15px -15px, center 9px;
+background-size: 186px 186px, 140px 140px;
+margin-left: 30px;
+margin-top: 50px;
+}
+<?php }?>
+
+
+<?php if( isset($familytree['FamilytreePage']['dad_img']) ){ ?>
+#dad{
+	background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['dad_img']); ?>);
+	background-size: 186px 186px,  120px 120px;
+	border-radius: 120px;
+
+height: 150px;width: 150px;
+border-radius: 150px;
+background-position: -15px -15px, center 9px;
+background-size: 186px 186px, 140px 140px;
+margin-left: 30px;
+margin-top: 50px;
+
+}
+<?php }?>
+
+<?php if( isset($familytree['FamilytreePage']['mom_img']) ){ ?>
+#mom{
+	background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['mom_img']); ?>);
+	background-size: 186px 186px,  120px 120px;
+	border-radius: 120px;
+	height: 150px;width: 150px;
+border-radius: 150px;
+background-position: -15px -15px, center 9px;
+background-size: 186px 186px, 140px 140px;
+margin-left: 30px;
+margin-top: 50px;
+
+}
+<?php }?>
+
+<?php if( isset($familytree['FamilytreePage']['baby_img']) ){ ?>
+#baby{
+	background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['baby_img']); ?>);
+	background-size: 186px 186px,  120px 120px;
+	border-radius: 120px;
+	height: 150px;width: 150px;
+border-radius: 150px;
+background-position: -15px -15px, center 9px;
+background-size: 186px 186px, 140px 140px;
+margin-left: 30px;
+margin-top: 50px;
+}
+<?php }?>
+
 </style>
 
 <script type="text/javascript">
@@ -63,7 +195,12 @@ fbphotoSelect = function(id, idpapa) {
 			console.log(photo.source);
 			console.log(' ehmem == > '+idpapa);
 			$('.'+idpapa).val(photo.source);
-			//$('.cover_photo').css('background-image','url(../img/marco.png), url('+photo.source+')');
+			$('#'+idpapa).css('background-image','url(../img/marco_circular.png), url('+photo.source+')');
+			$('#'+idpapa).css('background-size', '186px 186px, 140px 140px');
+			$('#'+idpapa).css('border-radius', '150px');
+			$('#'+idpapa).css('background-position', '-15px -15px, center 9px');
+			$('#'+idpapa).css('height', '150px');
+			$('#'+idpapa).css('width', '150px');
 			//$('.cover_photo').css('background-size', '392px 297px,  329px 265px');
 		};
 
@@ -104,10 +241,15 @@ fbphotoSelect = function(id, idpapa) {
 
 function readURL(input) {
       if (input.files && input.files[0]) {
+      		var elpapa = $(input).parent().get(0).id;
           var reader = new FileReader();
           reader.onload = function (e) {
-                  $('.cover_photo').css('background-image','url(../img/marco.png), url('+e.target.result+')');
-									$('.cover_photo').css('background-size', '392px 297px,  329px 265px');
+                  $('#'+elpapa).css('background-image','url(../img/marco_circular.png), url('+e.target.result+')');
+									$('#'+elpapa).css('background-size', '186px 186px, 140px 140px');
+									$('#'+elpapa).css('border-radius', '150px');
+									$('#'+elpapa).css('background-position', '-15px -15px, center 9px');
+									$('#'+elpapa).css('height', '150px');
+									$('#'+elpapa).css('width', '150px');
           };
           reader.readAsDataURL(input.files[0]);
       }
@@ -242,7 +384,7 @@ function readURL(input) {
 			echo $this->Html->link(
 				    'Primer Trimestre',
 				    array('controller' => 'familytree_pages', 'action' => 'add'),
-				    array('class' => 'first_trim')
+				    array('class' => 'first_trim_current')
 				);
 			echo $this->Html->link(
 				    'Segundo Trimestre',
@@ -260,68 +402,83 @@ function readURL(input) {
 <div class="page_title">
 	<div class="ant">Anterior</div>
 	<div class="title_page">&aacute;rbol Familiar</div>
-	<div class="sig">Siguiente</div>
+	<?php
+
+			echo $this->Html->link(
+				    'Siguiente',
+				    array('controller' => 'first_visit_pages', 'action' => 'add'),
+				    array('class' => 'sig')
+				);
+	?>
 </div>
 
 <div class="familytreePages form">
 
 <?php echo $this->Form->create('FamilytreePage', array('enctype' => 'multipart/form-data')); ?>
 	<div class="familytreeFile" id="grandpa_dad">
-		<input type="hidden" name="data[FamilytreePage][grandpa_dad][url_photo]" class="grandpa_dad" value=""/>
+		<input type="hidden" name="data[FamilytreePage][grandpa_dad_url][url_photo]" class="grandpa_dad" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>
 		<?php
 			echo $this->Form->file('grandpa_dad_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
-			echo $this->Form->input('grandpa_dad', array('placeholder' => 'Nombre del abuelo', 'class' => 'name_input'));
+			echo $this->Form->input('grandpa_dad', array('placeholder' => 'Nombre del abuelo', 'class' => 'name_input',
+				'value' => $familytree['FamilytreePage']['grandpa_dad']));
 		?>
 	</div>
 	<div class="familytreeFile" id="grandpa_mom">
-		<input type="hidden" name="data[FamilytreePage][grandpa_mom][url_photo]" class="grandpa_mom" value=""/>
+		<input type="hidden" name="data[FamilytreePage][grandpa_mom_url][url_photo]" class="grandpa_mom" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>
 		<?php
 			echo $this->Form->file('grandpa_mom_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
-			echo $this->Form->input('grandpa_mom', array('placeholder' => 'Nombre de la abuela', 'class' => 'name_input'));
+			echo $this->Form->input('grandpa_mom', array('placeholder' => 'Nombre de la abuela', 'class' => 'name_input',
+				'value' => $familytree['FamilytreePage']['grandpa_mom']));
 		?>
 	</div>
 	<div class="familytreeFile" id="grandma_dad">
-		<input type="hidden" name="data[FamilytreePage][grandma_dad][url_photo]" class="grandma_dad" value=""/>
+		<input type="hidden" name="data[FamilytreePage][grandma_dad_url][url_photo]" class="grandma_dad" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>
 		<?php
 			echo $this->Form->file('grandma_dad_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
-			echo $this->Form->input('grandma_dad', array('placeholder' => 'Nombre del abuelo', 'class' => 'name_input'));
+			echo $this->Form->input('grandma_dad', array('placeholder' => 'Nombre del abuelo', 'class' => 'name_input',
+				'value' => $familytree['FamilytreePage']['grandma_dad']));
 		?>
 	</div>
 	<div class="familytreeFile" id="grandma_mom">
-		<input type="hidden" name="data[FamilytreePage][grandma_mom][url_photo]" class="grandma_mom" value=""/>
+		<input type="hidden" name="data[FamilytreePage][grandma_mom_url][url_photo]" class="grandma_mom" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>
 		<?php
-			echo $this->Form->file('mom_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
-			echo $this->Form->input('grandma_mom', array('placeholder' => 'Nombre de la abuela', 'class' => 'name_input'));
+			echo $this->Form->file('grandma_mom_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+			echo $this->Form->input('grandma_mom', array('placeholder' => 'Nombre de la abuela', 'class' => 'name_input',
+				'value' => $familytree['FamilytreePage']['grandma_mom']));
 		?>
 	</div>
 	<div class="familytreeFile" id="dad">
-		<input type="hidden" name="data[FamilytreePage][dad][url_photo]" class="dad" value=""/>
+		<input type="hidden" name="data[FamilytreePage][dad_url][url_photo]" class="dad" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>
 		<?php
 			echo $this->Form->file('dad_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
-			echo $this->Form->input('dad', array('placeholder' => 'Nombre del padre', 'class' => 'name_input'));
+			echo $this->Form->input('dad', array('placeholder' => 'Nombre del padre', 'class' => 'name_input',
+				'value' => $familytree['FamilytreePage']['dad']));
 		?>
 	</div>	
 	<div class="familytreeFile" id="mom">
-		<input type="hidden" name="data[FamilytreePage][mom][url_photo]" class="mom" value=""/>
+		<input type="hidden" name="data[FamilytreePage][mom_url][url_photo]" class="mom" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>
 		<?php
 			echo $this->Form->file('mom_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
-			echo $this->Form->input('mom', array('placeholder' => 'Nombre de la madre', 'class' => 'name_input'));
+			echo $this->Form->input('mom', array('placeholder' => 'Nombre de la madre', 'class' => 'name_input',
+				'value' => $familytree['FamilytreePage']['mom']));
 		?>
 	</div>	<br>
 	<div class="familytreeFile" id="baby">
-		<input type="hidden" name="data[FamilytreePage][baby][url_photo]" class="baby" value=""/>
+		<input type="hidden" name="data[FamilytreePage][baby_url][url_photo]" class="baby" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>
 		<?php
 			echo $this->Form->file('baby_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
-			echo $this->Form->input('baby', array('placeholder' => 'Nombre del bebé', 'class' => 'name_input'));
+			echo $this->Form->input('baby', array('placeholder' => 'Nombre del bebé', 'class' => 'name_input', 
+				'value' => $familytree['FamilytreePage']['baby']));
 		?>
 	</div>		
+
 		<?php
 			/*echo $this->Form->input('grandpa_dad');
 			echo $this->Form->input('grandma_dad');
@@ -337,7 +494,7 @@ function readURL(input) {
 			echo $this->Form->input('dad_img');
 			echo $this->Form->input('baby');
 			echo $this->Form->input('baby_img');*/
-			echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => 'estaid'));//$profileid));
+			echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
 		?>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>
