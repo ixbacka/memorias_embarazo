@@ -1,3 +1,7 @@
+<?php echo $this->Html->script('functions'); ?>
+<?php echo $this->Html->script('jquery-ui/js/jquery-ui-1.10.3.custom.min'); ?>
+<?php echo $this->Html->css('redmond/jquery-ui-1.10.3.custom.min'); ?>
+
 <style type="text/css">
 body{
 	height: 1170px;
@@ -23,11 +27,6 @@ left: 320px;
 }
 
 </style>
-
-<script type="text/javascript">
-
-
-</script>
 
 	<div class="header">	
 		<ul class="menu">
@@ -141,16 +140,28 @@ left: 320px;
 <?php echo $this->Form->create('CongratsPage'); ?>
 	
 	<?php
-		echo $this->Form->input('sospeche', array('label' => 'Sospeché que estaba embarazada cuando: '));
-		echo $this->Form->input('prueba', array('label' => 'Me hice una prueba de embarazo el día: '));
-		echo $this->Form->input('firstfeeling', array('label' => 'Lo primero que sentí fue: '));
-		echo $this->Form->input('babycoming', array('label' => 'Tenía '));
-		echo $this->Form->input('howishare', array('label' => 'semanas de embarazo cuando me enteré que venía el bebé en camino, ahh que emoción!. Compartí la gran noticia con el papá de mi bebé de esta manera: '));
-		echo $this->Form->input('babynum', array('label' => 'Éste es mi bebé número: '));
-		echo $this->Form->input('babybros',array('label' => 'Los hermanitos del bebé reaccionaron así: '));
-		echo $this->Form->input('details',array('label' => 'Anota todos los detalles que se te olviden! Cómo y dónde celebraste saber que estabas embarazada? Con quién compartiste el momento? Cómo reaccionaron tus familiares?, La primera compra que hiciste! o regalo que te dieron para el bebé.'));
-	?>
+		echo $this->Form->input('sospeche', array('label' => 'Sospeché que estaba embarazada cuando: '
+			, 'after' => '</span>','between' => '<span>'
+    )); 
+  ?>
 
+    <div class="input date"><label for="CongratsPagePruebaMonth">Me hice una prueba de embarazo el día: </label>
+    	<span><input type="text" id="datepickerCongrats" size="30" readonly="readonly"/></span>
+    	<input type="hidden" name="data[CongratsPage][prueba][month]" id="CongratsPagePruebaMonth" />
+			<input type="hidden" name="data[CongratsPage][prueba][day]" id="CongratsPagePruebaDay" />
+			<input type="hidden" name="data[CongratsPage][prueba][year]" id="CongratsPagePruebaYear" />
+		</div>
+
+	<?php
+		echo $this->Form->input('firstfeeling', array('label' => 'Lo primero que sentí fue: ', 'after' => '</span>','between' => '<span>'));
+		echo $this->Form->input('babycoming', array('label' => 'Tenía ', 'div' => false));
+		echo $this->Form->input('howishare', array('label' => 'semanas de embarazo cuando me enteré que venía el bebé en camino, ahh que emoción!. Compartí la gran noticia con el papá de mi bebé de esta manera: ', 'after' => '</span>','between' => '<span>', 'div' => false));
+		echo $this->Form->input('babynum', array('label' => 'Éste es mi bebé número: '));
+		echo $this->Form->input('babybros',array('label' => 'Los hermanitos del bebé reaccionaron así: ', 'after' => '</span>','between' => '<span>'));
+		echo $this->Form->input('details',array('label' => '¡Anota todos los detalles antes de que se te olviden!... ¿Cómo y dónde celebraste  saber que estabas embarazada? ¿Con quién compartiste el momento? ¿Cómo  reaccionaron tus familiares? ¿Cuál fue la primera compra que hiciste o regalo que te dieron para el bebé?', 'after' => '</span>','between' => '<span>'));
+
+	?>
+	<p> Aquí puedes escribir todo lo que sientas y quieras recordar cuando tengas a tu bebé. </p>
 		<?php
 			echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
 		?>

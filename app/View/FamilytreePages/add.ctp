@@ -1,10 +1,12 @@
 
 <?php echo $this->Html->css('PhotoSelector'); ?>
 <?php echo $this->Html->script('photo_selector'); ?>
+<?php echo $this->Html->script('functions'); ?>
 
 <style type="text/css">
 body{
 	height: 1170px;
+	overflow: hidden;
 }
 .footer{
 	position: absolute;

@@ -1,4 +1,6 @@
 <!-- cover.ctp -->
+<?php echo $this->Html->script('functions'); ?>
+
 <STYLE TYPE="text/css">
 
 body{
@@ -182,7 +184,7 @@ fbphotoSelect = function(id) {
 		<ul class="menu">
 			<li class="ask">FAQ</li>
 			<li class="settings">Settings</li>
-			<li class="home">Home</li>
+			<li class="home">	Home </li>
 		</ul>
 	</div>
 	<div class="content">
@@ -218,7 +220,7 @@ fbphotoSelect = function(id) {
 			<?php
 				echo $this->Html->link(
 				    'Escribir Diario',
-				    array('controller' => 'familytree_pages', 'action' => 'add'),
+				    array('controller' => 'congrats_pages', 'action' => 'add'),
 				    array('class' => 'write_bt')
 				);
 			 ?>

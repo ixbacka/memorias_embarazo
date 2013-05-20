@@ -1,0 +1,10 @@
+  $(document).ready(function(){
+  	
+  	$(".pick_fb").click(function (e) {
+		    e.preventDefault();
+		    id = null;
+		    if ( $(this).attr('data-id') ) id = $(this).attr('data-id');
+		    fbphotoSelect(id);
+		});
+
+	});
