@@ -8,7 +8,7 @@ App::import('Vendor', 'facebook');
  */
 class CongratsPagesController extends AppController {
 
-	var $uses = array('CongratsPages','Profile');
+	var $uses = array('CongratsPage','Profile');
 
 	public function beforeFilter() {
 		$this->Session->write("facebook", 
@@ -40,7 +40,7 @@ class CongratsPagesController extends AppController {
         $idf = $this->CongratsPage->find('first', array( 'conditions' => array( 'CongratsPage.profile_id' =>  $leid ) ) );
         
         if( !empty($idf['CongratsPage']['id']) && !is_null($idf['CongratsPage']['id'])){
-          $this->CongratsPages->id = $idf['CongratsPage']['id'];
+          $this->CongratsPage->id = $idf['CongratsPage']['id'];
         }
 
         /*$this->CongratsPages->set(array( 

@@ -5,5 +5,6 @@ App::uses('AppModel', 'Model');
  *
  */
 class WhoamiPage extends AppModel {
+	public $belongsTo = 'Profile';
 
 }

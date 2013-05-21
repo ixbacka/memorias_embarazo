@@ -2,6 +2,32 @@
 <?php echo $this->Html->script('jquery-ui/js/jquery-ui-1.10.3.custom.min'); ?>
 <?php echo $this->Html->css('redmond/jquery-ui-1.10.3.custom.min'); ?>
 
+
+<?php if(isset($congrats['CongratsPage']['prueba'])){ 
+
+			$source = $congrats['CongratsPage']['prueba'];
+			$date = new DateTime($source);
+			$letime = strtotime($source);
+
+			$mes = get_date_spanish($letime, true, 'month'); # return Enero
+
+			$dia = $date->format('d'); // 31.07.2012
+			$ano = $date->format('Y'); // 31-07-2012
+
+			$prueba = $dia.' '.$mes.' '.$ano;
+			$monthi = ($date->format('m'))-1;
+		?>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	 $( "#datepickerCongrats" ).datepicker("setDate", new Date(<?php echo $ano.', '.$monthi.', '.$dia;?>));	
+});
+
+</script>
+<?php } else{
+			$prueba = '';
+		}
+?>
 <style type="text/css">
 body{
 	height: 1170px;
@@ -12,20 +38,11 @@ body{
 	left: 0px;
 }
 
-.congratsPages{
-	position: absolute;
-top: 150px;
-}
-
-.title_page p{
-	margin-top: -10px;
-}
 .title_page span{
 	top: 42px;
-position: absolute;
-left: 320px;
+	position: absolute;
+	left: 320px;
 }
-
 </style>
 
 	<div class="header">	
@@ -37,12 +54,13 @@ left: 320px;
 	</div>
 
 <ul class="vertical_menu_1">
-	<li>
+	<li class="selected">
 	<?php 
 		//congrats
 		echo $this->Html->link(
 				    'Felicidades',
 				    array('controller' => 'congrats_pages', 'action' => 'add')
+
 				);
 		?>
 	</li>
@@ -140,33 +158,106 @@ left: 320px;
 <?php echo $this->Form->create('CongratsPage'); ?>
 	
 	<?php
+
+	if(isset($congrats['CongratsPage']['sospeche'])){
+		$sospeche = $congrats['CongratsPage']['sospeche'];
+	} else{
+		$sospeche = '';
+	}
 		echo $this->Form->input('sospeche', array('label' => 'Sospeché que estaba embarazada cuando: '
-			, 'after' => '</span>','between' => '<span>'
-    )); 
+			, 'after' => '</span>','between' => '<span>', 'value' => $sospeche )); 
+
+#Power by nicolaspar 2007 - especific proyect
+function get_date_spanish( $time, $part = false, $formatDate = '' ){
+    #Declare n compatible arrays
+    $month = array("","enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiempre", "diciembre");#n
+    $month_execute = "n"; #format for array month
+
+    $month_mini = array("","ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "DIC");#n
+    $month_mini_execute = "n"; #format for array month
+
+    $day = array("domingo","lunes","martes","miércoles","jueves","viernes","sábado"); #w
+    $day_execute = "w";
+    
+    $day_mini = array("DOM","LUN","MAR","MIE","JUE","VIE","SAB"); #w
+    $day_mini_execute = "w";
+
+    #Content array exception print "HOY", position content the name array. Duplicate value and key for optimization in comparative
+    $print_hoy = array("month"=>"month", "month_mini"=>"month_mini");
+
+    if( $part === false ){
+        return date("d", $time) . " de " . $month[date("n",$time)] . ", ". date("H:i",$time) ." hs";
+    }elseif( $part === true ){
+        if( ! empty( $print_hoy[$formatDate] ) && date("d-m-Y", $time ) == date("d-m-Y") ) return "HOY"; #Exception HOY
+        if( ! empty( ${$formatDate} ) && !empty( ${$formatDate}[date(${$formatDate.'_execute'},$time)] ) ) return ${$formatDate}[date(${$formatDate.'_execute'},$time)];
+        else return date($formatDate, $time);
+    }else{
+        return date("d-m-Y H:i", $time);
+    }
+}
+
   ?>
 
-    <div class="input date"><label for="CongratsPagePruebaMonth">Me hice una prueba de embarazo el día: </label>
-    	<span><input type="text" id="datepickerCongrats" size="30" readonly="readonly"/></span>
+    <div class="input date">
+    	<label>Me hice una prueba de embarazo el día: </label>
+    	<span><input type="text" id="datepickerCongrats" size="30" readonly="readonly"  value="<?php if($prueba != ''){
+    		echo $prueba; } ?>"/></span>
     	<input type="hidden" name="data[CongratsPage][prueba][month]" id="CongratsPagePruebaMonth" />
 			<input type="hidden" name="data[CongratsPage][prueba][day]" id="CongratsPagePruebaDay" />
 			<input type="hidden" name="data[CongratsPage][prueba][year]" id="CongratsPagePruebaYear" />
 		</div>
 
 	<?php
-		echo $this->Form->input('firstfeeling', array('label' => 'Lo primero que sentí fue: ', 'after' => '</span>','between' => '<span>'));
-		echo $this->Form->input('babycoming', array('label' => 'Tenía ', 'div' => false));
-		echo $this->Form->input('howishare', array('label' => 'semanas de embarazo cuando me enteré que venía el bebé en camino, ahh que emoción!. Compartí la gran noticia con el papá de mi bebé de esta manera: ', 'after' => '</span>','between' => '<span>', 'div' => false));
-		echo $this->Form->input('babynum', array('label' => 'Éste es mi bebé número: '));
-		echo $this->Form->input('babybros',array('label' => 'Los hermanitos del bebé reaccionaron así: ', 'after' => '</span>','between' => '<span>'));
-		echo $this->Form->input('details',array('label' => '¡Anota todos los detalles antes de que se te olviden!... ¿Cómo y dónde celebraste  saber que estabas embarazada? ¿Con quién compartiste el momento? ¿Cómo  reaccionaron tus familiares? ¿Cuál fue la primera compra que hiciste o regalo que te dieron para el bebé?', 'after' => '</span>','between' => '<span>'));
 
+	if(isset($congrats['CongratsPage']['firstfeeling'])){
+		$firstfeeling = $congrats['CongratsPage']['firstfeeling'];
+	} else{
+		$firstfeeling = '';
+	}
+		echo $this->Form->input('firstfeeling', array('label' => 'Lo primero que sentí fue: ','after' => '</span>','between' => '<span>', 'value' => $firstfeeling));
+		/*
+		echo $this->Form->input('babycoming', array('label' => 'Tenía '));
+		echo $this->Form->input('howishare', array('label' => 'semanas de embarazo cuando me enteré que venía el bebé en camino, ahh que emoción!. Compartí la gran noticia con el papá de mi bebé de esta manera: ', 'after' => '</span>','between' => '<span>',  'before' => '<p>semanas de embarazo cuando me enteré que venía el bebé en camino, ahh que emoción!. Compartí la gran noticia con el papá de mi bebé de esta manera:</p>', 'label' => false));
+		*/?>
+		<div class="input number"><p>
+		<label for="CongratsPageBabycoming">Tenía </label>
+		<input name="data[CongratsPage][babycoming]" type="number" id="CongratsPageBabycoming" value="<?php if( isset($congrats['CongratsPage']['babycoming'])){ echo $congrats['CongratsPage']['babycoming']; }?>">
+		 semanas de embarazo cuando me enteré que venía el bebé en camino, ahh que emoción!. Compartí la gran noticia con el papá de mi bebé de esta manera:
+		 <input name="data[CongratsPage][howishare]" type="text" id="CongratsPageHowishare" value="<?php if(isset($congrats['CongratsPage']['howishare'])){ echo $congrats['CongratsPage']['howishare']; } ?>">
+		</p>
+		</div>
+		<?php
+
+
+	if(isset($congrats['CongratsPage']['babynum'])){
+		$babynum = $congrats['CongratsPage']['babynum'];
+	} else{
+		$babynum = '';
+	}
+	if(isset($congrats['CongratsPage']['babybros'])){
+		$babybros = $congrats['CongratsPage']['babybros'];
+	} else{
+		$babybros = '';
+	}
+		echo $this->Form->input('babynum', array('label' => 'Éste es mi bebé número: ', 'value' => $babynum));
+		echo $this->Form->input('babybros',array('label' => 'Los hermanitos del bebé reaccionaron así: ', 'after' => '</span>','between' => '<span>', 'value' => $babybros));
+		/*
+		echo $this->Form->input('details',array('label' => '¡Anota todos los detalles antes de que se te olviden!... ¿Cómo y dónde celebraste  saber que estabas embarazada? ¿Con quién compartiste el momento? ¿Cómo  reaccionaron tus familiares? ¿Cuál fue la primera compra que hiciste o regalo que te dieron para el bebé?', 'after' => '</span>','between' => '<span>'));
+		*/
 	?>
-	<p> Aquí puedes escribir todo lo que sientas y quieras recordar cuando tengas a tu bebé. </p>
+	<div class="input text">
+	<p id="last_input">¡Anota todos los detalles antes de que se te olviden!... ¿Cómo y dónde celebraste  saber que estabas embarazada? ¿Con quién compartiste el momento? ¿Cómo  reaccionaron tus familiares? ¿Cuál fue la primera compra que hiciste o regalo que te dieron para el bebé?
+	<span><input name="data[CongratsPage][details]" maxlength="400" type="text" id="CongratsPageDetails" value="<?php if(isset($congrats['CongratsPage']['details'])){ echo $congrats['CongratsPage']['details']; }?>"></span></p>
+	</div>
 		<?php
 			echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
 		?>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>
+
+<p class="aux_text">
+ Aquí puedes escribir todo lo que sientas y quieras recordar cuando tengas a tu bebé. 
+</p>
 
 </div>
 	<div class="footer">

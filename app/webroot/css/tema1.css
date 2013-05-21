@@ -13,6 +13,7 @@ body {
 	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
 	font-size:90%;
 	margin: 0;
+	overflow: hidden;
 }
 
 
@@ -240,14 +241,14 @@ p.whatdo{
 
 .first_trim_current{	
 	background-image: url(../img/bt_primer_up.png);
-	width: 165px;
+	width: 168px;
 	height: 30px;
 	text-indent: -9999px;
 	position: absolute;
 	top: 0;
 	left: 60px;
 	padding-bottom: 5px;
-	padding-right: 7px;
+	padding-right: 10px;
 	border-bottom: 2px solid #fff;
 }
 
@@ -298,7 +299,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
 position: absolute;
 right: 140px;
-top: 590px;
+top: 593px;
 z-index: 9999;
 margin: 0;
 list-style: none;
@@ -306,7 +307,7 @@ right: -330px;
 }
 
 ul.vertical_menu_1 li{
-	color: #147cc1;
+	color: #197490;
 	float: left;
 	border-right: 1px solid #fff;
 	border-bottom: 1px solid #fff;
@@ -324,7 +325,7 @@ ul.vertical_menu_1 li{
 
 ul.vertical_menu_1 li a{
 	text-decoration: none;
-
+	color: #197490;
 }
 
 .add_moment{
@@ -333,7 +334,7 @@ ul.vertical_menu_1 li a{
 	width: 42px;
 	height: 42px;
 	position: absolute;
-	top: 980px;
+	top: 992px;
 	left: 758px;
 	z-index: 9999;
 }
@@ -350,6 +351,10 @@ form#familytreePageAddForm{
 }
 
 
+.congratsPages{
+	position: absolute;
+	top: 150px;
+}
 
 .familytreeFile{
 	width: 172px;
@@ -462,7 +467,7 @@ div.form, div.index, div.view {
 .ant{
 	background-image: url(../img/anterior.png);
 	text-indent: -9999px;
-	width: 144px;
+	width: 143px;
 	height: 40px;
 	float: left;
 }
@@ -489,23 +494,30 @@ div.form, div.index, div.view {
 }
 
 
+.title_page p{
+	margin-top: -10px;
+}
+
 .title_page span{
 	font-size: 15px;
 }
 
 /* FORM STYLE */
 
+form{
+	padding-left: 50px;
+}
+
 label{
 	color: #fff;
 	font-size: 14px;
 	float: left;
 	padding-right: 5px;
-	padding-left: 50px;
 }
 
 form .input{
 	padding-bottom: 30px;
-	width: 680px;
+	width: 640px;
 }
 
 form .input span{
@@ -551,5 +563,67 @@ select{
 	padding: 3px;
 }
 
+.input p{
+	color: #fff;
+	font-size: 14px;
+	float: left;
+	padding-right: 5px;
+	margin-bottom: 30px;
+}
+
+form p{
+	float: left;
+}
+
+#datepickerCongrats:after{
+	content: "día   mes   año";
+
+}
+
+#last_input{
+	color: #269ccc;
+	text-align: center;
+}
+
+.aux_text{
+	color: #269ccc;
+	position: absolute;
+	top: 780px;
+	left: 500px;
+	width: 220px;
+	text-align: center;
+}
+
+form .submit input[type="submit"]{
+	text-indent: -9999px;
+	width: 54px;
+	height: 54px;
+	background-image: url(../img/bt_aceptar.png);
+	background-color: transparent;
+	border: none;
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-moz-box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.3), 0px 0px 0px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.3), 0px 0px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.3), 0px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+form .submit input[type="submit"]:hover{
+	text-indent: -9999px;
+	width: 54px;
+	height: 54px;
+	background-image: url(../img/bt_aceptar.png);
+	background-color: transparent;
+	border: none;
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-moz-box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.3), 0px 0px 0px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.3), 0px 0px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.3), 0px 0px 0px rgba(0, 0, 0, 0.2);
+}
 
 
