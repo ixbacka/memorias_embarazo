@@ -1,9 +1,147 @@
-<div class="ultrasoundPages form">
-<?php echo $this->Form->create('UltrasoundPage'); ?>
-	<fieldset>
-		<legend><?php echo __('Add Ultrasound Page'); ?></legend>
+<!-- add.ctp -->
+<?php //echo $this->Html->script('functions'); ?>
+<?php echo $this->Html->css('PhotoSelector'); ?>
+<?php echo $this->Html->script('photo_selector'); ?>
+
+<style type="text/css">
+
+.title_page span {
+top: 42px;
+position: absolute;
+left: 319px;
+}
+
+.title_page p{
+	margin-left: -2px;
+}
+
+.footer{
+	top: 970px;
+}
+
+body{
+	width: 810px;
+	height: 1170px;
+}
+
+</style>
+
+	<div class="header">	
+		<ul class="menu">
+			<li class="ask">FAQ</li>
+			<li class="settings">Settings</li>
+			<li class="home">Home</li>
+		</ul>
+	</div>
+
+<ul class="vertical_menu_1">
+	<li class="selected">
+	<?php 
+		//congrats
+		echo $this->Html->link(
+				    'Felicidades',
+				    array('controller' => 'congrats_pages', 'action' => 'add')
+
+				);
+		?>
+	</li>
+	<li>
+		<?php
+		echo $this->Html->link(
+				    'Primer Visita',
+				    array('controller' => 'first_visit_pages', 'action' => 'add')
+				); ?>
+		</li>
+		<li>
+		<?php
+		echo $this->Html->link(
+				    'Quién soy',
+				    array('controller' => 'whoami_pages', 'action' => 'add')
+				);
+		?>
+		</li>
+		<li>
+		<?php
+		echo $this->Html->link(
+				    'Primeros síntomas',
+				    array('controller' => 'sintom_pages', 'action' => 'add')
+				);
+		?>
+		</li>
+		<li>
+			<?php
+		echo $this->Html->link(
+				    'Ultrasonido',
+				    array('controller' => 'ultrasound_pages', 'action' => 'add')
+				);
+		?>
+		</li>
+		<li>
+		<?php
+		echo $this->Html->link(
+				    'Mi pancita',
+				    array('controller' => 'belly_pages', 'action' => 'add')
+				);
+		?>
+		</li>
+		<li>
+		<?php
+		echo $this->Html->link(
+				    'Mi ánimo',
+				    array('controller' => 'animo_pages', 'action' => 'add')
+				);
+		?>
+		</li>
+</ul>
+<?php
+		echo $this->Html->link(
+				    'Add Moment',
+				    array('controller' => 'moment_pages', 'action' => 'add'),
+				    array('class' => 'add_moment')
+				);
+	?>
+
+<div class="content">
+	<div class="menu_trims">
+		<?php 
+			echo $this->Html->link(
+				    'Primer Trimestre',
+				    array('controller' => 'familytree_pages', 'action' => 'add'),
+				    array('class' => 'first_trim_current')
+				);
+			echo $this->Html->link(
+				    'Segundo Trimestre',
+				    array('controller' => 'familytree_pages', 'action' => 'add'),
+				    array( 'class' => 'second_trim')
+				);
+			echo $this->Html->link(
+				    'Tercer Trimestre',
+				    array('controller' => 'familytree_pages', 'action' => 'add'),
+				    array('class' => 'third_trim')
+				);
+		?>
+	</div>
+
+<div class="page_title">
+	<div class="ant">Anterior</div>
+	<div class="title_page"><p>primeros</p>
+		<span>síntomas y malestares</span>
+	</div>
+	<p class="middle_note">Cariño me puedes detener el cabello SOS... no me siento tan bien!</p>
 	<?php
-		echo $this->Form->input('first_date');
+
+			echo $this->Html->link(
+				    'Siguiente',
+				    array('controller' => 'ultrasound_pages', 'action' => 'add'),
+				    array('class' => 'sig')
+				);
+	?>
+</div>
+
+	<div class="ultrasoundPages form">
+<?php echo $this->Form->create('SintomPage'); ?>
+	<?php
+	echo $this->Form->input('first_date');
 		echo $this->Form->input('first_week');
 		echo $this->Form->input('first_photo');
 		echo $this->Form->input('first_notes');
@@ -11,14 +149,141 @@
 		echo $this->Form->input('second_week');
 		echo $this->Form->input('second_photo');
 		echo $this->Form->input('second_notes');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
 
-		<li><?php echo $this->Html->link(__('List Ultrasound Pages'), array('action' => 'index')); ?></li>
-	</ul>
+	if(isset($sintoms['SimtomPage']['matutinos'])){
+		$matutinos = $sintoms['SimtomPage']['matutinos'];
+	} else{
+		$matutinos = '';
+	}
+		echo $this->Form->input('matutinos', array('label' => 'Ouch, empiezan los malestares matutinos y yo me siento: ', 'value' => $matutinos )); 
+
+	if(isset($sintoms['SimtomPage']['worst'])){
+		$worst = $sintoms['SimtomPage']['worst'];
+	} else{
+		$worst = '';
+	}
+		echo $this->Form->input('worst', array('label' => 'Pero cuando me siento peor es: ','after' => '</span>','between' => '<span>', 'value' => $worst));?>
+	<div class="sintom_left">
+	<p class="title_form" id="cravings">Antojos</p>
+	<div class="sintom_inputs" id="cravings_">
+	<?php
+	if(isset($sintoms['SimtomPage']['craving1'])){
+		$craving1 = $sintoms['SimtomPage']['craving1'];
+	} else{
+		$craving1 = '';
+	}
+		if(isset($sintoms['SimtomPage']['craving2'])){
+		$craving2 = $sintoms['SimtomPage']['craving2'];
+	} else{
+		$craving2 = '';
+	}
+		if(isset($sintoms['SimtomPage']['craving3'])){
+		$craving3 = $sintoms['SimtomPage']['craving3'];
+	} else{
+		$craving3 = '';
+	}
+		if(isset($sintoms['SimtomPage']['craving4'])){
+		$craving4 = $sintoms['SimtomPage']['craving4'];
+	} else{
+		$craving4 = '';
+	}
+		if(isset($sintoms['SimtomPage']['craving5'])){
+		$craving5 = $sintoms['SimtomPage']['craving5'];
+	} else{
+		$craving5 = '';
+	}
+		if(isset($sintoms['SimtomPage']['craving6'])){
+		$craving6 = $sintoms['SimtomPage']['craving6'];
+	} else{
+		$craving6 = '';
+	}
+			echo $this->Form->input('craving1', array('label' => false, 'div' => false, 'value' => $craving1));
+			echo $this->Form->input('craving2', array('label' => false, 'div' => false, 'value' => $craving2));
+			echo $this->Form->input('craving3', array('label' => false, 'div' => false, 'value' => $craving3));
+			echo $this->Form->input('craving4', array('label' => false, 'div' => false, 'value' => $craving4));
+			echo $this->Form->input('craving5', array('label' => false, 'div' => false, 'value' => $craving5));
+			echo $this->Form->input('craving6', array('label' => false, 'div' => false, 'value' => $craving6));
+	?>
+	</div>
+	<p class="title_form" id="gross">Ascos</p>
+	<div class="sintom_inputs"  id="gross_">
+		<?php
+
+		if(isset($sintoms['SimtomPage']['gross1'])){
+			$gross1 = $sintoms['SimtomPage']['gross1'];
+		} else{
+			$gross1 = '';
+		}
+			if(isset($sintoms['SimtomPage']['gross2'])){
+			$gross2 = $sintoms['SimtomPage']['gross2'];
+		} else{
+			$gross2 = '';
+		}
+			if(isset($sintoms['SimtomPage']['gross3'])){
+			$gross3 = $sintoms['SimtomPage']['gross3'];
+		} else{
+			$gross3 = '';
+		}
+			if(isset($sintoms['SimtomPage']['gross4'])){
+			$gross4 = $sintoms['SimtomPage']['gross4'];
+		} else{
+			$gross4 = '';
+		}
+			if(isset($sintoms['SimtomPage']['gross5'])){
+			$gross5 = $sintoms['SimtomPage']['gross5'];
+		} else{
+			$gross5 = '';
+		}
+			if(isset($sintoms['SimtomPage']['gross6'])){
+			$gross6 = $sintoms['SimtomPage']['gross6'];
+		} else{
+			$gross6 = '';
+		}
+				echo $this->Form->input('gross1', array('label' => false, 'div' => false, 'value' => $gross1));
+				echo $this->Form->input('gross2', array('label' => false, 'div' => false, 'value' => $gross2));
+				echo $this->Form->input('gross3', array('label' => false, 'div' => false, 'value' => $gross3));
+				echo $this->Form->input('gross4', array('label' => false, 'div' => false, 'value' => $gross4));
+				echo $this->Form->input('gross5', array('label' => false, 'div' => false, 'value' => $gross5));
+				echo $this->Form->input('gross6', array('label' => false, 'div' => false, 'value' => $gross6));
+		?>
+	</div>
 </div>
+<div class="sintom_rite">
+	<?php 
+
+		if(isset($sintoms['SimtomPage']['cravings'])){
+			$cravings = $sintoms['SimtomPage']['cravings'];
+		} else{
+			$cravings = '';
+		}
+			echo $this->Form->input('cravings', array('label' => 'El antojito más raro que he tenido es: ', 'value' => $weirdestcraving )); 
+		?>
+		
+		<?php
+
+		if(isset($sintoms['SimtomPage']['weirdestcraving'])){
+			$weirdestcraving = $sintoms['SimtomPage']['weirdestcraving'];
+		} else{
+			$weirdestcraving = '';
+		}
+			echo $this->Form->input('weirdestcraving', array('label' => 'El antojito más raro que he tenido es: ', 'value' => $weirdestcraving )); 
+	?>
+</div>
+		<?php
+			echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
+		?>	
+		<?php echo $this->Form->end(array(
+					    'label' => 'Submit',
+					    'div' => array(
+					        'id' => 'button_sintom',
+					    )
+					));
+		?>
+</div>
+<p class="note_sintom_">Hay que darle a la panza lo que pide. ¿No? Tengo que cuidar mi peso.</p>
+</div>
+	<div class="footer">
+		<div class="footer_mtm">Mom to mom , Consintiendo mi piel de mam&aacute;</div>
+		<a href="http://www.momtomom.com.mx/" class="footer_link" target="_blank">www.momtomom.mx</a>
+		<a href="https://twitter.com/momtomommx" class="footer_twitter" target="_blank">@momtomommx</a>
+	</div>

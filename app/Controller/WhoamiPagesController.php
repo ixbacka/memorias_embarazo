@@ -49,7 +49,7 @@ class WhoamiPagesController extends AppController {
         $error = $this->handleFileUpload($this->request->data['WhoamiPage']['photo'], $fileName); 
 
           if ($error == false) { 
-            $this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$fileName,WWW_ROOT.'img/cover_photos/'.$fileName);
+            //$this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$fileName,WWW_ROOT.'img/cover_photos/'.$fileName);
             
             $this->WhoamiPage->set(array( 
               'photo' => $fileName
@@ -177,7 +177,7 @@ class WhoamiPagesController extends AppController {
    */
   public function generate_image_thumbnail($source_image_path, $thumbnail_image_path)
   {
-    $THUMBNAIL_IMAGE_MAX_WIDTH = 170;
+    $THUMBNAIL_IMAGE_MAX_WIDTH = 250;
 
     list($source_image_width, $source_image_height, $source_image_type) = getimagesize($source_image_path);
     switch ($source_image_type) {

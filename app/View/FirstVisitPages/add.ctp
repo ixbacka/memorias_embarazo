@@ -153,7 +153,7 @@ body{
 
 			echo $this->Html->link(
 				    'Siguiente',
-				    array('controller' => 'first_visit_pages', 'action' => 'add'),
+				    array('controller' => 'whoami_pages', 'action' => 'add'),
 				    array('class' => 'sig')
 				);
 	?>
