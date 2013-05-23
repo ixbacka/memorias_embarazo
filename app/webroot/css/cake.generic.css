@@ -91,12 +91,12 @@ p {
 	width: 810px;
 	height: 560px;
 	background-image: url(../img/nube1.png), url(../img/titulo1.png), url(../img/titulo2.png), url(../img/nube2.png), url(../img/nube3.png);
-	background-position: 0px -44px, center top, center 130px, 0px 0px, 0px 124px;
+	background-position: 0px -87px, center -46px, center 82px, 0px -102px, 0px -500px;
 	background-repeat: no-repeat;
 
 	/* Aqui colocamos la transicion para cada navegador */
-	-webkit-transition:all 4s ease-out;  /* Chrome y Safari */
-	-o-transition:all 4s ease-out;  /* Opera */
+	-webkit-transition:all 500ms ease-out;  /* Chrome y Safari */
+	-o-transition:all 500ms ease-out;  /* Opera */
 	-moz-transition:all 4s ease-out;  /* Mozilla Firefox */
 	-ms-transition:all 4s ease-out;   /* Internet Explorer */
 	transition:all 4s ease-out;  /* W3C */
@@ -111,6 +111,7 @@ p {
 	margin-left: 50%;
 	left: -186px;
 	background-image: url(../img/fangate_texto.png);
+  opacity: 0;
 }
 
 
@@ -126,12 +127,12 @@ p {
 
 .footer-fangate{
 	position: absolute;
-	top: 550px;
+	top: 200px;
 	left: 0;
 	width: 810px;
-	height: 320px;
-	background-image: url(../img/nube5.png), url(../img/nube4.png);
-	background-position: 0px 30px, right bottom;
+  height: 800;
+	background-image: url(../img/nube4.png),url(../img/nube5.png), url(../img/nube4.png);
+  background-position: left bottom, 0px 6px, 0px -31px;
 	background-repeat: no-repeat;
 
 	/* Aqui colocamos la transicion para cada navegador */
@@ -143,7 +144,6 @@ p {
 }
 
 #bienvenida_texto{
-	display: none;
 	background-image: url(../img/Bienvenida.png);
 	width: 676px;
 	height: 309px;
@@ -154,7 +154,7 @@ p {
 ;
 	/* Aqui colocamos la transicion para cada navegador */
 	-webkit-transition:all 4s ease-out;  /* Chrome y Safari */
-	-o-transition:all 4s ease-out;  /* Opera */
+	-o-transition:all 4s ease-out;  /* Opera *display: none;/
 	-moz-transition:all 4s ease-out;  /* Mozilla Firefox */
 	-ms-transition:all 4s ease-out;   /* Internet Explorer */
 	transition:all 4s ease-out;  /* W3C */
@@ -176,7 +176,7 @@ p {
 }
 
 .temas{
-	opacity: 0;
+	opacity: 1;
 	width: 784px;
 	height: 150px;
 	margin-top: 10px;
