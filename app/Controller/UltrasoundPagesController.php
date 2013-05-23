@@ -22,7 +22,7 @@ class UltrasoundPagesController extends AppController {
 
 
 	public function add(){
-
+    /*
 		$facebook = $this->Session->read("facebook");
 		$uid  = $facebook->getUser();
 
@@ -79,6 +79,7 @@ class UltrasoundPagesController extends AppController {
 
       $this->set('ultrasound',$this->UltrasoundPage->find('first', array( 'conditions' => array( 'UltrasoundPage.profile_id' => $leid ) )));
 		  $this->set('profileid',$leid);
+      */
 	}
 
 
