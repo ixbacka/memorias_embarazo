@@ -1,4 +1,4 @@
-<div class="fangate">
+<div class="fangate zero">
 	<div class="header-fangate">
 		
 		<div class="like">Bienvenida mama, Para comenzar da clic en Me Gusta</div>

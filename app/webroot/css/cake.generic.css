@@ -130,7 +130,7 @@ p {
 	top: 200px;
 	left: 0;
 	width: 810px;
-  height: 800;
+  height: 800px;
 	background-image: url(../img/nube4.png),url(../img/nube5.png), url(../img/nube4.png);
   background-position: left bottom, 0px 6px, 0px -31px;
 	background-repeat: no-repeat;
@@ -150,7 +150,7 @@ p {
 	position: absolute;
 	top: 190px;
 	left: 60px;
-	text-indent: -9999px;
+	text-indent: -9999px
 ;
 	/* Aqui colocamos la transicion para cada navegador */
 	-webkit-transition:all 4s ease-out;  /* Chrome y Safari */
