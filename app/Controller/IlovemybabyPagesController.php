@@ -52,7 +52,7 @@ class IlovemybabyPagesController extends AppController {
 
       }
 
-      $this->set('firstvisit',$this->IlovemybabyPage->find('first', array( 'conditions' => array( 'IlovemybabyPage.profile_id' => $leid ) )));
+      $this->set('ilovemybby',$this->IlovemybabyPage->find('first', array( 'conditions' => array( 'IlovemybabyPage.profile_id' => $leid ) )));
 		  $this->set('profileid',$leid);
 	}
 
