@@ -98,8 +98,33 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		  
 		  </script> 
 		
+		<?php if( strpos($_SERVER['REQUEST_URI'], 'profiles') == FALSE &&
+							strpos($_SERVER['REQUEST_URI'], 'welcome') == FALSE && 
+						  strpos($_SERVER['REQUEST_URI'], 'fangate') == FALSE &&
+						  strpos($_SERVER['REQUEST_URI'], 'cover') == FALSE  ){ 
+		?>
+
+			<div class="header">	
+				<ul class="menu">
+					<li class="ask">FAQ</li>
+					<li class="settings">Settings</li>
+					<li class="home">Home</li>
+				</ul>
+			</div>
+
+		<?php } ?>
 		<?php echo $this->Session->flash(); ?>
 		<?php echo $this->fetch('content'); ?>
-
+		<?php if( strpos($_SERVER['REQUEST_URI'], 'profiles') == FALSE &&
+							strpos($_SERVER['REQUEST_URI'], 'welcome') == FALSE && 
+						  strpos($_SERVER['REQUEST_URI'], 'fangate') == FALSE &&
+						  strpos($_SERVER['REQUEST_URI'], 'cover') == FALSE  ){ 
+		?>
+			<div class="footer">
+				<div class="footer_mtm">Mom to mom , Consintiendo mi piel de mam&aacute;</div>
+				<a href="http://www.momtomom.com.mx/" class="footer_link" target="_blank">www.momtomom.mx</a>
+				<a href="https://twitter.com/momtomommx" class="footer_twitter" target="_blank">@momtomommx</a>
+			</div>
+		<?php } ?>
 </body>
 </html>
