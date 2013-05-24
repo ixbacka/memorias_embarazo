@@ -20,7 +20,7 @@ class AnimoPagesController extends AppController {
 	}
 
 	public function add(){
-    /*
+    
 		$facebook = $this->Session->read("facebook");
 		$uid  = $facebook->getUser();
 
@@ -51,7 +51,7 @@ class AnimoPagesController extends AppController {
 
       $this->set('animo',$this->AnimoPage->find('first', array( 'conditions' => array( 'AnimoPage.profile_id' => $leid ) )));
 		  $this->set('profileid',$leid);
-      */
+      
 	}
 
 

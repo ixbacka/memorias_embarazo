@@ -1,11 +1,11 @@
-<div class="fangate">
-	<div class="header-fangate">
-		
-		<div class="like">Bienvenida mama, Para comenzar da clic en Me Gusta</div>
-		<div id="flecha_fangate">Click here</div>
-	</div>
-	
-	<div class="footer-fangate">
-	
-	</div>
+<div class="wrapper fangate zero">
+  <div class="header">
+    <div class="flecha"></div>
+  </div>
+  <div class="like">
+    <h3>Bienvenida mama</h3>
+    <p>Para comenzar da clic en <b>Me Gusta</b></p>
+  </div>
+   <div class="footer"></div>
 </div>
+
