@@ -28,84 +28,55 @@ body{
 
 <SCRIPT TYPE="text/javascript">
   $(document).ready(function(){
-    $('.zero').removeClass('zero');
-
-  //$('.menu').css('display','none');
-
-  //$('.footer-fangate').animate({
-  // top: 200,
- //  height: 800
- // }, 1000);
-//
- // $('.like').animate({
- //  opacity:0,
- // }, 500, function(){
- ////  $('.like').css('display','none');
-   //$('.header-fangate').css('backgroundPosition', '0px -87px, center -46px, center 82px, 0px -102px, 0px -500px');
-  // $('.footer-fangate').css('backgroundImage','url(../img/nube4.png),url(../img/nube5.png), url(../img/nube4.png)');
-  // $('.footer-fangate').css('backgroundPosition','left bottom, 0px 6px, 0px -31px');
-  // $('#bienvenida_texto').css('display','block');
-
- // });
-
- // $(".temas").animate({
- //  opacity: 1
- // }, 6000);
- // $('.menu').show(5000);
+    function switchmenu() {
+      $('.wrapper').removeClass('zero');
+    }
+   setTimeout(switchmenu, 1000)
  });
 </SCRIPT>
 
-<div class="fangate zero">
-  <div class="header-fangate">
-    <div class="like">Bienvenida mama, Para comenzar da clic en Me Gusta</div>
+<div class="wrapper welcome zero">
+  <div class="header">
     <ul class="menu">
       <li class="ask">FAQ</li>
       <li class="settings">Settings</li>
       <li class="home">Home</li>
     </ul>
   </div>
-  <div class="footer-fangate">
+  <div class="like">
+    <h3>Bienvenida mama</h3>
+    <p>Para comenzar da clic en <b>Me Gusta</b></p>
+  </div>
+  <div class="content">
     <div id="bienvenida_texto">Bienvenida mama!</div>
     <div class="estilos">
-      <div id="seleccionar_tema">Para comezar, selecciona el estilo que prefieras para guardar tus Memorias de Embarazo:</div>
-   <div class="temas">
-    <?php
-    echo $this->Html->link(
-        'Cute',
-        array('controller' => 'profiles', 'action' => 'cover', 1, 'full_base' => true), 
-        array('id' => 'tema1')
-      ); 
-    ?>
-    <?php
-    echo $this->Html->link(
-        'Classy',
-        array('controller' => 'profiles', 'action' => 'cover', 2, 'full_base' => true), 
-        array('id' => 'tema2')
-      ); 
-    ?>
-    <?php
-    echo $this->Html->link(
-        'Elegant',
-        array('controller' => 'profiles', 'action' => 'cover', 3, 'full_base' => true), 
-        array('id' => 'tema3')
-      ); 
-    ?>
-    <?php
-    echo $this->Html->link(
-        'Hippie',
-        array('controller' => 'profiles', 'action' => 'cover', 4, 'full_base' => true), 
-        array('id' => 'tema4')
-      ); 
-    ?>
-    <!-- 
-    <div id="tema1">Cute</div>
-    <div id="tema2">Classy</div>
-    <div id="tema3">Elegant</div>
-    <div id="tema4">Hippie</div> 
-    -->
-
-   </div>
+      <p>Para comezar, selecciona el estilo que prefieras para guardar tus Memorias de Embarazo:</p>
+      <div class="temas">
+        <?php
+        echo $this->Html->link(
+            'Cute',
+            array('controller' => 'profiles', 'action' => 'cover', 1, 'full_base' => true), 
+            array('id' => 'tema1')
+          ); 
+        echo $this->Html->link(
+            'Classy',
+            array('controller' => 'profiles', 'action' => 'cover', 2, 'full_base' => true), 
+            array('id' => 'tema2')
+          ); 
+        echo $this->Html->link(
+            'Elegant',
+            array('controller' => 'profiles', 'action' => 'cover', 3, 'full_base' => true), 
+            array('id' => 'tema3')
+          ); 
+        echo $this->Html->link(
+            'Hippie',
+            array('controller' => 'profiles', 'action' => 'cover', 4, 'full_base' => true), 
+            array('id' => 'tema4')
+          ); 
+        ?>
+      </div>
+    </div>
   </div>
- </div>
-
+  <div class="footer"></div>
 </div>
+

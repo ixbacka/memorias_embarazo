@@ -26,13 +26,7 @@ body {
   background-image: url(../img/nube1.png), url(../img/titulo1.png), url(../img/titulo2.png), url(../img/nube2.png), url(../img/nube3.png);
   background-position: 0px -87px, center -46px, center 82px, 0px -102px, 0px -500px;
   background-repeat: no-repeat;
-
-  /* Aqui colocamos la transicion para cada navegador */
-  -webkit-transition:all 4s ease-out;  /* Chrome y Safari */
-  -o-transition:all 4s ease-out;  /* Opera */
-  -moz-transition:all 4s ease-out;  /* Mozilla Firefox */
-  -ms-transition:all 4s ease-out;   /* Internet Explorer */
-  transition:all 4s ease-out;  /* W3C */
+  z-index: 1000;
 }
 
 .menu{
@@ -78,24 +72,6 @@ body {
 }
 
 #send_OK input[type="submit"]{
-<<<<<<< HEAD
-  position: absolute;
-  top: 187px;
-  left: 159px;
-  text-indent: -9999px;
-  width: 55px;
-  height: 55px;
-  background-image: url(../img/bt_aceptar.png);
-  background-color: transparent;
-  border: none;
-  border-radius: 0px;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  -moz-box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.3), 0px 0px 0px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.3), 0px 0px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.3), 0px 0px 0px rgba(0, 0, 0, 0.2);
-=======
 	position: absolute;
 	top: 187px;
 	left: 159px;
@@ -112,8 +88,6 @@ body {
 	-moz-box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.3), 0px 0px 0px rgba(0, 0, 0, 0.2);
 	-webkit-box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.3), 0px 0px 0px rgba(0, 0, 0, 0.2);
 	box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.3), 0px 0px 0px rgba(0, 0, 0, 0.2);
->>>>>>> 8c58323d156dc4cfc15f932e4d8be06797f7f0c4
-
 }
 
 p.whatdo{
@@ -196,13 +170,11 @@ p.whatdo{
   background-image: url(../img/nube5.png), url(../img/nube4.png);
   background-position: 0px 4px, 0px 6px;
   background-repeat: no-repeat;
+}
 
-  /* Aqui colocamos la transicion para cada navegador */
-  -webkit-transition:all 4s ease-out;  /* Chrome y Safari */
-  -o-transition:all 4s ease-out;  /* Opera */
-  -moz-transition:all 4s ease-out;  /* Mozilla Firefox */
-  -ms-transition:all 4s ease-out;   /* Internet Explorer */
-  transition:all 4s ease-out;  /* W3C */
+.welcome .footer  {
+  background: none;
+  display: none;
 }
 
 .footer_mtm{
@@ -746,28 +718,24 @@ text-align: center;
 
 /* ESTADOS */
 
-.zero .footer-fangate {
-  top: 550px;
-  height: 500px;
-  background-position: 0px 30px, right bottom 0px 1000px;
+#bienvenida_texto, .estilos, .welcome .content, .like, .flecha {
+  /* Aqui colocamos la transicion para cada navegador */
+  -webkit-transition:all 4s ease-out;  /* Chrome y Safari */
+  -o-transition:all 4s ease-out;  /* Opera */
+  -moz-transition:all 4s ease-out;  /* Mozilla Firefox */
+  -ms-transition:all 4s ease-out;   /* Internet Explorer */
+  transition:all 4s ease-out;  /* W3C */
+
 }
 
+.zero .content {
+  margin-top: 620px;
+}
 .zero .like {
   opacity: 0.99;
+  top: -90px;
 }
 
-.zero .header-fangate{
-  background-position: 0px -44px, center top, center 130px, 0px 0px, 0px 124px;
-}
-
-.zero #bienvenida_texto {
-  display: none;
-}
-
-.zero .temas {
-  opacity: 0;
-}
-
-.zero  .menu {
-  display: none;
+.zero .flecha {
+  opacity: 0.99;
 }
