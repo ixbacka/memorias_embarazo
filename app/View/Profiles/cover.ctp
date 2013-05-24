@@ -179,8 +179,7 @@ fbphotoSelect = function(id) {
 
 
 <div class="cover">
-  <div class="header">  
-
+  <div class="header">
     <ul class="menu">
       <li class="ask">FAQ</li>
       <li class="settings">Settings</li>
@@ -204,7 +203,7 @@ fbphotoSelect = function(id) {
             'label' => 'OK',
             'div' => array(
                 'id' => 'send_OK'
-              )        
+              )
           );
 
           echo $this->Form->file('file', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
@@ -212,7 +211,6 @@ fbphotoSelect = function(id) {
       <?php echo $this->Form->end($options); ?>
 
       <!--div class="upload_bt">Subir un archivo</div-->
-    
     </div>
     <p class="whatdo">Qu&eacute; quieres hacer?</p>
 
@@ -224,15 +222,7 @@ fbphotoSelect = function(id) {
             array('class' => 'write_bt')
         );
        ?>
-      <!-- <div class="write_bt">Escribir diario</div> -->
-      <div class="share_bt">Compartir</div>
-      <?php
-        // echo $this->Html->link(
-        //     'Ver Diario',
-        //     array('controller' => 'familytree_pages', 'action' => 'view'),
-        //     array('class' => 'watch_bt')
-        // );
-       ?>
+      <a class="share_bt">Compartir</div>
       <div class="watch_bt">Ver Diario</div>
     </div>
     <div class="instructions_bt">Instrucciones</div>

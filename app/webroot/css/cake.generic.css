@@ -262,8 +262,7 @@ p {
 
 #tema4{
   float: left;
-    margin-left: 10px;
-
+  margin-left: 10px;
   background: url(../img/tema4.png);
   width: 181px;
   height: 149px;
@@ -284,11 +283,6 @@ p {
   position: absolute;
   top: 30px;
   right: 10px;
-}
-
-.menu li {
-  cursor: pointer;
-  cursor: hand;
 }
 
 .ask{
@@ -950,6 +944,7 @@ pre {
 .code-coverage-results div.covered span.content {
   background:#cec;
 }
+
 .code-coverage-results div.ignored span.content {
   color:#aaa;
 }
@@ -970,6 +965,7 @@ pre {
   margin-top:30px;
   padding-top:5px;
 }
+
 .code-coverage-results div.end {
   border:1px solid #aaa;
   border-width:0px 1px 1px 1px;
@@ -998,4 +994,12 @@ pre {
 /** Elements **/
 #url-rewriting-warning {
   display:none;
+}
+
+.menu li,
+.pick_fb,
+.upload_bt,
+form .submit input[type="submit"] {
+  cursor: pointer;
+  cursor: hand;
 }
