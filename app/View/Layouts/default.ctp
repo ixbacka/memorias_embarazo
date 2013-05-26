@@ -46,7 +46,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	?>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
+	<?php echo $this->Html->script('functions'); ?>
 	
 
 </head>

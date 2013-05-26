@@ -258,6 +258,20 @@ p.whatdo{
   background-image: url(../img/bt_segundo_up.png);
 }
 
+
+.second_trim_current{  
+  background-image: url(../img/bt_segundo_up.png);
+  width: 177px;
+  height: 30px;
+  text-indent: -9999px;
+  position: absolute;
+  top: 0;
+  left: 300px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  border-bottom: 2px solid #fff;
+}
+
 .third_trim{
   background-image: url(../img/bt_tercer.png);
   width: 165px;
@@ -272,6 +286,21 @@ left: 547px;
 .third_trim:hover{
   background-image: url(../img/bt_tercer_up.png);
 }
+
+
+.third_trim_current{  
+  background-image: url(../img/bt_tercer_up.png);
+  width: 165px;
+  height: 30px;
+  text-indent: -9999px;
+  position: absolute;
+  top: 0;
+  left: 547px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  border-bottom: 2px solid #fff;
+}
+
 
 /** menu vertical ;S **/
 
