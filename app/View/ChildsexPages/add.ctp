@@ -1,24 +1,114 @@
-<div class="childsexPages form">
-<?php echo $this->Form->create('ChildsexPage'); ?>
-	<fieldset>
-		<legend><?php echo __('Add Childsex Page'); ?></legend>
-	<?php
-		echo $this->Form->input('profile_id');
-		echo $this->Form->input('theythink');
-		echo $this->Form->input('ithink');
-		echo $this->Form->input('decided');
-		echo $this->Form->input('whyidecided');
-		echo $this->Form->input('nickname');
+
+<?php echo $this->element('menu', array( "trimestre" => 2, "pag" => "childsex")); ?>
+
+<?php
+		echo $this->Html->link(
+				    'Add Moment',
+				    array('controller' => 'moment_pages', 'action' => 'add'),
+				    array('class' => 'add_moment')
+				);
 	?>
-	</fieldset>
+
+<div class="content">
+<?php echo $this->element('trim_menu', array( "trimestre" => 2)); ?>
+
+<div class="page_title">
+	<?php
+			echo $this->Html->link(
+				    'Anterior',
+				    array('controller' => 'ilovemybaby_pages', 'action' => 'add'),
+				    array('class' => 'ant')
+				);
+	?>
+	<div class="title_page">
+		<p>¿NIÑO O NIÑA?</p>
+	</div>
+	<?php 
+		echo $this->Html->link(
+				    'Siguiente',
+				    array('controller' => 'firstkick_pages', 'action' => 'add'),
+				    array('class' => 'sig')
+				);
+	?>
+</div>
+
+	<div class="childsexPages form">
+<?php echo $this->Form->create('ChildsexPage'); ?>
+  
+
+	<label>Todo el mundo piensa que mi bebé será: </label>  
+  <?php
+		if(isset($childsex['ChildsexPage']['theythink'])){
+			$theythink = $childsex['ChildsexPage']['theythink'];
+		} else{
+			$theythink = '';
+		}
+  ?> 
+  <input type="radio" name="data[ChildsexPage][theythink]" value="1" <?php if($theythink == 1){
+	echo  'checked="checked"'; } ?> />
+
+ 	<input type="radio" name="data[ChildsexPage][theythink]" value="2" <?php if($theythink == 2){
+  echo   'checked="checked"'; } ?> />
+ 	<input type="radio" name="data[ChildsexPage][theythink]" value="3" <?php if($theythink == 3){
+  echo   'checked="checked"'; } ?> />
+
+  <label>Yo personalmente pienso que eres: </label>  
+  <?php
+		if(isset($childsex['ChildsexPage']['ithink'])){
+			$ithink = $childsex['ChildsexPage']['ithink'];
+		} else{
+			$ithink = '';
+		}
+  ?> 
+  <input type="radio" name="data[ChildsexPage][ithink]" value="1" <?php if($ithink == 1){
+	echo  'checked="checked"'; } ?> />
+	<label>Niño</label>
+ 	<input type="radio" name="data[ChildsexPage][ithink]" value="2" <?php if($ithink == 2){
+  echo   'checked="checked"'; } ?> />
+  <label>Cuates</label>
+ 	<input type="radio" name="data[ChildsexPage][ithink]" value="3" <?php if($ithink == 3){
+  echo   'checked="checked"'; } ?> />
+  <label>Niña</label>
+
+   <label>Decidimos</label>  
+  <?php
+		if(isset($childsex['ChildsexPage']['decided'])){
+			$decided = $childsex['ChildsexPage']['decided'];
+		} else{
+			$decided = '';
+		}
+  ?> 
+  <input type="radio" name="data[ChildsexPage][decided]" value="1" <?php if($decided == 1){
+	echo  'checked="checked"'; } ?> />
+	 <label>Si saber</label> 
+ 	<input type="radio" name="data[ChildsexPage][decided]" value="2" <?php if($decided == 2){
+  echo   'checked="checked"'; } ?> />
+   <label>No saber, porque</label> 
+	
+	<?php
+		if(isset($childsex['ChildsexPage']['whyidecided'])){
+			$whyidecided = $childsex['ChildsexPage']['whyidecided'];
+		} else{
+			$whyidecided = '';
+		}
+  ?>
+	<input type="text" name="data[ChildsexPage][whyidecided]" value="<?php if($whyidecided != ''){ echo $whyidecided; } ?>"/> 
+	<p>Tu papá y yo te llamamos de cariño </p>
+	<?php
+			if(isset($childsex['ChildsexPage']['nickname'])){
+				$nickname = $childsex['ChildsexPage']['nickname'];
+			} else{
+				$nickname = '';
+			}
+	  ?>
+	<input type="text" name="data[ChildsexPage][nickname]" value="<?php if($nickname != ''){ echo $nickname; } ?>"/> 
+
+	<p>ahora que estás dentro de mi pancita. </p>
+ 
+		<?php
+			echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
+		?>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
 
-		<li><?php echo $this->Html->link(__('List Childsex Pages'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Profiles'), array('controller' => 'profiles', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Profile'), array('controller' => 'profiles', 'action' => 'add')); ?> </li>
-	</ul>
 </div>
