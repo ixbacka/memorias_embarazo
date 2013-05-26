@@ -213,13 +213,6 @@ function readURL(input) {
 <!-- Markup for Carson Shold's Photo Selector -->
 
 
-	<div class="header">	
-		<ul class="menu">
-			<li class="ask">FAQ</li>
-			<li class="settings">Settings</li>
-			<li class="home">Home</li>
-		</ul>
-	</div>
 
 <ul class="vertical_menu_1">
 	<li>

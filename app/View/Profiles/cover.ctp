@@ -179,13 +179,7 @@ fbphotoSelect = function(id) {
 
 
 <div class="cover">
-  <div class="header">
-    <ul class="menu">
-      <li class="ask">FAQ</li>
-      <li class="settings">Settings</li>
-      <li class="home">  Home </li>
-    </ul>
-  </div>
+
   <div class="content">
     <div class="cover_photo">
       

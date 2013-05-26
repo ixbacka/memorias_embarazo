@@ -17,13 +17,6 @@ body{
 }
 </style>
 
-	<div class="header">	
-		<ul class="menu">
-			<li class="ask">FAQ</li>
-			<li class="settings">Settings</li>
-			<li class="home">Home</li>
-		</ul>
-	</div>
 
 <ul class="vertical_menu_1">
 	<li class="selected">

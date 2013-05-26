@@ -45,13 +45,7 @@ body{
 }
 </style>
 
-	<div class="header">	
-		<ul class="menu">
-			<li class="ask">FAQ</li>
-			<li class="settings">Settings</li>
-			<li class="home">Home</li>
-		</ul>
-	</div>
+
 
 <ul class="vertical_menu_1">
 	<li class="selected">
@@ -260,8 +254,3 @@ function get_date_spanish( $time, $part = false, $formatDate = '' ){
 </p>
 
 </div>
-	<div class="footer">
-		<div class="footer_mtm">Mom to mom , Consintiendo mi piel de mam&aacute;</div>
-		<a href="http://www.momtomom.com.mx/" class="footer_link" target="_blank">www.momtomom.mx</a>
-		<a href="https://twitter.com/momtomommx" class="footer_twitter" target="_blank">@momtomommx</a>
-	</div>

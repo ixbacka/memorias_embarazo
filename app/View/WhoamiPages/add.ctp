@@ -211,13 +211,6 @@ function readURL(input) {
 
 
 
-	<div class="header">	
-		<ul class="menu">
-			<li class="ask">FAQ</li>
-			<li class="settings">Settings</li>
-			<li class="home">Home</li>
-		</ul>
-	</div>
 
 <ul class="vertical_menu_1">
 	<li class="selected">
@@ -287,25 +280,7 @@ function readURL(input) {
 	?>
 
 <div class="content">
-	<div class="menu_trims">
-		<?php 
-			echo $this->Html->link(
-				    'Primer Trimestre',
-				    array('controller' => 'familytree_pages', 'action' => 'add'),
-				    array('class' => 'first_trim_current')
-				);
-			echo $this->Html->link(
-				    'Segundo Trimestre',
-				    array('controller' => 'familytree_pages', 'action' => 'add'),
-				    array( 'class' => 'second_trim')
-				);
-			echo $this->Html->link(
-				    'Tercer Trimestre',
-				    array('controller' => 'familytree_pages', 'action' => 'add'),
-				    array('class' => 'third_trim')
-				);
-		?>
-	</div>
+<?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
 
 <div class="page_title">
 	<div class="ant">Anterior</div>
