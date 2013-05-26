@@ -13,7 +13,8 @@ body {
 	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
 	font-size:90%;
 	margin: 0;
-	overflow-y: hidden;
+	overflow: hidden;
+  position: relative;
 }
 
 
@@ -41,6 +42,17 @@ body {
   left: 0px;
 }
 
+.photo-up {
+  width: 280px;
+  height: 215px;
+  position: absolute;
+  background-image: url(../img/marco.png), url(../img/marco_fondo.png);
+  background-position: top left, center center;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-size: 280px 215px;
+}
+
 .cover_photo{
   width: 392px;
   height: 297px;
@@ -63,12 +75,23 @@ body {
 
 .upload_bt{
   background-image: url(../img/bt_subir_foto.png);
-  width: 99px;
+  width: 101px;
   height: 12px;
   position: absolute;
   top: 156px;
   left: 200px;
   text-indent: -9999px;
+  color: transparent;
+}
+
+.photo-up .upload_bt {
+  top: 140px;
+  left: 80px;
+}
+
+.photo-up .pick_fb {
+  left: 80px;
+  top: 109px;
 }
 
 #send_OK input[type="submit"]{
@@ -163,7 +186,7 @@ p.whatdo{
 
 .footer{
   position: absolute;
-  top: 810px;
+  bottom: 0;
   left: 0;
   width: 810px;
   height: 200px;
@@ -171,6 +194,7 @@ p.whatdo{
   background-position: 0px 4px, 0px 6px;
   background-repeat: no-repeat;
 }
+
 
 .welcome .footer  {
   background: none;
@@ -745,6 +769,50 @@ font-size: 20px;
 top: 560px;
 text-align: center;
 }
+
+/* ULTRASONIDO */
+
+.ultrasoundPages {
+  position: absolute;
+  top: 150px;
+}
+
+.ultra {
+  height: 215px;
+  margin-bottom: 40px;
+}
+
+.ultra .hasDatepicker {
+  width: 268px;
+}
+.ultra .info {
+  width: 320px;
+  position: absolute;
+  right: 144px;
+}
+
+.ultra .info h3 {
+  font: 23px 'Futura';
+  color: #269CCC;
+}
+
+.ultra .info label {
+  display: inline;
+  line-height: 25px;
+}
+
+.ultra .info p {
+  display: inline-block;
+  float: none;
+  padding-bottom: 12px;
+  line-height: 26px;
+}
+
+.info input {
+  display: inline-block;
+}
+
+
 
 /* ESTADOS */
 
