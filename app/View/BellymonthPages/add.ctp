@@ -309,6 +309,9 @@ function readURL(input) {
 	<input type="hidden" name="data[BellymonthPage][photo_date][day]" id="CongratsPagePruebaDay" />
 	<input type="hidden" name="data[BellymonthPage][photo_date][year]" id="CongratsPagePruebaYear" />
 
+	<p>
+		Ya estás cerca... Escribe lo que has sentido durante este trimestre... ¿Dónde va a nacer tu bebé? ¿Cuál ha sido la pregunta más loca que le has querido hacer a tu ginecólogo? ¿Qué se te diﬁculta hacer ahora? ¿Cómo te sientes de ánimo? ¿Cómo quieres decorar el cuarto de tu bebé? ¿Qué es lo que más te hace feliz en estos momentos? Atesora todo lo que desees recordar.
+	</p>
 	<?php
 		echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
 	?>

@@ -7,7 +7,8 @@ App::import('Vendor', 'facebook');
  *
  */
 class BellymonthPagesController extends AppController {
-var $uses = array('BellymonthPage','Profile');
+	
+	var $uses = array('BellymonthPage','Profile');
 
 	public function beforeFilter() {
 		$this->Session->write("facebook", 
