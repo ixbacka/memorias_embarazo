@@ -321,7 +321,7 @@ function readURL(input) {
 </div>
 
 	<div class="congratsPages form">
-<?php echo $this->Form->create('WhoamiPage'); ?>
+<?php echo $this->Form->create('WhoamiPage', array('enctype' => 'multipart/form-data')); ?>
 	
 	<div class="whoami_left">
 		<div class="whoami_photo">
