@@ -344,7 +344,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 position: absolute;
 right: 140px;
 top: 593px;
-z-index: 9999;
+z-index: 1000;
 margin: 0;
 list-style: none;
 right: -330px;

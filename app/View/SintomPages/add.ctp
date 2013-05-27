@@ -24,76 +24,19 @@ body{
 
 </style>
 
+<?php echo $this->element('menu', array( "trimestre" => 1, 'pag' => 'sintom')); ?>
 
-<ul class="vertical_menu_1">
-	<li class="selected">
-	<?php 
-		//congrats
-		echo $this->Html->link(
-				    'Felicidades',
-				    array('controller' => 'congrats_pages', 'action' => 'add')
-
-				);
-		?>
-	</li>
-	<li>
-		<?php
-		echo $this->Html->link(
-				    'Primer Visita',
-				    array('controller' => 'first_visit_pages', 'action' => 'add')
-				); ?>
-		</li>
-		<li>
-		<?php
-		echo $this->Html->link(
-				    'Quién soy',
-				    array('controller' => 'whoami_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-		<li>
-		<?php
-		echo $this->Html->link(
-				    'Primeros síntomas',
-				    array('controller' => 'sintom_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-		<li>
-			<?php
-		echo $this->Html->link(
-				    'Ultrasonido',
-				    array('controller' => 'ultrasound_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-		<li>
-		<?php
-		echo $this->Html->link(
-				    'Mi pancita',
-				    array('controller' => 'belly_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-		<li>
-		<?php
-		echo $this->Html->link(
-				    'Mi ánimo',
-				    array('controller' => 'animo_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-</ul>
 <?php
 		echo $this->Html->link(
 				    'Add Moment',
-				    array('controller' => 'moment_pages', 'action' => 'add'),
+				    array('controller' => 'moment_pages', 'action' => 'add', 0, 1),
 				    array('class' => 'add_moment')
 				);
 	?>
-<?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
 
 <div class="content">
+<?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
+
 <div class="page_title">
 	<div class="ant">Anterior</div>
 
@@ -221,7 +164,7 @@ body{
 		} else{
 			$cravings = '';
 		}
-			echo $this->Form->input('cravings', array('label' => 'El antojito más raro que he tenido es: ', 'value' => $weirdestcraving )); 
+			echo $this->Form->input('cravings', array('label' => 'El antojito más raro que he tenido es: ', 'value' => $cravings )); 
 		?>
 
 		<?php

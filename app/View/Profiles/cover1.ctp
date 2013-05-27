@@ -1,11 +1,43 @@
+<!-- cover.ctp -->
+<STYLE TYPE="text/css">
+
+body{
+	height: 1010px;
+}
+<?php if( isset($cover_pic) ){ ?>
+
+.cover_photo{
+	width: 392px;
+	height: 297px;
+	position: absolute;
+	left: 209px;
+	background-image: url(../img/marco.png), url(../img/cover_photos/<?php echo str_replace(' ', '%20', $cover_pic); ?>);
+	background-position: top left, center center;
+	background-size: 392px 297px,  329px 265px;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+}
+<?php }?>
+/*#CSPhotoSelector_buttonOK{
+	display: block;
+}
+#CSPhotoSelector_buttonOK input[type="submit"]{
+	background: none;
+	border: none;
+	box-shadow: none;
+	padding: 0;
+
+}*/
+</STYLE>
 <?php echo $this->Html->css('PhotoSelector'); ?>
 <?php echo $this->Html->script('photo_selector'); ?>
 
-<script type="text/javascript">
+<script>
+  
 	var buttonOK = $('a#CSPhotoSelector_buttonOK');
 	var o = this;
   
-fbphotoSelect = function(id, idpapa) {
+fbphotoSelect = function(id) {
 		// if no user/friend id is sent, default to current user
 		if (!id) id = 'me';
 		
@@ -47,11 +79,9 @@ fbphotoSelect = function(id, idpapa) {
 
 			//logActivity('<br><strong>Submitted</strong><br> Photo ID: ' + photo.id + '<br>Photo URL: ' + photo.source + '<br>');
 			// guardar img como portada , agregar a hidden field , y que lo mande .. inmediately ? 
-			console.log(photo.source);
-			console.log(' ehmem == > '+idpapa);
-			$('#photo_url_').val(photo.source);
-			$('.whoami_photo').css('background-image','url(../img/marco_whoami.png), url('+photo.source+')');
-			$('.whoami_photo').css('background-size', '297px 392px, 225px 320px');
+			$('#url_photo_fb').val(photo.source);
+			$('.cover_photo').css('background-image','url(../img/marco.png), url('+photo.source+')');
+			$('.cover_photo').css('background-size', '392px 297px,  329px 265px');
 		};
 
 
@@ -80,21 +110,19 @@ fbphotoSelect = function(id, idpapa) {
   	
   	$(".pick_fb").click(function (e) {
 		    e.preventDefault();
-		    elpapa = $(this).parent().get(0).id;
 		    id = null;
 		    if ( $(this).attr('data-id') ) id = $(this).attr('data-id');
-		    fbphotoSelect(id, elpapa); 
+		    fbphotoSelect(id);
 		});
 
 	});
 
-
-function readURL(input) {
+	 function readURL(input) {
       if (input.files && input.files[0]) {
           var reader = new FileReader();
           reader.onload = function (e) {
-          	$('.whoami_photo').css('background-image','url(../img/marco_whoami.png), url('+e.target.result+')');
-						$('.whoami_photo').css('background-size', '297px 392px, 225px 320px');
+                  $('.cover_photo').css('background-image','url(../img/marco.png), url('+e.target.result+')');
+									$('.cover_photo').css('background-size', '392px 297px,  329px 265px');
           };
           reader.readAsDataURL(input.files[0]);
       }
@@ -145,44 +173,73 @@ function readURL(input) {
 			</div>
 		</div>
 <!-- Markup for Carson Shold's Photo Selector -->
-<?php echo $this->element('menu', array( "trimestre" => $this->request->params['pass'][0], 'pag' => 'none' )); ?>
 
-<?php
-		echo $this->Html->link(
-				    'Add Moment',
-				    array('controller' => 'moment_pages', 'action' => 'add', 0, $this->request->params['pass'][0]),
-				    array('class' => 'add_moment')
-				);
-	?>
 
-<div class="content">
-<?php echo $this->element('trim_menu', array( "trimestre" => $this->request->params['pass'][0])); ?>
 
-<div class="page_title">
-	<div class="ant">Anterior</div>
-	<div class="title_page">
-		<p></p>
-		<span></span>
+<div class="cover">
+	<div class="header">	
+
+		<ul class="menu">
+			<li class="ask">FAQ</li>
+			<li class="settings">Settings</li>
+			<li class="home">Home</li>
+		</ul>
 	</div>
-	<div class="sig">Siguiente</div>
-</div>
+	<div class="content">
+		<div class="cover_photo">
+			
+			<p>Pon una foto de portada aqu&iacute;</p>
+			<?php echo $this->Form->create('Profile', array('enctype' => 'multipart/form-data')); ?>
 
-	<div class="momentPages form">
-<?php echo $this->Form->create('MomentPage'); ?>
-  
-  <?php
-		if(isset($moment['MomentPage']['title'])){
-			$title = $moment['MomentPage']['title'];
-		} else{
-			$title = '';
-		}
-  ?>
- 	<input type="text" name="data[MomentPage][title]" value="<?php if($title != ''){ echo $title; } ?>"/>  
+			<div class="pick_fb">Elegir de Facebook</div>
+			
+				
+				<input type="hidden" name="data[Profile][url_photo]" id="url_photo_fb" value=""/>
 
-		<?php
-			echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
-		?>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
+				<?php	
+
+					$options = array(
+				    'label' => 'OK',
+				    'div' => array(
+				    		'id' => 'send_OK'
+				    	)		    
+					);
+
+					echo $this->Form->file('file', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+				?>
+			<?php echo $this->Form->end($options); ?>
+
+			<!--div class="upload_bt">Subir un archivo</div-->
+		
+		</div>
+		<p class="whatdo">Qu&eacute; quieres hacer?</p>
+
+		<div class="cover_menu">
+			<?php
+				echo $this->Html->link(
+				    'Escribir Diario',
+				    array('controller' => 'congrats_pages', 'action' => 'add'),
+				    array('class' => 'write_bt')
+				);
+			 ?>
+			<!-- <div class="write_bt">Escribir diario</div> -->
+			<div class="share_bt">Compartir</div>
+			<?php
+				// echo $this->Html->link(
+				//     'Ver Diario',
+				//     array('controller' => 'familytree_pages', 'action' => 'view'),
+				//     array('class' => 'watch_bt')
+				// );
+			 ?>
+			<div class="watch_bt">Ver Diario</div>
+		</div>
+		<div class="instructions_bt">Instrucciones</div>
+
+	</div>
+	<div class="footer">
+		<div class="footer_mtm">Mom to mom , Consintiendo mi piel de mam&aacute;</div>
+		<a href="http://www.momtomom.com.mx/" class="footer_link" target="_blank">www.momtomom.mx</a>
+		<a href="https://twitter.com/momtomommx" class="footer_twitter" target="_blank">@momtomommx</a>
+	</div>
 
 </div>

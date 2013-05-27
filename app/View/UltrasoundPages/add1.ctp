@@ -1,43 +1,10 @@
 <!-- add.ctp -->
+<?php //echo $this->Html->script('functions'); ?>
 <?php echo $this->Html->css('PhotoSelector'); ?>
 <?php echo $this->Html->script('photo_selector'); ?>
 <?php echo $this->Html->script('functions'); ?>
 <?php echo $this->Html->script('jquery-ui/js/jquery-ui-1.10.3.custom.min'); ?>
 <?php echo $this->Html->css('redmond/jquery-ui-1.10.3.custom.min'); ?>
-
-<?php 
-
-#Power by nicolaspar 2007 - especific proyect
-function get_date_spanish( $time, $part = false, $formatDate = '' ){
-    #Declare n compatible arrays
-    $month = array("","enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiempre", "diciembre");#n
-    $month_execute = "n"; #format for array month
-
-    $month_mini = array("","ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "DIC");#n
-    $month_mini_execute = "n"; #format for array month
-
-    $day = array("domingo","lunes","martes","miércoles","jueves","viernes","sábado"); #w
-    $day_execute = "w";
-    
-    $day_mini = array("DOM","LUN","MAR","MIE","JUE","VIE","SAB"); #w
-    $day_mini_execute = "w";
-
-    #Content array exception print "HOY", position content the name array. Duplicate value and key for optimization in comparative
-    $print_hoy = array("month"=>"month", "month_mini"=>"month_mini");
-
-    if( $part === false ){
-        return date("d", $time) . " de " . $month[date("n",$time)] . ", ". date("H:i",$time) ." hs";
-    }elseif( $part === true ){
-        if( ! empty( $print_hoy[$formatDate] ) && date("d-m-Y", $time ) == date("d-m-Y") ) return "HOY"; #Exception HOY
-        if( ! empty( ${$formatDate} ) && !empty( ${$formatDate}[date(${$formatDate.'_execute'},$time)] ) ) return ${$formatDate}[date(${$formatDate.'_execute'},$time)];
-        else return date($formatDate, $time);
-    }else{
-        return date("d-m-Y H:i", $time);
-    }
-}
-
-
-?>
 
 <style type="text/css">
 
@@ -62,17 +29,31 @@ body{
 
 <?php if( isset($ultrasound['UltrasoundPage']['first_photo']) ){ ?>
 #ultrasound_photo_1{
-  background-image: url(../img/marco.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['first_photo']); ?>);
-  background-size: 280px 215px, 240px 192px;
- 
+  background-image: url(../img/marco_whoami.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['first_photo']); ?>);
+  background-size: 186px 186px,  120px 120px;
+  border-radius: 120px;
+  height: 150px;width: 150px;
+  border-radius: 150px;
+  background-position: -15px -15px, center 9px;
+  background-size: 186px 186px, 140px 140px;
+  margin-left: 30px;
+  margin-top: 50px;
 }
 <?php }?>
 
 
 <?php if( isset($ultrasound['UltrasoundPage']['second_photo']) ){ ?>
 #ultrasound_photo_2{
-  background-image: url(../img/marco.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['second_photo']); ?>);
-  background-size: 280px 215px, 240px 192px;
+  background-image: url(../img/marco_whoami.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['second_photo']); ?>);
+  background-size: 186px 186px,  120px 120px;
+  border-radius: 120px;
+  height: 150px;width: 150px;
+border-radius: 150px;
+background-position: -15px -15px, center 9px;
+background-size: 186px 186px, 140px 140px;
+margin-left: 30px;
+margin-top: 50px;
+
 }
 <?php }?>
 
@@ -179,11 +160,9 @@ fbphotoSelect = function(id, idpapa) {
       photo = CSPhotoSelector.getPhotoById(photoId);
 
       console.log(photo.source);
-      console.log(idpapa);
-      $('.'+idpapa).val(photo.source);
-      $('#'+idpapa).css('background-image','url(../img/marco.png), url('+photo.source+')');
-      //background-size: 280px 215px, 240px 192px;
-      $('#'+idpapa).css('background-size','280px 215px, 240px 192px');
+
+      $('#'+idpapa).val(photo.source);
+      $('.'+idpapa).css('background-image','url(../img/marco_circular.png), url('+photo.source+')');
 
     };
 
@@ -271,8 +250,7 @@ function readURL(input) {
 
           reader.onload = function (e) {
             $('.'+elpapa).css('background-image','url(../img/marco_circular.png), url('+e.target.result+')');
-            $('.'+elpapa).css('background-size','280px 215px, 240px 192px');
-          
+            
           };
           reader.readAsDataURL(input.files[0]);
       }
@@ -323,6 +301,7 @@ function readURL(input) {
       </div>
     </div>
 <!-- Markup for Carson Shold's Photo Selector -->
+<?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
 <?php echo $this->element('menu', array( "trimestre" => 1, "pag" => "ultrasound")); ?>
 
 <?php
@@ -334,13 +313,11 @@ function readURL(input) {
   ?>
 
 <div class="content">
-  <?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
-
 <div class="page_title">
 	<?php
 			echo $this->Html->link(
 				    'Anterior',
-				    array('controller' => 'sintom_pages', 'action' => 'add'),
+				    array('controller' => 'babyshower_pages', 'action' => 'add'),
 				    array('class' => 'ant')
 				);
 	?>
@@ -351,7 +328,7 @@ function readURL(input) {
 	<?php 
 		echo $this->Html->link(
 				    'Siguiente',
-				    array('controller' => 'belly_pages', 'action' => 'add'),
+				    array('controller' => 'firstkick_pages', 'action' => 'add'),
 				    array('class' => 'sig')
 				);
 	?>
@@ -359,8 +336,8 @@ function readURL(input) {
   <div class="ultrasoundPages form">
   <?php echo $this->Form->create('UltrasoundPage', array('enctype' => 'multipart/form-data')); ?>
     <div class="ultra">
-      <div class="photo-up" id="ultrasound_photo_1" >
-        <input type="hidden" name="data[UltrasoundPage][url_photo]" class="ultrasound_photo_1" value=""/>
+      <div class="ultrasound_photo_1 photo-up">
+        <input type="hidden" name="data[UltrasoundPage][url_photo]" id="ultrasound_photo_1" value=""/>
         <div class="pick_fb">Elegir de Facebook</div>
         <?php
           echo $this->Form->file('first_photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
@@ -395,12 +372,12 @@ function readURL(input) {
     </div>
 
     <div class="ultra">
-      <div class="photo-up" id="ultrasound_photo_2" >
-        <input type="hidden" name="data[UltrasoundPage][url_photo_1]" class="ultrasound_photo_2" value=""/>
+      <div class="ultrasound_photo_2 photo-up">
+        <input type="hidden" name="data[UltrasoundPage][url_photo_1]" id="ultrasound_photo_2" value=""/>
         <div class="pick_fb">Elegir de Facebook</div>
         <?php
           echo $this->Form->file('second_photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
-        ?>  
+        ?>
       </div>
       <div class="info">
         <h3>Segundo Ultrasonido</h3>
