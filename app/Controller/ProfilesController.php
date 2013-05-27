@@ -7,13 +7,6 @@ App::import('Vendor', 'facebook');
  */
 class ProfilesController extends AppController {
 
-/**
- * Scaffold
- *
- * @var mixed
- */
-//public $scaffold;
-
 	public function beforeFilter() {
 
 		$this->Session->write("facebook", 
@@ -26,6 +19,10 @@ class ProfilesController extends AppController {
 	
 	}
 
+
+	public function booklet(){
+
+	}
 	/*
 	 * fangate()
 	 * check if user has liked the page
