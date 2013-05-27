@@ -37,6 +37,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->fetch('css');
 	?>
 
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
 	<?php 
 				$tema = 1;//$this->Session->read("User.theme");
 				if($tema == 1){ echo $this->Html->css('tema1'); } 
@@ -45,7 +48,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				elseif($tema == 4){ echo $this->Html->css('tema4'); } 
 	?>
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+          
 	<?php echo $this->Html->script('functions'); ?>
 	
 
