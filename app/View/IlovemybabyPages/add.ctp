@@ -1,5 +1,6 @@
 <?php echo $this->Html->script('jquery-ui/js/jquery-ui-1.10.3.custom.min'); ?>
 <?php echo $this->Html->css('redmond/jquery-ui-1.10.3.custom.min'); ?>
+<?php echo $this->Html->script('functions'); ?>
 
 
 <?php if(isset($ilovemybby['IlovemybabyPage']['today'])){ 
@@ -27,7 +28,7 @@ $(document).ready(function(){
 			$today = '';
 		}
 ?>
-<?php echo $this->element('menu', array( "trimestre" => 2)); ?>
+<?php echo $this->element('menu', array( "trimestre" => 2, , "pag" => "ilovemybaby")); ?>
 <?php
 		echo $this->Html->link(
 				    'Add Moment',
@@ -37,26 +38,7 @@ $(document).ready(function(){
 	?>
 
 <div class="content">
-
-	<div class="menu_trims">
-		<?php 
-			echo $this->Html->link(
-				    'Primer Trimestre',
-				    array('controller' => 'congrats_pages', 'action' => 'add'),
-				    array('class' => 'first_trim')
-				);
-			echo $this->Html->link(
-				    'Segundo Trimestre',
-				    array('controller' => 'ilovemybaby_pages', 'action' => 'add'),
-				    array( 'class' => 'second_trim_current')
-				);
-			echo $this->Html->link(
-				    'Tercer Trimestre',
-				    array('controller' => 'gettingclose_pages', 'action' => 'add'),
-				    array('class' => 'third_trim')
-				);
-		?>
-	</div>
+<?php echo $this->element('trim_menu', array( "trimestre" => 2)); ?>
 
 <div class="page_title">
 	<?php
@@ -97,14 +79,19 @@ $(document).ready(function(){
 			$heartbeat = '';
 		}
   ?>
-  <label for="IlovemybabyPageHeartbeat">Tac, tac, sonaba como: </label>
-  
+  <p>Tac, tac, sonaba como: </p>
+
+	<label>Caballos Galopantes</label>  
   <input type="radio" name="data[IlovemybabyPage][heartbeat]" value="1" <?php if($heartbeat == 1){
-	echo  checked="checked" } ?> />
+	echo  'checked="checked"'; } ?> />
+
+		<label>Como un tambor</label>
  	<input type="radio" name="data[IlovemybabyPage][heartbeat]" value="2" <?php if($heartbeat == 2){
-  echo  checked="checked" } ?> />
- 	<input type="radio" name="data[IlovemybabyPage][heartbeat]" value="3" <?php if($heartbeat == 2){
-  echo  checked="checked" } ?> />
+  echo 'checked="checked"'; } ?> />
+
+  	<label>Un mar de emociones</label>
+ 	<input type="radio" name="data[IlovemybabyPage][heartbeat]" value="3" <?php if($heartbeat == 3){
+  echo 'checked="checked"'; } ?> />
 	
 	<?php
 		if(isset($ilovemybby['IlovemybabyPage']['first_feeling'])){

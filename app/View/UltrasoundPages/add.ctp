@@ -11,7 +11,7 @@
 .title_page span {
 top: 42px;
 position: absolute;
-left: 319px;
+left: 311px;
 }
 
 .title_page p{
@@ -24,7 +24,7 @@ left: 319px;
 
 body{
   width: 810px;
-  height: 1170px;
+  height: 1160px;
 }
 
 <?php if( isset($ultrasound['UltrasoundPage']['first_photo']) ){ ?>
@@ -302,65 +302,8 @@ function readURL(input) {
     </div>
 <!-- Markup for Carson Shold's Photo Selector -->
 <?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
-<ul class="vertical_menu_1">
-  <li class="selected">
-  <?php 
-    //congrats
-    echo $this->Html->link(
-            'Felicidades',
-            array('controller' => 'congrats_pages', 'action' => 'add')
+<?php echo $this->element('menu', array( "trimestre" => 1, "pag" => "ultrasound")); ?>
 
-        );
-    ?>
-  </li>
-  <li>
-    <?php
-    echo $this->Html->link(
-            'Primer Visita',
-            array('controller' => 'first_visit_pages', 'action' => 'add')
-        ); ?>
-    </li>
-    <li>
-    <?php
-    echo $this->Html->link(
-            'Quién soy',
-            array('controller' => 'whoami_pages', 'action' => 'add')
-        );
-    ?>
-    </li>
-    <li>
-    <?php
-    echo $this->Html->link(
-            'Primeros síntomas',
-            array('controller' => 'sintom_pages', 'action' => 'add')
-        );
-    ?>
-    </li>
-    <li>
-      <?php
-    echo $this->Html->link(
-            'Ultrasonido',
-            array('controller' => 'ultrasound_pages', 'action' => 'add')
-        );
-    ?>
-    </li>
-    <li>
-    <?php
-    echo $this->Html->link(
-            'Mi pancita',
-            array('controller' => 'belly_pages', 'action' => 'add')
-        );
-    ?>
-    </li>
-    <li>
-    <?php
-    echo $this->Html->link(
-            'Mi ánimo',
-            array('controller' => 'animo_pages', 'action' => 'add')
-        );
-    ?>
-    </li>
-</ul>
 <?php
     echo $this->Html->link(
             'Add Moment',
@@ -370,130 +313,109 @@ function readURL(input) {
   ?>
 
 <div class="content">
-  <div class="menu_trims">
-    <?php 
-      echo $this->Html->link(
-            'Primer Trimestre',
-            array('controller' => 'familytree_pages', 'action' => 'add'),
-            array('class' => 'first_trim_current')
-        );
-      echo $this->Html->link(
-            'Segundo Trimestre',
-            array('controller' => 'familytree_pages', 'action' => 'add'),
-            array( 'class' => 'second_trim')
-        );
-      echo $this->Html->link(
-            'Tercer Trimestre',
-            array('controller' => 'familytree_pages', 'action' => 'add'),
-            array('class' => 'third_trim')
-        );
-    ?>
-  </div>
-
 <div class="page_title">
-  <?php
-
-      echo $this->Html->link(
-            'Anterior',
-            array('controller' => 'sintom_pages', 'action' => 'add'),
-            array('class' => 'ant')
-        );
-  ?>
-  <div class="title_page"><p>primeros</p>
-    <span>síntomas y malestares</span>
-  </div>
-  <?php
-
-      echo $this->Html->link(
-            'Siguiente',
-            array('controller' => 'belly_pages', 'action' => 'add'),
-            array('class' => 'sig')
-        );
-  ?>
+	<?php
+			echo $this->Html->link(
+				    'Anterior',
+				    array('controller' => 'babyshower_pages', 'action' => 'add'),
+				    array('class' => 'ant')
+				);
+	?>
+	<div class="title_page">
+		<p>s&uacute;per cool</p>
+		<span>fotos del ultrasonido</span>
+	</div>
+	<?php 
+		echo $this->Html->link(
+				    'Siguiente',
+				    array('controller' => 'firstkick_pages', 'action' => 'add'),
+				    array('class' => 'sig')
+				);
+	?>
 </div>
-
   <div class="ultrasoundPages form">
-  
   <?php echo $this->Form->create('UltrasoundPage', array('enctype' => 'multipart/form-data')); ?>
+    <div class="ultra">
+      <div class="ultrasound_photo_1 photo-up">
+        <input type="hidden" name="data[UltrasoundPage][url_photo]" id="ultrasound_photo_1" value=""/>
+        <div class="pick_fb">Elegir de Facebook</div>
+        <?php
+          echo $this->Form->file('first_photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+        ?>
+      </div>
+      <div class="info">
+        <h3>Primer Ultrasonido</h3>
+        <p>
+          <label>Fuí el: </label>
+          <input type="text" id="datepickerCongrats" size="30" readonly="readonly" <?php if($first_date != ''){ echo 'value="' . $first_date . '"'; } ?>/>
 
-    <div class="ultrasound_photo_1">
-      <input type="hidden" name="data[UltrasoundPage][url_photo]" id="ultrasound_photo_1" value=""/>
-      <div class="pick_fb">Elegir de Facebook</div>
-      <?php
-        echo $this->Form->file('first_photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
-      ?>
+            <input type="hidden" name="data[UltrasoundPage][first_date][month]" id="CongratsPagePruebaMonth" />
+            <input type="hidden" name="data[UltrasoundPage][first_date][day]" id="CongratsPagePruebaDay" />
+            <input type="hidden" name="data[UltrasoundPage][first_date][year]" id="CongratsPagePruebaYear" />
+        </p>
+        <p>
+          <label for="CongratsPageBabycoming">Tenía </label>
+          <input name="data[UltrasoundPage][first_week]" type="number" id="CongratsPageBabycoming" value="<?php if( isset($ultrasound['UltrasoundPage']['first_week'])){ echo $ultrasound['UltrasoundPage']['first_week']; }?>"> 
+          semanas de embarazo
+        </p>
+        <p>
+          <?php
+            if(isset($ultrasound['UltrasoundPage']['first_notes'])){
+              $first_notes = $ultrasound['UltrasoundPage']['first_notes'];
+            } else{
+              $first_notes = '';
+            }
+            echo $this->Form->input('first_notes', array('label' => 'Pero cuando me siento peor es: ', 'div' => false, 'value' => $first_notes));
+          ?>
+        </p>
+      </div>
     </div>
 
-    <h3>Primer Ultrasonido</h3>
-
-        <label>Fuí el: </label>
-        <input type="text" id="datepickerCongrats" size="30" readonly="readonly"  value="<?php if($first_date != ''){
-          echo $first_date; } ?>"/>
-
-        <input type="hidden" name="data[UltrasoundPage][first_date][month]" id="CongratsPagePruebaMonth" />
-        <input type="hidden" name="data[UltrasoundPage][first_date][day]" id="CongratsPagePruebaDay" />
-        <input type="hidden" name="data[UltrasoundPage][first_date][year]" id="CongratsPagePruebaYear" />
-
-    <label for="CongratsPageBabycoming">Tenía </label>
-    <input name="data[UltrasoundPage][first_week]" type="number" id="CongratsPageBabycoming" value="<?php if( isset($ultrasound['UltrasoundPage']['first_week'])){ echo $ultrasound['UltrasoundPage']['first_week']; }?>"> 
-    <p>semanas de embarazo </p>
-
-    <?php
-    if(isset($ultrasound['UltrasoundPage']['first_notes'])){
-      $first_notes = $ultrasound['UltrasoundPage']['first_notes'];
-    } else{
-      $first_notes = '';
-    }
-      echo $this->Form->input('first_notes', array('label' => 'Pero cuando me siento peor es: ', 'div' => false, 'value' => $first_notes));
-    ?>  
-    
-    <div class="ultrasound_photo_2">
-      <input type="hidden" name="data[UltrasoundPage][url_photo_1]" id="ultrasound_photo_2" value=""/>
-      <div class="pick_fb">Elegir de Facebook</div>
-      <?php
-        echo $this->Form->file('second_photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
-      ?>
+    <div class="ultra">
+      <div class="ultrasound_photo_2 photo-up">
+        <input type="hidden" name="data[UltrasoundPage][url_photo_1]" id="ultrasound_photo_2" value=""/>
+        <div class="pick_fb">Elegir de Facebook</div>
+        <?php
+          echo $this->Form->file('second_photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+        ?>
+      </div>
+      <div class="info">
+        <h3>Segundo Ultrasonido</h3>
+        <p>
+          <label>Fuí el: </label>
+          <input type="text" id="datepickerCongrats1" size="30" readonly="readonly" <?php if($first_date != ''){ echo 'value="' . $first_date . '"'; } ?>/>
+          <input type="hidden" name="data[UltrasoundPage][second_date][month]" id="CongratsPagePrueba1Month" />
+          <input type="hidden" name="data[UltrasoundPage][second_date][day]" id="CongratsPagePrueba1Day" />
+          <input type="hidden" name="data[UltrasoundPage][second_date][year]" id="CongratsPagePrueba1Year" />
+        </p>
+        <p>
+          <label for="CongratsPageBabycoming">Tenía </label>
+          <input name="data[UltrasoundPage][second_week]" type="number" value="<?php if( isset($ultrasound['UltrasoundPage']['second_week'])){ echo $ultrasound['UltrasoundPage']['second_week']; }?>">
+          semanas de embarazo
+        </p>
+        <p><?php
+          if(isset($ultrasound['UltrasoundPage']['second_notes'])){
+            $second_notes = $ultrasound['UltrasoundPage']['second_notes'];
+          } else{
+            $second_notes = '';
+          }
+          echo $this->Form->input('second_notes', array('label' => 'Pero cuando me siento peor es: ','div' => false,'value' => $second_notes));
+        ?> <p>
+      </div>
     </div>
-
-    <h3>Segundo Ultrasonido</h3>
-        <label>Fuí el: </label>
-        <span><input type="text" id="datepickerCongrats" size="30" readonly="readonly"  value="<?php if($prueba != ''){
-          echo $prueba; } ?>"/></span>
-        <input type="hidden" name="data[UltrasoundPage][second_date][month]" id="CongratsPagePruebaMonth" />
-        <input type="hidden" name="data[UltrasoundPage][second_date][day]" id="CongratsPagePruebaDay" />
-        <input type="hidden" name="data[UltrasoundPage][second_date][year]" id="CongratsPagePruebaYear" />
-    
-    <label for="CongratsPageBabycoming">Tenía </label>
-    <input name="data[UltrasoundPage][second_week]" type="number" value="<?php if( isset($ultrasound['UltrasoundPage']['second_week'])){ echo $ultrasound['UltrasoundPage']['second_week']; }?>">
-    <p>semanas de embarazo</p>
-
     <?php
-    if(isset($ultrasound['UltrasoundPage']['second_notes'])){
-      $second_notes = $ultrasound['UltrasoundPage']['second_notes'];
-    } else{
-      $second_notes = '';
-    }
-    
-    echo $this->Form->input('second_notes', array('label' => 'Pero cuando me siento peor es: ','div' => false,'value' => $second_notes));
+      // Esto no lo borres., lo comente para poder verla en local
+      echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
     ?>  
-    
+      <?php echo $this->Form->end(array(
+                'label' => 'Submit',
+                'div' => array(
+                    'id' => 'button_ultra',
+                )
+            ));
+      ?>
   </div>
-  <?php
-    // Esto no lo borres., lo comente para poder verla en local
-    //echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
-  ?>  
-    <?php echo $this->Form->end(array(
-              'label' => 'Submit',
-              'div' => array(
-                  'id' => 'button_sintom',
-              )
-          ));
-    ?>
 </div>
 
 </div>
-  <div class="footer">
-    <div class="footer_mtm">Mom to mom , Consintiendo mi piel de mam&aacute;</div>
-    <a href="http://www.momtomom.com.mx/" class="footer_link" target="_blank">www.momtomom.mx</a>
-    <a href="https://twitter.com/momtomommx" class="footer_twitter" target="_blank">@momtomommx</a>
-  </div>
+
