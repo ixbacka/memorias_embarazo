@@ -22,74 +22,86 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <!DOCTYPE html>
 <html>
 <head>
-	<?php echo $this->Html->charset(); ?>
-	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
-	</title>
-	<?php
-		echo $this->Html->meta('icon');
+  <?php echo $this->Html->charset(); ?>
+  <title>
+    <?php echo $cakeDescription ?>:
+    <?php echo $title_for_layout; ?>
+  </title>
+  <?php
+    echo $this->Html->meta('icon');
 
-		echo $this->Html->css('cake.generic');
+    echo $this->Html->css('cake.generic');
 
-		echo $this->fetch('meta');
-		echo $this->fetch('script');
-		echo $this->fetch('css');
-	?>
+    echo $this->fetch('meta');
+    echo $this->fetch('script');
+    echo $this->fetch('css');
+  ?>
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
-	<?php 
-				$tema = 1;//$this->Session->read("User.theme");
-				if($tema == 1){ echo $this->Html->css('tema1'); } 
-				elseif($tema == 2){ echo $this->Html->css('tema2'); } 
-				elseif($tema == 3){ echo $this->Html->css('tema3'); } 
-				elseif($tema == 4){ echo $this->Html->css('tema4'); } 
-	?>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Open+Sans:300italic,700italic,400,700,300:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+  <?php 
+        $tema = 1;//$this->Session->read("User.theme");
+        if($tema == 1){ echo $this->Html->css('tema1'); } 
+        elseif($tema == 2){ echo $this->Html->css('tema2'); } 
+        elseif($tema == 3){ echo $this->Html->css('tema3'); } 
+        elseif($tema == 4){ echo $this->Html->css('tema4'); } 
+  ?>
 
           
-	<?php echo $this->Html->script('functions'); ?>
-	
+  <?php echo $this->Html->script('functions'); ?>
+  
 
 </head>
 <body>
 
-	<div id="fb-root"></div>
-		<!-- solution for resizing ! *0* -->
-	<script type="text/javascript">  
-		   window.fbAsyncInit = function() {
-		    FB.init({
-		     appId: '163480813810636', 
-		     status: true, 
-		     cookie: true, 
-		     xfbml: true,
-		     frictionlessRequests: true,
-		     display: 'popup'
-		    });
-		    
-		    //this resizes the the i-frame 
-		    //on an interval of 100ms 
-		    //FB.Canvas.setAutoGrow();
-		 	<?php	if( strpos($_SERVER['REQUEST_URI'], 'welcome') == TRUE ){  ?>
-				FB.Canvas.setSize({height:1000});
-			<?php } elseif(strpos($_SERVER['REQUEST_URI'], 'fangate') == TRUE){ ?>
-				FB.Canvas.setSize({height:870});		
-			<?php } else { ?>
-			console.log('chekin g ..');
-			//FB.Canvas.setSize({height:800});
-			setTimeout("FB.Canvas.setAutoGrow()",500);
-		 <?php } ?>
-		   };
-		   (function() {
-		    var e = document.createElement('script');
-		    e.async = true;
-		    e.src = document.location.protocol + 
-		     '//connect.facebook.net/en_US/all.js';
-		    document.getElementById('fb-root').appendChild(e);   
-		   }());
+  <div id="fb-root"></div>
+    <!-- solution for resizing ! *0* -->
+  <script type="text/javascript">  
+       window.fbAsyncInit = function() {
+        FB.init({
+         appId: '163480813810636', 
+         status: true, 
+         cookie: true, 
+         xfbml: true,
+         frictionlessRequests: true,
+         display: 'popup'
+        });
+        
+        //this resizes the the i-frame 
+        //on an interval of 100ms 
+        //FB.Canvas.setAutoGrow();
+       <?php  if( strpos($_SERVER['REQUEST_URI'], 'welcome') == TRUE ){  ?>
+        FB.Canvas.setSize({height:1000});
+      <?php } elseif(strpos($_SERVER['REQUEST_URI'], 'fangate') == TRUE){ ?>
+        FB.Canvas.setSize({height:870});    
+      <?php } else { ?>
+      console.log('chekin g ..');
+      //FB.Canvas.setSize({height:800});
+      setTimeout("FB.Canvas.setAutoGrow()",500);
+     <?php } ?>
+       };
+       (function() {
+        var e = document.createElement('script');
+        e.async = true;
+        e.src = document.location.protocol + 
+         '//connect.facebook.net/en_US/all.js';
+        document.getElementById('fb-root').appendChild(e);   
+       }());
 
-		   // Load the SDK asynchronously
+       // Load the SDK asynchronously
   // (function(d, s, id){
   //    var js, fjs = d.getElementsByTagName(s)[0];
   //    if (d.getElementById(id)) {return;}
@@ -98,36 +110,36 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
   //    fjs.parentNode.insertBefore(js, fjs);
   //  }(document, 'script', 'facebook-jssdk'));
 
-		  
-		  </script> 
-		
-		<?php if( strpos($_SERVER['REQUEST_URI'], 'profiles') == FALSE &&
-							strpos($_SERVER['REQUEST_URI'], 'welcome') == FALSE && 
-						  strpos($_SERVER['REQUEST_URI'], 'fangate') == FALSE &&
-						  strpos($_SERVER['REQUEST_URI'], 'cover') == FALSE  ){ 
-		?>
+      
+      </script> 
+    
+    <?php if( strpos($_SERVER['REQUEST_URI'], 'profiles') == FALSE &&
+              strpos($_SERVER['REQUEST_URI'], 'welcome') == FALSE && 
+              strpos($_SERVER['REQUEST_URI'], 'fangate') == FALSE &&
+              strpos($_SERVER['REQUEST_URI'], 'cover') == FALSE  ){ 
+    ?>
 
-			<div class="header">	
-				<ul class="menu">
-					<li class="ask">FAQ</li>
-					<li class="settings">Settings</li>
-					<li class="home">Home</li>
-				</ul>
-			</div>
+      <div class="header">  
+        <ul class="menu">
+          <li class="ask">FAQ</li>
+          <li class="settings">Settings</li>
+          <li class="home">Home</li>
+        </ul>
+      </div>
 
-		<?php } ?>
-		<?php echo $this->Session->flash(); ?>
-		<?php echo $this->fetch('content'); ?>
-		<?php if( strpos($_SERVER['REQUEST_URI'], 'profiles') == FALSE &&
-							strpos($_SERVER['REQUEST_URI'], 'welcome') == FALSE && 
-						  strpos($_SERVER['REQUEST_URI'], 'fangate') == FALSE &&
-						  strpos($_SERVER['REQUEST_URI'], 'cover') == FALSE  ){ 
-		?>
-			<div class="footer">
-				<div class="footer_mtm">Mom to mom , Consintiendo mi piel de mam&aacute;</div>
-				<a href="http://www.momtomom.com.mx/" class="footer_link" target="_blank">www.momtomom.mx</a>
-				<a href="https://twitter.com/momtomommx" class="footer_twitter" target="_blank">@momtomommx</a>
-			</div>
-		<?php } ?>
+    <?php } ?>
+    <?php echo $this->Session->flash(); ?>
+    <?php echo $this->fetch('content'); ?>
+    <?php if( strpos($_SERVER['REQUEST_URI'], 'profiles') == FALSE &&
+              strpos($_SERVER['REQUEST_URI'], 'welcome') == FALSE && 
+              strpos($_SERVER['REQUEST_URI'], 'fangate') == FALSE &&
+              strpos($_SERVER['REQUEST_URI'], 'cover') == FALSE  ){ 
+    ?>
+      <div class="footer">
+        <div class="footer_mtm">Mom to mom , Consintiendo mi piel de mam&aacute;</div>
+        <a href="http://www.momtomom.com.mx/" class="footer_link" target="_blank">www.momtomom.mx</a>
+        <a href="https://twitter.com/momtomommx" class="footer_twitter" target="_blank">@momtomommx</a>
+      </div>
+    <?php } ?>
 </body>
 </html>

@@ -10,7 +10,7 @@ body {
 	width: 810px;
 	background-image: url(../img/back.png);
 	color: #fff;
-	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
+	font-family:'Open Sans', helvetica, arial, sans-serif;
 	font-size:90%;
 	margin: 0;
 	overflow: hidden;
@@ -792,7 +792,7 @@ text-align: center;
 }
 
 .ultra .info h3 {
-  font: 23px 'Futura';
+  font: 23px 'Open Sans';
   color: #269CCC;
 }
 
