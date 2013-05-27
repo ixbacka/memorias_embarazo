@@ -19,10 +19,14 @@ class ProfilesController extends AppController {
 	
 	}
 
+<<<<<<< HEAD
 
 	public function booklet(){
 
 	}
+=======
+	
+>>>>>>> c0b168bfff88a0b0dce4435499eea29eee2a8329
 	/*
 	 * fangate()
 	 * check if user has liked the page
@@ -218,7 +222,7 @@ class ProfilesController extends AppController {
 			} elseif (!empty($this->request->data['Profile']['url_photo'])) {
 
 				$avatar = imagecreatefromjpeg($this->request->data['Profile']['url_photo']);
-				$nameIMG = 'cover_photo_'.$uid.'.png';
+				$nameIMG = $this->generateUniqueFilename('cover_photo_'.$uid.'.png'); 
         imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 
         $this->Profile->set(array( 

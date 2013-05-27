@@ -49,28 +49,31 @@ body{
   margin-left: -2px;
 }
 </style>
-<?php echo $this->element('menu', array( "trimestre" => 1, 'pag' => 'first_visit')); ?>
-
-<?php
-		echo $this->Html->link(
-				    'Add Moment',
-				    array('controller' => 'moment_pages', 'action' => 'add', 0,1),
-				    array('class' => 'add_moment')
-				);
-	?>
+<?php echo $this->element('menu', array( "trimestre" => 1)); ?>
 
 <div class="content">
-<?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
+  <div class="menu_trims">
+    <?php 
+      echo $this->Html->link(
+            'Primer Trimestre',
+            array('controller' => 'familytree_pages', 'action' => 'add'),
+            array('class' => 'first_trim_current')
+        );
+      echo $this->Html->link(
+            'Segundo Trimestre',
+            array('controller' => 'familytree_pages', 'action' => 'add'),
+            array( 'class' => 'second_trim')
+        );
+      echo $this->Html->link(
+            'Tercer Trimestre',
+            array('controller' => 'familytree_pages', 'action' => 'add'),
+            array('class' => 'third_trim')
+        );
+    ?>
+  </div>
 
 <div class="page_title">
-  <?php
-
-      echo $this->Html->link(
-            'Anterior',
-            array('controller' => 'congrats_pages', 'action' => 'add'),
-            array('class' => 'ant')
-        );
-  ?>
+  <div class="ant">Anterior</div>
   <div class="title_page"><p>Mi Primer visita</p><br> <span>al ginec&oacute;logo</span></div>
   <?php
 

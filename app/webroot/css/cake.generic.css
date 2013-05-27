@@ -38,6 +38,25 @@ body {
   font-size:90%;
   margin: 0;
 }
+
+
+/* clearfix */
+
+.cf:before, .cf:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  zoom: 1;
+}
+
 a {
   color: #003d4c;
   text-decoration: underline;
@@ -125,7 +144,7 @@ p {
 }
 
 .like{
-  font-family: 'Futura', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #F5979D;
   text-align: center;
   height: 440px;
@@ -139,7 +158,7 @@ p {
 .like  h3 {
   color: #F5979D;
   font-size: 48px;
-  font-family: 'Futura';
+  font-family: 'Open Sans';
   margin-bottom: 30px;
   padding-top: 100px;
 }
@@ -147,7 +166,7 @@ p {
 .like p {
   color: #F5979D;
   font-size: 28px;
-  font-family: 'Futura';
+  font-family: 'Open Sans';
   width: 235px;
   margin: 0 auto;
 }
@@ -214,7 +233,7 @@ p {
 
 .estilos p {
   text-align: center;
-  font-family: 'Futura', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 17px;
 }
 

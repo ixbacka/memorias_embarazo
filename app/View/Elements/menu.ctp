@@ -1,4 +1,6 @@
 <!-- menu.ctp -->
+<?php $momentos = $this->requestAction('moment_pages/index'); ?>
+
 <ul class="vertical_menu_1">
 <?php if($trimestre == 1){ ?>
 	<li <?php if($pag == 'congrats'){ echo 'class="selected"'; } ?> >
@@ -58,6 +60,21 @@
 				);
 		?>
 		</li>
+		<?php if(isset($momentos) && !empty($momentos)) { foreach ($momentos as $moment): ?>
+		<?php if($moment['MomentPage']['trimester'] == 1){ ?>
+      <li>
+      	<?php
+						echo $this->Html->link(
+					    $moment['MomentPage']['title'],
+					    array('controller' => 'moment_page', 'action' => 'add', 
+					    	$moment['MomentPage']['id'], $moment['MomentPage']['trimester'])
+						);
+				?>
+			</li>
+			<?php } ?>
+		<?php endforeach; }?>
+
+
 <?php } elseif ($trimestre == 2) { ?>
 	<li <?php if($pag == 'ilovemybaby'){ echo 'class="selected"'; } ?>>
 	<?php 
@@ -95,15 +112,125 @@
 				);
 	?>
 	</li>
+	<?php if(isset($momentos) && !empty($momentos)) { foreach ($momentos as $moment): ?>
+		<?php if($moment['MomentPage']['trimester'] == 2){ ?>
+      <li>
+      	<?php
+						echo $this->Html->link(
+					    $moment['MomentPage']['title'],
+					    array('controller' => 'moment_page', 'action' => 'add', 
+					    	$moment['MomentPage']['id'], $moment['MomentPage']['trimester'])
+						);
+				?>
+			</li>
+			<?php } ?>
+		<?php endforeach; } ?>
+
 <?php } elseif ($trimestre == 3) { ?>
-	<li <?php if($pag == 'whoami'){ echo 'class="selected"'; } ?>>
+
+	<li <?php if($pag == 'gettingclose'){ echo 'class="selected"'; } ?>>
 	<?php 
 		echo $this->Html->link(
-				    'Mi pansita Mes a Mes',
-				    array('controller' => 'bellymonth_pages', 'action' => 'add')
+				    'Se acerca',
+				    array('controller' => 'gettingclose_pages', 'action' => 'add')
 
 				);
 	?>
 	</li>
+	<li <?php if($pag == 'babyshower'){ echo 'class="selected"'; } ?>>
+	<?php 
+		echo $this->Html->link(
+				    'Baby shower',
+				    array('controller' => 'babyshower_pages', 'action' => 'add')
+
+				);
+	?>
+	</li>
+	<li <?php if($pag == 'coolultrasound'){ echo 'class="selected"'; } ?>>
+	<?php 
+		echo $this->Html->link(
+				    'Ultrasonido',
+				    array('controller' => 'coolultrasound_pages', 'action' => 'add')
+
+				);
+	?>
+	</li>
+	<li <?php if($pag == 'nesting'){ echo 'class="selected"'; } ?>>
+	<?php 
+		echo $this->Html->link(
+				    'Síntomas',
+				    array('controller' => 'nesting_pages', 'action' => 'add')
+
+				);
+	?>
+	</li>
+	<li <?php if($pag == 'byebelly'){ echo 'class="selected"'; } ?>>
+	<?php 
+		echo $this->Html->link(
+				    'Pancita',
+				    array('controller' => 'byebelly_pages', 'action' => 'add')
+
+				);
+	?>
+	</li>
+	<li <?php if($pag == 'specialdelivery'){ echo 'class="selected"'; } ?>>
+	<?php 
+		echo $this->Html->link(
+				    'Entrega',
+				    array('controller' => 'specialdelivery_pages', 'action' => 'add')
+
+				);
+	?>
+	</li>
+	<li <?php if($pag == 'welcome'){ echo 'class="selected"'; } ?>>
+	<?php 
+		echo $this->Html->link(
+				    'Bienvenido',
+				    array('controller' => 'welcome_pages', 'action' => 'add')
+
+				);
+	?>
+	</li>
+	<li <?php if($pag == 'epilog'){ echo 'class="selected"'; } ?>>
+	<?php 
+		echo $this->Html->link(
+				    'Epílogo',
+				    array('controller' => 'epilog_pages', 'action' => 'add')
+
+				);
+	?>
+	</li>
+	<li <?php if($pag == 'newfamily'){ echo 'class="selected"'; } ?>>
+	<?php 
+		echo $this->Html->link(
+				    'Familia',
+				    array('controller' => 'newfamily_pages', 'action' => 'add')
+
+				);
+	?>
+	</li>
+	<li <?php if($pag == 'familytree'){ echo 'class="selected"'; } ?>>
+	<?php 
+		echo $this->Html->link(
+				    'Árbol familiar',
+				    array('controller' => 'familytree_pages', 'action' => 'add')
+
+				);
+	?>
+	</li>
+	<?php if(isset($momentos) && !empty($momentos)) { foreach ($momentos as $moment): ?>
+		<?php if($moment['MomentPage']['trimester'] == 3){ ?>
+      <li>
+      	<?php
+						echo $this->Html->link(
+					    $moment['MomentPage']['title'],
+					    array('controller' => 'moment_page', 'action' => 'add', 
+					    	$moment['MomentPage']['id'], $moment['MomentPage']['trimester'])
+						);
+				?>
+			</li>
+			<?php } ?>
+		<?php endforeach; } ?>
+
 <?php } ?> 
 </ul>

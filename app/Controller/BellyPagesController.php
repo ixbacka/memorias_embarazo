@@ -22,7 +22,7 @@ var $uses = array('BellyPage','Profile');
 
 
 	public function add(){
-    /*
+    
 		$facebook = $this->Session->read("facebook");
 		$uid  = $facebook->getUser();
 
@@ -128,7 +128,7 @@ var $uses = array('BellyPage','Profile');
 
       $this->set('belly',$this->BellyPage->find('first', array( 'conditions' => array( 'BellyPage.profile_id' => $leid ) )));
 		  $this->set('profileid',$leid);
-      */
+      
 	}
 
 
