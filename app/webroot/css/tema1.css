@@ -224,7 +224,7 @@ p.whatdo{
 .footer_twitter{
   background-image: url(../img/footer_twitter.png);
   width: 100px;
-  height: 18  px;
+  height: 18px;
   text-indent: -9999px;
   position: absolute;
   top: 170px;
@@ -238,6 +238,7 @@ p.whatdo{
   height: 30px;
   position: absolute;
   top: -30px;
+  z-index: 1001;
 }
 
 .first_trim{
@@ -329,25 +330,17 @@ left: 547px;
 /** menu vertical ;S **/
 
 ul.vertical_menu_1{
-
-/* Safari */
--webkit-transform: rotate(-270deg);
-/* Firefox */
--moz-transform: rotate(-270deg);
-/* IE */
--ms-transform: rotate(-270deg);
-/* Opera */
--o-transform: rotate(-270deg);
-/* Internet Explorer */
-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-
-position: absolute;
-right: 140px;
-top: 593px;
-z-index: 9999;
-margin: 0;
-list-style: none;
-right: -330px;
+  -webkit-transform: rotate(-270deg);
+  -moz-transform: rotate(-270deg);
+  -ms-transform: rotate(-270deg);
+  -o-transform: rotate(-270deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  position: absolute;
+  top: 593px;
+  z-index: 9999;
+  margin: 0;
+  list-style: none;
+  right: -320px;
 }
 
 ul.vertical_menu_1 li{
