@@ -10,7 +10,7 @@ body {
 	width: 810px;
 	background-image: url(../img/back.png);
 	color: #fff;
-	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
+	font-family: 'Futura', 'lucida grande', verdana,helvetica,arial,sans-serif;
 	font-size:90%;
 	margin: 0;
 	overflow: hidden;
@@ -812,7 +812,101 @@ text-align: center;
   display: inline-block;
 }
 
+/* BELLY PAGES */
 
+.mesuno {
+    position: absolute;
+    top: 170px;
+    left: 81px;
+}
+.mesdos {
+    position: absolute;
+    top: 170px;
+    left: 457px;
+}
+.mestres {
+    position: absolute;
+    top: 450px;
+    left: 270px;
+}
+
+.mesuno>p, .mesdos>p, .mestres>p {
+  position: absolute;
+  top: 215px;
+  text-align: center;
+  width: 262px;
+  color: #1082AC;
+  font-size: 20px;
+  font-family: 'Futura';
+}
+
+/* ANIMO */
+
+#AnimoPageAddForm {
+  padding-top: 120px;
+}
+
+
+#AnimoPageAddForm h3 {
+  float: left;
+  margin-left: 73px;
+  font-family: 'Futura';
+  color: #1392C2;
+  font-size: 22px;
+}
+
+#AnimoPageAddForm p {
+  float: none;
+  color: #1392C2;
+}
+
+#AnimoPageAddForm h4 {
+  color: #FFF;
+}
+
+#AnimoPageAddForm input[type=radio] {
+  margin: 4px 0;
+}
+
+.mi-humor, .mi-humor, .mi-energia, .mi-fisico, .mi-otros {
+  font-size: 16px;
+}
+
+.col2 {
+  margin-left: 33px;
+}
+
+.col1, .col2, .col3, .col4 {
+  float: left;
+  margin: 18px 0px;
+}
+
+.mi-fisico .col1, .mi-fisico .col2, .mi-fisico .col3, .mi-fisico .col4 {
+  margin-bottom: 0;
+}
+
+.mi-otros .col2, .mi-otros .col3, .mi-otros .col4 {
+  margin: 15px 24px 0;
+  width: 90px;
+}
+
+.col2, .col3, .col4 {
+  width: 20px;
+  margin: 36px 60px;
+}
+
+.col1 {
+  width: 300px;
+}
+
+.meses {
+  margin: 30px 0 0 260px;
+}
+
+#AnimoPageAddForm .submit {
+  position: absolute;
+  bottom: -130px;
+}
 
 /* ESTADOS */
 
