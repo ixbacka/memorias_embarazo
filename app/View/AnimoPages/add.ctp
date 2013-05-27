@@ -51,7 +51,7 @@ body{
       <h3>Mes 2</h3>
       <h3>Mes 3</h3>
     </div>
-    <div class="mi-humor">
+    <div class="mi-humor cf">
       <!-- etiquetas de humor -->
       <div class="col1">
         <h4>Mi humor es: </h4>
@@ -112,7 +112,7 @@ body{
       </div>
     </div>
 
-    <div class="mi-energia">
+    <div class="mi-energia cf">
       <div class="col1">
         <!-- etiquetas de energia -->
         <h4>Mi nivel de energía es:</h4>
@@ -163,7 +163,7 @@ body{
       </div>
     </div>
 
-    <div class="mi-fisico">
+    <div class="mi-fisico cf">
       <div class="col1">
         <!-- etiquetas de fisico -->
         <h4>El cambio físico que más he percibido: </h4>
@@ -224,7 +224,7 @@ body{
       </div>
     </div>
 
-    <div class="mi-otros">
+    <div class="mi-otros cf">
       <div class="col1">
         <p>Otro</p>
       </div>
