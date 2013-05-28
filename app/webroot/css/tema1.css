@@ -529,6 +529,8 @@ div.form, div.index, div.view {
   text-transform: uppercase;
   margin-left: 120px;
   margin-top: -20px;
+  padding-right: 20px;
+  background-repeat: no-repeat;
 }
 
 
@@ -970,6 +972,7 @@ text-align: center;
   margin: 0;
   padding: 0;
   text-align: center;
+  width: 100px;
 }
 
 .todomundo p {
@@ -980,17 +983,16 @@ text-align: center;
 .todomundo input[type="radio"] {
   position: absolute;
   top: 30px;
+  left: 42px;
 }
 
-.todomundo input[value="1"] {
-    left: 30px;
-}
-input[value="1"] {}
-.todomundo input[value="2"] {
-    left: 131px;
-}
-.todomundo input[value="3"] {
-    right: 30px;
+.todomundo .opcion1,
+.todomundo .opcion2,
+.todomundo .opcion3 {
+  position: relative;
+  width: 90px;
+  height: 60px;
+  float: left;
 }
 
 /* ESTADOS */

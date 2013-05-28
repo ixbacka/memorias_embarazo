@@ -8,6 +8,13 @@ body{
 	height: 1170px;
 	overflow: hidden;
 }
+
+.title_page span {
+  top: 42px;
+  position: absolute;
+  left: 364px;
+}
+
 .footer{
 	position: absolute;
 	top: 970px;
@@ -17,19 +24,19 @@ body{
 form div.submit{
 	position: absolute;
 	top: 765px;
-	left: 350px;
+	left: 380px;
 	z-index: 9999;
 }
 
 form .submit input[type=submit]{
 	background-image: url(../img/bt_aceptar.png);
-width: 55px;
-height: 55px;
-border: none;
-background-color: transparent;
-box-shadow: none;
-text-indent: -9999px;
-cursor: pointer;
+  width: 55px;
+  height: 55px;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  text-indent: -9999px;
+  cursor: pointer;
 }
 
 form .submit input[type=submit]:hover{
@@ -213,65 +220,8 @@ function readURL(input) {
 <!-- Markup for Carson Shold's Photo Selector -->
 
 
+<?php echo $this->element('menu', array( "trimestre" => 1, "pag" => "belly")); ?>
 
-<ul class="vertical_menu_1">
-	<li>
-	<?php 
-		//congrats
-		echo $this->Html->link(
-				    'Felicidades',
-				    array('controller' => 'congrats_pages', 'action' => 'add')
-				);
-		?>
-	</li>
-	<li>
-		<?php
-		echo $this->Html->link(
-				    'Primer Visita',
-				    array('controller' => 'first_visit_pages', 'action' => 'add')
-				); ?>
-		</li>
-		<li>
-		<?php
-		echo $this->Html->link(
-				    'Quién soy',
-				    array('controller' => 'whoami_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-		<li>
-		<?php
-		echo $this->Html->link(
-				    'Primeros síntomas',
-				    array('controller' => 'sintom_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-		<li>
-			<?php
-		echo $this->Html->link(
-				    'Ultrasonido',
-				    array('controller' => 'ultrasound_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-		<li>
-		<?php
-		echo $this->Html->link(
-				    'Mi pancita',
-				    array('controller' => 'belly_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-		<li>
-		<?php
-		echo $this->Html->link(
-				    'Mi ánimo',
-				    array('controller' => 'animo_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-</ul>
 <?php
 		echo $this->Html->link(
 				    'Add Moment',
@@ -281,86 +231,67 @@ function readURL(input) {
 	?>
 
 <div class="content">
-	<div class="menu_trims">
-		<?php 
-			echo $this->Html->link(
-				    'Primer Trimestre',
-				    array('controller' => 'familytree_pages', 'action' => 'add'),
-				    array('class' => 'first_trim_current')
-				);
-			echo $this->Html->link(
-				    'Segundo Trimestre',
-				    array('controller' => 'familytree_pages', 'action' => 'add'),
-				    array( 'class' => 'second_trim')
-				);
-			echo $this->Html->link(
-				    'Tercer Trimestre',
-				    array('controller' => 'familytree_pages', 'action' => 'add'),
-				    array('class' => 'third_trim')
-				);
-		?>
-	</div>
+  <?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
+  <div class="page_title">
+    <?php
 
-<div class="page_title">
-	<?php
+        echo $this->Html->link(
+              'Siguiente',
+              array('controller' => 'ultrasound_pages', 'action' => 'add'),
+              array('class' => 'ant')
+          );
+    ?>
 
-			echo $this->Html->link(
-				    'Siguiente',
-				    array('controller' => 'ultrasound_pages', 'action' => 'add'),
-				    array('class' => 'ant')
-				);
-	?>
+    <div class="title_page"><p>Mi pancita</p>
+      <span>mes a mes</span></div>
+    <?php
 
-	<div class="title_page"><p>Mi pancita</p>
-		<span>mes a mes</span></div>
-	<?php
+        echo $this->Html->link(
+              'Siguiente',
+              array('controller' => 'animo_pages', 'action' => 'add'),
+              array('class' => 'sig')
+          );
+    ?>
+  </div>
 
-			echo $this->Html->link(
-				    'Siguiente',
-				    array('controller' => 'animo_pages', 'action' => 'add'),
-				    array('class' => 'sig')
-				);
-	?>
+  <div class="bellyPages form">
+
+  <?php echo $this->Form->create('BellyPage', array('enctype' => 'multipart/form-data')); ?>
+    <div class="mesuno">
+      <div class="bellyFile photo-up" id="photo1">
+        <input type="hidden" name="data[BellyPage][photo1_url][url_photo]" class="photo1" value=""/>
+        <div class="pick_fb">Elegir de Facebook</div>
+        <?php
+          echo $this->Form->file('grandpa_dad_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+        ?>
+      </div>
+      <p class="mes">Mes 1</p>
+    </div>
+    <div class="mesdos">
+      <div class="bellyFile photo-up" id="photo2">
+        <input type="hidden" name="data[BellyPage][photo2_url][url_photo]" class="photo2" value=""/>
+        <div class="pick_fb">Elegir de Facebook</div>
+        <?php
+          echo $this->Form->file('photo2', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+        ?>
+      </div>
+      <p class="mes">Mes 2</p>
+    </div>
+    <div class="mestres">
+      <div class="bellyFile photo-up" id="photo3">
+        <input type="hidden" name="data[BellyPage][photo3_url][url_photo]" class="photo3" value=""/>
+        <div class="pick_fb">Elegir de Facebook</div>
+        <?php
+          echo $this->Form->file('grandma_dad_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+        ?>
+      </div>
+      <p class="mes">Mes 3</p>
+    </div>
+      <?php
+        //no borrar, para poder verla en local, pero debes de descomentarla para subirla al server
+        echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
+      ?>
+  <?php echo $this->Form->end(__('Submit')); ?>
+  </div>
 </div>
 
-<div class="bellyPages form">
-
-<?php echo $this->Form->create('BellyPage', array('enctype' => 'multipart/form-data')); ?>
-
-	<div class="bellyFile" id="photo1">
-		<input type="hidden" name="data[BellyPage][photo1_url][url_photo]" class="photo1" value=""/>
-		<div class="pick_fb">Elegir de Facebook</div>
-		<?php
-			echo $this->Form->file('grandpa_dad_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
-		?>
-		<p>Mes 1</p>
-	</div>
-	<div class="bellyFile" id="photo2">
-		<input type="hidden" name="data[BellyPage][photo2_url][url_photo]" class="photo2" value=""/>
-		<div class="pick_fb">Elegir de Facebook</div>
-		<?php
-			echo $this->Form->file('photo2', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
-		?>
-		<p>Mes 2</p>
-	</div>
-	<div class="bellyFile" id="photo3">
-		<input type="hidden" name="data[BellyPage][photo3_url][url_photo]" class="photo3" value=""/>
-		<div class="pick_fb">Elegir de Facebook</div>
-		<?php
-			echo $this->Form->file('grandma_dad_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
-		?>
-		<p>Mes 3</p>
-	</div>
-		<?php
-			//no borrar, para poder verla en local, pero debes de descomentarla para subirla al server
-			//echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
-		?>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-
-</div>
-	<div class="footer">
-		<div class="footer_mtm">Mom to mom , Consintiendo mi piel de mam&aacute;</div>
-		<a href="http://www.momtomom.com.mx/" class="footer_link" target="_blank">www.momtomom.mx</a>
-		<a href="https://twitter.com/momtomommx" class="footer_twitter" target="_blank">@momtomommx</a>
-	</div>

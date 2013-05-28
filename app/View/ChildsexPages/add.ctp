@@ -53,11 +53,11 @@
     <div class="opcion2">
     <label>Cuates</label>
       <input type="radio" name="data[ChildsexPage][theythink]" value="2" <?php if($theythink == 2){ echo   'checked="checked"'; } ?> />
+    </div>
     <div class="opcion3">
-    <label>Niña</label>
-    <input type="radio" name="data[ChildsexPage][theythink]" value="3" <?php if($theythink == 3){
-      echo   'checked="checked"'; } ?> />
-
+      <label>Niña</label>
+      <input type="radio" name="data[ChildsexPage][theythink]" value="3" <?php if($theythink == 3){ echo   'checked="checked"'; } ?> />
+    </div>
   </div>
   <div class="personalmente cf">
     <label>Yo personalmente pienso que eres: </label>  
@@ -68,15 +68,18 @@
         $ithink = '';
       }
     ?> 
-    <input type="radio" name="data[ChildsexPage][ithink]" value="1" <?php if($ithink == 1){
-    echo  'checked="checked"'; } ?> />
-    <label>Niño</label>
-     <input type="radio" name="data[ChildsexPage][ithink]" value="2" <?php if($ithink == 2){
-    echo   'checked="checked"'; } ?> />
-    <label>Cuates</label>
-     <input type="radio" name="data[ChildsexPage][ithink]" value="3" <?php if($ithink == 3){
-    echo   'checked="checked"'; } ?> />
-    <label>Niña</label>
+    <div class="opcion1">
+      <input type="radio" name="data[ChildsexPage][ithink]" value="1" <?php if($ithink == 1){ echo  'checked="checked"'; } ?> />
+      <label>Niño</label>
+    </div>
+    <div class="opcion1">
+       <input type="radio" name="data[ChildsexPage][ithink]" value="2" <?php if($ithink == 2){ echo   'checked="checked"'; } ?> />
+      <label>Cuates</label>
+    </div>
+    <div class="opcion1">
+       <input type="radio" name="data[ChildsexPage][ithink]" value="3" <?php if($ithink == 3){ echo   'checked="checked"'; } ?> />
+      <label>Niña</label>
+    </div>
   </div>
   <div class="decidimos cf">
     <label>Decidimos</label>  
@@ -86,14 +89,15 @@
       } else{
         $decided = '';
       }
-    ?> 
-    <input type="radio" name="data[ChildsexPage][decided]" value="1" <?php if($decided == 1){
-    echo  'checked="checked"'; } ?> />
-     <label>Si saber</label> 
-     <input type="radio" name="data[ChildsexPage][decided]" value="2" <?php if($decided == 2){
-    echo   'checked="checked"'; } ?> />
-     <label>No saber, porque</label> 
-    
+    ?>
+    <div class="opcion1">
+      <input type="radio" name="data[ChildsexPage][decided]" value="1" <?php if($decided == 1){ echo  'checked="checked"'; } ?> />
+       <label>Si saber</label>
+    </div>
+    <div class="opcion1">
+      <input type="radio" name="data[ChildsexPage][decided]" value="2" <?php if($decided == 2){ echo   'checked="checked"'; } ?> />
+       <label>No saber, porque</label>
+    </div>
     <?php
       if(isset($childsex['ChildsexPage']['whyidecided'])){
         $whyidecided = $childsex['ChildsexPage']['whyidecided'];
