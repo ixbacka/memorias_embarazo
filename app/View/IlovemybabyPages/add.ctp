@@ -28,7 +28,6 @@ $(document).ready(function(){
       $today = '';
     }
 ?>
-<?php echo $this->element('menu', array( "trimestre" => 2, "pag" => "ilovemybaby")); ?>
 <?php
     echo $this->Html->link(
             'Add Moment',
@@ -36,6 +35,7 @@ $(document).ready(function(){
             array('class' => 'add_moment')
         );
   ?>
+<?php echo $this->element('menu', array( "trimestre" => 2, "pag" => "ilovemybaby")); ?>
 
 <div class="content">
 <?php echo $this->element('trim_menu', array( 'trimestre' => 2)); ?>
@@ -49,8 +49,7 @@ $(document).ready(function(){
         );
   ?>
   <div class="title_page">
-    <p>Mi ánimo</p>
-    <span>mes a mes</span>
+    <p>Amo a mi beb&eacute;</p>
   </div>
   <?php 
     echo $this->Html->link(
@@ -63,15 +62,16 @@ $(document).ready(function(){
 
   <div class="ilovemybabyPages form">
 <?php echo $this->Form->create('IlovemybabyPage'); ?>
-  
-  <label for="IlovemybabyPageToday">Hoy </label>
-  <input type="text" id="datepickerCongrats" size="30" readonly="readonly"  value="<?php if($today != ''){
+  <p>
+    <label for="IlovemybabyPageToday">Hoy </label>
+    <input type="text" id="datepickerCongrats" size="30" readonly="readonly"  class="fecha" value="<?php if($today != ''){
         echo $today; } ?>"/>
-  <input type="hidden" name="data[IlovemybabyPage][today][month]" id="CongratsPagePruebaMonth" />
-  <input type="hidden" name="data[IlovemybabyPage][today][day]" id="CongratsPagePruebaDay" />
-  <input type="hidden" name="data[IlovemybabyPage][today][year]" id="CongratsPagePruebaYear" />
-  <p>nunca lo olvidaré porque oí tu corazón por primera vez</p>  
-  
+    <input type="hidden" name="data[IlovemybabyPage][today][month]" id="CongratsPagePruebaMonth" />
+    <input type="hidden" name="data[IlovemybabyPage][today][day]" id="CongratsPagePruebaDay" />
+    <input type="hidden" name="data[IlovemybabyPage][today][year]" id="CongratsPagePruebaYear" />
+    nunca lo olvidaré porque oí tu corazón por primera vez
+  </p>
+
   <?php
     if(isset($ilovemybby['IlovemybabyPage']['heartbeat'])){
       $heartbeat = $ilovemybby['IlovemybabyPage']['heartbeat'];
@@ -81,18 +81,22 @@ $(document).ready(function(){
   ?>
   <p>Tac, tac, sonaba como: </p>
 
-  <label>Caballos Galopantes</label>  
-  <input type="radio" name="data[IlovemybabyPage][heartbeat]" value="1" <?php if($heartbeat == 1){
-  echo  'checked="checked"'; } ?> />
-
+  <div class="opcion">
+    <label>Caballos Galopantes</label>  
+    <input type="radio" name="data[IlovemybabyPage][heartbeat]" value="1" <?php if($heartbeat == 1){
+      echo  'checked="checked"'; } ?> />
+  </div>
+  <div class="opcion">
     <label>Como un tambor</label>
-   <input type="radio" name="data[IlovemybabyPage][heartbeat]" value="2" <?php if($heartbeat == 2){
-  echo 'checked="checked"'; } ?> />
-
+    <input type="radio" name="data[IlovemybabyPage][heartbeat]" value="2" <?php if($heartbeat == 2){
+      echo 'checked="checked"'; } ?> />
+  </div>
+  <div class="opcion">
     <label>Un mar de emociones</label>
-   <input type="radio" name="data[IlovemybabyPage][heartbeat]" value="3" <?php if($heartbeat == 3){
-  echo 'checked="checked"'; } ?> />
-  
+    <input type="radio" name="data[IlovemybabyPage][heartbeat]" value="3" <?php if($heartbeat == 3){
+      echo 'checked="checked"'; } ?> />
+  </div>
+
   <?php
     if(isset($ilovemybby['IlovemybabyPage']['first_feeling'])){
       $first_feeling = $ilovemybby['IlovemybabyPage']['first_feeling'];
@@ -101,7 +105,7 @@ $(document).ready(function(){
     }
   ?>
   <label for="IlovemybabyPageFirstFeeling">y lo primero que sentí fue: </label>
-  <input type="text" name="data[IlovemybabyPage][first_feeling]" value="<?php if($first_feeling != ''){ echo $first_feeling; } ?>"/>  
+  <input type="text" name="data[IlovemybabyPage][first_feeling]" id="senti" value="<?php if($first_feeling != ''){ echo $first_feeling; } ?>"/>
 
     <?php
       echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));

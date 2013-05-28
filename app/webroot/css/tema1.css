@@ -330,6 +330,7 @@ left: 547px;
 /** menu vertical ;S **/
 
 ul.vertical_menu_1{
+  width: 700px;
   -webkit-transform: rotate(-270deg);
   -moz-transform: rotate(-270deg);
   -ms-transform: rotate(-270deg);
@@ -522,7 +523,7 @@ div.form, div.index, div.view {
   text-align: center;
   padding-top: 40px;
   font-size: 30px;
-  width: 290px;
+  width: 283px;
   height: 70px;
   float: left;
   text-transform: uppercase;
@@ -573,7 +574,6 @@ input[type="text"]{
 */  font-size: 14px;
   color: #ccc;
   padding: 3px;
-   width: 100%
 }
 
 
@@ -899,6 +899,98 @@ text-align: center;
 #AnimoPageAddForm .submit {
   position: absolute;
   bottom: -130px;
+}
+
+
+/* IlovemybabyPageAddForm */
+
+#IlovemybabyPageAddForm {
+  margin-top: 200px;
+}
+
+#IlovemybabyPageAddForm p {
+  float: none;
+  margin-bottom: 60px;
+  color: #fff;
+}
+
+.fecha {
+  width: 160px;
+}
+
+#IlovemybabyPageAddForm .opcion {
+    display: block;
+    width: 230px;
+    height: 80px;
+    float: left;
+    margin-bottom: 40px;
+}
+
+#IlovemybabyPageAddForm .opcion input {
+    margin-left: 110px;
+}
+
+#IlovemybabyPageAddForm .opcion label {
+    width: 100%;
+    text-align: center;
+}
+
+#senti {
+  width: 460px;
+}
+#IlovemybabyPageAddForm div.submit {
+  margin-top: 30px;
+}
+
+/* #ChildsexPageAdd */
+
+#ChildsexPageAddForm {
+  top: 380px;
+  position: absolute;
+}
+
+.bebes {
+  display: block;
+  background: url(../img/bebesotes.png);
+  width: 589px;
+  height: 348px;
+  position: absolute;
+  top: 160px;
+  left: 120px;
+  text-indent: -10000px;
+}
+
+.todomundo {
+  position: absolute;
+  left: 263px;
+  top: 0;
+  text-align: center;
+}
+.todomundo label {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.todomundo p {
+  float: none;
+  color: #fff;
+}
+
+.todomundo input[type="radio"] {
+  position: absolute;
+  top: 30px;
+}
+
+.todomundo input[value="1"] {
+    left: 30px;
+}
+input[value="1"] {}
+.todomundo input[value="2"] {
+    left: 131px;
+}
+.todomundo input[value="3"] {
+    right: 30px;
 }
 
 /* ESTADOS */
