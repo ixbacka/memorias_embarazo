@@ -19,66 +19,90 @@ class MomentPagesController extends AppController {
     );	
 	}
 
+  public function index(){
+    $facebook = $this->Session->read("facebook");
+    $uid  = $facebook->getUser();
+
+     if( $this->Session->read('User.uid') ){
+        $id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' =>  $this->Session->read('User.uid') ) ) );
+      } else {
+        $id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' => $uid ) ) );
+      }
+
+      $leid = $id['Profile']['id'];
+
+     $momentos = $this->MomentPage->find('all', array( 'conditions' => array( 'MomentPage.profile_id' => $leid ) ));
+      if ($this->request->is('requested')) {
+          return $momentos;
+      } else {
+        $this->set('moments', $momentos);
+      }
+  }
+
 
 	/*
 	 * tiene que guardar el momento , profile_id y trimestre
 	 */
-	public function add($trim = null){
-		// $facebook = $this->Session->read("facebook");
-		// $uid  = $facebook->getUser();
+	public function add($id = null, $trim = null){
+		$facebook = $this->Session->read("facebook");
+		$uid  = $facebook->getUser();
 
-		//  if( $this->Session->read('User.uid') ){
-  //     	$id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' =>  $this->Session->read('User.uid') ) ) );
-  //     } else {
-  //     	$id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' => $uid ) ) );
-  //     }
+		 if( $this->Session->read('User.uid') ){
+      	$id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' =>  $this->Session->read('User.uid') ) ) );
+      } else {
+      	$id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' => $uid ) ) );
+      }
 
-  //     $leid = $id['Profile']['id'];
+      $leid = $id['Profile']['id'];
       
-  //     //got users id, return fields if they full, also, check if post or put and save
-  //     if ($this->request->is('post') || $this->request->is('put')) {
+      //got users id, return fields if they full, also, check if post or put and save
+      if ($this->request->is('post') || $this->request->is('put')) {
 
-  //       $idf = $this->MomentPage->find('first', array( 'conditions' => array( 'MomentPage.profile_id' =>  $leid, 'MomentPage.trimester' => $trim ) ) );
+        $idf = $this->MomentPage->find('first', array( 'conditions' => array( 'MomentPage.id' =>  $id) ) );
         
-  //       if( !empty($idf['MomentPage']['id']) && !is_null($idf['MomentPage']['id'])){
-  //         $this->MomentPage->id = $idf['MomentPage']['id'];
-  //       }
+        if( !empty($idf['MomentPage']['id']) && !is_null($idf['MomentPage']['id'])){
+          $this->MomentPage->id = $idf['MomentPage']['id'];
+        }
 
-  //       if(!empty($this->request->data['MomentPage']['photo']['tmp_name']) ) { 
+        if(!empty($this->request->data['MomentPage']['photo']['tmp_name']) ) { 
 
-  //       $fileName = $this->generateUniqueFilename($this->request->data['MomentPage']['photo']['name']); 
-  //       $error = $this->handleFileUpload($this->request->data['MomentPage']['photo'], $fileName); 
+        $fileName = $this->generateUniqueFilename($this->request->data['MomentPage']['photo']['name']); 
+        $error = $this->handleFileUpload($this->request->data['MomentPage']['photo'], $fileName); 
 
-  //         if ($error == false) { 
-  //           //$this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$fileName,WWW_ROOT.'img/cover_photos/'.$fileName);
+          if ($error == false) { 
+            //$this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$fileName,WWW_ROOT.'img/cover_photos/'.$fileName);
             
-  //           $this->MomentPage->set(array( 
-  //             'photo' => $fileName
-  //           ));
+            $this->MomentPage->set(array( 
+              'photo' => $fileName
+            ));
             
-  //         }
+          }
 
-  //       } elseif (!empty($this->request->data['MomentPage']['url_photo'])) {
-  //       	$random = substr(number_format(time() * rand(),0,'',''),0,10);
-  //         $avatar = imagecreatefromjpeg($this->request->data['MomentPage']['url_photo']);
-  //         $nameIMG = 'moment_'.$random.'_'.$uid.'.png';
-  //         imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
+        } elseif (!empty($this->request->data['MomentPage']['url_photo'])) {
+        	$random = substr(number_format(time() * rand(),0,'',''),0,10);
+          $avatar = imagecreatefromjpeg($this->request->data['MomentPage']['url_photo']);
+          $nameIMG = 'moment_'.$random.'_'.$uid.'.png';
+          imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 
-  //         $this->MomentPage->set(array( 
-  //           'photo' => $nameIMG
-  //         ));
+          $this->MomentPage->set(array( 
+            'photo' => $nameIMG
+          ));
           
-  //       }
+        }
 
-  //       if ($this->MomentPage->save($this->request->data)) {
-  //         //$this->Session->setFlash(__('The Cover photo has been saved'));
-  //       } else {
-  //         $this->Session->setFlash(__('The Page could not be saved. Please, try again.'));
-  //       }
-  //     }
+         $this->MomentPage->set(array( 
+              'trimester' => $trim
+            ));
 
-  //     $this->set('moment',$this->MomentPage->find('first', array( 'conditions' => array( 'MomentPage.profile_id' => $leid ) )));
-		//   $this->set('profileid',$leid);
+        if ($this->MomentPage->save($this->request->data)) {
+          //$this->Session->setFlash(__('The Cover photo has been saved'));
+        } else {
+          $this->Session->setFlash(__('The Page could not be saved. Please, try again.'));
+        }
+      }
+
+      $this->set('moment',$this->MomentPage->find('first', array( 'conditions' => array( 'MomentPage.id' => $id ) )));
+		  $this->set('profileid',$leid);
 	}
 
 

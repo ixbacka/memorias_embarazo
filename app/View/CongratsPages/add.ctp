@@ -44,96 +44,18 @@ body{
 	left: 320px;
 }
 </style>
+<?php echo $this->element('menu', array( "trimestre" => 1, 'pag' => 'congrats')); ?>
 
-
-
-<ul class="vertical_menu_1">
-	<li class="selected">
-	<?php 
-		//congrats
-		echo $this->Html->link(
-				    'Felicidades',
-				    array('controller' => 'congrats_pages', 'action' => 'add')
-
-				);
-		?>
-	</li>
-	<li>
-		<?php
-		echo $this->Html->link(
-				    'Primer Visita',
-				    array('controller' => 'first_visit_pages', 'action' => 'add')
-				); ?>
-		</li>
-		<li>
-		<?php
-		echo $this->Html->link(
-				    'Quién soy',
-				    array('controller' => 'whoami_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-		<li>
-		<?php
-		echo $this->Html->link(
-				    'Primeros síntomas',
-				    array('controller' => 'sintom_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-		<li>
-			<?php
-		echo $this->Html->link(
-				    'Ultrasonido',
-				    array('controller' => 'ultrasound_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-		<li>
-		<?php
-		echo $this->Html->link(
-				    'Mi pancita',
-				    array('controller' => 'belly_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-		<li>
-		<?php
-		echo $this->Html->link(
-				    'Mi ánimo',
-				    array('controller' => 'animo_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-</ul>
 <?php
 		echo $this->Html->link(
 				    'Add Moment',
-				    array('controller' => 'moment_pages', 'action' => 'add'),
+				    array('controller' => 'moment_pages', 'action' => 'add', 0,1),
 				    array('class' => 'add_moment')
 				);
 	?>
 
 <div class="content">
-	<div class="menu_trims">
-		<?php 
-			echo $this->Html->link(
-				    'Primer Trimestre',
-				    array('controller' => 'familytree_pages', 'action' => 'add'),
-				    array('class' => 'first_trim_current')
-				);
-			echo $this->Html->link(
-				    'Segundo Trimestre',
-				    array('controller' => 'familytree_pages', 'action' => 'add'),
-				    array( 'class' => 'second_trim')
-				);
-			echo $this->Html->link(
-				    'Tercer Trimestre',
-				    array('controller' => 'familytree_pages', 'action' => 'add'),
-				    array('class' => 'third_trim')
-				);
-		?>
-	</div>
+<?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
 
 <div class="page_title">
 	<div class="ant">Anterior</div>

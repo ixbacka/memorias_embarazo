@@ -60,7 +60,8 @@ class WhoamiPagesController extends AppController {
         } elseif (!empty($this->request->data['WhoamiPage']['url_photo'])) {
 
           $avatar = imagecreatefromjpeg($this->request->data['WhoamiPage']['url_photo']);
-          $nameIMG = 'whoami_'.$uid.'.png';
+          $nameIMG = $this->generateUniqueFilename('whoami_'.$uid.'.png'); 
+
           imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 
           $this->WhoamiPage->set(array( 
@@ -69,7 +70,17 @@ class WhoamiPagesController extends AppController {
           
         }
 
-        if ($this->WhoamiPage->save($this->request->data)) {
+        $this->WhoamiPage->set(array( 
+            'name' => $this->request->data['WhoamiPage']['name'],
+            'age' => $this->request->data['WhoamiPage']['age'],
+            'profesion' => $this->request->data['WhoamiPage']['profesion'],
+            'location' => $this->request->data['WhoamiPage']['location'],
+            'dadsname' => $this->request->data['WhoamiPage']['dadsname'],
+            'profile_id' => $this->request->data['WhoamiPage']['profile_id'],
+            'remember' => $this->request->data['WhoamiPage']['remember'],
+          ));
+
+        if ($this->WhoamiPage->save()) {
           //$this->Session->setFlash(__('The Cover photo has been saved'));
         } else {
           $this->Session->setFlash(__('The Page could not be saved. Please, try again.'));

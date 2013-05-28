@@ -43,16 +43,16 @@ class UltrasoundPagesController extends AppController {
           $this->UltrasoundPage->id = $idf['UltrasoundPage']['id'];
         }
 
-        if(!empty($this->request->data['UltrasoundPage']['photo']['tmp_name']) ) { 
+        if(!empty($this->request->data['UltrasoundPage']['first_photo']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['UltrasoundPage']['photo']['name']); 
-        $error = $this->handleFileUpload($this->request->data['UltrasoundPage']['photo'], $fileName); 
+        $fileName = $this->generateUniqueFilename($this->request->data['UltrasoundPage']['first_photo']['name']); 
+        $error = $this->handleFileUpload($this->request->data['UltrasoundPage']['first_photo'], $fileName); 
 
           if ($error == false) { 
             //$this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$fileName,WWW_ROOT.'img/cover_photos/'.$fileName);
             
             $this->UltrasoundPage->set(array( 
-              'photo' => $fileName
+              'first_photo' => $fileName,
             ));
             
           }
@@ -60,16 +60,62 @@ class UltrasoundPagesController extends AppController {
         } elseif (!empty($this->request->data['UltrasoundPage']['url_photo'])) {
 
           $avatar = imagecreatefromjpeg($this->request->data['UltrasoundPage']['url_photo']);
-          $nameIMG = 'whoami_'.$uid.'.png';
+          $nameIMG = $this->generateUniqueFilename('ultrasound_1_1_'.$uid.'.png'); 
           imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 
           $this->UltrasoundPage->set(array( 
-            'photo' => $nameIMG
+            'first_photo' => $nameIMG,
           ));
           
+        } else {
+          $this->UltrasoundPage->set(array( 
+            'first_photo' => NULL,
+          ));
         }
 
-        if ($this->UltrasoundPage->save($this->request->data)) {
+        if(!empty($this->request->data['UltrasoundPage']['second_photo']['tmp_name']) ) { 
+
+        $fileName = $this->generateUniqueFilename($this->request->data['UltrasoundPage']['second_photo']['name']); 
+        $error = $this->handleFileUpload($this->request->data['UltrasoundPage']['second_photo'], $fileName); 
+
+          if ($error == false) { 
+            //$this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$fileName,WWW_ROOT.'img/cover_photos/'.$fileName);
+            
+            $this->UltrasoundPage->set(array( 
+              'second_photo' => $fileName,
+            ));
+            
+          }
+
+        } elseif (!empty($this->request->data['UltrasoundPage']['url_photo_1'])) {
+
+          $avatar = imagecreatefromjpeg($this->request->data['UltrasoundPage']['url_photo_1']);
+          $nameIMG = $this->generateUniqueFilename('ultrasound_1_2_'.$uid.'.png'); 
+          imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
+
+          $this->UltrasoundPage->set(array( 
+            'second_photo' => $nameIMG,
+          ));
+          
+        } else {
+          $this->UltrasoundPage->set(
+              array( 
+              'second_photo' => NULL,
+              )
+            );
+        }
+        
+         $this->UltrasoundPage->set(array( 
+            'first_date' => $this->request->data['UltrasoundPage']['first_date'],
+            'first_week' => $this->request->data['UltrasoundPage']['first_week'],
+            'first_notes' => $this->request->data['UltrasoundPage']['first_notes'],
+            'second_date' => $this->request->data['UltrasoundPage']['second_date'],
+            'second_week' => $this->request->data['UltrasoundPage']['second_week'],
+            'profile_id' => $this->request->data['UltrasoundPage']['profile_id'],
+            'second_notes' => $this->request->data['UltrasoundPage']['second_notes'],
+          ));
+
+        if ($this->UltrasoundPage->save()) {
           //$this->Session->setFlash(__('The Cover photo has been saved'));
         } else {
           $this->Session->setFlash(__('The Page could not be saved. Please, try again.'));

@@ -56,7 +56,7 @@ class CoolultrasoundPagesController extends AppController {
           }
 
         } elseif (!empty($this->request->data['CoolultrasoundPage']['url_photo'])) {
-          $avatar = imagecreatefromjpeg($this->request->data['BabyshowerPage']['url_photo']);
+          $avatar = imagecreatefromjpeg($this->request->data['CoolultrasoundPage']['url_photo']);
           $nameIMG = 'coolultrasound_'.$uid.'.png';
           imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 

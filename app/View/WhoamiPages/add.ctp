@@ -208,73 +208,12 @@ function readURL(input) {
 		</div>
 <!-- Markup for Carson Shold's Photo Selector -->
 
+<?php echo $this->element('menu', array( "trimestre" => 1, 'pag' => 'whoami')); ?>
 
-
-
-
-<ul class="vertical_menu_1">
-	<li class="selected">
-	<?php 
-		//congrats
-		echo $this->Html->link(
-				    'Felicidades',
-				    array('controller' => 'congrats_pages', 'action' => 'add')
-
-				);
-		?>
-	</li>
-	<li>
-		<?php
-		echo $this->Html->link(
-				    'Primer Visita',
-				    array('controller' => 'first_visit_pages', 'action' => 'add')
-				); ?>
-		</li>
-		<li>
-		<?php
-		echo $this->Html->link(
-				    'Quién soy',
-				    array('controller' => 'whoami_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-		<li>
-		<?php
-		echo $this->Html->link(
-				    'Primeros síntomas',
-				    array('controller' => 'sintom_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-		<li>
-			<?php
-		echo $this->Html->link(
-				    'Ultrasonido',
-				    array('controller' => 'ultrasound_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-		<li>
-		<?php
-		echo $this->Html->link(
-				    'Mi pancita',
-				    array('controller' => 'belly_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-		<li>
-		<?php
-		echo $this->Html->link(
-				    'Mi ánimo',
-				    array('controller' => 'animo_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-</ul>
 <?php
 		echo $this->Html->link(
 				    'Add Moment',
-				    array('controller' => 'moment_pages', 'action' => 'add'),
+				    array('controller' => 'moment_pages', 'action' => 'add', 0, 1),
 				    array('class' => 'add_moment')
 				);
 	?>
@@ -283,7 +222,14 @@ function readURL(input) {
 <?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
 
 <div class="page_title">
-	<div class="ant">Anterior</div>
+	<?php
+
+			echo $this->Html->link(
+				    'Siguiente',
+				    array('controller' => 'first_visit_pages', 'action' => 'add'),
+				    array('class' => 'ant')
+				);
+	?>
 	<div class="title_page">Soy Yo...</div>
 	<?php
 

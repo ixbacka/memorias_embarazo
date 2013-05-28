@@ -1,8 +1,6 @@
+<!-- add.ctp -->
 <?php echo $this->Html->css('PhotoSelector'); ?>
 <?php echo $this->Html->script('photo_selector'); ?>
-<?php echo $this->Html->script('jquery-ui/js/jquery-ui-1.10.3.custom.min'); ?>
-<?php echo $this->Html->script('functions'); ?>
-<?php echo $this->Html->css('redmond/jquery-ui-1.10.3.custom.min'); ?>
 
 <script type="text/javascript">
 
@@ -90,27 +88,6 @@ fbphotoSelect = function(id, idpapa) {
 		    fbphotoSelect(id, elpapa); 
 		});
 
-
-<?php if(isset($special['SpecialdeliveryPage']['birthday'])){ 
-
-			$source = $special['SpecialdeliveryPage']['birthday'];
-			$date = new DateTime($source);
-			$letime = strtotime($source);
-
-			$mes = get_date_spanish($letime, true, 'month'); # return Enero
-
-			$dia = $date->format('d'); // 31.07.2012
-			$ano = $date->format('Y'); // 31-07-2012
-
-			$birthday = $dia.' '.$mes.' '.$ano;
-			$monthi = ($date->format('m'))-1;
-		?>
-	 $( "#datepickerCongrats" ).datepicker("setDate", new Date(<?php echo $ano.', '.$monthi.', '.$dia;?>));	
-<?php } else{
-			$birthday = '';
-		}
-?>
-
 	});
 
 
@@ -129,9 +106,9 @@ function readURL(input) {
 
 <style type="text/css">
 
-<?php if( isset($special['SpecialdeliveryPage']['photo']) ){ ?>
+<?php if( isset($new['NewfamilyPage']['photo']) ){ ?>
 #photo{
-	background-image: url(../img/marco.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$special['SpecialdeliveryPage']['photo']); 
+	background-image: url(../img/marco.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$new['NewfamilyPage']['photo']); 
 		?>);
 }
 <?php }?>
@@ -182,7 +159,7 @@ function readURL(input) {
 <!-- Markup for Carson Shold's Photo Selector -->
 
 
-<?php echo $this->element('menu', array( "trimestre" => 3, "pag" => "specialdelivery")); ?>
+<?php echo $this->element('menu', array( "trimestre" => 3, "pag" => "newfamily")); ?>
 <?php
 		echo $this->Html->link(
 				    'Add Moment',
@@ -198,7 +175,7 @@ function readURL(input) {
 	<?php
 			echo $this->Html->link(
 				    'Anterior',
-				    array('controller' => 'byebelly_pages', 'action' => 'add'),
+				    array('controller' => 'epilog_pages', 'action' => 'add'),
 				    array('class' => 'ant')
 				);
 	?>
@@ -206,105 +183,22 @@ function readURL(input) {
 		<p>entrega</p>
 		<span>especial: tu</span>
 	</div>
-	<?php 
-		echo $this->Html->link(
-				    'Siguiente',
-				    array('controller' => 'welcome_pages', 'action' => 'add'),
-				    array('class' => 'sig')
-				);
-	?>
+	<div class="sig">Siguiente</div>
 </div>
 
 	
-	<div class="specialdeliveryPages form">
+	<div class="newfamilyPages form">
 
-	<?php echo $this->Form->create('SpecialdeliveryPage', array('enctype' => 'multipart/form-data')); ?>
+	<?php echo $this->Form->create('NewfamilyPage', array('enctype' => 'multipart/form-data')); ?>
 
 	<div id="photo">
-		<input type="hidden" name="data[SpecialdeliveryPage][url_photo]" class="photo" value=""/>
+		<input type="hidden" name="data[NewfamilyPage][url_photo]" class="photo" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>
 		<?php
 			echo $this->Form->file('photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
 		?>
 	</div>
 
-	<?php
-		if(isset($special['SpecialdeliveryPage']['uare'])){
-			$uare = $special['SpecialdeliveryPage']['uare'];
-		} else{
-			$uare = '';
-		}
-	?>
-	<label> Eres: </label>
-  	<input type="text" name="data[SpecialdeliveryPage][uare]" value="<?php if($uare != ''){ echo $uare; } ?>"/>
-
-	<?php
-		if(isset($special['SpecialdeliveryPage']['hour'])){
-			$hour = $special['SpecialdeliveryPage']['hour'];
-		} else{
-			$hour = '';
-		}
-	?>
-	<label>Naciste el d&iacute;a: </label>
-	<input type="text" id="datepickerCongrats" size="30" readonly="readonly"  value="<?php if($birthday != ''){
-    		echo $birthday; } ?>"/>
-	<input type="hidden" name="data[SpecialdeliveryPage][birthday][month]" id="CongratsPagePruebaMonth" />
-	<input type="hidden" name="data[SpecialdeliveryPage][birthday][day]" id="CongratsPagePruebaDay" />
-	<input type="hidden" name="data[SpecialdeliveryPage][birthday][year]" id="CongratsPagePruebaYear" />
-  	<p> a las: </p>
-  	<input type="text" name="data[SpecialdeliveryPage][hour]" value="<?php if($hour != ''){
-    		echo $hour; } ?>"/>
-
-    <?php
-		if(isset($special['SpecialdeliveryPage']['location'])){
-			$location = $special['SpecialdeliveryPage']['location'];
-		} else{
-			$location = '';
-		}
-	?>
-	<label> Naciste en: </label>
-  	<input type="text" name="data[SpecialdeliveryPage][location]" value="<?php if($location != ''){ echo $location; } ?>"/>
-
-  	<p> el parto fue: </p>
-  	<?php
-		if(isset($special['SpecialdeliveryPage']['itwas'])){
-			$itwas = $special['SpecialdeliveryPage']['itwas'];
-		} else{
-			$itwas = '';
-		}
-  	?>
-  	<input type="radio" name="data[SpecialdeliveryPage][itwas]" value="1" <?php if($itwas == 1){
-	echo 'checked="checked"'; } ?> />
-	<label> Natural </label>
-	<input type="radio" name="data[SpecialdeliveryPage][itwas]" value="2" <?php if($itwas == 2){
-	echo 'checked="checked"'; } ?> />
-	<label> Epidural</label>
-	<input type="radio" name="data[SpecialdeliveryPage][itwas]" value="3" <?php if($itwas == 3){
-	echo 'checked="checked"'; } ?> />
-	<label> Ces&aacute;rea</label>
- 
- 
-	<?php
-		if(isset($special['SpecialdeliveryPage']['weightnmeasures'])){
-			$weightnmeasures = $special['SpecialdeliveryPage']['weightnmeasures'];
-		} else{
-			$weightnmeasures = '';
-		}
-	?>
-	<label> Pesaste y mediste: </label>
-  	<input type="text" name="data[SpecialdeliveryPage][weightnmeasures]" value="<?php if($weightnmeasures != ''){ echo $weightnmeasures; } ?>"/>
-	
-	<?php
-		if(isset($special['SpecialdeliveryPage']['urhairneyes'])){
-			$urhairneyes = $special['SpecialdeliveryPage']['urhairneyes'];
-		} else{
-			$urhairneyes = '';
-		}
-	?>
-	<label> Tu cabello y tus ojos son: </label>
-  	<input type="text" name="data[SpecialdeliveryPage][urhairneyes]" value="<?php if($urhairneyes != ''){ echo $urhairneyes; } ?>"/>
-  	
-  	<p> ¡Apenas puedo creer que estabas en mi panza! </p>
 	<?php
 		echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
 	?>

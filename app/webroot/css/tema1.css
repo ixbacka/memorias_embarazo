@@ -338,7 +338,7 @@ ul.vertical_menu_1{
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   position: absolute;
   top: 593px;
-  z-index: 9999;
+  z-index: 1000;
   margin: 0;
   list-style: none;
   right: -320px;

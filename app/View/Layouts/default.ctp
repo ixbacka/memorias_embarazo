@@ -38,6 +38,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
   ?>
 
 
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<?php //echo $this->Html->script('functions'); ?>
+	
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript">
   WebFontConfig = {
@@ -58,11 +61,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
         elseif($tema == 2){ echo $this->Html->css('tema2'); } 
         elseif($tema == 3){ echo $this->Html->css('tema3'); } 
         elseif($tema == 4){ echo $this->Html->css('tema4'); } 
-  ?>
-
-          
-  <?php echo $this->Html->script('functions'); ?>
-  
+  ?>  
 
 </head>
 <body>
