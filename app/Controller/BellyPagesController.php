@@ -118,7 +118,7 @@ var $uses = array('BellyPage','Profile');
           
         }
 
-        if ($this->BellyPage->save($this->request->data)) {
+        if ($this->BellyPage->save()) {
           //$this->Session->setFlash(__('The Cover photo has been saved'));
         } else {
           $this->Session->setFlash(__('The Page could not be saved. Please, try again.'));

@@ -1,9 +1,9 @@
 <!-- add.ctp -->
 <?php echo $this->Html->css('PhotoSelector'); ?>
 <?php echo $this->Html->script('photo_selector'); ?>
-<?php echo $this->Html->script('functions'); ?>
 <?php echo $this->Html->script('jquery-ui/js/jquery-ui-1.10.3.custom.min'); ?>
 <?php echo $this->Html->css('redmond/jquery-ui-1.10.3.custom.min'); ?>
+<?php echo $this->Html->script('functions'); ?>
 
 <?php 
 
@@ -68,7 +68,6 @@ body{
 }
 <?php }?>
 
-
 <?php if( isset($ultrasound['UltrasoundPage']['second_photo']) ){ ?>
 #ultrasound_photo_2{
   background-image: url(../img/marco.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['second_photo']); ?>);
@@ -77,59 +76,6 @@ body{
 <?php }?>
 
 </style>
-
-<?php if(isset($ultrasound['UltrasoundPage']['first_date'])){ 
-  $source = $ultrasound['UltrasoundPage']['first_date'];
-  $date = new DateTime($source);
-  $letime = strtotime($source);
-
-  $mes = get_date_spanish($letime, true, 'month'); # return Enero
-
-  $dia = $date->format('d'); // 31.07.2012
-  $ano = $date->format('Y'); // 31-07-2012
-
-  $first_date = $dia.' '.$mes.' '.$ano;
-  $monthi = ($date->format('m'))-1;
-?>
-<script type="text/javascript">
-$(document).ready(function(){
-
-   $( "#datepickerCongrats" ).datepicker("setDate", new Date(<?php echo $ano.', '.$monthi.', '.$dia;?>));  
-});
-
-</script>
-<?php } else{
-      $first_date = '';
-    }
-?>
-
-
-<?php if(isset($ultrasound['UltrasoundPage']['second_date'])){ 
-
-      $source = $ultrasound['UltrasoundPage']['second_date'];
-      $date = new DateTime($source);
-      $letime = strtotime($source);
-
-      $mes = get_date_spanish($letime, true, 'month'); # return Enero
-
-      $dia = $date->format('d'); // 31.07.2012
-      $ano = $date->format('Y'); // 31-07-2012
-
-      $second_date = $dia.' '.$mes.' '.$ano;
-      $monthi = ($date->format('m'))-1;
-    ?>
-<script type="text/javascript">
-$(document).ready(function(){
-
-   $( "#datepickerCongrats1" ).datepicker("setDate", new Date(<?php echo $ano.', '.$monthi.', '.$dia;?>));  
-});
-
-</script>
-<?php } else{
-      $second_date = '';
-    }
-?>
-
 
 <script type="text/javascript">
 
@@ -218,12 +164,40 @@ fbphotoSelect = function(id, idpapa) {
         if ( $(this).attr('data-id') ) id = $(this).attr('data-id');
         fbphotoSelect(id, elpapa); 
     });
+ 
+<?php if(isset($ultrasound['UltrasoundPage']['first_date'])){ 
+  $source = $ultrasound['UltrasoundPage']['first_date'];
+  $date = new DateTime($source);
+  $letime = strtotime($source);
 
-     $( "#datepickerCongrats1" ).datepicker({
-      onSelect: function(dateText) {
+  $mes = get_date_spanish($letime, true, 'month'); # return Enero
+
+  $dia = $date->format('d'); // 31.07.2012
+  $ano = $date->format('Y'); // 31-07-2012
+  //2013-05-16
+  $first_date = $ano.'-'.$date->format('m').'-'.$dia;
+  $monthi = ($date->format('m'))-1;
+      $first_date_dia = $dia;
+      $first_date_mes = $date->format('m');
+      $first_date_ano = $ano;
+?>
+
+   $( "#datepickerCongrats" ).datepicker("setDate", new Date(<?php echo $ano.', '.$monthi.', '.$dia;?>));  
+
+<?php } else{
+      $first_date = '';
+    }
+?>
+
+
+  $( "#datepickerCongrats1" ).datepicker( "option", $.datepicker.regional['es']);  
+  $( "#datepickerCongrats1" ).datepicker({ 
+    dateFormat: 'dd MM yy',
+    onSelect: function(dateText) {
         //display("Selected date: " + dateText + "; input's current value: " + this.value);
         var n=dateText.split(" ");
         var mes = '0';
+        console.log(n);
         
         if(n[1] == 'Enero'){
           mes = '01';
@@ -250,16 +224,41 @@ fbphotoSelect = function(id, idpapa) {
         } else if (n[1] == 'Diciembre'){
           mes = '12';
         }
+        console.log(mes);
 
         $('#CongratsPagePrueba1Month').val(mes);
         $('#CongratsPagePrueba1Day').val(n[0]);
         $('#CongratsPagePrueba1Year').val(n[2]);
       }
-  });
+   });
 
-  $( "#datepickerCongrats1" ).datepicker( "option", "dateFormat", 'd MM yy' );
-  $( "#datepickerCongrats1" ).datepicker( "option", $.datepicker.regional['es']);
 
+
+<?php if(isset($ultrasound['UltrasoundPage']['second_date'])){ 
+
+      $source = $ultrasound['UltrasoundPage']['second_date'];
+      $date = new DateTime($source);
+      $letime = strtotime($source);
+
+      $mes1 = get_date_spanish($letime, true, 'month'); # return Enero
+
+      $dia1 = $date->format('d'); // 31.07.2012
+      $ano1 = $date->format('Y'); // 31-07-2012
+
+      $second_date = $ano1.'-'.$date->format('m').'-'.$dia1;
+      $second_date_dia = $dia1;
+      $second_date_mes = $date->format('m');
+      $second_date_ano = $ano1;
+
+      $monthi1 = ($date->format('m'))-1;
+    ?>
+
+   $( "#datepickerCongrats1" ).datepicker("setDate", new Date(<?php echo $ano1.', '.$monthi1.', '.$dia1;?>));  
+
+<?php } else{
+      $second_date = '';
+    }
+?>
 
   });
 
@@ -337,24 +336,24 @@ function readURL(input) {
   <?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
 
 <div class="page_title">
-	<?php
-			echo $this->Html->link(
-				    'Anterior',
-				    array('controller' => 'sintom_pages', 'action' => 'add'),
-				    array('class' => 'ant')
-				);
-	?>
-	<div class="title_page">
-		<p>s&uacute;per cool</p>
-		<span>fotos del ultrasonido</span>
-	</div>
-	<?php 
-		echo $this->Html->link(
-				    'Siguiente',
-				    array('controller' => 'belly_pages', 'action' => 'add'),
-				    array('class' => 'sig')
-				);
-	?>
+  <?php
+      echo $this->Html->link(
+            'Anterior',
+            array('controller' => 'sintom_pages', 'action' => 'add'),
+            array('class' => 'ant')
+        );
+  ?>
+  <div class="title_page">
+    <p>s&uacute;per cool</p>
+    <span>fotos del ultrasonido</span>
+  </div>
+  <?php 
+    echo $this->Html->link(
+            'Siguiente',
+            array('controller' => 'belly_pages', 'action' => 'add'),
+            array('class' => 'sig')
+        );
+  ?>
 </div>
   <div class="ultrasoundPages form">
   <?php echo $this->Form->create('UltrasoundPage', array('enctype' => 'multipart/form-data')); ?>
@@ -370,11 +369,11 @@ function readURL(input) {
         <h3>Primer Ultrasonido</h3>
         <p>
           <label>Fuí el: </label>
-          <input type="text" id="datepickerCongrats" size="30" readonly="readonly" <?php if($first_date != ''){ echo 'value="' . $first_date . '"'; } ?>/>
-
-            <input type="hidden" name="data[UltrasoundPage][first_date][month]" id="CongratsPagePruebaMonth" />
-            <input type="hidden" name="data[UltrasoundPage][first_date][day]" id="CongratsPagePruebaDay" />
-            <input type="hidden" name="data[UltrasoundPage][first_date][year]" id="CongratsPagePruebaYear" />
+          <input type="text" id="datepickerCongrats" size="30" readonly="readonly"/>
+     
+            <input type="hidden" name="data[UltrasoundPage][first_date][month]" id="CongratsPagePruebaMonth" <?php if($first_date != ''){ ?>  value="<?php echo $first_date_mes; ?>" <?php } ?>/>
+            <input type="hidden" name="data[UltrasoundPage][first_date][day]" id="CongratsPagePruebaDay" <?php if($first_date != ''){ ?>  value="<?php echo $first_date_dia; ?>" <?php } ?> />
+            <input type="hidden" name="data[UltrasoundPage][first_date][year]" id="CongratsPagePruebaYear" <?php if($first_date != ''){ ?>  value="<?php echo $first_date_ano; ?>" <?php } ?> />
         </p>
         <p>
           <label for="CongratsPageBabycoming">Tenía </label>
@@ -406,10 +405,11 @@ function readURL(input) {
         <h3>Segundo Ultrasonido</h3>
         <p>
           <label>Fuí el: </label>
-          <input type="text" id="datepickerCongrats1" size="30" readonly="readonly" <?php if($first_date != ''){ echo 'value="' . $first_date . '"'; } ?>/>
-          <input type="hidden" name="data[UltrasoundPage][second_date][month]" id="CongratsPagePrueba1Month" />
-          <input type="hidden" name="data[UltrasoundPage][second_date][day]" id="CongratsPagePrueba1Day" />
-          <input type="hidden" name="data[UltrasoundPage][second_date][year]" id="CongratsPagePrueba1Year" />
+          <input type="text" id="datepickerCongrats1" size="30" readonly="readonly" <?php if($second_date != ''){ echo 'value="' . $second_date . '"'; } ?>/>
+                   
+          <input type="hidden" name="data[UltrasoundPage][second_date][month]" id="CongratsPagePrueba1Month" <?php if($second_date != ''){ ?>  value="<?php echo $second_date_mes; ?>" <?php } ?> />
+          <input type="hidden" name="data[UltrasoundPage][second_date][day]" id="CongratsPagePrueba1Day" <?php if($second_date != ''){ ?>  value="<?php echo $second_date_dia; ?>" <?php } ?>/>
+          <input type="hidden" name="data[UltrasoundPage][second_date][year]" id="CongratsPagePrueba1Year" <?php if($second_date != ''){ ?>  value="<?php echo $second_date_ano; ?>" <?php } ?>/>
         </p>
         <p>
           <label for="CongratsPageBabycoming">Tenía </label>

@@ -7,29 +7,29 @@ App::import('Vendor', 'facebook');
  *
  */
 class UltrasoundPagesController extends AppController {
-	var $uses = array('UltrasoundPage','Profile');
+  var $uses = array('UltrasoundPage','Profile');
 
-	public function beforeFilter() {
-		$this->Session->write("facebook", 
-			new Facebook(array(
+  public function beforeFilter() {
+    $this->Session->write("facebook", 
+      new Facebook(array(
         'appId' => "163480813810636",
         'secret' => "3ccf0a83049aa75bd8f0bc9707b9e7a0",
         'cookie' => true
       ))
     );
-	
-	}
+  
+  }
 
 
-	public function add(){
+  public function add(){
 
-		$facebook = $this->Session->read("facebook");
-		$uid  = $facebook->getUser();
+    $facebook = $this->Session->read("facebook");
+    $uid  = $facebook->getUser();
 
-		 if( $this->Session->read('User.uid') ){
-      	$id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' =>  $this->Session->read('User.uid') ) ) );
+     if( $this->Session->read('User.uid') ){
+        $id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' =>  $this->Session->read('User.uid') ) ) );
       } else {
-      	$id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' => $uid ) ) );
+        $id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' => $uid ) ) );
       }
 
       $leid = $id['Profile']['id'];
@@ -67,11 +67,7 @@ class UltrasoundPagesController extends AppController {
             'first_photo' => $nameIMG,
           ));
           
-        } else {
-          $this->UltrasoundPage->set(array( 
-            'first_photo' => NULL,
-          ));
-        }
+        } 
 
         if(!empty($this->request->data['UltrasoundPage']['second_photo']['tmp_name']) ) { 
 
@@ -97,12 +93,6 @@ class UltrasoundPagesController extends AppController {
             'second_photo' => $nameIMG,
           ));
           
-        } else {
-          $this->UltrasoundPage->set(
-              array( 
-              'second_photo' => NULL,
-              )
-            );
         }
         
          $this->UltrasoundPage->set(array( 
@@ -124,9 +114,9 @@ class UltrasoundPagesController extends AppController {
       }
 
       $this->set('ultrasound',$this->UltrasoundPage->find('first', array( 'conditions' => array( 'UltrasoundPage.profile_id' => $leid ) )));
-		  $this->set('profileid',$leid);
+      $this->set('profileid',$leid);
 
-	}
+  }
 
 
 

@@ -16,6 +16,7 @@
 
 			$prueba = $dia.' '.$mes.' '.$ano;
 			$monthi = ($date->format('m'))-1;
+			$month_prueba = $date->format('m');
 		?>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -118,9 +119,9 @@ function get_date_spanish( $time, $part = false, $formatDate = '' ){
     	<label>Me hice una prueba de embarazo el día: </label>
     	<span><input type="text" id="datepickerCongrats" size="30" readonly="readonly"  value="<?php if($prueba != ''){
     		echo $prueba; } ?>"/></span>
-    	<input type="hidden" name="data[CongratsPage][prueba][month]" id="CongratsPagePruebaMonth" />
-			<input type="hidden" name="data[CongratsPage][prueba][day]" id="CongratsPagePruebaDay" />
-			<input type="hidden" name="data[CongratsPage][prueba][year]" id="CongratsPagePruebaYear" />
+    	<input type="hidden" name="data[CongratsPage][prueba][month]" id="CongratsPagePruebaMonth" <?php if($prueba != ''){ ?>  value="<?php echo $month_prueba; ?>" <?php } ?>/>
+			<input type="hidden" name="data[CongratsPage][prueba][day]" id="CongratsPagePruebaDay" <?php if($prueba != ''){ ?>  value="<?php echo $dia; ?>" <?php } ?> />
+			<input type="hidden" name="data[CongratsPage][prueba][year]" id="CongratsPagePruebaYear" <?php if($prueba != ''){ ?>  value="<?php echo $ano; ?>" <?php } ?> />
 		</div>
 
 	<?php

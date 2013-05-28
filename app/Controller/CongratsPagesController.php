@@ -8,28 +8,28 @@ App::import('Vendor', 'facebook');
  */
 class CongratsPagesController extends AppController {
 
-	var $uses = array('CongratsPage','Profile');
+  var $uses = array('CongratsPage','Profile');
 
-	public function beforeFilter() {
-		$this->Session->write("facebook", 
-			new Facebook(array(
+  public function beforeFilter() {
+    $this->Session->write("facebook", 
+      new Facebook(array(
         'appId' => "163480813810636",
         'secret' => "3ccf0a83049aa75bd8f0bc9707b9e7a0",
         'cookie' => true
       ))
     );
-	
-	}
-	
-	public function add(){
+  
+  }
+  
+  public function add(){
 
-		$facebook = $this->Session->read("facebook");
-		$uid  = $facebook->getUser();
+    $facebook = $this->Session->read("facebook");
+    $uid  = $facebook->getUser();
 
-		 if( $this->Session->read('User.uid') ){
-      	$id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' =>  $this->Session->read('User.uid') ) ) );
+     if( $this->Session->read('User.uid') ){
+        $id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' =>  $this->Session->read('User.uid') ) ) );
       } else {
-      	$id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' => $uid ) ) );
+        $id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' => $uid ) ) );
       }
 
       $leid = $id['Profile']['id'];
@@ -43,18 +43,18 @@ class CongratsPagesController extends AppController {
           $this->CongratsPage->id = $idf['CongratsPage']['id'];
         }
 
-        /*$this->CongratsPages->set(array( 
-            'sospeche' => $this->request->data['CongratsPages']['sospeche'],
-            'prueba' => $this->request->data['CongratsPages']['prueba'],
-            'firstfeeling' => $this->request->data['CongratsPages']['firstfeeling'],
-            'babycoming' => $this->request->data['CongratsPages']['babycoming'],
-            'howishare' => $this->request->data['CongratsPages']['howishare'],
-            'babynum' => $this->request->data['CongratsPages']['babynum'],
-            'babybros' => $this->request->data['CongratsPages']['babybros'],
-            'details' => $this->request->data['CongratsPages']['details']
-          ));*/
+        $this->CongratsPage->set(array( 
+            'sospeche' => $this->request->data['CongratsPage']['sospeche'],
+            'prueba' => $this->request->data['CongratsPage']['prueba'],
+            'firstfeeling' => $this->request->data['CongratsPage']['firstfeeling'],
+            'babycoming' => $this->request->data['CongratsPage']['babycoming'],
+            'howishare' => $this->request->data['CongratsPage']['howishare'],
+            'babynum' => $this->request->data['CongratsPage']['babynum'],
+            'babybros' => $this->request->data['CongratsPage']['babybros'],
+            'details' => $this->request->data['CongratsPage']['details']
+          ));
 
-        if ($this->CongratsPage->save($this->request->data)) {
+        if ($this->CongratsPage->save()) {
           //$this->Session->setFlash(__('The Cover photo has been saved'));
         } else {
           $this->Session->setFlash(__('The Page could not be saved. Please, try again.'));
@@ -64,7 +64,7 @@ class CongratsPagesController extends AppController {
       }
 
       $this->set('congrats',$this->CongratsPage->find('first', array( 'conditions' => array( 'CongratsPage.profile_id' => $leid ) )));
-		  $this->set('profileid',$leid);
-	}
+      $this->set('profileid',$leid);
+  }
 
 }

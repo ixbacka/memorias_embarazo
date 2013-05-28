@@ -19,14 +19,7 @@ class ProfilesController extends AppController {
 	
 	}
 
-<<<<<<< HEAD
-
-	public function booklet(){
-
-	}
-=======
 	
->>>>>>> c0b168bfff88a0b0dce4435499eea29eee2a8329
 	/*
 	 * fangate()
 	 * check if user has liked the page
@@ -82,7 +75,14 @@ class ProfilesController extends AppController {
 	            )
 	        );
 
+	        $user_saved1 = $this->Profile->find('first', 
+	        array( 
+	                'conditions' => array('Profile.uid' => $this->Session->read('User.uid'))
+	            )
+	        );
+
 	        if($user_saved >= 1){ //user saved, so not welcome page, but cover page
+	        	$this->Session->write("User.theme", $user_saved1['Profile']['theme']);
 	        	$this->redirect(array('controller' => 'profiles', 'action' => 'cover'));
 	        } else {
 	        	$this->redirect(array('controller' => 'profiles', 'action' => 'welcome'));
@@ -110,6 +110,7 @@ class ProfilesController extends AppController {
 			//es la primera vez que van a ver su cover, guardar el tema
 
 			$this->Session->write("User.theme", $theme);
+
 
 			$user_profile = $facebook->api('/'.$uid.'?fields=id,picture.type(normal),last_name,first_name,email,location,gender,link,birthday,username','GET');
 
