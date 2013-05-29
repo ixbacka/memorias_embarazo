@@ -19,6 +19,39 @@ class ProfilesController extends AppController {
 	
 	}
 
+
+    /*
+    * Funcion para que el usuario cambie el tema 
+    *
+    */
+    public function changeTheme($uid = null, $theme = null){
+    	$error = 'No puedes cambiar el tema.';
+		if($theme != null){ 		
+
+			//guardar selected theme!
+			$this->Profile->create();
+
+			$id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' =>  $uid ) ) );
+
+		    $this->Profile->id = $id['Profile']['id'];
+			
+			$this->Profile->set(array( 
+		        'theme' => $theme
+		      ));
+
+	      if ($this->Profile->save()) {
+	        $error= 'Success!';
+	      } else {
+	         $error= 'Tu tema no se ha podido guardar.';
+	      }
+		}
+
+        header("Content-type: application/json");
+        echo json_encode($error);
+        exit;
+    }
+
+
 	
 	/*
 	 * fangate()
