@@ -60,29 +60,28 @@
     </div>
   </div>
   <div class="personalmente cf">
-    <label>Yo personalmente pienso que eres: </label>  
+    <p>Yo personalmente pienso que eres: </p>
     <?php
       if(isset($childsex['ChildsexPage']['ithink'])){
         $ithink = $childsex['ChildsexPage']['ithink'];
       } else{
         $ithink = '';
       }
-    ?> 
+    ?>
     <div class="opcion1">
       <input type="radio" name="data[ChildsexPage][ithink]" value="1" <?php if($ithink == 1){ echo  'checked="checked"'; } ?> />
       <label>Niño</label>
     </div>
-    <div class="opcion1">
+    <div class="opcion2">
        <input type="radio" name="data[ChildsexPage][ithink]" value="2" <?php if($ithink == 2){ echo   'checked="checked"'; } ?> />
       <label>Cuates</label>
     </div>
-    <div class="opcion1">
+    <div class="opcion3">
        <input type="radio" name="data[ChildsexPage][ithink]" value="3" <?php if($ithink == 3){ echo   'checked="checked"'; } ?> />
       <label>Niña</label>
     </div>
   </div>
   <div class="decidimos cf">
-    <label>Decidimos</label>  
     <?php
       if(isset($childsex['ChildsexPage']['decided'])){
         $decided = $childsex['ChildsexPage']['decided'];
@@ -90,33 +89,31 @@
         $decided = '';
       }
     ?>
-    <div class="opcion1">
+    <p>Decidimos
       <input type="radio" name="data[ChildsexPage][decided]" value="1" <?php if($decided == 1){ echo  'checked="checked"'; } ?> />
-       <label>Si saber</label>
-    </div>
-    <div class="opcion1">
+      <label>Si saber</label>
       <input type="radio" name="data[ChildsexPage][decided]" value="2" <?php if($decided == 2){ echo   'checked="checked"'; } ?> />
-       <label>No saber, porque</label>
-    </div>
-    <?php
-      if(isset($childsex['ChildsexPage']['whyidecided'])){
-        $whyidecided = $childsex['ChildsexPage']['whyidecided'];
-      } else{
-        $whyidecided = '';
-      }
-    ?>
-    <input type="text" name="data[ChildsexPage][whyidecided]" value="<?php if($whyidecided != ''){ echo $whyidecided; } ?>"/> 
-    <p>Tu papá y yo te llamamos de cariño </p>
-    <?php
-        if(isset($childsex['ChildsexPage']['nickname'])){
-          $nickname = $childsex['ChildsexPage']['nickname'];
+      <label>No saber, porque</label>
+      <?php
+        if(isset($childsex['ChildsexPage']['whyidecided'])){
+          $whyidecided = $childsex['ChildsexPage']['whyidecided'];
         } else{
-          $nickname = '';
+          $whyidecided = '';
         }
       ?>
-    <input type="text" name="data[ChildsexPage][nickname]" value="<?php if($nickname != ''){ echo $nickname; } ?>"/> 
-
-    <p>ahora que estás dentro de mi pancita. </p>
+      <input type="text" name="data[ChildsexPage][whyidecided]" value="<?php if($whyidecided != ''){ echo $whyidecided; } ?>" class="decid"/>
+    </p>
+    <?php
+      if(isset($childsex['ChildsexPage']['nickname'])){
+        $nickname = $childsex['ChildsexPage']['nickname'];
+      } else{
+        $nickname = '';
+      }
+    ?>
+    <p>Tu papá y yo te llamamos de cariño
+      <input type="text" name="data[ChildsexPage][nickname]" value="<?php if($nickname != ''){ echo $nickname; } ?>" class="nick"/> 
+      ahora que estás dentro de mi pancita.
+    </p>
   </div>
   <?php echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid)); ?>
   <?php echo $this->Form->end(__('Submit')); ?>

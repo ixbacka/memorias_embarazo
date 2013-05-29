@@ -564,7 +564,6 @@ form .input{
 form .input span{
   overflow: hidden;
   display: block;
- /* padding: 0 4px 0 10px;*/
 }
 
 
@@ -572,10 +571,10 @@ input[type="text"]{
   background: none;
   border: none;
   border-bottom: 1px solid #fff;
-/*  float: left;
-*/  font-size: 14px;
+  font-size: 14px;
   color: #ccc;
   padding: 3px;
+  text-align: center;
 }
 
 
@@ -583,8 +582,7 @@ input[type="number"]{
   background-color: #fff;
   border: none;
   border-bottom: 1px solid #fff;
-/*  float: left;
-*/  font-size: 14px;
+  font-size: 14px;
   color: #147cc1;
   padding: 5px;
   padding-bottom: 2px;
@@ -597,8 +595,7 @@ select{
   background: none;
   border: none;
   border-bottom: 1px solid #fff;
-/*  float: left;
-*/  font-size: 14px;
+  font-size: 14px;
   color: #ccc;
   padding: 3px;
 }
@@ -951,6 +948,11 @@ text-align: center;
   position: absolute;
 }
 
+#ChildsexPageAddForm .submit{
+  position: absolute;
+  top: 350px;
+}
+
 .bebes {
   display: block;
   background: url(../img/bebesotes.png);
@@ -963,29 +965,38 @@ text-align: center;
 }
 
 .todomundo {
+  width: 276px;
   position: absolute;
   left: 263px;
   top: 0;
   text-align: center;
 }
-.todomundo label {
+.todomundo label,
+.personalmente label {
   margin: 0;
   padding: 0;
   text-align: center;
   width: 100px;
+  top: 30px;
+  position: relative;
 }
 
-.todomundo p {
+.todomundo p,
+.personalmente p {
   float: none;
   color: #fff;
 }
 
-.todomundo input[type="radio"] {
+.todomundo input[type="radio"],
+.personalmente input[type="radio"] {
   position: absolute;
-  top: 30px;
+  top: 0;
   left: 42px;
 }
 
+.personalmente .opcion1,
+.personalmente .opcion2,
+.personalmente .opcion3,
 .todomundo .opcion1,
 .todomundo .opcion2,
 .todomundo .opcion3 {
@@ -995,6 +1006,50 @@ text-align: center;
   float: left;
 }
 
+.personalmente {
+  position: absolute;
+  top: 100px;
+  left: 263px;
+  width: 276px;
+  text-align: center;
+}
+
+.decidimos {
+  position: absolute;
+  top: 220px;
+}
+
+.decidimos p {
+  margin: 20px 0;
+  color: #fff;
+}
+
+.decidimos input[type=radio],
+.decidimos label {
+  float: none;
+  display: inline-block;
+}
+
+.decidimos .decid {
+  width: 350px;
+}
+
+.decidimos .nick {
+  width: 140px;
+}
+
+
+/* #FirstkickPageAddForm */
+
+#FirstkickPageAddForm {
+  width: 660px;
+  position: absolute;
+  top: 140px;
+}
+
+#datepickerCongrats {
+  width: 140px;
+}
 /* ESTADOS */
 
 #bienvenida_texto, .estilos, .welcome .content, .like, .flecha {
@@ -1004,7 +1059,6 @@ text-align: center;
   -moz-transition:all 4s ease-out;  /* Mozilla Firefox */
   -ms-transition:all 4s ease-out;   /* Internet Explorer */
   transition:all 4s ease-out;  /* W3C */
-
 }
 
 .zero .content {
