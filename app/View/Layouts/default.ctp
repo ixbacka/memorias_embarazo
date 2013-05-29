@@ -73,6 +73,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
   <div id="fb-root"></div>
     <!-- solution for resizing ! *0* -->
   <script type="text/javascript">  
+
+  var UID;
+  var uname;
        window.fbAsyncInit = function() {
         FB.init({
          appId: '163480813810636', 
@@ -81,6 +84,15 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
          xfbml: true,
          frictionlessRequests: true,
          display: 'popup'
+        });
+
+        <?php $new_token = str_replace('|','&#124;',$this->Session->read("User.token")); ?>
+        FB.api(unescape('/me?access_token='+"<?php echo $new_token;?>"), function (response) {
+            console.log('Response :'+JSON.stringify(response));
+            var neu_data = JSON.parse(JSON.stringify(response));
+            UID = neu_data.id;
+            uname = neu_data.username;
+
         });
         
         //this resizes the the i-frame 
@@ -112,7 +124,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
   //    js.src = "//connect.facebook.net/en_US/all.js";
   //    fjs.parentNode.insertBefore(js, fjs);
   //  }(document, 'script', 'facebook-jssdk'));
-
+    
       
       </script> 
     
@@ -125,8 +137,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
       <div class="header">  
         <ul class="menu">
           <a href="#" class="ask" id="instructions">FAQ</a>
-          <li class="settings">Settings</li>
-          <li class="home">Home</li>
+          <a href="#" class="settings" id="themsettings">Settings</a>
+          <li class="home">Home</li>          
         </ul>
       </div>
 
@@ -140,11 +152,36 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
     </div> <!--toPopup end-->
 
+    <div id="settings_popup">
+        <div class="close_sets"></div>
+        <span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
+        <div id="popup_settings"> <!--your content start-->
+          <ul class="ul_settings">
+            <li class="personalizar"> Personalizar </li>
+            <li class="vermemorias"> Ver Memorias </li>
+            <li class="compartir"> Compartir </li>
+            
+          </ul>       
+        </div> <!--your content end-->
+
+    </div> <!--toPopup end-->
+
+    <div id="personalizar_popup">
+       <ul class="lostemas">
+            <li class="tema1"> Tema 1 </li>
+            <li class="tema2"> Tema 2  </li>
+            <li class="tema3"> Tema 3 </li>
+            <li class="tema4"> Tema 4 </li>
+        </ul>  
+    </div>
+    
+
   <div class="loader"></div>
     <div id="backgroundPopup"></div>
 
 
     <?php } ?>
+
     <?php echo $this->Session->flash(); ?>
     <?php echo $this->fetch('content'); ?>
     <?php if( strpos($_SERVER['REQUEST_URI'], 'profiles') == FALSE &&
