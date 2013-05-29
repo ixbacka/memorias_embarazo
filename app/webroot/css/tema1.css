@@ -336,12 +336,12 @@ ul.vertical_menu_1{
   -ms-transform: rotate(-270deg);
   -o-transform: rotate(-270deg);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-  position: absolute;
+  position: fixed;
   top: 593px;
   z-index: 1000;
   margin: 0;
   list-style: none;
-  right: -320px;
+  right: -340px;
 }
 
 ul.vertical_menu_1 li{
@@ -576,6 +576,7 @@ input[type="text"]{
 */  font-size: 14px;
   color: #ccc;
   padding: 3px;
+  text-align: center;
 }
 
 
@@ -636,7 +637,7 @@ form p{
 
 form .submit input[type="submit"]{
   text-indent: -9999px;
-  width: 54px;
+  width: 55px;
   height: 54px;
   background-image: url(../img/bt_aceptar.png);
   background-color: transparent;
@@ -652,7 +653,7 @@ form .submit input[type="submit"]{
 
 form .submit input[type="submit"]:hover{
   text-indent: -9999px;
-  width: 54px;
+  width: 55px;
   height: 54px;
   background-image: url(../img/bt_aceptar.png);
   background-color: transparent;
@@ -995,7 +996,21 @@ text-align: center;
   float: left;
 }
 
+/* #FirstkickPageAddForm */
 
+#FirstkickPageAddForm {
+  position: absolute;
+  top: 120px;
+  width: 660px;
+}
+
+#FirstkickPageAddForm .hasDatepicker {
+  width: 120px;
+}
+
+.startkick input[type="text"] {
+
+}
 
 /* ESTADOS */
 

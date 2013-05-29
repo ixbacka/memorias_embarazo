@@ -201,12 +201,12 @@ function readURL(input) {
 	background-size: 297px 392px, 225px 320px;
 }
 
+<?php }?>
 .title_page span {
   top: 44px;
   position: absolute;
   left: 360px;
 }
-<?php }?>
 
 </style>
 
