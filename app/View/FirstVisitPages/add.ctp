@@ -17,6 +17,7 @@
 
       $estimated = $dia.' '.$mes.' '.$ano;
       $monthi = ($date->format('m'))-1;
+      $mesuco = $date->format('m');
     ?>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -52,12 +53,12 @@ body{
 <?php echo $this->element('menu', array( "trimestre" => 1, 'pag' => 'first_visit')); ?>
 
 <?php
-		echo $this->Html->link(
-				    'Add Moment',
-				    array('controller' => 'moment_pages', 'action' => 'add', 0,1),
-				    array('class' => 'add_moment')
-				);
-	?>
+    echo $this->Html->link(
+            'Add Moment',
+            array('controller' => 'moment_pages', 'action' => 'add', 0,1),
+            array('class' => 'add_moment')
+        );
+  ?>
 
 <div class="content">
 <?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
@@ -130,9 +131,9 @@ function get_date_spanish( $time, $part = false, $formatDate = '' ){
       <label>Fecha estimada en que nacerás: </label>
       <span><input type="text" id="datepickerCongrats" size="30" readonly="readonly"  value="<?php if($estimated != ''){
         echo $estimated; } ?>"/></span>
-      <input type="hidden" name="data[FirstVisitPage][estimated][month]" id="CongratsPagePruebaMonth" />
-      <input type="hidden" name="data[FirstVisitPage][estimated][day]" id="CongratsPagePruebaDay" />
-      <input type="hidden" name="data[FirstVisitPage][estimated][year]" id="CongratsPagePruebaYear" />
+      <input type="hidden" name="data[FirstVisitPage][estimated][month]" id="CongratsPagePruebaMonth" <?php if($estimated != ''){ ?>  value="<?php echo $mesuco; ?>" <?php } ?> />
+      <input type="hidden" name="data[FirstVisitPage][estimated][day]" id="CongratsPagePruebaDay" <?php if($estimated != ''){ ?>  value="<?php echo $dia; ?>" <?php } ?> />
+      <input type="hidden" name="data[FirstVisitPage][estimated][year]" id="CongratsPagePruebaYear" <?php if($estimated != ''){ ?>  value="<?php echo $ano; ?>" <?php } ?> />
     </div>
 
   <?php

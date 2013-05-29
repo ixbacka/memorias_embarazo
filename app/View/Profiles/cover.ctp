@@ -6,6 +6,13 @@
 body{
   height: 1010px;
 }
+.upload_bt {
+width: 99px;
+}
+
+#send_OK input[type="submit"] {
+width: 55px;
+}
 <?php if( isset($cover_pic) ){ ?>
 
 .cover_photo{
@@ -175,6 +182,21 @@ fbphotoSelect = function(id) {
       </div>
     </div>
 <!-- Markup for Carson Shold's Photo Selector -->
+
+
+
+    <div id="toPopup">
+
+        <div class="close"></div>
+        <span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
+        <div id="popup_instructions"> <!--your content start-->
+          Instrucciones del popup            
+        </div> <!--your content end-->
+
+    </div> <!--toPopup end-->
+
+  <div class="loader"></div>
+    <div id="backgroundPopup"></div>
 
 
 

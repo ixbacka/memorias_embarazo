@@ -58,15 +58,15 @@ body{
 <?php echo $this->Form->create('SintomPage'); ?>
 	<?php
 
-	if(isset($sintoms['SimtomPage']['matutinos'])){
-		$matutinos = $sintoms['SimtomPage']['matutinos'];
+	if(isset($sintoms['SintomPage']['matutinos'])){
+		$matutinos = $sintoms['SintomPage']['matutinos'];
 	} else{
 		$matutinos = '';
 	}
 		echo $this->Form->input('matutinos', array('label' => 'Ouch, empiezan los malestares matutinos y yo me siento: ', 'value' => $matutinos )); 
 
-	if(isset($sintoms['SimtomPage']['worst'])){
-		$worst = $sintoms['SimtomPage']['worst'];
+	if(isset($sintoms['SintomPage']['worst'])){
+		$worst = $sintoms['SintomPage']['worst'];
 	} else{
 		$worst = '';
 	}
@@ -75,33 +75,33 @@ body{
 	<p class="title_form" id="cravings">Antojos</p>
 	<div class="sintom_inputs" id="cravings_">
 	<?php
-	if(isset($sintoms['SimtomPage']['craving1'])){
-		$craving1 = $sintoms['SimtomPage']['craving1'];
+	if(isset($sintoms['SintomPage']['craving1'])){
+		$craving1 = $sintoms['SintomPage']['craving1'];
 	} else{
 		$craving1 = '';
 	}
-		if(isset($sintoms['SimtomPage']['craving2'])){
-		$craving2 = $sintoms['SimtomPage']['craving2'];
+		if(isset($sintoms['SintomPage']['craving2'])){
+		$craving2 = $sintoms['SintomPage']['craving2'];
 	} else{
 		$craving2 = '';
 	}
-		if(isset($sintoms['SimtomPage']['craving3'])){
-		$craving3 = $sintoms['SimtomPage']['craving3'];
+		if(isset($sintoms['SintomPage']['craving3'])){
+		$craving3 = $sintoms['SintomPage']['craving3'];
 	} else{
 		$craving3 = '';
 	}
-		if(isset($sintoms['SimtomPage']['craving4'])){
-		$craving4 = $sintoms['SimtomPage']['craving4'];
+		if(isset($sintoms['SintomPage']['craving4'])){
+		$craving4 = $sintoms['SintomPage']['craving4'];
 	} else{
 		$craving4 = '';
 	}
-		if(isset($sintoms['SimtomPage']['craving5'])){
-		$craving5 = $sintoms['SimtomPage']['craving5'];
+		if(isset($sintoms['SintomPage']['craving5'])){
+		$craving5 = $sintoms['SintomPage']['craving5'];
 	} else{
 		$craving5 = '';
 	}
-		if(isset($sintoms['SimtomPage']['craving6'])){
-		$craving6 = $sintoms['SimtomPage']['craving6'];
+		if(isset($sintoms['SintomPage']['craving6'])){
+		$craving6 = $sintoms['SintomPage']['craving6'];
 	} else{
 		$craving6 = '';
 	}
@@ -117,33 +117,33 @@ body{
 	<div class="sintom_inputs"  id="gross_">
 		<?php
 
-		if(isset($sintoms['SimtomPage']['gross1'])){
-			$gross1 = $sintoms['SimtomPage']['gross1'];
+		if(isset($sintoms['SintomPage']['gross1'])){
+			$gross1 = $sintoms['SintomPage']['gross1'];
 		} else{
 			$gross1 = '';
 		}
-			if(isset($sintoms['SimtomPage']['gross2'])){
-			$gross2 = $sintoms['SimtomPage']['gross2'];
+			if(isset($sintoms['SintomPage']['gross2'])){
+			$gross2 = $sintoms['SintomPage']['gross2'];
 		} else{
 			$gross2 = '';
 		}
-			if(isset($sintoms['SimtomPage']['gross3'])){
-			$gross3 = $sintoms['SimtomPage']['gross3'];
+			if(isset($sintoms['SintomPage']['gross3'])){
+			$gross3 = $sintoms['SintomPage']['gross3'];
 		} else{
 			$gross3 = '';
 		}
-			if(isset($sintoms['SimtomPage']['gross4'])){
-			$gross4 = $sintoms['SimtomPage']['gross4'];
+			if(isset($sintoms['SintomPage']['gross4'])){
+			$gross4 = $sintoms['SintomPage']['gross4'];
 		} else{
 			$gross4 = '';
 		}
-			if(isset($sintoms['SimtomPage']['gross5'])){
-			$gross5 = $sintoms['SimtomPage']['gross5'];
+			if(isset($sintoms['SintomPage']['gross5'])){
+			$gross5 = $sintoms['SintomPage']['gross5'];
 		} else{
 			$gross5 = '';
 		}
-			if(isset($sintoms['SimtomPage']['gross6'])){
-			$gross6 = $sintoms['SimtomPage']['gross6'];
+			if(isset($sintoms['SintomPage']['gross6'])){
+			$gross6 = $sintoms['SintomPage']['gross6'];
 		} else{
 			$gross6 = '';
 		}
@@ -157,24 +157,14 @@ body{
 	</div>
 </div>
 <div class="sintom_rite">
-	<?php 
-
-		if(isset($sintoms['SimtomPage']['cravings'])){
-			$cravings = $sintoms['SimtomPage']['cravings'];
-		} else{
-			$cravings = '';
-		}
-			echo $this->Form->input('cravings', array('label' => 'El antojito más raro que he tenido es: ', 'value' => $cravings )); 
-		?>
-
 		<?php
 
-		if(isset($sintoms['SimtomPage']['weirdestcraving'])){
-			$weirdestcraving = $sintoms['SimtomPage']['weirdestcraving'];
+		if(isset($sintoms['SintomPage']['weirdestcraving'])){
+			$weirdestcraving = $sintoms['SintomPage']['weirdestcraving'];
 		} else{
 			$weirdestcraving = '';
 		}
-			echo $this->Form->input('weirdestcraving', array('label' => 'El antojito más raro que he tenido es: ', 'value' => $weirdestcraving )); 
+			echo $this->Form->input('weirdestcraving', array('label' => 'Mmmm! cuando se trata de antojos<br>El antojito más raro que he tenido es: ', 'value' => $weirdestcraving )); 
 	?>
 </div>
 		<?php

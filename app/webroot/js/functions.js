@@ -1,16 +1,4 @@
 $(document).ready(function(){
-	
-	$("li.home").click(function(){
-		top.location.href = 'http://operacionxperia.com/momtomom/memorias_embarazo/profiles/cover';
-	});
-
-	$("li.ask").click(function(){
-		//popup de instrucciones
-	});
-
-	$("li.settings").click(function(){
-		//popup de settings
-	});
 
   $( "#datepickerCongrats" ).datepicker({
 		  onSelect: function(dateText) {

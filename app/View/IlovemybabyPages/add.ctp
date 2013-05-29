@@ -16,6 +16,8 @@
 
       $today = $dia.' '.$mes.' '.$ano;
       $monthi = ($date->format('m'))-1;
+      $montha = $date->format('m');
+
     ?>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -31,7 +33,7 @@ $(document).ready(function(){
 <?php
     echo $this->Html->link(
             'Add Moment',
-            array('controller' => 'moment_pages', 'action' => 'add'),
+            array('controller' => 'moment_pages', 'action' => 'add', 0, 3),
             array('class' => 'add_moment')
         );
   ?>

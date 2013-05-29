@@ -39,9 +39,12 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<?php //echo $this->Html->script('functions'); ?>
-	
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+  <?php echo $this->Html->script('clickoutside'); ?>
+
+	<?php echo $this->Html->script('script'); ?>
+
     <script type="text/javascript">
   WebFontConfig = {
     google: { families: [ 'Open+Sans:300italic,700italic,400,700,300:latin' ] }
@@ -55,8 +58,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(wf, s);
   })(); </script>
+
   <?php 
-        $tema = 1;//$this->Session->read("User.theme");
+        $tema = $this->Session->read("User.theme");
         if($tema == 1){ echo $this->Html->css('tema1'); } 
         elseif($tema == 2){ echo $this->Html->css('tema2'); } 
         elseif($tema == 3){ echo $this->Html->css('tema3'); } 
@@ -120,11 +124,25 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
       <div class="header">  
         <ul class="menu">
-          <li class="ask">FAQ</li>
+          <a href="#" class="ask" id="instructions">FAQ</a>
           <li class="settings">Settings</li>
           <li class="home">Home</li>
         </ul>
       </div>
+
+    <div id="toPopup">
+
+        <div class="close"></div>
+        <span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
+        <div id="popup_instructions"> <!--your content start-->
+          Instrucciones del popup            
+        </div> <!--your content end-->
+
+    </div> <!--toPopup end-->
+
+  <div class="loader"></div>
+    <div id="backgroundPopup"></div>
+
 
     <?php } ?>
     <?php echo $this->Session->flash(); ?>
