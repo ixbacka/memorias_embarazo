@@ -200,7 +200,6 @@ function readURL(input) {
 	background-image: url(../img/marco.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$firstkick['FirstkickPage']['photo']); ?>);
 	background-size: 297px 392px, 225px 320px;
 }
-
 <?php }?>
 .title_page span {
   top: 44px;
@@ -308,22 +307,37 @@ function readURL(input) {
       }
     ?>
   </p>
-  <p>
+  <p class="startkick">
     <label>Aay, la semana en que empezó a patear duro el bebé fue :</label>
     <input type="text" name="data[FirstkickPage][week]" value="<?php if($week != ''){ echo $week; } ?>"/>
-  <p>
+  </p>
   <div class="colL">
-    <?php
-      if(isset($firstkick['FirstkickPage']['photogenic'])){
-        $photogenic = $firstkick['FirstkickPage']['photogenic'];
-      } else{
-        $photogenic = '';
-      }
-    ?>
-    <input type="text" name="data[FirstkickPage][photogenic]" value="<?php if($photogenic != ''){ echo $photogenic; } ?>" class="photo-up"/>
+    <div class="firstkick_photo photo-v">
+      <input type="hidden" name="data[FirstkickPage][url_photo]" id="photo_url_" value=""/>
+      <div class="pick_fb">Elegir de Facebook</div>
+      <?php
+        echo $this->Form->file('photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+      ?>
+    </div>
+    <input type="text" id="datepickerCongrats1" size="30" readonly="readonly"  value="<?php if($photo_date != ''){
+          echo $photo_date; } ?>"/>
+    <input type="hidden" name="data[FirstkickPage][photo_date][month]" id="CongratsPagePruebaMonth1" />
+    <input type="hidden" name="data[FirstkickPage][photo_date][day]" id="CongratsPagePruebaDay1" />
+    <input type="hidden" name="data[FirstkickPage][photo_date][year]" id="CongratsPagePruebaYear1" />
   </div>
   <div class="colR">
-    <label>La GRAN pregunta: ¿el bebé es? </label>
+    <p class="photogenic">
+      <label>Ahora qué eres más fotogénico, claramente pude ver:</label>
+      <?php
+        if(isset($firstkick['FirstkickPage']['photogenic'])){
+          $photogenic = $firstkick['FirstkickPage']['photogenic'];
+        } else{
+          $photogenic = '';
+        }
+      ?>
+      <input type="text" name="data[FirstkickPage][photogenic]" value="<?php if($photogenic != ''){ echo $photogenic; } ?>"/>
+    </p>
+    <p class="gran"><label>La GRAN pregunta: ¿el bebé es? </label></p>
     <?php
       if(isset($firstkick['FirstkickPage']['bigquestion'])){
         $bigquestion = $firstkick['FirstkickPage']['bigquestion'];
@@ -331,15 +345,23 @@ function readURL(input) {
         $bigquestion = '';
       }
     ?>
-    <input type="radio" name="data[FirstkickPage][bigquestion]" value="1" <?php if($bigquestion == 1){
-    echo 'checked="checked"'; } ?> />
-    <label>Niño</label>
-    <input type="radio" name="data[FirstkickPage][bigquestion]" value="2" <?php if($bigquestion == 2){
-    echo 'checked="checked"'; } ?> />
-    <label>Niña</label>
-    <input type="radio" name="data[FirstkickPage][bigquestion]" value="3" <?php if($bigquestion == 3){
-    echo 'checked="checked"'; } ?> />
-    <label>Todavía no se ve nada!</label>
+    <div class="opciones cf">
+      <div class="opcion nino">
+        <input type="radio" name="data[FirstkickPage][bigquestion]" value="1" <?php if($bigquestion == 1){
+        echo 'checked="checked"'; } ?> />
+        <label>Niño</label>
+      </div>
+      <div class="opcion nina">
+        <input type="radio" name="data[FirstkickPage][bigquestion]" value="2" <?php if($bigquestion == 2){
+        echo 'checked="checked"'; } ?> />
+        <label>Niña</label>
+      </div>
+      <div class="opcion nose">
+        <input type="radio" name="data[FirstkickPage][bigquestion]" value="3" <?php if($bigquestion == 3){
+        echo 'checked="checked"'; } ?> />
+        <label>Todavía no se ve nada!</label>
+      </div>
+    </div>
     <?php
       if(isset($firstkick['FirstkickPage']['craving1'])){
         $craving1 = $firstkick['FirstkickPage']['craving1'];
@@ -362,13 +384,13 @@ function readURL(input) {
         $craving4 = '';
       }
     ?>
-
-    <label>Antojos</label>
-    <input type="text" name="data[FirstkickPage][craving1]" value="<?php if($craving1 != ''){ echo $craving1; } ?>"/>
-    <input type="text" name="data[FirstkickPage][craving2]" value="<?php if($craving2 != ''){ echo $craving2; } ?>"/>
-    <input type="text" name="data[FirstkickPage][craving3]" value="<?php if($craving3 != ''){ echo $craving3; } ?>"/>
-    <input type="text" name="data[FirstkickPage][craving4]" value="<?php if($craving4 != ''){ echo $craving4; } ?>"/>
-
+    <div class="antojos">
+      <label>Antojos</label>
+      <input type="text" name="data[FirstkickPage][craving1]" value="<?php if($craving1 != ''){ echo $craving1; } ?>"/>
+      <input type="text" name="data[FirstkickPage][craving2]" value="<?php if($craving2 != ''){ echo $craving2; } ?>"/>
+      <input type="text" name="data[FirstkickPage][craving3]" value="<?php if($craving3 != ''){ echo $craving3; } ?>"/>
+      <input type="text" name="data[FirstkickPage][craving4]" value="<?php if($craving4 != ''){ echo $craving4; } ?>"/>
+    </div>
     <?php
       if(isset($firstkick['FirstkickPage']['gross1'])){
         $gross1 = $firstkick['FirstkickPage']['gross1'];
@@ -391,24 +413,13 @@ function readURL(input) {
         $gross4 = '';
       }
     ?>
-    <label>Antojos</label>
-    <input type="text" name="data[FirstkickPage][gross1]" value="<?php if($gross1 != ''){ echo $gross1; } ?>"/>
-    <input type="text" name="data[FirstkickPage][gross2]" value="<?php if($gross2 != ''){ echo $gross2; } ?>"/>
-    <input type="text" name="data[FirstkickPage][gross3]" value="<?php if($gross3 != ''){ echo $gross3; } ?>"/>
-    <input type="text" name="data[FirstkickPage][gross4]" value="<?php if($gross4 != ''){ echo $gross4; } ?>"/>
-
-    <div class="firstkick_photo">
-      <input type="hidden" name="data[FirstkickPage][url_photo]" id="photo_url_" value=""/>
-      <div class="pick_fb">Elegir de Facebook</div>
-      <?php
-        echo $this->Form->file('photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
-      ?>
+    <div class="antojos">
+      <label>Ascos</label>
+      <input type="text" name="data[FirstkickPage][gross1]" value="<?php if($gross1 != ''){ echo $gross1; } ?>"/>
+      <input type="text" name="data[FirstkickPage][gross2]" value="<?php if($gross2 != ''){ echo $gross2; } ?>"/>
+      <input type="text" name="data[FirstkickPage][gross3]" value="<?php if($gross3 != ''){ echo $gross3; } ?>"/>
+      <input type="text" name="data[FirstkickPage][gross4]" value="<?php if($gross4 != ''){ echo $gross4; } ?>"/>
     </div>
-    <input type="text" id="datepickerCongrats1" size="30" readonly="readonly"  value="<?php if($photo_date != ''){
-          echo $photo_date; } ?>"/>
-    <input type="hidden" name="data[FirstkickPage][photo_date][month]" id="CongratsPagePruebaMonth1" />
-    <input type="hidden" name="data[FirstkickPage][photo_date][day]" id="CongratsPagePruebaDay1" />
-    <input type="hidden" name="data[FirstkickPage][photo_date][year]" id="CongratsPagePruebaYear1" />
   </div>
 	<?php
 		echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));

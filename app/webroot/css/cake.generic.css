@@ -260,9 +260,6 @@ body {
   width: 810px;
   height: 1200px;
   background-image: url(../img/back.png);
-  color: #fff;
-  font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
-  font-size:90%;
   margin: 0;
 }
 
@@ -808,7 +805,6 @@ form div.submit {
 }
 label {
   display: block;
-  font-size: 110%;
   margin-bottom:3px;
 }
 input, textarea {

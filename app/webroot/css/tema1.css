@@ -11,10 +11,11 @@ body {
 	background-image: url(../img/back.png);
 	color: #fff;
 	font-family:'Open Sans', helvetica, arial, sans-serif;
-	font-size:90%;
+	font-size: 14px;
 	margin: 0;
 	overflow: hidden;
   position: relative;
+  -webkit-font-smoothing: antialiased;
 }
 
 
@@ -42,7 +43,7 @@ body {
   left: 0px;
 }
 
-.photo-up {
+.photo-up, .photo-v {
   width: 280px;
   height: 215px;
   position: absolute;
@@ -51,6 +52,17 @@ body {
   text-indent: -9999px;
   background-repeat: no-repeat;
   background-size: 280px 215px;
+}
+
+.photo-v {
+  width: 260px;
+  height: 300px;
+  background-size: 260px 300px;
+}
+
+.photo-v .pick_fb {
+    top: 170px;
+    left: 70px;
 }
 
 .cover_photo{
@@ -75,8 +87,8 @@ body {
 
 .upload_bt{
   background-image: url(../img/bt_subir_foto.png);
-  width: 101px;
-  height: 12px;
+  width: 102px;
+  height: 15px;
   position: absolute;
   top: 156px;
   left: 200px;
@@ -87,6 +99,11 @@ body {
 .photo-up .upload_bt {
   top: 140px;
   left: 80px;
+}
+
+.photo-v .upload_bt {
+  top: 200px;
+  left: 70px;
 }
 
 .photo-up .pick_fb {
@@ -551,7 +568,6 @@ form{
 
 label{
   color: #fff;
-  font-size: 14px;
   float: left;
   padding-right: 5px;
 }
@@ -1001,7 +1017,13 @@ text-align: center;
 #FirstkickPageAddForm {
   position: absolute;
   top: 120px;
-  width: 660px;
+  width: 680px;
+}
+
+#FirstkickPageAddForm p {
+  float: none;
+  margin: 30px 0;
+  color: #fff;
 }
 
 #FirstkickPageAddForm .hasDatepicker {
@@ -1009,7 +1031,56 @@ text-align: center;
 }
 
 .startkick input[type="text"] {
+  width: 277px;
+}
 
+#FirstkickPageAddForm .colL {
+    float: left;
+    width: 300px;
+}
+
+#FirstkickPageAddForm .colL .hasDatepicker {
+    margin-top: 300px;
+    margin-left: 60px;
+}
+
+#FirstkickPageAddForm .colR {
+    float: left;
+    width: 380px;
+}
+
+#FirstkickPageAddForm  .opcion {
+  display: block;
+  width: 190px;
+  float: left;
+}
+
+#FirstkickPageAddForm .opcion label {
+  line-height: 28px;
+  margin-left: 6px;
+}
+
+#FirstkickPageAddForm .opcion.nino,
+#FirstkickPageAddForm .opcion.nina {
+  width: 90px;
+}
+
+.gran label {
+  width: 100%;
+}
+
+.antojos {
+  margin-top: 40px;
+}
+
+.antojos input[type="text"] {
+  width: 144px;
+  margin-left: 9px;
+}
+
+.antojos label {
+  height: 50px;
+  width: 50px;
 }
 
 /* ESTADOS */
