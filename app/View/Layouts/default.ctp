@@ -44,10 +44,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
   <?php echo $this->Html->script('clickoutside'); ?>
 
 	<?php echo $this->Html->script('script'); ?>
-
-    <script type="text/javascript">
+<script type="text/javascript">
   WebFontConfig = {
-    google: { families: [ 'Open+Sans:300italic,700italic,400,700,300:latin' ] }
+    google: { families: [ 'Open+Sans:400,700,600,300:latin' ] }
   };
   (function() {
     var wf = document.createElement('script');

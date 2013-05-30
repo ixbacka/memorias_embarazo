@@ -1031,7 +1031,7 @@ text-align: center;
 }
 
 .startkick input[type="text"] {
-  width: 277px;
+  width: 277:px;
 }
 
 #FirstkickPageAddForm .colL {
@@ -1081,6 +1081,40 @@ text-align: center;
 .antojos label {
   height: 50px;
   width: 50px;
+}
+
+/* bellymonthPages */
+
+#BellymonthPageAddForm {
+  position: absolute;
+  top: 120px;
+  width: 680px;
+}
+
+.bellymonthPages .colL,
+.bellymonthPages .colR {
+  float: left;
+}
+
+.bellymonthPages .colR {
+  width: 410px;
+}
+
+.bellymonthPages .colL {
+  width: 270px;
+}
+
+#BellymonthPageAddForm .peso label,
+#BellymonthPageAddForm .medida label {
+  display: inline-block;
+}
+
+#BellymonthPageAddForm .peso input {
+  width: 296px;
+}
+
+#BellymonthPageAddForm .medida input {
+  width: 214px;
 }
 
 /* ESTADOS */
