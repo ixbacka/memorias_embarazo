@@ -302,12 +302,10 @@ h1 {
 h2 {
   background:#fff;
   color: #e32;
-  font-family:'Gill Sans','lucida grande', helvetica, arial, sans-serif;
   font-size: 190%;
 }
 h3 {
   color: #2c6877;
-  font-family:'Gill Sans','lucida grande', helvetica, arial, sans-serif;
   font-size: 165%;
 }
 h4 {
@@ -808,7 +806,7 @@ label {
 input, textarea {
   clear: both;
   font-size: 140%;
-  font-family: "frutiger linotype", "lucida grande", "verdana", sans-serif;
+  font-family: 'Open Sans', "lucida grande", "verdana", sans-serif;
   padding: 1%;
   width:98%;
 }
