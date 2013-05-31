@@ -1364,6 +1364,18 @@ text-align: center;
   margin-left: 19px;
 }
 
+#BabyshowerPageAddForm .photo-up {
+  top: 290px;
+}
+
+#BabyshowerPageAddForm .photo-up.dos {
+  right: 0;
+}
+
+#BabyshowerPageAddForm .submit {
+  position: absolute;
+  bottom: 0;
+}
 
 /* ESTADOS */
 

@@ -267,19 +267,10 @@ function readURL(input) {
         $favoritepresent = '';
       }
     ?>
-    <input type="radio" name="data[BabyshowerPage][favoritepresent]" value="1" <?php if($favoritepresent == 1){
-    echo 'checked="checked"'; } ?> />
-    <label>Niño</label>
-     <input type="radio" name="data[BabyshowerPage][favoritepresent]" value="2" <?php if($favoritepresent == 2){
-    echo 'checked="checked"'; } ?> />
-    <label>Niña</label>
-     <input type="radio" name="data[BabyshowerPage][favoritepresent]" value="3" <?php if($favoritepresent == 3){
-       echo 'checked="checked"'; } ?> />
+    <input type="radio" name="data[BabyshowerPage][favoritepresent]" value="1" <?php if($favoritepresent == 1){ echo 'checked="checked"'; } ?> />
+     <input type="radio" name="data[BabyshowerPage][favoritepresent]" value="2" <?php if($favoritepresent == 2){ echo 'checked="checked"'; } ?> />
+     <input type="radio" name="data[BabyshowerPage][favoritepresent]" value="3" <?php if($favoritepresent == 3){ echo 'checked="checked"'; } ?> />
   </div>
-  
-
-
-<label>Todavía no se ve nada!</label>
 
   <?php
     if(isset($bbyshower['BabyshowerPage']['guest1'])){
@@ -306,14 +297,14 @@ function readURL(input) {
   </div>
 
 
-  <div id="photo1" class="photo-up">
+  <div id="photo1" class="photo-up uno">
     <input type="hidden" name="data[BabyshowerPage][url_photo_1]" class="photo1" value=""/>
     <div class="pick_fb">Elegir de Facebook</div>
     <?php
       echo $this->Form->file('photo1', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
     ?>
   </div>
-  <div id="photo2 class="photo-up">
+  <div id="photo2" class="photo-up dos">
     <input type="hidden" name="data[BabyshowerPage][url_photo_2]" class="photo2" value=""/>
     <div class="pick_fb">Elegir de Facebook</div>
     <?php
