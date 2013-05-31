@@ -9,12 +9,6 @@ body{
 	overflow: hidden;
 }
 
-.title_page span {
-  top: 42px;
-  position: absolute;
-  left: 364px;
-}
-
 .footer{
 	position: absolute;
 	top: 970px;

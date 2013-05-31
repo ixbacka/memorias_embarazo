@@ -39,15 +39,6 @@ body{
   left: 0px;
 }
 
-.title_page span{
-  top: 42px;
-  position: absolute;
-  left: 345px;
-}
-
-.title_page p{
-  margin-left: -2px;
-}
 </style>
 <?php echo $this->element('menu', array( "trimestre" => 1)); ?>
 

@@ -3,15 +3,6 @@
 
 <style type="text/css">
 
-.title_page span {
-top: 42px;
-position: absolute;
-left: 319px;
-}
-
-.title_page p{
-	margin-left: -2px;
-}
 
 .footer{
 	top: 970px;
