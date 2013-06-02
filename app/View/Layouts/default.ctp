@@ -31,7 +31,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
     echo $this->Html->meta('icon');
 
     echo $this->Html->css('cake.generic');
-
     echo $this->fetch('meta');
     echo $this->fetch('script');
     echo $this->fetch('css');
@@ -128,7 +127,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
       </script> 
     
     <?php if( strpos($_SERVER['REQUEST_URI'], 'profiles') == FALSE &&
-              strpos($_SERVER['REQUEST_URI'], 'welcome') == FALSE && 
               strpos($_SERVER['REQUEST_URI'], 'fangate') == FALSE &&
               strpos($_SERVER['REQUEST_URI'], 'cover') == FALSE  ){ 
     ?>
@@ -184,7 +182,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
     <?php echo $this->Session->flash(); ?>
     <?php echo $this->fetch('content'); ?>
     <?php if( strpos($_SERVER['REQUEST_URI'], 'profiles') == FALSE &&
-              strpos($_SERVER['REQUEST_URI'], 'welcome') == FALSE && 
               strpos($_SERVER['REQUEST_URI'], 'fangate') == FALSE &&
               strpos($_SERVER['REQUEST_URI'], 'cover') == FALSE  ){ 
     ?>
