@@ -1435,7 +1435,207 @@ text-align: center;
   bottom: 0;
 }
 
+/* NestingPageAddForm */
 
+#NestingPageAddForm {
+  position: absolute;
+  top: 120px;
+  height: 700px;
+  width: 710px;
+}
+
+#NestingPageAddForm .emociones {
+  float: none;
+  font-size: 20px; text-align: center; width: 100%; color: #0F7491;
+  margin: 0;
+}
+
+#NestingPageAddForm .anidar {
+  width: 244px;
+  height: 170px;
+  overflow: hidden;
+  background: url(../img/anidar.png) no-repeat center;
+  text-indent: -9999px;
+  position: absolute;
+  left: 100px;
+  top: 70px;
+}
+
+#NestingPageAddForm .dado {
+  width: 300px;
+  display: block;
+  position: absolute;
+  right: 130px;
+  top: 80px;
+}
+
+#NestingPageAddForm .opciones label {
+    line-height: 28px;
+}
+
+#NestingPageAddForm .comprar {
+  width: 220px;
+  position: absolute;
+  top: 300px;
+  left: 100px;
+}
+
+#NestingPageAddForm .comprar input {
+  margin: 15px 0;
+}
+
+#room_photo {
+  top: 350px;
+  right: 70px;
+}
+
+#NestingPageAddForm .cuarto {
+  position: absolute;
+  top: 300px;
+  right: 220px;
+}
+
+#NestingPageAddForm .submit {
+  position: absolute;
+  bottom: 20px;
+}
+
+/* ByebellyPageAddForm */
+
+#ByebellyPageAddForm {
+  position: absolute; 
+  top: 120px;
+  height: 700px;
+  width: 710px;
+}
+
+#ByebellyPageAddForm p {
+  margin: 0 0 20px 0;
+  line-height: 28px;
+  float: none;
+  position: relative;
+  display: block;
+}
+
+#ByebellyPageAddForm input[type="number"] {
+  line-height: 1;
+  margin-left: 0;
+}
+
+#ByebellyPageAddForm  .horas {
+  position: absolute;
+  width: 325px;
+  right: 0;
+  top: 254px;
+}
+
+#ByebellyPageAddForm .horas input {
+  width: 90px;
+}
+
+#ByebellyPageAddForm .opciones p {
+  margin: 0;
+}
+
+#ByebellyPageAddForm .opciones p {
+  margin: 0;
+}
+
+#ByebellyPageAddForm .opciones input[type="radio"] {
+  margin-right: 13px;
+}
+
+#ByebellyPageAddForm .opciones p {
+  margin: 0;
+}
+
+#ByebellyPageAddForm .opciones p {
+  margin: 0;
+}
+
+#ByebellyPageAddForm .opciones input[type="radio"] {
+  margin-right: 13px;
+}
+
+#ByebellyPageAddForm .nota {
+  color: #0F7491;
+}
+
+#ByebellyPageAddForm .estaba, .exp {
+  margin-bottom: 30px;
+}
+
+#ByebellyPageAddForm .opciones {
+  margin-bottom: 40px;
+}
+
+/* #SpecialdeliveryPageAddForm */
+
+#SpecialdeliveryPageAddForm {
+  position: absolute;
+  top: 120px;
+  height: 700px;
+  width: 430px;
+  left: 140px;
+}
+
+#SpecialdeliveryPageAddForm .photo-up {
+    left: 120px;
+    top: 20px;
+}
+
+#SpecialdeliveryPageAddForm p {
+    line-height: 27px;
+    float: none;
+    margin-bottom: 20px;
+}
+#SpecialdeliveryPageAddForm .eres input {
+    width: 385px;
+}
+#SpecialdeliveryPageAddForm .eres {
+    margin-top: 260px;
+}
+
+#SpecialdeliveryPageAddForm .bday input {
+    width: 134px;
+}
+
+#SpecialdeliveryPageAddForm .bplace input {
+    width: 140px;
+}
+
+#SpecialdeliveryPageAddForm .parto {
+    position: absolute;
+    right: 0;
+    width: 175px;
+    top: 359px;
+}
+
+#SpecialdeliveryPageAddForm .parto p,
+#SpecialdeliveryPageAddForm .parto .opciones {
+    float: left;
+    margin: 0;
+}
+
+#SpecialdeliveryPageAddForm .opciones label {
+    line-height: 27px;
+    margin-left: 8px;
+}
+
+#SpecialdeliveryPageAddForm .pesaste input {
+    width: 90px;
+}
+
+#SpecialdeliveryPageAddForm .ojos input {
+    width: 250px;
+}
+
+#SpecialdeliveryPageAddForm .nota-foot {
+    color: #269CCC; font-size: 20px;
+    width: 100%;
+    text-align: center;
+    margin-top: 80px;
+}
 
 /* ESTADOS */
 

@@ -193,67 +193,63 @@ function readURL(input) {
 	
 	<div class="nestingPages form">
 	<?php echo $this->Form->create('NestingPage', array('enctype' => 'multipart/form-data')); ?>
-		<p>¡Muchas emociones! Me estoy preparando para tu llegada.<br>Oﬁcialmente estoy anidando.</p>
+    <p class="emociones">¡Muchas emociones! Me estoy preparando para tu llegada.</p>
+    <p class="emociones">Oﬁcialmente estoy anidando.</p>
+    <div class="anidar">Que es anidar?</div>
+    <div class="dado">
+  		<p>Me ha dado por:</p>
+      <?php
+        if(isset($nesting['NestingPage']['nest'])){
+          $nest = $nesting['NestingPage']['nest'];
+        } else{
+          $nest = '';
+        }
+      ?>
+      <div class="opciones">
+        <input type="radio" name="data[NestingPage][nest]" value="1" <?php if($nest == 1){ echo 'checked="checked"'; } ?> />
+        <label>Limpiar toda la casa</label>
+        <input type="radio" name="data[NestingPage][nest]" value="2" <?php if($nest == 2){ echo 'checked="checked"'; } ?> />
+        <label>Lavar y acomodar tu ropita</label>
+        <input type="radio" name="data[NestingPage][nest]" value="3" <?php if($nest == 3){ echo 'checked="checked"'; } ?> />
+        <label>Tener nuestra maleta lista en la puerta</label>
+          <input type="radio" name="data[NestingPage][nest]" value="4" <?php if($nest == 4){ echo 'checked="checked"'; } ?> />
+        <label>Todas las anteriores</label>
+      </div>
+    </div>
+		<div class="comprar">
+      <p>Nos falta comprar: </p>
+      <?php
+      if(isset($nesting['NestingPage']['buy1'])){
+        $buy1 = $nesting['NestingPage']['buy1'];
+      } else{
+        $buy1 = '';
+      }
+      if(isset($nesting['NestingPage']['buy2'])){
+        $buy2 = $nesting['NestingPage']['buy2'];
+      } else{
+        $buy2 = '';
+      }
+      if(isset($nesting['NestingPage']['buy3'])){
+        $buy3 = $nesting['NestingPage']['buy3'];
+      } else{
+        $buy3 = '';
+      }
+    ?>
+      <input type="text" name="data[NestingPage][buy1]" value="<?php if($buy1 != ''){ echo $buy1; } ?>" >
+      <input type="text" name="data[NestingPage][buy2]" value="<?php if($buy2 != ''){ echo $buy2; } ?>" >
+      <input type="text" name="data[NestingPage][buy3]" value="<?php if($buy3 != ''){ echo $buy3; } ?>" >
+    </div>
+  
+    <p class="cuarto"> As&iacute; ser&aacute; tu cuarto: </p>
+		<div id="room_photo" class="photo-up">
+      <input type="hidden" name="data[NestingPage][url_photo]" class="room_photo" value=""/>
+      <div class="pick_fb">Elegir de Facebook</div>
+      <?php
+        echo $this->Form->file('room_photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+      ?>
+    </div>
 
-		<p>En este trimestre tu pap&aacute; est&aacute; un poco: </p>
- 	<?php
-		if(isset($nesting['NestingPage']['nest'])){
-			$nest = $nesting['NestingPage']['nest'];
-		} else{
-			$nest = '';
-		}
-  	?>
-  <input type="radio" name="data[NestingPage][nest]" value="1" <?php if($nest == 1){
-	echo 'checked="checked"'; } ?> />
-	<label>Limpiar toda la casa</label>
- 	<input type="radio" name="data[NestingPage][nest]" value="2" <?php if($nest == 2){
-  echo 'checked="checked"'; } ?> />
-  <label>Lavar y acomodar tu ropita</label>
- 	<input type="radio" name="data[NestingPage][nest]" value="3" <?php if($nest == 3){
-  echo 'checked="checked"'; } ?> />
-  <label>Tener nuestra maleta lista en la puerta</label>
-   	<input type="radio" name="data[NestingPage][nest]" value="4" <?php if($nest == 4){
-  echo 'checked="checked"'; } ?> />
-  <label>Todas las anteriores</label>
-
-	
-  	
-  	<p>Nos falta comprar: </p>
-  	<?php
-		if(isset($nesting['NestingPage']['buy1'])){
-			$buy1 = $nesting['NestingPage']['buy1'];
-		} else{
-			$buy1 = '';
-		}
-		if(isset($nesting['NestingPage']['buy2'])){
-			$buy2 = $nesting['NestingPage']['buy2'];
-		} else{
-			$buy2 = '';
-		}
-		if(isset($nesting['NestingPage']['buy3'])){
-			$buy3 = $nesting['NestingPage']['buy3'];
-		} else{
-			$buy3 = '';
-		}
-	?>
-  	<input type="text" name="data[NestingPage][buy1]" value="<?php if($buy1 != ''){ echo $buy1; } ?>" >
-  	<input type="text" name="data[NestingPage][buy2]" value="<?php if($buy2 != ''){ echo $buy2; } ?>" >
-  	<input type="text" name="data[NestingPage][buy3]" value="<?php if($buy3 != ''){ echo $buy3; } ?>" >
-
-	
-	<div id="room_photo">
-		<input type="hidden" name="data[NestingPage][url_photo]" class="room_photo" value=""/>
-		<div class="pick_fb">Elegir de Facebook</div>
-		<?php
-			echo $this->Form->file('room_photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
-		?>
-	</div>
-
-	<p> As&iacute; ser&aacute; tu cuarto: </p>
-	<?php
-		echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
-	?>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-
+  	<?php echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid)); ?>
+    <?php echo $this->Form->end(__('Submit')); ?>
+  </div>
 </div>
