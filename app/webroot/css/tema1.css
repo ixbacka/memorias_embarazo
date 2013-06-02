@@ -1076,7 +1076,7 @@ text-align: center;
 #FirstkickPageAddForm {
   position: absolute;
   top: 120px;
-  width: 680px;
+  width: 710px;
 }
 
 #FirstkickPageAddForm p {
@@ -1148,7 +1148,7 @@ text-align: center;
   position: absolute;
   top: 120px;
   width: 680px;
-  height: 700px;
+  height: 710px;
 }
 
 .bellymonthPages .colL,
@@ -1221,7 +1221,7 @@ text-align: center;
   position: absolute;
   top: 120px;
   height: 700px;
-  width: 680px;
+  width: 710px;
 }
 
 
@@ -1376,6 +1376,66 @@ text-align: center;
   position: absolute;
   bottom: 0;
 }
+
+/* Coolultrasound */
+
+#CoolultrasoundPageAddForm {
+  position: absolute;
+  top: 120px;
+  height: 700px;
+  width: 710px;
+}
+
+#CoolultrasoundPageAddForm .bloque {
+  display: block;
+  width: 320px;
+  position: absolute;
+}
+
+#CoolultrasoundPageAddForm .bloque.uno {
+  left: 410px;
+}
+
+#CoolultrasoundPageAddForm .bloque.dos {
+  top: 280px;
+}
+
+#CoolultrasoundPageAddForm .bloque.tres {
+  top: 280px;
+  left: 410px;
+  width: 370px;
+}
+
+#CoolultrasoundPageAddForm .uno h3 {
+  color: #379dca;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+#CoolultrasoundPageAddForm .bloque p {
+  margin: 0;
+  margin-bottom: 20px;
+  line-height: 30px;
+  width: 100%;
+}
+
+#CoolultrasoundPageAddForm .opciones label, .opciones input {
+  line-height: 27px;
+  margin-left: 8px;
+}
+
+#CoolultrasoundPageAddForm .otro input {
+  width: 286px;
+  width: 270px;
+}
+
+#CoolultrasoundPageAddForm .submit {
+  position: absolute;
+  bottom: 0;
+}
+
+
 
 /* ESTADOS */
 
