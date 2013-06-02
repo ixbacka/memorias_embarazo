@@ -43,7 +43,7 @@
 		}
   	?>
   	<label> Todo el mundo opina que te pareces a: </label>
-  	<input type="text" name="data[WelcomebbyPage][hours]" value="<?php if($hours != ''){ echo $hours; } ?>" >
+  	<input type="text" name="data[WelcomebbyPage][ulooklike]" value="<?php if($ulooklike != ''){ echo $ulooklike; } ?>" >
   	<?php
 		if(isset($welcome['WelcomebbyPage']['whocutit'])){
 			$whocutit = $welcome['WelcomebbyPage']['whocutit'];
