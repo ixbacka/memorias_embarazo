@@ -9,6 +9,7 @@ App::import('Vendor', 'facebook');
 class CongratsPagesController extends AppController {
 
   var $uses = array('CongratsPage','Profile');
+  public $components = array('RequestHandler');
 
   public function beforeFilter() {
     $this->Session->write("facebook", 
@@ -66,5 +67,17 @@ class CongratsPagesController extends AppController {
       $this->set('congrats',$this->CongratsPage->find('first', array( 'conditions' => array( 'CongratsPage.profile_id' => $leid ) )));
       $this->set('profileid',$leid);
   }
+
+
+
+
+
+  public function view($id = null){
+      $leid = $id;
+      
+      $this->set('congrats',$this->CongratsPage->find('first', array( 'conditions' => array( 'CongratsPage.profile_id' => $leid ) )));
+      $this->set('profileid',$leid);
+  }
+
 
 }
