@@ -4,62 +4,27 @@
 <?php echo $this->Html->script('functions'); ?>
 
 <style type="text/css">
-body{
-	height: 1170px;
-	overflow: hidden;
-}
 
-.footer{
-	position: absolute;
-	top: 970px;
-	left: 0px;
-}
-
-form div.submit{
-	position: absolute;
-	top: 765px;
-	left: 380px;
-	z-index: 9999;
-}
-
-form .submit input[type=submit]{
-	background-image: url(../img/bt_aceptar.png);
-  width: 55px;
-  height: 55px;
-  border: none;
-  background-color: transparent;
-  box-shadow: none;
-  text-indent: -9999px;
-  cursor: pointer;
-}
-
-form .submit input[type=submit]:hover{
-	background-image: url(../img/bt_aceptar.png);
-	background-color: rgba(0,0,0,0.3);
-	border-radius: 25px;
-}
+	<?php if( isset($belly['BellyPage']['photo1']) ){ ?>
+	#photo1{
+		background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo1']); ?>);
+	}
+	<?php }?>
 
 
-<?php if( isset($belly['BellyPage']['photo1']) ){ ?>
-#photo1{
-	background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo1']); ?>);
-}
-<?php }?>
+	<?php if( isset($belly['BellyPage']['photo2']) ){ ?>
+	#photo2{
+		background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo2']); ?>);
+	}
+	<?php }?>
 
 
-<?php if( isset($belly['BellyPage']['photo2']) ){ ?>
-#photo2{
-	background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo2']); ?>);
-}
-<?php }?>
-
-
-<?php if( isset($belly['BellyPage']['photo3']) ){ ?>
-#photo3{
-	background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo3']); ?>);
-	
-}
-<?php }?>
+	<?php if( isset($belly['BellyPage']['photo3']) ){ ?>
+	#photo3{
+		background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo3']); ?>);
+		
+	}
+	<?php }?>
 
 
 </style>

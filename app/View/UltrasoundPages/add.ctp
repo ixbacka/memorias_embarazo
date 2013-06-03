@@ -42,15 +42,6 @@ function get_date_spanish( $time, $part = false, $formatDate = '' ){
 <style type="text/css">
 
 
-.footer{
-  top: 970px;
-}
-
-body{
-  width: 810px;
-  height: 1160px;
-}
-
 <?php if( isset($ultrasound['UltrasoundPage']['first_photo']) ){ ?>
 #ultrasound_photo_1{
   background-image: url(../img/marco.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['first_photo']); ?>);

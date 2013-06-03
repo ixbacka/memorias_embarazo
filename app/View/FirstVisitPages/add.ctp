@@ -30,17 +30,7 @@ $(document).ready(function(){
       $estimated = '';
     }
 ?>
-<style type="text/css">
-body{
-  height: 1170px;
-}
-.footer{
-  position: absolute;
-  top: 970px;
-  left: 0px;
-}
 
-</style>
 <?php echo $this->element('menu', array( "trimestre" => 1, 'pag' => 'first_visit')); ?>
 
 <?php

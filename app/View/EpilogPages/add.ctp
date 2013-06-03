@@ -41,22 +41,28 @@
 		} else{
 			$belly = '';
 		}
-  	?>
-  <input type="radio" name="data[NestingPage][belly]" value="1" <?php if($belly == 1){ echo 'checked="checked"'; } ?> />
-	<label>¡Ay! todavia parezco embarazada</label>
- 	<input type="radio" name="data[NestingPage][belly]" value="2" <?php if($belly == 2){ echo 'checked="checked"'; } ?> />
-  	<label>¡Eh!  Sorpresivamente mi panza regresó a su talla normal</label>
-
+  ?>
+  <div class="opciones cf">
+    <p>
+      <input type="radio" name="data[NestingPage][belly]" value="1" <?php if($belly == 1){ echo 'checked="checked"'; } ?> />
+      <label>¡Ay! todavia parezco embarazada</label>
+    </p>
+    <p>
+      <input type="radio" name="data[NestingPage][belly]" value="2" <?php if($belly == 2){ echo 'checked="checked"'; } ?> />
+      <label>¡Eh!  Sorpresivamente mi panza regresó a su talla normal</label>
+    </p>
+  </div>
   	<?php
 		if(isset($epilog['EpilogPage']['notes'])){
 			$notes =$epilog['EpilogPage']['notes'];
 		} else{
 			$notes = '';
 		}
-  	?>
-  	<label> Notas post parto y detalles que recordar: </label>
-  	<input type="text" name="data[EpilogPage][notes]" value="<?php if($notes != ''){ echo $notes; } ?>" >
-  
+    ?>
+    <p class="post-parto cf">
+    	<label> Notas post parto y detalles que recordar: </label>
+    	<input type="text" name="data[EpilogPage][notes]" value="<?php if($notes != ''){ echo $notes; } ?>" >
+    </p>
 	<?php
 		echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
 	?>

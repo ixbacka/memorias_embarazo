@@ -1,4 +1,4 @@
-<?php echo $this->Html->script('functions'); ?>
+/<?php echo $this->Html->script('functions'); ?>
 <?php echo $this->Html->script('jquery-ui/js/jquery-ui-1.10.3.custom.min'); ?>
 <?php echo $this->Html->css('redmond/jquery-ui-1.10.3.custom.min'); ?>
 
@@ -29,17 +29,7 @@ $(document).ready(function(){
 			$prueba = '';
 		}
 ?>
-<style type="text/css">
-body{
-	height: 1170px;
-}
-.footer{
-	position: absolute;
-	top: 970px;
-	left: 0px;
-}
 
-</style>
 <?php echo $this->element('menu', array( "trimestre" => 1, 'pag' => 'congrats')); ?>
 
 <?php

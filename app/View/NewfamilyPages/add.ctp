@@ -191,7 +191,7 @@ function readURL(input) {
 
 	<?php echo $this->Form->create('NewfamilyPage', array('enctype' => 'multipart/form-data')); ?>
 
-	<div id="photo">
+	<div id="photo" class="photo-up">
 		<input type="hidden" name="data[NewfamilyPage][url_photo]" class="photo" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>
 		<?php

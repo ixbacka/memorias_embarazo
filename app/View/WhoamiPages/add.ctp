@@ -4,42 +4,7 @@
 <?php echo $this->Html->script('photo_selector'); ?>
 
 <style type="text/css">
-body{
-	height: 1170px;
-}
-.footer{
-	position: absolute;
-	top: 970px;
-	left: 0px;
-}
 
-form .input {
-	width: 100%;
-}
-
-.input p {
-margin-bottom: 0px;
-
-}
-
-.number{
-	margin-bottom: 20px;
-}
-
-.upload_bt{
-	position: absolute;
-	top: 280px;
-	left: 143px;
-	width: 91px;
-	height: 4px;
-}
-
-.pick_fb{
-	position: absolute;
-	text-indent: -9999px;
-	top: 230px;
-	left: 143px;
-}
 
 <?php if( isset($whoami['WhoamiPage']['photo']) ){ ?>
 .whoami_photo{

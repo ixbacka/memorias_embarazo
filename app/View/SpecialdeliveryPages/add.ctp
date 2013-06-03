@@ -209,7 +209,7 @@ function readURL(input) {
 	<?php 
       echo $this->Html->link(
               'Siguiente',
-              array('controller' => 'welcome_pages', 'action' => 'add'),
+              array('controller' => 'welcomebby_pages', 'action' => 'add'),
               array('class' => 'sig')
           );
     ?>

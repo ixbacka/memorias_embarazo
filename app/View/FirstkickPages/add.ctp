@@ -265,7 +265,6 @@ function readURL(input) {
 <?php echo $this->element('trim_menu', array( "trimestre" => 2)); ?>
 
 <div class="page_title">
-<<<<<<< HEAD
   <?php
       echo $this->Html->link(
             'Anterior',

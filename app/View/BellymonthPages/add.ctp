@@ -265,15 +265,18 @@ function readURL(input) {
             $apetite = '';
           }
         ?>
-        <input type="radio" name="data[BellymonthPage][apetite]" value="1" <?php if($apetite == 1){
-        echo 'checked="checked"'; } ?> />
-        <label>Elefante</label>
-        <input type="radio" name="data[BellymonthPage][apetite]" value="2" <?php if($apetite == 2){
-        echo 'checked="checked"'; } ?> />
-        <label>Le&oacute;n</label>
-        <input type="radio" name="data[BellymonthPage][apetite]" value="3" <?php if($apetite == 3){
-        echo 'checked="checked"'; } ?> />
-        <label>Ardilla</label>
+        <p class="opcion">
+          <input type="radio" name="data[BellymonthPage][apetite]" value="1" <?php if($apetite == 1){ echo 'checked="checked"'; } ?> />
+          <label>Elefante</label>
+        </p>
+        <p class="opcion">
+          <input type="radio" name="data[BellymonthPage][apetite]" value="2" <?php if($apetite == 2){ echo 'checked="checked"'; } ?> />
+          <label>Le&oacute;n</label>
+        </p>
+        <p class="opcion">
+          <input type="radio" name="data[BellymonthPage][apetite]" value="3" <?php if($apetite == 3){ echo 'checked="checked"'; } ?> />
+          <label>Ardilla</label>
+        </p>
       </div>
       <div class="miss">
         <p>Las cosas que más extraño de mi vida antes de estar embarazada son: </p>
@@ -284,17 +287,20 @@ function readURL(input) {
             $b4 = '';
           }
         ?>
-        <input type="radio" name="data[BellymonthPage][b4]" value="1" <?php if($b4 == 1){
-        echo 'checked="checked"'; } ?> />
-        <label>Mmmmm! un buen vino y una rica cena</label>
-        <input type="radio" name="data[BellymonthPage][b4]" value="2" <?php if($b4 == 2){
-        echo 'checked="checked"'; } ?> />
-        <label>Mi vegija de su tamaño normal</label>
-        <input type="radio" name="data[BellymonthPage][b4]" value="3" <?php if($b4 == 3){
-        echo 'checked="checked"'; } ?> />
-        <label>Mis tobillos</label>
-        <input type="text" name="data[BellymonthPage][b4]" value="<?php if($b4 != ""){ echo $b4; } ?>" />
+        <p class="opcion">
+          <input type="radio" name="data[BellymonthPage][b4]" value="1" <?php if($b4 == 1){ echo 'checked="checked"'; } ?> />
+          <label>Mmmmm! un buen vino y una rica cena</label>
+        </p>
+        <p class="opcion">
+          <input type="radio" name="data[BellymonthPage][b4]" value="2" <?php if($b4 == 2){ echo 'checked="checked"'; } ?> />
+          <label>Mi vegija de su tamaño normal</label>
+        </p>
+        <p class="opcion">
+          <input type="radio" name="data[BellymonthPage][b4]" value="3" <?php if($b4 == 3){ echo 'checked="checked"'; } ?> />
+          <label>Mis tobillos</label>
+        </p>
         <label>Otro</label>
+        <input type="text" name="data[BellymonthPage][b4]" value="<?php if($b4 != ""){ echo $b4; } ?>" />
       </div>
       <div class="comfy">
         <p>Estoy más cómoda durmiendo: </p>
@@ -305,15 +311,21 @@ function readURL(input) {
             $sleep = '';
           }
         ?>
-        <input type="radio" name="data[BellymonthPage][sleep]" value="1" <?php if($sleep == 1){
-        echo 'checked="checked"'; } ?> />
-        <label>Boca arriba</label>
-        <input type="radio" name="data[BellymonthPage][sleep]" value="2" <?php if($sleep == 2){
-        echo 'checked="checked"'; } ?> />
-        <label>De lado</label>
-        <input type="radio" name="data[BellymonthPage][sleep]" value="3" <?php if($sleep == 3){
-        echo 'checked="checked"'; } ?> />
-        <label>Bromeas? No hay un modo cómodo</label>
+        <p class="opcion">
+          <input type="radio" name="data[BellymonthPage][sleep]" value="1" <?php if($sleep == 1){
+          echo 'checked="checked"'; } ?> />
+          <label>Boca arriba</label>
+        </p>
+        <p class="opcion">
+          <input type="radio" name="data[BellymonthPage][sleep]" value="2" <?php if($sleep == 2){
+          echo 'checked="checked"'; } ?> />
+          <label>De lado</label>
+        </p>
+        <p class="opcion">
+          <input type="radio" name="data[BellymonthPage][sleep]" value="3" <?php if($sleep == 3){
+          echo 'checked="checked"'; } ?> />
+          <label>Bromeas? No hay un modo cómodo</label>
+        </p>
       </div>
     </div>
     

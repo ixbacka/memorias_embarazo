@@ -103,8 +103,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
         FB.Canvas.setSize({height:870});    
       <?php } else { ?>
       console.log('chekin g ..');
-      //FB.Canvas.setSize({height:800});
-      setTimeout("FB.Canvas.setAutoGrow()",500);
+      FB.Canvas.setSize({height:1150});
+      //setTimeout("FB.Canvas.setAutoGrow()",500);
      <?php } ?>
        };
        (function() {
@@ -159,8 +159,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
             <li class="personalizar"> Personalizar </li>
             <li class="vermemorias"> Ver Memorias </li>
             <li class="compartir"> Compartir </li>
-            
-          </ul>       
+          </ul>
         </div> <!--your content end-->
 
     </div> <!--toPopup end-->
@@ -173,11 +172,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
             <li class="tema4"> Tema 4 </li>
         </ul>  
     </div>
-    
 
   <div class="loader"></div>
     <div id="backgroundPopup"></div>
-
 
     <?php } ?>
 
@@ -188,11 +185,11 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
               strpos($_SERVER['REQUEST_URI'], 'fangate') == FALSE &&
               strpos($_SERVER['REQUEST_URI'], 'cover') == FALSE  ){ 
     ?>
-      <div class="footer">
-        <div class="footer_mtm">Mom to mom , Consintiendo mi piel de mam&aacute;</div>
-        <a href="http://www.momtomom.com.mx/" class="footer_link" target="_blank">www.momtomom.mx</a>
-        <a href="https://twitter.com/momtomommx" class="footer_twitter" target="_blank">@momtomommx</a>
-      </div>
-    <?php } ?>
+    <div class="footer">
+      <div class="footer_mtm">Mom to mom , Consintiendo mi piel de mam&aacute;</div>
+      <a href="http://www.momtomom.com.mx/" class="footer_link" target="_blank">www.momtomom.mx</a>
+      <a href="https://twitter.com/momtomommx" class="footer_twitter" target="_blank">@momtomommx</a>
+    </div>
+  <?php } ?>
 </body>
 </html>
