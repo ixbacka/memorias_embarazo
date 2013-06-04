@@ -65,7 +65,15 @@ class NestingPagesController extends AppController {
           
         }
 
-        if ($this->NestingPage->save($this->request->data)) {
+          $this->NestingPage->set(array( 
+            'nest' => $this->request->data['NestingPage']['nest'],
+            'buy1' => $this->request->data['NestingPage']['buy1'],
+            'buy2' => $this->request->data['NestingPage']['buy2'],
+            'buy3' => $this->request->data['NestingPage']['buy3'],
+            'profile_id' => $this->request->data['NestingPage']['profile_id']
+          ));
+
+        if ($this->NestingPage->save()) {
           //$this->Session->setFlash(__('The Cover photo has been saved'));
         } else {
           $this->Session->setFlash(__('The Page could not be saved. Please, try again.'));

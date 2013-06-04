@@ -66,7 +66,26 @@ class FirstkickPagesController extends AppController {
           
         }
 
-        if ($this->FirstkickPage->save($this->request->data)) {
+          $this->FirstkickPage->set(array( 
+            'firstkick_date' => $this->request->data['FirstkickPage']['firstkick_date'],
+            'week' => $this->request->data['FirstkickPage']['week'],
+            'bigquestion' => $this->request->data['FirstkickPage']['bigquestion'],
+            'ifeel' => $this->request->data['FirstkickPage']['ifeel'],
+            'craving1' => $this->request->data['FirstkickPage']['craving1'],
+            'craving2' => $this->request->data['FirstkickPage']['craving2'],
+            'craving3' => $this->request->data['FirstkickPage']['craving3'],
+            'craving4' => $this->request->data['FirstkickPage']['craving4'],
+            'gross1' => $this->request->data['FirstkickPage']['gross1'],
+            'gross2' => $this->request->data['FirstkickPage']['gross2'],
+            'gross3' => $this->request->data['FirstkickPage']['gross3'],
+            'gross4' => $this->request->data['FirstkickPage']['gross4'],
+            'profile_id' => $this->request->data['FirstkickPage']['profile_id'],
+            'photo_date' => $this->request->data['FirstkickPage']['photo_date'],
+            'photogenic' => $this->request->data['FirstkickPage']['photogenic']
+          ));
+
+
+        if ($this->FirstkickPage->save()) {
           //$this->Session->setFlash(__('The Cover photo has been saved'));
         } else {
           $this->Session->setFlash(__('The Page could not be saved. Please, try again.'));

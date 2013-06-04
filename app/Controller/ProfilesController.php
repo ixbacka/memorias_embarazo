@@ -6,6 +6,9 @@ App::import('Vendor', 'facebook');
  *
  */
 class ProfilesController extends AppController {
+	var $uses = array('Profile','CongratsPage', 'AnimoPage', 'BabyshowerPage', 'BellyPage', 'ByebellyPage', 'BellymonthPage', 'ChildsexPage', 'CoolultrasoundPage', 'EpilogPage', 'FamilytreePage', 'FirstVisitPage', 'FirstkickPage', 'GettingclosePage', 'IlovemybabyPage', 'NestingPage', 'MomentPage', 'NewfamilyPage', 'SintomPage','SpecialdeliveryPage','UltrasoundPage' , 'WelcomebbyPage', 'WhoamiPage');	
+
+ 	public $components = array('RequestHandler');
 
 	public function beforeFilter() {
 
@@ -17,6 +20,44 @@ class ProfilesController extends AppController {
       ))
     );
 	
+	}
+
+	/*para ver el librillo*/
+
+	public function view_book($id = null){
+
+		$leid = $id;
+      	
+      	$this->set('animo',$this->AnimoPage->find('first', array( 'conditions' => array( 'AnimoPage.profile_id' => $leid ) )));
+   	    $this->set('bbyshower',$this->BabyshowerPage->find('first', array( 'conditions' => array( 'BabyshowerPage.profile_id' => $leid ) )));
+	    $this->set('congrats',$this->CongratsPage->find('first', array( 'conditions' => array( 'CongratsPage.profile_id' => $leid ) )));
+        $this->set('belly',$this->BellyPage->find('first', array( 'conditions' => array( 'BellyPage.profile_id' => $leid ) )));
+   		$this->set('bellymonth',$this->BellymonthPage->find('first', array( 'conditions' => array( 'BellymonthPage.profile_id' => $leid ) )));
+    	$this->set('byebelly',$this->ByebellyPage->find('first', array( 'conditions' => array( 'ByebellyPage.profile_id' => $leid ) )));
+        $this->set('childsex',$this->ChildsexPage->find('first', array( 'conditions' => array( 'ChildsexPage.profile_id' => $leid ) )));
+   	    $this->set('cool',$this->CoolultrasoundPage->find('first', array( 'conditions' => array( 'CoolultrasoundPage.profile_id' => $leid ) )));
+   	    $this->set('epilog',$this->EpilogPage->find('first', array( 'conditions' => array( 'EpilogPage.profile_id' => $leid ) )));
+        $this->set('familytree',$this->FamilytreePage->find('first', array( 'conditions' => array( 'FamilytreePage.profile_id' => $leid ) )));
+        $this->set('firstvisit',$this->FirstVisitPage->find('first', array( 'conditions' => array( 'FirstVisitPage.profile_id' => $leid ) )));
+   	    $this->set('firstkick',$this->FirstkickPage->find('first', array( 'conditions' => array( 'FirstkickPage.profile_id' => $leid ) )));
+        $this->set('gettingclose',$this->GettingclosePage->find('first', array( 'conditions' => array( 'GettingclosePage.profile_id' => $leid ) )));
+        $this->set('ilovemybby',$this->IlovemybabyPage->find('first', array( 'conditions' => array( 'IlovemybabyPage.profile_id' => $leid ) )));
+   	    $this->set('nesting',$this->NestingPage->find('first', array( 'conditions' => array( 'NestingPage.profile_id' => $leid ) )));
+   	    $this->set('new',$this->NewfamilyPage->find('first', array( 'conditions' => array( 'NewfamilyPage.profile_id' => $leid ) )));
+
+   	    $this->set('momentos',  $this->MomentPage->find('all', array( 'conditions' => array( 'MomentPage.profile_id' => $leid ) ) ));
+   		$this->set('sintoms',$this->SintomPage->find('first', array( 'conditions' => array( 'SintomPage.profile_id' => $leid ) )));
+   	    $this->set('special',$this->SpecialdeliveryPage->find('first', array( 'conditions' => array( 'SpecialdeliveryPage.profile_id' => $leid ) )));
+        $this->set('ultrasound',$this->UltrasoundPage->find('first', array( 'conditions' => array( 'UltrasoundPage.profile_id' => $leid ) )));
+   	    $this->set('welcome',$this->WelcomebbyPage->find('first', array( 'conditions' => array( 'WelcomebbyPage.profile_id' => $leid ) )));
+        $this->set('whoami',$this->WhoamiPage->find('first', array( 'conditions' => array( 'WhoamiPage.profile_id' => $leid ) )));
+
+
+		$profid = $this->Profile->find('first', array( 'conditions' => array( 'Profile.id' => $leid ) ) );
+	    $this->set('cover_pic', $profid['Profile']['cover_photo']); 
+
+	    $this->set('profileid',$leid);
+
 	}
 
 
@@ -98,7 +139,6 @@ class ProfilesController extends AppController {
 	        $this->Session->write('User.liked', 1);
 	        $this->Session->write('User.uid', $session);
 	        $this->Session->write('User.token', $access_token);
-
 	        //Redirect to Welcome page // if user saved redirect to cover 
 	        //first, lets get the user facebok ID, its in var -> $session
 
@@ -115,8 +155,11 @@ class ProfilesController extends AppController {
 	        );
 
 	        if($user_saved >= 1){ //user saved, so not welcome page, but cover page
+
+		        $this->Session->write('User.id', $user_saved1['Profile']['id']);
 	        	$this->Session->write("User.theme", $user_saved1['Profile']['theme']);
 	        	$this->redirect(array('controller' => 'profiles', 'action' => 'cover'));
+
 	        } else {
 	        	$this->redirect(array('controller' => 'profiles', 'action' => 'welcome'));
 	        }
@@ -217,6 +260,8 @@ class ProfilesController extends AppController {
       
       if ($this->Profile->save()) {
         $id = $this->Profile->id;
+        $this->Session->write('User.id', $id);
+
       } else {
         $this->Session->setFlash(__('Tu perfil no se ha podido guardar.'));
       }
@@ -415,6 +460,293 @@ class ProfilesController extends AppController {
     imagedestroy($thumbnail_gd_image);
     return true;
 	}
+
+
+
+/****************************************************************************************************/
+
+	/* 
+    * Funcion makeImage()
+    * Que crea la imagen para el trimestre
+    */
+    public function makeImage($uid){
+           $facebook = ;
+
+            $user = $facebook->getUser();
+
+        //$this->Product->Behaviors->attach('Containable');
+
+        $id_user = $this->User->find("first", 
+            array(
+            'conditions' => array('User.uid' => $uid ), //array of conditions
+            'fields' => array('User.id')
+            )
+        );
+         
+        //Me salen todos los productoooooooos :(
+
+        $uid_user = $this->Session->read('User.uid');
+
+        $u_id = '';
+
+        /*print_r($id_user);
+        exit;*/
+
+        /*$this->Product->unbindModel(array(
+            'belongsTo' => array('Category','Season')
+        ));
+         
+        $this->Product->bindModel(array(
+            'hasOne' => array(
+                'Season' => array(
+                    'foreignKey' => false,
+                    'conditions' => array('Season.id = Product.season_id')
+                )
+            ),
+            'hasMany' => array(
+                'ProductsUser' => array(
+                        'foreignKey' => false,
+                        'conditions' => ('ProductsUser.product_id = Product.id')
+                    )
+            )
+        ));*/
+/*
+        $this->Product->bindModel(array(
+            'hasAndBelongsToMany' => array(
+                'User' => array(
+                        'foreignKey' => false,
+                        'conditions' => ('ProductsUser.product_id = Product.id')
+                    )
+            )
+        ));*/
+
+        if (!empty($id_user) || !is_null($id_user)){
+           $images = $this->Product->find('all', array(
+            'recursive' => 2,
+             'contain'=>array(
+                'Season'=>array('conditions' => array('Season.status' => '1')),
+                'User'=> array('conditions' =>  array( 'ProductsUser.user_id' => $id_user['User']['id'] ))
+             )
+            ));
+
+           $u_id =  $id_user['User']['id'];
+            /*
+            $images = $this->Product->find('all', array(
+                'conditions' =>  array( 'ProductsUser.user_id' => $id_user['User']['id'], 'Season.status' => 1)
+            ));*/
+
+        } elseif( !empty($uid_user) || !is_null($uid_user) ) {
+
+             $id_user = $this->User->find("first", 
+                array(
+                'conditions' => array('User.uid' => $uid_user ), //array of conditions
+                'fields' => array('User.id')
+                )
+            );
+
+              $images = $this->Product->find('all', array(
+                'recursive' => 2,
+                 'contain'=>array(
+                    'Season'=>array('conditions' => array('Season.status' => '1')),
+                    'User'=> array('conditions' =>  array( 'ProductsUser.user_id' => $id_user['User']['id'] ))
+                    //'ProductsUser'=> array('conditions' =>  array( 'ProductsUser.user_id' => $id_user['User']['id'] ))
+                 )
+            ));
+
+              $u_id =  $id_user['User']['id'] ;
+
+            /*$images = $this->Product->find('all', array(
+                'conditions' =>  array( 'ProductsUser.user_id' => $id_user['User']['id'], 'Season.status' => 1)
+            ));*/
+        } 
+
+        
+        
+
+        if(!empty($images) && !is_null($images) && isset($images) ){
+
+            /*return $images;
+            exit();*/
+
+            $srcImagePaths = array();
+            $max_height = 0;
+            $numberOfTiles = 0;
+            foreach ($images as $img) {
+                if( isset($img['User'][0]['id']) ){
+                    if( $img['User'][0]['ProductsUser']['user_id'] == $u_id ){
+                        $numberOfTiles++;
+                        $srcImagePaths[] = WWW_ROOT.'img/products/thumbnail_'.$img['Product']['image'];
+                        list($source_image_width, $source_image_height, $source_image_type) = getimagesize(WWW_ROOT.'img/products/thumbnail_'.$img['Product']['image']);
+                        $source_image_height;
+                        if( $max_height < $source_image_height ){
+                            $max_height = $source_image_height;
+                        }
+                    }
+                }
+            }            
+
+            $tileWidth = 170;
+            $tileHeight = $max_height;
+            /*$numberOfTiles = $this->Product->find("count", array(
+                'contain'=>array(
+                 'User'=>array( 'conditions' => array( 'ProductsUser.user_id' => $id_user['User']['id'] ) ),
+                 'Season'=>array('conditions' => array('Season.status' => '1'))
+                 )
+                ));*/
+            $pxBetweenTiles = 14;
+             
+            $mapWidth = (($tileWidth + $pxBetweenTiles) * 4)+10;
+            $mapHeight = ((($tileHeight + $pxBetweenTiles) * ceil($numberOfTiles/4))+140+(4*($numberOfTiles/4)))+55;
+             
+            /*$mapImage = imagecreatetruecolor($mapWidth, $mapHeight);
+            $bgColor = imagecolorallocate($mapImage, 255, 255, 255);
+            imagefill($mapImage, 0, 0, $bgColor);*/
+
+            $pattern = imagecreatefromjpeg(WWW_ROOT.'img/back.jpg');
+            $mapImage = $this->imagefillfromfile($pattern, $mapWidth, $mapHeight);
+            imagedestroy($pattern);
+
+                  
+            $tileImg = imagecreatefromjpeg(WWW_ROOT.'img/header.jpg');
+       
+            imagecopy($mapImage, $tileImg, 0, 0, 0, 0, $mapWidth, 125);
+            imagedestroy($tileImg);
+
+            //AGREGAR EL AVATAR DEL USUARIO!
+            $usuarioid = $u_id;
+            if( $user ){
+            //echo $user;
+            $user_profile_img = $facebook->api('/'.$user.'?fields=picture.type(normal),last_name,first_name','GET');
+
+            //$user_profile = $facebook->api('/me','GET');
+
+            $fname = $user_profile_img["first_name"];
+            $lname = $user_profile_img["last_name"];
+            //print_r($user_profile_img);
+            //die();
+            $avi = $user_profile_img["picture"]["data"]["url"];
+             } else {
+                //$loginUrl = $facebook->getLoginUrl();
+                //header('Location: ' . $loginUrl);
+                $loginUrl = $facebook->getLoginUrl(
+                array(
+                    //'scope' => 'publish_actions,user_birthday,email',
+                    'redirect_uri' => 'https://www.facebook.com/pages/Ixchels-school/514166771955164?id=514166771955164&sk=app_419722851452946'     
+                ));
+                echo "<script type='text/javascript'>top.location.href = '$loginUrl';</script>";
+             }
+            /*print_r($user_profile_img);
+            echo "string   ".$usuarioid;
+            die();*/
+            $long = strlen($avi);
+
+            if( substr($avi, $long-3) == 'gif'){
+                $avatar = imagecreatefromgif($avi);
+            } else {
+                $avatar = imagecreatefromjpeg($avi);
+            }
+
+            // Make the background transparent
+            list($source_image_width, $source_image_height, $source_image_type) = getimagesize($avi);
+            
+            imagecopy($mapImage, $avatar, 15, 15, 0, 0, 100, $source_image_height);            
+            imagedestroy($avatar);
+
+            $violet = imagecolorallocate($mapImage, 148,33,110);
+            imagettftext($mapImage, 25, 0, 125, 40, $violet, WWW_ROOT.'fonts/type-ra.ttf', $fname);
+            imagettftext($mapImage, 25, 0, 125, 80, $violet, WWW_ROOT.'fonts/type-ra.ttf', $lname);
+
+            /*
+            * COPY SOURCE IMAGES TO MAP
+            */
+            foreach ($srcImagePaths as $index => $srcImagePath)
+            {
+
+                list($source_image_width, $source_image_height, $source_image_type) = getimagesize($srcImagePath);
+                list ($x, $y) = $this->indexToCoords($index, $numberOfTiles, $source_image_height, $srcImagePaths);
+                switch ($source_image_type) {
+                    case IMAGETYPE_GIF:
+                        $tileImg = imagecreatefromgif($srcImagePath);
+                        break;
+                    case IMAGETYPE_JPEG:
+                        $tileImg = imagecreatefromjpeg($srcImagePath);
+                        break;
+                    case IMAGETYPE_PNG:
+                        $tileImg = imagecreatefrompng($srcImagePath);
+                        break;
+                }
+
+                $this->drawBorder($tileImg);
+
+                imagecopy($mapImage, $tileImg, $x, $y, 0, 0, $tileWidth, $source_image_height);
+                imagedestroy($tileImg);
+            }
+            /*
+             * SAVE  IMAGE
+             */
+
+            $footer = imagecreatefromjpeg(WWW_ROOT.'img/footer.jpg');
+
+            imagecopy($mapImage, $footer, 0, $mapHeight-55, 0, 0, $mapWidth, 55);
+            imagedestroy($footer);
+
+            $nameIMG = 'Look_'.$images[0]['Season']['id'].'_'.$this->Session->read('User.uid').'.png';
+            imagepng($mapImage, WWW_ROOT.'img/products/looks/'.$nameIMG); 
+            return $nameIMG;
+        } else {
+            return 'No images';
+        }
+    }
+
+    public function indexToCoords($index, $numberOfTiles, $tileHeight, $srcImagePaths)
+    {
+        $tileWidth = 174;
+        $pxBetweenTiles = $leftOffSet = $topOffSet = 10;
+
+
+        $topOffSet = 125+10;
+
+        if($index > 3){
+            list($source_image_width, $source_image_height, $source_image_type) = getimagesize($srcImagePaths[$index-4]); 
+            $topOffSet = $topOffSet+(10*floor($index / 4))+$source_image_height;
+        }
+
+        $x = ($index % 4) * ($tileWidth + $pxBetweenTiles) + $leftOffSet;
+        $y = floor($index / $numberOfTiles) * ($tileHeight+4 + $pxBetweenTiles) + $topOffSet;
+        return Array($x, $y);
+    }
+
+    public function imagefillfromfile($image, $width, $height) {
+        $imageWidth = imagesx($image);
+        $imageHeight = imagesy($image);
+        $newImage = imagecreatetruecolor($width, $height);
+        
+        for ($imageX = 0; $imageX < $width; $imageX += $imageWidth) {
+            for ($imageY = 0; $imageY < $height; $imageY += $imageHeight) {
+                imagecopy($newImage, $image, $imageX, $imageY, 0, 0, $imageWidth, $imageHeight);
+            }
+        }
+        
+        return($newImage);
+        imagedestroy($newImage);
+    }
+
+    // Draw a border 
+    public function drawBorder(&$img) 
+    {   
+        $thickness = 4;
+        $color = ImageColorAllocate($img, 214, 213, 195); 
+
+        $x1 = 0; 
+        $y1 = 0; 
+        $x2 = ImageSX($img) - 1; 
+        $y2 = ImageSY($img) - 1; 
+
+        for($i = 0; $i < $thickness; $i++) 
+        { 
+            ImageRectangle($img, $x1++, $y1++, $x2--, $y2--, $color); 
+        } 
+    } 
 
 
 }

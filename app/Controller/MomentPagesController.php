@@ -91,10 +91,14 @@ class MomentPagesController extends AppController {
         }
 
          $this->MomentPage->set(array( 
-              'trimester' => $trim
+              'trimester' => $trim,
+              'title' => $this->request->data['title'],
+              'subtitle' => $this->request->data['subtitle'],
+              'description' => $this->request->data['description'],
+              'profile_id' => $this->request->data['profile_id']
             ));
 
-        if ($this->MomentPage->save($this->request->data)) {
+        if ($this->MomentPage->save()) {
           //$this->Session->setFlash(__('The Cover photo has been saved'));
         } else {
           $this->Session->setFlash(__('The Page could not be saved. Please, try again.'));

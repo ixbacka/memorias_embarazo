@@ -66,7 +66,20 @@ class CoolultrasoundPagesController extends AppController {
           
         }
 
-        if ($this->CoolultrasoundPage->save($this->request->data)) {
+          $this->CoolultrasoundPage->set(array( 
+            'ultrasound_date' => $this->request->data['CoolultrasoundPage']['ultrasound_date'],
+            'iwas' => $this->request->data['CoolultrasoundPage']['iwas'],
+            'doctorsaid' => $this->request->data['CoolultrasoundPage']['doctorsaid'],
+            'b4' => $this->request->data['CoolultrasoundPage']['b4'],
+            'urdad' => $this->request->data['CoolultrasoundPage']['urdad'],
+            'urdadsays' => $this->request->data['CoolultrasoundPage']['urdadsays'],
+            'imiss' => $this->request->data['CoolultrasoundPage']['imiss'],
+            'theythink' => $this->request->data['CoolultrasoundPage']['theythink'],
+            'profile_id' => $this->request->data['CoolultrasoundPage']['profile_id']
+          ));
+
+
+        if ($this->CoolultrasoundPage->save()) {
           //$this->Session->setFlash(__('The Cover photo has been saved'));
         } else {
           $this->Session->setFlash(__('The Page could not be saved. Please, try again.'));

@@ -122,7 +122,30 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
   //    js.src = "//connect.facebook.net/en_US/all.js";
   //    fjs.parentNode.insertBefore(js, fjs);
   //  }(document, 'script', 'facebook-jssdk'));
-    
+      /*FACEBOOK SHIT*/
+     function postToFeed() {
+
+        // calling the API ...
+        var obj = {
+          method: 'feed',
+          //redirect_uri: '',
+          link: 'http://operacionxperia.com/momtomom/memorias_embarazo/profiles/view_book/<?php echo $this->Session->read("User.id"); ?>.pdf', //link to their PDF
+          picture: 'http://fbrell.com/f8.jpg',
+          name: 'Facebook Dialogs',
+          caption: 'Reference Documentation',
+          description: 'Using Dialogs to interact with people.'
+        };
+
+        function callback(response) {
+          //document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
+          if(response['post_id']){
+
+          }
+
+        }
+
+        FB.ui(obj, callback);
+      }
       
       </script> 
     

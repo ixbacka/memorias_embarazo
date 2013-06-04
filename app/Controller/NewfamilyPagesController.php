@@ -64,7 +64,11 @@ class NewfamilyPagesController extends AppController {
           
         }
 
-        if ($this->NewfamilyPage->save($this->request->data)) {
+          $this->NewfamilyPage->set(array( 
+            'profile_id' => $this->request->data['NewfamilyPage']['profile_id']
+          ));
+
+        if ($this->NewfamilyPage->save()) {
           //$this->Session->setFlash(__('The Cover photo has been saved'));
         } else {
           $this->Session->setFlash(__('The Page could not be saved. Please, try again.'));

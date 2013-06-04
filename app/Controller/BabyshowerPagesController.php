@@ -86,8 +86,20 @@ class BabyshowerPagesController extends AppController {
           ));
           
         }
+           $this->BabyshowerPage->set(array( 
+            'bbyshower_date' => $this->request->data['BabyshowerPage']['bbyshower_date'],
+            'present1' => $this->request->data['BabyshowerPage']['present1'],
+            'present2' => $this->request->data['BabyshowerPage']['present2'],
+            'present3' => $this->request->data['BabyshowerPage']['present3'],
+            'favoritepresent' => $this->request->data['BabyshowerPage']['favoritepresent'],
+            'profile_id' => $this->request->data['BabyshowerPage']['profile_id'],
+            'guest1' => $this->request->data['BabyshowerPage']['guest1'],
+            'guest2' => $this->request->data['BabyshowerPage']['guest2'],
+            'guest3' => $this->request->data['BabyshowerPage']['guest3'],
+          ));
 
-        if ($this->BabyshowerPage->save($this->request->data)) {
+
+        if ($this->BabyshowerPage->save()) {
           //$this->Session->setFlash(__('The Cover photo has been saved'));
         } else {
           $this->Session->setFlash(__('The Page could not be saved. Please, try again.'));
@@ -96,8 +108,9 @@ class BabyshowerPagesController extends AppController {
 
       }
 
+
    	  $this->set('bbyshower',$this->BabyshowerPage->find('first', array( 'conditions' => array( 'BabyshowerPage.profile_id' => $leid ) )));
-	  $this->set('profileid',$leid);
+	    $this->set('profileid',$leid);
 	}
 
 

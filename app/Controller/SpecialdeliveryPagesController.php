@@ -65,7 +65,20 @@ class SpecialdeliveryPagesController extends AppController {
           
         }
 
-        if ($this->SpecialdeliveryPage->save($this->request->data)) {
+          $this->SpecialdeliveryPage->set(array( 
+            'uare' => $this->request->data['SpecialdeliveryPage']['uare'],
+            'birthday' => $this->request->data['SpecialdeliveryPage']['birthday'],
+            'hour' => $this->request->data['SpecialdeliveryPage']['hour'],
+            'location' => $this->request->data['SpecialdeliveryPage']['location'],
+            'itwas' => $this->request->data['SpecialdeliveryPage']['itwas'],
+            'profile_id' => $this->request->data['SpecialdeliveryPage']['profile_id'],
+            'weightnmeasures' => $this->request->data['SpecialdeliveryPage']['weightnmeasures'],
+            'urhairneyes' => $this->request->data['SpecialdeliveryPage']['urhairneyes']
+          ));
+
+
+
+        if ($this->SpecialdeliveryPage->save()) {
           //$this->Session->setFlash(__('The Cover photo has been saved'));
         } else {
           $this->Session->setFlash(__('The Page could not be saved. Please, try again.'));
