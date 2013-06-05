@@ -504,3 +504,499 @@ $(document).ready(function() {
     <a href="http://www.momtomom.com.mx/" class="footer_link" target="_blank">www.momtomom.mx</a>
     <a href="https://twitter.com/momtomommx" class="footer_twitter" target="_blank">@momtomommx</a>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- add.ctp -->
+
+<style type="text/css">
+
+
+<?php if( isset($ultrasound['UltrasoundPage']['first_photo']) ){ ?>
+#ultrasound_photo_1{
+  background-image: url(../img/marco.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['first_photo']); ?>);
+  background-size: 280px 215px, 240px 192px;
+ 
+}
+<?php }?>
+
+<?php if( isset($ultrasound['UltrasoundPage']['second_photo']) ){ ?>
+#ultrasound_photo_2{
+  background-image: url(../img/marco.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['second_photo']); ?>);
+  background-size: 280px 215px, 240px 192px;
+}
+<?php }?>
+
+</style>
+
+ 
+<?php if(isset($ultrasound['UltrasoundPage']['first_date'])){ 
+  $source = $ultrasound['UltrasoundPage']['first_date'];
+  $date = new DateTime($source);
+  $letime = strtotime($source);
+
+  $mes = get_date_spanish($letime, true, 'month'); # return Enero
+
+  $dia = $date->format('d'); // 31.07.2012
+  $ano = $date->format('Y'); // 31-07-2012
+  //2013-05-16
+  $first_date = $ano.'-'.$date->format('m').'-'.$dia;
+  $monthi = ($date->format('m'))-1;
+      $first_date_dia = $dia;
+      $first_date_mes = $date->format('m');
+      $first_date_ano = $ano;
+ } else{
+      $first_date = '';
+    }
+    if(isset($ultrasound['UltrasoundPage']['second_date'])){ 
+
+      $source = $ultrasound['UltrasoundPage']['second_date'];
+      $date = new DateTime($source);
+      $letime = strtotime($source);
+
+      $mes1 = get_date_spanish($letime, true, 'month'); # return Enero
+
+      $dia1 = $date->format('d'); // 31.07.2012
+      $ano1 = $date->format('Y'); // 31-07-2012
+
+      $second_date = $ano1.'-'.$date->format('m').'-'.$dia1;
+      $second_date_dia = $dia1;
+      $second_date_mes = $date->format('m');
+      $second_date_ano = $ano1;
+
+      $monthi1 = ($date->format('m'))-1;
+     } else{
+      $second_date = '';
+    }
+?>
+
+<div class="page_title">
+  <?php
+      echo $this->Html->link(
+            'Anterior',
+            array('controller' => 'sintom_pages', 'action' => 'add'),
+            array('class' => 'ant')
+        );
+  ?>
+  <div class="title_page">
+    <p>s&uacute;per cool</p>
+    <span>fotos del ultrasonido</span>
+  </div>
+
+  <div class="ultrasoundPages form">
+
+    <div class="ultra">
+      <div class="photo-up" id="ultrasound_photo_1" >
+        <input type="hidden" name="data[UltrasoundPage][url_photo]" class="ultrasound_photo_1" value=""/>
+        <div class="pick_fb">Elegir de Facebook</div>
+        <?php
+          echo $this->Form->file('first_photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+        ?>
+      </div>
+      <div class="info">
+        <h3>Primer Ultrasonido</h3>
+        <p>
+          <label>Fuí el: </label>
+          <input type="text" id="datepickerCongrats" size="30" readonly="readonly"/>
+     
+            <input type="hidden" name="data[UltrasoundPage][first_date][month]" id="CongratsPagePruebaMonth" <?php if($first_date != ''){ ?>  value="<?php echo $first_date_mes; ?>" <?php } ?>/>
+            <input type="hidden" name="data[UltrasoundPage][first_date][day]" id="CongratsPagePruebaDay" <?php if($first_date != ''){ ?>  value="<?php echo $first_date_dia; ?>" <?php } ?> />
+            <input type="hidden" name="data[UltrasoundPage][first_date][year]" id="CongratsPagePruebaYear" <?php if($first_date != ''){ ?>  value="<?php echo $first_date_ano; ?>" <?php } ?> />
+        </p>
+        <p>
+          <label for="CongratsPageBabycoming">Tenía </label>
+          <input name="data[UltrasoundPage][first_week]" type="number" id="CongratsPageBabycoming" value="<?php if( isset($ultrasound['UltrasoundPage']['first_week'])){ echo $ultrasound['UltrasoundPage']['first_week']; }?>"> 
+          semanas de embarazo
+        </p>
+        <p>
+          <?php
+            if(isset($ultrasound['UltrasoundPage']['first_notes'])){
+              $first_notes = $ultrasound['UltrasoundPage']['first_notes'];
+            } else{
+              $first_notes = '';
+            }
+            echo $this->Form->input('first_notes', array('label' => 'Pero cuando me siento peor es: ', 'div' => false, 'value' => $first_notes));
+          ?>
+        </p>
+      </div>
+    </div>
+
+    <div class="ultra">
+      <div class="photo-up" id="ultrasound_photo_2" >
+        <input type="hidden" name="data[UltrasoundPage][url_photo_1]" class="ultrasound_photo_2" value=""/>
+        <div class="pick_fb">Elegir de Facebook</div>
+        <?php
+          echo $this->Form->file('second_photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+        ?>  
+      </div>
+      <div class="info">
+        <h3>Segundo Ultrasonido</h3>
+        <p>
+          <label>Fuí el: </label>
+          <input type="text" id="datepickerCongrats1" size="30" readonly="readonly" <?php if($second_date != ''){ echo 'value="' . $second_date . '"'; } ?>/>
+                   
+          <input type="hidden" name="data[UltrasoundPage][second_date][month]" id="CongratsPagePrueba1Month" <?php if($second_date != ''){ ?>  value="<?php echo $second_date_mes; ?>" <?php } ?> />
+          <input type="hidden" name="data[UltrasoundPage][second_date][day]" id="CongratsPagePrueba1Day" <?php if($second_date != ''){ ?>  value="<?php echo $second_date_dia; ?>" <?php } ?>/>
+          <input type="hidden" name="data[UltrasoundPage][second_date][year]" id="CongratsPagePrueba1Year" <?php if($second_date != ''){ ?>  value="<?php echo $second_date_ano; ?>" <?php } ?>/>
+        </p>
+        <p>
+          <label for="CongratsPageBabycoming">Tenía </label>
+          <input name="data[UltrasoundPage][second_week]" type="number" value="<?php if( isset($ultrasound['UltrasoundPage']['second_week'])){ echo $ultrasound['UltrasoundPage']['second_week']; }?>">
+          semanas de embarazo
+        </p>
+        <p><?php
+          if(isset($ultrasound['UltrasoundPage']['second_notes'])){
+            $second_notes = $ultrasound['UltrasoundPage']['second_notes'];
+          } else{
+            $second_notes = '';
+          }
+          echo $this->Form->input('second_notes', array('label' => 'Pero cuando me siento peor es: ','div' => false,'value' => $second_notes));
+        ?> <p>
+      </div>
+    </div>
+    <?php
+      // Esto no lo borres., lo comente para poder verla en local
+      echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
+    ?>  
+      <?php echo $this->Form->end(array(
+                'label' => 'Submit',
+                'div' => array(
+                    'id' => 'button_ultra',
+                )
+            ));
+      ?>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+
+  <?php if( isset($belly['BellyPage']['photo1']) ){ ?>
+  #photo1{
+    background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo1']); ?>);
+  }
+  <?php }?>
+
+
+  <?php if( isset($belly['BellyPage']['photo2']) ){ ?>
+  #photo2{
+    background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo2']); ?>);
+  }
+  <?php }?>
+
+
+  <?php if( isset($belly['BellyPage']['photo3']) ){ ?>
+  #photo3{
+    background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo3']); ?>);
+    
+  }
+  <?php }?>
+
+
+</style>
+
+
+
+
+<?php echo $this->element('menu', array( "trimestre" => 1, "pag" => "belly")); ?>
+
+<?php
+    echo $this->Html->link(
+            'Add Moment',
+            array('controller' => 'moment_pages', 'action' => 'add'),
+            array('class' => 'add_moment')
+        );
+  ?>
+
+<div class="content">
+  <?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
+  <div class="page_title">
+    <?php
+
+        echo $this->Html->link(
+              'Siguiente',
+              array('controller' => 'ultrasound_pages', 'action' => 'add'),
+              array('class' => 'ant')
+          );
+    ?>
+
+    <div class="title_page"><p>Mi pancita</p>
+      <span>mes a mes</span></div>
+  </div>
+
+  <div class="bellyPages form">
+
+  <?php echo $this->Form->create('BellyPage', array('enctype' => 'multipart/form-data')); ?>
+    <div class="mesuno">
+      <div class="bellyFile photo-up" id="photo1">
+        <input type="hidden" name="data[BellyPage][photo1_url][url_photo]" class="photo1" value=""/>
+        <div class="pick_fb">Elegir de Facebook</div>
+        <?php
+          echo $this->Form->file('grandpa_dad_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+        ?>
+      </div>
+      <p class="mes">Mes 1</p>
+    </div>
+    <div class="mesdos">
+      <div class="bellyFile photo-up" id="photo2">
+        <input type="hidden" name="data[BellyPage][photo2_url][url_photo]" class="photo2" value=""/>
+        <div class="pick_fb">Elegir de Facebook</div>
+        <?php
+          echo $this->Form->file('photo2', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+        ?>
+      </div>
+      <p class="mes">Mes 2</p>
+    </div>
+    <div class="mestres">
+      <div class="bellyFile photo-up" id="photo3">
+        <input type="hidden" name="data[BellyPage][photo3_url][url_photo]" class="photo3" value=""/>
+        <div class="pick_fb">Elegir de Facebook</div>
+        <?php
+          echo $this->Form->file('grandma_dad_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+        ?>
+      </div>
+      <p class="mes">Mes 3</p>
+    </div>
+      <?php
+        //no borrar, para poder verla en local, pero debes de descomentarla para subirla al server
+        echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
+      ?>
+  <?php echo $this->Form->end(__('Submit')); ?>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php echo $this->Html->script('functions'); ?>
+<?php echo $this->element('menu', array( "trimestre" => 1, "pag" => "animo")); ?>
+<?php
+    echo $this->Html->link(
+            'Add Moment',
+            array('controller' => 'moment_pages', 'action' => 'add'),
+            array('class' => 'add_moment')
+        );
+  ?>
+
+<div class="content">
+<?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
+
+<div class="page_title">
+  <?php
+      echo $this->Html->link(
+            'Anterior',
+            array('controller' => 'belly_pages', 'action' => 'add'),
+            array('class' => 'ant')
+        );
+  ?>
+  <div class="title_page">
+    <p>Mi ánimo</p>
+    <span>mes a mes</span>
+  </div>
+  <div class="sig">Siguiente</div>
+</div>
+<div class="animoPages form">
+  <?php echo $this->Form->create('AnimoPage'); ?>
+    <div class="meses cf">
+      <h3>Mes 1</h3>
+      <h3>Mes 2</h3>
+      <h3>Mes 3</h3>
+    </div>
+    <div class="mi-humor cf">
+      <!-- etiquetas de humor -->
+      <div class="col1">
+        <h4>Mi humor es: </h4>
+        <p>Feliz y sonriente</p> <!-- value = 1 -->
+        <p>Huracán Hormonal</p> <!-- value = 2 -->
+        <p>Mitad soleado - Mitad lluvioso</p> <!-- value = 3 -->
+      </div>
+
+      <!-- mes 1 - humor -->
+      <div class="col2">
+        <input type="radio" name="data[AnimoPage][month1_humor]" value="1" <?php if($month1_humor == 1){
+        echo 'checked="checked"'; } ?> />
+        <input type="radio" name="data[AnimoPage][month1_humor]" value="2" <?php if($month1_humor == 2){
+        echo 'checked="checked"'; } ?> />
+        <input type="radio" name="data[AnimoPage][month1_humor]" value="3" <?php if($month1_humor == 3){
+        echo 'checked="checked"'; } ?> />
+      </div>
+
+      <!-- mes 2 - humor -->
+      <div class="col3">
+
+        <input type="radio" name="data[AnimoPage][month2_humor]" value="1" <?php if($month2_humor == 1){
+          echo  'checked="checked"'; } ?> />
+        <input type="radio" name="data[AnimoPage][month2_humor]" value="2" <?php if($month2_humor == 2){
+          echo  'checked="checked"'; } ?> />
+        <input type="radio" name="data[AnimoPage][month2_humor]" value="3" <?php if($month2_humor == 3){
+          echo  'checked="checked"'; } ?> />
+      </div>
+
+      <!-- mes 3 - humor -->
+      <div class="col4">
+        <input type="radio" name="data[AnimoPage][month3_humor]" value="1" <?php if($month3_humor == 1){
+        echo  'checked="checked"'; } ?> />
+        <input type="radio" name="data[AnimoPage][month3_humor]" value="2" <?php if($month3_humor == 2){
+        echo  'checked="checked"'; } ?> />
+        <input type="radio" name="data[AnimoPage][month3_humor]" value="3" <?php if($month3_humor == 3){
+          echo  'checked="checked"'; } ?> />
+      </div>
+    </div>
+
+    <div class="mi-energia cf">
+      <div class="col1">
+        <!-- etiquetas de energia -->
+        <h4>Mi nivel de energía es:</h4>
+        <p>Relativamente normal</p> <!-- value = 1 -->
+        <p>Con un poco de sueño</p> <!-- value = 2 -->
+      </div>
+      <div class="col2">
+        <!-- mes 1 - energia -->
+       
+        <input type="radio" name="data[AnimoPage][month1_energy]" value="1" <?php if($month1_energy == 1){
+        echo  'checked="checked"'; } ?> />
+        <input type="radio" name="data[AnimoPage][month1_energy]" value="2" <?php if($month1_energy == 2){
+        echo  'checked="checked"'; } ?> />
+      </div>
+      <div class="col3">
+        <!-- mes 2 - energia -->
+        <input type="radio" name="data[AnimoPage][month2_energy]" value="1" <?php if($month2_energy == 1){
+          echo  'checked="checked"'; } ?> />
+        <input type="radio" name="data[AnimoPage][month2_energy]" value="2" <?php if($month2_energy == 2){
+          echo  'checked="checked"'; } ?> />
+      </div>
+      <div class="col4">
+        <!-- mes 3 - energia -->
+        <?php
+
+        ?>
+        <input type="radio" name="data[AnimoPage][month3_energy]" value="1" <?php if($month3_energy == 1){
+          echo  'checked="checked"'; } ?> />
+        <input type="radio" name="data[AnimoPage][month3_energy]" value="2" <?php if($month3_energy == 2){
+          echo  'checked="checked"'; } ?> />
+      </div>
+    </div>
+
+    <div class="mi-fisico cf">
+      <div class="col1">
+        <!-- etiquetas de fisico -->
+        <h4>El cambio físico que más he percibido: </h4>
+        <p>Mis pantalones aún me quedan</p> <!-- value = 1 -->
+        <p>¡Ups! medio me aprietan</p> <!-- value = 2 -->
+        <p> ¡Auxilio! Traigan el costal de papas</p> <!-- value = 3 -->
+      </div>
+
+       <!-- mes 1 - fisico -->
+      <div class="col2">
+
+        <input type="radio" name="data[AnimoPage][month1_physical]" value="1" <?php if($month1_physical == 1){
+        echo  'checked="checked"'; } ?> />
+        <input type="radio" name="data[AnimoPage][month1_physical]" value="2" <?php if($month1_physical == 2){
+        echo  'checked="checked"'; } ?> />
+        <input type="radio" name="data[AnimoPage][month1_physical]" value="3" <?php if($month1_physical == 2){
+        echo 'checked="checked"'; } ?> />
+      </div>
+
+      <div class="col3">
+       <!-- mes 2 - fisico -->
+        <input type="radio" name="data[AnimoPage][month2_physical]" value="1" <?php if($month2_physical == 1){
+        echo  'checked="checked"'; } ?> />
+        <input type="radio" name="data[AnimoPage][month2_physical]" value="2" <?php if($month2_physical == 2){
+        echo  'checked="checked"'; } ?> />
+        <input type="radio" name="data[AnimoPage][month2_physical]" value="3" <?php if($month2_physical == 2){
+        echo  'checked="checked"'; } ?> />
+      </div>
+
+      <div class="col4">
+       <!-- mes 3 - fisico -->
+        <?php
+
+        ?>
+        <input type="radio" name="data[AnimoPage][month3_physical]" value="1" <?php if($month3_physical == 1){
+        echo  'checked="checked"'; } ?> />
+        <input type="radio" name="data[AnimoPage][month3_physical]" value="2" <?php if($month3_physical == 2){
+        echo  'checked="checked"'; } ?> />
+        <input type="radio" name="data[AnimoPage][month3_physical]" value="3" <?php if($month3_physical == 2){
+          echo  'checked="checked"'; } ?> />
+      </div>
+    </div>
+
+    <div class="mi-otros cf">
+      <div class="col1">
+        <p>Otro</p>
+      </div>
+      <!-- otros ......  -->
+      <div class="col2">
+        <!-- mes 1 -->
+        <input type="text" name="data[AnimoPage][month1_other]" value="<?php if($month1_other != ''){
+        echo $month1_other; } ?>" />
+
+        <input type="text" name="data[AnimoPage][month1_other_1]" value="<?php if($month1_other_1 != ''){
+        echo $month1_other_1; } ?>" />
+      </div>
+      <div class="col3">
+        <!-- mes 2 -->
+        <input type="text" name="data[AnimoPage][month2_other]" value="<?php if($month2_other != ''){
+        echo $month2_other; } ?>" />
+
+        <input type="text" name="data[AnimoPage][month2_other_1]" value="<?php if($month2_other_1 != ''){
+        echo $month2_other_1; } ?>" />
+      </div>
+      <div class="col4">
+        <!-- mes 3 -->
+
+        <input type="text" name="data[AnimoPage][month3_other]" value="<?php if($month3_other != ''){
+        echo $month3_other; } ?>" />
+        <?php
+          
+        ?>
+        <input type="text" name="data[AnimoPage][month3_other_1]" value="<?php if($month3_other_1 != ''){
+          echo $month3_other_1; } ?>" />
+      </div>
+    </div>
+
+  </div>
+</div>
+
