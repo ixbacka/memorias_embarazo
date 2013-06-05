@@ -355,6 +355,7 @@ class ProfilesController extends AppController {
     if( $id['Profile']['cover_photo'] != null && !empty($id['Profile']['cover_photo']) ){
 	    $this->set('cover_pic', $id['Profile']['cover_photo']); 
     }
+	    $this->set('profileid', $id['Profile']['id']); 
 
 	}
 
