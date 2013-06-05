@@ -55,6 +55,7 @@ class ProfilesController extends AppController {
 
 		$profid = $this->Profile->find('first', array( 'conditions' => array( 'Profile.id' => $leid ) ) );
 	    $this->set('cover_pic', $profid['Profile']['cover_photo']); 
+	    $this->set('perfil', $profid); 
 
 	    $this->set('profileid',$leid);
 
@@ -92,6 +93,33 @@ class ProfilesController extends AppController {
         exit;
     }
 
+  public function changeFont($uid = null, $font = null){
+    	$error = 'No puedes cambiar el font.';
+		if($font != null){ 		
+
+			//guardar selected theme!
+			$this->Profile->create();
+
+			$id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' =>  $uid ) ) );
+
+		    $this->Profile->id = $id['Profile']['id'];
+			
+			$this->Profile->set(array( 
+		        'font' => $font
+		      ));
+
+	      if ($this->Profile->save()) {
+	        $error= 'Success!';
+	        //$this->Session->write('User.font', $font);
+	      } else {
+	         $error= 'Tu tema no se ha podido guardar.';
+	      }
+		}
+
+        header("Content-type: application/json");
+        echo json_encode($error);
+        exit;
+    }
 
 	
 	/*
@@ -158,6 +186,7 @@ class ProfilesController extends AppController {
 
 		        $this->Session->write('User.id', $user_saved1['Profile']['id']);
 	        	$this->Session->write("User.theme", $user_saved1['Profile']['theme']);
+		        $this->Session->write('User.font', $user_saved1['Profile']['font']);
 	        	$this->redirect(array('controller' => 'profiles', 'action' => 'cover'));
 
 	        } else {
@@ -470,7 +499,7 @@ class ProfilesController extends AppController {
     * Que crea la imagen para el trimestre
     */
     public function makeImage($uid){
-           $facebook = ;
+		$facebook = $this->Session->read("facebook");
 
             $user = $facebook->getUser();
 

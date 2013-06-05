@@ -142,6 +142,58 @@ $(document).ready(function(){
 		});
 	});
 
+
+	$('.font1').click(function(){
+		console.log('entrando en font 1 ....');
+		var url = "//operacionxperia.com/momtomom/memorias_embarazo/profiles/changeFont/"+UID+"/1";
+		$.getJSON(url, function(data, textStatus) {
+			console.log(data+"  - "+textStatus);
+			if(textStatus == 'success' && data == 'Success!'){
+				window.location.href=window.location.href;
+			} else {
+				alert('Ha ocurrido un error! Intenta darle refresh a la página');
+			}
+		});
+	});
+
+	$('.font2').click(function(){
+		var url = "//operacionxperia.com/momtomom/memorias_embarazo/profiles/changeFont/"+UID+"/2";
+		$.getJSON(url, function(data, textStatus) {
+			console.log(data+"  - "+textStatus);
+			if(textStatus == 'success' && data == 'Success!'){
+				window.location.href=window.location.href;
+			} else {
+				alert('Ha ocurrido un error! Intenta darle refresh a la página');
+			}
+		});
+	});
+
+	$('.font3').click(function(){
+		var url = "//operacionxperia.com/momtomom/memorias_embarazo/profiles/changeFont/"+UID+"/3";
+		$.getJSON(url, function(data, textStatus) {
+			console.log(data+"  - "+textStatus);
+			if(textStatus == 'success' && data == 'Success!'){
+				window.location.href=window.location.href;
+			} else {
+				alert('Ha ocurrido un error! Intenta darle refresh a la página');
+			}
+		});
+	});
+
+	$('.font4').click(function(){
+		var url = "//operacionxperia.com/momtomom/memorias_embarazo/profiles/changeFont/"+UID+"/4";
+		$.getJSON(url, function(data, textStatus) {
+			console.log(data+"  - "+textStatus);
+			if(textStatus == 'success' && data == 'Success!'){
+				window.location.href=window.location.href;
+			} else {
+				alert('Ha ocurrido un error! Intenta darle refresh a la página');
+			}
+		});
+	});
+
+
+
 });// jQuery End
 
 /************** start: functions for popup instructions **************/

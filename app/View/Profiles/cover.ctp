@@ -204,12 +204,28 @@ fbphotoSelect = function(id) {
     </div> <!--toPopup end-->
 
     <div id="personalizar_popup">
-      <ul class="lostemas">
+      <div> 
+        <p>
+          Para comenzar, seleccionar el estilo que prefieras para guardar tus Memorias de Embarazo:
+        </p>
+        <p>
+          Selecciona la letra que prefieras para tu diario:
+        </p>
+      </div>
+      <div>
+       <ul class="losfonts">
+            <li class="font1"> Mam&aacute; </li>
+            <li class="font2"> Mam&aacute; </li>
+            <li class="font3"> Mam&aacute; </li>
+            <li class="font4"> Mam&aacute; </li>
+        </ul>  
+       <ul class="lostemas">
             <li class="tema1"> Tema 1 </li>
             <li class="tema2"> Tema 2  </li>
             <li class="tema3"> Tema 3 </li>
             <li class="tema4"> Tema 4 </li>
         </ul>  
+      </div>
     </div>
 
 

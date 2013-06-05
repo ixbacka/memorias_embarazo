@@ -38,7 +38,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
+  <link href='//fonts.googleapis.com/css?family=Crafty+Girls' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Loved+by+the+King' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'> 
+  <link href='//fonts.googleapis.com/css?family=Waiting+for+the+Sunrise' rel='stylesheet' type='text/css'>
 
   <?php echo $this->Html->script('clickoutside'); ?>
 
@@ -59,15 +62,45 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
   <?php 
         $tema = $this->Session->read("User.theme");
-        if($tema == 1){ echo $this->Html->css('tema1'); } 
-        elseif($tema == 2){ echo $this->Html->css('tema2'); } 
-        elseif($tema == 3){ echo $this->Html->css('tema3'); } 
-        elseif($tema == 4){ echo $this->Html->css('tema4'); } 
+        if($tema == 1){ 
+          echo $this->Html->css('tema1'); 
+          if( strpos($_SERVER['REQUEST_URI'], 'book') == TRUE ){ 
+             echo $this->Html->css('book1'); 
+          }
+        } 
+        elseif($tema == 2){ 
+          echo $this->Html->css('tema2'); 
+          if( strpos($_SERVER['REQUEST_URI'], 'book') == TRUE ){ 
+             echo $this->Html->css('book2'); 
+          }
+        } 
+        elseif($tema == 3){ 
+          echo $this->Html->css('tema3'); 
+          if( strpos($_SERVER['REQUEST_URI'], 'book') == TRUE ){ 
+             echo $this->Html->css('book3'); 
+          }
+        } 
+        elseif($tema == 4){ 
+          echo $this->Html->css('tema4'); 
+          if( strpos($_SERVER['REQUEST_URI'], 'book') == TRUE ){ 
+             echo $this->Html->css('book4'); 
+          }
+        } 
+  ?>  
+
+
+   <?php 
+        $font = $this->Session->read("User.font");
+        if($font == 1){ echo $this->Html->css('letra1'); } 
+        elseif($font == 2){ echo $this->Html->css('letra2'); } 
+        elseif($font == 3){ echo $this->Html->css('letra3'); } 
+        elseif($font == 4){ echo $this->Html->css('letra4'); } 
   ?>  
 
 </head>
 <body>
 
+  <?php if( strpos($_SERVER['REQUEST_URI'], 'book') == FALSE ){  ?>
   <div id="fb-root"></div>
     <!-- solution for resizing ! *0* -->
   <script type="text/javascript">  
@@ -148,6 +181,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
       }
       
       </script> 
+      <?php } ?>
     
     <?php if( strpos($_SERVER['REQUEST_URI'], 'profiles') == FALSE &&
               strpos($_SERVER['REQUEST_URI'], 'fangate') == FALSE &&
@@ -186,12 +220,28 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
     </div> <!--toPopup end-->
 
     <div id="personalizar_popup">
+      <div> 
+        <p>
+          Para comenzar, seleccionar el estilo que prefieras para guardar tus Memorias de Embarazo:
+        </p>
+        <p>
+          Selecciona la letra que prefieras para tu diario:
+        </p>
+      </div>
+      <div>
+       <ul class="losfonts">
+            <li class="font1"> Mam&aacute; </li>
+            <li class="font2"> Mam&aacute; </li>
+            <li class="font3"> Mam&aacute; </li>
+            <li class="font4"> Mam&aacute; </li>
+        </ul>  
        <ul class="lostemas">
             <li class="tema1"> Tema 1 </li>
             <li class="tema2"> Tema 2  </li>
             <li class="tema3"> Tema 3 </li>
             <li class="tema4"> Tema 4 </li>
         </ul>  
+      </div>
     </div>
 
   <div class="loader"></div>
