@@ -253,7 +253,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
     <?php echo $this->fetch('content'); ?>
     <?php if( strpos($_SERVER['REQUEST_URI'], 'profiles') == FALSE &&
               strpos($_SERVER['REQUEST_URI'], 'fangate') == FALSE &&
-              strpos($_SERVER['REQUEST_URI'], 'cover') == FALSE  ){ 
+              strpos($_SERVER['REQUEST_URI'], 'cover') == FALSE  ){
     ?>
     <div class="footer">
       <div class="footer_mtm">Mom to mom , Consintiendo mi piel de mam&aacute;</div>

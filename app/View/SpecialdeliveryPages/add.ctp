@@ -216,100 +216,108 @@ function readURL(input) {
   </div>
 
   <div class="specialdeliveryPages form">
+      <?php echo $this->Form->create('SpecialdeliveryPage', array('enctype' => 'multipart/form-data')); ?>
+    <div class="todo">
 
-    <?php echo $this->Form->create('SpecialdeliveryPage', array('enctype' => 'multipart/form-data')); ?>
-
-    <div id="photo" class="photo-up">
-      <input type="hidden" name="data[SpecialdeliveryPage][url_photo]" class="photo" value=""/>
-      <div class="pick_fb">Elegir de Facebook</div>
-      <?php
-        echo $this->Form->file('photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
-      ?>
-    </div>
-
-    <?php
-      if(isset($special['SpecialdeliveryPage']['uare'])){
-        $uare = $special['SpecialdeliveryPage']['uare'];
-      } else{
-        $uare = '';
-      }
-  ?>
-    <p class="eres">
-      <label> Eres: </label>
-      <input type="text" name="data[SpecialdeliveryPage][uare]" value="<?php if($uare != ''){ echo $uare; } ?>"/>
-    </p>
-    <?php
-      if(isset($special['SpecialdeliveryPage']['hour'])){
-        $hour = $special['SpecialdeliveryPage']['hour'];
-      } else{
-        $hour = '';
-      }
-    ?>
-    <p class="bday">
-      <label>Naciste el d&iacute;a: </label>
-      <input type="text" id="datepickerCongrats" size="30" readonly="readonly"  value="<?php if($birthday != ''){
-            echo $birthday; } ?>"/>
-      <input type="hidden" name="data[SpecialdeliveryPage][birthday][month]" id="CongratsPagePruebaMonth" />
-      <input type="hidden" name="data[SpecialdeliveryPage][birthday][day]" id="CongratsPagePruebaDay" />
-      <input type="hidden" name="data[SpecialdeliveryPage][birthday][year]" id="CongratsPagePruebaYear" />
-      a las:
-      <input type="text" name="data[SpecialdeliveryPage][hour]" value="<?php if($hour != ''){ echo $hour; } ?>"/>
-    </p>
-    <?php
-    if(isset($special['SpecialdeliveryPage']['location'])){
-      $location = $special['SpecialdeliveryPage']['location'];
-    } else{
-      $location = '';
-    }
-    ?>
-    <p class="bplace">
-      <label> Naciste en: </label>
-      <input type="text" name="data[SpecialdeliveryPage][location]" value="<?php if($location != ''){ echo $location; } ?>"/>
-    </p>
-    <div class="parto">
-      <p>El parto fue: </p>
-      <?php
-      if(isset($special['SpecialdeliveryPage']['itwas'])){
-        $itwas = $special['SpecialdeliveryPage']['itwas'];
-      } else{
-        $itwas = '';
-      }
-      ?>
-      <div class="opciones">
-        <input type="radio" name="data[SpecialdeliveryPage][itwas]" value="1" <?php if($itwas == 1){ echo 'checked="checked"'; } ?> />
-        <label> Natural </label>
-        <input type="radio" name="data[SpecialdeliveryPage][itwas]" value="2" <?php if($itwas == 2){ echo 'checked="checked"'; } ?> />
-        <label> Epidural</label>
-        <input type="radio" name="data[SpecialdeliveryPage][itwas]" value="3" <?php if($itwas == 3){ echo 'checked="checked"'; } ?> />
-        <label> Ces&aacute;rea</label>
+      <div id="photo" class="photo-up">
+        <input type="hidden" name="data[SpecialdeliveryPage][url_photo]" class="photo" value=""/>
+        <div class="pick_fb">Elegir de Facebook</div>
+        <?php
+          echo $this->Form->file('photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+        ?>
       </div>
+
+      <?php
+        if(isset($special['SpecialdeliveryPage']['uare'])){
+          $uare = $special['SpecialdeliveryPage']['uare'];
+        } else{
+          $uare = '';
+        }
+    ?>
+      <p class="eres">
+        <label> Eres: </label>
+        <input type="text" name="data[SpecialdeliveryPage][uare]" value="<?php if($uare != ''){ echo $uare; } ?>"/>
+      </p>
+      <?php
+        if(isset($special['SpecialdeliveryPage']['hour'])){
+          $hour = $special['SpecialdeliveryPage']['hour'];
+        } else{
+          $hour = '';
+        }
+      ?>
+      <p class="bday">
+        <label>Naciste el d&iacute;a: </label>
+        <input type="text" id="datepickerCongrats" size="30" readonly="readonly"  value="<?php if($birthday != ''){
+              echo $birthday; } ?>"/>
+        <input type="hidden" name="data[SpecialdeliveryPage][birthday][month]" id="CongratsPagePruebaMonth" />
+        <input type="hidden" name="data[SpecialdeliveryPage][birthday][day]" id="CongratsPagePruebaDay" />
+        <input type="hidden" name="data[SpecialdeliveryPage][birthday][year]" id="CongratsPagePruebaYear" />
+        a las:
+        <input type="text" name="data[SpecialdeliveryPage][hour]" value="<?php if($hour != ''){ echo $hour; } ?>"/>
+      </p>
+      <?php
+      if(isset($special['SpecialdeliveryPage']['location'])){
+        $location = $special['SpecialdeliveryPage']['location'];
+      } else{
+        $location = '';
+      }
+      ?>
+      <p class="bplace">
+        <label> Naciste en: </label>
+        <input type="text" name="data[SpecialdeliveryPage][location]" value="<?php if($location != ''){ echo $location; } ?>"/>
+      </p>
+      <div class="parto">
+        <p>El parto fue: </p>
+        <?php
+        if(isset($special['SpecialdeliveryPage']['itwas'])){
+          $itwas = $special['SpecialdeliveryPage']['itwas'];
+        } else{
+          $itwas = '';
+        }
+        ?>
+        <div class="opciones">
+          <div class="cf">
+            <input type="radio" name="data[SpecialdeliveryPage][itwas]" value="1" <?php if($itwas == 1){ echo 'checked="checked"'; } ?> />
+            <label> Natural </label>
+          </div>
+          <div class="cf">
+            <input type="radio" name="data[SpecialdeliveryPage][itwas]" value="2" <?php if($itwas == 2){ echo 'checked="checked"'; } ?> />
+            <label> Epidural</label>
+          </div>
+          <div class="cf">
+            <input type="radio" name="data[SpecialdeliveryPage][itwas]" value="3" <?php if($itwas == 3){ echo 'checked="checked"'; } ?> />
+            <label> Ces&aacute;rea</label>
+          </div>
+        </div>
+      </div>
+
+      <?php
+        if(isset($special['SpecialdeliveryPage']['weightnmeasures'])){
+          $weightnmeasures = $special['SpecialdeliveryPage']['weightnmeasures'];
+        } else{
+          $weightnmeasures = '';
+        }
+      ?>
+      <p class="pesaste">
+        <label> Pesaste y mediste: </label>
+        <input type="text" name="data[SpecialdeliveryPage][weightnmeasures]" value="<?php if($weightnmeasures != ''){ echo $weightnmeasures; } ?>"/>
+      </p>
+
+      <?php
+        if(isset($special['SpecialdeliveryPage']['urhairneyes'])){
+          $urhairneyes = $special['SpecialdeliveryPage']['urhairneyes'];
+        } else{
+          $urhairneyes = '';
+        }
+      ?>
+      <p class="ojos">
+        <label> Tu cabello y tus ojos son: </label>
+        <input type="text" name="data[SpecialdeliveryPage][urhairneyes]" value="<?php if($urhairneyes != ''){ echo $urhairneyes; } ?>"/>
+      </p>
+
     </div>
+     <p class="nota-foot"> ¡Apenas puedo creer que estabas en mi panza! </p>
 
-    <?php
-      if(isset($special['SpecialdeliveryPage']['weightnmeasures'])){
-        $weightnmeasures = $special['SpecialdeliveryPage']['weightnmeasures'];
-      } else{
-        $weightnmeasures = '';
-      }
-    ?>
-    <p class="pesaste">
-      <label> Pesaste y mediste: </label>
-      <input type="text" name="data[SpecialdeliveryPage][weightnmeasures]" value="<?php if($weightnmeasures != ''){ echo $weightnmeasures; } ?>"/>
-    </p>
-
-    <?php
-      if(isset($special['SpecialdeliveryPage']['urhairneyes'])){
-        $urhairneyes = $special['SpecialdeliveryPage']['urhairneyes'];
-      } else{
-        $urhairneyes = '';
-      }
-    ?>
-    <p class="ojos">
-      <label> Tu cabello y tus ojos son: </label>
-      <input type="text" name="data[SpecialdeliveryPage][urhairneyes]" value="<?php if($urhairneyes != ''){ echo $urhairneyes; } ?>"/>
-    </p>
-
-    <p class="nota-foot"> ¡Apenas puedo creer que estabas en mi panza! </p>
     <?php	echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid)); ?>
     <?php echo $this->Form->end(__('Submit')); ?>
   </div>

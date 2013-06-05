@@ -116,34 +116,35 @@ function get_date_spanish( $time, $part = false, $formatDate = '' ){
       <input type="hidden" name="data[FirstVisitPage][estimated][day]" id="CongratsPagePruebaDay" <?php if($estimated != ''){ ?>  value="<?php echo $dia; ?>" <?php } ?> />
       <input type="hidden" name="data[FirstVisitPage][estimated][year]" id="CongratsPagePruebaYear" <?php if($estimated != ''){ ?>  value="<?php echo $ano; ?>" <?php } ?> />
     </div>
+  <div class="row cf">
+    <?php
 
-  <?php
+    if(isset($firstvisit['FirstVisitPage']['weight'])){
+      $weight = $firstvisit['FirstVisitPage']['weight'];
+    } else{
+      $weight = '';
+    }
+      echo $this->Form->input('weight', array('label' => 'Mi peso actual: ','after' => '</span>','between' => '<span>', 'value' => $weight));
+      /*
+      echo $this->Form->input('babycoming', array('label' => 'Tenía '));
+      echo $this->Form->input('howishare', array('label' => 'semanas de embarazo cuando me enteré que venía el bebé en camino, ahh que emoción!. Compartí la gran noticia con el papá de mi bebé de esta manera: ', 'after' => '</span>','between' => '<span>',  'before' => '<p>semanas de embarazo cuando me enteré que venía el bebé en camino, ahh que emoción!. Compartí la gran noticia con el papá de mi bebé de esta manera:</p>', 'label' => false));
+      */
 
-  if(isset($firstvisit['FirstVisitPage']['weight'])){
-    $weight = $firstvisit['FirstVisitPage']['weight'];
-  } else{
-    $weight = '';
-  }
-    echo $this->Form->input('weight', array('label' => 'Mi peso actual: ','after' => '</span>','between' => '<span>', 'value' => $weight));
-    /*
-    echo $this->Form->input('babycoming', array('label' => 'Tenía '));
-    echo $this->Form->input('howishare', array('label' => 'semanas de embarazo cuando me enteré que venía el bebé en camino, ahh que emoción!. Compartí la gran noticia con el papá de mi bebé de esta manera: ', 'after' => '</span>','between' => '<span>',  'before' => '<p>semanas de embarazo cuando me enteré que venía el bebé en camino, ahh que emoción!. Compartí la gran noticia con el papá de mi bebé de esta manera:</p>', 'label' => false));
-    */
+        if(isset($firstvisit['FirstVisitPage']['measurements'])){
+          $measurements = $firstvisit['FirstVisitPage']['measurements'];
+        } else{
+          $measurements = '';
+        }
 
-      if(isset($firstvisit['FirstVisitPage']['measurements'])){
-        $measurements = $firstvisit['FirstVisitPage']['measurements'];
-      } else{
-        $measurements = '';
-      }
+        echo $this->Form->input('measurements', array('label' => 'Las medidas de mi pancita: ','after' => '</span>','between' => '<span>', 'value' => $measurements));
 
-      echo $this->Form->input('measurements', array('label' => 'Las medidas de mi pancita: ','after' => '</span>','between' => '<span>', 'value' => $measurements));
-
-      if(isset($firstvisit['FirstVisitPage']['firstvisit'])){
-        $firstvisit = $firstvisit['FirstVisitPage']['firstvisit'];
-      } else{
-        $firstvisit = '';
-      }
-
+        if(isset($firstvisit['FirstVisitPage']['firstvisit'])){
+          $firstvisit = $firstvisit['FirstVisitPage']['firstvisit'];
+        } else{
+          $firstvisit = '';
+        } ?>
+  </div>
+  <?php 
     echo $this->Form->input('firstvisit',array('label' => 'Lo que recuerdo de mi primera visita es: ', 'after' => '</span>','between' => '<span>', 'value' => $firstvisit));
     /*
     echo $this->Form->input('details',array('label' => '¡Anota todos los detalles antes de que se te olviden!... ¿Cómo y dónde celebraste  saber que estabas embarazada? ¿Con quién compartiste el momento? ¿Cómo  reaccionaron tus familiares? ¿Cuál fue la primera compra que hiciste o regalo que te dieron para el bebé?', 'after' => '</span>','between' => '<span>'));
