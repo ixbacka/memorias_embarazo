@@ -244,7 +244,7 @@ body {
   width: 107px;
   height: 20px;
   position: relative;
-  top: 139px;
+  top: 137px;
   left: 62px;
 }
 
@@ -276,8 +276,8 @@ body {
 
 #send_OK input[type="submit"]{
 	position: absolute;
-	top: 187px;
-	left: 159px;
+	top: -50px;
+	left: 110px;
 	text-indent: -9999px;
 	width: 54px;
 	height: 54px;
@@ -312,40 +312,43 @@ p.whatdo{
 
 .write_bt{
   float: left;
-  background-image: url(../img/bt_escribir_up.png);
+  background-image: url(../img/bt_escribir.png);
   width: 188px;
   height: 123px;
   text-indent: -9999px;
 }
 
-.write_bt:hover{
-  background-image: url(../img/bt_escribir.png);
+.write_bt:hover {
+  background-position: 0 123px;
+  margin-top: -5px;
 }
 
 
 .share_bt{
   float: left;
-  background-image: url(../img/bt_compartir_up.png);
+  background-image: url(../img/bt_compartir.png);
   width: 188px;
   height: 130px;
   text-indent: -9999px;
 }
 
 .share_bt:hover{
-  background-image: url(../img/bt_compartir.png);
+  background-position: 0 134px;
+  margin-top: -5px;
 }
 
 
 .watch_bt{
   float: left;
-  background-image: url(../img/bt_ver_up.png);
+  background-image: url(../img/bt_ver.png);
   width: 188px;
   height: 123px;
   text-indent: -9999px;
 }
 
 .watch_bt:hover{
-  background-image: url(../img/bt_ver.png);
+  background-position: 0 116px;
+  margin-top: -5px;
 }
 
 .instructions_bt{
