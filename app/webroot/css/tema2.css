@@ -1,0 +1,73 @@
+.ask{
+  background-image: url(../img/ayuda.png);
+}
+
+.settings {
+  background-image: url(../img/ajustes.png);
+}
+
+.home{
+  background-image: url(../img/home.png);
+}
+
+#header h1 {
+  background: #003d4c url('../img/cake.icon.png') no-repeat left;
+}
+
+body {
+	background-image: url(../img/back.png);
+}
+
+.cover_photo,
+.photo-up,
+.photo-v {
+  background-image: url(../img/marco.png), url(../img/marco_fondo.png);
+}
+
+.pick_fb{
+  background-image: url(../img/bt_elegir.png);
+}
+
+p.whatdo{
+  background-image: url(../img/que-quieres-hacer.png);
+}
+
+.write_bt {
+  background-image: url(../img/bt_escribir_up.png);
+}
+
+.share_bt{
+  background-image: url(../img/bt_compartir_up.png);
+}
+
+.watch_bt{
+  background-image: url(../img/bt_ver_up.png);
+}
+
+.instructions_bt{
+  background-image: url(../img/bt_instrucciones_up.png);
+}
+
+.first_trim{
+  background-image: url(../img/bt_primer.png);
+}
+
+.second_trim{
+  background-image: url(../img/bt_segundo.png);
+}
+
+.third_trim{
+  background-image: url(../img/bt_tercer.png);
+}
+
+.add_moment{
+  background-image: url(../img/bt_agregar.png);
+}
+
+.ant{
+  background-image: url(../img/anterior.png);
+}
+
+.sig{
+  background-image: url(../img/siguiente.png);
+}
