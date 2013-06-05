@@ -12,9 +12,9 @@ body{
 
 
 .b-page-cover, .b-page{
-  background-image: url(../../img/back.png);
-  background-size: cover;
   background-color: #0b526d;
+  background-image: url(../img/back.png);
+  background-size: cover;
 }
 
 .book-cover-photo{
@@ -186,4 +186,109 @@ width: 436px;
 text-align: center;
 color: #269ccc;
 font-size: 12px;
+}
+
+
+#ultrasound_photo_1{
+position: absolute;
+top: 6px;
+left: 0px;
+width: 200px;
+height: 143px;
+background-image: url(../img/marco.png), url(../img/marco_fondo.png);
+background-size: 200px, 162px 133px;
+background-position: top left, center center;
+background-repeat: no-repeat;
+}
+
+#ultrasound_photo_2{
+  position: absolute;
+  top: 170px;
+  left: 0px;
+  width: 200px;
+  height: 150px;
+  background-image: url(../img/marco.png), url(../img/marco_fondo.png);
+  background-size: 200px, 162px 133px;
+  background-position: top left, center center;
+  background-repeat: no-repeat;
+}
+
+.ultrasound-second{
+  position: absolute;
+  top: 175px;
+  left: 220px;
+}
+
+.ultrasound-first{
+  position: absolute;
+  top: 17px;
+  left: 220px;
+}
+
+h3{
+  color: #1082AC;
+  font-size: 150%;
+  font-weight: normal;
+}
+
+#photo1{
+  background-image: url(../img/marco.png), url(../img/marco_fondo.png);
+  width: 200px;
+  background-size: 200px, 172px 130px;
+  height: 148px;
+  background-position: top left, center;
+  background-repeat: no-repeat;
+  top: 20px;
+  position: absolute;
+  left: 0px;
+}
+
+.mes1{
+  color: #1082AC;
+  font-size: 14px;
+  position: absolute;
+  top: 174px;
+  left: 75px;
+}
+
+#photo2{
+  background-image: url(../img/marco.png), url(../img/marco_fondo.png);
+  width: 200px;
+  background-size: 200px, 172px 130px;
+  height: 148px;
+  background-position: top left, center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 20px;
+  left: 215px;
+}
+.mes2{
+  color: #1082AC;
+  font-size: 14px;
+  position: absolute;
+  top: 174px;
+  left: 290px;
+}
+
+#photo3{
+  background-image: url(../img/marco.png), url(../img/marco_fondo.png);
+  width: 200px;
+  background-size: 200px, 172px 130px;
+  height: 148px;
+  background-position: top left, center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 200px;
+  left: 110px;
+}
+.mes3{
+  color: #1082AC;
+  font-size: 14px;
+  position: absolute;
+  top: 347px;
+  left: 188px;
+}
+
+.meses {
+margin-left: 50px;
 }

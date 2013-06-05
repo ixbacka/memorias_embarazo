@@ -117,6 +117,48 @@ body{
 }
 <?php }?>
 
+
+
+<?php if( isset($ultrasound['UltrasoundPage']['first_photo']) ){ ?>
+#ultrasound_photo_1{
+  background-image: url(../../img/marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['first_photo']); ?>);
+  background-size: 200px, 162px 133px;
+  background-position: top left, center center;
+  background-repeat: no-repeat;   
+}
+<?php }?>
+
+<?php if( isset($ultrasound['UltrasoundPage']['second_photo']) ){ ?>
+#ultrasound_photo_2{
+  background-image: url(../../img/marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['second_photo']); ?>);
+  background-size: 200px, 162px 133px;
+}
+<?php }?>
+
+
+
+  <?php if( isset($belly['BellyPage']['photo1']) ){ ?>
+  #photo1{
+    background-image: url(../../img/marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo1']); ?>);
+  }
+  <?php }?>
+
+
+  <?php if( isset($belly['BellyPage']['photo2']) ){ ?>
+  #photo2{
+    background-image: url(../../img/marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo2']); ?>);
+  }
+  <?php }?>
+
+
+  <?php if( isset($belly['BellyPage']['photo3']) ){ ?>
+  #photo3{
+    background-image: url(../../img/marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo3']); ?>);
+    
+  }
+  <?php }?>
+
+
 </STYLE>
 
 
@@ -398,7 +440,6 @@ body{
      <div class="book-footer"></div>
 
   </div>
-
   <div> 
 
       <div class="book-header"></div>
@@ -549,4 +590,400 @@ body{
      <div class="book-footer"></div>
 
   </div> 
+  <div> 
+
+      <div class="book-header"></div>
+
+      <div class="book-content">
+
+        <div class="book-page-title">
+          <div class="book-title-page">
+            <p>s&uacute;per cool</p>
+            <br>
+            <span>fotos del ultrasonido</span>
+          </div>
+        </div>
+
+        <div class="book-form">
+
+        <?php 
+
+          if(isset($ultrasound['UltrasoundPage']['first_date'])){ 
+          $source = $ultrasound['UltrasoundPage']['first_date'];
+          $date = new DateTime($source);
+          $letime = strtotime($source);
+
+          $mes = get_date_spanish($letime, true, 'month'); # return Enero
+
+          $dia = $date->format('d'); // 31.07.2012
+          $ano = $date->format('Y'); // 31-07-2012
+          //2013-05-16
+          $first_date = $ano.'-'.$date->format('m').'-'.$dia;
+          $monthi = ($date->format('m'))-1;
+              $first_date_dia = $dia;
+              $first_date_mes = $date->format('m');
+              $first_date_ano = $ano;
+          } else{
+            $first_date = '';
+          }
+          if(isset($ultrasound['UltrasoundPage']['second_date'])){ 
+
+            $source = $ultrasound['UltrasoundPage']['second_date'];
+            $date = new DateTime($source);
+            $letime = strtotime($source);
+
+            $mes1 = get_date_spanish($letime, true, 'month'); # return Enero
+
+            $dia1 = $date->format('d'); // 31.07.2012
+            $ano1 = $date->format('Y'); // 31-07-2012
+
+            $second_date = $ano1.'-'.$date->format('m').'-'.$dia1;
+            $second_date_dia = $dia1;
+            $second_date_mes = $date->format('m');
+            $second_date_ano = $ano1;
+
+            $monthi1 = ($date->format('m'))-1;
+           } else{
+            $second_date = '';
+          }
+
+            if(isset($ultrasound['UltrasoundPage']['first_notes'])){
+              $first_notes = $ultrasound['UltrasoundPage']['first_notes'];
+            } else{
+              $first_notes = '';
+            }
+
+            if(isset($ultrasound['UltrasoundPage']['second_notes'])){
+              $second_notes = $ultrasound['UltrasoundPage']['second_notes'];
+            } else{
+              $second_notes = '';
+            }
+
+          ?>
+            
+            <div id="ultrasound_photo_1">  </div>
+
+            <div class='ultrasound-first'>
+            <h3>Primer Ultrasonido</h3>
+            <p>
+              <label>Fu&iacute; el:</label>
+              <span><?php echo $first_date; ?></span>
+            </p>
+            <p>
+              <label> Ten&iacute;a </label>
+              <span><?php if( isset($ultrasound['UltrasoundPage']['first_week'])){ echo $ultrasound['UltrasoundPage']['first_week']; }?></span> semanas de embarazo
+            </p>
+            <p>
+              <label> Anotaci&oacute;n: </label>
+              <span><?php echo $first_notes; ?></span>
+            </p>
+           </div>
+
+            <div id="ultrasound_photo_2">  </div>
+
+            <div class='ultrasound-second'>
+            <h3>Segundo Ultrasonido</h3>
+            <p>
+              <label>Fu&iacute; el:</label>
+              <span><?php echo $second_date; ?></span>
+            </p>
+            <p>
+              <label> Ten&iacute;a </label>
+              <span><?php if( isset($ultrasound['UltrasoundPage']['second_week'])){ echo $ultrasound['UltrasoundPage']['second_week']; }?></span> semanas de embarazo
+            </p>
+            <p>
+              <label> Anotaci&oacute;n: </label>
+              <span><?php echo $second_notes; ?></span>
+            </p>
+           </div>
+
+        </div>
+      
+      </div>
+
+     <div class="book-footer"></div>
+
+  </div>
+  <div> 
+      <div class="book-header"></div>
+
+      <div class="book-content">
+
+        <div class="book-page-title">
+          <div class="book-title-page">
+            <p>Mi pancita</p><br>
+            <span>mes a mes</span>
+          </div>
+        </div>
+
+        <div class="book-form">
+
+          <div id="photo1">
+          </div>
+          <p class="mes1">Mes 1</p>
+          
+          <div id="photo2">
+          </div>
+          <p class="mes2">Mes 2</p>
+          
+          <div id="photo3">
+          </div>
+          <p class="mes3">Mes 3</p>
+
+        </div>
+      
+      </div>
+
+     <div class="book-footer"></div>
+
+  </div>
+  <div> 
+
+      <div class="book-header"></div>
+
+      <div class="book-content">
+
+        <div class="book-page-title">
+          <div class="book-title-page">
+            <p>Mi ánimo</p><br>
+            <span>mes a mes</span>
+          </div>
+        </div>
+
+        <div class="book-form">
+          <?php
+            if(isset($animo['AnimoPage']['month1_humor'])){
+              $month1_humor = $animo['AnimoPage']['month1_humor'];
+            } else{
+              $month1_humor = '';
+            }
+            if(isset($animo['AnimoPage']['month2_humor'])){
+              $month2_humor = $animo['AnimoPage']['month2_humor'];
+            } else{
+              $month2_humor = '';
+            }
+             if(isset($animo['AnimoPage']['month3_humor'])){
+              $month3_humor = $animo['AnimoPage']['month3_humor'];
+            } else{
+              $month3_humor = '';
+            }
+            if(isset($animo['AnimoPage']['month1_energy'])){
+              $month1_energy = $animo['AnimoPage']['month1_energy'];
+            } else{
+              $month1_energy = '';
+            }
+            if(isset($animo['AnimoPage']['month2_energy'])){
+              $month2_energy = $animo['AnimoPage']['month2_energy'];
+            } else{
+              $month2_energy = '';
+            }
+            if(isset($animo['AnimoPage']['month3_energy'])){
+              $month3_energy = $animo['AnimoPage']['month3_energy'];
+            } else{
+              $month3_energy = '';
+            }
+            if(isset($animo['AnimoPage']['month1_physical'])){
+              $month1_physical = $animo['AnimoPage']['month1_physical'];
+            } else{
+              $month1_physical = '';
+            }
+            if(isset($animo['AnimoPage']['month2_physical'])){
+              $month2_physical = $animo['AnimoPage']['month2_physical'];
+            } else{
+              $month2_physical = '';
+            }
+            if(isset($animo['AnimoPage']['month3_physical'])){
+              $month3_physical = $animo['AnimoPage']['month3_physical'];
+            } else{
+              $month3_physical = '';
+            }
+             if(isset($animo['AnimoPage']['month1_other'])){
+              $month1_other = $animo['AnimoPage']['month1_other'];
+            } else{
+              $month1_other = '';
+            }
+            if(isset($animo['AnimoPage']['month1_other_1'])){
+              $month1_other_1 = $animo['AnimoPage']['month1_other_1'];
+            } else{
+              $month1_other_1 = '';
+            }
+            if(isset($animo['AnimoPage']['month2_other'])){
+              $month2_other = $animo['AnimoPage']['month2_other'];
+            } else{
+              $month2_other = '';
+            }
+             if(isset($animo['AnimoPage']['month2_other_1'])){
+              $month2_other_1 = $animo['AnimoPage']['month2_other_1'];
+            } else{
+              $month2_other_1 = '';
+            }
+             if(isset($animo['AnimoPage']['month3_other'])){
+              $month3_other = $animo['AnimoPage']['month3_other'];
+            } else{
+              $month3_other = '';
+            }
+            if(isset($animo['AnimoPage']['month3_other_1'])){
+              $month3_other_1 = $animo['AnimoPage']['month3_other_1'];
+            } else{
+              $month3_other_1 = '';
+            }
+          ?>
+
+          <div class="meses cf">
+            <h3>Mes 1</h3>
+            <h3>Mes 2</h3>
+            <h3>Mes 3</h3>
+          </div>
+          <div class="mi-humor cf">
+            <!-- etiquetas de humor -->
+            <div class="col1">
+              <h4>Mi humor es: </h4>
+              <p>Feliz y sonriente</p> <!-- value = 1 -->
+              <p>Huracán Hormonal</p> <!-- value = 2 -->
+              <p>Mitad soleado - Mitad lluvioso</p> <!-- value = 3 -->
+            </div>
+
+            <!-- mes 1 - humor -->
+            <div class="col2">
+              <input type="radio" name="data[AnimoPage][month1_humor]" value="1" <?php if($month1_humor == 1){
+              echo 'checked="checked"'; } ?> />
+              <input type="radio" name="data[AnimoPage][month1_humor]" value="2" <?php if($month1_humor == 2){
+              echo 'checked="checked"'; } ?> />
+              <input type="radio" name="data[AnimoPage][month1_humor]" value="3" <?php if($month1_humor == 3){
+              echo 'checked="checked"'; } ?> />
+            </div>
+
+            <!-- mes 2 - humor -->
+            <div class="col3">
+
+              <input type="radio" name="data[AnimoPage][month2_humor]" value="1" <?php if($month2_humor == 1){
+                echo  'checked="checked"'; } ?> />
+              <input type="radio" name="data[AnimoPage][month2_humor]" value="2" <?php if($month2_humor == 2){
+                echo  'checked="checked"'; } ?> />
+              <input type="radio" name="data[AnimoPage][month2_humor]" value="3" <?php if($month2_humor == 3){
+                echo  'checked="checked"'; } ?> />
+            </div>
+
+            <!-- mes 3 - humor -->
+            <div class="col4">
+              <input type="radio" name="data[AnimoPage][month3_humor]" value="1" <?php if($month3_humor == 1){
+              echo  'checked="checked"'; } ?> />
+              <input type="radio" name="data[AnimoPage][month3_humor]" value="2" <?php if($month3_humor == 2){
+              echo  'checked="checked"'; } ?> />
+              <input type="radio" name="data[AnimoPage][month3_humor]" value="3" <?php if($month3_humor == 3){
+                echo  'checked="checked"'; } ?> />
+            </div>
+          </div>
+
+          <div class="mi-energia cf">
+            <div class="col1">
+              <!-- etiquetas de energia -->
+              <h4>Mi nivel de energía es:</h4>
+              <p>Relativamente normal</p> <!-- value = 1 -->
+              <p>Con un poco de sueño</p> <!-- value = 2 -->
+            </div>
+            <div class="col2">
+              <!-- mes 1 - energia -->
+             
+              <input type="radio" name="data[AnimoPage][month1_energy]" value="1" <?php if($month1_energy == 1){
+              echo  'checked="checked"'; } ?> />
+              <input type="radio" name="data[AnimoPage][month1_energy]" value="2" <?php if($month1_energy == 2){
+              echo  'checked="checked"'; } ?> />
+            </div>
+            <div class="col3">
+              <!-- mes 2 - energia -->
+              <input type="radio" name="data[AnimoPage][month2_energy]" value="1" <?php if($month2_energy == 1){
+                echo  'checked="checked"'; } ?> />
+              <input type="radio" name="data[AnimoPage][month2_energy]" value="2" <?php if($month2_energy == 2){
+                echo  'checked="checked"'; } ?> />
+            </div>
+            <div class="col4">
+              <!-- mes 3 - energia -->
+              <?php
+
+              ?>
+              <input type="radio" name="data[AnimoPage][month3_energy]" value="1" <?php if($month3_energy == 1){
+                echo  'checked="checked"'; } ?> />
+              <input type="radio" name="data[AnimoPage][month3_energy]" value="2" <?php if($month3_energy == 2){
+                echo  'checked="checked"'; } ?> />
+            </div>
+          </div>
+
+          <div class="mi-fisico cf">
+            <div class="col1">
+              <!-- etiquetas de fisico -->
+              <h4>El cambio físico que más he percibido: </h4>
+              <p>Mis pantalones aún me quedan</p> <!-- value = 1 -->
+              <p>¡Ups! medio me aprietan</p> <!-- value = 2 -->
+              <p> ¡Auxilio! Traigan el costal de papas</p> <!-- value = 3 -->
+            </div>
+
+             <!-- mes 1 - fisico -->
+            <div class="col2">
+
+              <input type="radio" name="data[AnimoPage][month1_physical]" value="1" <?php if($month1_physical == 1){
+              echo  'checked="checked"'; } ?> />
+              <input type="radio" name="data[AnimoPage][month1_physical]" value="2" <?php if($month1_physical == 2){
+              echo  'checked="checked"'; } ?> />
+              <input type="radio" name="data[AnimoPage][month1_physical]" value="3" <?php if($month1_physical == 2){
+              echo 'checked="checked"'; } ?> />
+            </div>
+
+            <div class="col3">
+             <!-- mes 2 - fisico -->
+              <input type="radio" name="data[AnimoPage][month2_physical]" value="1" <?php if($month2_physical == 1){
+              echo  'checked="checked"'; } ?> />
+              <input type="radio" name="data[AnimoPage][month2_physical]" value="2" <?php if($month2_physical == 2){
+              echo  'checked="checked"'; } ?> />
+              <input type="radio" name="data[AnimoPage][month2_physical]" value="3" <?php if($month2_physical == 2){
+              echo  'checked="checked"'; } ?> />
+            </div>
+
+            <div class="col4">
+             <!-- mes 3 - fisico -->
+              <?php
+
+              ?>
+              <input type="radio" name="data[AnimoPage][month3_physical]" value="1" <?php if($month3_physical == 1){
+              echo  'checked="checked"'; } ?> />
+              <input type="radio" name="data[AnimoPage][month3_physical]" value="2" <?php if($month3_physical == 2){
+              echo  'checked="checked"'; } ?> />
+              <input type="radio" name="data[AnimoPage][month3_physical]" value="3" <?php if($month3_physical == 2){
+                echo  'checked="checked"'; } ?> />
+            </div>
+          </div>
+
+          <div class="mi-otros cf">
+            <div class="col1">
+              <p>Otro</p>
+            </div>
+            <!-- otros ......  -->
+            <div class="col2">
+              <!-- mes 1 -->
+              <span><?php echo $month1_other; ?></span>
+              <span><?php echo $month1_other_1; ?></span>
+            </div>
+            <div class="col3">
+              <!-- mes 2 -->
+              <span><?php echo $month2_other; ?></span>
+              <span><?php echo $month2_other_1; ?></span>
+            </div>
+            <div class="col4">
+              <!-- mes 3 -->
+              <span><?php echo $month3_other; ?></span>
+              <span><?php echo $month3_other_1; ?></span>
+            </div>
+          </div>
+
+        </div>
+      
+      </div>
+
+     <div class="book-footer"></div>
+
+  </div>
+
+
+
+
 </div><!-- FIN DEL LIBRO -->
