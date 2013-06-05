@@ -180,8 +180,8 @@ function readURL(input) {
 				);
 	?>
 	<div class="title_page">
-		<p>entrega</p>
-		<span>especial: tu</span>
+		<p>LA NUEVA FAMILIA</p>
+		<span></span>
 	</div>
 	<div class="sig">Siguiente</div>
 </div>

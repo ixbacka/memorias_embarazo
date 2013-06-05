@@ -43,14 +43,14 @@
 		}
   ?>
   <div class="opciones cf">
-    <p>
+    <div class="cf">
       <input type="radio" name="data[NestingPage][belly]" value="1" <?php if($belly == 1){ echo 'checked="checked"'; } ?> />
       <label>¡Ay! todavia parezco embarazada</label>
-    </p>
-    <p>
+    </div>
+    <div class="cf">
       <input type="radio" name="data[NestingPage][belly]" value="2" <?php if($belly == 2){ echo 'checked="checked"'; } ?> />
       <label>¡Eh!  Sorpresivamente mi panza regresó a su talla normal</label>
-    </p>
+    </div>
   </div>
   	<?php
 		if(isset($epilog['EpilogPage']['notes'])){

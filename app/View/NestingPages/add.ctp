@@ -206,14 +206,22 @@ function readURL(input) {
         }
       ?>
       <div class="opciones">
-        <input type="radio" name="data[NestingPage][nest]" value="1" <?php if($nest == 1){ echo 'checked="checked"'; } ?> />
-        <label>Limpiar toda la casa</label>
-        <input type="radio" name="data[NestingPage][nest]" value="2" <?php if($nest == 2){ echo 'checked="checked"'; } ?> />
-        <label>Lavar y acomodar tu ropita</label>
-        <input type="radio" name="data[NestingPage][nest]" value="3" <?php if($nest == 3){ echo 'checked="checked"'; } ?> />
-        <label>Tener nuestra maleta lista en la puerta</label>
+        <div class="cf">
+          <input type="radio" name="data[NestingPage][nest]" value="1" <?php if($nest == 1){ echo 'checked="checked"'; } ?> />
+          <label>Limpiar toda la casa</label>
+        </div>
+        <div class="cf">
+          <input type="radio" name="data[NestingPage][nest]" value="2" <?php if($nest == 2){ echo 'checked="checked"'; } ?> />
+          <label>Lavar y acomodar tu ropita</label>
+        </div>
+        <div class="cf">
+          <input type="radio" name="data[NestingPage][nest]" value="3" <?php if($nest == 3){ echo 'checked="checked"'; } ?> />
+          <label>Tener nuestra maleta lista en la puerta</label>
+        </div>
+        <div class="cf">
           <input type="radio" name="data[NestingPage][nest]" value="4" <?php if($nest == 4){ echo 'checked="checked"'; } ?> />
-        <label>Todas las anteriores</label>
+          <label>Todas las anteriores</label>
+        </div>
       </div>
     </div>
 		<div class="comprar">

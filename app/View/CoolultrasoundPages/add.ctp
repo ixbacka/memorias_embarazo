@@ -244,7 +244,7 @@ function readURL(input) {
         <input type="number" name="data[CoolultrasoundPage][iwas]" value="<?php if($iwas != ''){ echo $iwas; } ?>" >
         semanas de embarazo
       </p>
-      <p class"doctor">
+      <p class="doctor">
         <label>Lo que me dijo el doctor fue: </label>
         <?php
         if(isset($cool['CoolultrasoundPage']['doctorsaid'])){
@@ -269,14 +269,22 @@ function readURL(input) {
         $urdadsays = '';
       } ?>
       <div class="opciones">
-        <input type="radio" name="data[CoolultrasoundPage][urdad]" value="1" <?php if($urdad == 1){ echo 'checked="checked"'; } ?> />
-        <label>Agobiado</label>
-        <input type="radio" name="data[CoolultrasoundPage][urdad]" value="2" <?php if($urdad == 2){ echo 'checked="checked"'; } ?> />
-        <label>Sobreprotector</label>
-        <input type="radio" name="data[CoolultrasoundPage][urdad]" value="3" <?php if($urdad == 3){ echo 'checked="checked"'; } ?> />
-        <label>Excluido</label>
-        <input type="radio" name="data[CoolultrasoundPage][urdad]" value="4" <?php if($urdad == 4){ echo 'checked="checked"'; } ?> />
-        <label>Todas las anteriores</label>
+        <div class="opcion cf">
+          <input type="radio" name="data[CoolultrasoundPage][urdad]" value="1" <?php if($urdad == 1){ echo 'checked="checked"'; } ?> />
+          <label>Agobiado</label>
+        </div>
+        <div class="opcion cf">
+          <input type="radio" name="data[CoolultrasoundPage][urdad]" value="2" <?php if($urdad == 2){ echo 'checked="checked"'; } ?> />
+          <label>Sobreprotector</label>
+        </div>
+        <div class="opcion cf">
+          <input type="radio" name="data[CoolultrasoundPage][urdad]" value="3" <?php if($urdad == 3){ echo 'checked="checked"'; } ?> />
+          <label>Excluido</label>
+        </div>
+        <div class="opcion cf">
+          <input type="radio" name="data[CoolultrasoundPage][urdad]" value="4" <?php if($urdad == 4){ echo 'checked="checked"'; } ?> />
+          <label>Todas las anteriores</label>
+        </div>
       </div>
       <input type="text" name="data[CoolultrasoundPage][urdadsays]" value="<?php if($urdadsays != ""){ echo $urdadsays; } ?>" />
     </div>
@@ -290,15 +298,21 @@ function readURL(input) {
         }
       ?>
       <div class="opciones">
-        <input type="radio" name="data[CoolultrasoundPage][imiss]" value="1" <?php if($imiss == 1){
-        echo 'checked="checked"'; } ?> />
-        <label>Usar tacones</label>
-         <input type="radio" name="data[CoolultrasoundPage][imiss]" value="2" <?php if($imiss == 2){
-        echo 'checked="checked"'; } ?> />
-        <label>Ropa interior normal</label>
-         <input type="radio" name="data[CoolultrasoundPage][imiss]" value="3" <?php if($imiss == 3){
-        echo 'checked="checked"'; } ?> />
-        <label>Verme los pies</label>
+        <div class="opcion cf">
+          <input type="radio" name="data[CoolultrasoundPage][imiss]" value="1" <?php if($imiss == 1){
+          echo 'checked="checked"'; } ?> />
+          <label>Usar tacones</label>
+        </div>
+        <div class="opcion cf">
+           <input type="radio" name="data[CoolultrasoundPage][imiss]" value="2" <?php if($imiss == 2){
+          echo 'checked="checked"'; } ?> />
+          <label>Ropa interior normal</label>
+        </div>
+        <div class="opcion cf">
+           <input type="radio" name="data[CoolultrasoundPage][imiss]" value="3" <?php if($imiss == 3){
+          echo 'checked="checked"'; } ?> />
+          <label>Verme los pies</label>
+        </div>
       </div>
       <p class="otro">
         <label>Otro </label>
@@ -311,18 +325,25 @@ function readURL(input) {
           $theythink = '';
       } ?>
       <div class="opciones">
-        <input type="radio" name="data[CoolultrasoundPage][theythink]" value="1" <?php if($theythink == 1){
-        echo 'checked="checked"'; } ?> />
-        <label>Es muy discreta para el mes en el que estoy</label>
-         <input type="radio" name="data[CoolultrasoundPage][theythink]" value="2" <?php if($theythink == 2){
-        echo 'checked="checked"'; } ?> />
-        <label>Corresponde a los meses que tengo de embarazo</label>
-         <input type="radio" name="data[CoolultrasoundPage][theythink]" value="3" <?php if($theythink == 3){
-        echo 'checked="checked"'; } ?> />
-        <label>Esta a punto de estallar</label>
-        <input type="radio" name="data[CoolultrasoundPage][theythink]" value="4" <?php if($theythink == 4){
-        echo 'checked="checked"'; } ?> />
-        <label>¡Gigante! Parece de triates</label>
+        <div class="opcion cf">
+          <input type="radio" name="data[CoolultrasoundPage][theythink]" value="1" <?php if($theythink == 1){
+          echo 'checked="checked"'; } ?> />
+          <label>Es muy discreta para el mes en el que estoy</label>
+        </div>
+        <div class="opcion cf">
+          <input type="radio" name="data[CoolultrasoundPage][theythink]" value="2" <?php if($theythink == 2){
+          echo 'checked="checked"'; } ?> />
+          <label>Corresponde a los meses que tengo de embarazo</label>
+        </div>
+        <div class="opcion cf">  <input type="radio" name="data[CoolultrasoundPage][theythink]" value="3" <?php if($theythink == 3){
+          echo 'checked="checked"'; } ?> />
+          <label>Esta a punto de estallar</label>
+        </div>
+        <div class="opcion cf">
+          <input type="radio" name="data[CoolultrasoundPage][theythink]" value="4" <?php if($theythink == 4){
+          echo 'checked="checked"'; } ?> />
+          <label>¡Gigante! Parece de triates</label>
+        </div>
       </div>
     </div>
     <?php

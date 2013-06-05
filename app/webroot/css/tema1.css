@@ -560,6 +560,10 @@ ul.vertical_menu_1 li a{
 
 /** ARBOL GENEALOGICO **/
 
+input[type="number"] {
+  margin: 0 5px;
+}
+
 form#familytreePageAddForm{
   position: absolute;
   top: 100px;
@@ -569,10 +573,91 @@ form#familytreePageAddForm{
 
 }
 
+form .input {
+ line-height: 28px;
+}
 
+#CongratsPageAddForm input[type=number], 
+#FirstVisitPageAddForm input[type=number] {
+  margin: 0 5px;
+}
 .congratsPages{
   position: absolute;
   top: 150px;
+}
+
+#CongratsPageSospeche {
+  width: 415px;
+}
+
+#CongratsPageFirstfeeling {
+  width: 535px;
+}
+
+#CongratsPageHowishare {
+  width: 705px;
+}
+
+#CongratsPageBabybros {
+  width: 420px;
+}
+
+#CongratsPageDetails {
+  width: 700px;
+}
+
+#FirstVisitPageGin {
+  width: 570px;
+}
+
+#FirstVisitPageAddForm .row .input {
+    float: left;
+}
+#FirstVisitPageAddForm .row {
+    width: 100%;
+    display: block;
+}
+#FirstVisitPageAddForm .row input {
+    margin-left: 10px;
+}
+#FirstVisitPageAddForm .row .text input {
+    width: 195px;
+}
+#FirstVisitPageAddForm .row .number {
+    margin-right: 140px;
+}
+
+#FirstVisitPageFirstvisit {
+    width: 425px;
+}
+
+#WhoamiPageName {
+    width: 262px;
+}
+
+#WhoamiPageAddForm .number {
+  height: 32px;
+}
+
+#WhoamiPageAddForm .number p {
+  float: none;
+}
+
+#WhoamiPageAddForm input[type="number"] {
+  margin: 0 5px;
+}
+
+#WhoamiPageProfesion {
+    width: 223px;
+}
+#WhoamiPageLocation {
+    width: 257px;
+}
+#WhoamiPageDadsname {
+    width: 243px;
+}
+#WhoamiPageRemember {
+    width: 100%;
 }
 
 .familytreeFile{
@@ -921,6 +1006,13 @@ p.middle_note{
 height: 80px;
 }
 
+#SintomPageMatutinos {
+    width: 310px;
+}
+#SintomPageWorst {
+    width: 485px;
+}
+
 #cravings_{
 position: absolute;
 top: 130px;
@@ -955,7 +1047,7 @@ left: 105px;
 }
 #gross{
 	position: absolute;
-top: 235px;
+  top: 235px;
 }
 
 #button_sintom {
@@ -1056,11 +1148,12 @@ text-align: center;
 }
 
 #AnimoPageAddForm input[type=radio] {
-  margin: 0 0 20px 0;
+  margin: 0 0 9px 0;
 }
 
 .mi-humor, .mi-humor, .mi-energia, .mi-fisico, .mi-otros {
   font-size: 16px;
+  margin-bottom: 50px;
 }
 
 .col2 {
@@ -1086,7 +1179,7 @@ text-align: center;
 
 .col2, .col3, .col4 {
   width: 20px;
-  margin: 63px 58px 0 57px;
+  margin: 27px 58px 0 57px;
 }
 
 .col1 {
@@ -1356,9 +1449,13 @@ text-align: center;
 
 #BellymonthPageAddForm .cerca {
   position: absolute;
-  bottom: 0;
+  bottom: 40px;
   text-align: center;
   color: #0f7491;
+}
+
+#BellymonthPageAddForm .submit {
+  bottom: 150px;
 }
 
 /* GettingclosePageAddForm */
@@ -1391,6 +1488,23 @@ text-align: center;
   margin-left: 31px;
 }
 
+#GettingclosePageAddForm .col input[type="text"] {
+    width: 230px;
+}
+#GettingclosePageAddForm .col.uno input[type="text"] {
+    width: 290px;
+}
+
+#GettingclosePageAddForm .col input[type="text"] {
+    width: 230px;
+}
+#GettingclosePageAddForm .col.uno input[type="text"] {
+    width: 290px;
+}
+#GettingclosePageAddForm .miedo,
+#GettingclosePageAddForm .sorry {
+    margin-bottom: 30px;
+}
 
 #GettingclosePageAddForm .col.dos {
   width: 78px;
@@ -1424,6 +1538,10 @@ text-align: center;
 
 /* #BabyshowerPageAddForm */
 
+#BabyshowerPageAddForm .col input[type="text"] {
+    width: 214px;
+}
+
 #BabyshowerPageAddForm .col.uno {
   width: 297px;
   margin: 0;
@@ -1454,10 +1572,12 @@ text-align: center;
 
 #BabyshowerPageAddForm .col.tres {
   width: 242px;
+  margin-bottom: 30px;
 }
 
 .mibaby {
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .mibaby #datepickerCongrats {
@@ -1482,7 +1602,7 @@ text-align: center;
 
 #BabyshowerPageAddForm .col.dos p {
   margin-top: 0;
-  margin-bottom: 42px;
+  margin-bottom: 22px;
 }
 
 #BabyshowerPageAddForm .col.dos input {
@@ -1515,11 +1635,15 @@ text-align: center;
 }
 
 #CoolultrasoundPageAddForm .bloque.dos {
-  top: 280px;
+  top: 260px;
+}
+
+#CoolultrasoundPageAddForm .bloque.dos input[type="text"] {
+    width: 314px;
 }
 
 #CoolultrasoundPageAddForm .bloque.tres {
-  top: 280px;
+  top: 260px;
   left: 410px;
   width: 370px;
 }
@@ -1537,6 +1661,11 @@ text-align: center;
   line-height: 30px;
   width: 100%;
 }
+
+#CoolultrasoundPageAddForm .doctor input {
+  width: 313px;
+}
+
 
 #CoolultrasoundPageAddForm .opciones label, .opciones input {
   line-height: 27px;
@@ -1576,6 +1705,12 @@ text-align: center;
   top: 80px;
 }
 
+#NestingPageAddForm .dado p{
+  float: none;
+  margin-bottom: 10px;
+}
+
+
 #NestingPageAddForm .opciones label {
     line-height: 28px;
 }
@@ -1589,6 +1724,7 @@ text-align: center;
 
 #NestingPageAddForm .comprar input {
   margin: 15px 0;
+  width: 215px; 
 }
 
 #room_photo {
@@ -1621,7 +1757,7 @@ text-align: center;
   position: absolute;
   width: 325px;
   right: 0;
-  top: 254px;
+  top: 279px;
 }
 
 #ByebellyPageAddForm .horas input {
@@ -1629,23 +1765,11 @@ text-align: center;
 }
 
 #ByebellyPageAddForm .opciones p {
-  margin: 0;
-}
-
-#ByebellyPageAddForm .opciones p {
-  margin: 0;
+  margin: 0 0 15px;
 }
 
 #ByebellyPageAddForm .opciones input[type="radio"] {
   margin-right: 13px;
-}
-
-#ByebellyPageAddForm .opciones p {
-  margin: 0;
-}
-
-#ByebellyPageAddForm .opciones p {
-  margin: 0;
 }
 
 #ByebellyPageAddForm .opciones input[type="radio"] {
@@ -1660,15 +1784,28 @@ text-align: center;
   margin-bottom: 30px;
 }
 
+#ByebellyPageAddForm  .estaba input {
+    width: 373px;
+}
+#ByebellyPageAddForm  .exp input {
+    width: 400px;
+}
+
 #ByebellyPageAddForm .opciones {
   margin-bottom: 40px;
 }
 
 /* #SpecialdeliveryPageAddForm */
 
+.specialdeliveryPages .todo {
+    width: 425px;
+    margin: 0 auto;
+    position: relative;
+}
+
 #SpecialdeliveryPageAddForm .photo-up {
-    left: 120px;
-    top: 20px;
+    left: 80px;
+    position: relative;
 }
 
 #SpecialdeliveryPageAddForm p {
@@ -1680,7 +1817,7 @@ text-align: center;
     width: 385px;
 }
 #SpecialdeliveryPageAddForm .eres {
-    margin-top: 260px;
+    margin-top: 30px;
 }
 
 #SpecialdeliveryPageAddForm .bday input {
@@ -1695,7 +1832,7 @@ text-align: center;
     position: absolute;
     right: 0;
     width: 175px;
-    top: 359px;
+    top: 347px;
 }
 
 #SpecialdeliveryPageAddForm .parto p,
@@ -1750,9 +1887,14 @@ text-align: center;
     width: 120px;
 }
 
+#WelcomebbyPageAddForm .noche input,
+#WelcomebbyPageAddForm .emotivo input {
+    width: 100%;
+}
+
 /* EpilogPageAddForm  */
 
-#EpilogPageAddForm {
+.epilogPages.form {
     background: url(../img/epilogo.png) 80px 20px no-repeat;
 }
 
