@@ -356,14 +356,14 @@ p.whatdo{
   left: 287px;
   width: 236px;
   height: 76px;
-  background-image: url(../img/bt_instrucciones_up.png);
+  background-image: url(../img/bt_instrucciones.png);
   top: 520px;
   text-indent: -9999px;
   cursor: pointer;
 }
 
 .instructions_bt:hover{
-  background-image: url(../img/bt_instrucciones.png);
+  background-position: 0 76px;
   cursor: pointer;
 }
 
@@ -424,89 +424,41 @@ p.whatdo{
   z-index: 1001;
 }
 
+.first_trim,
+.second_trim,
+.third_trim {
+  width: 184px;
+  height: 30px;
+  text-indent: -9999px;
+  display: inline-block;
+  margin: 0 43px;
+}
+
 .first_trim{
   background-image: url(../img/bt_primer.png);
-  width: 165px;
-  height: 30px;
-  text-indent: -9999px;
-  position: absolute;
-  top: 0;
-  left: 60px;
 }
 
+.first_trim.current,
 .first_trim:hover{
-  background-image: url(../img/bt_primer_up.png);
-}
-
-.first_trim_current{  
-  background-image: url(../img/bt_primer_up.png);
-  width: 168px;
-  height: 30px;
-  text-indent: -9999px;
-  position: absolute;
-  top: 0;
-  left: 60px;
-  padding-bottom: 5px;
-  padding-right: 10px;
-  border-bottom: 2px solid #fff;
+  background-position: 0 38px;
 }
 
 .second_trim{
   background-image: url(../img/bt_segundo.png);
-  width: 177px;
-  height: 30px;
-  text-indent: -9999px;
-  position: absolute;
-  top: 0;
-  left: 300px;
-
 }
 
+.second_trim.current,
 .second_trim:hover{
-  background-image: url(../img/bt_segundo_up.png);
-}
-
-
-.second_trim_current{  
-  background-image: url(../img/bt_segundo_up.png);
-  width: 177px;
-  height: 30px;
-  text-indent: -9999px;
-  position: absolute;
-  top: 0;
-  left: 300px;
-  padding-bottom: 5px;
-  padding-right: 10px;
-  border-bottom: 2px solid #fff;
+  background-position: 0 38px;
 }
 
 .third_trim{
   background-image: url(../img/bt_tercer.png);
-  width: 165px;
-  height: 30px;
-  text-indent: -9999px;
-  position: absolute;
-top: 0;
-left: 547px;
-
 }
 
+.third_trim.current,
 .third_trim:hover{
-  background-image: url(../img/bt_tercer_up.png);
-}
-
-
-.third_trim_current{  
-  background-image: url(../img/bt_tercer_up.png);
-  width: 165px;
-  height: 30px;
-  text-indent: -9999px;
-  position: absolute;
-  top: 0;
-  left: 547px;
-  padding-bottom: 5px;
-  padding-right: 10px;
-  border-bottom: 2px solid #fff;
+  background-position: 0 38px;
 }
 
 

@@ -1,0 +1,111 @@
+.ask{
+  background-image: url(../img/tema4/ayuda.png);
+}
+
+.settings {
+  background-image: url(../img/tema4/ajustes.png);
+}
+
+.home{
+  background-image: url(../img/tema4/home.png);
+}
+
+#header h1 {
+  background: #003d4c url('../img/cake.icon.png') no-repeat left;
+}
+
+body {
+	background-image: url(../img/tema4/back.png);
+}
+
+.header{
+	background-image: url(../img/tema4/header.png);
+  background-position: 0 0;
+}
+
+.title_page{
+  background-image: url(../img/tema4/titulo_back.png);
+}
+
+.cover_photo,
+.photo-up,
+.photo-v {
+  background-image: url(../img/tema4/marco.png), url(../img/tema4/marco_fondo.png);
+}
+
+.pick_fb{
+  background-image: url(../img/tema4/bt_elegir.png);
+}
+
+.upload_bt {
+  background-image: url(../img/tema4/bt_subir_foto.png);
+}
+
+p.whatdo{
+  background-image: url(../img/que-quieres-hacer.png); // FALTA?
+}
+
+.write_bt {
+  background-image: url(../img/tema4/bt_escribir.png);
+}
+
+.share_bt{
+  background-image: url(../img/tema4/bt_compartir.png);
+}
+
+.watch_bt{
+  background-image: url(../img/tema4/bt_ver.png);
+}
+
+.instructions_bt {
+  background-image: url(../img/tema4/bt_instrucciones.png);
+}
+
+.first_trim {
+  background-image: url(../img/tema4/bt_primer.png);
+}
+
+.second_trim {
+  background-image: url(../img/tema4/bt_segundo.png);
+}
+
+.third_trim {
+  background-image: url(../img/tema4/bt_tercer.png);
+}
+
+.menu_trims .current,
+.first_trim:hover,
+.second_trim:hover,
+.third_trim:hover {
+  background-position: 0 33px;
+}
+
+.ant{
+  background-image: url(../img/tema4/anterior.png);
+}
+
+.sig{
+  background-image: url(../img/tema4/siguiente.png);
+}
+
+form .submit input[type="submit"]{
+  background-image: url(../img/tema4/bt_aceptar.png);
+}
+
+.footer {
+  background-image: url(../img/tema4/footer.png);
+}
+
+
+/* CUSTOM */
+.sig, .ant {
+  height: 50px;
+}
+
+.title_page p {
+  margin-top: -20px;
+}
+
+.title_page span {
+  top: 37px;
+}
