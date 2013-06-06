@@ -44,6 +44,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
   <link href='//fonts.googleapis.com/css?family=Waiting+for+the+Sunrise' rel='stylesheet' type='text/css'>
 
   <?php echo $this->Html->script('clickoutside'); ?>
+  <?php //echo $this->Html->script('lightbox'); ?>
 
 	<?php echo $this->Html->script('script'); ?>
 <script type="text/javascript">
@@ -62,8 +63,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
   <?php 
         $tema = $this->Session->read("User.theme");
+        echo $this->Html->css('tema1'); 
+
         if($tema == 1){ 
-          echo $this->Html->css('tema1'); 
           if( strpos($_SERVER['REQUEST_URI'], 'book') == TRUE ){ 
              echo $this->Html->css('book1'); 
           }
@@ -156,29 +158,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
   //    fjs.parentNode.insertBefore(js, fjs);
   //  }(document, 'script', 'facebook-jssdk'));
       /*FACEBOOK SHIT*/
-     function postToFeed() {
 
-        // calling the API ...
-        var obj = {
-          method: 'feed',
-          //redirect_uri: '',
-          link: 'http://operacionxperia.com/momtomom/memorias_embarazo/profiles/view_book/<?php echo $this->Session->read("User.id"); ?>.pdf', //link to their PDF
-          picture: 'http://fbrell.com/f8.jpg',
-          name: 'Facebook Dialogs',
-          caption: 'Reference Documentation',
-          description: 'Using Dialogs to interact with people.'
-        };
 
-        function callback(response) {
-          //document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
-          if(response['post_id']){
-
-          }
-
-        }
-
-        FB.ui(obj, callback);
-      }
       
       </script> 
       <?php } ?>
@@ -213,7 +194,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
           <ul class="ul_settings">
             <li class="personalizar"> Personalizar </li>
             <li class="vermemorias"> Ver Memorias </li>
-            <li class="compartir"> Compartir </li>
+            <a href="#dialog-box" class="compartir"  id="share-this"> Compartir </a>
           </ul>
         </div> <!--your content end-->
 
@@ -244,8 +225,12 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
       </div>
     </div>
 
-  <div class="loader"></div>
+    <div class="loader"></div>
     <div id="backgroundPopup"></div>
+
+
+    <div id="dialog-box" class="dialog-popup">
+    </div>
 
     <?php } ?>
 

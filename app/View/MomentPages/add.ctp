@@ -50,8 +50,8 @@ fbphotoSelect = function(id, idpapa) {
 			console.log(photo.source);
 			console.log(' ehmem == > '+idpapa);
 			$('#photo_url_').val(photo.source);
-			$('.whoami_photo').css('background-image','url(../img/marco_whoami.png), url('+photo.source+')');
-			$('.whoami_photo').css('background-size', '297px 392px, 225px 320px');
+			$('#photo_moment').css('background-image','url(../img/marco_whoami.png), url('+photo.source+')');
+			$('#photo_moment').css('background-size', '297px 392px, 225px 320px');
 		};
 
 
@@ -93,8 +93,8 @@ function readURL(input) {
       if (input.files && input.files[0]) {
           var reader = new FileReader();
           reader.onload = function (e) {
-          	$('.whoami_photo').css('background-image','url(../img/marco_whoami.png), url('+e.target.result+')');
-						$('.whoami_photo').css('background-size', '297px 392px, 225px 320px');
+          	$('#photo_moment').css('background-image','url(../img/marco_whoami.png), url('+e.target.result+')');
+			$('#photo_moment').css('background-size', '297px 392px, 225px 320px');
           };
           reader.readAsDataURL(input.files[0]);
       }
@@ -176,12 +176,41 @@ function readURL(input) {
 		} else{
 			$title = '';
 		}
+		if(isset($moment['MomentPage']['subtitle'])){
+			$subtitle = $moment['MomentPage']['subtitle'];
+		} else{
+			$subtitle = '';
+		}
+
+		if(isset($moment['MomentPage']['description'])){
+			$description = $moment['MomentPage']['description'];
+		} else{
+			$description = '';
+		}
+		if(isset($moment['MomentPage']['id'])){
+			$id_ = $moment['MomentPage']['id'];
+		} else{
+			$id_ = '';
+		}
   ?>
  	<input type="text" name="data[MomentPage][title]" value="<?php if($title != ''){ echo $title; } ?>"/>  
+ 	<input type="text" name="data[MomentPage][subtitle]" value="<?php if($subtitle != ''){ echo $subtitle; } ?>"/>  
 
-		<?php
-			echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
-		?>
+      <div class="photo-up" id="photo_moment">
+        <input type="hidden" name="data[MomentPage][url_photo]" id="photo_url_" value=""/>
+        <div class="pick_fb">Elegir de Facebook</div>
+        <?php
+          echo $this->Form->file('photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+        ?>
+      </div>
+      <input type="text" name="data[MomentPage][description]" value="<?php if($description != ''){ echo $description; } ?>"/>  
+
+	<?php
+		echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
+		echo $this->Form->input('trimester', array('type' => 'hidden', 'value' => $trim));
+		echo $this->Form->input('id', array('type' => 'hidden', 'value' => $id_));
+
+	?>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>
 
