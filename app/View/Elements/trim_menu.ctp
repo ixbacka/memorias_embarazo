@@ -5,7 +5,7 @@
 			echo $this->Html->link(
 				    'Primer Trimestre',
 				    array('controller' => 'congrats_pages', 'action' => 'add'),
-				    array('class' => 'first_trim_current')
+				    array('class' => 'first_trim current')
 				);
 			echo $this->Html->link(
 				    'Segundo Trimestre',
@@ -28,7 +28,7 @@
 			echo $this->Html->link(
 				    'Segundo Trimestre',
 				    array('controller' => 'ilovemybaby_pages', 'action' => 'add'),
-				    array( 'class' => 'second_trim_current')
+				    array( 'class' => 'second_trim current')
 				);
 			echo $this->Html->link(
 				    'Tercer Trimestre',
@@ -51,7 +51,7 @@
 			echo $this->Html->link(
 				    'Tercer Trimestre',
 				    array('controller' => 'gettingclose_pages', 'action' => 'add'),
-				    array('class' => 'third_trim_current')
+				    array('class' => 'third_trim current')
 				);
 		?>
 <?php } ?> 
