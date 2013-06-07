@@ -1141,6 +1141,20 @@ text-align: center;
   width: 300px;
 }
 
+.col1 p:after {
+  width: 680px;
+  content: '';
+  border-top: 1px dashed rgba(255, 255, 255, 0.15);
+  position: absolute;
+  left: 0;
+  top: 12px;
+  z-index: -11;
+}
+
+.mi-otros .col1 p:after {
+  border: none;
+}
+
 .meses {
   margin-left: 252px;
 }
