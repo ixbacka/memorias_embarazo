@@ -1040,11 +1040,11 @@ body{
 
           <p>
             <label>Hoy </label>
-            <span><?php echo $today;?>"/></span>
+            <span><?php echo $today;?></span>
             nunca lo olvidaré porque oí tu corazón por primera vez
           </p>
 
-          <p>Tac, tac, sonaba como: </p>
+          <p class="tac">Tac, tac, sonaba como: </p>
 
           <div class="opcion">
             <label>Caballos Galopantes</label>  
@@ -1337,6 +1337,169 @@ body{
               <span><?php if($gross4 != ''){ echo $gross4; } ?></span>
             </div>
           </div>
+
+        </div>
+      
+      </div>
+
+     <div class="book-footer"></div>
+
+  </div>
+  <div> 
+      <div class="book-header"></div>
+
+      <div class="book-content">
+
+        <div class="book-page-title">
+          <div class="book-title-page">
+            <p>¡LAS PRIMERAS!</p><br>
+            <span>pataditas...</span>
+          </div>
+        </div>
+
+        <div class="book-form">
+          <?php 
+              if(isset($firstkick['FirstkickPage']['firstkick_date'])){ 
+                  $source = $firstkick['FirstkickPage']['firstkick_date'];
+                  $date = new DateTime($source);
+                  $letime = strtotime($source);
+
+                  $mes = get_date_spanish($letime, true, 'month'); # return Enero
+
+                  $dia = $date->format('d'); // 31.07.2012
+                  $ano = $date->format('Y'); // 31-07-2012
+
+                  $firstkick_date = $dia.' '.$mes.' '.$ano;
+                  $monthi = ($date->format('m'))-1;
+                } else{
+                  $firstkick_date = '';
+                }
+                if(isset($firstkick['FirstkickPage']['photo_date'])){ 
+
+                  $source = $firstkick['FirstkickPage']['photo_date'];
+                  $date = new DateTime($source);
+                  $letime = strtotime($source);
+
+                  $mes = get_date_spanish($letime, true, 'month'); # return Enero
+
+                  $dia = $date->format('d'); // 31.07.2012
+                  $ano = $date->format('Y'); // 31-07-2012
+
+                  $photo_date = $dia.' '.$mes.' '.$ano;
+                  $monthi = ($date->format('m'))-1;
+                } else{
+                  $photo_date = '';
+                }
+
+                if(isset($firstkick['FirstkickPage']['week'])){
+                  $week = $firstkick['FirstkickPage']['week'];
+                } else{
+                  $week = '';
+                }
+                  
+                if(isset($firstkick['FirstkickPage']['photogenic'])){
+                  $photogenic = $firstkick['FirstkickPage']['photogenic'];
+                } else{
+                  $photogenic = '';
+                }
+                  if(isset($firstkick['FirstkickPage']['bigquestion'])){
+                    $bigquestion = $firstkick['FirstkickPage']['bigquestion'];
+                  } else{
+                    $bigquestion = '';
+                  }
+                   if(isset($firstkick['FirstkickPage']['craving1'])){
+                    $craving1 = $firstkick['FirstkickPage']['craving1'];
+                  } else{
+                    $craving1 = '';
+                  }
+                  if(isset($firstkick['FirstkickPage']['craving2'])){
+                    $craving2 = $firstkick['FirstkickPage']['craving2'];
+                  } else{
+                    $craving2 = '';
+                  }
+                  if(isset($firstkick['FirstkickPage']['craving3'])){
+                    $craving3 = $firstkick['FirstkickPage']['craving3'];
+                  } else{
+                    $craving3 = '';
+                  }
+                  if(isset($firstkick['FirstkickPage']['craving4'])){
+                    $craving4 = $firstkick['FirstkickPage']['craving4'];
+                  } else{
+                    $craving4 = '';
+                  }
+                  if(isset($firstkick['FirstkickPage']['gross1'])){
+                    $gross1 = $firstkick['FirstkickPage']['gross1'];
+                  } else{
+                    $gross1 = '';
+                  }
+                  if(isset($firstkick['FirstkickPage']['gross2'])){
+                    $gross2 = $firstkick['FirstkickPage']['gross2'];
+                  } else{
+                    $gross2 = '';
+                  }
+                  if(isset($firstkick['FirstkickPage']['gross3'])){
+                    $gross3 = $firstkick['FirstkickPage']['gross3'];
+                  } else{
+                    $gross3 = '';
+                  }
+                  if(isset($firstkick['FirstkickPage']['gross4'])){
+                    $gross4 = $firstkick['FirstkickPage']['gross4'];
+                  } else{
+                    $gross4 = '';
+                  }
+                ?>
+
+              <p>Hay una sensación muy dificil de describir, y es cuando sentí a mi bebé revoloteando en mi pancita, pero lo intentaré:</p>
+              <p>
+                <label>Esta maravilla de la vida la sentí el </label>
+                <span><?php if($firstkick_date != ''){ echo $firstkick_date; } ?></span>
+              </p>
+            <p class="startkick">
+              <label>Aay, la semana en que empezó a patear duro el bebé fue :</label>
+              <span><?php if($week != ''){ echo $week; } ?></span>
+            </p>
+            <div class="colL">
+              <div class="firstkick_photo photo-v"> </div>
+              <span> <?php if($photo_date != ''){ echo $photo_date; } ?></span>
+            </div>
+            <div class="colR">
+              <p class="photogenic">
+                <label>Ahora qué eres más fotogénico, claramente pude ver:</label>
+                <span><?php if($photogenic != ''){ echo $photogenic; } ?></span>
+              </p>
+              <p class="gran"><label>La GRAN pregunta: ¿el bebé es? </label></p>
+              <div class="opciones cf">
+                <div class="opcion nino">
+                  <input type="radio" name="data[FirstkickPage][bigquestion]" value="1" <?php if($bigquestion == 1){
+                  echo 'checked="checked"'; } ?> />
+                  <label>Niño</label>
+                </div>
+                <div class="opcion nina">
+                  <input type="radio" name="data[FirstkickPage][bigquestion]" value="2" <?php if($bigquestion == 2){
+                  echo 'checked="checked"'; } ?> />
+                  <label>Niña</label>
+                </div>
+                <div class="opcion nose">
+                  <input type="radio" name="data[FirstkickPage][bigquestion]" value="3" <?php if($bigquestion == 3){
+                  echo 'checked="checked"'; } ?> />
+                  <label>Todavía no se ve nada!</label>
+                </div>
+              </div>
+              <div class="antojos">
+                <label>Antojos</label>
+                <span> <?php if($craving1 != ''){ echo $craving1; } ?></span>
+                <span><?php if($craving2 != ''){ echo $craving2; } ?></span>
+                <span><?php if($craving3 != ''){ echo $craving3; } ?></span>
+                <span><?php if($craving4 != ''){ echo $craving4; } ?></span>
+              </div>
+              <div class="antojos">
+                <label>Ascos</label>
+                <span><?php if($gross1 != ''){ echo $gross1; } ?></span>
+                <span><?php if($gross2 != ''){ echo $gross2; } ?></span>
+                <span><?php if($gross3 != ''){ echo $gross3; } ?></span>
+                <span><?php if($gross4 != ''){ echo $gross4; } ?></span>
+              </div>
+            </div>
 
         </div>
       

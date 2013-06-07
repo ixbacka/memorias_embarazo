@@ -158,14 +158,14 @@ top: 120px;
 }
 
 .cravings div{
-width: 150px;
+width: 170px;
 position: absolute;
-top: 115px;
+top: 0px;
 left: 33px;
 }
 .cravings span{
 float: left;
-width: 55px;
+width: 65px;
 margin-left: 10px;
 }
 
@@ -292,6 +292,65 @@ h3{
 }
 
 .meses {
-margin-left: 170px;
+  margin-left: 50px;
+}
+
+.tac{
+  padding-top: 30px;
+}
+
+.opcion{
+  display: block;
+width: 140px;
+height: 60px;
+float: left;
+margin-bottom: 40px;
+}
+
+.opcion label{
+  width: 100%;
+text-align: center;
+}
+
+.opcion input[type="radio"]{
+  margin-left: 70px;
+}
+
+.bebes{
+  
+  width: 330px;
+height: 194px;
+top: -5px;
+left: 43px;
+text-indent: -10000px;
+background-size: 330px;
+}
+
+.todomundo{
+  width: 227px;
+position: absolute;
+left: 96px;
+top: 98px;
+text-align: center;
+}
+
+.personalmente .opcion1, .personalmente .opcion2, .personalmente .opcion3, .todomundo .opcion1, .todomundo .opcion2, 
+.todomundo .opcion3 {
+position: relative;
+width: 56px;
+height: 40px;
+float: left;}
+
+.personalmente {
+position: absolute;
+top: 181px;
+left: 93px;
+width: 227px;
+text-align: center;
+}
+
+.decidimos {
+position: absolute;
+top: 239px;
 }
 

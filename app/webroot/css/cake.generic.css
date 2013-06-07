@@ -325,8 +325,8 @@ span.arrow {
 
 #popup_settings{
   background-image: url(../img/pop_menu.png);
-  text-indent: -9999px;
-  width: 429px;
+/*  text-indent: -9999px;
+*/  width: 429px;
   height: 404px;
 }
 
@@ -462,6 +462,14 @@ height: 240px;
 ul.ul_settings li{
   padding-left: 40px;
 }
+
+ul.ul_settings li a{
+  color: #aeaeae;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+
 
 .tema1{
   float: left;
@@ -604,12 +612,10 @@ fieldset {
 
 #dialog-box input:-moz-placeholder {
     color: #bbb;
-    text-shadow: 0 0 2px #000;
 }
 
 #dialog-box input::-webkit-input-placeholder {
     color: #bbb;
-    text-shadow: 0 0 2px #000;
 }
 
 .botochon {

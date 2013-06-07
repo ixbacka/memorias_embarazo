@@ -92,6 +92,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
 
    <?php 
+
+    $profileid = $this->Session->read("User.id");
+     
         $font = $this->Session->read("User.font");
         if($font == 1){ echo $this->Html->css('letra1'); } 
         elseif($font == 2){ echo $this->Html->css('letra2'); } 
@@ -134,7 +137,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
        <?php  if( strpos($_SERVER['REQUEST_URI'], 'welcome') == TRUE ){  ?>
         FB.Canvas.setSize({height:1000});
       <?php } elseif(strpos($_SERVER['REQUEST_URI'], 'fangate') == TRUE){ ?>
-        FB.Canvas.setSize({height:870});    
+        FB.Canvas.setSize({height:870});   
+         <?php } elseif(strpos($_SERVER['REQUEST_URI'], 'cover') == TRUE){ ?>
+        FB.Canvas.setSize({height:1000});    
       <?php } else { ?>
       console.log('chekin g ..');
       FB.Canvas.setSize({height:1150});
@@ -193,8 +198,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
         <div id="popup_settings"> <!--your content start-->
           <ul class="ul_settings">
             <li class="personalizar"> Personalizar </li>
-            <li class="vermemorias"> Ver Memorias </li>
-            <a href="#dialog-box" class="compartir"  id="share-this"> Compartir </a>
+            <!--li class="vermemorias"> Ver Memorias </li> -->
+            <li><a href="//operacionxperia.com/momtomom/memorias_embarazo/profiles/view_book/<?php echo $profileid;?>" target="_blank" class="vermemorias">Ver Diario</a></li>
+
+            <li><a href="#dialog-box" class="compartir"  id="share-this"> Compartir </a></li>
           </ul>
         </div> <!--your content end-->
 

@@ -219,72 +219,85 @@ class ProfilesController extends AppController {
 
 			$user_profile = $facebook->api('/'.$uid.'?fields=id,picture.type(normal),last_name,first_name,email,location,gender,link,birthday,username','GET');
 
-			if( !empty($user_profile["first_name"] ) ){
-				$fname = $user_profile["first_name"];
-			} else {
-				$fname = NULL;
-			}
-			if( !empty($user_profile["id"] ) ){
-				$uidi = $user_profile["id"];
-			}else {
-				$uidi = NULL;
-			}
-			if( !empty($user_profile["last_name"] ) ){
-				$lname = $user_profile["last_name"];
-			}else {
-				$lname = NULL;
-			}
-			if( !empty($user_profile["email"] ) ){
-				$email = $user_profile["email"];
-			}else {
-				$email = NULL;
-			}
-			if( !empty($user_profile['location']['name'] ) ){
-				$loc = $user_profile['location']['name'];
-			}else {
-				$loc = NULL;
-			}
-			if( !empty($user_profile["gender"] ) ){
-				$gender = $user_profile["gender"];
-			}else {
-				$gender = NULL;
-			}
-			if( !empty($user_profile["link"] ) ){
-				$link = $user_profile["link"];
-			}else {
-				$link = NULL;
-			}
-			if( !empty($user_profile["birthday"] ) ){
-				$bday = $user_profile["birthday"];
-			}else {
-				$bday = NULL;
-			}
-			if( !empty($user_profile["username"] ) ){
-				$usrname = $user_profile["username"];
-			}else {
-				$usrname = NULL;
-			}
-			if( !empty($user_profile["picture"]["data"]["url"] ) ){
-				$avi = $user_profile["picture"]["data"]["url"];
-			}else {
-				$avi = NULL;
-			}
-			
-			//guardar selected theme!
-			$this->Profile->create();
-			
+
+			$exists = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' =>  $uid ) ) );
+	  
+	    	if( empty($exists['Profile']['id']) ){
+
+				if( !empty($user_profile["first_name"] ) ){
+					$fname = $user_profile["first_name"];
+				} else {
+					$fname = NULL;
+				}
+				if( !empty($user_profile["id"] ) ){
+					$uidi = $user_profile["id"];
+				}else {
+					$uidi = NULL;
+				}
+				if( !empty($user_profile["last_name"] ) ){
+					$lname = $user_profile["last_name"];
+				}else {
+					$lname = NULL;
+				}
+				if( !empty($user_profile["email"] ) ){
+					$email = $user_profile["email"];
+				}else {
+					$email = NULL;
+				}
+				if( !empty($user_profile['location']['name'] ) ){
+					$loc = $user_profile['location']['name'];
+				}else {
+					$loc = NULL;
+				}
+				if( !empty($user_profile["gender"] ) ){
+					$gender = $user_profile["gender"];
+				}else {
+					$gender = NULL;
+				}
+				if( !empty($user_profile["link"] ) ){
+					$link = $user_profile["link"];
+				}else {
+					$link = NULL;
+				}
+				if( !empty($user_profile["birthday"] ) ){
+					$bday = $user_profile["birthday"];
+				}else {
+					$bday = NULL;
+				}
+				if( !empty($user_profile["username"] ) ){
+					$usrname = $user_profile["username"];
+				}else {
+					$usrname = NULL;
+				}
+				if( !empty($user_profile["picture"]["data"]["url"] ) ){
+					$avi = $user_profile["picture"]["data"]["url"];
+				}else {
+					$avi = NULL;
+				}
+				
+				//guardar selected theme!
+				$this->Profile->create();
+				
+				$this->Profile->set(array( 
+			        'theme' => $theme,
+			        'uid' => $uidi,
+			        'name' => $fname,
+			        'email' => $email,
+			        'username' => $usrname,
+			        'lastname' => $lname,
+			        'location' => $loc,
+			        'birthday' => $bday,
+			        'link' => $link,
+			        'created' => date('Y-m-d H:i:s')
+			      ));
+		} else {
+
+			$this->Profile->id = $exists['Profile']['id'];
+
 			$this->Profile->set(array( 
-        'theme' => $theme,
-        'uid' => $uidi,
-        'name' => $fname,
-        'email' => $email,
-        'username' => $usrname,
-        'lastname' => $lname,
-        'location' => $loc,
-        'birthday' => $bday,
-        'link' => $link,
-        'created' => date('Y-m-d H:i:s')
-      ));
+		        'theme' => $theme
+		      ));
+		}
       
       
       if ($this->Profile->save()) {
@@ -295,9 +308,9 @@ class ProfilesController extends AppController {
         $this->Session->setFlash(__('Tu perfil no se ha podido guardar.'));
       }
 
-		}
+	}
 		// ya han entrado antes a la pagina. Mostrar cover, si elige una coverphoto debemos guardarla
-		if ($this->request->is('post') || $this->request->is('put')) {
+	if ($this->request->is('post') || $this->request->is('put')) {
       
       if( $this->Session->read('User.uid') ){
       	$id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' =>  $this->Session->read('User.uid') ) ) );
@@ -314,8 +327,10 @@ class ProfilesController extends AppController {
 			  $error = $this->handleFileUpload($this->request->data['Profile']['file'], $fileName); 
 
 			  if ($error == false) { 
-				  $this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$fileName,WWW_ROOT.'img/cover_photos/'.$fileName);
+				  //$this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$fileName,WWW_ROOT.'img/cover_photos/'.$fileName);
 					
+				  $this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$fileName,WWW_ROOT.'img/cover_photos/thumbnail_'.$fileName);
+
 					$this->Profile->set(array( 
 						'cover_photo' => $fileName
 					));
@@ -331,9 +346,10 @@ class ProfilesController extends AppController {
 
 				$avatar = imagecreatefromjpeg($this->request->data['Profile']['url_photo']);
 				$nameIMG = $this->generateUniqueFilename('cover_photo_'.$uid.'.png'); 
-        imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
+		        imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
+				$this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$nameIMG,WWW_ROOT.'img/cover_photos/thumbnail_'.$nameIMG);
 
-        $this->Profile->set(array( 
+		        $this->Profile->set(array( 
 					'cover_photo' => $nameIMG
 				));
 				
@@ -456,7 +472,7 @@ class ProfilesController extends AppController {
 	 */
 	public function generate_image_thumbnail($source_image_path, $thumbnail_image_path)
 	{
-    $THUMBNAIL_IMAGE_MAX_WIDTH = 392;
+    $THUMBNAIL_IMAGE_MAX_WIDTH = 298;
 
     list($source_image_width, $source_image_height, $source_image_type) = getimagesize($source_image_path);
     switch ($source_image_type) {
@@ -580,7 +596,7 @@ class ProfilesController extends AppController {
 
                   //266 -  448
             	// 564 - 660
-            $tileImg = imagecreatefromjpeg(WWW_ROOT.'img/cover_photos/'.$id_user['Profile']['cover_photo']);
+            $tileImg = imagecreatefromjpeg(WWW_ROOT.'img/cover_photos/thumbnail_'.$id_user['Profile']['cover_photo']);
        
             imagecopy($mapImage, $tileImg, 266, 448, 0, 0, 298, 212);
             imagedestroy($tileImg);

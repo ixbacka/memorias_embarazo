@@ -2,10 +2,10 @@
 <STYLE TYPE="text/css">
 
 body{
-	height: 1010px;
+	height: 1150px;
 }
 <?php if( isset($cover_pic) ){ ?>
-
+/*
 .cover_photo{
 	width: 392px;
 	height: 297px;
@@ -16,7 +16,13 @@ body{
 	background-size: 392px 297px,  329px 265px;
 	background-repeat: no-repeat;
 	text-indent: -9999px;
+}*/
+
+.cover_photo_back{
+	background-image: url(../img/cover_photos/<?php echo str_replace(' ', '%20', $cover_pic); ?>);
+
 }
+
 <?php }?>
 /*#CSPhotoSelector_buttonOK{
 	display: block;
@@ -193,8 +199,10 @@ fbphotoSelect = function(id) {
         <span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
 	        <ul class="ul_settings">
             <li class="personalizar"> Personalizar </li>
-            <li class="vermemorias"> Ver Memorias </li>
-            <a href="#dialog-box" class="compartir"  id="share-this"> Compartir </a>
+            <li><a href="//operacionxperia.com/momtomom/memorias_embarazo/profiles/view_book/<?php echo $profileid;?>" target="_blank" class="vermemorias">Ver Diario</a></li>
+
+            <li><a href="#dialog-box" class="compartir"  id="share-this"> Compartir </a></li>
+
           </ul>   
         <div id="popup_settings"> <!--your content start-->
               
@@ -247,6 +255,7 @@ fbphotoSelect = function(id) {
 	</div>
 	<div class="content">
 		<div class="cover_photo">
+			<div class="cover_photo_back"></div>
 			
 			<p>Pon una foto de portada aqu&iacute;</p>
 
