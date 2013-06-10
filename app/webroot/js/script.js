@@ -240,6 +240,64 @@ $(document).ready(function(){
 			});
 		});	
 
+		$('#sharepopo').click(function(e){
+			e.preventDefault();
+			console.log('popopopopopop');
+			var loginBox = $(this).attr('href');
+
+			var url = '//operacionxperia.com/momtomom/memorias_embarazo/profiles/midiario/'+UID; 
+			//
+			 console.log(' mm ... ' + url);
+			$.getJSON(url, function(data, textStatus)
+			{
+				 console.log(' ohoho ! ~ STATUS: '+textStatus);
+
+				if (data.mensaje == 'successfully'){
+					max++;
+					linkpic = data.imagen;
+					imagename = data.nombre;
+					laid = data.usuarioid;
+					if(max == 1){
+					console.log(' asd '+linkpic);
+					$('#dialog-box').append(
+						'<a href="#" class="close">'+
+						'<img src="../img/tacha.png" class="btn_close" onClick="cerrarventana()" title="Close Window" alt="Close" /></a>'+
+				        '<fieldset class="textbox">'+
+				        '<label class="username">'+
+				        '<span>Mensaje</span>'+
+				        '<input id="msg" name="msg" type="text" placeholder="Mis memorias de embarazo">'+
+				        '</label><br><br><br>'+
+				        '<label class="username">'+
+				        '<span>Mis Memorias de Embarazo</span>'+
+				         '</label>'+
+				        '<img src="'+linkpic+'" width="300px"/>'+
+				        '<input type="hidden" id="ellinkd" value="'+imagename+'" ><br>'+
+				        '<input type="hidden" id="laid" value="'+laid+'" >'+
+				        '<button class="botochon" onclick="compartirmidiario()" type="button">Compartir</button>'+
+				        '</fieldset>'
+				        );
+					}
+					$(loginBox).fadeIn(300);
+					//Set the center alignment padding + border see css style
+				    var popMargTop = 320; 
+				    var popMargLeft = 145; 
+				    
+				    $(loginBox).css({ 
+				        'margin-top' : -popMargTop,
+				        'margin-left' : -popMargLeft
+				    });
+				    
+				    // Add the mask to body
+				    $('body').append('<div id="mask"></div>');
+				    $('#mask').fadeIn(300);
+					
+					
+				} else {
+					alert('Ha ocurrido un error al tratar de publicar tu wishlist, inténtalo más tarde.');
+				}		
+			});
+		});
+
 
 
 });// jQuery End
