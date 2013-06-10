@@ -1,9 +1,9 @@
 <!-- cover.ctp -->
 <STYLE TYPE="text/css">
-
+/*
 body{
 	height: 1150px;
-}
+}*/
 <?php if( isset($cover_pic) ){ ?>
 /*
 .cover_photo{
@@ -85,7 +85,7 @@ fbphotoSelect = function(id) {
 			//logActivity('<br><strong>Submitted</strong><br> Photo ID: ' + photo.id + '<br>Photo URL: ' + photo.source + '<br>');
 			// guardar img como portada , agregar a hidden field , y que lo mande .. inmediately ? 
 			$('#url_photo_fb').val(photo.source);
-			$('.cover_photo_back').css('background-image','url(../img/marco.png), url('+photo.source+')');
+			$('.cover_photo_back').css('background-image','url('+photo.source+')');
 		};
 
 
@@ -125,7 +125,7 @@ fbphotoSelect = function(id) {
       if (input.files && input.files[0]) {
           var reader = new FileReader();
           reader.onload = function (e) {
-                  $('.cover_photo_back').css('background-image','url(../img/marco.png), url('+e.target.result+')');
+                  $('.cover_photo_back').css('background-image','url('+e.target.result+')');
           };
           reader.readAsDataURL(input.files[0]);
       }

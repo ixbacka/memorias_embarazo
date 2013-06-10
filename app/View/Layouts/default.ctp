@@ -69,12 +69,11 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
         $tema = $this->Session->read("User.theme");
         echo $this->Html->css('tema1'); 
 
-        if($tema == 1){ 
-          if( strpos($_SERVER['REQUEST_URI'], 'book') == TRUE ){ 
-             echo $this->Html->css('book1'); 
-          }
-        } 
-        elseif($tema == 2){ 
+        if( strpos($_SERVER['REQUEST_URI'], 'book') == TRUE ){ 
+           echo $this->Html->css('book1'); 
+        }
+
+        if($tema == 2){ 
           echo $this->Html->css('tema2'); 
           if( strpos($_SERVER['REQUEST_URI'], 'book') == TRUE ){ 
              echo $this->Html->css('book2'); 
@@ -96,14 +95,14 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
 
    <?php 
-
     $profileid = $this->Session->read("User.id");
-     
-        $font = $this->Session->read("User.font");
-        if($font == 1){ echo $this->Html->css('letra1'); } 
-        elseif($font == 2){ echo $this->Html->css('letra2'); } 
-        elseif($font == 3){ echo $this->Html->css('letra3'); } 
-        elseif($font == 4){ echo $this->Html->css('letra4'); } 
+    echo $this->Html->css('letra1');
+ 
+    $font = $this->Session->read("User.font");
+    
+    if($font == 2){ echo $this->Html->css('letra2'); } 
+    elseif($font == 3){ echo $this->Html->css('letra3'); } 
+    elseif($font == 4){ echo $this->Html->css('letra4'); } 
   ?>  
 
 </head>
@@ -141,9 +140,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
        <?php  if( strpos($_SERVER['REQUEST_URI'], 'welcome') == TRUE ){  ?>
         FB.Canvas.setSize({height:1000});
       <?php } elseif(strpos($_SERVER['REQUEST_URI'], 'fangate') == TRUE){ ?>
-        FB.Canvas.setSize({height:870});   
-         <?php } elseif(strpos($_SERVER['REQUEST_URI'], 'cover') == TRUE){ ?>
-        FB.Canvas.setSize({height:1000});    
+        FB.Canvas.setSize({height:870});    
       <?php } else { ?>
       console.log('chekin g ..');
       FB.Canvas.setSize({height:1150});

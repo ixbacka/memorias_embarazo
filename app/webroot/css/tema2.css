@@ -30,8 +30,14 @@ body {
 .cover_photo,
 .photo-up,
 .photo-v {
-  background-image: url(../img/tema2/marco.png), url(../img/tema2/marco_fondo.png);
+  background-image: url(../img/tema2/marco.png);
 }
+
+.cover_photo_back{
+  background-image: url(../img/tema2/marco_fondo.png);
+}
+
+
 
 .pick_fb{
   background-image: url(../img/tema2/bt_elegir.png);

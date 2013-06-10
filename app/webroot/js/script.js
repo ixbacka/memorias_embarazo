@@ -89,7 +89,8 @@ $(document).ready(function(){
 			console.log(data+"  - "+textStatus);
 			if(textStatus == 'success' && data == 'Success!'){
 				//window.location.href=window.location.href;
-				window.opener.location.reload();
+				//window.location.reload();
+				window.parent.location.href='//www.facebook.com/pages/Nativo-Desarrollo/514166771955164?id=514166771955164&sk=app_163480813810636';
 			} else {
 				alert('Ha ocurrido un error! Intenta darle refresh a la página');
 			}
@@ -100,7 +101,8 @@ $(document).ready(function(){
 		$.getJSON(url, function(data, textStatus) {
 			console.log(data+"  - "+textStatus);
 			if(textStatus == 'success' && data == 'Success!'){
-				window.opener.location.reload();
+				//window.location.reload();
+				window.parent.location.href='//www.facebook.com/pages/Nativo-Desarrollo/514166771955164?id=514166771955164&sk=app_163480813810636';
 			} else {
 				alert('Ha ocurrido un error! Intenta darle refresh a la página');
 			}
@@ -111,7 +113,7 @@ $(document).ready(function(){
 		$.getJSON(url, function(data, textStatus) {
 			console.log(data+"  - "+textStatus);
 			if(textStatus == 'success' && data == 'Success!'){
-				window.opener.location.reload();
+				window.parent.location.href='//www.facebook.com/pages/Nativo-Desarrollo/514166771955164?id=514166771955164&sk=app_163480813810636';
 			} else {
 				alert('Ha ocurrido un error! Intenta darle refresh a la página');
 				
@@ -123,7 +125,7 @@ $(document).ready(function(){
 		$.getJSON(url, function(data, textStatus) {
 			console.log(data+"  - "+textStatus);
 			if(textStatus == 'success' && data == 'Success!'){
-				window.opener.location.reload();
+				window.parent.location.href='//www.facebook.com/pages/Nativo-Desarrollo/514166771955164?id=514166771955164&sk=app_163480813810636';
 			} else {
 				alert('Ha ocurrido un error! Intenta darle refresh a la página');
 			}
@@ -137,7 +139,7 @@ $(document).ready(function(){
 		$.getJSON(url, function(data, textStatus) {
 			console.log(data+"  - "+textStatus);
 			if(textStatus == 'success' && data == 'Success!'){
-				window.opener.location.reload();
+				window.parent.location.href='//www.facebook.com/pages/Nativo-Desarrollo/514166771955164?id=514166771955164&sk=app_163480813810636';
 			} else {
 				alert('Ha ocurrido un error! Intenta darle refresh a la página');
 			}
@@ -149,7 +151,7 @@ $(document).ready(function(){
 		$.getJSON(url, function(data, textStatus) {
 			console.log(data+"  - "+textStatus);
 			if(textStatus == 'success' && data == 'Success!'){
-				window.opener.location.reload();
+				window.parent.location.href='//www.facebook.com/pages/Nativo-Desarrollo/514166771955164?id=514166771955164&sk=app_163480813810636';
 			} else {
 				alert('Ha ocurrido un error! Intenta darle refresh a la página');
 			}
@@ -161,7 +163,7 @@ $(document).ready(function(){
 		$.getJSON(url, function(data, textStatus) {
 			console.log(data+"  - "+textStatus);
 			if(textStatus == 'success' && data == 'Success!'){
-				window.opener.location.reload();
+				window.parent.location.href='//www.facebook.com/pages/Nativo-Desarrollo/514166771955164?id=514166771955164&sk=app_163480813810636';
 			} else {
 				alert('Ha ocurrido un error! Intenta darle refresh a la página');
 			}
@@ -173,7 +175,7 @@ $(document).ready(function(){
 		$.getJSON(url, function(data, textStatus) {
 			console.log(data+"  - "+textStatus);
 			if(textStatus == 'success' && data == 'Success!'){
-				window.opener.location.reload();
+				window.parent.location.href='//www.facebook.com/pages/Nativo-Desarrollo/514166771955164?id=514166771955164&sk=app_163480813810636';
 			} else {
 				alert('Ha ocurrido un error! Intenta darle refresh a la página');
 			}
