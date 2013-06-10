@@ -325,8 +325,8 @@ span.arrow {
 
 #popup_settings{
   background-image: url(../img/pop_menu.png);
-  text-indent: -9999px;
-  width: 429px;
+/*  text-indent: -9999px;
+*/  width: 429px;
   height: 404px;
 }
 
@@ -463,6 +463,14 @@ ul.ul_settings li{
   padding-left: 40px;
 }
 
+ul.ul_settings li a{
+  color: #aeaeae;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+
+
 .tema1{
   float: left;
   background: url(../img/tema1.png);
@@ -531,6 +539,125 @@ height: 135px;
   background-position-y: -228px;
 
 }
+
+
+
+/* You can customize to your needs  ~ Lightbox */
+.dialog-popup {
+    display: none;
+    background: #FFF;
+    padding: 10px;
+    border: 2px solid #ddd;
+    float: left;
+    font-size: 1.2em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99999;
+    box-shadow: 0px 0px 20px #999;
+    /* CSS3 */
+        -moz-box-shadow: 0px 0px 20px #999;
+    /* Firefox */
+        -webkit-box-shadow: 0px 0px 20px #999;
+    /* Safari, Chrome */
+  border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px;
+    /* Firefox */
+        -webkit-border-radius: 3px;
+    /* Safari, Chrome */;
+    width: 303px;
+text-align: center;
+}
+
+img.btn_close {
+/*    Position the close button
+*/  margin: -7px -10px 0 0;
+  float: right;
+}
+
+fieldset {
+    border: none;
+}
+
+#dialog-box .textbox label {
+    display: block;
+    padding-bottom: 7px;
+}
+
+.textbox span {
+    display: block;
+}
+
+#dialog-box p, #dialog-box span {
+    color: #999;
+    font-size: 11px;
+    line-height: 18px;
+    font-size: 17px;
+  line-height: 18px;
+  color: #94206b;
+}
+
+.textbox input {
+    background: #666666;
+    color: #fff;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    font: 13px Arial, Helvetica, sans-serif;
+    padding: 6px 6px 4px;
+    width: 200px;
+    background: #e2ddca;
+    color: #000;
+  border-radius: 3px;
+}
+
+#dialog-box input:-moz-placeholder {
+    color: #bbb;
+}
+
+#dialog-box input::-webkit-input-placeholder {
+    color: #bbb;
+}
+
+.botochon {
+    background: -moz-linear-gradient(center top, #f3f3f3, #dddddd);
+    background: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3), to(#dddddd));
+    background: -o-linear-gradient(top, #f3f3f3, #dddddd);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f3f3f3', EndColorStr='#dddddd');
+    border-color: #000;
+    border-width: 1px;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px 6px 4px;
+    margin-top: 10px;
+    font: 12px;
+    width: 214px;
+}
+
+.botochon:hover {
+    background: #ddd;
+}
+
+
+/*el popup*/
+#mask {
+    display: none;
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 999;
+}
+
+/*se acaba lo del lightobxooso */
+
 
 
 /** General Style Info **/

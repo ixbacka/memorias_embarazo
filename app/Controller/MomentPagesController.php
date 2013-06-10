@@ -48,12 +48,12 @@ class MomentPagesController extends AppController {
 		$uid  = $facebook->getUser();
 
 		 if( $this->Session->read('User.uid') ){
-      	$id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' =>  $this->Session->read('User.uid') ) ) );
+      	$idp = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' =>  $this->Session->read('User.uid') ) ) );
       } else {
-      	$id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' => $uid ) ) );
+      	$idp = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' => $uid ) ) );
       }
 
-      $leid = $id['Profile']['id'];
+      $leid = $idp['Profile']['id'];
       
       //got users id, return fields if they full, also, check if post or put and save
       if ($this->request->is('post') || $this->request->is('put')) {
@@ -91,11 +91,11 @@ class MomentPagesController extends AppController {
         }
 
          $this->MomentPage->set(array( 
-              'trimester' => $trim,
-              'title' => $this->request->data['title'],
-              'subtitle' => $this->request->data['subtitle'],
-              'description' => $this->request->data['description'],
-              'profile_id' => $this->request->data['profile_id']
+              'trimester' => $this->request->data['MomentPage']['trimester'],
+              'title' => $this->request->data['MomentPage']['title'],
+              'subtitle' => $this->request->data['MomentPage']['subtitle'],
+              'description' => $this->request->data['MomentPage']['description'],
+              'profile_id' => $this->request->data['MomentPage']['profile_id']
             ));
 
         if ($this->MomentPage->save()) {
@@ -105,8 +105,11 @@ class MomentPagesController extends AppController {
         }
       }
 
-      $this->set('moment',$this->MomentPage->find('first', array( 'conditions' => array( 'MomentPage.id' => $id ) )));
+      if($id != 0){
+        $this->set('moment',$this->MomentPage->find('first', array( 'conditions' => array( 'MomentPage.id' => $id ) )));
+      } 
 		  $this->set('profileid',$leid);
+      $this->set('trim',$trim);
 	}
 
 

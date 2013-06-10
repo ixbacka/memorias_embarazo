@@ -66,7 +66,7 @@
       	<?php
 						echo $this->Html->link(
 					    $moment['MomentPage']['title'],
-					    array('controller' => 'moment_page', 'action' => 'add', 
+					    array('controller' => 'moment_pages', 'action' => 'add', 
 					    	$moment['MomentPage']['id'], $moment['MomentPage']['trimester'])
 						);
 				?>
@@ -118,7 +118,7 @@
       	<?php
 						echo $this->Html->link(
 					    $moment['MomentPage']['title'],
-					    array('controller' => 'moment_page', 'action' => 'add', 
+					    array('controller' => 'moment_pages', 'action' => 'add', 
 					    	$moment['MomentPage']['id'], $moment['MomentPage']['trimester'])
 						);
 				?>
@@ -224,7 +224,7 @@
       	<?php
 						echo $this->Html->link(
 					    $moment['MomentPage']['title'],
-					    array('controller' => 'moment_page', 'action' => 'add', 
+					    array('controller' => 'moment_pages', 'action' => 'add', 
 					    	$moment['MomentPage']['id'], $moment['MomentPage']['trimester'])
 						);
 				?>

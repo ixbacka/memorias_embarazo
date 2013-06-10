@@ -2,10 +2,10 @@
 <STYLE TYPE="text/css">
 
 body{
-	height: 1150px;
+	height: 1010px;
 }
 <?php if( isset($cover_pic) ){ ?>
-/*
+
 .cover_photo{
 	width: 392px;
 	height: 297px;
@@ -16,13 +16,7 @@ body{
 	background-size: 392px 297px,  329px 265px;
 	background-repeat: no-repeat;
 	text-indent: -9999px;
-}*/
-
-.cover_photo_back{
-	background-image: url(../img/cover_photos/<?php echo str_replace(' ', '%20', $cover_pic); ?>);
-
 }
-
 <?php }?>
 /*#CSPhotoSelector_buttonOK{
 	display: block;
@@ -199,10 +193,9 @@ fbphotoSelect = function(id) {
         <span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
 	        <ul class="ul_settings">
             <li class="personalizar"> Personalizar </li>
-            <li><a href="//operacionxperia.com/momtomom/memorias_embarazo/profiles/view_book/<?php echo $profileid;?>" target="_blank" class="vermemorias">Ver Diario</a></li>
-
-            <li><a href="#dialog-box" class="compartir"  id="share-this"> Compartir </a></li>
-
+            <li class="vermemorias"> Ver Memorias </li>
+            <li class="compartir"> Compartir </li>
+            
           </ul>   
         <div id="popup_settings"> <!--your content start-->
               
@@ -239,9 +232,6 @@ fbphotoSelect = function(id) {
   <div class="loader"></div>
     <div id="backgroundPopup"></div>
 
-    <div id="dialog-box" class="dialog-popup">
-    </div>
-
 
 <div class="cover">
 	<div class="header">	
@@ -255,7 +245,6 @@ fbphotoSelect = function(id) {
 	</div>
 	<div class="content">
 		<div class="cover_photo">
-			<div class="cover_photo_back"></div>
 			
 			<p>Pon una foto de portada aqu&iacute;</p>
 
@@ -277,6 +266,8 @@ fbphotoSelect = function(id) {
 					echo $this->Form->file('file', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
 				?>
 			<?php echo $this->Form->end($options); ?>
+
+			<!--div class="upload_bt">Subir un archivo</div-->
 		
 		</div>
 		<p class="whatdo">Qu&eacute; quieres hacer?</p>
@@ -290,10 +281,15 @@ fbphotoSelect = function(id) {
 				);
 			 ?>
 			<!-- <div class="write_bt">Escribir diario</div> -->
-			<!-- <div class="share_bt">Compartir</div> -->
-            <a href="#dialog-box" class="share_bt"  id="share-this"> Compartir </a>
-			<!-- <div class="watch_bt">Ver Diario</div> -->
-			<a href="//operacionxperia.com/momtomom/memorias_embarazo/profiles/view_book/<?php echo $profileid;?>" target="_blank" class="watch_bt">Ver Diario</a>
+			<div class="share_bt">Compartir</div>
+			<?php
+				// echo $this->Html->link(
+				//     'Ver Diario',
+				//     array('controller' => 'familytree_pages', 'action' => 'view'),
+				//     array('class' => 'watch_bt')
+				// );
+			 ?>
+			<div class="watch_bt">Ver Diario</div>
 		</div>
 
 	  <a href="#" class="instructions_bt" id="instructions">Instrucciones</a>
