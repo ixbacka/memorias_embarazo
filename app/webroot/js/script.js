@@ -52,6 +52,15 @@ $(document).ready(function(){
 	return false;
 	});
 
+	$("a#my-moments").click(function() {
+			console.log('a#my-moments');
+			loading(); // loading
+			setTimeout(function(){ // then show popup, deley in .5 second
+				loadPopup_moments(); // function show popup
+			}, 500); // .5 second
+	return false;
+	});
+
 	$("li.personalizar").click(function() {
 			disablePopup_settings();
 			loading(); // loading
@@ -341,6 +350,7 @@ $(document).ready(function(){
 
 	/************** start: functions for popup settings **************/
 	var popupStatus_sets = 0; // set value
+	var popupStatus_mms = 0; // set value
 
 	function loadPopup_settings() {
 		if(popupStatus_sets == 0) { // if value is 0, show popup
@@ -357,12 +367,36 @@ $(document).ready(function(){
 		}
 	}
 
+	function loadPopup_moments() {
+		if(popupStatus_mms == 0) { // if value is 0, show popup
+			closeloading(); // fadeout loading
+			$("#moments_popup").fadeIn(0500); // fadein popup div
+			$("#backgroundPopup").css("opacity", "0.7"); // css opacity, supports IE7, IE8
+			$("#backgroundPopup").fadeIn(0001);
+			popupStatus_mms = 1; // and set value to 1
+			// Hide the modal dialog when someone clicks outside of it.
+			$("#moments_popup").bind( "clickoutside", function(event){
+			  //$(this).hide();
+			  disablePopup_moments();
+			});
+		}
+	}
+
 	function disablePopup_settings() {
 		if(popupStatus_sets == 1) { // if value is 1, close popup
 			$("#settings_popup").fadeOut("normal");
 			$("#backgroundPopup").fadeOut("normal");
 			popupStatus_sets = 0;  // and set value to 0
 			$("#settings_popup").unbind( "clickoutside");
+		}
+	}
+
+	function disablePopup_moments() {
+		if(popupStatus_mms == 1) { // if value is 1, close popup
+			$("#moments_popup").fadeOut("normal");
+			$("#backgroundPopup").fadeOut("normal");
+			popupStatus_mms = 0;  // and set value to 0
+			$("#moments_popup").unbind( "clickoutside");
 		}
 	}
 	
