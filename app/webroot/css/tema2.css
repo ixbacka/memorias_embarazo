@@ -88,7 +88,8 @@ p.whatdo{
   background-image: url(../img/tema2/siguiente.png);
 }
 
-form .submit input[type="submit"]{
+form .submit input[type="submit"],
+form .submit input[type="submit"]:hover {
   background-image: url(../img/tema2/bt_aceptar.png);
   
 }
@@ -96,4 +97,7 @@ form .submit input[type="submit"]{
 .footer {
   background-image: url(../img/tema2/footer.png);
 }
+
+/* COLORES */
+
 

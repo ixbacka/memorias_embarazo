@@ -37,7 +37,11 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
   ?>
 
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="//use.typekit.net/zhu8iai.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
   <link href='//fonts.googleapis.com/css?family=Crafty+Girls' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Loved+by+the+King' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'> 
