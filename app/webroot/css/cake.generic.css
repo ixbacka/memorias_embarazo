@@ -330,6 +330,25 @@ span.arrow {
   height: 404px;
 }
 
+
+#moments_popup{
+  background: transparent;
+  display: none;
+  left: 333px;
+  position: fixed;
+  top: 83px;
+  width: 429px;
+  height: 404px;
+  z-index: 9000;
+}
+
+#popup_moments{
+  background-image: url(../img/pop_menu.png);
+/*  text-indent: -9999px;
+*/  width: 429px;
+  height: 404px;
+}
+
 .personalizar:before {
   content: '';
   background-image: url(../img/personalizar.png);

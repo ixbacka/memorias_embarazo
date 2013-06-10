@@ -1,5 +1,4 @@
 <!-- menu.ctp -->
-<?php $momentos = $this->requestAction('moment_pages/index'); ?>
 
 <ul class="vertical_menu_1">
 <?php if($trimestre == 1){ ?>
@@ -60,21 +59,6 @@
 				);
 		?>
 		</li>
-		<?php if(isset($momentos) && !empty($momentos)) { foreach ($momentos as $moment): ?>
-		<?php if($moment['MomentPage']['trimester'] == 1){ ?>
-      <li>
-      	<?php
-						echo $this->Html->link(
-					    $moment['MomentPage']['title'],
-					    array('controller' => 'moment_pages', 'action' => 'add', 
-					    	$moment['MomentPage']['id'], $moment['MomentPage']['trimester'])
-						);
-				?>
-			</li>
-			<?php } ?>
-		<?php endforeach; }?>
-
-
 <?php } elseif ($trimestre == 2) { ?>
 	<li <?php if($pag == 'ilovemybaby'){ echo 'class="selected"'; } ?>>
 	<?php 
@@ -112,20 +96,7 @@
 				);
 	?>
 	</li>
-	<?php if(isset($momentos) && !empty($momentos)) { foreach ($momentos as $moment): ?>
-		<?php if($moment['MomentPage']['trimester'] == 2){ ?>
-      <li>
-      	<?php
-						echo $this->Html->link(
-					    $moment['MomentPage']['title'],
-					    array('controller' => 'moment_pages', 'action' => 'add', 
-					    	$moment['MomentPage']['id'], $moment['MomentPage']['trimester'])
-						);
-				?>
-			</li>
-			<?php } ?>
-		<?php endforeach; } ?>
-
+	
 <?php } elseif ($trimestre == 3) { ?>
 
 	<li <?php if($pag == 'gettingclose'){ echo 'class="selected"'; } ?>>
@@ -218,19 +189,5 @@
 				);
 	?>
 	</li>
-	<?php if(isset($momentos) && !empty($momentos)) { foreach ($momentos as $moment): ?>
-		<?php if($moment['MomentPage']['trimester'] == 3){ ?>
-      <li>
-      	<?php
-						echo $this->Html->link(
-					    $moment['MomentPage']['title'],
-					    array('controller' => 'moment_pages', 'action' => 'add', 
-					    	$moment['MomentPage']['id'], $moment['MomentPage']['trimester'])
-						);
-				?>
-			</li>
-			<?php } ?>
-		<?php endforeach; } ?>
-
 <?php } ?> 
 </ul>
