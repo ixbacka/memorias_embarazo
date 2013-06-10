@@ -70,7 +70,7 @@ class FirstkickPagesController extends AppController {
             'firstkick_date' => $this->request->data['FirstkickPage']['firstkick_date'],
             'week' => $this->request->data['FirstkickPage']['week'],
             'bigquestion' => $this->request->data['FirstkickPage']['bigquestion'],
-            'ifeel' => $this->request->data['FirstkickPage']['ifeel'],
+            //'ifeel' => $this->request->data['FirstkickPage']['ifeel'],
             'craving1' => $this->request->data['FirstkickPage']['craving1'],
             'craving2' => $this->request->data['FirstkickPage']['craving2'],
             'craving3' => $this->request->data['FirstkickPage']['craving3'],

@@ -23,13 +23,7 @@
 		<p>Mi ánimo</p>
 		<span>mes a mes</span>
 	</div>
-	<?php
-      echo $this->Html->link(
-            'Siguiente',
-            array('controller' => 'ilovemybaby_pages', 'action' => 'add'),
-            array('class' => 'sig')
-        );
-  ?>
+	<div class="sig">Siguiente</div>
 </div>
 <div class="animoPages form">
   <?php echo $this->Form->create('AnimoPage'); ?>

@@ -20,7 +20,6 @@ body{
 
 .cover_photo_back{
 	background-image: url(../img/cover_photos/<?php echo str_replace(' ', '%20', $cover_pic); ?>);
-
 }
 
 <?php }?>
@@ -86,8 +85,7 @@ fbphotoSelect = function(id) {
 			//logActivity('<br><strong>Submitted</strong><br> Photo ID: ' + photo.id + '<br>Photo URL: ' + photo.source + '<br>');
 			// guardar img como portada , agregar a hidden field , y que lo mande .. inmediately ? 
 			$('#url_photo_fb').val(photo.source);
-			$('.cover_photo').css('background-image','url(../img/marco.png), url('+photo.source+')');
-			$('.cover_photo').css('background-size', '392px 297px,  329px 265px');
+			$('.cover_photo_back').css('background-image','url(../img/marco.png), url('+photo.source+')');
 		};
 
 
@@ -127,8 +125,7 @@ fbphotoSelect = function(id) {
       if (input.files && input.files[0]) {
           var reader = new FileReader();
           reader.onload = function (e) {
-                  $('.cover_photo').css('background-image','url(../img/marco.png), url('+e.target.result+')');
-									$('.cover_photo').css('background-size', '392px 297px,  329px 265px');
+                  $('.cover_photo_back').css('background-image','url(../img/marco.png), url('+e.target.result+')');
           };
           reader.readAsDataURL(input.files[0]);
       }
@@ -291,7 +288,7 @@ fbphotoSelect = function(id) {
 			 ?>
 			<!-- <div class="write_bt">Escribir diario</div> -->
 			<!-- <div class="share_bt">Compartir</div> -->
-            <a href="#dialog-box" class="share_bt"  id="share-this"> Compartir </a>
+            <a href="#dialog-box" class="share_bt"  id="sharepopo"> Compartir </a>
 			<!-- <div class="watch_bt">Ver Diario</div> -->
 			<a href="//operacionxperia.com/momtomom/memorias_embarazo/profiles/view_book/<?php echo $profileid;?>" target="_blank" class="watch_bt">Ver Diario</a>
 		</div>

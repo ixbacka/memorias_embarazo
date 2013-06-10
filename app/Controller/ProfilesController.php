@@ -596,7 +596,23 @@ class ProfilesController extends AppController {
 
                   //266 -  448
             	// 564 - 660
-            $tileImg = imagecreatefromjpeg(WWW_ROOT.'img/cover_photos/thumbnail_'.$id_user['Profile']['cover_photo']);
+
+            $le_cover_photo = WWW_ROOT.'img/cover_photos/thumbnail_'.$id_user['Profile']['cover_photo'];
+
+            //list($source_image_width, $source_image_height, $source_image_type) = getimagesize($);
+            $tam = getimagesize($le_cover_photo);
+
+            switch ($tam['mime']) {
+                case IMAGETYPE_GIF:
+                    $tileImg = imagecreatefromgif($le_cover_photo);
+                    break;
+                case IMAGETYPE_JPEG:
+                    $tileImg = imagecreatefromjpeg($le_cover_photo);
+                    break;
+                case IMAGETYPE_PNG:
+                    $tileImg = imagecreatefrompng($le_cover_photo);
+                    break;
+            }
        
             imagecopy($mapImage, $tileImg, 266, 448, 0, 0, 298, 212);
             imagedestroy($tileImg);
