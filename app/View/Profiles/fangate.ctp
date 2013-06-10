@@ -1,6 +1,5 @@
 <div class="wrapper fangate zero">
   <div class="header">
-    <div class="flecha"></div>
   </div>
   <div class="like">
     <h3>Bienvenida mama</h3>

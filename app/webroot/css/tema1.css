@@ -1897,7 +1897,7 @@ text-align: center;
 
 /* ESTADOS */
 
-#bienvenida_texto, .estilos, .welcome .content, .like, .flecha {
+#bienvenida_texto, .estilos, .welcome .content, .like {
   /* Aqui colocamos la transicion para cada navegador */
   -webkit-transition:all 4s ease-out;  /* Chrome y Safari */
   -o-transition:all 4s ease-out;  /* Opera */
@@ -1914,6 +1914,3 @@ text-align: center;
   top: -90px;
 }
 
-.zero .flecha {
-  opacity: 0.99;
-}
