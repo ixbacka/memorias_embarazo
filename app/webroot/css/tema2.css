@@ -1,13 +1,13 @@
 .ask{
-  background-image: url(../img/ayuda.png);
+  background-image: url(../img/tema2/ayuda.png);
 }
 
 .settings {
-  background-image: url(../img/ajustes.png);
+  background-image: url(../img/tema2/ajustes.png);
 }
 
 .home{
-  background-image: url(../img/home.png);
+  background-image: url(../img/tema2/home.png);
 }
 
 #header h1 {
@@ -15,59 +15,85 @@
 }
 
 body {
-	background-image: url(../img/back.png);
+	background-image: url(../img/tema2/back.png);
+}
+
+.header{
+	background-image: url(../img/tema2/header.png);
+  background-position: 0 0;
+}
+
+.title_page{
+  background-image: url(../img/tema2/titulo_back.png);
 }
 
 .cover_photo,
 .photo-up,
 .photo-v {
-  background-image: url(../img/marco.png), url(../img/marco_fondo.png);
+  background-image: url(../img/tema2/marco.png), url(../img/tema2/marco_fondo.png);
 }
 
 .pick_fb{
-  background-image: url(../img/bt_elegir.png);
+  background-image: url(../img/tema2/bt_elegir.png);
+}
+
+.upload_bt {
+  background-image: url(../img/tema2/bt_subir_foto.png);
 }
 
 p.whatdo{
-  background-image: url(../img/que-quieres-hacer.png);
+  background-image: url(../img/que-quieres-hacer.png); // FALTA?
 }
 
 .write_bt {
-  background-image: url(../img/bt_escribir_up.png);
+  background-image: url(../img/tema2/bt_escribir.png);
 }
 
 .share_bt{
-  background-image: url(../img/bt_compartir_up.png);
+  background-image: url(../img/tema2/bt_compartir.png);
 }
 
 .watch_bt{
-  background-image: url(../img/bt_ver_up.png);
+  background-image: url(../img/tema2/bt_ver.png);
 }
 
-.instructions_bt{
-  background-image: url(../img/bt_instrucciones_up.png);
+.instructions_bt {
+  background-image: url(../img/tema2/bt_instrucciones.png);
 }
 
-.first_trim{
-  background-image: url(../img/bt_primer.png);
+.first_trim {
+  background-image: url(../img/tema2/bt_primer.png);
 }
 
-.second_trim{
-  background-image: url(../img/bt_segundo.png);
+.second_trim {
+  background-image: url(../img/tema2/bt_segundo.png);
 }
 
-.third_trim{
-  background-image: url(../img/bt_tercer.png);
+.third_trim {
+  background-image: url(../img/tema2/bt_tercer.png);
 }
 
-.add_moment{
-  background-image: url(../img/bt_agregar.png);
+.menu_trims .current,
+.first_trim:hover,
+.second_trim:hover,
+.third_trim:hover {
+  background-position: 0 33px;
 }
 
 .ant{
-  background-image: url(../img/anterior.png);
+  background-image: url(../img/tema2/anterior.png);
 }
 
 .sig{
-  background-image: url(../img/siguiente.png);
+  background-image: url(../img/tema2/siguiente.png);
 }
+
+form .submit input[type="submit"]{
+  background-image: url(../img/tema2/bt_aceptar.png);
+  
+}
+
+.footer {
+  background-image: url(../img/tema2/footer.png);
+}
+

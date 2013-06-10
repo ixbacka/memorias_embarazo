@@ -898,22 +898,6 @@ form .submit input[type="submit"]{
   box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.3), 0px 0px 0px rgba(0, 0, 0, 0.2);
 }
 
-form .submit input[type="submit"]:hover{
-  text-indent: -9999px;
-  width: 55px;
-  height: 54px;
-  background-image: url(../img/bt_aceptar.png);
-  background-color: transparent;
-  border: none;
-  border-radius: 0px;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  -moz-box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.3), 0px 0px 0px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.3), 0px 0px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.3), 0px 0px 0px rgba(0, 0, 0, 0.2);
-}
-
 .whoami_left{
 	float: left;
 	width: 300px;
