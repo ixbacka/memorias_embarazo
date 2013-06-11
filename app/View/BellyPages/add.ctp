@@ -5,22 +5,22 @@
 <style type="text/css">
 
 	<?php if( isset($belly['BellyPage']['photo1']) ){ ?>
-	#photo1{
-		background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo1']); ?>);
+	#photo1_back{
+		background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo1']); ?>);
 	}
 	<?php }?>
 
 
 	<?php if( isset($belly['BellyPage']['photo2']) ){ ?>
-	#photo2{
-		background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo2']); ?>);
+	#photo2_back{
+		background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo2']); ?>);
 	}
 	<?php }?>
 
 
 	<?php if( isset($belly['BellyPage']['photo3']) ){ ?>
-	#photo3{
-		background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo3']); ?>);
+	#photo3_back{
+		background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo3']); ?>);
 		
 	}
 	<?php }?>
@@ -79,7 +79,7 @@ fbphotoSelect = function(id, idpapa) {
 			console.log(photo.source);
 			console.log(' ehmem == > '+idpapa);
 			$('.'+idpapa).val(photo.source);
-			$('#'+idpapa).css('background-image','url(../img/marco.png), url('+photo.source+')');
+			$('#'+idpapa+"_back").css('background-image','url('+photo.source+')');
 			//$('.cover_photo').css('background-size', '392px 297px,  329px 265px');
 		};
 
@@ -123,7 +123,7 @@ function readURL(input) {
       		var elpapa = $(input).parent().get(0).id;
           var reader = new FileReader();
           reader.onload = function (e) {
-                  $('#'+elpapa).css('background-image','url(../img/marco.png), url('+e.target.result+')');
+                  $('#'+elpapa+"_back").css('background-image','url('+e.target.result+')');
           };
           reader.readAsDataURL(input.files[0]);
       }
@@ -216,6 +216,7 @@ function readURL(input) {
 
   <?php echo $this->Form->create('BellyPage', array('enctype' => 'multipart/form-data')); ?>
     <div class="mesuno">
+    	<div id="photo1_back"></div>
       <div class="bellyFile photo-up" id="photo1">
         <input type="hidden" name="data[BellyPage][photo1_url][url_photo]" class="photo1" value=""/>
         <div class="pick_fb">Elegir de Facebook</div>
@@ -226,6 +227,7 @@ function readURL(input) {
       <p class="mes">Mes 1</p>
     </div>
     <div class="mesdos">
+    	<div id="photo2_back"></div>
       <div class="bellyFile photo-up" id="photo2">
         <input type="hidden" name="data[BellyPage][photo2_url][url_photo]" class="photo2" value=""/>
         <div class="pick_fb">Elegir de Facebook</div>
@@ -236,6 +238,7 @@ function readURL(input) {
       <p class="mes">Mes 2</p>
     </div>
     <div class="mestres">
+    	<div id="photo3_back"></div>
       <div class="bellyFile photo-up" id="photo3">
         <input type="hidden" name="data[BellyPage][photo3_url][url_photo]" class="photo3" value=""/>
         <div class="pick_fb">Elegir de Facebook</div>
@@ -251,5 +254,8 @@ function readURL(input) {
       ?>
   <?php echo $this->Form->end(__('Submit')); ?>
   </div>
+</div>
+
+
 </div>
 

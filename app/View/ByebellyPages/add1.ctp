@@ -89,13 +89,13 @@
       <p class="opcion cf">
         <input type="radio" name="data[ByebellyPage][itstarted]" value="1" <?php if($itstarted == 1){ echo 'checked="checked"'; } ?> />
         <label>
-          <input type="number" min="0" value="<?php if($days != '' && $itstarted == 1){ echo $days; } ?>" name="data[ByebellyPage][days]"> días antes de mi fecha programada
+          <input type="number" value="<?php if($days != '' && $itstarted == 1){ echo $days; } ?>" name="data[ByebellyPage][days]"> días antes de mi fecha programada
         </label>
       </p>
       <p class="opcion cf">
         <input type="radio" name="data[ByebellyPage][itstarted]" value="2" <?php if($itstarted == 2){ echo 'checked="checked"'; } ?> />
         <label>
-          <input type="number" min="0" value="<?php if($days != '' && $itstarted == 2 ){ echo $days; } ?>" name="data[ByebellyPage][days]"> días tarde (¡Sáquenmelo!)
+          <input type="number" value="<?php if($days != '' && $itstarted == 2 ){ echo $days; } ?>" name="data[ByebellyPage][days]"> días tarde (¡Sáquenmelo!)
         </label>
       </p>
       <p class="opcion cf">

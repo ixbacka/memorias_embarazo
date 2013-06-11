@@ -1,19 +1,32 @@
-<!-- add.ctp -->
-<?php //echo $this->Html->script('functions'); ?>
+
 <?php echo $this->Html->css('PhotoSelector'); ?>
 <?php echo $this->Html->script('photo_selector'); ?>
 
 <style type="text/css">
 
+	<?php if( isset($belly['BellyPage']['photo1']) ){ ?>
+	#photo1{
+		background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo1']); ?>);
+	}
+	<?php }?>
 
-<?php if( isset($whoami['WhoamiPage']['photo']) ){ ?>
-.whoami_photo_back{
-	background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$whoami['WhoamiPage']['photo']); ?>);
-}
-<?php }?>
+
+	<?php if( isset($belly['BellyPage']['photo2']) ){ ?>
+	#photo2{
+		background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo2']); ?>);
+	}
+	<?php }?>
+
+
+	<?php if( isset($belly['BellyPage']['photo3']) ){ ?>
+	#photo3{
+		background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo3']); ?>);
+		
+	}
+	<?php }?>
+
 
 </style>
-
 
 <script type="text/javascript">
 
@@ -65,8 +78,9 @@ fbphotoSelect = function(id, idpapa) {
 			// guardar img como portada , agregar a hidden field , y que lo mande .. inmediately ? 
 			console.log(photo.source);
 			console.log(' ehmem == > '+idpapa);
-			$('#photo_url_').val(photo.source);
-			$('.whoami_photo_back').css('background-image','url('+photo.source+')');
+			$('.'+idpapa).val(photo.source);
+			$('#'+idpapa).css('background-image','url(../img/marco.png), url('+photo.source+')');
+			//$('.cover_photo').css('background-size', '392px 297px,  329px 265px');
 		};
 
 
@@ -106,15 +120,18 @@ fbphotoSelect = function(id, idpapa) {
 
 function readURL(input) {
       if (input.files && input.files[0]) {
+      		var elpapa = $(input).parent().get(0).id;
           var reader = new FileReader();
           reader.onload = function (e) {
-          	$('.whoami_photo_back').css('background-image','url('+e.target.result+')');
+                  $('#'+elpapa).css('background-image','url(../img/marco.png), url('+e.target.result+')');
           };
           reader.readAsDataURL(input.files[0]);
       }
   }
 
 </script>
+
+
 
 
 <!-- Markup for Carson Shold's Photo Selector -->
@@ -160,110 +177,79 @@ function readURL(input) {
 		</div>
 <!-- Markup for Carson Shold's Photo Selector -->
 
-<?php echo $this->element('menu', array( "trimestre" => 1, 'pag' => 'whoami')); ?>
+
+<?php echo $this->element('menu', array( "trimestre" => 1, "pag" => "belly")); ?>
 
 <?php
 		echo $this->Html->link(
 				    'Add Moment',
-				    array('controller' => 'moment_pages', 'action' => 'add', 0, 1),
+				    array('controller' => 'moment_pages', 'action' => 'add'),
 				    array('class' => 'add_moment')
 				);
 	?>
 
 <div class="content">
-<?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
+  <?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
+  <div class="page_title">
+    <?php
 
-<div class="page_title">
-	<?php
+        echo $this->Html->link(
+              'Siguiente',
+              array('controller' => 'ultrasound_pages', 'action' => 'add'),
+              array('class' => 'ant')
+          );
+    ?>
 
-			echo $this->Html->link(
-				    'Siguiente',
-				    array('controller' => 'first_visit_pages', 'action' => 'add'),
-				    array('class' => 'ant')
-				);
-	?>
-	<div class="title_page">Qui&eacute;n Soy Yo...</div>
-	<?php
+    <div class="title_page"><p>Mi pancita</p>
+      <span>mes a mes</span></div>
+    <?php
 
-			echo $this->Html->link(
-				    'Siguiente',
-				    array('controller' => 'sintom_pages', 'action' => 'add'),
-				    array('class' => 'sig')
-				);
-	?>
+        echo $this->Html->link(
+              'Siguiente',
+              array('controller' => 'animo_pages', 'action' => 'add'),
+              array('class' => 'sig')
+          );
+    ?>
+  </div>
+
+  <div class="bellyPages form">
+
+  <?php echo $this->Form->create('BellyPage', array('enctype' => 'multipart/form-data')); ?>
+    <div class="mesuno">
+      <div class="bellyFile photo-up" id="photo1">
+        <input type="hidden" name="data[BellyPage][photo1_url][url_photo]" class="photo1" value=""/>
+        <div class="pick_fb">Elegir de Facebook</div>
+        <?php
+          echo $this->Form->file('grandpa_dad_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+        ?>
+      </div>
+      <p class="mes">Mes 1</p>
+    </div>
+    <div class="mesdos">
+      <div class="bellyFile photo-up" id="photo2">
+        <input type="hidden" name="data[BellyPage][photo2_url][url_photo]" class="photo2" value=""/>
+        <div class="pick_fb">Elegir de Facebook</div>
+        <?php
+          echo $this->Form->file('photo2', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+        ?>
+      </div>
+      <p class="mes">Mes 2</p>
+    </div>
+    <div class="mestres">
+      <div class="bellyFile photo-up" id="photo3">
+        <input type="hidden" name="data[BellyPage][photo3_url][url_photo]" class="photo3" value=""/>
+        <div class="pick_fb">Elegir de Facebook</div>
+        <?php
+          echo $this->Form->file('grandma_dad_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+        ?>
+      </div>
+      <p class="mes">Mes 3</p>
+    </div>
+      <?php
+        //no borrar, para poder verla en local, pero debes de descomentarla para subirla al server
+        echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
+      ?>
+  <?php echo $this->Form->end(__('Submit')); ?>
+  </div>
 </div>
 
-	<div class="congratsPages form">
-<?php echo $this->Form->create('WhoamiPage', array('enctype' => 'multipart/form-data')); ?>
-	
-	<div class="whoami_left">
-		<div class="whoami_photo_back"></div>
-		<div class="whoami_photo">
-
-			<input type="hidden" name="data[WhoamiPage][url_photo]" id="photo_url_" value=""/>
-			<div class="pick_fb">Elegir de Facebook</div>
-			<?php
-				echo $this->Form->file('photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
-			?>
-		</div>
-	</div>
-	<div class="whoami_right">
-	<?php
-
-	if(isset($whoami['WhoamiPage']['name'])){
-		$name = $whoami['WhoamiPage']['name'];
-	} else{
-		$name = '';
-	}
-		echo $this->Form->input('name', array('label' => 'Yo soy: '
-			, 'after' => '</span>','between' => '<span>', 'value' => $name )); 
-
-	if(isset($whoami['WhoamiPage']['age'])){
-		$age = $whoami['WhoamiPage']['age'];
-	} else{
-		$age = '';
-	}
-		echo $this->Form->input('age', array('label' => 'Tengo ', 'min' => 0, 'after' => ' años </p>','between' => ' ', 'before'=> '<p>', 'value' => $age));
-
-
-			if(isset($whoami['WhoamiPage']['profesion'])){
-				$profesion = $whoami['WhoamiPage']['profesion'];
-			} else{
-				$profesion = '';
-			}
-
-			echo $this->Form->input('profesion', array('label' => 'Me dedico a: ','after' => '</span>','between' => '<span>', 'value' => $profesion));
-
-			if(isset($whoami['WhoamiPage']['location'])){
-				$location = $whoami['WhoamiPage']['location'];
-			} else{
-				$location = '';
-			}
-		echo $this->Form->input('location',array('label' => 'Vivo en: ', 'after' => '</span>','between' => '<span>', 'value' => $location));
-
-			if(isset($whoami['WhoamiPage']['dadsname'])){
-				$dadsname = $whoami['WhoamiPage']['dadsname'];
-			} else{
-				$dadsname = '';
-			}
-		echo $this->Form->input('dadsname',array('label' => 'Y el papá: ', 'after' => '</span>','between' => '<span>', 'value' => $dadsname));
-
-			if(isset($whoami['WhoamiPage']['remember'])){
-				$remember = $whoami['WhoamiPage']['remember'];
-			} else{
-				$remember = '';
-			}
-		echo $this->Form->input('remember',array('label' => 'El día de mañana quiero recordar que yo: ', 'value' => $remember));
-	?>
-		<?php
-			echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
-		?>	
-		<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-</div>
-</div>
-	<div class="footer">
-		<div class="footer_mtm">Mom to mom , Consintiendo mi piel de mam&aacute;</div>
-		<a href="http://www.momtomom.com.mx/" class="footer_link" target="_blank">www.momtomom.mx</a>
-		<a href="https://twitter.com/momtomommx" class="footer_twitter" target="_blank">@momtomommx</a>
-	</div>

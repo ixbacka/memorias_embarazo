@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  $.datepicker.setDefaults( $.datepicker.regional[ "es" ] );
+
   $( "#datepickerCongrats" ).datepicker({
 		  onSelect: function(dateText) {
 		    //display("Selected date: " + dateText + "; input's current value: " + this.value);

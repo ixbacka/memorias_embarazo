@@ -1,4 +1,39 @@
-<?php echo $this->Html->script('functions'); ?>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+   var radios = $(':radio');
+
+
+  // when the radio selection is changed, fire 
+  // the uncheck event on the selected radio's 
+  // sibling that was checked
+  radios.on('change', function() {
+    var siblings = $(':radio[name="' + this.name + '"]').not(this);
+
+    siblings.each(function() {
+      var sibling = $(this);
+      if (sibling.data('ischecked')) {
+        sibling.trigger('uncheck');
+      }  
+    });
+  });
+
+  // custom check / uncheck events
+  radios.on('check uncheck', function(e) {
+    var checked = (e.type === 'check');
+    $(this).data('ischecked', checked).attr('checked', checked);
+  });
+
+  // make sure all radios have the necessary 
+  // ischecked flag on DOM ready
+  radios.filter(':checked').each(function(i, r) {
+    $(this).trigger('check');
+  });
+});
+
+</script>
+
 <?php echo $this->element('menu', array( "trimestre" => 1, "pag" => "animo")); ?>
 <?php
 		echo $this->Html->link(
@@ -172,7 +207,7 @@
         echo  'checked="checked"'; } ?> />
         <input type="radio" name="data[AnimoPage][month1_physical]" value="2" <?php if($month1_physical == 2){
         echo  'checked="checked"'; } ?> />
-        <input type="radio" name="data[AnimoPage][month1_physical]" value="3" <?php if($month1_physical == 2){
+        <input type="radio" name="data[AnimoPage][month1_physical]" value="3" <?php if($month1_physical == 3){
         echo 'checked="checked"'; } ?> />
       </div>
 
@@ -189,7 +224,7 @@
         echo  'checked="checked"'; } ?> />
         <input type="radio" name="data[AnimoPage][month2_physical]" value="2" <?php if($month2_physical == 2){
         echo  'checked="checked"'; } ?> />
-        <input type="radio" name="data[AnimoPage][month2_physical]" value="3" <?php if($month2_physical == 2){
+        <input type="radio" name="data[AnimoPage][month2_physical]" value="3" <?php if($month2_physical == 3){
         echo  'checked="checked"'; } ?> />
       </div>
 
@@ -206,7 +241,7 @@
         echo  'checked="checked"'; } ?> />
         <input type="radio" name="data[AnimoPage][month3_physical]" value="2" <?php if($month3_physical == 2){
         echo  'checked="checked"'; } ?> />
-        <input type="radio" name="data[AnimoPage][month3_physical]" value="3" <?php if($month3_physical == 2){
+        <input type="radio" name="data[AnimoPage][month3_physical]" value="3" <?php if($month3_physical == 3){
           echo  'checked="checked"'; } ?> />
       </div>
     </div>
