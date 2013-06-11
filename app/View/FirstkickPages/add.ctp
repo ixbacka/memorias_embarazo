@@ -340,9 +340,9 @@ function readURL(input) {
       <label>Esta maravilla de la vida la sentí el </label>
       <input type="text" id="datepickerCongrats" size="30" readonly="readonly"  value="<?php if($firstkick_date != ''){ echo $firstkick_date; } ?>"/>
     </p>
-    <input type="hidden" name="data[FirstkickPage][firstkick_date][month]" id="CongratsPagePruebaMonth" <?php if($prueba != ''){ ?>  value="<?php echo $month_prueba; ?>" <?php } ?> />
-    <input type="hidden" name="data[FirstkickPage][firstkick_date][day]" id="CongratsPagePruebaDay" <?php if($prueba != ''){ ?>  value="<?php echo $dia; ?>" <?php } ?> />
-    <input type="hidden" name="data[FirstkickPage][firstkick_date][year]" id="CongratsPagePruebaYear" <?php if($prueba != ''){ ?>  value="<?php echo $ano; ?>" <?php } ?> />
+    <input type="hidden" name="data[FirstkickPage][firstkick_date][month]" id="CongratsPagePruebaMonth" <?php if($firstkick_date != ''){ ?>  value="<?php echo $month_prueba; ?>" <?php } ?> />
+    <input type="hidden" name="data[FirstkickPage][firstkick_date][day]" id="CongratsPagePruebaDay" <?php if($firstkick_date != ''){ ?>  value="<?php echo $dia; ?>" <?php } ?> />
+    <input type="hidden" name="data[FirstkickPage][firstkick_date][year]" id="CongratsPagePruebaYear" <?php if($firstkick_date != ''){ ?>  value="<?php echo $ano; ?>" <?php } ?> />
     <?php
       if(isset($firstkick['FirstkickPage']['week'])){
         $week = $firstkick['FirstkickPage']['week'];
@@ -366,9 +366,9 @@ function readURL(input) {
     </div>
     <input type="text" id="datepickerCongrats1" size="30" readonly="readonly"  value="<?php if($photo_date != ''){
           echo $photo_date; } ?>"/>
-    <input type="hidden" name="data[FirstkickPage][photo_date][month]" id="CongratsPagePruebaMonth1" <?php if($prueba != ''){ ?>  value="<?php echo $month_prueba1; ?>" <?php } ?>   />
-    <input type="hidden" name="data[FirstkickPage][photo_date][day]" id="CongratsPagePruebaDay1" <?php if($prueba != ''){ ?>  value="<?php echo $dia1; ?>" <?php } ?>  />
-    <input type="hidden" name="data[FirstkickPage][photo_date][year]" id="CongratsPagePruebaYear1" <?php if($prueba != ''){ ?>  value="<?php echo $ano1; ?>" <?php } ?>  />
+    <input type="hidden" name="data[FirstkickPage][photo_date][month]" id="CongratsPagePruebaMonth1" <?php if($photo_date != ''){ ?>  value="<?php echo $month_prueba1; ?>" <?php } ?>   />
+    <input type="hidden" name="data[FirstkickPage][photo_date][day]" id="CongratsPagePruebaDay1" <?php if($photo_date != ''){ ?>  value="<?php echo $dia1; ?>" <?php } ?>  />
+    <input type="hidden" name="data[FirstkickPage][photo_date][year]" id="CongratsPagePruebaYear1" <?php if($photo_date != ''){ ?>  value="<?php echo $ano1; ?>" <?php } ?>  />
   </div>
   <div class="colR">
     <p class="photogenic">
