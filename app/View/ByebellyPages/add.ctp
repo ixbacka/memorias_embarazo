@@ -1,3 +1,36 @@
+<?php 
+#Power by nicolaspar 2007 - especific proyect
+function get_date_spanish( $time, $part = false, $formatDate = '' ){
+    #Declare n compatible arrays
+    $month = array("","enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiempre", "diciembre");#n
+    $month_execute = "n"; #format for array month
+
+    $month_mini = array("","ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "DIC");#n
+    $month_mini_execute = "n"; #format for array month
+
+    $day = array("domingo","lunes","martes","miércoles","jueves","viernes","sábado"); #w
+    $day_execute = "w";
+    
+    $day_mini = array("DOM","LUN","MAR","MIE","JUE","VIE","SAB"); #w
+    $day_mini_execute = "w";
+
+    #Content array exception print "HOY", position content the name array. Duplicate value and key for optimization in comparative
+    $print_hoy = array("month"=>"month", "month_mini"=>"month_mini");
+
+    if( $part === false ){
+        return date("d", $time) . " de " . $month[date("n",$time)] . ", ". date("H:i",$time) ." hs";
+    }elseif( $part === true ){
+        if( ! empty( $print_hoy[$formatDate] ) && date("d-m-Y", $time ) == date("d-m-Y") ) return "HOY"; #Exception HOY
+        if( ! empty( ${$formatDate} ) && !empty( ${$formatDate}[date(${$formatDate.'_execute'},$time)] ) ) return ${$formatDate}[date(${$formatDate.'_execute'},$time)];
+        else return date($formatDate, $time);
+    }else{
+        return date("d-m-Y H:i", $time);
+    }
+}
+
+?>
+
+
 <?php echo $this->Html->script('jquery-ui/js/jquery-ui-1.10.3.custom.min'); ?>
 <?php echo $this->Html->script('functions'); ?>
 <?php echo $this->Html->css('redmond/jquery-ui-1.10.3.custom.min'); ?>
@@ -19,6 +52,7 @@
 
 			$byebelly_date = $dia.' '.$mes.' '.$ano;
 			$monthi = ($date->format('m'))-1;
+      $mese = $date->format('m');
 		?>
 	 $( "#datepickerCongrats" ).datepicker("setDate", new Date(<?php echo $ano.', '.$monthi.', '.$dia;?>));	
 	<?php } else{
@@ -34,7 +68,7 @@
 <?php
 		echo $this->Html->link(
 				    'Add Moment',
-				    array('controller' => 'moment_pages', 'action' => 'add'),
+				    array('controller' => 'moment_pages', 'action' => 'add',0,3),
 				    array('class' => 'add_moment')
 				);
 	?>
@@ -68,9 +102,9 @@
     <p class="contacciones">
       <label>El d&iacute;a:</label>
       <input type="text" id="datepickerCongrats" size="30" readonly="readonly"  value="<?php if($byebelly_date != ''){ echo $byebelly_date; } ?>"/>
-      <input type="hidden" name="data[ByebellyPage][byebelly_date][month]" id="CongratsPagePruebaMonth" />
-      <input type="hidden" name="data[ByebellyPage][byebelly_date][day]" id="CongratsPagePruebaDay" />
-      <input type="hidden" name="data[ByebellyPage][byebelly_date][year]" id="CongratsPagePruebaYear" />
+      <input type="hidden" name="data[ByebellyPage][byebelly_date][month]" id="CongratsPagePruebaMonth" <?php if($byebelly_date != ''){ ?>  value="<?php echo $mese; ?>" <?php } ?>  />
+      <input type="hidden" name="data[ByebellyPage][byebelly_date][day]" id="CongratsPagePruebaDay" <?php if($byebelly_date != ''){ ?>  value="<?php echo $dia; ?>" <?php } ?>  />
+      <input type="hidden" name="data[ByebellyPage][byebelly_date][year]" id="CongratsPagePruebaYear" <?php if($byebelly_date != ''){ ?>  value="<?php echo $ano; ?>" <?php } ?>  />
       comenzaron las contracciones.
     </p>
     <p> ¡Ay no, ay no, que nervios! mi labor de parto comenzó: </p>
@@ -80,22 +114,28 @@
       } else{
         $itstarted = '';
       }
-      if(isset($byebelly['ByebellyPage']['days'])){
-        $days = $byebelly['ByebellyPage']['days'];
+      if(isset($byebelly['ByebellyPage']['days1'])){
+        $days1 = $byebelly['ByebellyPage']['days1'];
       } else{
-        $days = '';
-    } ?>
+        $days1 = '';
+      }
+       if(isset($byebelly['ByebellyPage']['days2'])){
+        $days2 = $byebelly['ByebellyPage']['days2'];
+      } else{
+        $days2 = '';
+      }
+     ?>
     <div class="opciones">
       <p class="opcion cf">
         <input type="radio" name="data[ByebellyPage][itstarted]" value="1" <?php if($itstarted == 1){ echo 'checked="checked"'; } ?> />
         <label>
-          <input type="number" min="0" value="<?php if($days != '' && $itstarted == 1){ echo $days; } ?>" name="data[ByebellyPage][days]"> días antes de mi fecha programada
+          <input type="number" min="0" value="<?php if($days1 != '' && $itstarted == 1){ echo $days1; } ?>" name="data[ByebellyPage][days1]"> días antes de mi fecha programada
         </label>
       </p>
       <p class="opcion cf">
         <input type="radio" name="data[ByebellyPage][itstarted]" value="2" <?php if($itstarted == 2){ echo 'checked="checked"'; } ?> />
         <label>
-          <input type="number" min="0" value="<?php if($days != '' && $itstarted == 2 ){ echo $days; } ?>" name="data[ByebellyPage][days]"> días tarde (¡Sáquenmelo!)
+          <input type="number" min="0" value="<?php if($days2 != '' && $itstarted == 2 ){ echo $days2; } ?>" name="data[ByebellyPage][days2]"> días tarde (¡Sáquenmelo!)
         </label>
       </p>
       <p class="opcion cf">

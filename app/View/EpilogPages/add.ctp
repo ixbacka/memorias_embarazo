@@ -2,7 +2,7 @@
 <?php
 		echo $this->Html->link(
 				    'Add Moment',
-				    array('controller' => 'moment_pages', 'action' => 'add'),
+				    array('controller' => 'moment_pages', 'action' => 'add',0,3),
 				    array('class' => 'add_moment')
 				);
 	?>
@@ -44,11 +44,11 @@
   ?>
   <div class="opciones cf">
     <div class="cf">
-      <input type="radio" name="data[NestingPage][belly]" value="1" <?php if($belly == 1){ echo 'checked="checked"'; } ?> />
+      <input type="radio" name="data[EpilogPage][belly]" value="1" <?php if($belly == 1){ echo 'checked="checked"'; } ?> />
       <label>¡Ay! todavia parezco embarazada</label>
     </div>
     <div class="cf">
-      <input type="radio" name="data[NestingPage][belly]" value="2" <?php if($belly == 2){ echo 'checked="checked"'; } ?> />
+      <input type="radio" name="data[EpilogPage][belly]" value="2" <?php if($belly == 2){ echo 'checked="checked"'; } ?> />
       <label>¡Eh!  Sorpresivamente mi panza regresó a su talla normal</label>
     </div>
   </div>

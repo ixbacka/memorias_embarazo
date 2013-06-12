@@ -1,35 +1,3 @@
-<?php 
-#Power by nicolaspar 2007 - especific proyect
-function get_date_spanish( $time, $part = false, $formatDate = '' ){
-    #Declare n compatible arrays
-    $month = array("","enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiempre", "diciembre");#n
-    $month_execute = "n"; #format for array month
-
-    $month_mini = array("","ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "DIC");#n
-    $month_mini_execute = "n"; #format for array month
-
-    $day = array("domingo","lunes","martes","miércoles","jueves","viernes","sábado"); #w
-    $day_execute = "w";
-    
-    $day_mini = array("DOM","LUN","MAR","MIE","JUE","VIE","SAB"); #w
-    $day_mini_execute = "w";
-
-    #Content array exception print "HOY", position content the name array. Duplicate value and key for optimization in comparative
-    $print_hoy = array("month"=>"month", "month_mini"=>"month_mini");
-
-    if( $part === false ){
-        return date("d", $time) . " de " . $month[date("n",$time)] . ", ". date("H:i",$time) ." hs";
-    }elseif( $part === true ){
-        if( ! empty( $print_hoy[$formatDate] ) && date("d-m-Y", $time ) == date("d-m-Y") ) return "HOY"; #Exception HOY
-        if( ! empty( ${$formatDate} ) && !empty( ${$formatDate}[date(${$formatDate.'_execute'},$time)] ) ) return ${$formatDate}[date(${$formatDate.'_execute'},$time)];
-        else return date($formatDate, $time);
-    }else{
-        return date("d-m-Y H:i", $time);
-    }
-}
-
-?>
-
 <?php echo $this->Html->css('PhotoSelector'); ?>
 <?php echo $this->Html->script('photo_selector'); ?>
 <?php echo $this->Html->script('jquery-ui/js/jquery-ui-1.10.3.custom.min'); ?>
@@ -84,7 +52,7 @@ fbphotoSelect = function(id, idpapa) {
 			// guardar img como portada , agregar a hidden field , y que lo mande .. inmediately ? 
 			console.log(photo.source);
 			$('#photo_url_').val(photo.source);
-			$('.belly_photo_back').css('background-image','url('+photo.source+')');
+			$('.belly_photo').css('background-image','url(../img/marco_whoami.png), url('+photo.source+')');
 		};
 
 
@@ -122,7 +90,7 @@ fbphotoSelect = function(id, idpapa) {
 
 <?php if(isset($bellymonth['BellymonthPage']['photo_date'])){ 
 
-			$source = $bellymonth['BellymonthPage']['photo_date'];
+			$source = $firstkick['BellymonthPage']['photo_date'];
 			$date = new DateTime($source);
 			$letime = strtotime($source);
 
@@ -133,7 +101,6 @@ fbphotoSelect = function(id, idpapa) {
 
 			$photo_date = $dia.' '.$mes.' '.$ano;
 			$monthi = ($date->format('m'))-1;
-			$mese = $date->format('m');
 		?>
 	 $( "#datepickerCongrats" ).datepicker("setDate", new Date(<?php echo $ano.', '.$monthi.', '.$dia;?>));	
 <?php } else{
@@ -149,7 +116,7 @@ function readURL(input) {
       if (input.files && input.files[0]) {
           var reader = new FileReader();
           reader.onload = function (e) {
-          	$('.belly_photo_back').css('background-image','url('+e.target.result+')');
+          	$('.belly_photo').css('background-image','url(../img/marco_whoami.png), url('+e.target.result+')');
           };
           reader.readAsDataURL(input.files[0]);
       }
@@ -158,14 +125,11 @@ function readURL(input) {
 </script>
 
 <style type="text/css">
-#datepickerCongrats{
-	padding-top: 305px;
-	margin-left: 50px;
-}
 
 <?php if( isset($bellymonth['BellymonthPage']['photo']) ){ ?>
-.belly_photo_back{
-	background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$bellymonth['BellymonthPage']['photo']); ?>);
+.belly_photo{
+	background-image: url(../img/marco.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$bellymonth['BellymonthPage']['photo']); ?>);
+	background-size: 297px 392px, 225px 320px;
 }
 <?php }?>
 
@@ -222,7 +186,7 @@ function readURL(input) {
 <?php
 		echo $this->Html->link(
 				    'Add Moment',
-				    array('controller' => 'moment_pages', 'action' => 'add',0,2),
+				    array('controller' => 'moment_pages', 'action' => 'add'),
 				    array('class' => 'add_moment')
 				);
 	?>
@@ -254,8 +218,6 @@ function readURL(input) {
   <div class="bellymonthPages form">
 	<?php echo $this->Form->create('BellymonthPage', array('enctype' => 'multipart/form-data')); ?>
     <div class="colL">
-      <div class="belly_photo_back"></div>
-
       <div class="belly_photo photo-v">
         <input type="hidden" name="data[BellymonthPage][url_photo]" id="photo_url_" value=""/>
         <div class="pick_fb">Elegir de Facebook</div>
@@ -265,9 +227,9 @@ function readURL(input) {
       </div>
       <input type="text" id="datepickerCongrats" size="30" readonly="readonly"  value="<?php if($photo_date != ''){
             echo $photo_date; } ?>"/>
-      <input type="hidden" name="data[BellymonthPage][photo_date][month]" id="CongratsPagePruebaMonth" <?php if($photo_date != ''){ ?>  value="<?php echo $mese; ?>" <?php } ?>  />
-      <input type="hidden" name="data[BellymonthPage][photo_date][day]" id="CongratsPagePruebaDay" <?php if($photo_date != ''){ ?>  value="<?php echo $dia ?>" <?php } ?>  />
-      <input type="hidden" name="data[BellymonthPage][photo_date][year]" id="CongratsPagePruebaYear" <?php if($photo_date != ''){ ?>  value="<?php echo $ano; ?>" <?php } ?>  />
+      <input type="hidden" name="data[BellymonthPage][photo_date][month]" id="CongratsPagePruebaMonth" />
+      <input type="hidden" name="data[BellymonthPage][photo_date][day]" id="CongratsPagePruebaDay" />
+      <input type="hidden" name="data[BellymonthPage][photo_date][year]" id="CongratsPagePruebaYear" />
     </div>
     <div class="colR">
       <p class="peso">

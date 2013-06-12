@@ -71,7 +71,6 @@ class BellymonthPagesController extends AppController {
             'measurements' => $this->request->data['BellymonthPage']['measurements'],
             'apetite' => $this->request->data['BellymonthPage']['apetite'],
             'b4' => $this->request->data['BellymonthPage']['b4'],
-            'favoritepresent' => $this->request->data['BellymonthPage']['favoritepresent'],
             'profile_id' => $this->request->data['BellymonthPage']['profile_id'],
             'sleep' => $this->request->data['BellymonthPage']['sleep'],
             'photo_date' => $this->request->data['BellymonthPage']['photo_date']

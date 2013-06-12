@@ -4,7 +4,7 @@
 <?php
 		echo $this->Html->link(
 				    'Add Moment',
-				    array('controller' => 'bellymonth_pages', 'action' => 'add'),
+				    array('controller' => 'bellymonth_pages', 'action' => 'add',0,3),
 				    array('class' => 'add_moment')
 				);
 	?>
@@ -91,15 +91,15 @@
         $favoritename = '';
       }
     ?>
-    <input type="radio" name="data[ChildsexPage][favoritename]" value="1" <?php if($favoritename == 1){
+    <input type="radio" name="data[GettingclosePage][favoritename]" value="1" <?php if($favoritename == 1){
     echo  'checked="checked"'; } ?> />
-    <input type="radio" name="data[ChildsexPage][favoritename]" value="2" <?php if($favoritename == 2){
+    <input type="radio" name="data[GettingclosePage][favoritename]" value="2" <?php if($favoritename == 2){
     echo   'checked="checked"'; } ?> />
-    <input type="radio" name="data[ChildsexPage][favoritename]" value="3" <?php if($favoritename == 3){
+    <input type="radio" name="data[GettingclosePage][favoritename]" value="3" <?php if($favoritename == 3){
     echo   'checked="checked"'; } ?> />
-    <input type="radio" name="data[ChildsexPage][favoritename]" value="4" <?php if($favoritename == 3){
+    <input type="radio" name="data[GettingclosePage][favoritename]" value="4" <?php if($favoritename == 3){
     echo   'checked="checked"'; } ?> />
-    <input type="radio" name="data[ChildsexPage][favoritename]" value="5" <?php if($favoritename == 3){
+    <input type="radio" name="data[GettingclosePage][favoritename]" value="5" <?php if($favoritename == 3){
     echo   'checked="checked"'; } ?> />
   </div>
   <div class="col tres">

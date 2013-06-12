@@ -303,7 +303,7 @@ function readURL(input) {
 <?php
     echo $this->Html->link(
             'Add Moment',
-            array('controller' => 'moment_pages', 'action' => 'add'),
+            array('controller' => 'moment_pages', 'action' => 'add',0,2),
             array('class' => 'add_moment')
         );
   ?>

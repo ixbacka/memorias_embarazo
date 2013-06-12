@@ -1,3 +1,36 @@
+<?php
+
+#Power by nicolaspar 2007 - especific proyect
+function get_date_spanish( $time, $part = false, $formatDate = '' ){
+    #Declare n compatible arrays
+    $month = array("","enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiempre", "diciembre");#n
+    $month_execute = "n"; #format for array month
+
+    $month_mini = array("","ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "DIC");#n
+    $month_mini_execute = "n"; #format for array month
+
+    $day = array("domingo","lunes","martes","miércoles","jueves","viernes","sábado"); #w
+    $day_execute = "w";
+    
+    $day_mini = array("DOM","LUN","MAR","MIE","JUE","VIE","SAB"); #w
+    $day_mini_execute = "w";
+
+    #Content array exception print "HOY", position content the name array. Duplicate value and key for optimization in comparative
+    $print_hoy = array("month"=>"month", "month_mini"=>"month_mini");
+
+    if( $part === false ){
+        return date("d", $time) . " de " . $month[date("n",$time)] . ", ". date("H:i",$time) ." hs";
+    }elseif( $part === true ){
+        if( ! empty( $print_hoy[$formatDate] ) && date("d-m-Y", $time ) == date("d-m-Y") ) return "HOY"; #Exception HOY
+        if( ! empty( ${$formatDate} ) && !empty( ${$formatDate}[date(${$formatDate.'_execute'},$time)] ) ) return ${$formatDate}[date(${$formatDate.'_execute'},$time)];
+        else return date($formatDate, $time);
+    }else{
+        return date("d-m-Y H:i", $time);
+    }
+}
+
+?>
+
 <?php echo $this->Html->script('jquery-ui/js/jquery-ui-1.10.3.custom.min'); ?>
 <?php echo $this->Html->css('redmond/jquery-ui-1.10.3.custom.min'); ?>
 <?php echo $this->Html->script('functions'); ?>
@@ -68,9 +101,9 @@ $(document).ready(function(){
     <label for="IlovemybabyPageToday">Hoy </label>
     <input type="text" id="datepickerCongrats" size="30" readonly="readonly"  class="fecha" value="<?php if($today != ''){
         echo $today; } ?>"/>
-    <input type="hidden" name="data[IlovemybabyPage][today][month]" id="CongratsPagePruebaMonth" />
-    <input type="hidden" name="data[IlovemybabyPage][today][day]" id="CongratsPagePruebaDay" />
-    <input type="hidden" name="data[IlovemybabyPage][today][year]" id="CongratsPagePruebaYear" />
+    <input type="hidden" name="data[IlovemybabyPage][today][month]" id="CongratsPagePruebaMonth" <?php if($today != ''){ ?>  value="<?php echo $montha; ?>" <?php } ?>  />
+    <input type="hidden" name="data[IlovemybabyPage][today][day]" id="CongratsPagePruebaDay" <?php if($today != ''){ ?>  value="<?php echo $dia; ?>" <?php } ?>  />
+    <input type="hidden" name="data[IlovemybabyPage][today][year]" id="CongratsPagePruebaYear" <?php if($today != ''){ ?>  value="<?php echo $ano; ?>" <?php } ?>  />
     nunca lo olvidaré porque oí tu corazón por primera vez
   </p>
 

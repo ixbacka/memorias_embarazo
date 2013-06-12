@@ -1,3 +1,36 @@
+<?php
+
+#Power by nicolaspar 2007 - especific proyect
+function get_date_spanish( $time, $part = false, $formatDate = '' ){
+    #Declare n compatible arrays
+    $month = array("","enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiempre", "diciembre");#n
+    $month_execute = "n"; #format for array month
+
+    $month_mini = array("","ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "DIC");#n
+    $month_mini_execute = "n"; #format for array month
+
+    $day = array("domingo","lunes","martes","miércoles","jueves","viernes","sábado"); #w
+    $day_execute = "w";
+    
+    $day_mini = array("DOM","LUN","MAR","MIE","JUE","VIE","SAB"); #w
+    $day_mini_execute = "w";
+
+    #Content array exception print "HOY", position content the name array. Duplicate value and key for optimization in comparative
+    $print_hoy = array("month"=>"month", "month_mini"=>"month_mini");
+
+    if( $part === false ){
+        return date("d", $time) . " de " . $month[date("n",$time)] . ", ". date("H:i",$time) ." hs";
+    }elseif( $part === true ){
+        if( ! empty( $print_hoy[$formatDate] ) && date("d-m-Y", $time ) == date("d-m-Y") ) return "HOY"; #Exception HOY
+        if( ! empty( ${$formatDate} ) && !empty( ${$formatDate}[date(${$formatDate.'_execute'},$time)] ) ) return ${$formatDate}[date(${$formatDate.'_execute'},$time)];
+        else return date($formatDate, $time);
+    }else{
+        return date("d-m-Y H:i", $time);
+    }
+}
+
+?>
+
 <?php echo $this->Html->css('PhotoSelector'); ?>
 <?php echo $this->Html->script('photo_selector'); ?>
 <?php echo $this->Html->script('jquery-ui/js/jquery-ui-1.10.3.custom.min'); ?>
@@ -54,7 +87,7 @@ fbphotoSelect = function(id, idpapa) {
       console.log(photo.source);
       console.log(' ehmem == > '+idpapa);
       $('.'+idpapa).val(photo.source);
-      $('#'+idpapa).css('background-image','url(../img/marco.png), url('+photo.source+')');
+      $('#'+idpapa+"_back").css('background-image','url('+photo.source+')');
 
     };
 
@@ -104,6 +137,7 @@ fbphotoSelect = function(id, idpapa) {
 
       $ultrasound_date = $dia.' '.$mes.' '.$ano;
       $monthi = ($date->format('m'))-1;
+      $mese = $date->format('m');
     ?>
    $( "#datepickerCongrats" ).datepicker("setDate", new Date(<?php echo $ano.', '.$monthi.', '.$dia;?>));  
 <?php } else{
@@ -119,7 +153,7 @@ function readURL(input) {
           var elpapa = $(input).parent().get(0).id;
           var reader = new FileReader();
           reader.onload = function (e) {
-                  $('#'+elpapa).css('background-image','url(../img/marco.png), url('+e.target.result+')');
+                  $('#'+elpapa+"_back").css('background-image','url('+e.target.result+')');
           };
           reader.readAsDataURL(input.files[0]);
       }
@@ -130,9 +164,8 @@ function readURL(input) {
 <style type="text/css">
 
 <?php if( isset($cool['CoolultrasoundPage']['photo']) ){ ?>
-#photo{
-  background-image: url(../img/marco.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$cool['CoolultrasoundPage']['photo']); ?>);
-  background-size: 297px 392px, 225px 320px;
+#photo_back{
+  background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$cool['CoolultrasoundPage']['photo']); ?>);
 }
 <?php }?>
 </style>
@@ -185,7 +218,7 @@ function readURL(input) {
 <?php
     echo $this->Html->link(
             'Add Moment',
-            array('controller' => 'moment_pages', 'action' => 'add'),
+            array('controller' => 'moment_pages', 'action' => 'add',0,3),
             array('class' => 'add_moment')
         );
   ?>
@@ -217,6 +250,8 @@ function readURL(input) {
   
   <div class="coolultrasoundPages form">
     <?php echo $this->Form->create('CoolultrasoundPage', array('enctype' => 'multipart/form-data')); ?>
+
+    <div id="photo_back"></div>
     <div id="photo" class="photo-up">
       <input type="hidden" name="data[CoolultrasoundPage][url_photo]" class="photo" value=""/>
       <div class="pick_fb">Elegir de Facebook</div>
@@ -230,9 +265,9 @@ function readURL(input) {
         <label>Fu&iacute; el :</label>
         <input type="text" id="datepickerCongrats" size="30" readonly="readonly"  value="<?php if($ultrasound_date != ''){
               echo $ultrasound_date; } ?>"/>
-        <input type="hidden" name="data[CoolultrasoundPage][ultrasound_date][month]" id="CongratsPagePruebaMonth" />
-        <input type="hidden" name="data[CoolultrasoundPage][ultrasound_date][day]" id="CongratsPagePruebaDay" />
-        <input type="hidden" name="data[CoolultrasoundPage][ultrasound_date][year]" id="CongratsPagePruebaYear" />
+        <input type="hidden" name="data[CoolultrasoundPage][ultrasound_date][month]" id="CongratsPagePruebaMonth" <?php if($ultrasound_date != ''){ ?>  value="<?php echo $mese; ?>" <?php } ?> />
+        <input type="hidden" name="data[CoolultrasoundPage][ultrasound_date][day]" id="CongratsPagePruebaDay" <?php if($ultrasound_date != ''){ ?>  value="<?php echo $dia; ?>" <?php } ?> />
+        <input type="hidden" name="data[CoolultrasoundPage][ultrasound_date][year]" id="CongratsPagePruebaYear" <?php if($ultrasound_date != ''){ ?>  value="<?php echo $ano; ?>" <?php } ?> />
       </p>
       <p class="semanas">
         <label>Ten&iacute;a </label>
@@ -259,12 +294,12 @@ function readURL(input) {
     <div class="bloque dos">
       <p>En este trimestre tu pap&aacute; est&aacute; un poco: </p>
       <?php  if(isset($cool['CoolultrasoundPage']['urdad'])){
-        $urdad = $bellymonth['CoolultrasoundPage']['urdad'];
+        $urdad = $cool['CoolultrasoundPage']['urdad'];
       } else{
         $urdad = '';
       }
       if(isset($cool['CoolultrasoundPage']['urdadsays'])){
-        $urdadsays = $bellymonth['CoolultrasoundPage']['urdadsays'];
+        $urdadsays = $cool['CoolultrasoundPage']['urdadsays'];
       } else{
         $urdadsays = '';
       } ?>
@@ -292,7 +327,7 @@ function readURL(input) {
       <p>Las cosas que m&aacute;s extraño: </p>
       <?php
         if(isset($cool['CoolultrasoundPage']['imiss'])){
-          $imiss = $bellymonth['CoolultrasoundPage']['imiss'];
+          $imiss = $cool['CoolultrasoundPage']['imiss'];
         } else{
           $imiss = '';
         }
@@ -320,7 +355,7 @@ function readURL(input) {
       </p>
       <p class="panza">La gente que opina de mi panza: </p>
       <?php if(isset($cool['CoolultrasoundPage']['theythink'])){
-          $theythink = $bellymonth['CoolultrasoundPage']['theythink'];
+          $theythink = $cool['CoolultrasoundPage']['theythink'];
         } else{
           $theythink = '';
       } ?>

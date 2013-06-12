@@ -51,7 +51,7 @@ fbphotoSelect = function(id, idpapa) {
 			console.log(photo.source);
 			console.log(' ehmem == > '+idpapa);
 			$('.'+idpapa).val(photo.source);
-			$('#'+idpapa).css('background-image','url(../img/marco.png), url('+photo.source+')');
+			$('#room_photo_back').css('background-image','url('+photo.source+')');
 
 		};
 
@@ -95,7 +95,7 @@ function readURL(input) {
       	  var elpapa = $(input).parent().get(0).id;
           var reader = new FileReader();
           reader.onload = function (e) {
-                  $('#'+elpapa).css('background-image','url(../img/marco.png), url('+e.target.result+')');
+                  $('#room_photo_back').css('background-image','url('+e.target.result+')');
           };
           reader.readAsDataURL(input.files[0]);
       }
@@ -106,9 +106,8 @@ function readURL(input) {
 <style type="text/css">
 
 <?php if( isset($nesting['NestingPage']['room_photo']) ){ ?>
-#photo{
-	background-image: url(../img/marco.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$nesting['NestingPage']['room_photo']); ?>);
-	background-size: 297px 392px, 225px 320px;
+#room_photo_back{
+	background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$nesting['NestingPage']['room_photo']); ?>);
 }
 <?php }?>
 </style>
@@ -161,7 +160,7 @@ function readURL(input) {
 <?php
 		echo $this->Html->link(
 				    'Add Moment',
-				    array('controller' => 'moment_pages', 'action' => 'add'),
+				    array('controller' => 'moment_pages', 'action' => 'add',0,3),
 				    array('class' => 'add_moment')
 				);
 	?>
@@ -249,6 +248,7 @@ function readURL(input) {
     </div>
   
     <p class="cuarto"> As&iacute; ser&aacute; tu cuarto: </p>
+    <div id="room_photo_back"></div>
 		<div id="room_photo" class="photo-up">
       <input type="hidden" name="data[NestingPage][url_photo]" class="room_photo" value=""/>
       <div class="pick_fb">Elegir de Facebook</div>

@@ -105,6 +105,35 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
     elseif($font == 4){ echo $this->Html->css('letra4'); } 
   ?>  
 
+  <style type="text/css">
+
+  <?php 
+    if($tema == 2){ 
+  ?>
+    #popup_instructions {
+      background-image: url(../img/tema2/pop_instrucciones.png);
+    }
+  <?php
+    } 
+    elseif($tema == 3){ 
+        ?>
+    #popup_instructions {
+      background-image: url(../img/tema3/pop_instrucciones.png);
+    }
+  <?php
+    } 
+    elseif($tema == 4){ 
+       ?>
+    #popup_instructions {
+      background-image: url(../img/tema4/pop_instrucciones.png);
+    }
+  <?php
+    } 
+    ?>
+    
+
+  </style>
+
 </head>
 <body>
 

@@ -2,7 +2,7 @@
 <?php
 		echo $this->Html->link(
 				    'Add Moment',
-				    array('controller' => 'moment_pages', 'action' => 'add'),
+				    array('controller' => 'moment_pages', 'action' => 'add',0,3),
 				    array('class' => 'add_moment')
 				);
 	?>

@@ -436,7 +436,10 @@ $(document).ready(function(){
 		picurl = $('#ellinkd').val();
 		laid= $('#laid').val();
 
-		var url = '//operacionxperia.com/momtomom/memorias_embarazo/profiles/postDiary/'+msg+'/'+picurl+'/'+laid; 
+		if(msg == ''){
+			msg="Mi diario de Embarazo"
+		}
+		var url = '//operacionxperia.com/momtomom/memorias_embarazo/profiles/postDiary/'+msg+'/'+picurl+'/'+laid+'/'+UID; 
 		//
 		console.log(' mm ... ' + url);
 		$.getJSON(url, function(data, textStatus)

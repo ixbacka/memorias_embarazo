@@ -38,6 +38,47 @@ body {
 }
 
 
+.whoami_photo_back{
+  background-image: url(../img/tema2/marco_fondo.png);
+}
+
+#ultrasound_photo_1_back{
+  background-image: url(../img/tema2/marco_fondo.png);
+}
+
+#ultrasound_photo_2_back{  
+  background-image: url(../img/tema2/marco_fondo.png);
+}
+
+
+#photo3_back{
+  background-image: url(../img/tema2/marco_fondo.png);
+}
+
+#photo1_back{
+  background-image: url(../img/tema2/marco_fondo.png);
+}
+
+#photo2_back{
+  background-image: url(../img/tema2/marco_fondo.png);
+}
+
+.firstkick_photo_back{
+  background-image: url(../img/tema2/marco_fondo.png);
+}
+
+.belly_photo_back{
+  background-image: url(../img/tema2/marco_fondo.png);
+}
+#photo1_back_{
+  background-image: url(../img/tema2/marco_fondo.png);  
+}
+#photo2_back_, #photo_back, #room_photo_back, #photo-back, #photo-back-1{
+  background-image: url(../img/tema2/marco_fondo.png);  
+}
+
+
+
 
 .pick_fb{
   background-image: url(../img/tema2/bt_elegir.png);
@@ -103,6 +144,8 @@ form .submit input[type="submit"]:hover {
 .footer {
   background-image: url(../img/tema2/footer.png);
 }
+
+
 
 /* COLORES */
 

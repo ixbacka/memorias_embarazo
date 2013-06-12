@@ -153,11 +153,11 @@
 				);
 	?>
 	</li>
-	<li <?php if($pag == 'welcome'){ echo 'class="selected"'; } ?>>
+	<li <?php if($pag == 'welcomebby'){ echo 'class="selected"'; } ?>>
 	<?php 
 		echo $this->Html->link(
 				    'Bienvenido',
-				    array('controller' => 'welcome_pages', 'action' => 'add')
+				    array('controller' => 'welcomebby_pages', 'action' => 'add')
 
 				);
 	?>
