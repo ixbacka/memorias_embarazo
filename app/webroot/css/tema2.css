@@ -1,3 +1,8 @@
+body {
+	background-image: url(../img/tema2/back.png);
+  color: #808080;
+}
+
 .ask{
   background-image: url(../img/tema2/ayuda.png);
 }
@@ -12,10 +17,6 @@
 
 #header h1 {
   background: #003d4c url('../img/cake.icon.png') no-repeat left;
-}
-
-body {
-	background-image: url(../img/tema2/back.png);
 }
 
 .header{
@@ -137,15 +138,29 @@ p.whatdo{
 
 form .submit input[type="submit"],
 form .submit input[type="submit"]:hover {
-  background-image: url(../img/tema2/bt_aceptar.png);
+  background-image: url(../img/tema2/bt_guardar.png);
 }
 
 .footer {
   background-image: url(../img/tema2/footer.png);
 }
 
+#send_OK input[type="submit"]{
+	background-image: url(../img/tema2/bt_aceptar.png);
+}
 
+/* COLORS */
 
-/* COLORES */
+#last_input,
+.aux_text,
+p.middle_note,
+.ultra .info h3,
+.note_sintom_,
+#SpecialdeliveryPageAddForm .nota-foot {
+  color: #0C5773; //AZUL
+}
 
+ul.vertical_menu_1 li a{
+  color: #E06873; //ROSA
+}
 

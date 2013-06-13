@@ -82,7 +82,7 @@ $(document).ready(function() {
 <!-- cover.ctp -->
 <STYLE TYPE="text/css">
 body{
-  background-image: url(../../img/retina_wood.png);
+  background: url(../../img/retina_wood.png);
 }
 
 
