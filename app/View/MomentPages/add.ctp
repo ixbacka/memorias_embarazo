@@ -53,8 +53,7 @@ fbphotoSelect = function(id, idpapa) {
 			console.log(photo.source);
 			console.log(' ehmem == > '+idpapa);
 			$('#photo_url_').val(photo.source);
-			$('#photo_moment').css('background-image','url(../img/marco_whoami.png), url('+photo.source+')');
-			$('#photo_moment').css('background-size', '297px 392px, 225px 320px');
+			$('#photo-back').css('background-image','url('+photo.source+')');
 		};
 
 
@@ -96,8 +95,7 @@ function readURL(input) {
       if (input.files && input.files[0]) {
           var reader = new FileReader();
           reader.onload = function (e) {
-          	$('#photo_moment').css('background-image','url(../img/marco_whoami.png), url('+e.target.result+')');
-			$('#photo_moment').css('background-size', '297px 392px, 225px 320px');
+          	$('#photo-back').css('background-image','url('+e.target.result+')');
           };
           reader.readAsDataURL(input.files[0]);
       }
@@ -106,13 +104,6 @@ function readURL(input) {
 </script>
 
 <STYLE TYPE="text/css">
-#photo-back{
-	top: 40px;
-	left: 43px;
-	width: 251px;
-  	height: 192px;
-}
-
 <?php if( isset($moment['MomentPage']['photo']) ){ ?>
 
 #photo-back{
@@ -228,7 +219,7 @@ function readURL(input) {
 
 	<div class="momentPages form">
   
- 	  <div id="photo-back"></div>
+ 	  <div id="photo-back" class="ph-bg"></div>
       <div class="photo-up" id="photo_moment">
         <input type="hidden" name="data[MomentPage][url_photo]" id="photo_url_" value=""/>
         <div class="pick_fb">Elegir de Facebook</div>
@@ -236,7 +227,7 @@ function readURL(input) {
           echo $this->Form->file('photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
         ?>
       </div>
-      <input type="text" name="data[MomentPage][description]" value="<?php if($description != ''){ echo $description; } ?>"/>  
+      <input class="mom-desc" type="text" name="data[MomentPage][description]" value="<?php if($description != ''){ echo $description; } ?>"/>  
 
 	<?php
 		echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));

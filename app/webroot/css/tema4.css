@@ -1,3 +1,8 @@
+body {
+	background-image: url(../img/tema4/back.png);
+  color: #511114;
+}
+
 .ask{
   background-image: url(../img/tema4/ayuda.png);
 }
@@ -12,10 +17,6 @@
 
 #header h1 {
   background: #003d4c url('../img/cake.icon.png') no-repeat left;
-}
-
-body {
-	background-image: url(../img/tema4/back.png);
 }
 
 .header{
@@ -135,23 +136,69 @@ p.whatdo{
 
 form .submit input[type="submit"],
 form .submit input[type="submit"]:hover {
-  background-image: url(../img/tema4/bt_aceptar.png);
+  background-image: url(../img/tema4/bt_guardar.png);
 }
 
 .footer {
   background-image: url(../img/tema4/footer.png);
 }
 
+#send_OK input[type="submit"]{
+	background-image: url(../img/tema4/bt_aceptar.png);
+}
+
+/* COLORS */
+
+#last_input,
+.aux_text,
+p.middle_note,
+.ultra .info h3,
+.note_sintom_,
+#SpecialdeliveryPageAddForm .nota-foot {
+  color: #0C5773; //AZUL
+}
+
+ul.vertical_menu_1 li a{
+  color: #E06873; //ROSA
+}
+
+ul.vertical_menu_1 li.selected a{
+ color: #4D2E11;
+}
 
 /* CUSTOM */
 .sig, .ant {
   height: 50px;
 }
 
+.title_page {
+  width: 363px;
+  margin-left: 84px;
+  height: 89px;
+}
+
 .title_page p {
-  margin-top: -20px;
+  margin-top: -28px;
 }
 
 .title_page span {
-  top: 37px;
+  top: 24px;
+}
+
+.menu_trims {
+ height: 35px;
+}
+
+.first_trim,
+.second_trim,
+.third_trim {
+  height: 35px;
+}
+
+.menu_trims .current,
+.first_trim:hover,
+.second_trim:hover,
+.third_trim:hover {
+  background-position: 0 36px;
+  margin-top: -24px;
 }
