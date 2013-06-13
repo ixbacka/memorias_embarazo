@@ -209,7 +209,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
           <a href="#" class="ask" id="instructions">FAQ</a>
           <a href="#" class="settings" id="themsettings">Settings</a>
           <li class="home">Home</li>          
-          <a href="#" class="momentos" id="my-moments">Moments</a>
         </ul>
       </div>
 
@@ -238,11 +237,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
     </div> <!--toPopup end-->
 
-     <div id="moments_popup">
-        <div id="popup_moments"> <!--your content start-->
-          <?php echo $this->element('moments'); ?>
-        </div> <!--your content end-->
-    </div> <!--toPopup end-->
+    
 
     <div id="personalizar_popup">
       <div> 

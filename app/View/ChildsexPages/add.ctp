@@ -1,13 +1,17 @@
 
 <?php echo $this->element('menu', array( "trimestre" => 2, "pag" => "childsex")); ?>
 
-<?php
-    echo $this->Html->link(
-            'Add Moment',
-            array('controller' => 'moment_pages', 'action' => 'add',0,2),
-            array('class' => 'add_moment')
-        );
-  ?>
+
+<a href="#" class="add_moment" id="my-moments">Moments</a>
+
+    <div id="moments_popup">
+        <div id="popup_moments"> <!--your content start-->
+          <?php echo $this->element('moments'); ?>
+          <a href="2" class="addnew-momento" id="mayiadd-moments" >Agrega un momento</a>
+        </div> <!--your content end-->
+    </div> <!--toPopup end-->
+
+<div id="dialog-box-momento" class="dialog-popup"></div>
 
 <div class="content">
 <?php echo $this->element('trim_menu', array( "trimestre" => 2)); ?>

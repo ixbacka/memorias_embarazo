@@ -217,13 +217,18 @@ function readURL(input) {
 
 
 <?php echo $this->element('menu', array( "trimestre" => 3, "pag" => "specialdelivery")); ?>
-<?php
-		echo $this->Html->link(
-				    'Add Moment',
-				    array('controller' => 'moment_pages', 'action' => 'add',0,3),
-				    array('class' => 'add_moment')
-				);
-	?>
+
+<a href="#" class="add_moment" id="my-moments">Moments</a>
+
+    <div id="moments_popup">
+        <div id="popup_moments"> <!--your content start-->
+          <?php echo $this->element('moments'); ?>
+          <a href="3" class="addnew-momento" id="mayiadd-moments" >Agrega un momento</a>
+        </div> <!--your content end-->
+    </div> <!--toPopup end-->
+
+<div id="dialog-box-momento" class="dialog-popup"></div>
+
 
 <div class="content">
 <?php echo $this->element('trim_menu', array( "trimestre" => 3)); ?>

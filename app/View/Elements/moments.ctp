@@ -1,7 +1,9 @@
 <?php $momentos = $this->requestAction('moment_pages/index'); ?>
 
 <?php if(isset($momentos) && !empty($momentos)) {  ?>
+<?php if( findit(1, $momentos) ){ ?>
 <h3>Primer Trimestre</h3>
+<?php } ?>
 <ul>
 	<?php
 		foreach ($momentos as $moment):
@@ -19,7 +21,9 @@
 		endforeach; 
 		?>
 </ul>
+<?php if( findit(2, $momentos) ){ ?>
 <h3>Segundo Trimestre</h3>
+<?php } ?>
 <ul>
 	<?php
 		foreach ($momentos as $moment):
@@ -37,7 +41,9 @@
 		endforeach; 
 		?>
 </ul>
+<?php if( findit(2,$momentos) ){ ?>
 <h3>Tercer Trimestre</h3>
+<?php } ?>
 <ul>
 	<?php
 		foreach ($momentos as $moment):
@@ -56,3 +62,19 @@
 		?>
 </ul>
 <?php }?>
+
+
+<?php 
+
+function findit( $ele , $momentos){
+	$elreturn = false;
+   foreach ($momentos as $moment):
+		if($moment['MomentPage']['trimester'] == $ele){
+			$elreturn = true;
+		}
+	endforeach; 
+
+	return $elreturn;
+}
+
+?>
