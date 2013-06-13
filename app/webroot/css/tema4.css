@@ -32,51 +32,24 @@ body {
 .photo-v {
   background-image: url(../img/tema4/marco.png);
 }
-.cover_photo_back{
+
+.cover_photo_back,
+.whoami_photo_back,
+#ultrasound_photo_1_back,
+#ultrasound_photo_2_back,
+#photo3_back,
+#photo1_back,
+#photo2_back,
+.firstkick_photo_back,
+.belly_photo_back,
+#photo1_back_,
+#photo2_back_,
+#photo_back,
+#room_photo_back,
+#photo-back,
+#photo-back-1 {
   background-image: url(../img/tema4/marco_fondo.png);
 }
-
-.whoami_photo_back{
-  background-image: url(../img/tema4/marco_fondo.png);
-}
-
-#ultrasound_photo_1_back{
-  background-image: url(../img/tema4/marco_fondo.png);
-}
-
-#ultrasound_photo_2_back{  
-  background-image: url(../img/tema4/marco_fondo.png);
-}
-
-
-#photo3_back{
-  background-image: url(../img/tema4/marco_fondo.png);
-}
-
-#photo1_back{
-  background-image: url(../img/tema4/marco_fondo.png);
-}
-
-#photo2_back{
-  background-image: url(../img/tema4/marco_fondo.png);
-}
-
-.firstkick_photo_back{
-  background-image: url(../img/tema4/marco_fondo.png);
-}
-
-.belly_photo_back{
-  background-image: url(../img/tema4/marco_fondo.png);
-}
-#photo1_back_{
-  background-image: url(../img/tema4/marco_fondo.png);  
-}
-#photo2_back_ , #photo_back, #room_photo_back, #photo-back, #photo-back-1{
-  background-image: url(../img/tema4/marco_fondo.png);  
-}
-
-
-
 
 .pick_fb{
   background-image: url(../img/tema4/bt_elegir.png);
@@ -106,6 +79,12 @@ p.whatdo{
   background-image: url(../img/tema4/bt_instrucciones.png);
 }
 
+.first_trim,
+.second_trim,
+.third_trim {
+  height: 33px;
+}
+
 .first_trim {
   background-image: url(../img/tema4/bt_primer.png);
 }
@@ -122,7 +101,7 @@ p.whatdo{
 .first_trim:hover,
 .second_trim:hover,
 .third_trim:hover {
-  background-position: 0 33px;
+  background-position: 0 36px;
 }
 
 .ant{
@@ -133,8 +112,7 @@ p.whatdo{
   background-image: url(../img/tema4/siguiente.png);
 }
 
-form .submit input[type="submit"],
-form .submit input[type="submit"]:hover {
+#send_OK input[type="submit"] {
   background-image: url(../img/tema4/bt_aceptar.png);
 }
 
@@ -148,10 +126,33 @@ form .submit input[type="submit"]:hover {
   height: 50px;
 }
 
+
+.menu_trims {
+  top: -21px;
+}
+
+.title_page {
+  margin-left: 80px;
+  margin-top: -14px;
+  width: 363px;
+  height: 88px;
+
+}
+
+
 .title_page p {
-  margin-top: -20px;
+  margin-top: -28px;
 }
 
 .title_page span {
-  top: 37px;
+  top: 34px;
+}
+
+.aux_text {
+  top: 730px;
+  left: 550px;
+}
+
+.add_moment {
+  top: 962px;
 }

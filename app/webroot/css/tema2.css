@@ -33,52 +33,23 @@ body {
   background-image: url(../img/tema2/marco.png);
 }
 
-.cover_photo_back{
+.cover_photo_back,
+.whoami_photo_back,
+#ultrasound_photo_1_back,
+#ultrasound_photo_2_back,
+#photo3_back,
+#photo1_back,
+#photo2_back,
+.firstkick_photo_back,
+.belly_photo_back,
+#photo1_back_,
+#photo2_back_,
+#photo_back,
+#room_photo_back,
+#photo-back,
+#photo-back-1 {
   background-image: url(../img/tema2/marco_fondo.png);
 }
-
-
-.whoami_photo_back{
-  background-image: url(../img/tema2/marco_fondo.png);
-}
-
-#ultrasound_photo_1_back{
-  background-image: url(../img/tema2/marco_fondo.png);
-}
-
-#ultrasound_photo_2_back{  
-  background-image: url(../img/tema2/marco_fondo.png);
-}
-
-
-#photo3_back{
-  background-image: url(../img/tema2/marco_fondo.png);
-}
-
-#photo1_back{
-  background-image: url(../img/tema2/marco_fondo.png);
-}
-
-#photo2_back{
-  background-image: url(../img/tema2/marco_fondo.png);
-}
-
-.firstkick_photo_back{
-  background-image: url(../img/tema2/marco_fondo.png);
-}
-
-.belly_photo_back{
-  background-image: url(../img/tema2/marco_fondo.png);
-}
-#photo1_back_{
-  background-image: url(../img/tema2/marco_fondo.png);  
-}
-#photo2_back_, #photo_back, #room_photo_back, #photo-back, #photo-back-1{
-  background-image: url(../img/tema2/marco_fondo.png);  
-}
-
-
-
 
 .pick_fb{
   background-image: url(../img/tema2/bt_elegir.png);
@@ -135,8 +106,7 @@ p.whatdo{
   background-image: url(../img/tema2/siguiente.png);
 }
 
-form .submit input[type="submit"],
-form .submit input[type="submit"]:hover {
+#send_OK input[type="submit"] {
   background-image: url(../img/tema2/bt_aceptar.png);
 }
 
