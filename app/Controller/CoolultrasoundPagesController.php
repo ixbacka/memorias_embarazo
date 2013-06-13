@@ -70,7 +70,6 @@ class CoolultrasoundPagesController extends AppController {
             'ultrasound_date' => $this->request->data['CoolultrasoundPage']['ultrasound_date'],
             'iwas' => $this->request->data['CoolultrasoundPage']['iwas'],
             'doctorsaid' => $this->request->data['CoolultrasoundPage']['doctorsaid'],
-            'b4' => $this->request->data['CoolultrasoundPage']['b4'],
             'urdad' => $this->request->data['CoolultrasoundPage']['urdad'],
             'urdadsays' => $this->request->data['CoolultrasoundPage']['urdadsays'],
             'imiss' => $this->request->data['CoolultrasoundPage']['imiss'],

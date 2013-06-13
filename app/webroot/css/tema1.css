@@ -210,7 +210,7 @@ body {
   width: 280px;
   height: 215px;
   position: absolute;
-  background-image: url(../img/marco.png), url(../img/marco_fondo.png);
+  background-image: url(../img/marco.png);
   background-position: top left, center center;
   text-indent: -9999px;
   background-repeat: no-repeat;
@@ -512,11 +512,14 @@ ul.vertical_menu_1 li.selected{
 
 ul.vertical_menu_1 li{
   color: #fff;
+  font-size: 15px;
+
 }
 
 ul.vertical_menu_1 li a{
   text-decoration: none;
   color: #197490;
+  font-size: 12px;
 }
 
 .add_moment{
@@ -934,6 +937,18 @@ form .submit input[type="submit"]{
 	background-repeat: no-repeat;
 }
 
+.whoami_photo_back{
+  background-image: url(../img/marco_fondo.png);
+  position: absolute;
+  top: 47px;
+  left: 57px;
+  width: 245px;
+  height: 320px;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+
 .whoami_right{
 	float: left;
 	width: 315px;
@@ -1065,6 +1080,30 @@ text-align: center;
   display: inline-block;
 }
 
+#ultrasound_photo_1_back{
+  background-image: url(../img/marco_fondo.png);
+  top: 12px;
+  position: absolute;
+  left: 50px;
+  width: 235px;
+  height: 190px;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+}
+
+#ultrasound_photo_2_back{
+  background-image: url(../img/marco_fondo.png);
+  position: absolute;
+  top: 265px;
+  left: 50px;
+  width: 235px;
+  height: 190px;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+}
+
 /* BELLY PAGES */
 
 .mesuno {
@@ -1088,6 +1127,44 @@ text-align: center;
   width: 262px;
   color: #1082AC;
   font-size: 20px;
+}
+
+#photo3_back{
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/marco_fondo.png);
+  width: 245px;
+  height: 190px;
+  z-index: -1;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+
+#photo1_back{
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/marco_fondo.png);
+  width: 245px;
+  height: 190px;
+  z-index: -1;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+
+#photo2_back{
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/marco_fondo.png);
+  width: 245px;
+  height: 190px;
+  z-index: -1;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 /* ANIMO */
@@ -1291,8 +1368,21 @@ text-align: center;
 /* #FirstkickPageAddForm */
 
 
-#datepickerCongrats {
+#datepickerCongrats, #datepickerCongrats1 {
   width: 140px;
+}
+
+
+.firstkick_photo_back{
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/marco_fondo.png);
+  width: 227px;
+  height: 267px;
+  z-index: -1;
+  position: absolute;
+  top: 196px;
+  left: 46px;
 }
 
 /* #FirstkickPageAddForm */
@@ -1433,6 +1523,20 @@ text-align: center;
 #BellymonthPageAddForm .submit {
   bottom: 150px;
 }
+
+
+.belly_photo_back{
+  background-image: url(../img/marco_fondo.png);
+  position: absolute;
+  top: 13px;
+  left: 44px;
+  width: 230px;
+  height: 268px;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+
 
 /* GettingclosePageAddForm */
 
@@ -1597,6 +1701,29 @@ text-align: center;
   right: 0;
 }
 
+#photo1_back_{
+  background-image: url(../img/marco_fondo.png);
+  position: absolute;
+  top: 300px;
+  left: 43px;
+  width: 251px;
+  height: 192px;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+
+#photo2_back_{
+  background-image: url(../img/marco_fondo.png);
+  position: absolute;
+  top: 300px;
+  left: 489px;
+  width: 251px;
+  height: 192px;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
 
 /* Coolultrasound */
 
@@ -1653,6 +1780,17 @@ text-align: center;
   width: 270px;
 }
 
+#photo_back{
+  background-image: url(../img/marco_fondo.png);
+  position: absolute;
+  top: 10px;
+  left: 43px;
+  width: 251px;
+  height: 192px;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
 
 /* NestingPageAddForm */
 
@@ -1712,6 +1850,18 @@ text-align: center;
   position: absolute;
   top: 300px;
   right: 220px;
+}
+
+#room_photo_back{
+  background-image: url(../img/marco_fondo.png);
+  position: absolute;
+  top: 359px;
+  left: 418px;
+  width: 251px;
+  height: 192px;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
 }
 
 /* ByebellyPageAddForm */
@@ -1837,6 +1987,18 @@ text-align: center;
     margin-top: 80px;
 }
 
+#photo-back{
+  background-image: url(../img/marco_fondo.png);
+  position: absolute;
+  top: 10px;
+  left: 88px;
+  width: 251px;
+  height: 192px;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+
 /* #WelcomebbyPageAddForm */
 
 #WelcomebbyPageAddForm .pareces input {
@@ -1901,6 +2063,17 @@ text-align: center;
     left: 260px;
 }
 
+#photo-back-1{
+  background-image: url(../img/marco_fondo.png);
+  position: absolute;
+  top: 240px;
+  left: 268px;
+  width: 251px;
+  height: 192px;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
 
 /* ESTADOS */
 

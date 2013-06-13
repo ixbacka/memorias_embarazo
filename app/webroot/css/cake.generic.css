@@ -334,19 +334,20 @@ span.arrow {
 #moments_popup{
   background: transparent;
   display: none;
-  left: 333px;
+  left: 355px;
   position: fixed;
-  top: 83px;
-  width: 429px;
-  height: 404px;
+  top: 670px;
+  width: 400px;
+  height: 400px;
   z-index: 9000;
 }
 
 #popup_moments{
-  background-image: url(../img/pop_menu.png);
+  background-image: url(../img/pop_personalizar.png);
 /*  text-indent: -9999px;
-*/  width: 429px;
-  height: 404px;
+*/  width: 400px;
+  height: 400px;
+  background-size: 400px 400px;
 }
 
 .personalizar:before {
@@ -607,13 +608,13 @@ fieldset {
     display: block;
 }
 
-#dialog-box p, #dialog-box span {
+#dialog-box p, #dialog-box span, .dialog-popup p {
     color: #999;
     font-size: 11px;
     line-height: 18px;
     font-size: 17px;
-  line-height: 18px;
-  color: #94206b;
+    line-height: 18px;
+    color: #94206b;
 }
 
 .textbox input {

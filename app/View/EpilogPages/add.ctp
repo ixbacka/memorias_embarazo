@@ -1,11 +1,15 @@
 <?php echo $this->element('menu', array( "trimestre" => 3, "pag" => "epilog")); ?>
-<?php
-		echo $this->Html->link(
-				    'Add Moment',
-				    array('controller' => 'moment_pages', 'action' => 'add'),
-				    array('class' => 'add_moment')
-				);
-	?>
+
+<a href="#" class="add_moment" id="my-moments">Moments</a>
+
+    <div id="moments_popup">
+        <div id="popup_moments"> <!--your content start-->
+          <?php echo $this->element('moments'); ?>
+          <a href="3" class="addnew-momento" id="mayiadd-moments" >Agrega un momento</a>
+        </div> <!--your content end-->
+    </div> <!--toPopup end-->
+
+<div id="dialog-box-momento" class="dialog-popup"></div>
 
 <div class="content">
 <?php echo $this->element('trim_menu', array( "trimestre" => 3)); ?>
@@ -44,11 +48,11 @@
   ?>
   <div class="opciones cf">
     <div class="cf">
-      <input type="radio" name="data[NestingPage][belly]" value="1" <?php if($belly == 1){ echo 'checked="checked"'; } ?> />
+      <input type="radio" name="data[EpilogPage][belly]" value="1" <?php if($belly == 1){ echo 'checked="checked"'; } ?> />
       <label>¡Ay! todavia parezco embarazada</label>
     </div>
     <div class="cf">
-      <input type="radio" name="data[NestingPage][belly]" value="2" <?php if($belly == 2){ echo 'checked="checked"'; } ?> />
+      <input type="radio" name="data[EpilogPage][belly]" value="2" <?php if($belly == 2){ echo 'checked="checked"'; } ?> />
       <label>¡Eh!  Sorpresivamente mi panza regresó a su talla normal</label>
     </div>
   </div>

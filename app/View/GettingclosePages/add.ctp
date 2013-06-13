@@ -1,13 +1,17 @@
 
 <?php echo $this->element('menu', array( "trimestre" => 3, "pag" => "gettingclose")); ?>
 
-<?php
-		echo $this->Html->link(
-				    'Add Moment',
-				    array('controller' => 'bellymonth_pages', 'action' => 'add'),
-				    array('class' => 'add_moment')
-				);
-	?>
+
+<a href="#" class="add_moment" id="my-moments">Moments</a>
+
+    <div id="moments_popup">
+        <div id="popup_moments"> <!--your content start-->
+          <?php echo $this->element('moments'); ?>
+          <a href="3" class="addnew-momento" id="mayiadd-moments" >Agrega un momento</a>
+        </div> <!--your content end-->
+    </div> <!--toPopup end-->
+
+<div id="dialog-box-momento" class="dialog-popup"></div>
 
 <div class="content">
 <?php echo $this->element('trim_menu', array( "trimestre" => 3)); ?>
@@ -91,15 +95,15 @@
         $favoritename = '';
       }
     ?>
-    <input type="radio" name="data[ChildsexPage][favoritename]" value="1" <?php if($favoritename == 1){
+    <input type="radio" name="data[GettingclosePage][favoritename]" value="1" <?php if($favoritename == 1){
     echo  'checked="checked"'; } ?> />
-    <input type="radio" name="data[ChildsexPage][favoritename]" value="2" <?php if($favoritename == 2){
+    <input type="radio" name="data[GettingclosePage][favoritename]" value="2" <?php if($favoritename == 2){
     echo   'checked="checked"'; } ?> />
-    <input type="radio" name="data[ChildsexPage][favoritename]" value="3" <?php if($favoritename == 3){
+    <input type="radio" name="data[GettingclosePage][favoritename]" value="3" <?php if($favoritename == 3){
     echo   'checked="checked"'; } ?> />
-    <input type="radio" name="data[ChildsexPage][favoritename]" value="4" <?php if($favoritename == 3){
+    <input type="radio" name="data[GettingclosePage][favoritename]" value="4" <?php if($favoritename == 3){
     echo   'checked="checked"'; } ?> />
-    <input type="radio" name="data[ChildsexPage][favoritename]" value="5" <?php if($favoritename == 3){
+    <input type="radio" name="data[GettingclosePage][favoritename]" value="5" <?php if($favoritename == 3){
     echo   'checked="checked"'; } ?> />
   </div>
   <div class="col tres">

@@ -41,16 +41,19 @@ function get_date_spanish( $time, $part = false, $formatDate = '' ){
 
 <style type="text/css">
 
+
 <?php if( isset($ultrasound['UltrasoundPage']['first_photo']) ){ ?>
-#ultrasound_photo_1_back{
-  background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['first_photo']); ?>);
+#ultrasound_photo_1{
+  background-image: url(../img/marco.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['first_photo']); ?>);
+  background-size: 280px 215px, 240px 192px;
  
 }
 <?php }?>
 
 <?php if( isset($ultrasound['UltrasoundPage']['second_photo']) ){ ?>
-#ultrasound_photo_2_back{
-  background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['second_photo']); ?>);
+#ultrasound_photo_2{
+  background-image: url(../img/marco.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['second_photo']); ?>);
+  background-size: 280px 215px, 240px 192px;
 }
 <?php }?>
 
@@ -106,8 +109,9 @@ fbphotoSelect = function(id, idpapa) {
       console.log(photo.source);
       console.log(idpapa);
       $('.'+idpapa).val(photo.source);
-      $('#'+idpapa+'_back').css('background-image','url('+photo.source+')');
+      $('#'+idpapa).css('background-image','url(../img/marco.png), url('+photo.source+')');
       //background-size: 280px 215px, 240px 192px;
+      $('#'+idpapa).css('background-size','280px 215px, 240px 192px');
 
     };
 
@@ -247,7 +251,9 @@ function readURL(input) {
           var elpapa = $(input).parent().get(0).id;
 
           reader.onload = function (e) {
-            $('#'+elpapa+'_back').css('background-image','url('+e.target.result+')');          
+            $('.'+elpapa).css('background-image','url(../img/marco_circular.png), url('+e.target.result+')');
+            $('.'+elpapa).css('background-size','280px 215px, 240px 192px');
+          
           };
           reader.readAsDataURL(input.files[0]);
       }
@@ -300,16 +306,13 @@ function readURL(input) {
 <!-- Markup for Carson Shold's Photo Selector -->
 <?php echo $this->element('menu', array( "trimestre" => 1, "pag" => "ultrasound")); ?>
 
-<a href="#" class="add_moment" id="my-moments">Moments</a>
-
-    <div id="moments_popup">
-        <div id="popup_moments"> <!--your content start-->
-          <?php echo $this->element('moments'); ?>
-          <a href="1" class="addnew-momento" id="mayiadd-moments" >Agrega un momento</a>
-        </div> <!--your content end-->
-    </div> <!--toPopup end-->
-
-<div id="dialog-box-momento" class="dialog-popup"></div>
+<?php
+    echo $this->Html->link(
+            'Add Moment',
+            array('controller' => 'moment_pages', 'action' => 'add'),
+            array('class' => 'add_moment')
+        );
+  ?>
 
 <div class="content">
   <?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
@@ -337,7 +340,6 @@ function readURL(input) {
   <div class="ultrasoundPages form">
   <?php echo $this->Form->create('UltrasoundPage', array('enctype' => 'multipart/form-data')); ?>
     <div class="ultra">
-      <div id="ultrasound_photo_1_back"></div>
       <div class="photo-up" id="ultrasound_photo_1" >
         <input type="hidden" name="data[UltrasoundPage][url_photo]" class="ultrasound_photo_1" value=""/>
         <div class="pick_fb">Elegir de Facebook</div>
@@ -357,7 +359,7 @@ function readURL(input) {
         </p>
         <p>
           <label for="CongratsPageBabycoming">Tenía </label>
-          <input name="data[UltrasoundPage][first_week]" type="number" min="0" id="CongratsPageBabycoming" value="<?php if( isset($ultrasound['UltrasoundPage']['first_week'])){ echo $ultrasound['UltrasoundPage']['first_week']; }?>"> 
+          <input name="data[UltrasoundPage][first_week]" type="number" id="CongratsPageBabycoming" value="<?php if( isset($ultrasound['UltrasoundPage']['first_week'])){ echo $ultrasound['UltrasoundPage']['first_week']; }?>"> 
           semanas de embarazo
         </p>
         <p>
@@ -374,7 +376,6 @@ function readURL(input) {
     </div>
 
     <div class="ultra">
-      <div id="ultrasound_photo_2_back"></div>
       <div class="photo-up" id="ultrasound_photo_2" >
         <input type="hidden" name="data[UltrasoundPage][url_photo_1]" class="ultrasound_photo_2" value=""/>
         <div class="pick_fb">Elegir de Facebook</div>
@@ -394,7 +395,7 @@ function readURL(input) {
         </p>
         <p>
           <label for="CongratsPageBabycoming">Tenía </label>
-          <input name="data[UltrasoundPage][second_week]" type="number" min="0" value="<?php if( isset($ultrasound['UltrasoundPage']['second_week'])){ echo $ultrasound['UltrasoundPage']['second_week']; }?>">
+          <input name="data[UltrasoundPage][second_week]" type="number" value="<?php if( isset($ultrasound['UltrasoundPage']['second_week'])){ echo $ultrasound['UltrasoundPage']['second_week']; }?>">
           semanas de embarazo
         </p>
         <p><?php

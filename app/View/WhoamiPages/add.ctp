@@ -7,9 +7,8 @@
 
 
 <?php if( isset($whoami['WhoamiPage']['photo']) ){ ?>
-.whoami_photo{
-	background-image: url(../img/marco_whoami.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$whoami['WhoamiPage']['photo']); ?>);
-	background-size: 297px 392px, 225px 320px;
+.whoami_photo_back{
+	background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$whoami['WhoamiPage']['photo']); ?>);
 }
 <?php }?>
 
@@ -67,8 +66,7 @@ fbphotoSelect = function(id, idpapa) {
 			console.log(photo.source);
 			console.log(' ehmem == > '+idpapa);
 			$('#photo_url_').val(photo.source);
-			$('.whoami_photo').css('background-image','url(../img/marco_whoami.png), url('+photo.source+')');
-			$('.whoami_photo').css('background-size', '297px 392px, 225px 320px');
+			$('.whoami_photo_back').css('background-image','url('+photo.source+')');
 		};
 
 
@@ -110,8 +108,7 @@ function readURL(input) {
       if (input.files && input.files[0]) {
           var reader = new FileReader();
           reader.onload = function (e) {
-          	$('.whoami_photo').css('background-image','url(../img/marco_whoami.png), url('+e.target.result+')');
-						$('.whoami_photo').css('background-size', '297px 392px, 225px 320px');
+          	$('.whoami_photo_back').css('background-image','url('+e.target.result+')');
           };
           reader.readAsDataURL(input.files[0]);
       }
@@ -165,13 +162,16 @@ function readURL(input) {
 
 <?php echo $this->element('menu', array( "trimestre" => 1, 'pag' => 'whoami')); ?>
 
-<?php
-		echo $this->Html->link(
-				    'Add Moment',
-				    array('controller' => 'moment_pages', 'action' => 'add', 0, 1),
-				    array('class' => 'add_moment')
-				);
-	?>
+<a href="#" class="add_moment" id="my-moments">Moments</a>
+
+    <div id="moments_popup">
+        <div id="popup_moments"> <!--your content start-->
+          <?php echo $this->element('moments'); ?>
+          <a href="1" class="addnew-momento" id="mayiadd-moments" >Agrega un momento</a>
+        </div> <!--your content end-->
+    </div> <!--toPopup end-->
+
+<div id="dialog-box-momento" class="dialog-popup"></div>
 
 <div class="content">
 <?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
@@ -185,7 +185,7 @@ function readURL(input) {
 				    array('class' => 'ant')
 				);
 	?>
-	<div class="title_page">Soy Yo...</div>
+	<div class="title_page">Qui&eacute;n Soy Yo...</div>
 	<?php
 
 			echo $this->Html->link(
@@ -200,7 +200,9 @@ function readURL(input) {
 <?php echo $this->Form->create('WhoamiPage', array('enctype' => 'multipart/form-data')); ?>
 	
 	<div class="whoami_left">
+		<div class="whoami_photo_back"></div>
 		<div class="whoami_photo">
+
 			<input type="hidden" name="data[WhoamiPage][url_photo]" id="photo_url_" value=""/>
 			<div class="pick_fb">Elegir de Facebook</div>
 			<?php
@@ -224,7 +226,7 @@ function readURL(input) {
 	} else{
 		$age = '';
 	}
-		echo $this->Form->input('age', array('label' => 'Tengo ','after' => ' años </p>','between' => ' ', 'before'=> '<p>', 'value' => $age));
+		echo $this->Form->input('age', array('label' => 'Tengo ', 'min' => 0, 'after' => ' años </p>','between' => ' ', 'before'=> '<p>', 'value' => $age));
 
 
 			if(isset($whoami['WhoamiPage']['profesion'])){

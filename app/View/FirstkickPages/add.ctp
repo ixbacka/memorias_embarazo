@@ -4,6 +4,39 @@
 <?php echo $this->Html->css('PhotoSelector'); ?>
 <?php echo $this->Html->script('photo_selector'); ?>
 
+<?php 
+
+#Power by nicolaspar 2007 - especific proyect
+function get_date_spanish( $time, $part = false, $formatDate = '' ){
+    #Declare n compatible arrays
+    $month = array("","enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiempre", "diciembre");#n
+    $month_execute = "n"; #format for array month
+
+    $month_mini = array("","ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "DIC");#n
+    $month_mini_execute = "n"; #format for array month
+
+    $day = array("domingo","lunes","martes","miércoles","jueves","viernes","sábado"); #w
+    $day_execute = "w";
+    
+    $day_mini = array("DOM","LUN","MAR","MIE","JUE","VIE","SAB"); #w
+    $day_mini_execute = "w";
+
+    #Content array exception print "HOY", position content the name array. Duplicate value and key for optimization in comparative
+    $print_hoy = array("month"=>"month", "month_mini"=>"month_mini");
+
+    if( $part === false ){
+        return date("d", $time) . " de " . $month[date("n",$time)] . ", ". date("H:i",$time) ." hs";
+    }elseif( $part === true ){
+        if( ! empty( $print_hoy[$formatDate] ) && date("d-m-Y", $time ) == date("d-m-Y") ) return "HOY"; #Exception HOY
+        if( ! empty( ${$formatDate} ) && !empty( ${$formatDate}[date(${$formatDate.'_execute'},$time)] ) ) return ${$formatDate}[date(${$formatDate.'_execute'},$time)];
+        else return date($formatDate, $time);
+    }else{
+        return date("d-m-Y H:i", $time);
+    }
+}
+
+?>
+
 <script type="text/javascript">
 
 
@@ -55,7 +88,7 @@ fbphotoSelect = function(id, idpapa) {
       console.log(photo.source);
       console.log(' ehmem == > '+idpapa);
       $('#photo_url_').val(photo.source);
-      $('.firstkick_photo').css('background-image','url(../img/marco_whoami.png), url('+photo.source+')');
+      $('.firstkick_photo_back').css('background-image','url('+photo.source+')');
     };
 
 
@@ -81,6 +114,11 @@ fbphotoSelect = function(id, idpapa) {
   }
 
   $(document).ready(function(){
+
+
+    //$( "#datepickerCongrats1" ).datepicker({});
+    //$( "#datepickerCongrats1" ).datepicker( "option", $.datepicker.regional['es']);
+
     
     $(".pick_fb").click(function (e) {
         e.preventDefault();
@@ -91,7 +129,9 @@ fbphotoSelect = function(id, idpapa) {
     });
 
 
+
   $( "#datepickerCongrats1" ).datepicker({
+      dateFormat: 'd MM yy',
       onSelect: function(dateText) {
         //display("Selected date: " + dateText + "; input's current value: " + this.value);
         var n=dateText.split(" ");
@@ -129,10 +169,6 @@ fbphotoSelect = function(id, idpapa) {
       }
   });
 
-  $( "#datepickerCongrats1" ).datepicker( "option", "dateFormat", 'd MM yy' );
-  $( "#datepickerCongrats1" ).datepicker( "option", $.datepicker.regional['es']);
-
-
 <?php if(isset($firstkick['FirstkickPage']['firstkick_date'])){ 
 
       $source = $firstkick['FirstkickPage']['firstkick_date'];
@@ -146,6 +182,7 @@ fbphotoSelect = function(id, idpapa) {
 
       $firstkick_date = $dia.' '.$mes.' '.$ano;
       $monthi = ($date->format('m'))-1;
+      $month_prueba = $date->format('m');
     ?>
    $( "#datepickerCongrats" ).datepicker("setDate", new Date(<?php echo $ano.', '.$monthi.', '.$dia;?>));  
 <?php } else{
@@ -162,13 +199,14 @@ fbphotoSelect = function(id, idpapa) {
 
       $mes = get_date_spanish($letime, true, 'month'); # return Enero
 
-      $dia = $date->format('d'); // 31.07.2012
-      $ano = $date->format('Y'); // 31-07-2012
+      $dia1 = $date->format('d'); // 31.07.2012
+      $ano1 = $date->format('Y'); // 31-07-2012
 
       $photo_date = $dia.' '.$mes.' '.$ano;
       $monthi = ($date->format('m'))-1;
+      $month_prueba1 = $date->format('m');
     ?>
-   $( "#datepickerCongrats1" ).datepicker("setDate", new Date(<?php echo $ano.', '.$monthi.', '.$dia;?>));  
+   $( "#datepickerCongrats1" ).datepicker("setDate", new Date(<?php echo $ano1.', '.$monthi.', '.$dia1;?>));  
 
 <?php } else{
       $photo_date = '';
@@ -184,21 +222,30 @@ function readURL(input) {
       if (input.files && input.files[0]) {
           var reader = new FileReader();
           reader.onload = function (e) {
-            $('.firstkick_photo').css('background-image','url(../img/marco_whoami.png), url('+e.target.result+')');
+            $('.firstkick_photo_back').css('background-image','url('+e.target.result+')');
           };
           reader.readAsDataURL(input.files[0]);
       }
   }
+/*
+  $(window).load(function() {
 
+    console.log('LOAD :S WHAT FARTOOO');
+
+    $( "#datepickerCongrats1" ).datepicker( "option", "dateFormat", 'd MM yy' );
+    $( "#datepickerCongrats1" ).datepicker( "option", $.datepicker.regional['es']);
+
+
+  });
+*/
 </script>
 
 <style type="text/css">
 
 <?php if( isset($firstkick['FirstkickPage']['photo']) ){ ?>
 
-.firstkick_photo{
-  background-image: url(../img/marco.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$firstkick['FirstkickPage']['photo']); ?>);
-  background-size: 297px 392px, 225px 320px;
+.firstkick_photo_back{
+  background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$firstkick['FirstkickPage']['photo']); ?>);
 }
 
 <?php }?>
@@ -253,13 +300,17 @@ function readURL(input) {
 
 
 <?php echo $this->element('menu', array( "trimestre" => 2, "pag" => "firstkick")); ?>
-<?php
-    echo $this->Html->link(
-            'Add Moment',
-            array('controller' => 'moment_pages', 'action' => 'add'),
-            array('class' => 'add_moment')
-        );
-  ?>
+
+<a href="#" class="add_moment" id="my-moments">Moments</a>
+
+    <div id="moments_popup">
+        <div id="popup_moments"> <!--your content start-->
+          <?php echo $this->element('moments'); ?>
+          <a href="2" class="addnew-momento" id="mayiadd-moments" >Agrega un momento</a>
+        </div> <!--your content end-->
+    </div> <!--toPopup end-->
+
+<div id="dialog-box-momento" class="dialog-popup"></div>
 
 <div class="content">
 <?php echo $this->element('trim_menu', array( "trimestre" => 2)); ?>
@@ -293,9 +344,9 @@ function readURL(input) {
       <label>Esta maravilla de la vida la sentí el </label>
       <input type="text" id="datepickerCongrats" size="30" readonly="readonly"  value="<?php if($firstkick_date != ''){ echo $firstkick_date; } ?>"/>
     </p>
-    <input type="hidden" name="data[FirstkickPage][firstkick_date][month]" id="CongratsPagePruebaMonth" />
-    <input type="hidden" name="data[FirstkickPage][firstkick_date][day]" id="CongratsPagePruebaDay" />
-    <input type="hidden" name="data[FirstkickPage][firstkick_date][year]" id="CongratsPagePruebaYear" />
+    <input type="hidden" name="data[FirstkickPage][firstkick_date][month]" id="CongratsPagePruebaMonth" <?php if($firstkick_date != ''){ ?>  value="<?php echo $month_prueba; ?>" <?php } ?> />
+    <input type="hidden" name="data[FirstkickPage][firstkick_date][day]" id="CongratsPagePruebaDay" <?php if($firstkick_date != ''){ ?>  value="<?php echo $dia; ?>" <?php } ?> />
+    <input type="hidden" name="data[FirstkickPage][firstkick_date][year]" id="CongratsPagePruebaYear" <?php if($firstkick_date != ''){ ?>  value="<?php echo $ano; ?>" <?php } ?> />
     <?php
       if(isset($firstkick['FirstkickPage']['week'])){
         $week = $firstkick['FirstkickPage']['week'];
@@ -309,6 +360,7 @@ function readURL(input) {
     <input type="text" name="data[FirstkickPage][week]" value="<?php if($week != ''){ echo $week; } ?>"/>
   </p>
   <div class="colL">
+    <div class="firstkick_photo_back"></div>
     <div class="firstkick_photo photo-v">
       <input type="hidden" name="data[FirstkickPage][url_photo]" id="photo_url_" value=""/>
       <div class="pick_fb">Elegir de Facebook</div>
@@ -318,9 +370,9 @@ function readURL(input) {
     </div>
     <input type="text" id="datepickerCongrats1" size="30" readonly="readonly"  value="<?php if($photo_date != ''){
           echo $photo_date; } ?>"/>
-    <input type="hidden" name="data[FirstkickPage][photo_date][month]" id="CongratsPagePruebaMonth1" />
-    <input type="hidden" name="data[FirstkickPage][photo_date][day]" id="CongratsPagePruebaDay1" />
-    <input type="hidden" name="data[FirstkickPage][photo_date][year]" id="CongratsPagePruebaYear1" />
+    <input type="hidden" name="data[FirstkickPage][photo_date][month]" id="CongratsPagePruebaMonth1" <?php if($photo_date != ''){ ?>  value="<?php echo $month_prueba1; ?>" <?php } ?>   />
+    <input type="hidden" name="data[FirstkickPage][photo_date][day]" id="CongratsPagePruebaDay1" <?php if($photo_date != ''){ ?>  value="<?php echo $dia1; ?>" <?php } ?>  />
+    <input type="hidden" name="data[FirstkickPage][photo_date][year]" id="CongratsPagePruebaYear1" <?php if($photo_date != ''){ ?>  value="<?php echo $ano1; ?>" <?php } ?>  />
   </div>
   <div class="colR">
     <p class="photogenic">

@@ -105,6 +105,35 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
     elseif($font == 4){ echo $this->Html->css('letra4'); } 
   ?>  
 
+  <style type="text/css">
+
+  <?php 
+    if($tema == 2){ 
+  ?>
+    #popup_instructions {
+      background-image: url(../img/tema2/pop_instrucciones.png);
+    }
+  <?php
+    } 
+    elseif($tema == 3){ 
+        ?>
+    #popup_instructions {
+      background-image: url(../img/tema3/pop_instrucciones.png);
+    }
+  <?php
+    } 
+    elseif($tema == 4){ 
+       ?>
+    #popup_instructions {
+      background-image: url(../img/tema4/pop_instrucciones.png);
+    }
+  <?php
+    } 
+    ?>
+    
+
+  </style>
+
 </head>
 <body>
 
@@ -180,7 +209,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
           <a href="#" class="ask" id="instructions">FAQ</a>
           <a href="#" class="settings" id="themsettings">Settings</a>
           <li class="home">Home</li>          
-          <a href="#" class="momentos" id="my-moments">Moments</a>
         </ul>
       </div>
 
@@ -209,11 +237,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
     </div> <!--toPopup end-->
 
-     <div id="moments_popup">
-        <div id="popup_moments"> <!--your content start-->
-          <?php echo $this->element('moments'); ?>
-        </div> <!--your content end-->
-    </div> <!--toPopup end-->
+    
 
     <div id="personalizar_popup">
       <div> 

@@ -52,7 +52,7 @@ fbphotoSelect = function(id, idpapa) {
 			console.log(photo.source);
 			console.log(' ehmem == > '+idpapa);
 			$('.'+idpapa).val(photo.source);
-			$('#'+idpapa).css('background-image','url(../img/marco.png), url('+photo.source+')');
+			$('#photo-back-1').css('background-image','url('+photo.source+')');
 
 		};
 
@@ -96,7 +96,7 @@ function readURL(input) {
       	  var elpapa = $(input).parent().get(0).id;
           var reader = new FileReader();
           reader.onload = function (e) {
-                  $('#'+elpapa).css('background-image','url(../img/marco.png), url('+e.target.result+')');
+                  $('#photo-back-1').css('background-image','url('+e.target.result+')');
           };
           reader.readAsDataURL(input.files[0]);
       }
@@ -107,8 +107,8 @@ function readURL(input) {
 <style type="text/css">
 
 <?php if( isset($new['NewfamilyPage']['photo']) ){ ?>
-#photo{
-	background-image: url(../img/marco.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$new['NewfamilyPage']['photo']); 
+#photo-back-1{
+	background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$new['NewfamilyPage']['photo']); 
 		?>);
 }
 <?php }?>
@@ -160,13 +160,17 @@ function readURL(input) {
 
 
 <?php echo $this->element('menu', array( "trimestre" => 3, "pag" => "newfamily")); ?>
-<?php
-		echo $this->Html->link(
-				    'Add Moment',
-				    array('controller' => 'moment_pages', 'action' => 'add'),
-				    array('class' => 'add_moment')
-				);
-	?>
+
+<a href="#" class="add_moment" id="my-moments">Moments</a>
+
+    <div id="moments_popup">
+        <div id="popup_moments"> <!--your content start-->
+          <?php echo $this->element('moments'); ?>
+          <a href="3" class="addnew-momento" id="mayiadd-moments" >Agrega un momento</a>
+        </div> <!--your content end-->
+    </div> <!--toPopup end-->
+
+<div id="dialog-box-momento" class="dialog-popup"></div>
 
 <div class="content">
 <?php echo $this->element('trim_menu', array( "trimestre" => 3)); ?>
@@ -183,7 +187,13 @@ function readURL(input) {
 		<p>LA NUEVA FAMILIA</p>
 		<span></span>
 	</div>
-	<div class="sig">Siguiente</div>
+	<?php
+			echo $this->Html->link(
+				    'Siguiente',
+				    array('controller' => 'familytree_pages', 'action' => 'add'),
+				    array('class' => 'ant')
+				);
+	?>
 </div>
 
 	
@@ -191,6 +201,7 @@ function readURL(input) {
 
 	<?php echo $this->Form->create('NewfamilyPage', array('enctype' => 'multipart/form-data')); ?>
 
+	<div id="photo-back-1"></div>
 	<div id="photo" class="photo-up">
 		<input type="hidden" name="data[NewfamilyPage][url_photo]" class="photo" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>

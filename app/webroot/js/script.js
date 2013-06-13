@@ -251,6 +251,46 @@ $(document).ready(function(){
 			});
 		});	
 
+		$('#mayiadd-moments').click(function(e){
+			e.preventDefault();
+			var trim = $(this).attr('href');
+
+			var url = '//operacionxperia.com/momtomom/memorias_embarazo/moment_pages/howmanymoments/'+UID; 
+			//
+			 console.log(' mm ... ' + url);
+			$.getJSON(url, function(data, textStatus)
+			{
+				console.log(' ohoho ! ~ STATUS: '+textStatus);
+
+				if (data.mensaje == 'successfully'){
+					window.location.href= '//operacionxperia.com/momtomom/memorias_embarazo/moment_pages/add/0/'+trim;
+				} else {
+					$('#dialog-box-momento').append(
+						'<p> No puedes agregar otro momento! </p>'
+					);
+
+					$('#dialog-box-momento').fadeIn(300);
+					//Set the center alignment padding + border see css style
+				    var popMargTop = 320; 
+				    var popMargLeft = 145; 
+				    
+				    $('#dialog-box-momento').css({ 
+				        'margin-top' : -popMargTop,
+				        'margin-left' : -popMargLeft
+				    });
+				    
+				    // Add the mask to body
+				    $('body').append('<div id="mask"></div>');
+				    $('#mask').fadeIn(300);
+
+				    $('#mask , #dialog-box-momento').fadeOut(8000 , function() {
+						$('#mask').remove();  
+					}); 
+
+				}
+			});
+		});
+
 		$('#sharepopo').click(function(e){
 			e.preventDefault();
 			console.log('popopopopopop');
@@ -287,6 +327,8 @@ $(document).ready(function(){
 				        '<button class="botochon" onclick="compartirmidiario()" type="button">Compartir</button>'+
 				        '</fieldset>'
 				        );
+
+						
 					}
 					$(loginBox).fadeIn(300);
 					//Set the center alignment padding + border see css style
@@ -308,6 +350,8 @@ $(document).ready(function(){
 				}		
 			});
 		});
+
+	
 
 
 
@@ -436,27 +480,40 @@ $(document).ready(function(){
 		picurl = $('#ellinkd').val();
 		laid= $('#laid').val();
 
-		var url = '//operacionxperia.com/momtomom/memorias_embarazo/profiles/postDiary/'+msg+'/'+picurl+'/'+laid; 
-		//
-		console.log(' mm ... ' + url);
-		$.getJSON(url, function(data, textStatus)
-		{
-			console.log(' ohoho ! ~ STATUS: '+textStatus);
-			// //var neu_data = JSON.parse(JSON.stringify(data));
-			// console.log(JSON.stringify(data));
-			// console.log(' ohoho ! ~ '+data+'    '+textStatus);
+		if(msg == ''){
+			msg="Mi diario de Embarazo"
+		} else {
 
-			if (data.mensaje == 'successfully'){
-				linkpic = data.imagen;
-				console.log(linkpic);
-				 $('#mask , .dialog-popup').fadeOut(300 , function() {
-				    $('#mask').remove();  
-				}); 
-				
+			if (! /^[a-zA-Z0-9]+$/.test(msg)) {
+			    // Validation failed
+			      alert("Solo números o letras por favor.");
+
 			} else {
-				alert('Ha ocurrido un error al tratar de publicar tu wishlist, inténtalo más tarde.');
-			}		
-		});
+				var url = '//operacionxperia.com/momtomom/memorias_embarazo/profiles/postDiary/'+msg+'/'+picurl+'/'+laid+'/'+UID; 
+				//
+				console.log(' mm ... ' + url);
+				$.getJSON(url, function(data, textStatus)
+				{
+					console.log(' ohoho ! ~ STATUS: '+textStatus);
+					// //var neu_data = JSON.parse(JSON.stringify(data));
+					// console.log(JSON.stringify(data));
+					// console.log(' ohoho ! ~ '+data+'    '+textStatus);
+
+					if (data.mensaje == 'successfully'){
+						linkpic = data.imagen;
+						console.log(linkpic);
+						 $('#mask , .dialog-popup').fadeOut(300 , function() {
+						    $('#mask').remove();  
+						}); 
+						
+					} else {
+						alert('Ha ocurrido un error al tratar de publicar tu wishlist, inténtalo más tarde.');
+					}		
+				});
+			}
+			
+		}
+		
 	}
 
 function cerrarventana(){

@@ -584,39 +584,66 @@ class ProfilesController extends AppController {
         );
          
         $u_id =  $id_user['Profile']['id'];
+        $tema =  $id_user['Profile']['theme'];
 
         $mapWidth = 810;
         $mapHeight = 1100;
 
         if(!empty($u_id)){
 
-            $pattern = imagecreatefrompng(WWW_ROOT.'img/ForTheCover.png');
+        	$path = 'https://operacionxperia.com/momtomom/memorias_embarazo/';
+
+        	if($tema == 1){
+	            $pattern = imagecreatefrompng(WWW_ROOT.'img/ForTheCover.png');
+        	} elseif ($tema == 2) {
+ 	           $pattern = imagecreatefrompng(WWW_ROOT.'img/tema2/ForTheCover.png');
+        	} elseif ($tema == 3) {
+           		$pattern = imagecreatefrompng(WWW_ROOT.'img/tema3/ForTheCover.png');
+        	} elseif ($tema == 4) {
+           		$pattern = imagecreatefrompng(WWW_ROOT.'img/tema4/ForTheCover.png');
+        	}
+
             $mapImage = $this->imagefillfromfile($pattern, $mapWidth, $mapHeight);
             imagedestroy($pattern);
 
-                  //266 -  448
-            	// 564 - 660
+        	// notas: 
+        	// 266 - 448
+    		// 564 - 660
 
-            $le_cover_photo = WWW_ROOT.'img/cover_photos/thumbnail_'.$id_user['Profile']['cover_photo'];
+            $le_cover_photo = $path.'img/cover_photos/thumbnail_'.$id_user['Profile']['cover_photo'];
+ 
 
-            //list($source_image_width, $source_image_height, $source_image_type) = getimagesize($);
-            $tam = getimagesize($le_cover_photo);
+            if( !empty($le_cover_photo) ){				
 
-            switch ($tam['mime']) {
-                case IMAGETYPE_GIF:
-                    $tileImg = imagecreatefromgif($le_cover_photo);
-                    break;
-                case IMAGETYPE_JPEG:
-                    $tileImg = imagecreatefromjpeg($le_cover_photo);
-                    break;
-                case IMAGETYPE_PNG:
-                    $tileImg = imagecreatefrompng($le_cover_photo);
-                    break;
-            }
-       
-            imagecopy($mapImage, $tileImg, 266, 448, 0, 0, 298, 212);
-            imagedestroy($tileImg);
+				$tam = @getimagesize($le_cover_photo);
 
+				if($tam != FALSE){
+
+		            switch ($tam['mime']) {
+		                case 'image/png':
+					        $tileImg = imagecreatefrompng($le_cover_photo);
+					        //echo "png";
+					        break;
+					    case 'image/jpeg':
+					        $tileImg = imagecreatefromjpeg($le_cover_photo);
+					        //echo "jpg";
+					        break;
+					    case 'image/gif':
+					        $tileImg = imagecreatefromgif($le_cover_photo);
+					        //echo "gif";
+					        break;
+					}
+					    
+					   /* print_r($tam);
+		            	var_dump($tileImg);
+		            	die();*/
+		           
+				               
+		            imagecopy($mapImage, $tileImg, 266, 448, 0, 0, 298, 212);
+
+		            imagedestroy($tileImg);
+	        	}
+        	}
             /*
              * SAVE  IMAGE
              */

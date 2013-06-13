@@ -1,3 +1,6 @@
+<?php 
+	if($mayi == 'si'){
+?>
 <?php echo $this->Html->css('PhotoSelector'); ?>
 <?php echo $this->Html->script('photo_selector'); ?>
 
@@ -102,6 +105,25 @@ function readURL(input) {
 
 </script>
 
+<STYLE TYPE="text/css">
+#photo-back{
+	top: 40px;
+	left: 43px;
+	width: 251px;
+  	height: 192px;
+}
+
+<?php if( isset($moment['MomentPage']['photo']) ){ ?>
+
+#photo-back{
+	background-image: url(../../../img/cover_photos/<?php echo str_replace(' ', '%20', $moment['MomentPage']['photo']); ?>);
+}
+
+<?php }?>
+
+
+</STYLE>
+
 
 <!-- Markup for Carson Shold's Photo Selector -->
 		<div id="CSPhotoSelector">
@@ -145,32 +167,31 @@ function readURL(input) {
 			</div>
 		</div>
 <!-- Markup for Carson Shold's Photo Selector -->
-<?php echo $this->element('menu', array( "trimestre" => $this->request->params['pass'][0], 'pag' => 'none' )); ?>
+<?php echo $this->element('menu', array( "trimestre" => $this->request->params['pass'][1], 'pag' => 'none' )); ?>
 
-<?php
-		echo $this->Html->link(
-				    'Add Moment',
-				    array('controller' => 'moment_pages', 'action' => 'add', 0, $this->request->params['pass'][0]),
-				    array('class' => 'add_moment')
-				);
-	?>
+<a href="#" class="add_moment" id="my-moments">Moments</a>
+
+    <div id="moments_popup">
+        <div id="popup_moments"> <!--your content start-->
+          <?php echo $this->element('moments'); ?>
+          <?php 
+            // echo $this->Html->link(
+            //     'Agrega un momento',
+            //     array('controller' => 'moment_pages', 'action' => 'add',0,1)
+            // );
+          ?>
+          <a href="<?php echo $this->request->params['pass'][1]; ?>" class="addnew-momento" id="mayiadd-moments" >Agrega un momento</a>
+        </div> <!--your content end-->
+    </div> <!--toPopup end-->
+
+<div id="dialog-box-momento" class="dialog-popup"></div>
+
 
 <div class="content">
-<?php echo $this->element('trim_menu', array( "trimestre" => $this->request->params['pass'][0])); ?>
+<?php echo $this->element('trim_menu', array( "trimestre" => $this->request->params['pass'][1])); ?>
 
-<div class="page_title">
-	<div class="ant">Anterior</div>
-	<div class="title_page">
-		<p></p>
-		<span></span>
-	</div>
-	<div class="sig">Siguiente</div>
-</div>
-
-	<div class="momentPages form">
 <?php echo $this->Form->create('MomentPage'); ?>
-  
-  <?php
+ <?php
 		if(isset($moment['MomentPage']['title'])){
 			$title = $moment['MomentPage']['title'];
 		} else{
@@ -193,9 +214,21 @@ function readURL(input) {
 			$id_ = '';
 		}
   ?>
- 	<input type="text" name="data[MomentPage][title]" value="<?php if($title != ''){ echo $title; } ?>"/>  
- 	<input type="text" name="data[MomentPage][subtitle]" value="<?php if($subtitle != ''){ echo $subtitle; } ?>"/>  
 
+<div class="page_title">
+	<div class="title_page">
+		<p> 	
+			<input type="text" name="data[MomentPage][title]" value="<?php if($title != ''){ echo $title; } ?>"/>  
+		</p>
+		<span>
+			 <input type="text" name="data[MomentPage][subtitle]" value="<?php if($subtitle != ''){ echo $subtitle; } ?>"/>  
+		</span>
+	</div>
+</div>
+
+	<div class="momentPages form">
+  
+ 	  <div id="photo-back"></div>
       <div class="photo-up" id="photo_moment">
         <input type="hidden" name="data[MomentPage][url_photo]" id="photo_url_" value=""/>
         <div class="pick_fb">Elegir de Facebook</div>
@@ -215,3 +248,11 @@ function readURL(input) {
 </div>
 
 </div>
+<?php 
+
+	} else {
+?>
+
+<p>No puedes agregar otro momento!</p>
+
+<?php } ?>

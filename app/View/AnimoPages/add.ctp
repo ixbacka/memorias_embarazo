@@ -1,12 +1,67 @@
-<?php echo $this->Html->script('functions'); ?>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+   var radios = $(':radio');
+
+
+  // when the radio selection is changed, fire 
+  // the uncheck event on the selected radio's 
+  // sibling that was checked
+  radios.on('change', function() {
+    var siblings = $(':radio[name="' + this.name + '"]').not(this);
+
+    siblings.each(function() {
+      var sibling = $(this);
+      if (sibling.data('ischecked')) {
+        sibling.trigger('uncheck');
+      }  
+    });
+  });
+
+  // custom check / uncheck events
+  radios.on('check uncheck', function(e) {
+    var checked = (e.type === 'check');
+    $(this).data('ischecked', checked).attr('checked', checked);
+  });
+
+  // make sure all radios have the necessary 
+  // ischecked flag on DOM ready
+  radios.filter(':checked').each(function(i, r) {
+    $(this).trigger('check');
+  });
+});
+
+</script>
+
 <?php echo $this->element('menu', array( "trimestre" => 1, "pag" => "animo")); ?>
 <?php
-		echo $this->Html->link(
-				    'Add Moment',
-				    array('controller' => 'moment_pages', 'action' => 'add'),
-				    array('class' => 'add_moment')
-				);
-	?>
+//tenemos que poner el boton de la nubeshita. 
+/*
+  adentro de ese boton va esto:
+  echo $this->Html->link(
+            'Add Moment',
+            array('controller' => 'moment_pages', 'action' => 'add',0,1),
+            array('class' => 'add_moment')
+        );
+*/
+?>
+<a href="#" class="add_moment" id="my-moments">Moments</a>
+
+    <div id="moments_popup">
+        <div id="popup_moments"> <!--your content start-->
+          <?php echo $this->element('moments'); ?>
+          <?php 
+            // echo $this->Html->link(
+            //     'Agrega un momento',
+            //     array('controller' => 'moment_pages', 'action' => 'add',0,1)
+            // );
+          ?>
+          <a href="1" class="addnew-momento" id="mayiadd-moments" >Agrega un momento</a>
+        </div> <!--your content end-->
+    </div> <!--toPopup end-->
+
+<div id="dialog-box-momento" class="dialog-popup"></div>
 
 <div class="content">
 <?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
@@ -172,7 +227,7 @@
         echo  'checked="checked"'; } ?> />
         <input type="radio" name="data[AnimoPage][month1_physical]" value="2" <?php if($month1_physical == 2){
         echo  'checked="checked"'; } ?> />
-        <input type="radio" name="data[AnimoPage][month1_physical]" value="3" <?php if($month1_physical == 2){
+        <input type="radio" name="data[AnimoPage][month1_physical]" value="3" <?php if($month1_physical == 3){
         echo 'checked="checked"'; } ?> />
       </div>
 
@@ -189,7 +244,7 @@
         echo  'checked="checked"'; } ?> />
         <input type="radio" name="data[AnimoPage][month2_physical]" value="2" <?php if($month2_physical == 2){
         echo  'checked="checked"'; } ?> />
-        <input type="radio" name="data[AnimoPage][month2_physical]" value="3" <?php if($month2_physical == 2){
+        <input type="radio" name="data[AnimoPage][month2_physical]" value="3" <?php if($month2_physical == 3){
         echo  'checked="checked"'; } ?> />
       </div>
 
@@ -206,7 +261,7 @@
         echo  'checked="checked"'; } ?> />
         <input type="radio" name="data[AnimoPage][month3_physical]" value="2" <?php if($month3_physical == 2){
         echo  'checked="checked"'; } ?> />
-        <input type="radio" name="data[AnimoPage][month3_physical]" value="3" <?php if($month3_physical == 2){
+        <input type="radio" name="data[AnimoPage][month3_physical]" value="3" <?php if($month3_physical == 3){
           echo  'checked="checked"'; } ?> />
       </div>
     </div>

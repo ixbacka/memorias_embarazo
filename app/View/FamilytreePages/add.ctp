@@ -306,106 +306,39 @@ function readURL(input) {
 <!-- Markup for Carson Shold's Photo Selector -->
 
 
-<ul class="vertical_menu_1">
-	<li>
-	<?php 
-		//congrats
-		echo $this->Html->link(
-				    'Felicidades',
-				    array('controller' => 'congrats_pages', 'action' => 'add')
-				);
-		?>
-	</li>
-	<li>
-		<?php
-		echo $this->Html->link(
-				    'Primer Visita',
-				    array('controller' => 'first_visit_pages', 'action' => 'add')
-				); ?>
-		</li>
-		<li>
-		<?php
-		echo $this->Html->link(
-				    'Quién soy',
-				    array('controller' => 'whoami_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-		<li>
-		<?php
-		echo $this->Html->link(
-				    'Primeros síntomas',
-				    array('controller' => 'sintom_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-		<li>
-			<?php
-		echo $this->Html->link(
-				    'Ultrasonido',
-				    array('controller' => 'ultrasound_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-		<li>
-		<?php
-		echo $this->Html->link(
-				    'Mi pancita',
-				    array('controller' => 'belly_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-		<li>
-		<?php
-		echo $this->Html->link(
-				    'Mi ánimo',
-				    array('controller' => 'animo_pages', 'action' => 'add')
-				);
-		?>
-		</li>
-</ul>
-<?php
-		echo $this->Html->link(
-				    'Add Moment',
-				    array('controller' => 'moment_pages', 'action' => 'add'),
-				    array('class' => 'add_moment')
-				);
-	?>
+<?php echo $this->element('menu', array( "trimestre" => 3, "pag" => "familytree")); ?>
+
+
+
+<a href="#" class="add_moment" id="my-moments">Moments</a>
+
+    <div id="moments_popup">
+        <div id="popup_moments"> <!--your content start-->
+          <?php echo $this->element('moments'); ?>
+          <a href="3" class="addnew-momento" id="mayiadd-moments" >Agrega un momento</a>
+        </div> <!--your content end-->
+    </div> <!--toPopup end-->
+
+<div id="dialog-box-momento" class="dialog-popup"></div>
 
 <div class="content">
-	<div class="menu_trims">
-		<?php 
-			echo $this->Html->link(
-				    'Primer Trimestre',
-				    array('controller' => 'familytree_pages', 'action' => 'add'),
-				    array('class' => 'first_trim_current')
-				);
-			echo $this->Html->link(
-				    'Segundo Trimestre',
-				    array('controller' => 'familytree_pages', 'action' => 'add'),
-				    array( 'class' => 'second_trim')
-				);
-			echo $this->Html->link(
-				    'Tercer Trimestre',
-				    array('controller' => 'familytree_pages', 'action' => 'add'),
-				    array('class' => 'third_trim')
-				);
-		?>
-	</div>
+<?php echo $this->element('trim_menu', array( "trimestre" => 3)); ?>
 
 <div class="page_title">
-	<div class="ant">Anterior</div>
-	<div class="title_page">&aacute;rbol Familiar</div>
 	<?php
-
 			echo $this->Html->link(
-				    'Siguiente',
-				    array('controller' => 'first_visit_pages', 'action' => 'add'),
-				    array('class' => 'sig')
+				    'Anterior',
+				    array('controller' => 'newfamily_pages', 'action' => 'add'),
+				    array('class' => 'ant')
 				);
 	?>
+	<div class="title_page">
+		<p>&aacute;rbol Familiar</p>
+		<span></span>
+	</div>
+	<div class="sig">Siguiente</div>
 </div>
-
+	
 <div class="familytreePages form">
 
 <?php echo $this->Form->create('FamilytreePage', array('enctype' => 'multipart/form-data')); ?>

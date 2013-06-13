@@ -1,4 +1,5 @@
 <!-- add.ctp -->
+
 <?php echo $this->Html->script('functions'); ?>
 <?php echo $this->Html->script('jquery-ui/js/jquery-ui-1.10.3.custom.min'); ?>
 <?php echo $this->Html->css('redmond/jquery-ui-1.10.3.custom.min'); ?>
@@ -33,13 +34,17 @@ $(document).ready(function(){
 
 <?php echo $this->element('menu', array( "trimestre" => 1, 'pag' => 'first_visit')); ?>
 
-<?php
-    echo $this->Html->link(
-            'Add Moment',
-            array('controller' => 'moment_pages', 'action' => 'add', 0,1),
-            array('class' => 'add_moment')
-        );
-  ?>
+
+<a href="#" class="add_moment" id="my-moments">Moments</a>
+
+    <div id="moments_popup">
+        <div id="popup_moments"> <!--your content start-->
+          <?php echo $this->element('moments'); ?>
+          <a href="1" class="addnew-momento" id="mayiadd-moments" >Agrega un momento</a>
+        </div> <!--your content end-->
+    </div> <!--toPopup end-->
+
+<div id="dialog-box-momento" class="dialog-popup"></div>
 
 <div class="content">
 <?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
@@ -124,7 +129,7 @@ function get_date_spanish( $time, $part = false, $formatDate = '' ){
     } else{
       $weight = '';
     }
-      echo $this->Form->input('weight', array('label' => 'Mi peso actual: ','after' => '</span>','between' => '<span>', 'value' => $weight));
+      echo $this->Form->input('weight', array('label' => 'Mi peso actual: ','after' => '</span>','between' => '<span>', 'value' => $weight, 'min' => 0));
       /*
       echo $this->Form->input('babycoming', array('label' => 'Tenía '));
       echo $this->Form->input('howishare', array('label' => 'semanas de embarazo cuando me enteré que venía el bebé en camino, ahh que emoción!. Compartí la gran noticia con el papá de mi bebé de esta manera: ', 'after' => '</span>','between' => '<span>',  'before' => '<p>semanas de embarazo cuando me enteré que venía el bebé en camino, ahh que emoción!. Compartí la gran noticia con el papá de mi bebé de esta manera:</p>', 'label' => false));

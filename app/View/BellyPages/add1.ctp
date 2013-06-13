@@ -1,7 +1,35 @@
+
 <?php echo $this->Html->css('PhotoSelector'); ?>
 <?php echo $this->Html->script('photo_selector'); ?>
 
+<style type="text/css">
+
+	<?php if( isset($belly['BellyPage']['photo1']) ){ ?>
+	#photo1{
+		background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo1']); ?>);
+	}
+	<?php }?>
+
+
+	<?php if( isset($belly['BellyPage']['photo2']) ){ ?>
+	#photo2{
+		background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo2']); ?>);
+	}
+	<?php }?>
+
+
+	<?php if( isset($belly['BellyPage']['photo3']) ){ ?>
+	#photo3{
+		background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo3']); ?>);
+		
+	}
+	<?php }?>
+
+
+</style>
+
 <script type="text/javascript">
+
 
 	var buttonOK = $('a#CSPhotoSelector_buttonOK');
 	var o = this;
@@ -51,8 +79,8 @@ fbphotoSelect = function(id, idpapa) {
 			console.log(photo.source);
 			console.log(' ehmem == > '+idpapa);
 			$('.'+idpapa).val(photo.source);
-			$('#room_photo_back').css('background-image','url('+photo.source+')');
-
+			$('#'+idpapa).css('background-image','url(../img/marco.png), url('+photo.source+')');
+			//$('.cover_photo').css('background-size', '392px 297px,  329px 265px');
 		};
 
 
@@ -92,10 +120,10 @@ fbphotoSelect = function(id, idpapa) {
 
 function readURL(input) {
       if (input.files && input.files[0]) {
-      	  var elpapa = $(input).parent().get(0).id;
+      		var elpapa = $(input).parent().get(0).id;
           var reader = new FileReader();
           reader.onload = function (e) {
-                  $('#room_photo_back').css('background-image','url('+e.target.result+')');
+                  $('#'+elpapa).css('background-image','url(../img/marco.png), url('+e.target.result+')');
           };
           reader.readAsDataURL(input.files[0]);
       }
@@ -103,14 +131,8 @@ function readURL(input) {
 
 </script>
 
-<style type="text/css">
 
-<?php if( isset($nesting['NestingPage']['room_photo']) ){ ?>
-#room_photo_back{
-	background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$nesting['NestingPage']['room_photo']); ?>);
-}
-<?php }?>
-</style>
+
 
 <!-- Markup for Carson Shold's Photo Selector -->
 		<div id="CSPhotoSelector">
@@ -156,112 +178,78 @@ function readURL(input) {
 <!-- Markup for Carson Shold's Photo Selector -->
 
 
-<?php echo $this->element('menu', array( "trimestre" => 3, "pag" => "nesting")); ?>
+<?php echo $this->element('menu', array( "trimestre" => 1, "pag" => "belly")); ?>
 
-<a href="#" class="add_moment" id="my-moments">Moments</a>
-
-    <div id="moments_popup">
-        <div id="popup_moments"> <!--your content start-->
-          <?php echo $this->element('moments'); ?>
-          <a href="3" class="addnew-momento" id="mayiadd-moments" >Agrega un momento</a>
-        </div> <!--your content end-->
-    </div> <!--toPopup end-->
-
-<div id="dialog-box-momento" class="dialog-popup"></div>
+<?php
+		echo $this->Html->link(
+				    'Add Moment',
+				    array('controller' => 'moment_pages', 'action' => 'add'),
+				    array('class' => 'add_moment')
+				);
+	?>
 
 <div class="content">
-<?php echo $this->element('trim_menu', array( "trimestre" => 3)); ?>
+  <?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
+  <div class="page_title">
+    <?php
 
-<div class="page_title">
-	<?php
-			echo $this->Html->link(
-				    'Anterior',
-				    array('controller' => 'coolultrasound_pages', 'action' => 'add'),
-				    array('class' => 'ant')
-				);
-	?>
-	<div class="title_page">
-		<p>SÍNTOMAS</p>
-		<span>de anidar</span>
-	</div>
-	<?php 
-		echo $this->Html->link(
-				    'Siguiente',
-				    array('controller' => 'byebelly_pages', 'action' => 'add'),
-				    array('class' => 'sig')
-				);
-	?>
-</div>
-
-	
-	<div class="nestingPages form">
-	<?php echo $this->Form->create('NestingPage', array('enctype' => 'multipart/form-data')); ?>
-    <p class="emociones">¡Muchas emociones! Me estoy preparando para tu llegada.</p>
-    <p class="emociones">Oﬁcialmente estoy anidando.</p>
-    <div class="anidar">Que es anidar?</div>
-    <div class="dado">
-  		<p>Me ha dado por:</p>
-      <?php
-        if(isset($nesting['NestingPage']['nest'])){
-          $nest = $nesting['NestingPage']['nest'];
-        } else{
-          $nest = '';
-        }
-      ?>
-      <div class="opciones">
-        <div class="cf">
-          <input type="radio" name="data[NestingPage][nest]" value="1" <?php if($nest == 1){ echo 'checked="checked"'; } ?> />
-          <label>Limpiar toda la casa</label>
-        </div>
-        <div class="cf">
-          <input type="radio" name="data[NestingPage][nest]" value="2" <?php if($nest == 2){ echo 'checked="checked"'; } ?> />
-          <label>Lavar y acomodar tu ropita</label>
-        </div>
-        <div class="cf">
-          <input type="radio" name="data[NestingPage][nest]" value="3" <?php if($nest == 3){ echo 'checked="checked"'; } ?> />
-          <label>Tener nuestra maleta lista en la puerta</label>
-        </div>
-        <div class="cf">
-          <input type="radio" name="data[NestingPage][nest]" value="4" <?php if($nest == 4){ echo 'checked="checked"'; } ?> />
-          <label>Todas las anteriores</label>
-        </div>
-      </div>
-    </div>
-		<div class="comprar">
-      <p>Nos falta comprar: </p>
-      <?php
-      if(isset($nesting['NestingPage']['buy1'])){
-        $buy1 = $nesting['NestingPage']['buy1'];
-      } else{
-        $buy1 = '';
-      }
-      if(isset($nesting['NestingPage']['buy2'])){
-        $buy2 = $nesting['NestingPage']['buy2'];
-      } else{
-        $buy2 = '';
-      }
-      if(isset($nesting['NestingPage']['buy3'])){
-        $buy3 = $nesting['NestingPage']['buy3'];
-      } else{
-        $buy3 = '';
-      }
+        echo $this->Html->link(
+              'Siguiente',
+              array('controller' => 'ultrasound_pages', 'action' => 'add'),
+              array('class' => 'ant')
+          );
     ?>
-      <input type="text" name="data[NestingPage][buy1]" value="<?php if($buy1 != ''){ echo $buy1; } ?>" >
-      <input type="text" name="data[NestingPage][buy2]" value="<?php if($buy2 != ''){ echo $buy2; } ?>" >
-      <input type="text" name="data[NestingPage][buy3]" value="<?php if($buy3 != ''){ echo $buy3; } ?>" >
-    </div>
-  
-    <p class="cuarto"> As&iacute; ser&aacute; tu cuarto: </p>
-    <div id="room_photo_back"></div>
-		<div id="room_photo" class="photo-up">
-      <input type="hidden" name="data[NestingPage][url_photo]" class="room_photo" value=""/>
-      <div class="pick_fb">Elegir de Facebook</div>
-      <?php
-        echo $this->Form->file('room_photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
-      ?>
-    </div>
 
-  	<?php echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid)); ?>
-    <?php echo $this->Form->end(__('Submit')); ?>
+    <div class="title_page"><p>Mi pancita</p>
+      <span>mes a mes</span></div>
+    <?php
+
+        echo $this->Html->link(
+              'Siguiente',
+              array('controller' => 'animo_pages', 'action' => 'add'),
+              array('class' => 'sig')
+          );
+    ?>
+  </div>
+
+  <div class="bellyPages form">
+
+  <?php echo $this->Form->create('BellyPage', array('enctype' => 'multipart/form-data')); ?>
+    <div class="mesuno">
+      <div class="bellyFile photo-up" id="photo1">
+        <input type="hidden" name="data[BellyPage][photo1_url][url_photo]" class="photo1" value=""/>
+        <div class="pick_fb">Elegir de Facebook</div>
+        <?php
+          echo $this->Form->file('grandpa_dad_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+        ?>
+      </div>
+      <p class="mes">Mes 1</p>
+    </div>
+    <div class="mesdos">
+      <div class="bellyFile photo-up" id="photo2">
+        <input type="hidden" name="data[BellyPage][photo2_url][url_photo]" class="photo2" value=""/>
+        <div class="pick_fb">Elegir de Facebook</div>
+        <?php
+          echo $this->Form->file('photo2', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+        ?>
+      </div>
+      <p class="mes">Mes 2</p>
+    </div>
+    <div class="mestres">
+      <div class="bellyFile photo-up" id="photo3">
+        <input type="hidden" name="data[BellyPage][photo3_url][url_photo]" class="photo3" value=""/>
+        <div class="pick_fb">Elegir de Facebook</div>
+        <?php
+          echo $this->Form->file('grandma_dad_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+        ?>
+      </div>
+      <p class="mes">Mes 3</p>
+    </div>
+      <?php
+        //no borrar, para poder verla en local, pero debes de descomentarla para subirla al server
+        echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
+      ?>
+  <?php echo $this->Form->end(__('Submit')); ?>
   </div>
 </div>
+
