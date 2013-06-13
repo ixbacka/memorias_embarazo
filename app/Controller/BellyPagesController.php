@@ -118,6 +118,10 @@ var $uses = array('BellyPage','Profile');
           
         }
 
+         $this->BellyPage->set(array( 
+            'profile_id' => $this->request->data['BellyPage']['profile_id']
+          ));
+
         if ($this->BellyPage->save()) {
           //$this->Session->setFlash(__('The Cover photo has been saved'));
         } else {

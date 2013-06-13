@@ -344,33 +344,34 @@ function readURL(input) {
 <?php echo $this->Form->create('FamilytreePage', array('enctype' => 'multipart/form-data')); ?>
 
 <?php 
-	if(isset($familytree['FamilytreePage']['dad']){
+
+	if(isset($familytree['FamilytreePage']['dad'])){
 		$dad = $familytree['FamilytreePage']['dad'];
 	} else{
 		$dad = '';
 	}
-	if(isset($familytree['FamilytreePage']['grandpa_dad']){
+	if(isset($familytree['FamilytreePage']['grandpa_dad'])){
 		$grandpa_dad = $familytree['FamilytreePage']['grandpa_dad'];
 	} else{
 		$grandpa_dad = '';
 	}
-	if(isset($familytree['FamilytreePage']['grandpa_mom']){
+	if(isset($familytree['FamilytreePage']['grandpa_mom'])){
 		$grandpa_mom = $familytree['FamilytreePage']['grandpa_mom'];
 	} else{
 		$grandpa_mom = '';
 	}
-	if(isset($familytree['FamilytreePage']['grandma_dad']){
+	if(isset($familytree['FamilytreePage']['grandma_dad'])){
 		$grandma_dad = $familytree['FamilytreePage']['grandma_dad'];
 	} else{
 		$grandma_dad = '';
 	}
-	if(isset($familytree['FamilytreePage']['grandma_mom']){
+	if(isset($familytree['FamilytreePage']['grandma_mom'])){
 		$grandma_mom = $familytree['FamilytreePage']['grandma_mom'];
 	} else{
 		$grandma_mom = '';
 	}
 
-	if(isset($familytree['FamilytreePage']['baby']){
+	if(isset($familytree['FamilytreePage']['baby'])){
 		$baby = $familytree['FamilytreePage']['baby'];
 	} else{
 		$baby = '';
