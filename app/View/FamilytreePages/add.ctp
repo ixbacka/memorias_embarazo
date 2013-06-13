@@ -341,13 +341,49 @@ function readURL(input) {
 <div class="familytreePages form">
 
 <?php echo $this->Form->create('FamilytreePage', array('enctype' => 'multipart/form-data')); ?>
+
+<?php 
+
+	if(isset($familytree['FamilytreePage']['dad'])){
+		$dad = $familytree['FamilytreePage']['dad'];
+	} else{
+		$dad = '';
+	}
+	if(isset($familytree['FamilytreePage']['grandpa_dad'])){
+		$grandpa_dad = $familytree['FamilytreePage']['grandpa_dad'];
+	} else{
+		$grandpa_dad = '';
+	}
+	if(isset($familytree['FamilytreePage']['grandpa_mom'])){
+		$grandpa_mom = $familytree['FamilytreePage']['grandpa_mom'];
+	} else{
+		$grandpa_mom = '';
+	}
+	if(isset($familytree['FamilytreePage']['grandma_dad'])){
+		$grandma_dad = $familytree['FamilytreePage']['grandma_dad'];
+	} else{
+		$grandma_dad = '';
+	}
+	if(isset($familytree['FamilytreePage']['grandma_mom'])){
+		$grandma_mom = $familytree['FamilytreePage']['grandma_mom'];
+	} else{
+		$grandma_mom = '';
+	}
+
+	if(isset($familytree['FamilytreePage']['baby'])){
+		$baby = $familytree['FamilytreePage']['baby'];
+	} else{
+		$baby = '';
+	}
+	 
+?>
 	<div class="familytreeFile" id="grandpa_dad">
 		<input type="hidden" name="data[FamilytreePage][grandpa_dad_url][url_photo]" class="grandpa_dad" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>
 		<?php
 			echo $this->Form->file('grandpa_dad_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
 			echo $this->Form->input('grandpa_dad', array('placeholder' => 'Nombre del abuelo', 'class' => 'name_input',
-				'value' => $familytree['FamilytreePage']['grandpa_dad']));
+				'value' => $grandpa_dad));
 		?>
 	</div>
 	<div class="familytreeFile" id="grandpa_mom">
@@ -356,7 +392,7 @@ function readURL(input) {
 		<?php
 			echo $this->Form->file('grandpa_mom_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
 			echo $this->Form->input('grandpa_mom', array('placeholder' => 'Nombre de la abuela', 'class' => 'name_input',
-				'value' => $familytree['FamilytreePage']['grandpa_mom']));
+				'value' => $grandpa_mom));
 		?>
 	</div>
 	<div class="familytreeFile" id="grandma_dad">
@@ -365,7 +401,7 @@ function readURL(input) {
 		<?php
 			echo $this->Form->file('grandma_dad_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
 			echo $this->Form->input('grandma_dad', array('placeholder' => 'Nombre del abuelo', 'class' => 'name_input',
-				'value' => $familytree['FamilytreePage']['grandma_dad']));
+				'value' => $grandma_dad));
 		?>
 	</div>
 	<div class="familytreeFile" id="grandma_mom">
@@ -374,7 +410,7 @@ function readURL(input) {
 		<?php
 			echo $this->Form->file('grandma_mom_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
 			echo $this->Form->input('grandma_mom', array('placeholder' => 'Nombre de la abuela', 'class' => 'name_input',
-				'value' => $familytree['FamilytreePage']['grandma_mom']));
+				'value' => $grandma_mom));
 		?>
 	</div>
 	<div class="familytreeFile" id="dad">
@@ -383,7 +419,7 @@ function readURL(input) {
 		<?php
 			echo $this->Form->file('dad_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
 			echo $this->Form->input('dad', array('placeholder' => 'Nombre del padre', 'class' => 'name_input',
-				'value' => $familytree['FamilytreePage']['dad']));
+				'value' => $dad));
 		?>
 	</div>	
 	<div class="familytreeFile" id="mom">
@@ -392,7 +428,7 @@ function readURL(input) {
 		<?php
 			echo $this->Form->file('mom_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
 			echo $this->Form->input('mom', array('placeholder' => 'Nombre de la madre', 'class' => 'name_input',
-				'value' => $familytree['FamilytreePage']['mom']));
+				'value' => $mom));
 		?>
 	</div>	<br>
 	<div class="familytreeFile" id="baby">
@@ -401,25 +437,11 @@ function readURL(input) {
 		<?php
 			echo $this->Form->file('baby_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
 			echo $this->Form->input('baby', array('placeholder' => 'Nombre del bebé', 'class' => 'name_input', 
-				'value' => $familytree['FamilytreePage']['baby']));
+				'value' => $baby));
 		?>
 	</div>		
 
 		<?php
-			/*echo $this->Form->input('grandpa_dad');
-			echo $this->Form->input('grandma_dad');
-			echo $this->Form->input('grandpa_mom');
-			echo $this->Form->input('grandma_mom');
-			echo $this->Form->input('grandpa_dad_img');
-			echo $this->Form->input('grandma_dad_img');
-			echo $this->Form->input('grandpa_mom_img');
-			echo $this->Form->input('grandma_mom_img');
-			echo $this->Form->input('mom');
-			echo $this->Form->input('dad');
-			echo $this->Form->input('mom_img');
-			echo $this->Form->input('dad_img');
-			echo $this->Form->input('baby');
-			echo $this->Form->input('baby_img');*/
 			echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
 		?>
 <?php echo $this->Form->end(__('Submit')); ?>

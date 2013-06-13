@@ -225,7 +225,7 @@ function readURL(input) {
         <input type="hidden" name="data[BellyPage][photo1_url][url_photo]" class="photo1" value=""/>
         <div class="pick_fb">Elegir de Facebook</div>
         <?php
-          echo $this->Form->file('grandpa_dad_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+          echo $this->Form->file('photo1', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
         ?>
       </div>
       <p class="mes">Mes 1</p>
@@ -247,7 +247,7 @@ function readURL(input) {
         <input type="hidden" name="data[BellyPage][photo3_url][url_photo]" class="photo3" value=""/>
         <div class="pick_fb">Elegir de Facebook</div>
         <?php
-          echo $this->Form->file('grandma_dad_img', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
+          echo $this->Form->file('photo3', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
         ?>
       </div>
       <p class="mes">Mes 3</p>

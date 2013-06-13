@@ -32,8 +32,13 @@ body{
 <?php echo $this->element('trim_menu', array( "trimestre" => 1)); ?>
 
 <div class="page_title">
-  <div class="ant">Anterior</div>
-
+   <?php
+echo $this->Html->link(
+            'Anterior',
+            array('controller' => 'whoami_pages', 'action' => 'add'),
+            array('class' => 'ant')
+        );
+?>
   <div class="title_page"><p>Primeros</p>
     <span>s&iacute;ntomas y malestares</span>
   </div>

@@ -191,7 +191,7 @@ function readURL(input) {
 			echo $this->Html->link(
 				    'Siguiente',
 				    array('controller' => 'familytree_pages', 'action' => 'add'),
-				    array('class' => 'ant')
+				    array('class' => 'sig')
 				);
 	?>
 </div>

@@ -65,8 +65,14 @@ class NestingPagesController extends AppController {
           
         }
 
+        if( isset($this->request->data['NestingPage']['nest']) ){
+           $this->NestingPage->set(array( 
+            'nest' => $this->request->data['NestingPage']['nest']
+            ));
+
+        }
+
           $this->NestingPage->set(array( 
-            'nest' => $this->request->data['NestingPage']['nest'],
             'buy1' => $this->request->data['NestingPage']['buy1'],
             'buy2' => $this->request->data['NestingPage']['buy2'],
             'buy3' => $this->request->data['NestingPage']['buy3'],
