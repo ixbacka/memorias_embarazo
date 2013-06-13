@@ -142,7 +142,7 @@
     <input type="text" name="data[GettingclosePage][suggestedname5]" value="<?php if($suggestedname5 != ''){ echo $suggestedname5; } ?>">
   </div>
   <p class="suegros">
-    <label> Mis suegros insisten que se llame: </label>
+    <label> Mis suegros insisten que te llames: </label>
   	<?php
       if(isset($gettingclose['GettingclosePage']['inlaw'])){
         $inlaw = $gettingclose['GettingclosePage']['inlaw'];

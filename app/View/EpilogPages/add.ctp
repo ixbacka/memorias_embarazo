@@ -64,7 +64,7 @@
 		}
     ?>
     <p class="post-parto cf">
-    	<label> Notas post parto y detalles que recordar: </label>
+    	<label> Notas despu&eacute;s de que llegaste y detalles que recordar: </label>
     	<input type="text" name="data[EpilogPage][notes]" value="<?php if($notes != ''){ echo $notes; } ?>" >
     </p>
 	<?php

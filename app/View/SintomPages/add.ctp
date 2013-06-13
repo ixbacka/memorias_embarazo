@@ -34,8 +34,8 @@ body{
 <div class="page_title">
   <div class="ant">Anterior</div>
 
-  <div class="title_page"><p>Súper cool</p>
-    <span>fotos del ultrasonido</span>
+  <div class="title_page"><p>Primeros</p>
+    <span>s&iacute;ntomas y malestares</span>
   </div>
   <p class="middle_note">Cariño me puedes detener el cabello SOS... no me siento tan bien!</p>
   <?php

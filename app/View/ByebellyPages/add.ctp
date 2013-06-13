@@ -153,7 +153,7 @@ function get_date_spanish( $time, $part = false, $formatDate = '' ){
       </p>
       <p class="opcion cf">
         <input type="radio" name="data[ByebellyPage][itstarted]" value="5" <?php if($itstarted == 5){ echo 'checked="checked"'; } ?> />
-        <label>Por ces&aacute;rea</label>
+        <label>Fue por ces&aacute;rea</label>
       </p>
     </div>
     <?php

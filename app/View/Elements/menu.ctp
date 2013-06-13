@@ -90,7 +90,7 @@
 	<li <?php if($pag == 'bellymonth'){ echo 'class="selected"'; } ?>>
 	<?php 
 		echo $this->Html->link(
-				    'Mi pansita Mes a Mes',
+				    'Mi pancita Mes a Mes',
 				    array('controller' => 'bellymonth_pages', 'action' => 'add')
 
 				);

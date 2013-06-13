@@ -367,7 +367,7 @@ function readURL(input) {
             } else{
               $first_notes = '';
             }
-            echo $this->Form->input('first_notes', array('label' => 'Pero cuando me siento peor es: ', 'div' => false, 'value' => $first_notes));
+            echo $this->Form->input('first_notes', array('label' => 'La primera vez que te vi y o&iacute;, yo: ', 'div' => false, 'value' => $first_notes));
           ?>
         </p>
       </div>
@@ -403,7 +403,7 @@ function readURL(input) {
           } else{
             $second_notes = '';
           }
-          echo $this->Form->input('second_notes', array('label' => 'Pero cuando me siento peor es: ','div' => false,'value' => $second_notes));
+          echo $this->Form->input('second_notes', array('label' => 'Ahora: ','div' => false,'value' => $second_notes));
         ?> <p>
       </div>
     </div>

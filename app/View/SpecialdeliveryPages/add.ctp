@@ -242,8 +242,8 @@ function readURL(input) {
 				);
 	?>
 	<div class="title_page">
-		<p>entrega</p>
-		<span>especial: tu</span>
+		<p>entrega especial:</p>
+		<span>t&uacute;</span>
 	</div>
 	<?php 
       echo $this->Html->link(

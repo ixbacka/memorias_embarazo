@@ -1,3 +1,8 @@
+body {
+	background-image: url(../img/tema4/back.png);
+  color: #511114;
+}
+
 .ask{
   background-image: url(../img/tema4/ayuda.png);
 }
@@ -12,10 +17,6 @@
 
 #header h1 {
   background: #003d4c url('../img/cake.icon.png') no-repeat left;
-}
-
-body {
-	background-image: url(../img/tema4/back.png);
 }
 
 .header{
@@ -82,7 +83,7 @@ p.whatdo{
 .first_trim,
 .second_trim,
 .third_trim {
-  height: 33px;
+  height: 36px;
 }
 
 .first_trim {
@@ -112,14 +113,32 @@ p.whatdo{
   background-image: url(../img/tema4/siguiente.png);
 }
 
-#send_OK input[type="submit"] {
-  background-image: url(../img/tema4/bt_aceptar.png);
-}
-
 .footer {
   background-image: url(../img/tema4/footer.png);
 }
 
+#send_OK input[type="submit"]{
+	background-image: url(../img/tema4/bt_aceptar.png);
+}
+
+/* COLORS */
+
+#last_input,
+.aux_text,
+p.middle_note,
+.ultra .info h3,
+.note_sintom_,
+#SpecialdeliveryPageAddForm .nota-foot {
+  color: #0C5773; //AZUL
+}
+
+ul.vertical_menu_1 li a{
+  color: #E06873; //ROSA
+}
+
+ul.vertical_menu_1 li.selected a{
+ color: #4D2E11;
+}
 
 /* CUSTOM */
 .sig, .ant {
@@ -132,13 +151,12 @@ p.whatdo{
 }
 
 .title_page {
-  margin-left: 80px;
+  margin-left: 72px;
   margin-top: -14px;
   width: 363px;
   height: 88px;
 
 }
-
 
 .title_page p {
   margin-top: -28px;
@@ -155,4 +173,11 @@ p.whatdo{
 
 .add_moment {
   top: 962px;
+}
+
+.menu_trims .current,
+.first_trim:hover,
+.second_trim:hover,
+.third_trim:hover {
+  background-position: 0 36px;
 }

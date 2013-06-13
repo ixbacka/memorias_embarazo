@@ -344,10 +344,12 @@ span.arrow {
 
 #popup_moments{
   background-image: url(../img/pop_personalizar.png);
-/*  text-indent: -9999px;
-*/  width: 400px;
-  height: 400px;
+  background-repeat: no-repeat;
+  width: 272px;
+  height: 300px;
   background-size: 400px 400px;
+  padding: 60px;
+  text-align: center;
 }
 
 .personalizar:before {

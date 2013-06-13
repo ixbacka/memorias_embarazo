@@ -123,11 +123,7 @@
 			$most = '';
 		}
   ?>
-  <p class="emotivo">
-  	<label> Deﬁnitivamente lo más emotivo de tenerte en mi pancita fue: </label>
-  	<input type="text" name="data[WelcomebbyPage][most]" value="<?php if($most != ''){ echo $most; } ?>" >
-  </p>
-
+  
 	<?php
 		echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
 	?>

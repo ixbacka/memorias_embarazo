@@ -324,7 +324,7 @@ function readURL(input) {
         );
   ?>
   <div class="title_page">
-    <p>¡LAS PRIMERAS!</p>
+    <p>LAS PRIMERAS</p>
     <span>pataditas...</span>
   </div>
   <?php 
@@ -356,7 +356,7 @@ function readURL(input) {
     ?>
   </p>
   <p class="startkick">
-    <label>Aay, la semana en que empezó a patear duro el bebé fue :</label>
+    <label>Ay, la semana en que empezó a patear duro el bebé fue :</label>
     <input type="text" name="data[FirstkickPage][week]" value="<?php if($week != ''){ echo $week; } ?>"/>
   </p>
   <div class="colL">
@@ -408,7 +408,7 @@ function readURL(input) {
       <div class="opcion nose">
         <input type="radio" name="data[FirstkickPage][bigquestion]" value="3" <?php if($bigquestion == 3){
         echo 'checked="checked"'; } ?> />
-        <label>Todavía no se ve nada!</label>
+        <label>¡Todavía no se ve nada!</label>
       </div>
     </div>
     <?php

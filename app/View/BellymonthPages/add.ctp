@@ -299,7 +299,7 @@ function readURL(input) {
       </p>
       <p>Totalmente justificables considerando como me duele la espalda.</p>
       <div class="hungry">
-        <p>Huy, mi apetito es del tamaño de: </p>
+        <p>Huy, mi apetito es del tamaño de un:</p>
        <?php
           if(isset($bellymonth['BellymonthPage']['apetite'])){
             $apetite = $bellymonth['BellymonthPage']['apetite'];
@@ -317,7 +317,7 @@ function readURL(input) {
         </p>
         <p class="opcion">
           <input type="radio" name="data[BellymonthPage][apetite]" value="3" <?php if($apetite == 3){ echo 'checked="checked"'; } ?> />
-          <label>Ardilla</label>
+          <label>Raton</label>
         </p>
       </div>
       <div class="miss">
@@ -331,11 +331,11 @@ function readURL(input) {
         ?>
         <p class="opcion">
           <input type="radio" name="data[BellymonthPage][b4]" value="1" <?php if($b4 == 1){ echo 'checked="checked"'; } ?> />
-          <label>Mmmmm! un buen vino y una rica cena</label>
+          <label>¡Mmmmm! un buen vino y una rica cena</label>
         </p>
         <p class="opcion">
           <input type="radio" name="data[BellymonthPage][b4]" value="2" <?php if($b4 == 2){ echo 'checked="checked"'; } ?> />
-          <label>Mi vegija de su tamaño normal</label>
+          <label>Mi vejiga de su tamaño normal</label>
         </p>
         <p class="opcion">
           <input type="radio" name="data[BellymonthPage][b4]" value="3" <?php if($b4 == 3){ echo 'checked="checked"'; } ?> />
@@ -366,7 +366,7 @@ function readURL(input) {
         <p class="opcion">
           <input type="radio" name="data[BellymonthPage][sleep]" value="3" <?php if($sleep == 3){
           echo 'checked="checked"'; } ?> />
-          <label>Bromeas? No hay un modo cómodo</label>
+          <label>¿Bromeas? No hay un modo cómodo</label>
         </p>
       </div>
     </div>

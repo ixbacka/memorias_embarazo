@@ -336,7 +336,6 @@ function readURL(input) {
 		<p>&aacute;rbol Familiar</p>
 		<span></span>
 	</div>
-	<div class="sig">Siguiente</div>
 </div>
 	
 <div class="familytreePages form">
