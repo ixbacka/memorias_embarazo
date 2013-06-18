@@ -1,7 +1,14 @@
 <?php echo $this->Html->script('functions'); ?>
 <?php echo $this->Html->script('jquery-ui/js/jquery-ui-1.10.3.custom.min'); ?>
 <?php echo $this->Html->css('redmond/jquery-ui-1.10.3.custom.min'); ?>
+<style type="text/css">
 
+.ant{
+	background-image: none;
+	background: transparent;
+}
+
+</style>
 
 <?php if(isset($congrats['CongratsPage']['prueba'])){ 
 

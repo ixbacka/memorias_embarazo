@@ -96,13 +96,16 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
    <?php 
     $profileid = $this->Session->read("User.id");
-    echo $this->Html->css('letra1');
  
     $font = $this->Session->read("User.font");
-    
-    if($font == 2){ echo $this->Html->css('letra2'); } 
+
+    if($font == 1){ echo $this->Html->css('letra1'); }     
+    elseif($font == 2){ echo $this->Html->css('letra2'); } 
     elseif($font == 3){ echo $this->Html->css('letra3'); } 
     elseif($font == 4){ echo $this->Html->css('letra4'); } 
+    elseif ($font == NULL || empty($font))  {
+      echo $this->Html->css('letra1');
+    }
   ?>  
 
   <style type="text/css">

@@ -110,7 +110,7 @@ class ProfilesController extends AppController {
 
 	      if ($this->Profile->save()) {
 	        $error= 'Success!';
-	        //$this->Session->write('User.font', $font);
+	        $this->Session->write('User.font', $font);
 	      } else {
 	         $error= 'Tu tema no se ha podido guardar.';
 	      }
@@ -215,6 +215,7 @@ class ProfilesController extends AppController {
 			//es la primera vez que van a ver su cover, guardar el tema
 
 			$this->Session->write("User.theme", $theme);
+
 
 
 			$user_profile = $facebook->api('/'.$uid.'?fields=id,picture.type(normal),last_name,first_name,email,location,gender,link,birthday,username','GET');
@@ -323,7 +324,7 @@ class ProfilesController extends AppController {
 
       if(!empty($this->request->data['Profile']['file']['tmp_name']) ) { 
 
-			  $fileName = $this->generateUniqueFilename($this->request->data['Profile']['file']['name']); 
+			  $fileName = $this->generateUniqueFilename('CoverPhoto_'.$id['Profile']['uid'].'.png'); 
 			  $error = $this->handleFileUpload($this->request->data['Profile']['file'], $fileName); 
 
 			  if ($error == false) { 
@@ -345,7 +346,7 @@ class ProfilesController extends AppController {
 			} elseif (!empty($this->request->data['Profile']['url_photo'])) {
 
 				$avatar = imagecreatefromjpeg($this->request->data['Profile']['url_photo']);
-				$nameIMG = $this->generateUniqueFilename('cover_photo_'.$uid.'.png'); 
+				$nameIMG = $this->generateUniqueFilename('CoverPhoto_'.$uid.'.png'); 
 		        imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 				$this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$nameIMG,WWW_ROOT.'img/cover_photos/thumbnail_'.$nameIMG);
 
@@ -371,6 +372,10 @@ class ProfilesController extends AppController {
     if( $id['Profile']['cover_photo'] != null && !empty($id['Profile']['cover_photo']) ){
 	    $this->set('cover_pic', $id['Profile']['cover_photo']); 
     }
+    if( $id['Profile']['font'] != null && !empty($id['Profile']['font']) ){
+	    $this->Session->write('User.font', $id['Profile']['font']);
+    }
+
 	    $this->set('profileid', $id['Profile']['id']); 
 
 	}

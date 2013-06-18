@@ -75,10 +75,17 @@ class MomentPagesController extends AppController {
             $this->MomentPage->id = $idf['MomentPage']['id'];
           }
 
+          $error = false;
+
           if(!empty($this->request->data['MomentPage']['photo']['tmp_name']) ) { 
 
-          $fileName = $this->generateUniqueFilename($this->request->data['MomentPage']['photo']['name']); 
-          $error = $this->handleFileUpload($this->request->data['MomentPage']['photo'], $fileName); 
+            $fileName = $this->generateUniqueFilename('MOMENTO_'.$idp['Profile']['uid'].'.png');             
+            $error = $this->handleFileUpload($this->request->data['MomentPage']['photo'], $fileName); 
+
+         /* print_r($error);
+          print_r($fileName);
+
+          die();*/
 
             if ($error == false) { 
               //$this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$fileName,WWW_ROOT.'img/cover_photos/'.$fileName);
@@ -98,19 +105,22 @@ class MomentPagesController extends AppController {
             $this->MomentPage->set(array( 
               'photo' => $nameIMG
             ));
-            
+
+
           }
 
            $this->MomentPage->set(array( 
                 'trimester' => $this->request->data['MomentPage']['trimester'],
                 'title' => $this->request->data['MomentPage']['title'],
-                'subtitle' => $this->request->data['MomentPage']['subtitle'],
                 'description' => $this->request->data['MomentPage']['description'],
                 'profile_id' => $this->request->data['MomentPage']['profile_id']
               ));
 
           if ($this->MomentPage->save()) {
             //$this->Session->setFlash(__('The Cover photo has been saved'));
+            if($error!=false){
+              $this->Session->setFlash(__($error));              
+            }
             $this->redirect(array('controller' => 'moment_pages', 'action' => 'add', $this->MomentPage->id, $trim));
           } else {
             $this->Session->setFlash(__('The Page could not be saved. Please, try again.'));
@@ -120,7 +130,8 @@ class MomentPagesController extends AppController {
 
       $momentos = $this->MomentPage->find('count', array( 'conditions' => array( 'MomentPage.profile_id' => $leid ) ));
 
-      if( $momentos > 5 ){
+      if( $momentos >
+       5 ){
         $answer = 'no';
       } else {
         $answer = 'si';
