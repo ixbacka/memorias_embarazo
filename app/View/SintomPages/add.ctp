@@ -39,7 +39,9 @@ echo $this->Html->link(
             array('class' => 'ant')
         );
 ?>
-  <div class="title_page"><p>Primeros</p>
+
+  <div class="title_page">
+    <p>Primeros</p>
     <span>s&iacute;ntomas y malestares</span>
   </div>
   <p class="middle_note">Cariño me puedes detener el cabello SOS... no me siento tan bien!</p>
@@ -156,14 +158,16 @@ echo $this->Html->link(
   </div>
 </div>
 <div class="sintom_rite">
-    <?php
+<!--   <label>Mmmm! cuando se trata de antojos<br>El antojito más raro que he tenido es: </label>
+ -->    <?php
 
     if(isset($sintoms['SintomPage']['weirdestcraving'])){
       $weirdestcraving = $sintoms['SintomPage']['weirdestcraving'];
     } else{
       $weirdestcraving = '';
     }
-      echo $this->Form->input('weirdestcraving', array('label' => 'Mmmm! cuando se trata de antojos<br>El antojito más raro que he tenido es: ', 'value' => $weirdestcraving )); 
+      echo $this->Form->input('weirdestcraving', array('type' => 'textarea', 'label' => 'Mmmm! cuando se trata de antojos<br>El antojito más raro que he tenido es: ', 'value' => $weirdestcraving )); 
+
   ?>
 </div>
     <?php
@@ -177,7 +181,6 @@ echo $this->Html->link(
           ));
     ?>
 </div>
-<p class="note_sintom_">Hay que darle a la panza lo que pide. ¿No? Tengo que cuidar mi peso.</p>
 </div>
   <div class="footer">
     <div class="footer_mtm">Mom to mom , Consintiendo mi piel de mam&aacute;</div>

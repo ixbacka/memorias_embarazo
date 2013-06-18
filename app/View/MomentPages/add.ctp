@@ -181,18 +181,14 @@ function readURL(input) {
 <div class="content">
 <?php echo $this->element('trim_menu', array( "trimestre" => $this->request->params['pass'][1])); ?>
 
-<?php echo $this->Form->create('MomentPage'); ?>
+<?php echo $this->Form->create('MomentPage', array('enctype' => 'multipart/form-data')); ?>
  <?php
 		if(isset($moment['MomentPage']['title'])){
 			$title = $moment['MomentPage']['title'];
 		} else{
 			$title = '';
 		}
-		if(isset($moment['MomentPage']['subtitle'])){
-			$subtitle = $moment['MomentPage']['subtitle'];
-		} else{
-			$subtitle = '';
-		}
+		
 
 		if(isset($moment['MomentPage']['description'])){
 			$description = $moment['MomentPage']['description'];
@@ -211,9 +207,6 @@ function readURL(input) {
 		<p> 	
 			<input type="text" name="data[MomentPage][title]" value="<?php if($title != ''){ echo $title; } ?>"/>  
 		</p>
-		<span>
-			 <input type="text" name="data[MomentPage][subtitle]" value="<?php if($subtitle != ''){ echo $subtitle; } ?>"/>  
-		</span>
 	</div>
 </div>
 
