@@ -45,7 +45,7 @@ class BabyshowerPagesController extends AppController {
 
         if(!empty($this->request->data['BabyshowerPage']['photo1']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['BabyshowerPage']['photo1']['name']); 
+        $fileName = $this->generateUniqueFilename('bbyshower_1_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['BabyshowerPage']['photo1'], $fileName); 
 
           if ($error == false) { 
@@ -67,7 +67,7 @@ class BabyshowerPagesController extends AppController {
 
         if(!empty($this->request->data['BabyshowerPage']['photo2']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['BabyshowerPage']['photo2']['name']); 
+        $fileName = $this->generateUniqueFilename('bbyshower_2_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['BabyshowerPage']['photo2'], $fileName); 
 
           if ($error == false) { 
@@ -86,12 +86,20 @@ class BabyshowerPagesController extends AppController {
           ));
           
         }
+
+        if( isset($this->request->data['BabyshowerPage']['favoritepresent']) ){
+
+           $this->BabyshowerPage->set(array( 
+            'favoritepresent' => $this->request->data['BabyshowerPage']['favoritepresent']
+            ));
+
+        }
+
            $this->BabyshowerPage->set(array( 
             'bbyshower_date' => $this->request->data['BabyshowerPage']['bbyshower_date'],
             'present1' => $this->request->data['BabyshowerPage']['present1'],
             'present2' => $this->request->data['BabyshowerPage']['present2'],
             'present3' => $this->request->data['BabyshowerPage']['present3'],
-            'favoritepresent' => $this->request->data['BabyshowerPage']['favoritepresent'],
             'profile_id' => $this->request->data['BabyshowerPage']['profile_id'],
             'guest1' => $this->request->data['BabyshowerPage']['guest1'],
             'guest2' => $this->request->data['BabyshowerPage']['guest2'],

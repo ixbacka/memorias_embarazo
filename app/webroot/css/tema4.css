@@ -33,51 +33,24 @@ body {
 .photo-v {
   background-image: url(../img/tema4/marco.png);
 }
-.cover_photo_back{
+
+.cover_photo_back,
+.whoami_photo_back,
+#ultrasound_photo_1_back,
+#ultrasound_photo_2_back,
+#photo3_back,
+#photo1_back,
+#photo2_back,
+.firstkick_photo_back,
+.belly_photo_back,
+#photo1_back_,
+#photo2_back_,
+#photo_back,
+#room_photo_back,
+#photo-back,
+#photo-back-1 {
   background-image: url(../img/tema4/marco_fondo.png);
 }
-
-.whoami_photo_back{
-  background-image: url(../img/tema4/marco_fondo.png);
-}
-
-#ultrasound_photo_1_back{
-  background-image: url(../img/tema4/marco_fondo.png);
-}
-
-#ultrasound_photo_2_back{  
-  background-image: url(../img/tema4/marco_fondo.png);
-}
-
-
-#photo3_back{
-  background-image: url(../img/tema4/marco_fondo.png);
-}
-
-#photo1_back{
-  background-image: url(../img/tema4/marco_fondo.png);
-}
-
-#photo2_back{
-  background-image: url(../img/tema4/marco_fondo.png);
-}
-
-.firstkick_photo_back{
-  background-image: url(../img/tema4/marco_fondo.png);
-}
-
-.belly_photo_back{
-  background-image: url(../img/tema4/marco_fondo.png);
-}
-#photo1_back_{
-  background-image: url(../img/tema4/marco_fondo.png);  
-}
-#photo2_back_ , #photo_back, #room_photo_back, #photo-back, #photo-back-1{
-  background-image: url(../img/tema4/marco_fondo.png);  
-}
-
-
-
 
 .pick_fb{
   background-image: url(../img/tema4/bt_elegir.png);
@@ -107,6 +80,12 @@ p.whatdo{
   background-image: url(../img/tema4/bt_instrucciones.png);
 }
 
+.first_trim,
+.second_trim,
+.third_trim {
+  height: 36px;
+}
+
 .first_trim {
   background-image: url(../img/tema4/bt_primer.png);
 }
@@ -123,7 +102,7 @@ p.whatdo{
 .first_trim:hover,
 .second_trim:hover,
 .third_trim:hover {
-  background-position: 0 33px;
+  background-position: 0 36px;
 }
 
 .ant{
@@ -132,11 +111,6 @@ p.whatdo{
 
 .sig{
   background-image: url(../img/tema4/siguiente.png);
-}
-
-form .submit input[type="submit"],
-form .submit input[type="submit"]:hover {
-  background-image: url(../img/tema4/bt_guardar.png);
 }
 
 .footer {
@@ -171,10 +145,17 @@ ul.vertical_menu_1 li.selected a{
   height: 50px;
 }
 
+
+.menu_trims {
+  top: -21px;
+}
+
 .title_page {
+  margin-left: 72px;
+  margin-top: -14px;
   width: 363px;
-  margin-left: 84px;
-  height: 89px;
+  height: 88px;
+
 }
 
 .title_page p {
@@ -182,17 +163,16 @@ ul.vertical_menu_1 li.selected a{
 }
 
 .title_page span {
-  top: 24px;
+  top: 34px;
 }
 
-.menu_trims {
- height: 35px;
+.aux_text {
+  top: 730px;
+  left: 550px;
 }
 
-.first_trim,
-.second_trim,
-.third_trim {
-  height: 35px;
+.add_moment {
+  top: 962px;
 }
 
 .menu_trims .current,
@@ -200,5 +180,4 @@ ul.vertical_menu_1 li.selected a{
 .second_trim:hover,
 .third_trim:hover {
   background-position: 0 36px;
-  margin-top: -24px;
 }

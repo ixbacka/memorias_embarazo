@@ -168,6 +168,160 @@ body{
 
 <?php }?>
 
+<?php if( isset($bellymonth['BellymonthPage']['photo']) ){ ?>
+.belly_photo_back{
+  background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$bellymonth['BellymonthPage']['photo']); ?>);
+}
+<?php }?>
+
+
+<?php if( isset($bbyshower['BabyshowerPage']['photo1']) ){ ?>
+#photo1_back_{
+  background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$bbyshower['BabyshowerPage']['photo1']); ?>);
+}
+<?php }?>
+
+<?php if( isset($bbyshower['BabyshowerPage']['photo2']) ){ ?>
+#photo2_back_{
+  background-image:url(../img/cover_photos/<?php echo str_replace(' ','%20',$bbyshower['BabyshowerPage']['photo2']); ?>);
+}
+<?php }?>
+
+<?php if( isset($cool['CoolultrasoundPage']['photo']) ){ ?>
+#photo_back{
+  background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$cool['CoolultrasoundPage']['photo']); ?>);
+}
+<?php }?>
+
+<?php if( isset($nesting['NestingPage']['room_photo']) ){ ?>
+#room_photo_back{
+  background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$nesting['NestingPage']['room_photo']); ?>);
+}
+<?php }?>
+
+
+<?php if( isset($special['SpecialdeliveryPage']['photo']) ){ ?>
+#photo-back{
+  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$special['SpecialdeliveryPage']['photo']); 
+    ?>);
+}
+<?php }?>
+
+
+<?php if( isset($new['NewfamilyPage']['photo']) ){ ?>
+#photo-back-1{
+  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$new['NewfamilyPage']['photo']); 
+    ?>);
+}
+<?php }?>
+
+
+<?php if( isset($familytree['FamilytreePage']['grandpa_dad_img']) ){ ?>
+#grandpa_dad-back{
+  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_dad_img']); ?>);
+  background-size: 186px 186px,  120px 120px;
+  border-radius: 120px;
+  height: 150px;width: 150px;
+  border-radius: 150px;
+  background-position: -15px -15px, center 9px;
+  background-size: 186px 186px, 140px 140px;
+margin-left: 30px;
+margin-top: 50px;
+}
+<?php }?>
+
+
+<?php if( isset($familytree['FamilytreePage']['grandpa_mom_img']) ){ ?>
+#grandpa_mom-back{
+  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_mom_img']); ?>);
+  background-size: 186px 186px,  120px 120px;
+  border-radius: 120px;
+  height: 150px;width: 150px;
+  border-radius: 150px;
+  background-position: -15px -15px, center 9px;
+  background-size: 186px 186px, 140px 140px;
+margin-left: 30px;
+margin-top: 50px;
+}
+<?php }?>
+
+
+<?php if( isset($familytree['FamilytreePage']['grandma_dad_img']) ){ ?>
+#grandma_dad-back{
+  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_dad_img']); ?>);
+  background-size: 186px 186px,  120px 120px;
+  border-radius: 120px;
+  height: 150px;width: 150px;
+border-radius: 150px;
+background-position: -15px -15px, center 9px;
+background-size: 186px 186px, 140px 140px;
+margin-left: 30px;
+margin-top: 50px;
+}
+<?php }?>
+
+
+<?php if( isset($familytree['FamilytreePage']['grandma_mom_img']) ){ ?>
+#grandma_mom-back{
+  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_mom_img']); ?>);
+  background-size: 186px 186px,  120px 120px;
+  border-radius: 120px;
+  height: 150px;width: 150px;
+border-radius: 150px;
+background-position: -15px -15px, center 9px;
+background-size: 186px 186px, 140px 140px;
+margin-left: 30px;
+margin-top: 50px;
+}
+<?php }?>
+
+
+<?php if( isset($familytree['FamilytreePage']['dad_img']) ){ ?>
+#dad-back{
+  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['dad_img']); ?>);
+  background-size: 186px 186px,  120px 120px;
+  border-radius: 120px;
+
+height: 150px;width: 150px;
+border-radius: 150px;
+background-position: -15px -15px, center 9px;
+background-size: 186px 186px, 140px 140px;
+margin-left: 30px;
+margin-top: 50px;
+
+}
+<?php }?>
+
+<?php if( isset($familytree['FamilytreePage']['mom_img']) ){ ?>
+#mom-back{
+  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['mom_img']); ?>);
+  background-size: 186px 186px,  120px 120px;
+  border-radius: 120px;
+  height: 150px;width: 150px;
+border-radius: 150px;
+background-position: -15px -15px, center 9px;
+background-size: 186px 186px, 140px 140px;
+margin-left: 30px;
+margin-top: 50px;
+
+}
+<?php }?>
+
+<?php if( isset($familytree['FamilytreePage']['baby_img']) ){ ?>
+#baby-back{
+  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['baby_img']); ?>);
+  background-size: 186px 186px,  120px 120px;
+  border-radius: 120px;
+  height: 150px;width: 150px;
+border-radius: 150px;
+background-position: -15px -15px, center 9px;
+background-size: 186px 186px, 140px 140px;
+margin-left: 30px;
+margin-top: 50px;
+}
+<?php }?>
+
+
 </STYLE>
 
 
@@ -1003,7 +1157,7 @@ body{
           </div>
         </div>
 
-        <div class="book-form">
+        <div class="book-form" id="ilovemybaby">
 
           <?php if(isset($ilovemybby['IlovemybabyPage']['today'])){ 
 
@@ -1183,7 +1337,7 @@ body{
           </div>
         </div>
 
-        <div class="book-form">
+        <div class="book-form" id="FirstkickPageAddForm">
 
           <?php 
 
@@ -1275,16 +1429,21 @@ body{
               } else{
                 $photogenic = '';
               }
+               if(isset($firstkick['FirstkickPage']['ifeel'])){
+                $ifeel = $firstkick['FirstkickPage']['ifeel'];
+              } else{
+                $ifeel = '';
+              }
           ?>
 
           <p>Hay una sensación muy dificil de describir, y es cuando sentí a mi bebé revoloteando en mi pancita, pero lo intentaré:</p>
           <p>
             <label>Esta maravilla de la vida la sentí el </label>
             <span> <?php if($firstkick_date != ''){ echo $firstkick_date; } ?></span>
-          </p>
+          </p><br>
 
           <p class="startkick">
-            <label>Aay, la semana en que empezó a patear duro el bebé fue :</label>
+            <label>Ay, la semana en que empezó a patear duro el bebé fue :</label>
             <span> <?php if($week != ''){ echo $week; } ?></span>
           </p>
           <div class="colL">
@@ -1322,6 +1481,13 @@ body{
                 <label>Todavía no se ve nada!</label>
               </div>
             </div>
+
+            <p>
+              <label>
+                Yo me siento: 
+              </label>
+              <span><?php  if($ifeel != ''){ echo $ifeel; } ?></span>
+            </p>
             <div class="antojos">
               <label>Antojos</label>
               <span><?php if($craving1 != ''){ echo $craving1; } ?></span>
@@ -1352,154 +1518,822 @@ body{
 
         <div class="book-page-title">
           <div class="book-title-page">
-            <p>¡LAS PRIMERAS!</p><br>
-            <span>pataditas...</span>
+            <p>Mi pancita</p>
+            <br>
+            <span>mes a mes</span>
           </div>
         </div>
 
-        <div class="book-form">
+        <div class="book-form bellymonthPages" id="BellymonthPageAddForm">
           <?php 
-              if(isset($firstkick['FirstkickPage']['firstkick_date'])){ 
-                  $source = $firstkick['FirstkickPage']['firstkick_date'];
-                  $date = new DateTime($source);
-                  $letime = strtotime($source);
+            if(isset($bellymonth['BellymonthPage']['photo_date'])){ 
+              $source = $bellymonth['BellymonthPage']['photo_date'];
+              $date = new DateTime($source);
+              $letime = strtotime($source);
 
-                  $mes = get_date_spanish($letime, true, 'month'); # return Enero
+              $mes = get_date_spanish($letime, true, 'month'); # return Enero
 
-                  $dia = $date->format('d'); // 31.07.2012
-                  $ano = $date->format('Y'); // 31-07-2012
+              $dia = $date->format('d'); // 31.07.2012
+              $ano = $date->format('Y'); // 31-07-2012
 
-                  $firstkick_date = $dia.' '.$mes.' '.$ano;
-                  $monthi = ($date->format('m'))-1;
-                } else{
-                  $firstkick_date = '';
-                }
-                if(isset($firstkick['FirstkickPage']['photo_date'])){ 
+              $photo_date = $dia.' '.$mes.' '.$ano;
+              $monthi = ($date->format('m'))-1;
+              $mese = $date->format('m');
+            } else{
+              $photo_date = '';
+            }
+            if(isset($bellymonth['BellymonthPage']['actual_weight'])){
+              $actual_weight = $bellymonth['BellymonthPage']['actual_weight'];
+            } else{
+              $actual_weight = '';
+            }
+            if(isset($bellymonth['BellymonthPage']['measurements'])){
+              $measurements = $bellymonth['BellymonthPage']['measurements'];
+            } else{
+              $measurements = '';
+            }
+            if(isset($bellymonth['BellymonthPage']['apetite'])){
+              $apetite = $bellymonth['BellymonthPage']['apetite'];
+            } else{
+              $apetite = '';
+            }
+            if(isset($bellymonth['BellymonthPage']['b4'])){
+              $b4 = $bellymonth['BellymonthPage']['b4'];
+            } else{
+              $b4 = '';
+            }
+            if(isset($bellymonth['BellymonthPage']['sleep'])){
+              $sleep = $bellymonth['BellymonthPage']['sleep'];
+            } else{
+              $sleep = '';
+            }
+          ?>
 
-                  $source = $firstkick['FirstkickPage']['photo_date'];
-                  $date = new DateTime($source);
-                  $letime = strtotime($source);
+          <div class="colL">
+            <div class="belly_photo_back"></div>
+            <div class="belly_photo photo-v"></div>
+            <span  id="datepickerCongrats">
+              <?php if($photo_date != ''){  echo $photo_date; } ?>
+            </span>
+          </div>
 
-                  $mes = get_date_spanish($letime, true, 'month'); # return Enero
-
-                  $dia = $date->format('d'); // 31.07.2012
-                  $ano = $date->format('Y'); // 31-07-2012
-
-                  $photo_date = $dia.' '.$mes.' '.$ano;
-                  $monthi = ($date->format('m'))-1;
-                } else{
-                  $photo_date = '';
-                }
-
-                if(isset($firstkick['FirstkickPage']['week'])){
-                  $week = $firstkick['FirstkickPage']['week'];
-                } else{
-                  $week = '';
-                }
-                  
-                if(isset($firstkick['FirstkickPage']['photogenic'])){
-                  $photogenic = $firstkick['FirstkickPage']['photogenic'];
-                } else{
-                  $photogenic = '';
-                }
-                  if(isset($firstkick['FirstkickPage']['bigquestion'])){
-                    $bigquestion = $firstkick['FirstkickPage']['bigquestion'];
-                  } else{
-                    $bigquestion = '';
-                  }
-                   if(isset($firstkick['FirstkickPage']['craving1'])){
-                    $craving1 = $firstkick['FirstkickPage']['craving1'];
-                  } else{
-                    $craving1 = '';
-                  }
-                  if(isset($firstkick['FirstkickPage']['craving2'])){
-                    $craving2 = $firstkick['FirstkickPage']['craving2'];
-                  } else{
-                    $craving2 = '';
-                  }
-                  if(isset($firstkick['FirstkickPage']['craving3'])){
-                    $craving3 = $firstkick['FirstkickPage']['craving3'];
-                  } else{
-                    $craving3 = '';
-                  }
-                  if(isset($firstkick['FirstkickPage']['craving4'])){
-                    $craving4 = $firstkick['FirstkickPage']['craving4'];
-                  } else{
-                    $craving4 = '';
-                  }
-                  if(isset($firstkick['FirstkickPage']['gross1'])){
-                    $gross1 = $firstkick['FirstkickPage']['gross1'];
-                  } else{
-                    $gross1 = '';
-                  }
-                  if(isset($firstkick['FirstkickPage']['gross2'])){
-                    $gross2 = $firstkick['FirstkickPage']['gross2'];
-                  } else{
-                    $gross2 = '';
-                  }
-                  if(isset($firstkick['FirstkickPage']['gross3'])){
-                    $gross3 = $firstkick['FirstkickPage']['gross3'];
-                  } else{
-                    $gross3 = '';
-                  }
-                  if(isset($firstkick['FirstkickPage']['gross4'])){
-                    $gross4 = $firstkick['FirstkickPage']['gross4'];
-                  } else{
-                    $gross4 = '';
-                  }
-                ?>
-
-              <p>Hay una sensación muy dificil de describir, y es cuando sentí a mi bebé revoloteando en mi pancita, pero lo intentaré:</p>
-              <p>
-                <label>Esta maravilla de la vida la sentí el </label>
-                <span><?php if($firstkick_date != ''){ echo $firstkick_date; } ?></span>
-              </p>
-            <p class="startkick">
-              <label>Aay, la semana en que empezó a patear duro el bebé fue :</label>
-              <span><?php if($week != ''){ echo $week; } ?></span>
+          <div class="colR">
+            <p class="peso">
+              <label>Mi peso actual: </label>
+                <span>
+                  <?php if($actual_weight != ''){ echo $actual_weight; } ?>
+                </span>
             </p>
-            <div class="colL">
-              <div class="firstkick_photo photo-v"> </div>
-              <span> <?php if($photo_date != ''){ echo $photo_date; } ?></span>
-            </div>
-            <div class="colR">
-              <p class="photogenic">
-                <label>Ahora qué eres más fotogénico, claramente pude ver:</label>
-                <span><?php if($photogenic != ''){ echo $photogenic; } ?></span>
+            <p class="medida">
+              <label>Las medidas de mi pancita: </label>
+              <span> 
+                <?php if($measurements != ''){ echo $measurements; } ?>
+              </span>
+            </p>
+
+            <p>Totalmente justificables considerando como me duele la espalda.</p>
+
+            <div class="hungry">
+              <p>Huy, mi apetito es del tamaño de un:</p>      
+              <p class="opcion">
+                <input type="radio" name="data[BellymonthPage][apetite]" value="1" <?php if($apetite == 1){ echo 'checked="checked"'; } ?> />
+                <label>Elefante</label>
               </p>
-              <p class="gran"><label>La GRAN pregunta: ¿el bebé es? </label></p>
-              <div class="opciones cf">
-                <div class="opcion nino">
-                  <input type="radio" name="data[FirstkickPage][bigquestion]" value="1" <?php if($bigquestion == 1){
-                  echo 'checked="checked"'; } ?> />
-                  <label>Niño</label>
-                </div>
-                <div class="opcion nina">
-                  <input type="radio" name="data[FirstkickPage][bigquestion]" value="2" <?php if($bigquestion == 2){
-                  echo 'checked="checked"'; } ?> />
-                  <label>Niña</label>
-                </div>
-                <div class="opcion nose">
-                  <input type="radio" name="data[FirstkickPage][bigquestion]" value="3" <?php if($bigquestion == 3){
-                  echo 'checked="checked"'; } ?> />
-                  <label>Todavía no se ve nada!</label>
-                </div>
+              <p class="opcion">
+                <input type="radio" name="data[BellymonthPage][apetite]" value="2" <?php if($apetite == 2){ echo 'checked="checked"'; } ?> />
+                <label>Le&oacute;n</label>
+              </p>
+              <p class="opcion">
+                <input type="radio" name="data[BellymonthPage][apetite]" value="3" <?php if($apetite == 3){ echo 'checked="checked"'; } ?> />
+                <label>Raton</label>
+              </p>
+            </div>
+
+            <div class="miss">
+              <p>Las cosas que más extraño de mi vida antes de estar embarazada son: </p>     
+              <p class="opcion">
+                <input type="radio" name="data[BellymonthPage][b4]" value="1" <?php if($b4 == 1){ echo 'checked="checked"'; } ?> />
+                <label>¡Mmmmm! un buen vino y una rica cena</label>
+              </p>
+              <p class="opcion">
+                <input type="radio" name="data[BellymonthPage][b4]" value="2" <?php if($b4 == 2){ echo 'checked="checked"'; } ?> />
+                <label>Mi vejiga de su tamaño normal</label>
+              </p>
+              <p class="opcion">
+                <input type="radio" name="data[BellymonthPage][b4]" value="3" <?php if($b4 == 3){ echo 'checked="checked"'; } ?> />
+                <label>Mis tobillos</label>
+              </p>
+              <label>Otro</label>
+              <span>
+                <?php if($b4 != "" && is_numeric($b4) == FALSE){ echo $b4; } ?>
+              </span>
+            </div>
+            <div class="comfy">
+              <p>Estoy más cómoda durmiendo: </p>
+              
+              <p class="opcion">
+                <input type="radio" name="data[BellymonthPage][sleep]" value="1" <?php if($sleep == 1){
+                echo 'checked="checked"'; } ?> />
+                <label>Boca arriba</label>
+              </p>
+              <p class="opcion">
+                <input type="radio" name="data[BellymonthPage][sleep]" value="2" <?php if($sleep == 2){
+                echo 'checked="checked"'; } ?> />
+                <label>De lado</label>
+              </p>
+              <p class="opcion">
+                <input type="radio" name="data[BellymonthPage][sleep]" value="3" <?php if($sleep == 3){
+                echo 'checked="checked"'; } ?> />
+                <label>¿Bromeas? No hay un modo cómodo</label>
+              </p>
+            </div>
+          </div>
+          
+        </div>
+      
+      </div>
+
+     <div class="book-footer"></div>
+
+  </div>
+   <div> 
+      <div class="book-header"></div>
+
+      <div class="book-content">
+
+        <div class="book-page-title">
+          <div class="book-title-page">
+            <p>Se acerca</p>
+            <br>
+            <span>el gran momento</span>
+          </div>
+        </div>
+
+        <div class="book-form gettingclosePages" id="GettingclosePageAddForm">
+         <?php
+            if(isset($gettingclose['GettingclosePage']['named'])){
+              $named = $gettingclose['GettingclosePage']['named'];
+            } else{
+              $named = '';
+            }
+            if(isset($gettingclose['GettingclosePage']['possiblename1'])){
+              $possiblename1 = $gettingclose['GettingclosePage']['possiblename1'];
+            } else{
+              $possiblename1 = '';
+            }
+            if(isset($gettingclose['GettingclosePage']['possiblename2'])){
+              $possiblename2 = $gettingclose['GettingclosePage']['possiblename2'];
+            } else{
+              $possiblename2 = '';
+            }
+            if(isset($gettingclose['GettingclosePage']['possiblename3'])){
+              $possiblename3 = $gettingclose['GettingclosePage']['possiblename3'];
+            } else{
+              $possiblename3 = '';
+            }
+            if(isset($gettingclose['GettingclosePage']['possiblename4'])){
+              $possiblename4 = $gettingclose['GettingclosePage']['possiblename4'];
+            } else{
+              $possiblename4 = '';
+            }
+            if(isset($gettingclose['GettingclosePage']['possiblename5'])){
+              $possiblename5 = $gettingclose['GettingclosePage']['possiblename5'];
+            } else{
+              $possiblename5 = '';
+            }
+            if(isset($gettingclose['GettingclosePage']['favoritename'])){
+              $favoritename = $gettingclose['GettingclosePage']['favoritename'];
+            } else{
+              $favoritename = '';
+            }
+            if(isset($gettingclose['GettingclosePage']['suggestedname1'])){
+              $suggestedname1 = $gettingclose['GettingclosePage']['suggestedname1'];
+            } else{
+              $suggestedname1 = '';
+            }
+            if(isset($gettingclose['GettingclosePage']['suggestedname2'])){
+              $suggestedname2 = $gettingclose['GettingclosePage']['suggestedname2'];
+            } else{
+              $suggestedname2 = '';
+            }
+            if(isset($gettingclose['GettingclosePage']['suggestedname3'])){
+              $suggestedname3 = $gettingclose['GettingclosePage']['suggestedname3'];
+            } else{
+              $suggestedname3 = '';
+            }
+            if(isset($gettingclose['GettingclosePage']['suggestedname4'])){
+              $suggestedname4 = $gettingclose['GettingclosePage']['suggestedname4'];
+            } else{
+              $suggestedname4 = '';
+            }
+            if(isset($gettingclose['GettingclosePage']['suggestedname5'])){
+              $suggestedname5 = $gettingclose['GettingclosePage']['suggestedname5'];
+            } else{
+              $suggestedname5 = '';
+            }
+            if(isset($gettingclose['GettingclosePage']['inlaw'])){
+              $inlaw = $gettingclose['GettingclosePage']['inlaw'];
+            } else{
+              $inlaw = '';
+            } 
+            if(isset($gettingclose['GettingclosePage']['parents'])){
+              $parents = $gettingclose['GettingclosePage']['parents'];
+            } else{
+              $parents = '';
+            } 
+          ?> 
+
+          <p class="miedo">Estoy tomando un curso de preparación para el parto, ¡ay que miedo!</p>
+          <p class="sorry">
+            <label>Querido bebé, perdónanos pero te hemos llamado: </label>
+            <span> 
+              <?php if($named != ''){ echo $named; } ?>
+            </span>
+          </p>
+
+          <div class="col uno">
+            <p>Nombres reales qué estamos considerando:</p>
+           
+            <span> 
+              <?php if($possiblename1 != ''){ echo $possiblename1; } ?>
+            </span>
+            <span> 
+              <?php if($possiblename2 != ''){ echo $possiblename2; } ?>
+            </span>
+            <span> 
+              <?php if($possiblename3 != ''){ echo $possiblename3; } ?>
+            </span>
+            <span> 
+              <?php if($possiblename4 != ''){ echo $possiblename4; } ?>
+            </span>
+            <span> 
+              <?php if($possiblename5 != ''){ echo $possiblename5; } ?>
+            </span>
+
+          </div>
+
+          <div class="col dos">
+            <p>Mi favorito:</p>            
+            <input type="radio" name="data[GettingclosePage][favoritename]" value="1" <?php if($favoritename == 1){
+            echo  'checked="checked"'; } ?> />
+            <input type="radio" name="data[GettingclosePage][favoritename]" value="2" <?php if($favoritename == 2){
+            echo   'checked="checked"'; } ?> />
+            <input type="radio" name="data[GettingclosePage][favoritename]" value="3" <?php if($favoritename == 3){
+            echo   'checked="checked"'; } ?> />
+            <input type="radio" name="data[GettingclosePage][favoritename]" value="4" <?php if($favoritename == 3){
+            echo   'checked="checked"'; } ?> />
+            <input type="radio" name="data[GettingclosePage][favoritename]" value="5" <?php if($favoritename == 3){
+            echo   'checked="checked"'; } ?> />
+          </div>
+
+          <div class="col tres">
+             <p>Sugerencias de otras personas:</p>
+             <span> 
+              <?php if($suggestedname1 != ''){ echo $suggestedname1; } ?>
+            </span>
+            <span> 
+              <?php if($suggestedname2 != ''){ echo $suggestedname2; } ?>
+            </span>
+            <span> 
+              <?php if($suggestedname3 != ''){ echo $suggestedname3; } ?>
+            </span>
+            <span> 
+              <?php if($suggestedname4 != ''){ echo $suggestedname4; } ?>
+            </span>
+            <span> 
+              <?php if($suggestedname5 != ''){ echo $suggestedname5; } ?>
+            </span>           
+          </div>
+
+          <p class="suegros">
+            <label> Mis suegros insisten que te llames: </label>
+            <span>
+              <?php if($inlaw != ''){ echo $inlaw; } ?>
+            </span>
+          </p>
+
+          <p class="papas">
+            <label> Mis papás opinan: </label> 
+            <span>
+              <?php if($parents != ''){ echo $parents; } ?>
+            </span>
+          </p>
+
+        </div>
+      
+      </div>
+
+     <div class="book-footer"></div>
+
+  </div>
+  <div> 
+      <div class="book-header"></div>
+
+      <div class="book-content">
+
+        <div class="book-page-title">
+          <div class="book-title-page">
+             <p>Baby shower</p>
+          </div>
+        </div>
+
+        <div class="book-form babyshowerPages" id="BabyshowerPageAddForm">
+
+          <?php if(isset($bbyshower['BabyshowerPage']['bbyshower_date'])){ 
+
+                $source = $bbyshower['BabyshowerPage']['bbyshower_date'];
+                $date = new DateTime($source);
+                $letime = strtotime($source);
+
+                $mes = get_date_spanish($letime, true, 'month'); # return Enero
+
+                $dia = $date->format('d'); // 31.07.2012
+                $ano = $date->format('Y'); // 31-07-2012
+
+                $bbyshower_date = $dia.' '.$mes.' '.$ano;
+                $monthi = ($date->format('m'))-1;
+                $mese = $date->format('m');
+             } else{
+                $bbyshower_date = '';
+              }
+              if(isset($bbyshower['BabyshowerPage']['present1'])){
+                $present1 = $bbyshower['BabyshowerPage']['present1'];
+              } else{
+                $present1 = '';
+              }
+              if(isset($bbyshower['BabyshowerPage']['present2'])){
+                $present2 = $bbyshower['BabyshowerPage']['present2'];
+              } else{
+                $present2 = '';
+              }
+              if(isset($bbyshower['BabyshowerPage']['present3'])){
+                $present3 = $bbyshower['BabyshowerPage']['present3'];
+              } else{
+                $present3 = '';
+              }
+              if(isset($bbyshower['BabyshowerPage']['favoritepresent'])){
+                $favoritepresent = $bbyshower['BabyshowerPage']['favoritepresent'];
+              } else{
+                $favoritepresent = '';
+              }
+               if(isset($bbyshower['BabyshowerPage']['guest1'])){
+                $guest1 = $bbyshower['BabyshowerPage']['guest1'];
+              } else{
+                $guest1 = '';
+              }
+              if(isset($bbyshower['BabyshowerPage']['guest2'])){
+                $guest2 = $bbyshower['BabyshowerPage']['guest2'];
+              } else{
+                $guest2 = '';
+              }
+              if(isset($bbyshower['BabyshowerPage']['guest3'])){
+                $guest3 = $bbyshower['BabyshowerPage']['guest3'];
+              } else{
+                $guest3 = '';
+              }
+          ?>
+
+          <p class="mibaby">
+            <label>Mi baby shower fu&eacute;: </label>
+            <span>
+              <?php if($bbyshower_date != ''){ echo $bbyshower_date; } ?>
+            </span>
+          </p>
+
+          <div class="col uno">
+            <label>Los regalos que recib&iacute;: </label>
+            <span class="losprimeros"> 
+              <?php if($present1 != ''){ echo $present1; } ?>
+            </span>
+            <span>
+              <?php if($present2 != ''){ echo $present2; } ?>
+            </span>
+            <span>
+              <?php if($present3 != ''){ echo $present3; } ?>
+            </span>
+          </div>
+
+          <div class="col dos">
+            <p>El m&aacute;s divertido fue:</p>
+
+            <input type="radio" name="data[BabyshowerPage][favoritepresent]" value="1" <?php if($favoritepresent == 1){ echo 'checked="checked"'; } ?> />
+             <input type="radio" name="data[BabyshowerPage][favoritepresent]" value="2" <?php if($favoritepresent == 2){ echo 'checked="checked"'; } ?> />
+             <input type="radio" name="data[BabyshowerPage][favoritepresent]" value="3" <?php if($favoritepresent == 3){ echo 'checked="checked"'; } ?> />
+          </div>
+
+          <div class="col tres">
+            <label>Vinieron a conocerte dentro de mi panza: </label>
+            <span class="losprimeros">
+              <?php if($guest1 != ''){ echo $guest1; } ?>
+            </span>
+            <span>
+              <?php if($guest2 != ''){ echo $guest2; } ?>
+            </span>
+            <span>
+              <?php if($guest3 != ''){ echo $guest3; } ?>
+            </span>
+          </div>
+
+
+          <div id="photo1_back_"></div>
+          <div id="photo1" class="photo-up uno"></div>
+
+          <div id="photo2_back_"></div>
+          <div id="photo2" class="photo-up dos"></div>
+
+        </div>
+      
+      </div>
+
+     <div class="book-footer"></div>
+
+  </div>
+  <div> 
+      <div class="book-header"></div>
+
+      <div class="book-content">
+
+        <div class="book-page-title">
+          <div class="book-title-page">
+            <p>S&uacute;per cool</p><br>
+            <span>fotos del ultrasonido</span>
+          </div>
+        </div>
+
+        <div class="book-form" id="CoolultrasoundPageAddForm">
+
+          <?php 
+            if(isset($cool['CoolultrasoundPage']['ultrasound_date'])){ 
+
+              $source = $cool['CoolultrasoundPage']['ultrasound_date'];
+              $date = new DateTime($source);
+              $letime = strtotime($source);
+
+              $mes = get_date_spanish($letime, true, 'month'); # return Enero
+
+              $dia = $date->format('d'); // 31.07.2012
+              $ano = $date->format('Y'); // 31-07-2012
+
+              $ultrasound_date = $dia.' '.$mes.' '.$ano;
+              $monthi = ($date->format('m'))-1;
+              $mese = $date->format('m');
+            
+            } else{
+              $ultrasound_date = '';
+            }
+
+            if(isset($cool['CoolultrasoundPage']['iwas'])){
+              $iwas = $cool['CoolultrasoundPage']['iwas'];
+            } else{
+              $iwas = '';
+            }
+            if(isset($cool['CoolultrasoundPage']['doctorsaid'])){
+              $doctorsaid = $cool['CoolultrasoundPage']['doctorsaid'];
+            } else{
+              $doctorsaid = '';
+            }
+            if(isset($cool['CoolultrasoundPage']['urdad'])){
+              $urdad = $cool['CoolultrasoundPage']['urdad'];
+            } else{
+              $urdad = '';
+            }
+            if(isset($cool['CoolultrasoundPage']['urdadsays'])){
+              $urdadsays = $cool['CoolultrasoundPage']['urdadsays'];
+            } else{
+              $urdadsays = '';
+            }
+            if(isset($cool['CoolultrasoundPage']['imiss'])){
+              $imiss = $cool['CoolultrasoundPage']['imiss'];
+            } else{
+              $imiss = '';
+            }
+            if(isset($cool['CoolultrasoundPage']['theythink'])){
+              $theythink = $cool['CoolultrasoundPage']['theythink'];
+            } else{
+              $theythink = '';
+            }
+          ?>
+
+          <div id="photo_back"></div>
+          <div id="photo" class="photo-up"></div>
+
+          <div class="bloque uno">
+            <h3>Ultrasonido</h3>
+            <p class="fui">
+              <label>Fu&iacute; el :</label>
+              <span id="datepickerCongrats">
+                <?php if($ultrasound_date != ''){ echo $ultrasound_date; } ?>
+              </span>
+            </p>
+
+            <p class="semanas">
+              <label>Ten&iacute;a </label>
+              <span> <?php if($iwas != ''){ echo $iwas; } ?> </span>
+              semanas de embarazo
+            </p>
+
+            <p class="doctor">
+              <label>Lo que me dijo el doctor fue: </label>
+              <span> 
+                <?php if($doctorsaid != ''){ echo $doctorsaid; } ?>
+              </span>
+            </p>
+          </div>
+
+          <div class="bloque dos">
+            <p>En este trimestre tu pap&aacute; est&aacute; un poco: </p>
+            <div class="opciones">
+              <div class="opcion cf">
+                <input type="radio" name="data[CoolultrasoundPage][urdad]" value="1" <?php if($urdad == 1){ echo 'checked="checked"'; } ?> />
+                <label>Agobiado</label>
               </div>
-              <div class="antojos">
-                <label>Antojos</label>
-                <span> <?php if($craving1 != ''){ echo $craving1; } ?></span>
-                <span><?php if($craving2 != ''){ echo $craving2; } ?></span>
-                <span><?php if($craving3 != ''){ echo $craving3; } ?></span>
-                <span><?php if($craving4 != ''){ echo $craving4; } ?></span>
+              <div class="opcion cf">
+                <input type="radio" name="data[CoolultrasoundPage][urdad]" value="2" <?php if($urdad == 2){ echo 'checked="checked"'; } ?> />
+                <label>Sobreprotector</label>
               </div>
-              <div class="antojos">
-                <label>Ascos</label>
-                <span><?php if($gross1 != ''){ echo $gross1; } ?></span>
-                <span><?php if($gross2 != ''){ echo $gross2; } ?></span>
-                <span><?php if($gross3 != ''){ echo $gross3; } ?></span>
-                <span><?php if($gross4 != ''){ echo $gross4; } ?></span>
+              <div class="opcion cf">
+                <input type="radio" name="data[CoolultrasoundPage][urdad]" value="3" <?php if($urdad == 3){ echo 'checked="checked"'; } ?> />
+                <label>Excluido</label>
+              </div>
+              <div class="opcion cf">
+                <input type="radio" name="data[CoolultrasoundPage][urdad]" value="4" <?php if($urdad == 4){ echo 'checked="checked"'; } ?> />
+                <label>Todas las anteriores</label>
               </div>
             </div>
+            <span>
+              <?php if($urdadsays != ""){ echo $urdadsays; } ?>
+            </span>
+          </div>
+
+          <div class="bloque tres">
+            <p>Las cosas que m&aacute;s extraño: </p>
+            <div class="opciones">
+              <div class="opcion cf">
+                <input type="radio" name="data[CoolultrasoundPage][imiss]" value="1" <?php if($imiss == 1){
+                echo 'checked="checked"'; } ?> />
+                <label>Usar tacones</label>
+              </div>
+              <div class="opcion cf">
+                 <input type="radio" name="data[CoolultrasoundPage][imiss]" value="2" <?php if($imiss == 2){
+                echo 'checked="checked"'; } ?> />
+                <label>Ropa interior normal</label>
+              </div>
+              <div class="opcion cf">
+                 <input type="radio" name="data[CoolultrasoundPage][imiss]" value="3" <?php if($imiss == 3){
+                echo 'checked="checked"'; } ?> />
+                <label>Verme los pies</label>
+              </div>
+            </div>
+            <p class="otro">
+              <label>Otro </label>
+              <span> 
+                <?php if($imiss != ""){ echo $imiss; } ?>
+              </span>
+            </p>
+
+            <p class="panza">La gente que opina de mi panza: </p>
+            <div class="opciones">
+              <div class="opcion cf">
+                <input type="radio" name="data[CoolultrasoundPage][theythink]" value="1" <?php if($theythink == 1){
+                echo 'checked="checked"'; } ?> />
+                <label>Es muy discreta para el mes en el que estoy</label>
+              </div>
+              <div class="opcion cf">
+                <input type="radio" name="data[CoolultrasoundPage][theythink]" value="2" <?php if($theythink == 2){
+                echo 'checked="checked"'; } ?> />
+                <label>Corresponde a los meses que tengo de embarazo</label>
+              </div>
+              <div class="opcion cf">  <input type="radio" name="data[CoolultrasoundPage][theythink]" value="3" <?php if($theythink == 3){
+                echo 'checked="checked"'; } ?> />
+                <label>Esta a punto de estallar</label>
+              </div>
+              <div class="opcion cf">
+                <input type="radio" name="data[CoolultrasoundPage][theythink]" value="4" <?php if($theythink == 4){
+                echo 'checked="checked"'; } ?> />
+                <label>¡Gigante! Parece de triates</label>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      
+      </div>
+
+     <div class="book-footer"></div>
+
+  </div>
+  <div> 
+      <div class="book-header"></div>
+
+      <div class="book-content">
+
+        <div class="book-page-title">
+          <div class="book-title-page">
+            <p>SÍNTOMAS</p>
+            <br>
+            <span>de anidar</span>
+          </div>
+        </div>
+
+        <div class="book-form nestingPages" id="NestingPageAddForm">
+          
+          <?php
+            if(isset($nesting['NestingPage']['nest'])){
+              $nest = $nesting['NestingPage']['nest'];
+            } else{
+              $nest = '';
+            }
+            if(isset($nesting['NestingPage']['buy1'])){
+              $buy1 = $nesting['NestingPage']['buy1'];
+            } else{
+              $buy1 = '';
+            }
+            if(isset($nesting['NestingPage']['buy2'])){
+              $buy2 = $nesting['NestingPage']['buy2'];
+            } else{
+              $buy2 = '';
+            }
+            if(isset($nesting['NestingPage']['buy3'])){
+              $buy3 = $nesting['NestingPage']['buy3'];
+            } else{
+              $buy3 = '';
+            }
+          ?>
+
+          <p class="emociones">¡Muchas emociones! Me estoy preparando para tu llegada.</p>
+          <p class="emociones">Oﬁcialmente estoy anidando.</p>
+
+          <div class="anidar">Que es anidar?</div>
+          <div class="dado">
+            <p>Me ha dado por:</p>
+            
+            <div class="opciones">
+              <div class="cf">
+                <input type="radio" name="data[NestingPage][nest]" value="1" <?php if($nest == 1){ echo 'checked="checked"'; } ?> />
+                <label>Limpiar toda la casa</label>
+              </div>
+              <div class="cf">
+                <input type="radio" name="data[NestingPage][nest]" value="2" <?php if($nest == 2){ echo 'checked="checked"'; } ?> />
+                <label>Lavar y acomodar tu ropita</label>
+              </div>
+              <div class="cf">
+                <input type="radio" name="data[NestingPage][nest]" value="3" <?php if($nest == 3){ echo 'checked="checked"'; } ?> />
+                <label>Tener nuestra maleta lista en la puerta</label>
+              </div>
+              <div class="cf">
+                <input type="radio" name="data[NestingPage][nest]" value="4" <?php if($nest == 4){ echo 'checked="checked"'; } ?> />
+                <label>Todas las anteriores</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="comprar">
+            <p>Nos falta comprar: </p>
+            
+            <span> 
+              <?php if($buy1 != ''){ echo $buy1; } ?>
+            </span>
+            <span> 
+              <?php if($buy2 != ''){ echo $buy2; } ?>
+            </span> 
+            <span> 
+              <?php if($buy3 != ''){ echo $buy3; } ?>
+            </span> 
+          </div>
+        
+          <p class="cuarto"> As&iacute; ser&aacute; tu cuarto: </p>
+          <div id="room_photo_back"></div>
+          <div id="room_photo" class="photo-up"></div>
+
+        </div>
+      
+      </div>
+
+     <div class="book-footer"></div>
+
+  </div>
+  <div> 
+      <div class="book-header"></div>
+
+      <div class="book-content">
+
+        <div class="book-page-title">
+          <div class="book-title-page">
+            <p>Adios pancita,</p><br>
+            <span>bienvenido beb&eacute;</span>
+          </div>
+        </div>
+
+        <div class="book-form byebellyPages" id="ByebellyPageAddForm" >
+          <?php 
+
+            if(isset($byebelly['ByebellyPage']['byebelly_date'])){ 
+              $source = $byebelly['ByebellyPage']['byebelly_date'];
+              $date = new DateTime($source);
+              $letime = strtotime($source);
+
+              $mes = get_date_spanish($letime, true, 'month'); # return Enero
+
+              $dia = $date->format('d'); // 31.07.2012
+              $ano = $date->format('Y'); // 31-07-2012
+
+              $byebelly_date = $dia.' '.$mes.' '.$ano;
+              $monthi = ($date->format('m'))-1;
+              $mese = $date->format('m');
+            } else {
+              $byebelly_date = '';
+            }
+            if(isset($byebelly['ByebellyPage']['itstarted'])){
+              $itstarted = $byebelly['ByebellyPage']['itstarted'];
+            } else{
+              $itstarted = '';
+            }
+            if(isset($byebelly['ByebellyPage']['days1'])){
+              $days1 = $byebelly['ByebellyPage']['days1'];
+            } else{
+              $days1 = '';
+            }
+             if(isset($byebelly['ByebellyPage']['days2'])){
+              $days2 = $byebelly['ByebellyPage']['days2'];
+            } else{
+              $days2 = '';
+            }
+            if(isset($byebelly['ByebellyPage']['hours'])){
+              $hours = $byebelly['ByebellyPage']['hours'];
+            } else{
+              $hours = '';
+            }
+            if(isset($byebelly['ByebellyPage']['iwas'])){
+              $iwas = $byebelly['ByebellyPage']['iwas'];
+            } else{
+              $iwas = '';
+            }
+            if(isset($byebelly['ByebellyPage']['experience'])){
+              $experience = $byebelly['ByebellyPage']['experience'];
+            } else{
+              $experience = '';
+            }
+          ?>
+
+          <p class="contacciones">
+            <label>El d&iacute;a:</label>
+            <span>
+              <?php if($byebelly_date != ''){ echo $byebelly_date; } ?>
+            </span>
+            comenzaron las contracciones.
+          </p>
+          
+          <p> ¡Ay no, ay no, que nervios! mi labor de parto comenzó: </p>
+       
+          <div class="opciones">
+            <p class="opcion cf">
+              <input type="radio" name="data[ByebellyPage][itstarted]" value="1" <?php if($itstarted == 1){ echo 'checked="checked"'; } ?> />
+              <label>
+                <input type="number" min="0" max="41" value="<?php if($days1 != '' && $itstarted == 1){ echo $days1; } ?>" name="data[ByebellyPage][days1]"> días antes de mi fecha programada
+              </label>
+            </p>
+            <p class="opcion cf">
+              <input type="radio" name="data[ByebellyPage][itstarted]" value="2" <?php if($itstarted == 2){ echo 'checked="checked"'; } ?> />
+              <label>
+                <input type="number" min="0" max="41" value="<?php if($days2 != '' && $itstarted == 2 ){ echo $days2; } ?>" name="data[ByebellyPage][days2]"> días tarde (¡Sáquenmelo!)
+              </label>
+            </p>
+            <p class="opcion cf">
+              <input type="radio" name="data[ByebellyPage][itstarted]" value="3" <?php if($itstarted == 3){ echo 'checked="checked"'; } ?> />
+              <label>Justo a tiempo</label>
+            </p>
+            <p class="nota"> Ninguna de las anteriores: </p>
+            <p class="opcion cf">
+              <input type="radio" name="data[ByebellyPage][itstarted]" value="4" <?php if($itstarted == 4){ echo 'checked="checked"'; } ?> />
+              <label>Fue inducido</label>
+            </p>
+            <p class="opcion cf">
+              <input type="radio" name="data[ByebellyPage][itstarted]" value="5" <?php if($itstarted == 5){ echo 'checked="checked"'; } ?> />
+              <label>Fue por ces&aacute;rea</label>
+            </p>
+          </div>
+         
+          <p class="horas">
+            <label>Total de horas en labor de parto </label>
+            <span>
+              <?php if($hours != ''){ echo $hours; } ?>
+            </span>
+          </p>
+
+          
+          <div class="estaba">
+            <label>Cuando comenzaron las contracciones yo estaba: </label>
+            <span>
+              <?php if($iwas != ''){ echo $iwas; } ?>
+            </span>
+          </div>
+
+          <div class="exp">
+            <label>La experiencia completa de la labor de parto: </label>
+            <span> 
+              <?php if($experience != ''){ echo $experience; } ?>
+            </span>
+          </div>
 
         </div>
       
@@ -1509,5 +2343,431 @@ body{
 
   </div>
 
+  <div> 
+      <div class="book-header"></div>
 
+      <div class="book-content">
+
+        <div class="book-page-title">
+          <div class="book-title-page">
+            <p>Entrega Especial:</p><br>
+            <span>T&uacute;</span>
+          </div>
+        </div>
+
+        <div class="book-form specialdeliveryPages" id="SpecialdeliveryPageAddForm">
+          <?php 
+
+            if(isset($special['SpecialdeliveryPage']['birthday'])){ 
+
+              $source = $special['SpecialdeliveryPage']['birthday'];
+              $date = new DateTime($source);
+              $letime = strtotime($source);
+
+              $mes = get_date_spanish($letime, true, 'month'); # return Enero
+
+              $dia = $date->format('d'); // 31.07.2012
+              $ano = $date->format('Y'); // 31-07-2012
+
+              $birthday = $dia.' '.$mes.' '.$ano;
+              $monthi = ($date->format('m'))-1;
+              $mese = $date->format('m');
+            } else{
+              $birthday = '';
+            }
+            if(isset($special['SpecialdeliveryPage']['uare'])){
+              $uare = $special['SpecialdeliveryPage']['uare'];
+            } else{
+              $uare = '';
+            }
+            if(isset($special['SpecialdeliveryPage']['hour'])){
+              $hour = $special['SpecialdeliveryPage']['hour'];
+            } else{
+              $hour = '';
+            }
+            if(isset($special['SpecialdeliveryPage']['location'])){
+              $location = $special['SpecialdeliveryPage']['location'];
+            } else{
+              $location = '';
+            }
+            if(isset($special['SpecialdeliveryPage']['itwas'])){
+              $itwas = $special['SpecialdeliveryPage']['itwas'];
+            } else{
+              $itwas = '';
+            }
+            if(isset($special['SpecialdeliveryPage']['weightnmeasures'])){
+              $weightnmeasures = $special['SpecialdeliveryPage']['weightnmeasures'];
+            } else{
+              $weightnmeasures = '';
+            }
+            if(isset($special['SpecialdeliveryPage']['urhairneyes'])){
+              $urhairneyes = $special['SpecialdeliveryPage']['urhairneyes'];
+            } else{
+              $urhairneyes = '';
+            }
+          ?>
+
+          <div class="todo">
+          <div id="photo-back"></div>
+          <div id="photo" class="photo-up"></div>
+
+          <p class="eres">
+            <label> Eres: </label>
+            <span>
+              <?php if($uare != ''){ echo $uare; } ?>
+            </span>
+          </p>
+         
+          <p class="bday">
+            <label>Naciste el d&iacute;a: </label>
+            <span>
+              <?php if($birthday != ''){ echo $birthday; } ?>
+            </span>
+            a las:
+            <span> 
+              <?php if($hour != ''){ echo $hour; } ?>
+            </span>
+          </p>
+        
+          <p class="bplace">
+            <label> Naciste en: </label>
+            <span>
+              <?php if($location != ''){ echo $location; } else { echo '<br>';} ?>
+            </span>
+          </p>
+          <div class="parto">
+            <p>El parto fue: </p>          
+            <div class="opciones">
+              <div class="cf">
+                <input type="radio" name="data[SpecialdeliveryPage][itwas]" value="1" <?php if($itwas == 1){ echo 'checked="checked"'; } ?> />
+                <label> Natural </label>
+              </div>
+              <div class="cf">
+                <input type="radio" name="data[SpecialdeliveryPage][itwas]" value="2" <?php if($itwas == 2){ echo 'checked="checked"'; } ?> />
+                <label> Epidural</label>
+              </div>
+              <div class="cf">
+                <input type="radio" name="data[SpecialdeliveryPage][itwas]" value="3" <?php if($itwas == 3){ echo 'checked="checked"'; } ?> />
+                <label> Ces&aacute;rea</label>
+              </div>
+            </div>
+          </div>
+
+      
+          <p class="pesaste">
+            <label> Pesaste y mediste: </label>
+            <span> 
+              <?php if($weightnmeasures != ''){ echo $weightnmeasures; } else { echo '<br>';}?>
+            </span>
+          </p>
+
+   
+          <p class="ojos">
+            <label> Tu cabello y tus ojos son: </label>
+            <span>
+              <?php if($urhairneyes != ''){ echo $urhairneyes; } else { echo '<br>';} ?>
+            </span>
+          </p>
+
+        </div>
+         <p class="nota-foot"> ¡Apenas puedo creer que estabas en mi panza! </p>
+         
+
+        </div>
+      
+      </div>
+
+     <div class="book-footer"></div>
+
+  </div>
+    <div> 
+      <div class="book-header"></div>
+
+      <div class="book-content">
+
+        <div class="book-page-title">
+          <div class="book-title-page">
+            <p>M&aacute;s detalles</p><br>
+            <span>de tu llegada</span>
+          </div>
+        </div>
+
+        <div class="book-form welcomebbyPages" id="WelcomebbyPageAddForm">
+          <?php 
+            if(isset($welcome['WelcomebbyPage']['ulooklike'])){
+              $ulooklike = $welcome['WelcomebbyPage']['ulooklike'];
+            } else{
+              $ulooklike = '';
+            }
+            if(isset($welcome['WelcomebbyPage']['whocutit'])){
+              $whocutit = $welcome['WelcomebbyPage']['whocutit'];
+            } else{
+              $whocutit = '';
+            }
+            if(isset($welcome['WelcomebbyPage']['ifelt'])){
+              $ifelt = $welcome['WelcomebbyPage']['ifelt'];
+            } else{
+              $ifelt = '';
+            }
+            if(isset($welcome['WelcomebbyPage']['wheniholdu'])){
+              $wheniholdu = $welcome['WelcomebbyPage']['wheniholdu'];
+            } else{
+              $wheniholdu = '';
+            }
+            if(isset($welcome['WelcomebbyPage']['metu'])){
+              $metu = $welcome['WelcomebbyPage']['metu'];
+            } else{
+              $metu = '';
+            }
+            if(isset($welcome['WelcomebbyPage']['tilday'])){
+              $tilday = $welcome['WelcomebbyPage']['tilday'];
+            } else{
+              $tilday = '';
+            }
+            if(isset($welcome['WelcomebbyPage']['nighttime'])){
+              $nighttime = $welcome['WelcomebbyPage']['nighttime'];
+            } else{
+              $nighttime = '';
+            }
+            if(isset($welcome['WelcomebbyPage']['most'])){
+              $most = $welcome['WelcomebbyPage']['most'];
+            } else{
+              $most = '';
+            }
+          ?>
+          <p class="pareces">
+            <label> Todo el mundo opina que te pareces a: </label>
+            <span>
+              <?php if($ulooklike != ''){ echo $ulooklike; } else { echo '<br>';} ?>
+            </span>
+          </p>
+           <p class="cordon">
+            <label> El cord&oacute;n umbilical lo cort&oacute;: </label>
+            <span>
+              <?php if($whocutit != ''){ echo $whocutit; } else { echo '<br>';} ?>
+            </span>
+          </p>
+          <p class="tevi">
+            <label> Cuando te vi por primera vez sentí: </label>
+            <span>
+              <?php if($ifelt != ''){ echo $ifelt; } else { echo '<br>';} ?>
+            </span>
+          </p>
+          <p class="brazos">
+            <label> Y cuando te pusieron en mis brazos, yo </label>
+            <span> 
+              <?php if($wheniholdu != ''){ echo $wheniholdu; } else { echo '<br>';} ?>
+            </span>
+          </p>
+          <p class="conocer">
+            <label> Te fueron a conocer: </label>
+            <span> 
+              <?php if($metu != ''){ echo $metu; }else { echo '<br>';} ?>
+            </span>
+          </p>
+          <p class="hospital">
+            <label> Estuvimos en el hospital hasta el día </label>
+            <span> 
+              <?php if($tilday != ''){ echo $tilday; } else { echo '<br>';} ?>
+            </span>
+          </p>
+          <p class="noche">
+            <label> y la experiencia de la primera noche en casa es digna de contarse: </label>           
+            <span>
+              <?php if($nighttime != ''){ echo $nighttime; } else { echo '<br>';} ?>
+            </span>
+          </p>
+        </div>
+      
+      </div>
+
+     <div class="book-footer"></div>
+
+  </div>
+  <div> 
+      <div class="book-header"></div>
+
+      <div class="book-content">
+
+        <div class="book-page-title">
+          <div class="book-title-page">
+            <p>Ep&iacute;logo</p><br>
+            <span>de la panza</span>
+          </div>
+        </div>
+
+        <div class="book-form epilogPages" id="EpilogPageAddForm">
+          <?php 
+            if(isset($epilog['EpilogPage']['belly'])){
+              $belly = $epilog['EpilogPage']['belly'];
+            } else{
+              $belly = '';
+            }
+            if(isset($epilog['EpilogPage']['notes'])){
+              $notes =$epilog['EpilogPage']['notes'];
+            } else{
+              $notes = '';
+            }
+          ?>
+          <div class="opciones cf">
+            <div class="cf">
+              <input type="radio" name="data[EpilogPage][belly]" value="1" <?php if($belly == 1){ echo 'checked="checked"'; } ?> />
+              <label>¡Ay! todavia parezco embarazada</label>
+            </div>
+            <div class="cf">
+              <input type="radio" name="data[EpilogPage][belly]" value="2" <?php if($belly == 2){ echo 'checked="checked"'; } ?> />
+              <label>¡Eh!  Sorpresivamente mi panza regresó a su talla normal</label>
+            </div>
+          </div>
+          <p class="post-parto cf">
+            <label> Notas despu&eacute;s de que llegaste y detalles que recordar: </label>
+            <span>  
+              <?php if($notes != ''){ echo $notes; } else { echo '<br>'; } ?>
+            </span>
+          </p>
+          
+        </div>
+      
+      </div>
+
+     <div class="book-footer"></div>
+
+  </div>
+   <div> 
+      <div class="book-header"></div>
+
+      <div class="book-content">
+
+        <div class="book-page-title">
+          <div class="book-title-page">
+            <p>La nueva familia</p>
+          </div>
+        </div>
+
+        <div class="book-form newfamilyPages" id="NewfamilyPageAddForm">
+          <?php 
+            if(isset($nesting['NewfamilyPage']['description'])){
+              $description = $nesting['NewfamilyPage']['description'];
+            } else{
+              $description = '';
+            }
+          ?>
+
+          <div id="photo-back-1"></div>
+          <div id="photo" class="photo-up"></div>
+
+          <p>
+            <?php if($description != ''){ echo $description; } ?>
+          </p>
+          
+        </div>
+      
+      </div>
+
+     <div class="book-footer"></div>
+
+  </div>
+   <div> 
+      <div class="book-header"></div>
+
+      <div class="book-content">
+
+        <div class="book-page-title">
+          <div class="book-title-page">
+            <p>&aacute;rbol Familiar</p>
+          </div>
+        </div>
+
+        <div class="book-form familytreePages" id="FamilytreePageAddForm">
+          <?php 
+            if(isset($familytree['FamilytreePage']['dad'])){
+              $dad = $familytree['FamilytreePage']['dad'];
+            } else{
+              $dad = '';
+            }
+            if(isset($familytree['FamilytreePage']['grandpa_dad'])){
+              $grandpa_dad = $familytree['FamilytreePage']['grandpa_dad'];
+            } else{
+              $grandpa_dad = '';
+            }
+            if(isset($familytree['FamilytreePage']['grandpa_mom'])){
+              $grandpa_mom = $familytree['FamilytreePage']['grandpa_mom'];
+            } else{
+              $grandpa_mom = '';
+            }
+            if(isset($familytree['FamilytreePage']['grandma_dad'])){
+              $grandma_dad = $familytree['FamilytreePage']['grandma_dad'];
+            } else{
+              $grandma_dad = '';
+            }
+            if(isset($familytree['FamilytreePage']['grandma_mom'])){
+              $grandma_mom = $familytree['FamilytreePage']['grandma_mom'];
+            } else{
+              $grandma_mom = '';
+            }
+
+            if(isset($familytree['FamilytreePage']['baby'])){
+              $baby = $familytree['FamilytreePage']['baby'];
+            } else{
+              $baby = '';
+            }
+            if(isset($familytree['FamilytreePage']['mom'])){
+              $mom = $familytree['FamilytreePage']['mom'];
+            } else{
+              $mom = '';
+            }
+          ?>
+
+          <div id="grandpa_dad-back"></div>
+          <div class="familytreeFile" id="grandpa_dad">
+            <span>
+              <?php
+                echo $grandpa_dad;
+              ?>
+            </span>
+          </div>
+          <div id="grandpa_mom-back"></div>
+          <div class="familytreeFile" id="grandpa_mom">
+            <span>
+              <?php echo $grandpa_mom; ?>
+            </span>
+          </div>
+          <div id="grandma_dad-back"></div>
+          <div class="familytreeFile" id="grandma_dad">
+            <span>
+              <?php echo $grandma_dad; ?>
+            </span>
+          </div>
+          <div id="grandma_mom-back"></div>
+          <div class="familytreeFile" id="grandma_mom">
+            <span>
+              <?php echo $grandma_mom; ?>
+            </span>
+          </div>
+          <div id="dad-back"></div>
+          <div class="familytreeFile" id="dad">
+            <span>
+              <?php echo $dad; ?>
+            </span>
+          </div>  
+          <div id="mom-back"></div>
+          <div class="familytreeFile" id="mom">
+            <span>
+              <?php echo $mom; ?>
+            </span>
+          </div>  <br>
+          <div id="baby-back"></div>
+          <div class="familytreeFile" id="baby">
+            <span>
+              <?php echo $baby; ?>
+            </span>
+          </div>
+          
+        </div>
+      
+      </div>
+
+     <div class="book-footer"></div>
+
+  </div>
 </div><!-- FIN DEL LIBRO -->

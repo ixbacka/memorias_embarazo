@@ -45,7 +45,7 @@ class WhoamiPagesController extends AppController {
 
         if(!empty($this->request->data['WhoamiPage']['photo']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['WhoamiPage']['photo']['name']); 
+        $fileName = $this->generateUniqueFilename('whoami_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['WhoamiPage']['photo'], $fileName); 
 
           if ($error == false) { 

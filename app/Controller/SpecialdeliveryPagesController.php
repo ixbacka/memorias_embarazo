@@ -45,7 +45,7 @@ class SpecialdeliveryPagesController extends AppController {
 
         if(!empty($this->request->data['SpecialdeliveryPage']['photo']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['SpecialdeliveryPage']['photo']['name']); 
+        $fileName = $this->generateUniqueFilename('special_delivery_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['SpecialdeliveryPage']['photo'], $fileName); 
 
           if ($error == false) { 
@@ -65,12 +65,19 @@ class SpecialdeliveryPagesController extends AppController {
           
         }
 
+         if( isset($this->request->data['SpecialdeliveryPage']['itwas']) ){
+           $this->SpecialdeliveryPage->set(array( 
+            'itwas' => $this->request->data['SpecialdeliveryPage']['itwas']
+            ));
+
+        }
+
+
           $this->SpecialdeliveryPage->set(array( 
             'uare' => $this->request->data['SpecialdeliveryPage']['uare'],
             'birthday' => $this->request->data['SpecialdeliveryPage']['birthday'],
             'hour' => $this->request->data['SpecialdeliveryPage']['hour'],
             'location' => $this->request->data['SpecialdeliveryPage']['location'],
-            'itwas' => $this->request->data['SpecialdeliveryPage']['itwas'],
             'profile_id' => $this->request->data['SpecialdeliveryPage']['profile_id'],
             'weightnmeasures' => $this->request->data['SpecialdeliveryPage']['weightnmeasures'],
             'urhairneyes' => $this->request->data['SpecialdeliveryPage']['urhairneyes']

@@ -114,7 +114,10 @@
   ?>
   <p class="noche">
     <label> y la experiencia de la primera noche en casa es digna de contarse: </label>
-  	<input type="text" name="data[WelcomebbyPage][nighttime]" value="<?php if($nighttime != ''){ echo $nighttime; } ?>" >
+  	<!-- <input type="text" name="data[WelcomebbyPage][nighttime]" value="<?php if($nighttime != ''){ echo $nighttime; } ?>" > -->
+  	<textarea name="data[WelcomebbyPage][nighttime]">
+  		<?php if($nighttime != ''){ echo $nighttime; } ?>
+  	</textarea>
   </p>
 	<?php
 		if(isset($welcome['WelcomebbyPage']['most'])){
@@ -123,11 +126,7 @@
 			$most = '';
 		}
   ?>
-  <p class="emotivo">
-  	<label> Deﬁnitivamente lo más emotivo de tenerte en mi pancita fue: </label>
-  	<input type="text" name="data[WelcomebbyPage][most]" value="<?php if($most != ''){ echo $most; } ?>" >
-  </p>
-
+  
 	<?php
 		echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
 	?>

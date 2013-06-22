@@ -39,15 +39,16 @@ form .submit input[type=submit]:hover{
 }
 
 
+
 <?php if( isset($familytree['FamilytreePage']['grandpa_dad_img']) ){ ?>
-#grandpa_dad{
-	background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_dad_img']); ?>);
-	background-size: 186px 186px,  120px 120px;
-	border-radius: 120px;
-	height: 150px;width: 150px;
-	border-radius: 150px;
-	background-position: -15px -15px, center 9px;
-	background-size: 186px 186px, 140px 140px;
+#grandpa_dad-back{
+  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_dad_img']); ?>);
+  background-size: 186px 186px,  120px 120px;
+  border-radius: 120px;
+  height: 150px;width: 150px;
+  border-radius: 150px;
+  background-position: -15px -15px, center 9px;
+  background-size: 186px 186px, 140px 140px;
 margin-left: 30px;
 margin-top: 50px;
 }
@@ -55,14 +56,14 @@ margin-top: 50px;
 
 
 <?php if( isset($familytree['FamilytreePage']['grandpa_mom_img']) ){ ?>
-#grandpa_mom{
-	background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_mom_img']); ?>);
-	background-size: 186px 186px,  120px 120px;
-	border-radius: 120px;
-	height: 150px;width: 150px;
-	border-radius: 150px;
-	background-position: -15px -15px, center 9px;
-	background-size: 186px 186px, 140px 140px;
+#grandpa_mom-back{
+  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_mom_img']); ?>);
+  background-size: 186px 186px,  120px 120px;
+  border-radius: 120px;
+  height: 150px;width: 150px;
+  border-radius: 150px;
+  background-position: -15px -15px, center 9px;
+  background-size: 186px 186px, 140px 140px;
 margin-left: 30px;
 margin-top: 50px;
 }
@@ -70,11 +71,11 @@ margin-top: 50px;
 
 
 <?php if( isset($familytree['FamilytreePage']['grandma_dad_img']) ){ ?>
-#grandma_dad{
-	background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_dad_img']); ?>);
-	background-size: 186px 186px,  120px 120px;
-	border-radius: 120px;
-	height: 150px;width: 150px;
+#grandma_dad-back{
+  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_dad_img']); ?>);
+  background-size: 186px 186px,  120px 120px;
+  border-radius: 120px;
+  height: 150px;width: 150px;
 border-radius: 150px;
 background-position: -15px -15px, center 9px;
 background-size: 186px 186px, 140px 140px;
@@ -85,11 +86,11 @@ margin-top: 50px;
 
 
 <?php if( isset($familytree['FamilytreePage']['grandma_mom_img']) ){ ?>
-#grandma_mom{
-	background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_mom_img']); ?>);
-	background-size: 186px 186px,  120px 120px;
-	border-radius: 120px;
-	height: 150px;width: 150px;
+#grandma_mom-back{
+  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_mom_img']); ?>);
+  background-size: 186px 186px,  120px 120px;
+  border-radius: 120px;
+  height: 150px;width: 150px;
 border-radius: 150px;
 background-position: -15px -15px, center 9px;
 background-size: 186px 186px, 140px 140px;
@@ -100,10 +101,10 @@ margin-top: 50px;
 
 
 <?php if( isset($familytree['FamilytreePage']['dad_img']) ){ ?>
-#dad{
-	background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['dad_img']); ?>);
-	background-size: 186px 186px,  120px 120px;
-	border-radius: 120px;
+#dad-back{
+  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['dad_img']); ?>);
+  background-size: 186px 186px,  120px 120px;
+  border-radius: 120px;
 
 height: 150px;width: 150px;
 border-radius: 150px;
@@ -116,11 +117,11 @@ margin-top: 50px;
 <?php }?>
 
 <?php if( isset($familytree['FamilytreePage']['mom_img']) ){ ?>
-#mom{
-	background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['mom_img']); ?>);
-	background-size: 186px 186px,  120px 120px;
-	border-radius: 120px;
-	height: 150px;width: 150px;
+#mom-back{
+  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['mom_img']); ?>);
+  background-size: 186px 186px,  120px 120px;
+  border-radius: 120px;
+  height: 150px;width: 150px;
 border-radius: 150px;
 background-position: -15px -15px, center 9px;
 background-size: 186px 186px, 140px 140px;
@@ -131,11 +132,11 @@ margin-top: 50px;
 <?php }?>
 
 <?php if( isset($familytree['FamilytreePage']['baby_img']) ){ ?>
-#baby{
-	background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['baby_img']); ?>);
-	background-size: 186px 186px,  120px 120px;
-	border-radius: 120px;
-	height: 150px;width: 150px;
+#baby-back{
+  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['baby_img']); ?>);
+  background-size: 186px 186px,  120px 120px;
+  border-radius: 120px;
+  height: 150px;width: 150px;
 border-radius: 150px;
 background-position: -15px -15px, center 9px;
 background-size: 186px 186px, 140px 140px;
@@ -143,6 +144,7 @@ margin-left: 30px;
 margin-top: 50px;
 }
 <?php }?>
+
 
 </style>
 
@@ -197,12 +199,12 @@ fbphotoSelect = function(id, idpapa) {
 			console.log(photo.source);
 			console.log(' ehmem == > '+idpapa);
 			$('.'+idpapa).val(photo.source);
-			$('#'+idpapa).css('background-image','url(../img/marco_circular.png), url('+photo.source+')');
-			$('#'+idpapa).css('background-size', '186px 186px, 140px 140px');
-			$('#'+idpapa).css('border-radius', '150px');
-			$('#'+idpapa).css('background-position', '-15px -15px, center 9px');
-			$('#'+idpapa).css('height', '150px');
-			$('#'+idpapa).css('width', '150px');
+			$('#'+idpapa+"-back").css('background-image','url(../img/marco_circular.png), url('+photo.source+')');
+			$('#'+idpapa+"-back").css('background-size', '186px 186px, 140px 140px');
+			$('#'+idpapa+"-back").css('border-radius', '150px');
+			$('#'+idpapa+"-back").css('background-position', '-15px -15px, center 9px');
+			$('#'+idpapa+"-back").css('height', '150px');
+			$('#'+idpapa+"-back").css('width', '150px');
 			//$('.cover_photo').css('background-size', '392px 297px,  329px 265px');
 		};
 
@@ -247,11 +249,11 @@ function readURL(input) {
           var reader = new FileReader();
           reader.onload = function (e) {
                   $('#'+elpapa).css('background-image','url(../img/marco_circular.png), url('+e.target.result+')');
-									$('#'+elpapa).css('background-size', '186px 186px, 140px 140px');
-									$('#'+elpapa).css('border-radius', '150px');
-									$('#'+elpapa).css('background-position', '-15px -15px, center 9px');
-									$('#'+elpapa).css('height', '150px');
-									$('#'+elpapa).css('width', '150px');
+									$('#'+elpapa+"-back").css('background-size', '186px 186px, 140px 140px');
+									$('#'+elpapa+"-back").css('border-radius', '150px');
+									$('#'+elpapa+"-back").css('background-position', '-15px -15px, center 9px');
+									$('#'+elpapa+"-back").css('height', '150px');
+									$('#'+elpapa+"-back").css('width', '150px');
           };
           reader.readAsDataURL(input.files[0]);
       }
@@ -336,7 +338,6 @@ function readURL(input) {
 		<p>&aacute;rbol Familiar</p>
 		<span></span>
 	</div>
-	<div class="sig">Siguiente</div>
 </div>
 	
 <div class="familytreePages form">
@@ -376,8 +377,14 @@ function readURL(input) {
 	} else{
 		$baby = '';
 	}
+	if(isset($familytree['FamilytreePage']['mom'])){
+		$mom = $familytree['FamilytreePage']['mom'];
+	} else{
+		$mom = '';
+	}
 	 
 ?>
+	<div id="grandpa_dad-back"></div>
 	<div class="familytreeFile" id="grandpa_dad">
 		<input type="hidden" name="data[FamilytreePage][grandpa_dad_url][url_photo]" class="grandpa_dad" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>
@@ -387,6 +394,7 @@ function readURL(input) {
 				'value' => $grandpa_dad));
 		?>
 	</div>
+	<div id="grandpa_mom-back"></div>
 	<div class="familytreeFile" id="grandpa_mom">
 		<input type="hidden" name="data[FamilytreePage][grandpa_mom_url][url_photo]" class="grandpa_mom" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>
@@ -396,6 +404,7 @@ function readURL(input) {
 				'value' => $grandpa_mom));
 		?>
 	</div>
+	<div id="grandma_dad-back"></div>
 	<div class="familytreeFile" id="grandma_dad">
 		<input type="hidden" name="data[FamilytreePage][grandma_dad_url][url_photo]" class="grandma_dad" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>
@@ -405,6 +414,7 @@ function readURL(input) {
 				'value' => $grandma_dad));
 		?>
 	</div>
+	<div id="grandma_mom-back"></div>
 	<div class="familytreeFile" id="grandma_mom">
 		<input type="hidden" name="data[FamilytreePage][grandma_mom_url][url_photo]" class="grandma_mom" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>
@@ -414,6 +424,7 @@ function readURL(input) {
 				'value' => $grandma_mom));
 		?>
 	</div>
+	<div id="dad-back"></div>
 	<div class="familytreeFile" id="dad">
 		<input type="hidden" name="data[FamilytreePage][dad_url][url_photo]" class="dad" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>
@@ -423,6 +434,7 @@ function readURL(input) {
 				'value' => $dad));
 		?>
 	</div>	
+	<div id="mom-back"></div>
 	<div class="familytreeFile" id="mom">
 		<input type="hidden" name="data[FamilytreePage][mom_url][url_photo]" class="mom" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>
@@ -432,6 +444,7 @@ function readURL(input) {
 				'value' => $mom));
 		?>
 	</div>	<br>
+	<div id="baby-back"></div>
 	<div class="familytreeFile" id="baby">
 		<input type="hidden" name="data[FamilytreePage][baby_url][url_photo]" class="baby" value=""/>
 		<div class="pick_fb">Elegir de Facebook</div>

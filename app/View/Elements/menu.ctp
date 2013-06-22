@@ -43,7 +43,7 @@
 				);
 		?>
 		</li>
-		<li <?php if($pag == 'whoami'){ echo 'class="belly"'; } ?>>
+		<li <?php if($pag == 'belly'){ echo 'class="selected"'; } ?>>
 		<?php
 		echo $this->Html->link(
 				    'Mi pancita',
@@ -90,7 +90,7 @@
 	<li <?php if($pag == 'bellymonth'){ echo 'class="selected"'; } ?>>
 	<?php 
 		echo $this->Html->link(
-				    'Mi pansita Mes a Mes',
+				    'Mi pancita Mes a Mes',
 				    array('controller' => 'bellymonth_pages', 'action' => 'add')
 
 				);

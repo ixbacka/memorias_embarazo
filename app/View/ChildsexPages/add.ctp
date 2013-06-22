@@ -55,7 +55,7 @@
       <input type="radio" name="data[ChildsexPage][theythink]" value="1" <?php if($theythink == 1){ echo  'checked="checked"'; } ?> />
     </div>
     <div class="opcion2">
-    <label>Cuates</label>
+    <label>Gemelos</label>
       <input type="radio" name="data[ChildsexPage][theythink]" value="2" <?php if($theythink == 2){ echo   'checked="checked"'; } ?> />
     </div>
     <div class="opcion3">
@@ -78,7 +78,7 @@
     </div>
     <div class="opcion2">
        <input type="radio" name="data[ChildsexPage][ithink]" value="2" <?php if($ithink == 2){ echo   'checked="checked"'; } ?> />
-      <label>Cuates</label>
+      <label>Gemelos</label>
     </div>
     <div class="opcion3">
        <input type="radio" name="data[ChildsexPage][ithink]" value="3" <?php if($ithink == 3){ echo   'checked="checked"'; } ?> />

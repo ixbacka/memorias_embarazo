@@ -46,7 +46,7 @@ class CoolultrasoundPagesController extends AppController {
 
         if(!empty($this->request->data['CoolultrasoundPage']['photo']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['CoolultrasoundPage']['photo']['name']); 
+        $fileName = $this->generateUniqueFilename('coolultrasound_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['CoolultrasoundPage']['photo'], $fileName); 
 
           if ($error == false) { 
@@ -66,14 +66,37 @@ class CoolultrasoundPagesController extends AppController {
           
         }
 
+         if( isset($this->request->data['CoolultrasoundPage']['urdad']) ){
+           $this->CoolultrasoundPage->set(array( 
+            'urdad' => $this->request->data['CoolultrasoundPage']['urdad']
+            ));
+        }
+
+        if( isset($this->request->data['CoolultrasoundPage']['imiss']) ){
+
+          if( is_numeric($this->request->data['CoolultrasoundPage']['imiss']) ){
+            $this->CoolultrasoundPage->set(array( 
+            'imiss' => strval($this->request->data['CoolultrasoundPage']['imiss'])
+            ));
+          } else {
+              $this->CoolultrasoundPage->set(array( 
+            'imiss' => $this->request->data['CoolultrasoundPage']['imiss']
+            ));
+          }
+
+        }
+
+        if( isset($this->request->data['CoolultrasoundPage']['theythink']) ){
+           $this->CoolultrasoundPage->set(array( 
+            'theythink' => $this->request->data['CoolultrasoundPage']['theythink']
+            ));
+        }
+
           $this->CoolultrasoundPage->set(array( 
             'ultrasound_date' => $this->request->data['CoolultrasoundPage']['ultrasound_date'],
             'iwas' => $this->request->data['CoolultrasoundPage']['iwas'],
             'doctorsaid' => $this->request->data['CoolultrasoundPage']['doctorsaid'],
-            'urdad' => $this->request->data['CoolultrasoundPage']['urdad'],
             'urdadsays' => $this->request->data['CoolultrasoundPage']['urdadsays'],
-            'imiss' => $this->request->data['CoolultrasoundPage']['imiss'],
-            'theythink' => $this->request->data['CoolultrasoundPage']['theythink'],
             'profile_id' => $this->request->data['CoolultrasoundPage']['profile_id']
           ));
 

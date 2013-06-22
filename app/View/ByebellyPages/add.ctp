@@ -133,13 +133,13 @@ function get_date_spanish( $time, $part = false, $formatDate = '' ){
       <p class="opcion cf">
         <input type="radio" name="data[ByebellyPage][itstarted]" value="1" <?php if($itstarted == 1){ echo 'checked="checked"'; } ?> />
         <label>
-          <input type="number" min="0" value="<?php if($days1 != '' && $itstarted == 1){ echo $days1; } ?>" name="data[ByebellyPage][days1]"> días antes de mi fecha programada
+          <input type="number" min="0" max="41" value="<?php if($days1 != '' && $itstarted == 1){ echo $days1; } ?>" name="data[ByebellyPage][days1]"> días antes de mi fecha programada
         </label>
       </p>
       <p class="opcion cf">
         <input type="radio" name="data[ByebellyPage][itstarted]" value="2" <?php if($itstarted == 2){ echo 'checked="checked"'; } ?> />
         <label>
-          <input type="number" min="0" value="<?php if($days2 != '' && $itstarted == 2 ){ echo $days2; } ?>" name="data[ByebellyPage][days2]"> días tarde (¡Sáquenmelo!)
+          <input type="number" min="0" max="41" value="<?php if($days2 != '' && $itstarted == 2 ){ echo $days2; } ?>" name="data[ByebellyPage][days2]"> días tarde (¡Sáquenmelo!)
         </label>
       </p>
       <p class="opcion cf">
@@ -153,7 +153,7 @@ function get_date_spanish( $time, $part = false, $formatDate = '' ){
       </p>
       <p class="opcion cf">
         <input type="radio" name="data[ByebellyPage][itstarted]" value="5" <?php if($itstarted == 5){ echo 'checked="checked"'; } ?> />
-        <label>Por ces&aacute;rea</label>
+        <label>Fue por ces&aacute;rea</label>
       </p>
     </div>
     <?php

@@ -46,7 +46,7 @@ class FirstkickPagesController extends AppController {
 
         if(!empty($this->request->data['FirstkickPage']['photo']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['FirstkickPage']['photo']['name']); 
+        $fileName = $this->generateUniqueFilename('firstkick_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['FirstkickPage']['photo'], $fileName); 
 
           if ($error == false) { 
@@ -66,11 +66,17 @@ class FirstkickPagesController extends AppController {
           
         }
 
+
+        if( isset($this->request->data['FirstkickPage']['bigquestion']) ){
+           $this->FirstkickPage->set(array( 
+            'bigquestion' => $this->request->data['FirstkickPage']['bigquestion']
+            ));
+        }
+
           $this->FirstkickPage->set(array( 
             'firstkick_date' => $this->request->data['FirstkickPage']['firstkick_date'],
             'week' => $this->request->data['FirstkickPage']['week'],
-            'bigquestion' => $this->request->data['FirstkickPage']['bigquestion'],
-            //'ifeel' => $this->request->data['FirstkickPage']['ifeel'],
+            'ifeel' => $this->request->data['FirstkickPage']['ifeel'],
             'craving1' => $this->request->data['FirstkickPage']['craving1'],
             'craving2' => $this->request->data['FirstkickPage']['craving2'],
             'craving3' => $this->request->data['FirstkickPage']['craving3'],

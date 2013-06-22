@@ -484,7 +484,7 @@ $(document).ready(function(){
 			msg="Mi diario de Embarazo"
 		} else {
 
-			if (! /^[a-zA-Z0-9]+$/.test(msg)) {
+			if (! /^[a-zA-Z0-9 ]+$/.test(msg)) {
 			    // Validation failed
 			      alert("Solo números o letras por favor.");
 

@@ -312,7 +312,7 @@ margin-bottom: 40px;
 text-align: center;
 }
 
-.opcion input[type="radio"]{
+#ilovemybaby .opcion input[type="radio"]{
   margin-left: 70px;
 }
 
@@ -354,3 +354,908 @@ position: absolute;
 top: 239px;
 }
 
+
+#FirstkickPageAddForm .colL {
+  float: left;
+  width: 175px;
+  height: 201px;
+}
+
+
+#FirstkickPageAddForm .colR {
+  float: left;
+  width: 233px;
+  padding-top: 10px;
+}
+
+.photo-v {
+  width: 160px;
+  height: 205px;
+  background-size: 160px 205px;
+}
+
+#FirstkickPageAddForm  .opcion {
+  display: block;
+  width: 45px;
+  float: left;
+  margin: 2px 12px 0;
+}
+
+#FirstkickPageAddForm .opcion label {
+  line-height: 12px;
+  margin-left: 6px;
+  padding: 0;
+}
+
+#FirstkickPageAddForm .opcion.nino,
+#FirstkickPageAddForm .opcion.nina {
+  width: 45px;
+}
+
+#FirstkickPageAddForm .opcion input[type="radio"]{
+  margin-left: 15px;
+}
+
+.gran label {
+  width: 100%;
+}
+
+.antojos {
+  margin-top: 10px;
+}
+
+.antojos span{
+  width: 60px;
+  margin-left: 6px;
+}
+
+.antojos label {
+  height: 20px;
+  width: 35px;
+}
+
+.bellymonthPages .colL,
+.bellymonthPages .colR {
+  float: left;
+}
+
+.bellymonthPages .colR {
+  width: 230px;
+  height: 290px;
+  padding-top: 10px;
+}
+
+.bellymonthPages .colL {
+  width: 180px;
+  height: 200px;
+}
+
+#BellymonthPageAddForm .colR p {
+  margin: 0 0 5px;
+  width: 230px;
+  height: 15px;
+}
+
+#BellymonthPageAddForm .peso label,
+#BellymonthPageAddForm .medida label {
+  display: inline-block;
+}
+
+#BellymonthPageAddForm .peso input {
+  width: 296px;
+}
+
+#BellymonthPageAddForm .medida input {
+  width: 214px;
+}
+
+#BellymonthPageAddForm .hungry label,
+#BellymonthPageAddForm .miss label,
+#BellymonthPageAddForm .comfy label {
+  line-height: 26px;
+  margin-left: 5px;
+  width: 200px;
+  text-align: left;
+}
+
+#BellymonthPageAddForm .hungry {
+  position: absolute;
+  top: 85px;
+}
+
+#BellymonthPageAddForm .comfy {
+  position: absolute;
+  top: 277px;
+}
+
+#BellymonthPageAddForm #datepickerCongrats {
+  position: absolute;
+  top: 200px;
+  text-align: center;
+}
+
+#BellymonthPageAddForm .miss {
+  position: absolute;
+  top: 175px;
+}
+
+#BellymonthPageAddForm .cerca {
+  position: absolute;
+  bottom: 40px;
+  text-align: center;
+  color: #0f7491;
+}
+
+#BellymonthPageAddForm .submit {
+  bottom: 150px;
+}
+
+
+.belly_photo_back{
+  background-image: url(../img/marco_fondo.png);
+  position: absolute;
+ top: 13px;
+  left: 7px;
+  width: 139px;
+  height: 179px;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* GettingclosePageAddForm */
+
+
+.miedo {
+  font-size: 13px;
+  text-align: center;
+  width: 100%;
+  color: #0f7491;
+}
+
+.sorry input {
+  width: 325px;
+}
+
+.sorry {
+  line-height: 25px;
+  width: 100%;
+  height: 15px;
+}
+
+
+#GettingclosePageAddForm .col.uno {
+  width: 190px;
+  margin: 0;
+}
+
+
+#GettingclosePageAddForm .col {
+  float: left;
+  margin-left: 10px;
+}
+
+#GettingclosePageAddForm .col span {
+    width: 230px;
+}
+#GettingclosePageAddForm .col.uno span{
+    width: 290px;
+}
+
+
+#GettingclosePageAddForm .miedo,
+#GettingclosePageAddForm .sorry {
+    margin-bottom: 10px;
+}
+
+#GettingclosePageAddForm .col.dos {
+  width: 35px;
+  text-align: center;
+}
+
+
+#GettingclosePageAddForm .col.dos input {
+  margin: 6px 12px 3px;
+}
+
+
+#GettingclosePageAddForm .col.dos p {
+  margin-bottom: 2px;
+}
+
+
+#GettingclosePageAddForm .col.tres {
+  width: 168px;
+}
+
+#GettingclosePageAddForm .col.tres span{
+    width: 168px;
+}
+
+.papas span,
+.suegros span {
+  width: 250px;
+}
+
+.suegros {
+  top: 183px;
+position: absolute;
+}
+
+.papas {
+ top: 237px;
+position: absolute;
+}
+
+
+/* #BabyshowerPageAddForm */
+
+#BabyshowerPageAddForm .mibaby{
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+#BabyshowerPageAddForm .col span {
+    width: 214px;
+}
+
+#BabyshowerPageAddForm .col.uno {
+  width: 297px;
+  margin: 0;
+}
+
+
+#BabyshowerPageAddForm .col {
+  float: left;
+  margin-left: 31px;
+}
+
+
+#BabyshowerPageAddForm .col.dos {
+  width: 78px;
+  text-align: center;
+}
+
+
+#BabyshowerPageAddForm .col.dos input {
+  margin: 6px 32px 7px;
+}
+
+
+#BabyshowerPageAddForm .col.dos p {
+  margin-bottom: 24px;
+}
+
+
+#BabyshowerPageAddForm .col.tres {
+  width: 242px;
+  margin-bottom: 30px;
+}
+
+.mibaby {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.mibaby #datepickerCongrats {
+  width: 205px;
+}
+
+#BabyshowerPageAddForm .col.uno {
+  width: 120px;
+}
+
+
+
+#BabyshowerPageAddForm .col span {
+  line-height: 14px;
+  width: 100%;
+  height: 20px;
+  position: relative;
+  float: left;
+  margin: 0px 0px 5px 15px;
+}
+
+#BabyshowerPageAddForm .losprimeros {
+  padding-top: 20px;
+}
+
+#BabyshowerPageAddForm .col.dos {
+  width: 87px;
+}
+
+#BabyshowerPageAddForm .col.tres {
+  width: 179px;
+}
+
+#BabyshowerPageAddForm .col.dos p {
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+#BabyshowerPageAddForm .col.dos input {
+  margin: 0px 38px 11px;
+}
+
+#BabyshowerPageAddForm .col {
+  margin-left: 10px;
+}
+
+#BabyshowerPageAddForm .photo-up {
+  top: 170px;
+}
+
+#BabyshowerPageAddForm .photo-up.dos {
+  right: 0;
+}
+
+
+#BabyshowerPageAddForm #photo1, #BabyshowerPageAddForm #photo2 {
+  background-image: url(../img/marco.png);
+}
+
+#photo1_back_{
+  background-image: url(../img/marco_fondo.png);
+  position: absolute;
+  top: 177px;
+  left: 7px;
+  width: 176px;
+  height: 134px;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+
+#photo2_back_{
+  background-image: url(../img/marco_fondo.png);
+  position: absolute;
+  top: 177px;
+  left: 223px;
+  width: 176px;
+  height: 134px;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* Coolultrasound */
+
+#CoolultrasoundPageAddForm .bloque {
+  display: block;
+  width: 320px;
+  position: absolute;
+}
+
+#CoolultrasoundPageAddForm .bloque.uno {
+  left: 210px;
+  top: 10px;
+  width: 200px;
+  height: 145px;
+}
+
+#CoolultrasoundPageAddForm .bloque.dos {
+  top: 160px;
+  width: 200px;
+}
+
+#CoolultrasoundPageAddForm .bloque.dos span {
+    width: 314px;
+}
+
+#CoolultrasoundPageAddForm .bloque.tres {
+  top: 144px;
+  left: 209px;
+  width: 220px;
+}
+
+#CoolultrasoundPageAddForm .uno h3 {
+  color: #379dca;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+#CoolultrasoundPageAddForm .bloque p {
+  height: 10px;
+  width: 200px;
+}
+
+#CoolultrasoundPageAddForm .doctor input {
+  width: 313px;
+}
+
+#CoolultrasoundPageAddForm .opcion {
+width: 213px;
+height: 17px;
+margin-bottom: 1px;
+}
+
+
+#CoolultrasoundPageAddForm .otro, #CoolultrasoundPageAddForm .panza {
+  float: left;
+}
+
+
+#CoolultrasoundPageAddForm .opciones label{
+  line-height: 25px;
+  margin-left: 10px;
+  height: 10px;
+  width: 182px;
+  text-align: left;
+}
+
+#CoolultrasoundPageAddForm .otro input {
+  width: 286px;
+  width: 270px;
+}
+
+#photo {
+  width: 200px;
+  height: 160px;
+  position: absolute;
+  background-image: url(http://operacionxperia.com/momtomom/memorias_embarazo/img/marco.png);
+  background-position: top left;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-size: 199px 160px;
+}
+
+#photo_back{
+  background-image: url(../img/marco_fondo.png);
+  position: absolute;
+  top: 8px;
+  left: 7px;
+  width: 176px;
+  height: 142px;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* NestingPageAddForm */
+
+#NestingPageAddForm .emociones {
+  float: none;
+  font-size: 13px;
+  text-align: center;
+  width: 100%; 
+  color: #0F7491;
+  margin: 0;
+}
+
+#NestingPageAddForm .anidar {
+  width: 244px;
+  height: 170px;
+  overflow: hidden;
+  background: url(../img/anidar.png) no-repeat center;
+  text-indent: -9999px;
+  position: absolute;
+  left: -20px;
+  top: 8px;
+}
+
+#NestingPageAddForm .dado {
+  width: 300px;
+  display: block;
+  position: absolute;
+  left: 196px;
+  top: 43px;
+}
+
+#NestingPageAddForm .dado p{
+  float: none;
+  margin-bottom: 10px;
+}
+
+
+#NestingPageAddForm .opciones label {
+  margin-left: 6px;
+  line-height: 24px;
+}
+
+#NestingPageAddForm .comprar {
+  width: 220px;
+  position: absolute;
+  top: 180px;
+  left: 24px;
+}
+
+#NestingPageAddForm .comprar input {
+  margin: 15px 0;
+  width: 215px; 
+}
+
+#room_photo {
+  top: 194px;
+  left: 171px;
+  width: 224px;
+  height: 148px;
+  background-size: 224px 148px;
+}
+
+#NestingPageAddForm .cuarto {
+  position: absolute;
+  top: 180px;
+  left: 196px;
+  width: 100px;
+}
+
+#room_photo_back{
+  background-image: url(../img/marco_fondo.png);
+  position: absolute;
+  top: 200px;
+  left: 179px;
+  width: 198px;
+  height: 132px;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* ByebellyPageAddForm */
+
+#ByebellyPageAddForm p {
+  margin: 0 0 10px 0;
+  line-height: 15px;
+  float: none;
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+#ByebellyPageAddForm input[type="number"] {
+  line-height: 1;
+  margin-left: 0;
+  width: 25px;
+  height: 15px;
+}
+
+#ByebellyPageAddForm  .horas {
+  position: absolute;
+  width: 193px;
+  right: 0;
+  top: 126px;
+}
+
+#ByebellyPageAddForm .horas input {
+  width: 90px;
+}
+
+#ByebellyPageAddForm .opciones p {
+  margin: 0 0 5px;
+  height: 30px;
+  line-height: 25px;
+}
+
+#ByebellyPageAddForm .opciones input[type="radio"] {
+  margin-right: 0px;
+}
+
+#ByebellyPageAddForm .opcion label {
+  width: 230px;
+  text-align: left;
+  margin-left: 6px;
+}
+
+#ByebellyPageAddForm .nota {
+  color: #0F7491;
+}
+
+#ByebellyPageAddForm .estaba, .exp {
+  margin-bottom: 30px;
+width: 200px;
+float: left;
+}
+
+#ByebellyPageAddForm  .estaba input {
+    width: 373px;
+}
+#ByebellyPageAddForm  .exp input {
+    width: 400px;
+}
+
+#ByebellyPageAddForm .opciones {
+  margin-bottom: 10px;
+}
+
+
+/* #SpecialdeliveryPageAddForm */
+
+.specialdeliveryPages .todo {
+  width: 261px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#SpecialdeliveryPageAddForm .photo-up {
+    left: 35px;
+    position: relative;
+}
+
+#SpecialdeliveryPageAddForm p {
+  line-height: 15px;
+  float: none;
+  margin-bottom: 10px;
+}
+#SpecialdeliveryPageAddForm .eres input {
+    width: 385px;
+}
+#SpecialdeliveryPageAddForm .eres {
+    margin-top: 0px;
+    margin-bottom: 10px;
+height: 15px;
+}
+
+#SpecialdeliveryPageAddForm .bday input {
+    width: 134px;
+}
+
+#SpecialdeliveryPageAddForm .bplace input {
+    width: 140px;
+}
+
+#SpecialdeliveryPageAddForm .parto {
+  position: absolute;
+  right: 0;
+  width: 120px;
+  top: 206px;
+}
+
+#SpecialdeliveryPageAddForm .parto p,
+#SpecialdeliveryPageAddForm .parto .opciones {
+    float: left;
+    margin: 0;
+}
+
+#SpecialdeliveryPageAddForm .opciones label {
+    line-height: 27px;
+    margin-left: 8px;
+}
+
+#SpecialdeliveryPageAddForm .pesaste input {
+    width: 90px;
+}
+
+#SpecialdeliveryPageAddForm .ojos input {
+    width: 250px;
+}
+
+#SpecialdeliveryPageAddForm .nota-foot {
+  color: #007EC4;
+  font-size: 13px;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#photo-back{
+  background-image: url(../img/marco_fondo.png);
+  position: absolute;
+  top: 8px;
+  left: 42px;
+  width: 176px;
+  height: 142px;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* #WelcomebbyPageAddForm */
+
+#WelcomebbyPageAddForm p {
+  float: none;
+  line-height: 15px;
+  margin: 0 0 15px 0;
+}
+#WelcomebbyPageAddForm .pareces {
+  padding-top: 20px;
+}
+/* EpilogPageAddForm  */
+.epilogPages {
+  background-image: url(../img/epilogo.png);
+  background-size: 386px;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+#EpilogPageAddForm p {
+    float: none;
+}
+
+#EpilogPageAddForm .opciones {
+  width: 269px;
+  margin: 82px auto 10px;
+}
+
+#EpilogPageAddForm .post-parto {
+  width: 392px;
+  margin: 26px auto;
+}
+
+
+/* NewfamilyPageAddForm  */
+
+#NewfamilyPageAddForm {
+  background-image: url(../img/newfam.png);
+  background-size: 403px;
+  background-repeat: no-repeat;
+  background-position: center 44px;
+  height: 100%;
+}
+
+#NewfamilyPageAddForm .photo-up {
+  top: 49px;
+  left: 121px;
+  width: 211px;
+  height: 170px;
+  z-index: 0;
+  position: absolute;
+  top: 40px;
+  left: 113px;
+}
+
+#NewfamilyPageAddForm p{
+  position: absolute;
+  top: 215px;
+  width: 200px;
+  text-align: left;
+  left: 113px;
+}
+
+#photo-back-1{
+  background-image: url(../img/marco_fondo.png);
+  position: absolute;
+  top: 49px;
+  left: 121px;
+  width: 175px;
+  height: 141px;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+/*  #MomentPageAddForm  */
+
+
+#MomentPageAddForm input[type="text"] {
+  color: #fff;
+}
+
+#MomentPageAddForm .page_title {
+  left: 150px;
+}
+
+#MomentPageAddForm .title_page p {
+  margin: -30px auto 0;
+  width: 100%;
+}
+#MomentPageAddForm .title_page span {
+  left: 120px;
+  top: 31px;
+}
+
+#MomentPageAddForm .ph-bg {
+  top: 90px;
+  left: 286px;
+}
+
+#photo_moment {
+  position: absolute;
+  top: 80px;
+  left: 278px;
+}
+
+#MomentPageAddForm .mom-desc {
+  position: absolute;
+  top: 380px;
+  width: 400px;
+  left: 210px;
+}
+/* family tree :) */
+
+#familytreePageAddForm{
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  width: 810px;
+  text-align: center;
+
+}
+
+
+.familytreeFile{
+  width: 172px;
+  height: 171px;
+  left: 10px;
+  background-image: url(../img/marco_circular.png), url(../img/marco_circular_back.png);
+  background-position: center center, center center;
+  text-indent: -9999px;
+  background-repeat: no-repeat;  
+  float: left;
+}
+
+.familytreeFile{
+  width: 172px;
+  height: 171px;
+  left: 10px;
+  margin-top: 30px;
+  background-image: url(../img/marco_circular.png), url(../img/marco_circular_back.png);
+  background-position: center center, center center;
+  text-indent: -9999px;
+  background-repeat: no-repeat;  
+  float: left;
+  display: inline-block;
+}
+
+
+#grandpa_dad{
+  margin-left: 20px;
+}
+
+#grandma_dad{
+  margin-left: 40px;  
+}
+
+#dad{
+  margin-left: 190px;
+}
+
+#mom{
+  margin-left: 40px;
+}
+
+#baby{
+  margin-left: 300px;
+}
+
+.familytreeFile div.pick_fb{
+  background-image: url(../img/bt_elegir.png);
+  width: 107px;
+  height: 20px;
+  top: 55px;
+  left: 29px;
+}
+
+.familytreeFile input[type="file"].upload_bt {
+  background-image: url(../img/bt_subir_foto.png);
+  width: 104px;
+  height: 17px;
+  text-indent: -9999px;
+  top: 60px;
+  left: 29px;
+  position: relative;
+}
+
+.name_input{
+  top:200px;
+  color: #147cc1;
+  position: relative;
+  top: 100px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  text-align: center;
+}
+
+.name_input::-webkit-input-placeholder{
+  color: #147cc1;
+}
+.name_input::-moz-placeholder{
+  color: #147cc1;
+}
+.name_input:-ms-input-placeholder{
+  color: #147cc1;
+}
+.name_input:-moz-placeholder{
+  color: #147cc1;
+}
+
+.familytreePages{
+  margin-top: 130px;
+}

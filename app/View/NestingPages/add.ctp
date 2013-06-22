@@ -77,6 +77,8 @@ fbphotoSelect = function(id, idpapa) {
 		selector.showAlbumSelector(id);
 	}
 
+  var popanidar = 0;
+
   $(document).ready(function(){
   	
   	$(".pick_fb").click(function (e) {
@@ -86,8 +88,31 @@ fbphotoSelect = function(id, idpapa) {
 		    if ( $(this).attr('data-id') ) id = $(this).attr('data-id');
 		    fbphotoSelect(id, elpapa); 
 		});
+  	 $(".anidar").mouseover(function() {
+  	 	if(popanidar == 0) { // if value is 0, show popup
+			closeloading(); // fadeout loading
+			$("#queesanidar").fadeIn(0300); // fadein popup div
+			
+			popanidar = 1; // and set value to 1
+			console.log('popanidar '+popanidar);
+
+			$("#queesanidar").bind( "clickoutside", function(event){
+			  //$(this).hide();
+			  disablePopup_anidar();
+			});
+		}
+	  });
 
 	});
+
+  function disablePopup_anidar() {
+		console.log('popanidar '+popanidar);
+		if(popanidar == 1) { // if value is 1, close popup
+			$("#queesanidar").fadeOut("normal");
+			popanidar = 0;  // and set value to 0
+			$("#queesanidar").unbind( "clickoutside");
+		}
+	}
 
 
 function readURL(input) {
@@ -102,14 +127,52 @@ function readURL(input) {
   }
 
 </script>
+<div id='queesanidar'></div>
 
 <style type="text/css">
+
+#queesanidar{
+	display: none;
+	background-image: url(../img/pop_anidar.png);
+	width: 390px;
+	height: 366px;
+	position: fixed;
+	left: 144px;
+	top: 500px;
+	z-index: 1;
+}
 
 <?php if( isset($nesting['NestingPage']['room_photo']) ){ ?>
 #room_photo_back{
 	background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$nesting['NestingPage']['room_photo']); ?>);
 }
 <?php }?>
+
+ <?php 
+    $tema = $this->Session->read("User.theme");
+
+    if($tema == 2){ 
+  ?>
+    #queesanidar {
+      background-image: url(../img/tema2/pop_anidar.png);
+    }
+  <?php
+    } 
+    elseif($tema == 3){ 
+        ?>
+    #queesanidar {
+      background-image: url(../img/tema3/pop_anidar.png);
+    }
+  <?php
+    } 
+    elseif($tema == 4){ 
+       ?>
+    #queesanidar {
+      background-image: url(../img/tema4/pop_anidar.png);
+    }
+  <?php
+    } 
+    ?>
 </style>
 
 <!-- Markup for Carson Shold's Photo Selector -->

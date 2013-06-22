@@ -226,7 +226,7 @@ function readURL(input) {
 	} else{
 		$age = '';
 	}
-		echo $this->Form->input('age', array('label' => 'Tengo ', 'min' => 0, 'after' => ' años </p>','between' => ' ', 'before'=> '<p>', 'value' => $age));
+		echo $this->Form->input('age', array('label' => 'Tengo ', 'min' => 0, 'max' => 100, 'after' => ' años </p>','between' => ' ', 'before'=> '<p>', 'value' => $age));
 
 
 			if(isset($whoami['WhoamiPage']['profesion'])){

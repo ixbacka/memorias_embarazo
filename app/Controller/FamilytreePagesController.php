@@ -60,7 +60,7 @@ public function beforeFilter() {
 
         if(!empty($this->request->data['FamilytreePage']['grandma_dad_img']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['FamilytreePage']['grandma_dad_img']['name']); 
+        $fileName = $this->generateUniqueFilename('familytree_grandmadad_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['FamilytreePage']['grandma_dad_img'], $fileName); 
 
           if ($error == false) { 
@@ -91,7 +91,7 @@ public function beforeFilter() {
 
         if(!empty($this->request->data['FamilytreePage']['grandma_mom_img']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['FamilytreePage']['grandma_mom_img']['name']); 
+        $fileName = $this->generateUniqueFilename('familytree_grandmamom_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['FamilytreePage']['grandma_mom_img'], $fileName); 
 
           if ($error == false) { 
@@ -122,7 +122,7 @@ public function beforeFilter() {
 
         if(!empty($this->request->data['FamilytreePage']['grandpa_dad_img']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['FamilytreePage']['grandpa_dad_img']['name']); 
+        $fileName = $this->generateUniqueFilename('familytree_gradpadad_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['FamilytreePage']['grandpa_dad_img'], $fileName); 
 
           if ($error == false) { 
@@ -153,7 +153,7 @@ public function beforeFilter() {
 
         if(!empty($this->request->data['FamilytreePage']['grandpa_mom_img']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['FamilytreePage']['grandpa_mom_img']['name']); 
+        $fileName = $this->generateUniqueFilename('familytree_mom_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['FamilytreePage']['grandpa_mom_img'], $fileName); 
 
           if ($error == false) { 
@@ -184,7 +184,7 @@ public function beforeFilter() {
 
         if(!empty($this->request->data['FamilytreePage']['dad_img']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['FamilytreePage']['dad_img']['name']); 
+        $fileName = $this->generateUniqueFilename('familytree_dad_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['FamilytreePage']['dad_img'], $fileName); 
 
           if ($error == false) { 
@@ -216,7 +216,7 @@ public function beforeFilter() {
 
         if(!empty($this->request->data['FamilytreePage']['mom_img']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['FamilytreePage']['mom_img']['name']); 
+        $fileName = $this->generateUniqueFilename('familytree_mom_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['FamilytreePage']['mom_img'], $fileName); 
 
           if ($error == false) { 
@@ -247,7 +247,7 @@ public function beforeFilter() {
 
         if(!empty($this->request->data['FamilytreePage']['baby_img']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['FamilytreePage']['baby_img']['name']); 
+        $fileName = $this->generateUniqueFilename('familytree_bby_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['FamilytreePage']['baby_img'], $fileName); 
 
           if ($error == false) { 

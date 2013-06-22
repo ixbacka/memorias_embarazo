@@ -45,7 +45,7 @@ class UltrasoundPagesController extends AppController {
 
         if(!empty($this->request->data['UltrasoundPage']['first_photo']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['UltrasoundPage']['first_photo']['name']); 
+        $fileName = $this->generateUniqueFilename('ultrasound_1_1_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['UltrasoundPage']['first_photo'], $fileName); 
 
           if ($error == false) { 
@@ -71,7 +71,7 @@ class UltrasoundPagesController extends AppController {
 
         if(!empty($this->request->data['UltrasoundPage']['second_photo']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['UltrasoundPage']['second_photo']['name']); 
+        $fileName = $this->generateUniqueFilename('ultrasound_1_2_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['UltrasoundPage']['second_photo'], $fileName); 
 
           if ($error == false) { 

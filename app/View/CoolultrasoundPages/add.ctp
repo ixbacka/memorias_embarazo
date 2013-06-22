@@ -280,7 +280,7 @@ function readURL(input) {
         } else{
           $iwas = '';
         } ?>
-        <input type="number" min="0" name="data[CoolultrasoundPage][iwas]" value="<?php if($iwas != ''){ echo $iwas; } ?>" >
+        <input type="number" min="0" max="41" name="data[CoolultrasoundPage][iwas]" value="<?php if($iwas != ''){ echo $iwas; } ?>" >
         semanas de embarazo
       </p>
       <p class="doctor">

@@ -46,7 +46,7 @@ class BellymonthPagesController extends AppController {
 
         if(!empty($this->request->data['BellymonthPage']['photo']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['BellymonthPage']['photo']['name']); 
+        $fileName = $this->generateUniqueFilename('bellymonths_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['BellymonthPage']['photo'], $fileName); 
 
           if ($error == false) { 
@@ -66,13 +66,27 @@ class BellymonthPagesController extends AppController {
           
         }
 
+        if( isset($this->request->data['BellymonthPage']['apetite']) ){
+           $this->BellymonthPage->set(array( 
+            'apetite' => $this->request->data['BellymonthPage']['apetite']
+            ));
+        }
+        if( isset($this->request->data['BellymonthPage']['b4']) ){
+           $this->BellymonthPage->set(array( 
+            'b4' => $this->request->data['BellymonthPage']['b4']
+            ));
+        }
+        if( isset($this->request->data['BellymonthPage']['sleep']) ){
+           $this->BellymonthPage->set(array( 
+            'sleep' => $this->request->data['BellymonthPage']['sleep']
+            ));
+        }
+
+
           $this->BellymonthPage->set(array( 
             'actual_weight' => $this->request->data['BellymonthPage']['actual_weight'],
             'measurements' => $this->request->data['BellymonthPage']['measurements'],
-            'apetite' => $this->request->data['BellymonthPage']['apetite'],
-            'b4' => $this->request->data['BellymonthPage']['b4'],
             'profile_id' => $this->request->data['BellymonthPage']['profile_id'],
-            'sleep' => $this->request->data['BellymonthPage']['sleep'],
             'photo_date' => $this->request->data['BellymonthPage']['photo_date']
           ));
 

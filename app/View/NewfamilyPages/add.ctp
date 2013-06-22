@@ -209,6 +209,16 @@ function readURL(input) {
 			echo $this->Form->file('photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
 		?>
 	</div>
+	<?php
+      if(isset($nesting['NewfamilyPage']['description'])){
+        $description = $nesting['NewfamilyPage']['description'];
+      } else{
+        $description = '';
+      }
+    ?>
+	<textarea name="date[NewfamilyPage][description]">
+		<?php if($description != ''){ echo $description; } ?>
+	</textarea>
 
 	<?php
 		echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));

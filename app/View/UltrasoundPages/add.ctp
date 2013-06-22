@@ -357,7 +357,7 @@ function readURL(input) {
         </p>
         <p>
           <label for="CongratsPageBabycoming">Tenía </label>
-          <input name="data[UltrasoundPage][first_week]" type="number" min="0" id="CongratsPageBabycoming" value="<?php if( isset($ultrasound['UltrasoundPage']['first_week'])){ echo $ultrasound['UltrasoundPage']['first_week']; }?>"> 
+          <input name="data[UltrasoundPage][first_week]" type="number" min="0" MAX="41" id="CongratsPageBabycoming" value="<?php if( isset($ultrasound['UltrasoundPage']['first_week'])){ echo $ultrasound['UltrasoundPage']['first_week']; }?>"> 
           semanas de embarazo
         </p>
         <p>
@@ -367,7 +367,7 @@ function readURL(input) {
             } else{
               $first_notes = '';
             }
-            echo $this->Form->input('first_notes', array('label' => 'Pero cuando me siento peor es: ', 'div' => false, 'value' => $first_notes));
+            echo $this->Form->input('first_notes', array('label' => 'La primera vez que te vi y o&iacute;, yo: ', 'div' => false, 'value' => $first_notes));
           ?>
         </p>
       </div>
@@ -394,7 +394,7 @@ function readURL(input) {
         </p>
         <p>
           <label for="CongratsPageBabycoming">Tenía </label>
-          <input name="data[UltrasoundPage][second_week]" type="number" min="0" value="<?php if( isset($ultrasound['UltrasoundPage']['second_week'])){ echo $ultrasound['UltrasoundPage']['second_week']; }?>">
+          <input name="data[UltrasoundPage][second_week]" type="number" min="0" max="41" value="<?php if( isset($ultrasound['UltrasoundPage']['second_week'])){ echo $ultrasound['UltrasoundPage']['second_week']; }?>">
           semanas de embarazo
         </p>
         <p><?php
@@ -403,7 +403,7 @@ function readURL(input) {
           } else{
             $second_notes = '';
           }
-          echo $this->Form->input('second_notes', array('label' => 'Pero cuando me siento peor es: ','div' => false,'value' => $second_notes));
+          echo $this->Form->input('second_notes', array('label' => 'Ahora: ','div' => false,'value' => $second_notes));
         ?> <p>
       </div>
     </div>

@@ -33,8 +33,7 @@ body{
 
 <div class="page_title">
    <?php
-
-      echo $this->Html->link(
+echo $this->Html->link(
             'Anterior',
             array('controller' => 'whoami_pages', 'action' => 'add'),
             array('class' => 'ant')
@@ -158,8 +157,7 @@ body{
   </div>
 </div>
 <div class="sintom_rite">
-<!--   <label>Mmmm! cuando se trata de antojos<br>El antojito más raro que he tenido es: </label>
- -->    <?php
+<?php
 
     if(isset($sintoms['SintomPage']['weirdestcraving'])){
       $weirdestcraving = $sintoms['SintomPage']['weirdestcraving'];

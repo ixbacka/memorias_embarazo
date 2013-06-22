@@ -44,7 +44,7 @@ class NewfamilyPagesController extends AppController {
 
         if(!empty($this->request->data['NewfamilyPage']['photo']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['NewfamilyPage']['photo']['name']); 
+        $fileName = $this->generateUniqueFilename('newfamily_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['NewfamilyPage']['photo'], $fileName); 
 
           if ($error == false) { 
@@ -65,7 +65,8 @@ class NewfamilyPagesController extends AppController {
         }
 
           $this->NewfamilyPage->set(array( 
-            'profile_id' => $this->request->data['NewfamilyPage']['profile_id']
+            'profile_id' => $this->request->data['NewfamilyPage']['profile_id'],
+            'description' => $this->request->data['NewfamilyPage']['description']        
           ));
 
         if ($this->NewfamilyPage->save()) {

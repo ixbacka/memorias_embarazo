@@ -45,7 +45,7 @@ class NestingPagesController extends AppController {
 
         if(!empty($this->request->data['NestingPage']['room_photo']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['NestingPage']['room_photo']['name']); 
+        $fileName = $this->generateUniqueFilename('nesting_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['NestingPage']['room_photo'], $fileName); 
 
           if ($error == false) { 

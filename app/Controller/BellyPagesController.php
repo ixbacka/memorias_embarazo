@@ -45,7 +45,8 @@ var $uses = array('BellyPage','Profile');
 
         if(!empty($this->request->data['BellyPage']['photo1']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['BellyPage']['photo1']['name']); 
+ //       $fileName = $this->generateUniqueFilename($this->request->data['BellyPage']['photo1']['name']); 
+        $fileName = $this->generateUniqueFilename('bellypages_1_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['BellyPage']['photo1'], $fileName); 
 
           if ($error == false) { 
@@ -70,7 +71,7 @@ var $uses = array('BellyPage','Profile');
 
         if(!empty($this->request->data['BellyPage']['photo2']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['BellyPage']['photo2']['name']); 
+        $fileName = $this->generateUniqueFilename('bellypages_2_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['BellyPage']['photo2'], $fileName); 
 
           if ($error == false) { 
@@ -95,7 +96,7 @@ var $uses = array('BellyPage','Profile');
 
         if(!empty($this->request->data['BellyPage']['photo3']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename($this->request->data['BellyPage']['photo3']['name']); 
+        $fileName = $this->generateUniqueFilename('bellypages_3_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['BellyPage']['photo3'], $fileName); 
 
           if ($error == false) { 
