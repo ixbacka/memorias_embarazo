@@ -87,9 +87,7 @@ class MomentPagesController extends AppController {
 
           die();*/
 
-            if ($error == false) { 
-              //$this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$fileName,WWW_ROOT.'img/cover_photos/'.$fileName);
-              
+            if ($error == false) {               
               $this->MomentPage->set(array( 
                 'photo' => $fileName
               ));

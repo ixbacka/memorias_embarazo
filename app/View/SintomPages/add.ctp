@@ -39,6 +39,7 @@ echo $this->Html->link(
             array('class' => 'ant')
         );
   ?>
+
   <div class="title_page">
     <p>Primeros</p>
     <span>s&iacute;ntomas y malestares</span>
@@ -157,7 +158,12 @@ echo $this->Html->link(
   </div>
 </div>
 <div class="sintom_rite">
+<<<<<<< HEAD
 <?php
+=======
+<!--   <label>Mmmm! cuando se trata de antojos<br>El antojito más raro que he tenido es: </label>
+ -->    <?php
+>>>>>>> origin/master
 
     if(isset($sintoms['SintomPage']['weirdestcraving'])){
       $weirdestcraving = $sintoms['SintomPage']['weirdestcraving'];

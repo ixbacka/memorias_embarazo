@@ -324,8 +324,8 @@ class ProfilesController extends AppController {
 
       if(!empty($this->request->data['Profile']['file']['tmp_name']) ) { 
 
-			  $fileName = $this->generateUniqueFilename('CoverPhoto_'.$id['Profile']['uid'].'.png'); 
-			  $error = $this->handleFileUpload($this->request->data['Profile']['file'], $fileName); 
+		  	$fileName = $this->generateUniqueFilename('CoverPhoto_'.$id['Profile']['uid'].'.png'); 
+		  	$error = $this->handleFileUpload($this->request->data['Profile']['file'], $fileName); 
 
 			  if ($error == false) { 
 				  //$this->generate_image_thumbnail(WWW_ROOT.'img/cover_photos/'.$fileName,WWW_ROOT.'img/cover_photos/'.$fileName);
