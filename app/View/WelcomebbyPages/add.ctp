@@ -115,10 +115,10 @@
   <p class="noche">
     <label> y la experiencia de la primera noche en casa es digna de contarse: </label>
   	<!-- <input type="text" name="data[WelcomebbyPage][nighttime]" value="<?php if($nighttime != ''){ echo $nighttime; } ?>" > -->
-  	<textarea name="data[WelcomebbyPage][nighttime]">
-  		<?php if($nighttime != ''){ echo $nighttime; } ?>
-  	</textarea>
   </p>
+  <textarea name="data[WelcomebbyPage][nighttime]">
+    <?php if($nighttime != ''){ echo $nighttime; } ?>
+  </textarea>
 	<?php
 		if(isset($welcome['WelcomebbyPage']['most'])){
 			$most = $welcome['WelcomebbyPage']['most'];

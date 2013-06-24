@@ -270,7 +270,7 @@ body {
   width: 107px;
   height: 20px;
   position: absolute;
-  top: 156px;
+  top: 158px;
   left: 200px;
   text-indent: -9999px;
   color: transparent;
@@ -289,6 +289,12 @@ body {
 .photo-up .pick_fb {
   left: 80px;
   top: 109px;
+}
+
+#send_OK {
+  position: absolute;
+  top: 240px;
+  left: 53px;
 }
 
 #send_OK input[type="submit"]{
@@ -855,6 +861,16 @@ input[type="radio"]{
   margin: 7px 0;
 }
 
+textarea {
+  resize: none;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  line-height: 1.5;
+}
+
+
 select{
   background: none;
   border: none;
@@ -892,7 +908,8 @@ form p{
 .submit {
   position: absolute;
   bottom: 60px;
-  left: 50px;}
+  left: 367px;
+}
 
 form .submit input[type="submit"]{
   text-indent: -9999px;
@@ -1020,6 +1037,18 @@ left: 105px;
 	text-align: center;
 }
 
+#SintomPageWeirdestcraving {
+  height: 230px;
+  width: 255px;
+  margin: 10px;
+  resize: none;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  line-height: 1.5;
+}
+
 #gross_{
 	position: absolute;
 	top: 230px;
@@ -1031,9 +1060,9 @@ left: 105px;
 }
 
 #button_sintom {
-position: absolute;
-top: 250px;
-left: 500px;
+  position: absolute;
+  bottom: 80px;
+  left: 367px;
 }
 
 .note_sintom_{
@@ -1273,7 +1302,9 @@ text-align: center;
 }
 
 #senti {
-  width: 460px;
+  width: 450px;
+  height: 140px;
+  margin: 0 10px;
 }
 
 /* #ChildsexPageAdd */
@@ -1588,12 +1619,12 @@ text-align: center;
 
 
 #GettingclosePageAddForm .col.dos input {
-  margin: 6px 32px 7px;
+  margin: 6px 32px 16px;
 }
 
 
 #GettingclosePageAddForm .col.dos p {
-  margin-bottom: 24px;
+  margin-bottom: 10px;
 }
 
 
@@ -1902,15 +1933,15 @@ text-align: center;
   color: #0F7491;
 }
 
-#ByebellyPageAddForm .estaba, .exp {
-  margin-bottom: 30px;
+#ByebellyPageAddForm .estaba, #ByebellyPageAddForm .exp {
+  width: 340px;
+  float: left;
 }
 
-#ByebellyPageAddForm  .estaba input {
-    width: 373px;
-}
-#ByebellyPageAddForm  .exp input {
-    width: 400px;
+#ByebellyPageAddForm textarea {
+    margin: 10px;
+    width: 280px;
+    height: 100px;
 }
 
 #ByebellyPageAddForm .opciones {
@@ -1998,6 +2029,12 @@ text-align: center;
 
 /* #WelcomebbyPageAddForm */
 
+#WelcomebbyPageAddForm textarea {
+    width: 520px;
+    margin: 30px 90px;
+    height: 120px;
+}
+
 #WelcomebbyPageAddForm .pareces input {
     width: 435px;
 }
@@ -2039,12 +2076,18 @@ text-align: center;
 
 #EpilogPageAddForm .opciones {
     width: 440px;
-    margin: 180px auto 20px;
+    margin: 150px auto 20px;
+}
+
+#EpilogPageAddForm textarea {
+    margin: 10px 0;
+    width: 420px;
+    height: 130px;
 }
 
 #EpilogPageAddForm .post-parto {
     width: 440px;
-    margin: 100px auto;
+    margin: 30px auto;
 }
 
 
@@ -2056,14 +2099,22 @@ text-align: center;
 
 #NewfamilyPageAddForm .photo-up {
     position: absolute;
-    top: 230px;
+    top: 40px;
     left: 260px;
+}
+
+#NewfamilyPageAddForm textarea {
+    position: absolute;
+    top: 290px;
+    width: 370px;
+    left: 190px;
+    height: 180px;
 }
 
 #photo-back-1{
   background-image: url(../img/marco_fondo.png);
   position: absolute;
-  top: 240px;
+  top: 50px;
   left: 268px;
   width: 251px;
   height: 192px;
