@@ -344,31 +344,6 @@ function readURL(input) {
         <label>Otro</label>
         <input type="text" name="data[BellymonthPage][b4]" value="<?php if($b4 != ""){ echo $b4; } ?>" />
       </div>
-      <div class="comfy">
-        <p>Estoy más cómoda durmiendo: </p>
-        <?php
-          if(isset($bellymonth['BellymonthPage']['sleep'])){
-            $sleep = $bellymonth['BellymonthPage']['sleep'];
-          } else{
-            $sleep = '';
-          }
-        ?>
-        <p class="opcion">
-          <input type="radio" name="data[BellymonthPage][sleep]" value="1" <?php if($sleep == 1){
-          echo 'checked="checked"'; } ?> />
-          <label>Boca arriba</label>
-        </p>
-        <p class="opcion">
-          <input type="radio" name="data[BellymonthPage][sleep]" value="2" <?php if($sleep == 2){
-          echo 'checked="checked"'; } ?> />
-          <label>De lado</label>
-        </p>
-        <p class="opcion">
-          <input type="radio" name="data[BellymonthPage][sleep]" value="3" <?php if($sleep == 3){
-          echo 'checked="checked"'; } ?> />
-          <label>¿Bromeas? No hay un modo cómodo</label>
-        </p>
-      </div>
     </div>
     
 

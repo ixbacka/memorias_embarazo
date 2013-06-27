@@ -51,7 +51,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
   <?php //echo $this->Html->script('lightbox'); ?>
 
 	<?php echo $this->Html->script('script'); ?>
-<script type="text/javascript">
+    <script type="text/javascript">
+
+});
   WebFontConfig = {
     google: { families: [ 'Open+Sans:400,700,600,300:latin' ] }
   };
@@ -157,6 +159,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
          display: 'popup'
         });
 
+
         <?php $new_token = str_replace('|','&#124;',$this->Session->read("User.token")); ?>
         FB.api(unescape('/me?access_token='+"<?php echo $new_token;?>"), function (response) {
             console.log('Response :'+JSON.stringify(response));
@@ -169,9 +172,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
         //this resizes the the i-frame 
         //on an interval of 100ms 
         //FB.Canvas.setAutoGrow();
-       <?php  if( strpos($_SERVER['REQUEST_URI'], 'welcome') == TRUE ){  ?>
+       <?php  if( strpos( 'welcome', $_SERVER['REQUEST_URI'] ) == TRUE ){  ?>
         FB.Canvas.setSize({height:1000});
-      <?php } elseif(strpos($_SERVER['REQUEST_URI'], 'fangate') == TRUE){ ?>
+      <?php } elseif(strpos( 'fangate', $_SERVER['REQUEST_URI'] ) == TRUE){ ?>
         FB.Canvas.setSize({height:870});    
       <?php } else { ?>
       console.log('chekin g ..');

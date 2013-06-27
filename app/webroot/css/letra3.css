@@ -1,5 +1,5 @@
 
-input[type="text"], input[type="number"]{
+input[type="text"], input[type="number"], textarea {
 	font-family: 'Sacramento', cursive;
 }
 

@@ -3,6 +3,10 @@ body {
   color: #808080;
 }
 
+input[type="text"], input[type="number"], textarea {
+  color: #808080;
+}
+
 .ask{
   background-image: url(../img/tema2/ayuda.png);
 }
@@ -107,12 +111,23 @@ p.whatdo{
   background-image: url(../img/tema2/siguiente.png);
 }
 
+form .submit input[type="submit"]{
+  background-image: url(../img/tema2/bt_guardar.png);
+}
+
 #send_OK input[type="submit"] {
   background-image: url(../img/tema2/bt_aceptar.png);
 }
 
 .footer {
   background-image: url(../img/tema2/footer.png);
+}
+
+.bebes {
+  background: url(../img/tema2/bebesotes.png);
+  width: 644px;
+  height: 363px;
+  left: 70px;
 }
 
 /* COLORS */
@@ -122,11 +137,33 @@ p.whatdo{
 p.middle_note,
 .ultra .info h3,
 .note_sintom_,
-#SpecialdeliveryPageAddForm .nota-foot {
+#SpecialdeliveryPageAddForm .nota-foot
+#AnimoPageAddForm h3,
+#AnimoPageAddForm p {
   color: #0C5773; //AZUL
 }
 
-ul.vertical_menu_1 li a{
+.mesuno>p, .mesdos>p, .mestres>p {
   color: #E06873; //ROSA
 }
+
+ul.vertical_menu_1 li{
+  background: #007ec4;
+  border-right: 1px solid #e06873;
+  border-bottom: 1px solid #e06873;
+
+}
+
+ul.vertical_menu_1 li a {
+  color: #fff; //ROSA
+}
+
+input[type="text"] {
+  border-bottom: 1px solid #808080;
+}
+
+.col1 p:after {
+  border-top: 1px dashed rgba(135, 119, 153, 0.47);
+}
+
 
