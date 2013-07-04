@@ -338,24 +338,24 @@ function readURL(input) {
       ?>
       <div class="opciones">
         <div class="opcion cf">
-          <input type="radio" name="data[CoolultrasoundPage][imiss]" value="1" <?php if($imiss == 1){
+          <input type="radio" name="data[CoolultrasoundPage][imissradio]" value="1" <?php if($imiss == 1){
           echo 'checked="checked"'; } ?> />
           <label>Usar tacones</label>
         </div>
         <div class="opcion cf">
-           <input type="radio" name="data[CoolultrasoundPage][imiss]" value="2" <?php if($imiss == 2){
+           <input type="radio" name="data[CoolultrasoundPage][imissradio]" value="2" <?php if($imiss == 2){
           echo 'checked="checked"'; } ?> />
           <label>Ropa interior normal</label>
         </div>
         <div class="opcion cf">
-           <input type="radio" name="data[CoolultrasoundPage][imiss]" value="3" <?php if($imiss == 3){
+           <input type="radio" name="data[CoolultrasoundPage][imissradio]" value="3" <?php if($imiss == 3){
           echo 'checked="checked"'; } ?> />
           <label>Verme los pies</label>
         </div>
       </div>
       <p class="otro">
         <label>Otro </label>
-        <input type="text" name="data[CoolultrasoundPage][imiss]" value="<?php if($imiss != ""){ echo $imiss; } ?>" />
+        <input type="text" name="data[CoolultrasoundPage][imiss]" value="<?php if($imiss != "" && $imiss != 3 && $imiss != 2 && $imiss != 1){ echo $imiss; } ?>" />
       </p>
       <p class="panza">La gente que opina de mi panza: </p>
       <?php if(isset($cool['CoolultrasoundPage']['theythink'])){

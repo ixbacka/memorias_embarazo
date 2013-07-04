@@ -72,7 +72,7 @@ class CoolultrasoundPagesController extends AppController {
             ));
         }
 
-        if( isset($this->request->data['CoolultrasoundPage']['imiss']) ){
+       /* if( isset($this->request->data['CoolultrasoundPage']['imiss']) ){
 
           if( is_numeric($this->request->data['CoolultrasoundPage']['imiss']) ){
             $this->CoolultrasoundPage->set(array( 
@@ -84,7 +84,22 @@ class CoolultrasoundPagesController extends AppController {
             ));
           }
 
+        }*/
+
+         if( isset($this->request->data['CoolultrasoundPage']['imissradio']) ){
+
+           $this->CoolultrasoundPage->set(array( 
+            'imiss' => (string)$this->request->data['CoolultrasoundPage']['imissradio']
+            ));
+
+
+        } elseif (isset($this->request->data['CoolultrasoundPage']['imiss'])) {
+          $this->CoolultrasoundPage->set(array( 
+            'imiss' => $this->request->data['CoolultrasoundPage']['imiss']
+            ));
         }
+
+
 
         if( isset($this->request->data['CoolultrasoundPage']['theythink']) ){
            $this->CoolultrasoundPage->set(array( 

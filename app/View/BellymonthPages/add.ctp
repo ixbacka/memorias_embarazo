@@ -330,19 +330,19 @@ function readURL(input) {
           }
         ?>
         <p class="opcion">
-          <input type="radio" name="data[BellymonthPage][b4]" value="1" <?php if($b4 == 1){ echo 'checked="checked"'; } ?> />
+          <input type="radio" name="data[BellymonthPage][b4radio]" value="1" <?php if($b4 == 1){ echo 'checked="checked"'; } ?> />
           <label>¡Mmmmm! un buen vino y una rica cena</label>
         </p>
         <p class="opcion">
-          <input type="radio" name="data[BellymonthPage][b4]" value="2" <?php if($b4 == 2){ echo 'checked="checked"'; } ?> />
+          <input type="radio" name="data[BellymonthPage][b4radio]" value="2" <?php if($b4 == 2){ echo 'checked="checked"'; } ?> />
           <label>Mi vejiga de su tamaño normal</label>
         </p>
         <p class="opcion">
-          <input type="radio" name="data[BellymonthPage][b4]" value="3" <?php if($b4 == 3){ echo 'checked="checked"'; } ?> />
+          <input type="radio" name="data[BellymonthPage][b4radio]" value="3" <?php if($b4 == 3){ echo 'checked="checked"'; } ?> />
           <label>Mis tobillos</label>
         </p>
         <label>Otro</label>
-        <input type="text" name="data[BellymonthPage][b4]" value="<?php if($b4 != ""){ echo $b4; } ?>" />
+        <input type="text" name="data[BellymonthPage][b4]" value="<?php if($b4 != "" && ($b4 != 3 && $b4 != 2 && $b4 != 1) ){ echo $b4; } ?>" />
       </div>
     </div>
     

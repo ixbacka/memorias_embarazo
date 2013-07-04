@@ -220,7 +220,9 @@ function readURL(input) {
           echo $this->Form->file('photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' ));
         ?>
       </div>
-      <input class="mom-desc" type="text" name="data[MomentPage][description]" value="<?php if($description != ''){ echo $description; } ?>"/>  
+      <textarea class="mom-desc" name="data[MomentPage][description]">
+       <?php if($description != ''){ echo $description; } ?>
+   	  </textarea>
 
 	<?php
 		echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));

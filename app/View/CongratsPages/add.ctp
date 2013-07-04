@@ -159,7 +159,15 @@ function get_date_spanish( $time, $part = false, $formatDate = '' ){
 	?>
 	<div class="input text">
 	<p id="last_input">¡Anota todos los detalles antes de que se te olviden!... ¿Cómo y dónde celebraste  saber que estabas embarazada? ¿Con quién compartiste el momento? ¿Cómo  reaccionaron tus familiares? ¿Cuál fue la primera compra que hiciste o regalo que te dieron para el bebé?
-	<span><input name="data[CongratsPage][details]" maxlength="400" type="text" id="CongratsPageDetails" value="<?php if(isset($congrats['CongratsPage']['details'])){ echo $congrats['CongratsPage']['details']; }?>"></span></p>
+	<span>
+
+		<!-- <input name="data[CongratsPage][details]" maxlength="400" type="text" id="CongratsPageDetails" value="<?php if(isset($congrats['CongratsPage']['details'])){ echo $congrats['CongratsPage']['details']; }?>"> -->
+
+		<textarea name="data[CongratsPage][details]" maxlength="600" id="CongratsPageDetails">
+			<?php if(isset($congrats['CongratsPage']['details'])){ echo $congrats['CongratsPage']['details']; }?>
+		</textarea>
+
+	</span></p>
 	</div>
 		<?php
 			echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));

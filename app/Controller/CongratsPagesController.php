@@ -44,17 +44,6 @@ class CongratsPagesController extends AppController {
           $this->CongratsPage->id = $idf['CongratsPage']['id'];
         }
 
-        // $this->CongratsPage->set(array( 
-        //     'sospeche' => $this->request->data['CongratsPage']['sospeche'],
-        //     'prueba' => $this->request->data['CongratsPage']['prueba'],
-        //     'firstfeeling' => $this->request->data['CongratsPage']['firstfeeling'],
-        //     'babycoming' => $this->request->data['CongratsPage']['babycoming'],
-        //     'howishare' => $this->request->data['CongratsPage']['howishare'],
-        //     'babynum' => $this->request->data['CongratsPage']['babynum'],
-        //     'babybros' => $this->request->data['CongratsPage']['babybros'],
-        //     'details' => $this->request->data['CongratsPage']['details']
-        //   ));
-
         if ($this->CongratsPage->save($this->request->data)) {
           //$this->Session->setFlash(__('The Cover photo has been saved'));
         } else {

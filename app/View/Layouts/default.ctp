@@ -173,7 +173,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
         //this resizes the the i-frame 
         //on an interval of 100ms 
         //FB.Canvas.setAutoGrow();
-<?php          if( strpos( $_SERVER['REQUEST_URI'],  'welcome' ) == TRUE ){  ?>
+<?php          if( strpos( $_SERVER['REQUEST_URI'],  'welcome' ) == TRUE && strpos( $_SERVER['REQUEST_URI'],  'welcomebby' ) == FALSE ){  ?>
         FB.Canvas.setSize({height:1000});
       <?php } elseif(strpos($_SERVER['REQUEST_URI'], 'fangate') == TRUE){ ?>
         console.log('canvas');

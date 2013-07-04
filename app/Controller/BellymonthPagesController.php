@@ -71,18 +71,20 @@ class BellymonthPagesController extends AppController {
             'apetite' => $this->request->data['BellymonthPage']['apetite']
             ));
         }
-        if( isset($this->request->data['BellymonthPage']['b4']) ){
+
+        if( isset($this->request->data['BellymonthPage']['b4radio']) ){
+
            $this->BellymonthPage->set(array( 
+            'b4' => (string)$this->request->data['BellymonthPage']['b4radio']
+            ));
+
+
+        } elseif (isset($this->request->data['BellymonthPage']['b4'])) {
+          $this->BellymonthPage->set(array( 
             'b4' => $this->request->data['BellymonthPage']['b4']
             ));
         }
-        if( isset($this->request->data['BellymonthPage']['sleep']) ){
-           $this->BellymonthPage->set(array( 
-            'sleep' => $this->request->data['BellymonthPage']['sleep']
-            ));
-        }
-
-
+       
           $this->BellymonthPage->set(array( 
             'actual_weight' => $this->request->data['BellymonthPage']['actual_weight'],
             'measurements' => $this->request->data['BellymonthPage']['measurements'],
