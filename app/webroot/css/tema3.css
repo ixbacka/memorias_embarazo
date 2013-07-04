@@ -4,7 +4,8 @@ body {
 }
 
 input[type="text"], input[type="number"], textarea {
-  color: #877799;
+  color: #877799 !important;
+  border-color: #877799 !important;
 }
 
 
@@ -66,7 +67,7 @@ input[type="text"], input[type="number"], textarea {
 }
 
 p.whatdo{
-  background-image: url(../img/que-quieres-hacer.png); // FALTA?
+  background-image: url(../img/tema3/que-quieres-hacer.png); // FALTA?
 }
 
 .write_bt {
@@ -128,6 +129,22 @@ form .submit input[type="submit"]{
   background: url(../img/tema3/bebesotes.png);
 }
 
+.add_moment:before {
+  background-image: url(../img/tema3/agrega_memoria.png);
+}
+
+#IlovemybabyPageAddForm .opcion {
+  background-image: url(../img/tema3/caballo.png);
+}
+#IlovemybabyPageAddForm .opcion+.opcion {
+  background-image: url(../img/tema3/tambor.png);
+}
+
+#IlovemybabyPageAddForm .opcion+.opcion+.opcion {
+  background-image: url(../img/tema3/mar.png);
+}
+
+
 /* COLORS */
 
 #last_input,
@@ -184,13 +201,18 @@ ul.vertical_menu_1 li.:hover a {
   border-top: 1px dashed rgba(135, 119, 153, 0.47);
 }
 
+#MomentPageAddForm .title_page p {
+  color
+}
+
 /* CUSTOM */
 
 .menu {
   top: 105px;
 }
 
-.title_page p {
+.title_page p,
+#MomentPageAddForm .title_page p {
   margin-top: -15px;
 }
 

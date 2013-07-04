@@ -130,6 +130,21 @@ form .submit input[type="submit"]{
   left: 70px;
 }
 
+.add_moment:before {
+  background-image: url(../img/tema2/agrega_memoria.png);
+}
+
+#IlovemybabyPageAddForm .opcion {
+  background-image: url(../img/tema2/caballo.png);
+}
+#IlovemybabyPageAddForm .opcion+.opcion {
+  background-image: url(../img/tema2/tambor.png);
+}
+
+#IlovemybabyPageAddForm .opcion+.opcion+.opcion {
+  background-image: url(../img/tema2/mar.png);
+}
+
 /* COLORS */
 
 #last_input,
@@ -148,15 +163,35 @@ p.middle_note,
 }
 
 ul.vertical_menu_1 li{
-  background: #007ec4;
-  border-right: 1px solid #e06873;
-  border-bottom: 1px solid #e06873;
-
+  background: #bdccd4;
+  border-right: 1px solid #FDD;
+  border-bottom: 1px solid #FDD;
 }
 
 ul.vertical_menu_1 li a {
-  color: #fff; //ROSA
+  color: #7095a7;
 }
+
+ul.vertical_menu_1 li.selected,
+ul.vertical_menu_1 li:hover {
+  border-right: 1px solid #FDD;
+  border-bottom: 1px solid #FDD;
+  background: #7095a7;
+}
+
+
+ul.vertical_menu_1 li:first-child,
+ul.vertical_menu_1 li.selected:first-child,
+ul.vertical_menu_1 li:hover:first-child {
+  border-left: 1px solid #fdd;
+}
+
+
+ul.vertical_menu_1 li.selected a,
+ul.vertical_menu_1 li:hover a {
+  color: #fff;
+}
+
 
 input[type="text"] {
   border-bottom: 1px solid #808080;

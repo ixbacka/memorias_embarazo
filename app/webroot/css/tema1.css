@@ -548,12 +548,28 @@ ul.vertical_menu_1 li a{
 .add_moment{
   background-image: url(../img/bt_agregar.png);
   text-indent: -9999px;
-  width: 42px;
-  height: 42px;
+  width: 31px;
+  height: 31px;
   position: absolute;
   top: 992px;
   left: 758px;
   z-index: 9999;
+}
+
+.add_moment:before {
+  content: '';
+  display: none;
+  background-image: url(../img/agrega_memoria.png);
+  background-repeat: no-repeat;
+  width: 207px;
+  height: 31px;
+  position: absolute;
+  top: 0;
+  left: -210px;
+}
+
+.add_moment:hover:before {
+  display:block;
 }
 
 
@@ -630,6 +646,9 @@ form .input {
     width: 425px;
 }
 
+#FirstVisitPageAddForm .submit {
+  bottom: 400px;
+}
 #WhoamiPageName {
     width: 262px;
 }
@@ -1327,19 +1346,34 @@ text-align: center;
 #IlovemybabyPageAddForm .opcion {
     display: block;
     width: 230px;
-    height: 80px;
+    height: 140px;
     float: left;
     margin-bottom: 40px;
+    background-image: url(../img/caballo.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+  background-position-y: center;
+
 }
 
 #IlovemybabyPageAddForm .opcion input {
     margin-left: 110px;
+    margin-top: 100px;
 }
 
 #IlovemybabyPageAddForm .opcion label {
     width: 100%;
     text-align: center;
 }
+
+#IlovemybabyPageAddForm .opcion+.opcion {
+  background-image: url(../img/tambor.png);
+}
+
+#IlovemybabyPageAddForm .opcion+.opcion+.opcion {
+  background-image: url(../img/mar.png);
+}
+
 
 #senti {
   width: 450px;
@@ -2144,7 +2178,7 @@ text-align: center;
 /* NewfamilyPageAddForm  */
 
 #NewfamilyPageAddForm {
-    background: url(../img/newfam.png) center 180px no-repeat;
+    background: url(../img/newfam.png) center 0 no-repeat;
 }
 
 #NewfamilyPageAddForm .photo-up {
@@ -2178,6 +2212,8 @@ text-align: center;
 
 #MomentPageAddForm input[type="text"] {
   color: #fff;
+  font-family: 'futura-pt', helvetica, arial, sans-serif !important;
+  text-transform: uppercase;
 }
 
 #MomentPageAddForm .page_title {

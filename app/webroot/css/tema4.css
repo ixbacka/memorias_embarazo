@@ -138,6 +138,24 @@ form .submit input[type="submit"]{
   width: 661px;
   height: 363px;
 }
+
+.add_moment:before {
+  background-image: url(../img/tema4/agrega_memoria.png);
+}
+
+#IlovemybabyPageAddForm .opcion {
+  background-image: url(../img/tema4/caballo.png);
+}
+#IlovemybabyPageAddForm .opcion+.opcion {
+  background-image: url(../img/tema4/tambor.png);
+}
+
+#IlovemybabyPageAddForm .opcion+.opcion+.opcion {
+  background-image: url(../img/tema4/mar.png);
+}
+
+
+
 /* COLORS */
 
 #last_input,
@@ -222,6 +240,10 @@ ul.vertical_menu_1 li.:hover a {
 
 .add_moment {
   top: 962px;
+}
+
+.menu {
+  top: 125px;
 }
 
 .menu_trims .current,
