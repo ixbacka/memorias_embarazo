@@ -3,6 +3,10 @@ body {
   color: #808080;
 }
 
+input[type="text"], input[type="number"], textarea {
+  color: #808080;
+}
+
 .ask{
   background-image: url(../img/tema2/ayuda.png);
 }
@@ -26,6 +30,10 @@ body {
 
 .title_page{
   background-image: url(../img/tema2/titulo_back.png);
+}
+
+.whoami_photo {
+  background-image: url(../img/tema2/marco_whoami.png);
 }
 
 .cover_photo,
@@ -68,8 +76,17 @@ p.whatdo{
   background-image: url(../img/tema2/bt_escribir.png);
 }
 
+.write_bt:hover {
+  margin-top: -12px;
+}
+
+
 .share_bt{
   background-image: url(../img/tema2/bt_compartir.png);
+}
+
+.share_bt:hover {
+  margin-top: -20px;
 }
 
 .watch_bt{
@@ -107,6 +124,10 @@ p.whatdo{
   background-image: url(../img/tema2/siguiente.png);
 }
 
+form .submit input[type="submit"]{
+  background-image: url(../img/tema2/bt_guardar.png);
+}
+
 #send_OK input[type="submit"] {
   background-image: url(../img/tema2/bt_aceptar.png);
 }
@@ -115,6 +136,33 @@ p.whatdo{
   background-image: url(../img/tema2/footer.png);
 }
 
+.bebes {
+  background: url(../img/tema2/bebesotes.png);
+  width: 644px;
+  height: 363px;
+  left: 70px;
+}
+
+.add_moment:before {
+  background-image: url(../img/tema2/agrega_memoria.png);
+}
+
+#IlovemybabyPageAddForm .opcion {
+  background-image: url(../img/tema2/caballo.png);
+}
+#IlovemybabyPageAddForm .opcion+.opcion {
+  background-image: url(../img/tema2/tambor.png);
+}
+
+#IlovemybabyPageAddForm .opcion+.opcion+.opcion {
+  background-image: url(../img/tema2/mar.png);
+}
+
+#queesanidar {
+  background-image: url(../img/tema2/pop_anidar.png);
+}
+
+
 /* COLORS */
 
 #last_input,
@@ -122,11 +170,58 @@ p.whatdo{
 p.middle_note,
 .ultra .info h3,
 .note_sintom_,
-#SpecialdeliveryPageAddForm .nota-foot {
+#SpecialdeliveryPageAddForm .nota-foot
+#AnimoPageAddForm h3,
+#BellymonthPageAddForm .cerca,
+#GettingclosePageAddForm .miedo,
+#CoolultrasoundPageAddForm .uno h3,
+#NestingPageAddForm .emociones,
+#ByebellyPageAddForm .nota,
+#AnimoPageAddForm p {
   color: #0C5773; //AZUL
 }
 
-ul.vertical_menu_1 li a{
+.mesuno>p, .mesdos>p, .mestres>p {
   color: #E06873; //ROSA
 }
+
+ul.vertical_menu_1 li{
+  background: #bdccd4;
+  border-right: 1px solid #FDD;
+  border-bottom: 1px solid #FDD;
+}
+
+ul.vertical_menu_1 li a {
+  color: #7095a7;
+}
+
+ul.vertical_menu_1 li.selected,
+ul.vertical_menu_1 li:hover {
+  border-right: 1px solid #FDD;
+  border-bottom: 1px solid #FDD;
+  background: #7095a7;
+}
+
+
+ul.vertical_menu_1 li:first-child,
+ul.vertical_menu_1 li.selected:first-child,
+ul.vertical_menu_1 li:hover:first-child {
+  border-left: 1px solid #fdd;
+}
+
+
+ul.vertical_menu_1 li.selected a,
+ul.vertical_menu_1 li:hover a {
+  color: #fff;
+}
+
+
+input[type="text"] {
+  border-bottom: 1px solid #808080;
+}
+
+.col1 p:after {
+  border-top: 1px dashed rgba(135, 119, 153, 0.47);
+}
+
 

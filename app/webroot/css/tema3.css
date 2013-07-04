@@ -3,6 +3,12 @@ body {
   color: #877799;
 }
 
+input[type="text"], input[type="number"], textarea {
+  color: #877799 !important;
+  border-color: #877799 !important;
+}
+
+
 .ask{
   background-image: url(../img/tema3/ayuda.png);
 }
@@ -26,6 +32,10 @@ body {
 
 .title_page{
   background-image: url(../img/tema3/titulo_back.png);
+}
+
+.whoami_photo {
+  background-image: url(../img/tema3/marco_whoami.png);
 }
 
 .cover_photo,
@@ -61,7 +71,7 @@ body {
 }
 
 p.whatdo{
-  background-image: url(../img/que-quieres-hacer.png); // FALTA?
+  background-image: url(../img/tema3/que-quieres-hacer.png); // FALTA?
 }
 
 .write_bt {
@@ -70,10 +80,12 @@ p.whatdo{
 
 .share_bt{
   background-image: url(../img/tema3/bt_compartir.png);
+  margin-top: -3px;
 }
 
 .watch_bt{
   background-image: url(../img/tema3/bt_ver.png);
+  margin-top: 4px;
 }
 
 .instructions_bt {
@@ -107,12 +119,42 @@ p.whatdo{
   background-image: url(../img/tema3/siguiente.png);
 }
 
+form .submit input[type="submit"]{
+  background-image: url(../img/tema3/bt_guardar.png);
+}
+
 #send_OK input[type="submit"] {
   background-image: url(../img/tema3/bt_aceptar.png);
 }
 
 .footer {
   background-image: url(../img/tema3/footer.png);
+}
+
+.bebes {
+  background: url(../img/tema3/bebesotes.png);
+  width: 661px;
+  height: 363px;
+  left: 70px;
+}
+
+.add_moment:before {
+  background-image: url(../img/tema3/agrega_memoria.png);
+}
+
+#IlovemybabyPageAddForm .opcion {
+  background-image: url(../img/tema3/caballo.png);
+}
+#IlovemybabyPageAddForm .opcion+.opcion {
+  background-image: url(../img/tema3/tambor.png);
+}
+
+#IlovemybabyPageAddForm .opcion+.opcion+.opcion {
+  background-image: url(../img/tema3/mar.png);
+}
+
+#queesanidar {
+  background-image: url(../img/tema3/pop_anidar.png);
 }
 
 
@@ -122,15 +164,64 @@ p.whatdo{
 .aux_text,
 p.middle_note,
 .ultra .info h3,
+#BellymonthPageAddForm .cerca,
+#GettingclosePageAddForm .miedo,
 .note_sintom_,
-#SpecialdeliveryPageAddForm .nota-foot {
+#SpecialdeliveryPageAddForm .nota-foot,
+#AnimoPageAddForm h3,
+#NestingPageAddForm .emociones,
+#ByebellyPageAddForm .nota,
+#CoolultrasoundPageAddForm .uno h3,
+#AnimoPageAddForm p {
+  color: #808080;
+}
+
+ul.vertical_menu_1 li{
+  background: #a391b1;
+  border-right: 1px solid #877799;
+  border-bottom: 1px solid #877799;
+
+}
+
+ul.vertical_menu_1 li a {
   color: #fff;
 }
 
-ul.vertical_menu_1 li a{
+ul.vertical_menu_1 li.selected,
+ul.vertical_menu_1 li:hover {
+  border-right: 1px solid #a391b1;
+  border-bottom: 1px solid #a391b1;
+  background: #877799;
+}
+
+
+ul.vertical_menu_1 li:first-child {
+  border-left: 1px solid #877799;
+}
+
+ul.vertical_menu_1 li.selected:first-child,
+ul.vertical_menu_1 li:hover:first-child {
+  border-left: 1px solid #a391b1;
+}
+
+
+ul.vertical_menu_1 li.selected a,
+ul.vertical_menu_1 li.:hover a {
+  color: #877799;
+}
+
+
+.mesuno>p, .mesdos>p, .mestres>p {
   color: #7D7F82;
 }
 
+.col1 p:after {
+  border-top: 1px dashed rgba(135, 119, 153, 0.47);
+}
+
+#MomentPageAddForm .title_page p {
+  color
+}
 
 /* CUSTOM */
 
@@ -138,10 +229,15 @@ ul.vertical_menu_1 li a{
   top: 105px;
 }
 
-.title_page p {
+.title_page p,
+#MomentPageAddForm .title_page p {
   margin-top: -15px;
 }
 
 .title_page span {
   top: 38px;
+}
+
+input[type="text"]{
+  border-bottom: 1px solid #877799;
 }

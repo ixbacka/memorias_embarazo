@@ -285,10 +285,7 @@ fbphotoSelect = function(id) {
 				    array('class' => 'write_bt')
 				);
 			 ?>
-			<!-- <div class="write_bt">Escribir diario</div> -->
-			<!-- <div class="share_bt">Compartir</div> -->
-            <a href="#dialog-box" class="share_bt"  id="sharepopo"> Compartir </a>
-			<!-- <div class="watch_bt">Ver Diario</div> -->
+      <a href="#dialog-box" class="share_bt"  id="sharepopo"> Compartir </a>
 			<a href="//operacionxperia.com/momtomom/memorias_embarazo/profiles/view_book/<?php echo $profileid;?>" target="_blank" class="watch_bt">Ver Diario</a>
 		</div>
 

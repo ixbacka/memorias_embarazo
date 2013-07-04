@@ -108,7 +108,7 @@
   width: 750px;
   height: 810px;
   background-image: url(../img/nube4.png),url(../img/nube5.png), url(../img/nube4.png);
-  background-position: left bottom, 0px 6px, 0px -31px;
+  background-position: left 500px, 0px 6px, 0px -31px;
   background-repeat: no-repeat;
   padding: 0 35px;
 }
@@ -156,6 +156,7 @@
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-size: 17px;
+  color: #007EC4;
 }
 
 #seleccionar_tema{
@@ -402,12 +403,12 @@ left: 11px;
 
 .ul_settings{
 position: fixed;
-top: 224px;
+top: 235px;
 color: #aeaeae;
 font-size: 20px;
 line-height: 45px;
 list-style: none;
-left: 395px;
+left: 439px;
 }
 
 #personalizar_popup{

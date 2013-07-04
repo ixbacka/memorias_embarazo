@@ -3,6 +3,12 @@ body {
   color: #511114;
 }
 
+input[type="text"], input[type="number"], textarea {
+  color: #511114;
+}
+
+
+
 .ask{
   background-image: url(../img/tema4/ayuda.png);
 }
@@ -28,6 +34,10 @@ body {
   background-image: url(../img/tema4/titulo_back.png);
 }
 
+.whoami_photo {
+  background-image: url(../img/tema4/marco_whoami.png);
+}
+
 .cover_photo,
 .photo-up,
 .photo-v {
@@ -51,6 +61,8 @@ body {
 #photo-back-1 {
   background-image: url(../img/tema4/marco_fondo.png);
 }
+
+
 
 .pick_fb{
   background-image: url(../img/tema4/bt_elegir.png);
@@ -117,9 +129,41 @@ p.whatdo{
   background-image: url(../img/tema4/footer.png);
 }
 
+form .submit input[type="submit"]{
+  background-image: url(../img/tema4/bt_guardar.png);
+}
+
 #send_OK input[type="submit"]{
 	background-image: url(../img/tema4/bt_aceptar.png);
 }
+
+.bebes {
+  background: url(../img/tema4/bebesotes.png);
+  top: 200px;
+  left: 70px;
+  width: 661px;
+  height: 363px;
+}
+
+.add_moment:before {
+  background-image: url(../img/tema4/agrega_memoria.png);
+}
+
+#IlovemybabyPageAddForm .opcion {
+  background-image: url(../img/tema4/caballo.png);
+}
+#IlovemybabyPageAddForm .opcion+.opcion {
+  background-image: url(../img/tema4/tambor.png);
+}
+
+#IlovemybabyPageAddForm .opcion+.opcion+.opcion {
+  background-image: url(../img/tema4/mar.png);
+}
+
+#queesanidar {
+  background-image: url(../img/tema4/pop_anidar.png);
+}
+
 
 /* COLORS */
 
@@ -128,15 +172,52 @@ p.whatdo{
 p.middle_note,
 .ultra .info h3,
 .note_sintom_,
-#SpecialdeliveryPageAddForm .nota-foot {
-  color: #0C5773; //AZUL
+#SpecialdeliveryPageAddForm .nota-foot,
+#AnimoPageAddForm h3,
+#BellymonthPageAddForm .cerca,
+#GettingclosePageAddForm .miedo,
+#CoolultrasoundPageAddForm .uno h3,
+#NestingPageAddForm .emociones,
+#ByebellyPageAddForm .nota,
+#AnimoPageAddForm p {
+  color: ##632c4f;
 }
 
-ul.vertical_menu_1 li a{
-  color: #E06873; //ROSA
+ul.vertical_menu_1 li{
+  background: #c5deb3;
+  border-right: 1px solid #4d2e11;
+  border-bottom: 1px solid #4d2e11;
+
 }
 
-ul.vertical_menu_1 li.selected a{
+ul.vertical_menu_1 li a {
+  color: #632c4f;
+}
+
+ul.vertical_menu_1 li.selected,
+ul.vertical_menu_1 li:hover {
+  background: #fce385;
+  border-right: 1px solid #4d2e11;
+  border-bottom: 1px solid #4d2e11;
+}
+
+
+ul.vertical_menu_1 li:first-child {
+  border-left: 1px solid #4d2e11;
+}
+
+ul.vertical_menu_1 li.selected:first-child,
+ul.vertical_menu_1 li:hover:first-child {
+  border-left: 1px solid #a391b1;
+}
+
+
+ul.vertical_menu_1 li.selected a,
+ul.vertical_menu_1 li.:hover a {
+  color: #632c4f;
+}
+
+.mesuno>p, .mesdos>p, .mestres>p {
  color: #4D2E11;
 }
 
@@ -175,9 +256,33 @@ ul.vertical_menu_1 li.selected a{
   top: 962px;
 }
 
+.menu {
+  top: 125px;
+}
+
 .menu_trims .current,
 .first_trim:hover,
 .second_trim:hover,
 .third_trim:hover {
   background-position: 0 36px;
 }
+
+
+input[type="text"] {
+  border-bottom: 1px solid #511114;
+}
+
+.col1 p:after {
+  border-top: 1px dashed rgba(135, 119, 153, 0.47);
+}
+
+
+p.middle_note {
+  top: 120px;
+}
+
+
+.sintomPages {
+  top: 190px;
+}
+
