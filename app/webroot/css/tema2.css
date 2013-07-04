@@ -32,6 +32,10 @@ input[type="text"], input[type="number"], textarea {
   background-image: url(../img/tema2/titulo_back.png);
 }
 
+.whoami_photo {
+  background-image: url(../img/tema2/marco_whoami.png);
+}
+
 .cover_photo,
 .photo-up,
 .photo-v {
@@ -72,8 +76,17 @@ p.whatdo{
   background-image: url(../img/tema2/bt_escribir.png);
 }
 
+.write_bt:hover {
+  margin-top: -12px;
+}
+
+
 .share_bt{
   background-image: url(../img/tema2/bt_compartir.png);
+}
+
+.share_bt:hover {
+  margin-top: -20px;
 }
 
 .watch_bt{
@@ -145,6 +158,11 @@ form .submit input[type="submit"]{
   background-image: url(../img/tema2/mar.png);
 }
 
+#queesanidar {
+  background-image: url(../img/tema2/pop_anidar.png);
+}
+
+
 /* COLORS */
 
 #last_input,
@@ -154,6 +172,11 @@ p.middle_note,
 .note_sintom_,
 #SpecialdeliveryPageAddForm .nota-foot
 #AnimoPageAddForm h3,
+#BellymonthPageAddForm .cerca,
+#GettingclosePageAddForm .miedo,
+#CoolultrasoundPageAddForm .uno h3,
+#NestingPageAddForm .emociones,
+#ByebellyPageAddForm .nota,
 #AnimoPageAddForm p {
   color: #0C5773; //AZUL
 }

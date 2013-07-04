@@ -34,6 +34,10 @@ input[type="text"], input[type="number"], textarea {
   background-image: url(../img/tema3/titulo_back.png);
 }
 
+.whoami_photo {
+  background-image: url(../img/tema3/marco_whoami.png);
+}
+
 .cover_photo,
 .photo-up,
 .photo-v {
@@ -76,10 +80,12 @@ p.whatdo{
 
 .share_bt{
   background-image: url(../img/tema3/bt_compartir.png);
+  margin-top: -3px;
 }
 
 .watch_bt{
   background-image: url(../img/tema3/bt_ver.png);
+  margin-top: 4px;
 }
 
 .instructions_bt {
@@ -127,6 +133,9 @@ form .submit input[type="submit"]{
 
 .bebes {
   background: url(../img/tema3/bebesotes.png);
+  width: 661px;
+  height: 363px;
+  left: 70px;
 }
 
 .add_moment:before {
@@ -144,6 +153,10 @@ form .submit input[type="submit"]{
   background-image: url(../img/tema3/mar.png);
 }
 
+#queesanidar {
+  background-image: url(../img/tema3/pop_anidar.png);
+}
+
 
 /* COLORS */
 
@@ -151,9 +164,14 @@ form .submit input[type="submit"]{
 .aux_text,
 p.middle_note,
 .ultra .info h3,
+#BellymonthPageAddForm .cerca,
+#GettingclosePageAddForm .miedo,
 .note_sintom_,
 #SpecialdeliveryPageAddForm .nota-foot,
 #AnimoPageAddForm h3,
+#NestingPageAddForm .emociones,
+#ByebellyPageAddForm .nota,
+#CoolultrasoundPageAddForm .uno h3,
 #AnimoPageAddForm p {
   color: #808080;
 }

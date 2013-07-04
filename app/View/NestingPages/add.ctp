@@ -95,7 +95,7 @@ fbphotoSelect = function(id, idpapa) {
 			
 			popanidar = 1; // and set value to 1
 			console.log('popanidar '+popanidar);
-
+      
 			$("#queesanidar").bind( "clickoutside", function(event){
 			  //$(this).hide();
 			  disablePopup_anidar();
@@ -131,48 +131,11 @@ function readURL(input) {
 
 <style type="text/css">
 
-#queesanidar{
-	display: none;
-	background-image: url(../img/pop_anidar.png);
-	width: 390px;
-	height: 366px;
-	position: fixed;
-	left: 144px;
-	top: 500px;
-	z-index: 1;
-}
-
 <?php if( isset($nesting['NestingPage']['room_photo']) ){ ?>
 #room_photo_back{
 	background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$nesting['NestingPage']['room_photo']); ?>);
 }
 <?php }?>
-
- <?php 
-    $tema = $this->Session->read("User.theme");
-
-    if($tema == 2){ 
-  ?>
-    #queesanidar {
-      background-image: url(../img/tema2/pop_anidar.png);
-    }
-  <?php
-    } 
-    elseif($tema == 3){ 
-        ?>
-    #queesanidar {
-      background-image: url(../img/tema3/pop_anidar.png);
-    }
-  <?php
-    } 
-    elseif($tema == 4){ 
-       ?>
-    #queesanidar {
-      background-image: url(../img/tema4/pop_anidar.png);
-    }
-  <?php
-    } 
-    ?>
 </style>
 
 <!-- Markup for Carson Shold's Photo Selector -->

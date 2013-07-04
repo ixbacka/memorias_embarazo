@@ -34,6 +34,10 @@ input[type="text"], input[type="number"], textarea {
   background-image: url(../img/tema4/titulo_back.png);
 }
 
+.whoami_photo {
+  background-image: url(../img/tema4/marco_whoami.png);
+}
+
 .cover_photo,
 .photo-up,
 .photo-v {
@@ -57,6 +61,8 @@ input[type="text"], input[type="number"], textarea {
 #photo-back-1 {
   background-image: url(../img/tema4/marco_fondo.png);
 }
+
+
 
 .pick_fb{
   background-image: url(../img/tema4/bt_elegir.png);
@@ -154,6 +160,9 @@ form .submit input[type="submit"]{
   background-image: url(../img/tema4/mar.png);
 }
 
+#queesanidar {
+  background-image: url(../img/tema4/pop_anidar.png);
+}
 
 
 /* COLORS */
@@ -165,8 +174,13 @@ p.middle_note,
 .note_sintom_,
 #SpecialdeliveryPageAddForm .nota-foot,
 #AnimoPageAddForm h3,
+#BellymonthPageAddForm .cerca,
+#GettingclosePageAddForm .miedo,
+#CoolultrasoundPageAddForm .uno h3,
+#NestingPageAddForm .emociones,
+#ByebellyPageAddForm .nota,
 #AnimoPageAddForm p {
-  color: #0C5773; //AZUL
+  color: ##632c4f;
 }
 
 ul.vertical_menu_1 li{
@@ -263,4 +277,12 @@ input[type="text"] {
 }
 
 
+p.middle_note {
+  top: 120px;
+}
+
+
+.sintomPages {
+  top: 190px;
+}
 
