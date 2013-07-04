@@ -22,7 +22,7 @@ class WelcomebbyPagesController extends AppController {
 	
 	public function add(){
 
-		$facebook = $this->Session->read("facebook";
+		$facebook = $this->Session->read("facebook");
 		$uid  = $facebook->getUser();
 
 		 if( $this->Session->read('User.uid') ){

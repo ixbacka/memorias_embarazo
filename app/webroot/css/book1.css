@@ -1214,24 +1214,6 @@ height: 15px;
   margin-left: 300px;
 }
 
-.familytreeFile div.pick_fb{
-  background-image: url(../img/bt_elegir.png);
-  width: 107px;
-  height: 20px;
-  top: 55px;
-  left: 29px;
-}
-
-.familytreeFile input[type="file"].upload_bt {
-  background-image: url(../img/bt_subir_foto.png);
-  width: 104px;
-  height: 17px;
-  text-indent: -9999px;
-  top: 60px;
-  left: 29px;
-  position: relative;
-}
-
 .name_input{
   top:200px;
   color: #147cc1;

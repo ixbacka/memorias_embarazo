@@ -18,11 +18,7 @@
              echo $this->Html->css('book4'); 
         }
 
-        $font = $perfil['Profile']['font'];
-        if($font == 1){ echo $this->Html->css('letra1'); } 
-        elseif($font == 2){ echo $this->Html->css('letra2'); } 
-        elseif($font == 3){ echo $this->Html->css('letra3'); } 
-        elseif($font == 4){ echo $this->Html->css('letra4'); } 
+      
   ?> 
 
 
@@ -162,7 +158,7 @@ body{
 <?php if( isset($firstkick['FirstkickPage']['photo']) ){ ?>
 
 .firstkick_photo{
-  background-image: url(../img/marco.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$firstkick['FirstkickPage']['photo']); ?>);
+  background-image: url(../../img/marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$firstkick['FirstkickPage']['photo']); ?>);
   background-size: 297px 392px, 225px 320px;
 }
 
@@ -170,32 +166,32 @@ body{
 
 <?php if( isset($bellymonth['BellymonthPage']['photo']) ){ ?>
 .belly_photo_back{
-  background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$bellymonth['BellymonthPage']['photo']); ?>);
+  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$bellymonth['BellymonthPage']['photo']); ?>);
 }
 <?php }?>
 
 
 <?php if( isset($bbyshower['BabyshowerPage']['photo1']) ){ ?>
 #photo1_back_{
-  background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$bbyshower['BabyshowerPage']['photo1']); ?>);
+  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$bbyshower['BabyshowerPage']['photo1']); ?>);
 }
 <?php }?>
 
 <?php if( isset($bbyshower['BabyshowerPage']['photo2']) ){ ?>
 #photo2_back_{
-  background-image:url(../img/cover_photos/<?php echo str_replace(' ','%20',$bbyshower['BabyshowerPage']['photo2']); ?>);
+  background-image:url(../../img/cover_photos/<?php echo str_replace(' ','%20',$bbyshower['BabyshowerPage']['photo2']); ?>);
 }
 <?php }?>
 
 <?php if( isset($cool['CoolultrasoundPage']['photo']) ){ ?>
 #photo_back{
-  background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$cool['CoolultrasoundPage']['photo']); ?>);
+  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$cool['CoolultrasoundPage']['photo']); ?>);
 }
 <?php }?>
 
 <?php if( isset($nesting['NestingPage']['room_photo']) ){ ?>
 #room_photo_back{
-  background-image: url(../img/cover_photos/<?php echo str_replace(' ','%20',$nesting['NestingPage']['room_photo']); ?>);
+  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$nesting['NestingPage']['room_photo']); ?>);
 }
 <?php }?>
 
@@ -218,7 +214,7 @@ body{
 
 <?php if( isset($familytree['FamilytreePage']['grandpa_dad_img']) ){ ?>
 #grandpa_dad-back{
-  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_dad_img']); ?>);
+  background-image: url(../../img/marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_dad_img']); ?>);
   background-size: 186px 186px,  120px 120px;
   border-radius: 120px;
   height: 150px;width: 150px;
@@ -233,7 +229,7 @@ margin-top: 50px;
 
 <?php if( isset($familytree['FamilytreePage']['grandpa_mom_img']) ){ ?>
 #grandpa_mom-back{
-  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_mom_img']); ?>);
+  background-image: url(../../img/marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_mom_img']); ?>);
   background-size: 186px 186px,  120px 120px;
   border-radius: 120px;
   height: 150px;width: 150px;
@@ -248,7 +244,7 @@ margin-top: 50px;
 
 <?php if( isset($familytree['FamilytreePage']['grandma_dad_img']) ){ ?>
 #grandma_dad-back{
-  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_dad_img']); ?>);
+  background-image: url(../../img/marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_dad_img']); ?>);
   background-size: 186px 186px,  120px 120px;
   border-radius: 120px;
   height: 150px;width: 150px;
@@ -263,7 +259,7 @@ margin-top: 50px;
 
 <?php if( isset($familytree['FamilytreePage']['grandma_mom_img']) ){ ?>
 #grandma_mom-back{
-  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_mom_img']); ?>);
+  background-image: url(../../img/marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_mom_img']); ?>);
   background-size: 186px 186px,  120px 120px;
   border-radius: 120px;
   height: 150px;width: 150px;
@@ -278,7 +274,7 @@ margin-top: 50px;
 
 <?php if( isset($familytree['FamilytreePage']['dad_img']) ){ ?>
 #dad-back{
-  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['dad_img']); ?>);
+  background-image: url(../../img/marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['dad_img']); ?>);
   background-size: 186px 186px,  120px 120px;
   border-radius: 120px;
 
@@ -294,7 +290,7 @@ margin-top: 50px;
 
 <?php if( isset($familytree['FamilytreePage']['mom_img']) ){ ?>
 #mom-back{
-  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['mom_img']); ?>);
+  background-image: url(../../img/marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['mom_img']); ?>);
   background-size: 186px 186px,  120px 120px;
   border-radius: 120px;
   height: 150px;width: 150px;
@@ -309,7 +305,7 @@ margin-top: 50px;
 
 <?php if( isset($familytree['FamilytreePage']['baby_img']) ){ ?>
 #baby-back{
-  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['baby_img']); ?>);
+  background-image: url(../../img/marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['baby_img']); ?>);
   background-size: 186px 186px,  120px 120px;
   border-radius: 120px;
   height: 150px;width: 150px;

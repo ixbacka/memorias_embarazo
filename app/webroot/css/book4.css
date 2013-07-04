@@ -1,0 +1,116 @@
+/*book4.css*/
+
+body{
+	color:#511114;
+}
+
+.b-page-cover, .b-page{
+  background-image: url(../img/tema4/back.png);
+}
+
+.book-cover-photo{
+  background-image: url(../img/tema4/marco.png), url(../img/tema4/marco_fondo.png);
+}
+.book-header{
+  background-image: url(../img/tema4/header.png);
+ 
+}
+
+
+.book-footer{
+ background-image: url(../img/tema4/footer.png);
+
+}
+
+.book-title-page{
+  background-image: url(../img/tema4/titulo_back.png);
+}
+
+
+#ultrasound_photo_1{
+background-image: url(../img/tema4/marco.png), url(../img/tema4/marco_fondo.png);
+
+}
+
+#ultrasound_photo_2{
+  background-image: url(../img/tema4/marco.png), url(../img/tema4/marco_fondo.png);
+
+}
+
+
+#photo1{
+  background-image: url(../img/tema4/marco.png), url(../img/tema4/marco_fondo.png);
+}
+
+#photo2{
+  background-image: url(../img/tema4/marco.png), url(../img/tema4/marco_fondo.png);
+}
+
+
+#photo3{
+  background-image: url(../img/tema4/marco.png), url(../img/tema4/marco_fondo.png);
+}
+
+
+.belly_photo_back{
+  background-image: url(../img/tema4/marco_fondo.png);
+}
+
+
+#BabyshowerPageAddForm #photo1, #BabyshowerPageAddForm #photo2 {
+  background-image: url(../img/tema4/marco.png);
+}
+
+#photo1_back_{
+  background-image: url(../img/tema4/marco_fondo.png);
+
+}
+
+#photo2_back_{
+  background-image: url(../img/tema4/marco_fondo.png);
+
+}
+
+
+
+#photo {
+
+  background-image: url(http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/marco.png);
+
+}
+
+#photo_back{
+  background-image: url(../img/tema4/marco_fondo.png);
+}
+
+
+#room_photo_back{
+  background-image: url(../img/tema4/marco_fondo.png);
+}
+
+
+#photo-back{
+  background-image: url(../img/tema4/marco_fondo.png);
+}
+.epilogPages {
+  background-image: url(../img/tema4/epilogo.png);
+}
+
+#NewfamilyPageAddForm {
+  background-image: url(../img/tema4/newfam.png);
+}
+#photo-back-1{
+  background-image: url(../img/tema4/marco_fondo.png);
+
+}
+
+.familytreeFile{
+  background-image: url(../img/tema4/marco_circular.png), url(../img/tema4/marco_circular_back.png);
+
+}
+
+.familytreeFile{
+
+  background-image: url(../img/tema4/marco_circular.png), url(../img/tema4/marco_circular_back.png);
+
+}
