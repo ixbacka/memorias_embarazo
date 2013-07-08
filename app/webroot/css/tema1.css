@@ -581,6 +581,46 @@ input[type="number"] {
   margin: 0 5px;
 }
 
+.familytreePages.form {
+    background: url(../img/family_tree.png) center 190px no-repeat;
+    top: 80px;
+}
+
+#grandpa_dad {
+    top: 50px;
+    left: 20px;
+}
+#grandpa_mom {
+    top: 50px;
+    left: 200px;
+}
+#grandma_dad {
+    top: 50px;
+    left: 402px;
+}
+#grandma_mom {
+    top: 50px;
+    left: 585px;
+}
+#dad {
+    top: 320px;
+    left: 200px;
+}
+#mom {
+    top: 320px;
+    left: 402px;
+}
+#baby {
+    top: 540px;
+    left: 300px;
+}
+
+#FamilytreePageAddForm .submit {
+  top: 670px;
+  left: 460px;
+  z-index: 1;
+}
+
 form#familytreePageAddForm{
   position: absolute;
   top: 100px;
@@ -683,45 +723,11 @@ form .input {
 .familytreeFile{
   width: 172px;
   height: 171px;
-  left: 10px;
   background-image: url(../img/marco_circular.png), url(../img/marco_circular_back.png);
   background-position: center center, center center;
   text-indent: -9999px;
-  background-repeat: no-repeat;  
-  float: left;
-}
-
-.familytreeFile{
-  width: 172px;
-  height: 171px;
-  left: 10px;
-  margin-top: 30px;
-  background-image: url(../img/marco_circular.png), url(../img/marco_circular_back.png);
-  background-position: center center, center center;
-  text-indent: -9999px;
-  background-repeat: no-repeat;  
-  float: left;
-  display: inline-block;
-}
-
-#grandpa_dad{
-  margin-left: 20px;
-}
-
-#grandma_dad{
-  margin-left: 40px;  
-}
-
-#dad{
-  margin-left: 190px;
-}
-
-#mom{
-  margin-left: 40px;
-}
-
-#baby{
-  margin-left: 300px;
+  background-repeat: no-repeat;
+  position: absolute;
 }
 
 .familytreeFile div.pick_fb{
@@ -773,10 +779,6 @@ div.index, div.view {
   width: 810px;
   border:none;
   padding: 0;
-}
-
-.familytreePages form{
-  margin-top: 130px;
 }
 
 .form {
@@ -2231,6 +2233,7 @@ text-align: center;
   color: #fff;
   font-family: 'futura-pt', helvetica, arial, sans-serif !important;
   text-transform: uppercase;
+  margin-top: 30px;
 }
 
 #MomentPageAddForm .page_title {
@@ -2259,9 +2262,10 @@ text-align: center;
 
 #MomentPageAddForm .mom-desc {
   position: absolute;
-  top: 380px;
-  width: 400px;
-  left: 210px;
+  top: 350px;
+  width: 420px;
+  height: 160px;
+  left: 180px;
 }
 
 /* ESTADOS */
