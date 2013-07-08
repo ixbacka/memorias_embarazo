@@ -164,6 +164,18 @@ form .submit input[type="submit"]{
   background-image: url(../img/tema4/pop_anidar.png);
 }
 
+.add_moment{
+  background-image: url(../img/tema4/bt_agregar.png);
+}
+
+.familytreepages.form {
+    background: url(../img/tema4/family_tree.png) center 190px no-repeat;
+}
+
+.familytreeFile{
+  background-image: url(../img/tema4/marco_circular.png), url(../img/tema4/marco_circular_back.png);
+}
+
 
 /* COLORS */
 
