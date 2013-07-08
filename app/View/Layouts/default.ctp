@@ -72,25 +72,25 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
         $tema = $this->Session->read("User.theme");
         echo $this->Html->css('tema1'); 
 
-        if( strpos($_SERVER['REQUEST_URI'], 'book') == TRUE ){ 
+        if( strpos($_SERVER['REQUEST_URI'], 'view_book') == TRUE ){ 
            echo $this->Html->css('book1'); 
         }
 
         if($tema == 2){ 
           echo $this->Html->css('tema2'); 
-          if( strpos($_SERVER['REQUEST_URI'], 'book') == TRUE ){ 
+          if( strpos($_SERVER['REQUEST_URI'], 'view_book') == TRUE ){ 
              echo $this->Html->css('book2'); 
           }
         } 
         elseif($tema == 3){ 
           echo $this->Html->css('tema3'); 
-          if( strpos($_SERVER['REQUEST_URI'], 'book') == TRUE ){ 
+          if( strpos($_SERVER['REQUEST_URI'], 'view_book') == TRUE ){ 
              echo $this->Html->css('book3'); 
           }
         } 
         elseif($tema == 4){ 
           echo $this->Html->css('tema4'); 
-          if( strpos($_SERVER['REQUEST_URI'], 'book') == TRUE ){ 
+          if( strpos($_SERVER['REQUEST_URI'], 'view_book') == TRUE ){ 
              echo $this->Html->css('book4'); 
           }
         } 

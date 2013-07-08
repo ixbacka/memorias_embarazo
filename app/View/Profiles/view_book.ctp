@@ -520,7 +520,7 @@ margin-top: 50px;
 
         <div class="book-page-title">
           <div class="book-title-page">
-            <p>Quien Soy Yo...</p>
+            <p>Yo Soy...</p>
           </div>
         </div>
 

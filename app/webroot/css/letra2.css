@@ -5,6 +5,6 @@ input[type="text"], input[type="number"], textarea {
 
 
 
-.book-form span{
+.book-form span, .print-form span{
 	font-family: 'Loved by the King', cursive;
 }

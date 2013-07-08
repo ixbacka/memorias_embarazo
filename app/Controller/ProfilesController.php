@@ -62,6 +62,44 @@ class ProfilesController extends AppController {
 	}
 
 
+	public function print_book($id = null){
+
+		$leid = $id;
+      	
+      	$this->set('animo',$this->AnimoPage->find('first', array( 'conditions' => array( 'AnimoPage.profile_id' => $leid ) )));
+   	    $this->set('bbyshower',$this->BabyshowerPage->find('first', array( 'conditions' => array( 'BabyshowerPage.profile_id' => $leid ) )));
+	    $this->set('congrats',$this->CongratsPage->find('first', array( 'conditions' => array( 'CongratsPage.profile_id' => $leid ) )));
+        $this->set('belly',$this->BellyPage->find('first', array( 'conditions' => array( 'BellyPage.profile_id' => $leid ) )));
+   		$this->set('bellymonth',$this->BellymonthPage->find('first', array( 'conditions' => array( 'BellymonthPage.profile_id' => $leid ) )));
+    	$this->set('byebelly',$this->ByebellyPage->find('first', array( 'conditions' => array( 'ByebellyPage.profile_id' => $leid ) )));
+        $this->set('childsex',$this->ChildsexPage->find('first', array( 'conditions' => array( 'ChildsexPage.profile_id' => $leid ) )));
+   	    $this->set('cool',$this->CoolultrasoundPage->find('first', array( 'conditions' => array( 'CoolultrasoundPage.profile_id' => $leid ) )));
+   	    $this->set('epilog',$this->EpilogPage->find('first', array( 'conditions' => array( 'EpilogPage.profile_id' => $leid ) )));
+        $this->set('familytree',$this->FamilytreePage->find('first', array( 'conditions' => array( 'FamilytreePage.profile_id' => $leid ) )));
+        $this->set('firstvisit',$this->FirstVisitPage->find('first', array( 'conditions' => array( 'FirstVisitPage.profile_id' => $leid ) )));
+   	    $this->set('firstkick',$this->FirstkickPage->find('first', array( 'conditions' => array( 'FirstkickPage.profile_id' => $leid ) )));
+        $this->set('gettingclose',$this->GettingclosePage->find('first', array( 'conditions' => array( 'GettingclosePage.profile_id' => $leid ) )));
+        $this->set('ilovemybby',$this->IlovemybabyPage->find('first', array( 'conditions' => array( 'IlovemybabyPage.profile_id' => $leid ) )));
+   	    $this->set('nesting',$this->NestingPage->find('first', array( 'conditions' => array( 'NestingPage.profile_id' => $leid ) )));
+   	    $this->set('new',$this->NewfamilyPage->find('first', array( 'conditions' => array( 'NewfamilyPage.profile_id' => $leid ) )));
+
+   	    $this->set('momentos',  $this->MomentPage->find('all', array( 'conditions' => array( 'MomentPage.profile_id' => $leid ) ) ));
+   		$this->set('sintoms',$this->SintomPage->find('first', array( 'conditions' => array( 'SintomPage.profile_id' => $leid ) )));
+   	    $this->set('special',$this->SpecialdeliveryPage->find('first', array( 'conditions' => array( 'SpecialdeliveryPage.profile_id' => $leid ) )));
+        $this->set('ultrasound',$this->UltrasoundPage->find('first', array( 'conditions' => array( 'UltrasoundPage.profile_id' => $leid ) )));
+   	    $this->set('welcome',$this->WelcomebbyPage->find('first', array( 'conditions' => array( 'WelcomebbyPage.profile_id' => $leid ) )));
+        $this->set('whoami',$this->WhoamiPage->find('first', array( 'conditions' => array( 'WhoamiPage.profile_id' => $leid ) )));
+
+
+		$profid = $this->Profile->find('first', array( 'conditions' => array( 'Profile.id' => $leid ) ) );
+	    $this->set('cover_pic', $profid['Profile']['cover_photo']); 
+	    $this->set('perfil', $profid); 
+
+	    $this->set('profileid',$leid);
+
+	}
+
+
     /*
     * Funcion para que el usuario cambie el tema 
     *

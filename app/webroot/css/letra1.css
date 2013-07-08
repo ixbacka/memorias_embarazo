@@ -3,6 +3,7 @@ input[type="text"], input[type="number"], textarea {
 }
 
 
-.book-form span{
+.book-form span, .print-form span{
 	font-family: 'Crafty Girls', cursive !important;  
 }
+

@@ -2,6 +2,6 @@
 input[type="text"], input[type="number"], textarea {
 	font-family: 'Waiting for the Sunrise', cursive;
 }
-.book-form span{
+.book-form span, .print-form span{
 	font-family: 'Waiting for the Sunrise', cursive;
 }
