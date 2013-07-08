@@ -616,7 +616,9 @@ input[type="number"] {
 }
 
 #FamilytreePageAddForm .submit {
-  top: 730px;
+  top: 670px;
+  left: 460px;
+  z-index: 1;
 }
 
 form#familytreePageAddForm{
@@ -2231,6 +2233,7 @@ text-align: center;
   color: #fff;
   font-family: 'futura-pt', helvetica, arial, sans-serif !important;
   text-transform: uppercase;
+  margin-top: 30px;
 }
 
 #MomentPageAddForm .page_title {
@@ -2259,9 +2262,10 @@ text-align: center;
 
 #MomentPageAddForm .mom-desc {
   position: absolute;
-  top: 380px;
-  width: 400px;
-  left: 210px;
+  top: 350px;
+  width: 420px;
+  height: 160px;
+  left: 180px;
 }
 
 /* ESTADOS */

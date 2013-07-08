@@ -178,6 +178,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
       <?php } elseif(strpos($_SERVER['REQUEST_URI'], 'fangate') == TRUE){ ?>
         console.log('canvas');
         FB.Canvas.setSize({height:840});
+      <?php } elseif(strpos($_SERVER['REQUEST_URI'],  'familytree' ) == TRUE){ ?>
+        FB.Canvas.setSize({height:1170});
       <?php } else { ?>
       FB.Canvas.setSize({height:1150});
       //setTimeout("FB.Canvas.setAutoGrow()",500);
