@@ -77,21 +77,6 @@ $(document).ready(function() {
 
 <!-- cover.ctp -->
 <STYLE TYPE="text/css">
-body{
-  background: url(../../img/retina_wood.png);
-}
-
-
-.b-page-0, .b-page-7{
-  opacity: 0;
-}
-
-#mybook{
-  position: absolute;
-  top: 3%;
-  left: 50%;
-  margin-left: -450px;
-}
 
 <?php if( isset($cover_pic) ){ ?>
 
