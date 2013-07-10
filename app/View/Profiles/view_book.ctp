@@ -2767,3 +2767,8 @@ margin-top: 50px;
 
   </div>
 </div><!-- FIN DEL LIBRO -->
+<div class="fake-footer">
+  <h2>MOM TO MOM</h2>
+  <span class="fb-bt"><a href="http://facebook.com/momtomommexico">facebook.com/momtomommexico</a></span>
+  <span class="tw-bt"><a href="http://facebook.com/momtomommexico">twitter.com/momtomommx</a></span>
+</div>
