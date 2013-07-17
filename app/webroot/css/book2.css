@@ -2,9 +2,16 @@
 
 body{
 	color:#808080;
+  background-color: #b7c9d2;
+}
+
+.book-form span, #last_input span {
+  color: #808080;
+  padding-left: 5px;
 }
 
 .b-page-cover, .b-page{
+    background-color: #b7c9d2;
   background-image: url(../img/tema2/back.png);
 }
 
@@ -93,9 +100,6 @@ background-image: url(../img/tema2/marco.png), url(../img/tema2/marco_fondo.png)
 #photo-back{
   background-image: url(../img/tema2/marco_fondo.png);
 }
-.epilogPages {
-  background-image: url(../img/tema2/epilogo.png);
-}
 
 #NewfamilyPageAddForm {
   background-image: url(../img/tema2/newfam.png);
@@ -114,4 +118,14 @@ background-image: url(../img/tema2/marco.png), url(../img/tema2/marco_fondo.png)
 
   background-image: url(../img/tema2/marco_circular.png), url(../img/tema2/marco_circular_back.png);
 
+}
+
+.bebes{
+  background-image: url(../img/tema2/bebesotes.png);
+  width: 330px;
+  height: 181px;
+  top: -5px;
+  left: 43px;
+  text-indent: -10000px;
+  background-size: 330px;
 }

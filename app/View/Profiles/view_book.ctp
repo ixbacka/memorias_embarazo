@@ -3,19 +3,23 @@
         if($tema == 1){ 
           echo $this->Html->css('tema1'); 
           echo $this->Html->css('book1'); 
+          $temapath = '';
         } 
         elseif($tema == 2){ 
-          echo $this->Html->css('tema2'); 
-             echo $this->Html->css('book2'); 
+/*          echo $this->Html->css('tema2'); 
+*/             echo $this->Html->css('book2'); 
+             $temapath = 'tema2/';
         } 
         elseif($tema == 3){ 
-          echo $this->Html->css('tema3'); 
-             echo $this->Html->css('book3'); 
-        
+/*          echo $this->Html->css('tema3'); 
+*/             echo $this->Html->css('book3'); 
+                     $temapath = 'tema3/';
+
         } 
         elseif($tema == 4){ 
-          echo $this->Html->css('tema4'); 
-             echo $this->Html->css('book4'); 
+/*          echo $this->Html->css('tema4'); 
+*/             echo $this->Html->css('book4'); 
+             $temapath = 'tema4/';
         }
 
       
@@ -96,7 +100,7 @@ body{
 <?php if( isset($cover_pic) ){ ?>
 
 .book-cover-photo{
-  background-image: url(../../img/marco.png), url(../../img/cover_photos/<?php echo str_replace(' ', '%20', $cover_pic); ?>);
+  background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ', '%20', $cover_pic); ?>);
   background-position: top left, center center;
   background-size: 280px 200px,  235px 180px;
   background-repeat: no-repeat;
@@ -108,7 +112,7 @@ body{
 
 <?php if( isset($whoami['WhoamiPage']['photo']) ){ ?>
 .whoami_photo{
-  background-image: url(../../img/marco_whoami.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$whoami['WhoamiPage']['photo']); ?>);
+  background-image: url(../../img/<?php echo $temapath; ?>marco_whoami.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$whoami['WhoamiPage']['photo']); ?>);
   background-size: 190px, 170px;
 }
 <?php }?>
@@ -117,7 +121,7 @@ body{
 
 <?php if( isset($ultrasound['UltrasoundPage']['first_photo']) ){ ?>
 #ultrasound_photo_1{
-  background-image: url(../../img/marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['first_photo']); ?>);
+  background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['first_photo']); ?>);
   background-size: 200px, 162px 133px;
   background-position: top left, center center;
   background-repeat: no-repeat;   
@@ -126,7 +130,7 @@ body{
 
 <?php if( isset($ultrasound['UltrasoundPage']['second_photo']) ){ ?>
 #ultrasound_photo_2{
-  background-image: url(../../img/marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['second_photo']); ?>);
+  background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['second_photo']); ?>);
   background-size: 200px, 162px 133px;
 }
 <?php }?>
@@ -135,21 +139,21 @@ body{
 
   <?php if( isset($belly['BellyPage']['photo1']) ){ ?>
   #photo1{
-    background-image: url(../../img/marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo1']); ?>);
+    background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo1']); ?>);
   }
   <?php }?>
 
 
   <?php if( isset($belly['BellyPage']['photo2']) ){ ?>
   #photo2{
-    background-image: url(../../img/marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo2']); ?>);
+    background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo2']); ?>);
   }
   <?php }?>
 
 
   <?php if( isset($belly['BellyPage']['photo3']) ){ ?>
   #photo3{
-    background-image: url(../../img/marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo3']); ?>);
+    background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo3']); ?>);
     
   }
   <?php }?>
@@ -158,8 +162,8 @@ body{
 <?php if( isset($firstkick['FirstkickPage']['photo']) ){ ?>
 
 .firstkick_photo{
-  background-image: url(../../img/marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$firstkick['FirstkickPage']['photo']); ?>);
-  background-size: 297px 392px, 225px 320px;
+  background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$firstkick['FirstkickPage']['photo']); ?>);
+  background-size: 166px 210px, 143px 175px;
 }
 
 <?php }?>
@@ -214,7 +218,7 @@ body{
 
 <?php if( isset($familytree['FamilytreePage']['grandpa_dad_img']) ){ ?>
 #grandpa_dad-back{
-  background-image: url(../../img/marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_dad_img']); ?>);
+  background-image: url(../../img/<?php echo $temapath; ?>marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_dad_img']); ?>);
   background-size: 186px 186px,  120px 120px;
   border-radius: 120px;
   height: 150px;width: 150px;
@@ -229,7 +233,7 @@ margin-top: 50px;
 
 <?php if( isset($familytree['FamilytreePage']['grandpa_mom_img']) ){ ?>
 #grandpa_mom-back{
-  background-image: url(../../img/marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_mom_img']); ?>);
+  background-image: url(../../img/<?php echo $temapath; ?>marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_mom_img']); ?>);
   background-size: 186px 186px,  120px 120px;
   border-radius: 120px;
   height: 150px;width: 150px;
@@ -244,7 +248,7 @@ margin-top: 50px;
 
 <?php if( isset($familytree['FamilytreePage']['grandma_dad_img']) ){ ?>
 #grandma_dad-back{
-  background-image: url(../../img/marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_dad_img']); ?>);
+  background-image: url(../../img/<?php echo $temapath; ?>marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_dad_img']); ?>);
   background-size: 186px 186px,  120px 120px;
   border-radius: 120px;
   height: 150px;width: 150px;
@@ -259,7 +263,7 @@ margin-top: 50px;
 
 <?php if( isset($familytree['FamilytreePage']['grandma_mom_img']) ){ ?>
 #grandma_mom-back{
-  background-image: url(../../img/marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_mom_img']); ?>);
+  background-image: url(../../img/<?php echo $temapath; ?>marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_mom_img']); ?>);
   background-size: 186px 186px,  120px 120px;
   border-radius: 120px;
   height: 150px;width: 150px;
@@ -274,7 +278,7 @@ margin-top: 50px;
 
 <?php if( isset($familytree['FamilytreePage']['dad_img']) ){ ?>
 #dad-back{
-  background-image: url(../../img/marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['dad_img']); ?>);
+  background-image: url(../../img/<?php echo $temapath; ?>marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['dad_img']); ?>);
   background-size: 186px 186px,  120px 120px;
   border-radius: 120px;
 
@@ -290,7 +294,7 @@ margin-top: 50px;
 
 <?php if( isset($familytree['FamilytreePage']['mom_img']) ){ ?>
 #mom-back{
-  background-image: url(../../img/marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['mom_img']); ?>);
+  background-image: url(../../img/<?php echo $temapath; ?>marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['mom_img']); ?>);
   background-size: 186px 186px,  120px 120px;
   border-radius: 120px;
   height: 150px;width: 150px;
@@ -305,7 +309,7 @@ margin-top: 50px;
 
 <?php if( isset($familytree['FamilytreePage']['baby_img']) ){ ?>
 #baby-back{
-  background-image: url(../../img/marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['baby_img']); ?>);
+  background-image: url(../../img/<?php echo $temapath; ?>marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['baby_img']); ?>);
   background-size: 186px 186px,  120px 120px;
   border-radius: 120px;
   height: 150px;width: 150px;
@@ -737,10 +741,6 @@ margin-top: 50px;
                 El antojito más raro que he tenido es: 
               </label>
               <span><?php echo $weirdestcraving; ?></span>
-            </p>
-            
-            <p class="note_sintom">
-              Hay que darle a la panza lo que pide. ¿No? Tengo que cuidar mi peso.
             </p>
 
           </div>
@@ -1624,25 +1624,7 @@ margin-top: 50px;
                 <?php if($b4 != "" && is_numeric($b4) == FALSE){ echo $b4; } ?>
               </span>
             </div>
-            <div class="comfy">
-              <p>Estoy más cómoda durmiendo: </p>
-              
-              <p class="opcion">
-                <input type="radio" name="data[BellymonthPage][sleep]" value="1" <?php if($sleep == 1){
-                echo 'checked="checked"'; } ?> />
-                <label>Boca arriba</label>
-              </p>
-              <p class="opcion">
-                <input type="radio" name="data[BellymonthPage][sleep]" value="2" <?php if($sleep == 2){
-                echo 'checked="checked"'; } ?> />
-                <label>De lado</label>
-              </p>
-              <p class="opcion">
-                <input type="radio" name="data[BellymonthPage][sleep]" value="3" <?php if($sleep == 3){
-                echo 'checked="checked"'; } ?> />
-                <label>¿Bromeas? No hay un modo cómodo</label>
-              </p>
-            </div>
+            
           </div>
           
         </div>
@@ -2642,8 +2624,8 @@ margin-top: 50px;
 
         <div class="book-form newfamilyPages" id="NewfamilyPageAddForm">
           <?php 
-            if(isset($nesting['NewfamilyPage']['description'])){
-              $description = $nesting['NewfamilyPage']['description'];
+            if(isset($new['NewfamilyPage']['description'])){
+              $description = $new['NewfamilyPage']['description'];
             } else{
               $description = '';
             }
@@ -2653,7 +2635,9 @@ margin-top: 50px;
           <div id="photo" class="photo-up"></div>
 
           <p>
-            <?php if($description != ''){ echo $description; } ?>
+            <span>
+              <?php if($description != ''){ echo $description; } ?>
+            </span>
           </p>
           
         </div>

@@ -1,0 +1,45 @@
+/*print2.css*/
+
+.print-form p, .opcion label, label {
+	color: #7095a7;
+}
+
+
+.print-form span {
+	border-bottom: 1px solid #7095a7;
+	padding: 0px 10px 0px 10px;
+}
+
+#last_input {
+  color: #632c4f;
+}
+
+.print-page-title, .print-page-title span{
+ color: #e06874;
+}
+
+
+@media print {
+
+  .print-form p{
+    display: block;
+    margin-bottom: 15px;
+    color: #7095a7;
+    width: 100%;
+  }
+
+  .print-form span {
+    color: #000;
+    border-bottom: 1px solid #7095a7;
+    padding: 0px 10px 0px 10px;
+  }
+
+  #last_input {
+    color: #632c4f;
+  }
+
+  .print-page-title p, .print-page-title span{
+    color: #e06874;
+  }
+
+}
