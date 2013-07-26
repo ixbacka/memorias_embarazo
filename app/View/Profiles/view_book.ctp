@@ -1,5 +1,6 @@
 <?php 
         $tema = $perfil['Profile']['theme'];
+        
         if($tema == 1){ 
           echo $this->Html->css('tema1'); 
           echo $this->Html->css('book1'); 

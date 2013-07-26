@@ -31,6 +31,9 @@
       $(".marco").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/marco.png");  
       $(".marco_vert").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/marco_whoami.png");  
       $("#marco-fondo").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/marco_fondo.png");  
+      //marco-circular
+      $(".marco-circular").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/marco_circular.png");  
+
       $(".print-title-page").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/titulo_back.png");  
 
       $("#caballo").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/caballo.png");  
@@ -48,6 +51,7 @@
       $(".marco_vert").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/marco_whoami.png");  
       $("#marco-fondo").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/marco_fondo.png");  
       $(".print-title-page").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/titulo_back.png");  
+      $(".marco-circular").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/marco_circular.png");  
 
       $("#caballo").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/caballo.png");  
       $("#mar").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/mar.png");  
@@ -63,6 +67,7 @@
       $(".marco_vert").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/marco_whoami.png");  
       $("#marco-fondo").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/marco_fondo.png");  
       $(".print-title-page").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/titulo_back.png");  
+      $(".marco-circular").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/marco_circular.png");  
 
       $("#caballo").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/caballo.png");  
       $("#mar").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/mar.png");  
@@ -70,6 +75,8 @@
       $("#losbeibis").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/bebesotes.png");  
 
     <?php } ?>
+
+    setTimeout(function(){window.print()},6000);  
   
   });
 
@@ -120,111 +127,6 @@
 }
 */
 
-
-<?php if( isset($familytree['FamilytreePage']['grandpa_dad_img']) ){ ?>
-#grandpa_dad-back{
-  background-image: url(../../img/marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_dad_img']); ?>);
-  background-size: 186px 186px,  120px 120px;
-  border-radius: 120px;
-  height: 150px;width: 150px;
-  border-radius: 150px;
-  background-position: -15px -15px, center 9px;
-  background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
-}
-<?php }?>
-
-
-<?php if( isset($familytree['FamilytreePage']['grandpa_mom_img']) ){ ?>
-#grandpa_mom-back{
-  background-image: url(../../img/marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_mom_img']); ?>);
-  background-size: 186px 186px,  120px 120px;
-  border-radius: 120px;
-  height: 150px;width: 150px;
-  border-radius: 150px;
-  background-position: -15px -15px, center 9px;
-  background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
-}
-<?php }?>
-
-
-<?php if( isset($familytree['FamilytreePage']['grandma_dad_img']) ){ ?>
-#grandma_dad-back{
-  background-image: url(../../img/marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_dad_img']); ?>);
-  background-size: 186px 186px,  120px 120px;
-  border-radius: 120px;
-  height: 150px;width: 150px;
-border-radius: 150px;
-background-position: -15px -15px, center 9px;
-background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
-}
-<?php }?>
-
-
-<?php if( isset($familytree['FamilytreePage']['grandma_mom_img']) ){ ?>
-#grandma_mom-back{
-  background-image: url(../../img/marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_mom_img']); ?>);
-  background-size: 186px 186px,  120px 120px;
-  border-radius: 120px;
-  height: 150px;width: 150px;
-border-radius: 150px;
-background-position: -15px -15px, center 9px;
-background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
-}
-<?php }?>
-
-
-<?php if( isset($familytree['FamilytreePage']['dad_img']) ){ ?>
-#dad-back{
-  background-image: url(../../img/marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['dad_img']); ?>);
-  background-size: 186px 186px,  120px 120px;
-  border-radius: 120px;
-
-height: 150px;width: 150px;
-border-radius: 150px;
-background-position: -15px -15px, center 9px;
-background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
-
-}
-<?php }?>
-
-<?php if( isset($familytree['FamilytreePage']['mom_img']) ){ ?>
-#mom-back{
-  background-image: url(../../img/marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['mom_img']); ?>);
-  background-size: 186px 186px,  120px 120px;
-  border-radius: 120px;
-  height: 150px;width: 150px;
-border-radius: 150px;
-background-position: -15px -15px, center 9px;
-background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
-
-}
-<?php }?>
-
-<?php if( isset($familytree['FamilytreePage']['baby_img']) ){ ?>
-#baby-back{
-  background-image: url(../../img/marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['baby_img']); ?>);
-  background-size: 186px 186px,  120px 120px;
-  border-radius: 120px;
-  height: 150px;width: 150px;
-border-radius: 150px;
-background-position: -15px -15px, center 9px;
-background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
-}
-<?php }?>
 </STYLE>
 
 
@@ -633,24 +535,48 @@ margin-top: 50px;
             <div class="cravings">
               <label>Antojos</label>
               <div>
-                <span><?php echo $craving1; ?></span>
-                <span><?php echo $craving2; ?></span>
-                <span><?php echo $craving3; ?></span>
-                <span><?php echo $craving4; ?></span>
-                <span><?php echo $craving5; ?></span>
-                <span><?php echo $craving6; ?></span>
+                <?php if( isset($sintoms['SintomPage']['craving1']) && !empty($sintoms['SintomPage']['craving1']) && !is_null($sintoms['SintomPage']['craving1']) ){ ?>
+                  <span><?php echo $craving1; ?></span>
+                <?php } ?>
+                 <?php if(isset($sintoms['SintomPage']['craving2']) && !empty($sintoms['SintomPage']['craving2']) && !is_null($sintoms['SintomPage']['craving2']) ){ ?>
+                  <span><?php echo $craving2; ?></span>
+                <?php } ?>
+                 <?php if(isset($sintoms['SintomPage']['craving3']) && !empty($sintoms['SintomPage']['craving3']) && !is_null($sintoms['SintomPage']['craving3']) ){ ?>
+                  <span><?php echo $craving3; ?></span>
+                <?php } ?>
+                 <?php if(isset($sintoms['SintomPage']['craving4']) && !empty($sintoms['SintomPage']['craving4']) && !is_null($sintoms['SintomPage']['craving4']) ){ ?>
+                  <span><?php echo $craving4; ?></span>
+                <?php } ?>
+                 <?php if(isset($sintoms['SintomPage']['craving5']) && !empty($sintoms['SintomPage']['craving5']) && !is_null($sintoms['SintomPage']['craving5']) ){ ?>
+                  <span><?php echo $craving5; ?></span>
+                <?php } ?>
+                 <?php if(isset($sintoms['SintomPage']['craving6']) && !empty($sintoms['SintomPage']['craving6']) && !is_null($sintoms['SintomPage']['craving6']) ){ ?>
+                  <span><?php echo $craving6; ?></span>
+                <?php } ?>
               </div>
             </div>
 
             <div class="grossnes">
               <label>Ascos</label>
               <div>
-                <span><?php echo $gross1; ?></span>
-                <span><?php echo $gross2; ?></span>
-                <span><?php echo $gross3; ?></span>
-                <span><?php echo $gross4; ?></span>
-                <span><?php echo $gross5; ?></span>
-                <span><?php echo $gross6; ?></span>
+                <?php if(isset($sintoms['SintomPage']['gross1']) && !empty($sintoms['SintomPage']['gross1']) && !is_null($sintoms['SintomPage']['gross1']) ){ ?>
+                  <span><?php echo $gross1; ?></span>
+                <?php } ?>
+                 <?php if(isset($sintoms['SintomPage']['gross2']) && !empty($sintoms['SintomPage']['gross2']) && !is_null($sintoms['SintomPage']['gross2']) ){ ?>
+                  <span><?php echo $gross2; ?></span>
+                <?php } ?>
+                 <?php if(isset($sintoms['SintomPage']['gross3']) && !empty($sintoms['SintomPage']['gross3']) && !is_null($sintoms['SintomPage']['gross3']) ){ ?>
+                  <span><?php echo $gross3; ?></span>
+                <?php } ?>
+                 <?php if(isset($sintoms['SintomPage']['gross4']) && !empty($sintoms['SintomPage']['gross4']) && !is_null($sintoms['SintomPage']['gross4']) ){ ?>
+                  <span><?php echo $gross4; ?></span>
+                <?php } ?>
+                 <?php if(isset($sintoms['SintomPage']['gross5']) && !empty($sintoms['SintomPage']['gross5']) && !is_null($sintoms['SintomPage']['gross5']) ){ ?>
+                  <span><?php echo $gross5; ?></span>
+                <?php } ?>
+                 <?php if(isset($sintoms['SintomPage']['gross6']) && !empty($sintoms['SintomPage']['gross6']) && !is_null($sintoms['SintomPage']['gross6']) ){ ?>
+                  <span><?php echo $gross6; ?></span>
+                <?php } ?>
               </div>
             </div>
 
@@ -1760,21 +1686,12 @@ margin-top: 50px;
           <div class="col uno">
             <p>Nombres reales qué estamos considerando:</p>
            
-            <span> 
-              <?php if($possiblename1 != ''){ echo $possiblename1; } ?>
-            </span>
-            <span> 
-              <?php if($possiblename2 != ''){ echo $possiblename2; } ?>
-            </span>
-            <span> 
-              <?php if($possiblename3 != ''){ echo $possiblename3; } ?>
-            </span>
-            <span> 
-              <?php if($possiblename4 != ''){ echo $possiblename4; } ?>
-            </span>
-            <span> 
-              <?php if($possiblename5 != ''){ echo $possiblename5; } ?>
-            </span>
+            
+            <?php if($possiblename1 != ''){ echo '<span> '.$possiblename1.' </span>'; } ?>            
+            <?php if($possiblename2 != ''){ echo '<span> '.$possiblename2.' </span>'; } ?>
+            <?php if($possiblename3 != ''){ echo '<span> '.$possiblename3.' </span>'; } ?>
+            <?php if($possiblename4 != ''){ echo '<span> '.$possiblename4.' </span>'; } ?>
+            <?php if($possiblename5 != ''){ echo '<span> '.$possiblename5.' </span>'; } ?>
 
           </div>
 
@@ -1794,21 +1711,13 @@ margin-top: 50px;
 
           <div class="col tres">
              <p>Sugerencias de otras personas:</p>
-             <span> 
-              <?php if($suggestedname1 != ''){ echo $suggestedname1; } ?>
-            </span>
-            <span> 
-              <?php if($suggestedname2 != ''){ echo $suggestedname2; } ?>
-            </span>
-            <span> 
-              <?php if($suggestedname3 != ''){ echo $suggestedname3; } ?>
-            </span>
-            <span> 
-              <?php if($suggestedname4 != ''){ echo $suggestedname4; } ?>
-            </span>
-            <span> 
-              <?php if($suggestedname5 != ''){ echo $suggestedname5; } ?>
-            </span>           
+             
+              <?php if($suggestedname1 != ''){ echo ' <span> '.$suggestedname1.' </span> '; } ?>            
+              <?php if($suggestedname2 != ''){ echo ' <span> '.$suggestedname2.' </span> '; } ?>           
+              <?php if($suggestedname3 != ''){ echo ' <span> '.$suggestedname3.' </span> '; } ?>
+              <?php if($suggestedname4 != ''){ echo ' <span> '.$suggestedname4.' </span> '; } ?>
+              <?php if($suggestedname5 != ''){ echo ' <span> '.$suggestedname5.' </span> '; } ?>
+
           </div>
 
           <p class="suegros">
@@ -1915,12 +1824,10 @@ margin-top: 50px;
             <span class="losprimeros"> 
               <?php if($present1 != ''){ echo $present1; } ?>
             </span>
-            <span>
-              <?php if($present2 != ''){ echo $present2; } ?>
-            </span>
-            <span>
-              <?php if($present3 != ''){ echo $present3; } ?>
-            </span>
+            
+              <?php if($present2 != ''){ echo '<span>'.$present2.'</span>'; } ?>
+              <?php if($present3 != ''){ echo '<span>'.$present3.'</span>'; } ?>
+
           </div>
 
           <div class="col dos">
@@ -1936,12 +1843,9 @@ margin-top: 50px;
             <span class="losprimeros">
               <?php if($guest1 != ''){ echo $guest1; } ?>
             </span>
-            <span>
-              <?php if($guest2 != ''){ echo $guest2; } ?>
-            </span>
-            <span>
-              <?php if($guest3 != ''){ echo $guest3; } ?>
-            </span>
+            
+              <?php if($guest2 != ''){ echo '<span>'.$guest2.'</span>'; } ?>
+              <?php if($guest3 != ''){ echo '<span>'.$guest3.'</span>'; } ?>
           </div>
 
           <?php if( isset($bbyshower['BabyshowerPage']['photo1']) ){ ?>
@@ -2212,15 +2116,11 @@ margin-top: 50px;
           <div class="comprar">
             <p>Nos falta comprar: </p>
             
-            <span> 
-              <?php if($buy1 != ''){ echo $buy1; } ?>
-            </span>
-            <span> 
-              <?php if($buy2 != ''){ echo $buy2; } ?>
-            </span> 
-            <span> 
-              <?php if($buy3 != ''){ echo $buy3; } ?>
-            </span> 
+            
+              <?php if($buy1 != ''){ echo '<span> '.$buy1.'</span>'; } ?>
+              <?php if($buy2 != ''){ echo '<span> '.$buy2.'</span> '; } ?>
+              <?php if($buy3 != ''){ echo '<span> '.$buy3.'</span> '; } ?>
+
           </div>
         
           <p class="cuarto"> As&iacute; ser&aacute; tu cuarto: </p>
@@ -2729,3 +2629,183 @@ margin-top: 50px;
      <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
+
+
+
+
+
+  <div class="pagina"> 
+      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+
+      <div class="print-content">
+
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <p>&aacute;rbol Familiar</p>
+      </div>
+
+      <div class="print-form" id="epilogform"> 
+
+          <?php 
+            if(isset($familytree['FamilytreePage']['dad'])){
+              $dad = $familytree['FamilytreePage']['dad'];
+            } else{
+              $dad = '';
+            }
+            if(isset($familytree['FamilytreePage']['grandpa_dad'])){
+              $grandpa_dad = $familytree['FamilytreePage']['grandpa_dad'];
+            } else{
+              $grandpa_dad = '';
+            }
+            if(isset($familytree['FamilytreePage']['grandpa_mom'])){
+              $grandpa_mom = $familytree['FamilytreePage']['grandpa_mom'];
+            } else{
+              $grandpa_mom = '';
+            }
+            if(isset($familytree['FamilytreePage']['grandma_dad'])){
+              $grandma_dad = $familytree['FamilytreePage']['grandma_dad'];
+            } else{
+              $grandma_dad = '';
+            }
+            if(isset($familytree['FamilytreePage']['grandma_mom'])){
+              $grandma_mom = $familytree['FamilytreePage']['grandma_mom'];
+            } else{
+              $grandma_mom = '';
+            }
+
+            if(isset($familytree['FamilytreePage']['baby'])){
+              $baby = $familytree['FamilytreePage']['baby'];
+            } else{
+              $baby = '';
+            }
+            if(isset($familytree['FamilytreePage']['mom'])){
+              $mom = $familytree['FamilytreePage']['mom'];
+            } else{
+              $mom = '';
+            }
+
+            if($tema != 1){
+              $elpath= 'tema'.$tema.'/';    
+            } else {
+              $elpath= '';
+            }
+
+          ?>
+
+          <div class="familytree">
+            <img class="familytreeFile marco-circular" id="grandpa_dad" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_circular.png">
+
+            <?php if( isset($familytree['FamilytreePage']['grandpa_dad_img']) ){ ?>
+              <img class="familytreeBackBack" id="grandpa_dad-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_dad_img']); ?>" >
+            <?php } else { ?>
+              <img class="familytreeBackBack" id="grandpa_dad-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
+            <?php } ?>
+
+            <span class="spanfila1" id="first">
+              <?php  echo $grandpa_dad; ?>
+            </span>
+          </div>
+
+          <div class="familytree">
+            <img class="familytreeFile marco-circular" id="grandpa_mom" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_circular.png">
+
+            <?php if( isset($familytree['FamilytreePage']['grandpa_mom_img']) ){ ?>
+              <img class="familytreeBackBack" id="grandpa_mom-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_mom_img']); ?>" >
+            <?php } else { ?>
+              <img  class="familytreeBackBack" id="grandpa_mom-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
+            <?php } ?>            
+
+            <span class="spanfila1" id="sec">
+              <?php  echo $grandpa_mom; ?>
+            </span>
+          </div>
+
+          <div class="familytree">
+            <img class="familytreeFile marco-circular" id="grandma_dad" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_circular.png">
+
+            <?php if( isset($familytree['FamilytreePage']['grandma_dad_img']) ){ ?>
+              <img class="familytreeBackBack" id="grandma_dad-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_dad_img']); ?>" >
+            <?php } else { ?>
+              <img class="familytreeBackBack" id="grandma_dad-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
+            <?php } ?>            
+
+            <span class="spanfila1" id="ter">
+              <?php  echo $grandma_dad; ?>
+            </span>
+
+          </div>
+
+
+          <div class="familytree">
+            <img class="familytreeFile marco-circular" id="grandma_mom" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_circular.png">
+
+            <?php if( isset($familytree['FamilytreePage']['grandma_mom_img']) ){ ?>
+              <img class="familytreeBackBack" id="grandma_mom-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_mom_img']); ?>" >
+            <?php } else { ?>
+              <img class="familytreeBackBack" id="grandma_mom-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
+            <?php } ?>            
+
+            <span class="spanfila1" id="cuart">
+              <?php  echo $grandma_mom; ?>
+            </span>
+            
+          </div>
+
+
+          <div class="familytree">
+            <img class="familytreeFile marco-circular" id="dad" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_circular.png">
+
+            <?php if( isset($familytree['FamilytreePage']['dad_img']) ){ ?>
+              <img class="familytreeBackBack" id="dad-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['dad_img']); ?>" >
+            <?php } else { ?>
+              <img class="familytreeBackBack" id="dad-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
+            <?php } ?>            
+
+            <span class="spanfila2" id="first2">
+              <?php  echo $dad; ?>
+            </span>
+            
+          </div>
+
+
+          <div class="familytree">
+            <img class="familytreeFile marco-circular" id="mom" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_circular.png">
+
+            <?php if( isset($familytree['FamilytreePage']['mom_img']) ){ ?>
+              <img class="familytreeBackBack" id="mom-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['mom_img']); ?>" >
+            <?php } else { ?>
+              <img class="familytreeBackBack" id="mom-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
+            <?php } ?>            
+
+            <span class="spanfila2" id="sec2">
+              <?php  echo $mom; ?>
+            </span>
+            
+          </div>
+
+
+
+          <div class="familytree">
+            <img class="familytreeFile marco-circular" id="baby" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_circular.png">
+
+            <?php if( isset($familytree['FamilytreePage']['baby_img']) ){ ?>
+              <img class="familytreeBackBack" id="baby-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['baby_img']); ?>" >
+            <?php } else { ?>
+              <img class="familytreeBackBack" id="baby-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
+            <?php } ?>            
+
+            <span class="spanfila3" id="first3">
+              <?php  echo $baby; ?>
+            </span>
+            
+          </div>
+
+
+
+      </div>
+    </div>
+
+     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+
+  </div>
+

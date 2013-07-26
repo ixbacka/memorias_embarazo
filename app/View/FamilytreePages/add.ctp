@@ -1,7 +1,7 @@
 
 <?php echo $this->Html->css('PhotoSelector'); ?>
 <?php echo $this->Html->script('photo_selector'); ?>
-<?php echo $this->Html->script('functions'); ?>
+<?php //echo $this->Html->script('functions'); ?>
 
 <style type="text/css">
 body{
@@ -40,69 +40,75 @@ form .submit input[type=submit]:hover{
 
 
 
-<?php if( isset($familytree['FamilytreePage']['grandpa_dad_img']) ){ ?>
-#grandpa_dad-back{
-  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_dad_img']); ?>);
+<?php 
+
+	$tema = $this->Session->read("User.theme");
+	if($tema != 1){
+		$elpath= 'tema'.$tema.'/';		
+	} else {
+		$elpath= '';
+	}
+
+
+if( isset($familytree['FamilytreePage']['grandpa_dad_img']) ){ ?>
+#grandpa_dad{
+  background-image: url(../img/<?php echo $elpath; ?>marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_dad_img']); ?>);
   background-size: 186px 186px,  120px 120px;
   border-radius: 120px;
   height: 150px;width: 150px;
   border-radius: 150px;
   background-position: -15px -15px, center 9px;
   background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
+  margin-top: 8px;
 }
 <?php }?>
 
 
 <?php if( isset($familytree['FamilytreePage']['grandpa_mom_img']) ){ ?>
-#grandpa_mom-back{
-  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_mom_img']); ?>);
+#grandpa_mom{
+  background-image: url(../img/<?php echo $elpath; ?>marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_mom_img']); ?>);
   background-size: 186px 186px,  120px 120px;
   border-radius: 120px;
   height: 150px;width: 150px;
   border-radius: 150px;
   background-position: -15px -15px, center 9px;
   background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
+margin-top: 8px;
 }
 <?php }?>
 
 
 <?php if( isset($familytree['FamilytreePage']['grandma_dad_img']) ){ ?>
-#grandma_dad-back{
-  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_dad_img']); ?>);
+#grandma_dad{
+  background-image: url(../img/<?php echo $elpath; ?>marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_dad_img']); ?>);
   background-size: 186px 186px,  120px 120px;
   border-radius: 120px;
   height: 150px;width: 150px;
 border-radius: 150px;
 background-position: -15px -15px, center 9px;
 background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
+margin-top: 8px;
 }
 <?php }?>
 
 
 <?php if( isset($familytree['FamilytreePage']['grandma_mom_img']) ){ ?>
-#grandma_mom-back{
-  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_mom_img']); ?>);
+#grandma_mom{
+  background-image: url(../img/<?php echo $elpath; ?>marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_mom_img']); ?>);
   background-size: 186px 186px,  120px 120px;
   border-radius: 120px;
   height: 150px;width: 150px;
 border-radius: 150px;
 background-position: -15px -15px, center 9px;
 background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
+margin-top: 8px;
 }
 <?php }?>
 
 
 <?php if( isset($familytree['FamilytreePage']['dad_img']) ){ ?>
-#dad-back{
-  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['dad_img']); ?>);
+#dad{
+  background-image: url(../img/<?php echo $elpath; ?>marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['dad_img']); ?>);
   background-size: 186px 186px,  120px 120px;
   border-radius: 120px;
 
@@ -110,30 +116,29 @@ height: 150px;width: 150px;
 border-radius: 150px;
 background-position: -15px -15px, center 9px;
 background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
+margin-top: 8px;
 
 }
 <?php }?>
 
 <?php if( isset($familytree['FamilytreePage']['mom_img']) ){ ?>
-#mom-back{
-  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['mom_img']); ?>);
+#mom{
+  background-image: url(../img/<?php echo $elpath; ?>marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['mom_img']); ?>);
   background-size: 186px 186px,  120px 120px;
   border-radius: 120px;
   height: 150px;width: 150px;
 border-radius: 150px;
 background-position: -15px -15px, center 9px;
 background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
+
+margin-top: 8px;
 
 }
 <?php }?>
 
 <?php if( isset($familytree['FamilytreePage']['baby_img']) ){ ?>
-#baby-back{
-  background-image: url(../img/marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['baby_img']); ?>);
+#baby{
+  background-image: url(../img/<?php echo $elpath; ?>marco_circular.png), url(../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['baby_img']); ?>);
   background-size: 186px 186px,  120px 120px;
   border-radius: 120px;
   height: 150px;width: 150px;
@@ -199,12 +204,12 @@ fbphotoSelect = function(id, idpapa) {
 			console.log(photo.source);
 			console.log(' ehmem == > '+idpapa);
 			$('.'+idpapa).val(photo.source);
-			$('#'+idpapa+"-back").css('background-image','url(../img/marco_circular.png), url('+photo.source+')');
-			$('#'+idpapa+"-back").css('background-size', '186px 186px, 140px 140px');
-			$('#'+idpapa+"-back").css('border-radius', '150px');
-			$('#'+idpapa+"-back").css('background-position', '-15px -15px, center 9px');
-			$('#'+idpapa+"-back").css('height', '150px');
-			$('#'+idpapa+"-back").css('width', '150px');
+			$('#'+idpapa).css('background-image','url(../img/<?php echo $elpath; ?>marco_circular.png), url('+photo.source+')');
+			$('#'+idpapa).css('background-size', '186px 186px, 140px 140px');
+			$('#'+idpapa).css('border-radius', '150px');
+			$('#'+idpapa).css('background-position', '-15px -15px, center 9px');
+			$('#'+idpapa).css('height', '150px');
+			$('#'+idpapa).css('width', '150px');
 			//$('.cover_photo').css('background-size', '392px 297px,  329px 265px');
 		};
 
@@ -248,12 +253,14 @@ function readURL(input) {
       		var elpapa = $(input).parent().get(0).id;
           var reader = new FileReader();
           reader.onload = function (e) {
-                  $('#'+elpapa).css('background-image','url(../img/marco_circular.png), url('+e.target.result+')');
-									$('#'+elpapa+"-back").css('background-size', '186px 186px, 140px 140px');
-									$('#'+elpapa+"-back").css('border-radius', '150px');
-									$('#'+elpapa+"-back").css('background-position', '-15px -15px, center 9px');
-									$('#'+elpapa+"-back").css('height', '150px');
-									$('#'+elpapa+"-back").css('width', '150px');
+
+                $('#'+elpapa).css('background-image','url(../img/<?php echo $elpath; ?>marco_circular.png), url('+e.target.result+')');				
+				$('#'+elpapa).css('background-size', '186px 186px, 140px 140px');
+				$('#'+elpapa).css('border-radius', '150px');
+				$('#'+elpapa).css('background-position', '-15px -15px, center 9px');
+				$('#'+elpapa).css('height', '150px');
+				$('#'+elpapa).css('width', '150px');
+
           };
           reader.readAsDataURL(input.files[0]);
       }

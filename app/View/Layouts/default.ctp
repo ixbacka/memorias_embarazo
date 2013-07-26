@@ -241,6 +241,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
             <li><a href="//operacionxperia.com/momtomom/memorias_embarazo/profiles/view_book/<?php echo $profileid;?>" target="_blank" class="vermemorias">Ver Diario</a></li>
 
             <li><a href="#dialog-box" class="compartir"  id="share-this"> Compartir </a></li>
+            <li><a href="//operacionxperia.com/momtomom/memorias_embarazo/profiles/print_book/<?php echo $profileid;?>" class="imprimir"  id="share-this"> Imprimir </a></li>
+
           </ul>
         </div> <!--your content end-->
 

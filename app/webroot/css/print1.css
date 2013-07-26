@@ -774,9 +774,11 @@ width: 372px;
 .nota-foot {
     position: absolute;
     top: 520px;
-    width: 400px;
-    left: 50%;
+  width: 100mm;
+  left: 0.9mm;
+    /*
     margin-left: -200px;
+    */
     text-align: center;
 }
 
@@ -943,12 +945,114 @@ z-index: -1;
 }
 .newfamilypar {
     position: absolute;
-    width: 500px;
-    left: 50%;
-    margin-left: -250px;
+    width: 100mm;
+    left: 0.9mm;
+    /*margin-left: -150px;*/
     text-align: center;
     top: 300px;
+
 }
+
+
+/** familytreeee **/
+.familytreeFile{
+  background: none;
+  position: absolute;
+}
+
+.familytreeBackBack{
+  z-index: -1;
+  position: absolute;
+  width: 125px;
+  height: 125px;
+  border-radius: 100px;
+}
+
+.familytreeBackBack1{
+  z-index: -1;
+  position: absolute;
+}
+
+
+#grandpa_dad {
+    top: 10px;
+    left: 20px;
+}
+#grandpa_mom {
+    top: 10px;
+    left: 200px;
+}
+#grandma_dad {
+    top: 10px;
+    left: 402px;
+}
+#grandma_mom {
+    top: 10px;
+    left: 585px;
+}
+#dad {
+    top: 260px;
+    left: 200px;
+}
+#mom {
+    top: 260px;
+    left: 402px;
+}
+#baby {
+    top: 480px;
+    left: 300px;
+}
+
+
+#grandpa_dad-back {
+  top: 32px;
+  left: 39px;
+}
+
+#grandpa_mom-back {
+  top: 32px;
+  left: 221px;
+}
+
+#grandma_dad-back {
+  left: 422px;
+  top: 32px;
+}
+
+#grandma_mom-back {
+  left: 606px;
+  top: 32px;
+}
+
+#dad-back {
+left: 220px;
+top: 281px;
+}
+
+#mom-back {
+top: 281px;
+left: 423px;
+}
+
+#baby-back {
+top: 502px;
+left: 320px;
+}
+
+
+
+
+
+
+
+
+.col1 p:after {
+  border:none;
+}
+
+
+
+
 
 
 /* print styling */
@@ -977,7 +1081,7 @@ z-index: -1;
 
   body{
     width: 100%;
-    width: 215.9mm; margin: 0; 
+    width: 229.9mm; margin: 0; 
     width: 100%;
     /*
     float: none;
@@ -1024,7 +1128,7 @@ z-index: -1;
     height: 140.4mm;
     width: 215.9mm;
     width: 100%;
-    height: 195.4mm;
+    height: 209.4mm;
   }
 
   .print-form{
