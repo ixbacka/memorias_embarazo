@@ -82,21 +82,6 @@ $(document).ready(function() {
 
 <!-- cover.ctp -->
 <STYLE TYPE="text/css">
-body{
-  background: url(../../img/retina_wood.png);
-}
-
-
-.b-page-0, .b-page-7{
-  opacity: 0;
-}
-
-#mybook{
-  position: absolute;
-  top: 3%;
-  left: 50%;
-  margin-left: -450px;
-}
 
 <?php if( isset($cover_pic) ){ ?>
 
@@ -2752,3 +2737,8 @@ margin-top: 50px;
 
   </div>
 </div><!-- FIN DEL LIBRO -->
+<div class="fake-footer">
+  <h2>MOM TO MOM</h2>
+  <span class="fb-bt"><a href="http://facebook.com/momtomommexico">facebook.com/momtomommexico</a></span>
+  <span class="tw-bt"><a href="http://facebook.com/momtomommexico">twitter.com/momtomommx</a></span>
+</div>
