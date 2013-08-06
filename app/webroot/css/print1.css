@@ -161,7 +161,7 @@ padding: 0px 10px 0px 10px;
   z-index: 2;
 }
 
-#cover-photo-{
+#cover-photo-, .cover-photo-fondo {
   z-index: 0;
   position: absolute;
   left: 50%;
@@ -520,15 +520,20 @@ position: absolute;
 top: 332px;
 }
 
+#marco-fondo{
+  width: 249px;
+height: 192px;
+}
+
 
 /* primeras pataditas */
 .fondo-vert {
 width: 187px;
 height: 257px;
 }
-#first-kick-fondo {
+#first-kick-fondo, .first-kick-fondo {
 position: absolute;
-top: 185px;
+top: 170px;
 left: 16px;
 z-index: -2;
 }
@@ -563,7 +568,7 @@ left: 0px;
 float: left;
 }
 
-#bellymonth-fondo {
+#bellymonth-fondo, .bellymonth-fondo {
 position: absolute;
 top: 31px;
 left: 18px;
@@ -667,7 +672,7 @@ float: left;
 padding-right: 40px;
 }
 
-#photo1_back_bbyshower {
+#photo1_back_bbyshower, .photo1_back_bbyshower {
 width: 246px;
 position: absolute;
 top: 197px;
@@ -676,7 +681,7 @@ height: 186px;
 z-index: -2;
 }
 
-#photo2_back_bbyshower {
+#photo2_back_bbyshower, .photo2_back_bbyshower {
 width: 254px;
 position: absolute;
 top: 197px;
@@ -687,7 +692,7 @@ z-index: -1;
 
 /* coolultrasound */
 
-#photo_back_coolultrasound {
+#photo_back_coolultrasound, .photo_back_coolultrasound {
     width: 100px;
     position: absolute;
     top: 15px;
@@ -801,7 +806,7 @@ padding-left: 75px;
     display: block;
 }
 
-#room_photo_back {
+#room_photo_back , .room_photo_back{
 position: absolute;
 top: 255px;
 left: 277px;
@@ -835,11 +840,11 @@ position: absolute;
 }
 /*special delivery*/
 
-#photo-back-specialdel {
+#photo-back-specialdel, .photo-back-specialdel {
     width: 100px;
     position: absolute;
     top: 14px;
-    left: 16px;
+    left: 68px;
     width: 254px;
     height: 193px;
     z-index: -1;
@@ -1053,6 +1058,17 @@ left: 320px;
 
 
 
+.pagina{
+  display: none;  
+}
+
+
+
+
+
+
+
+
 
 
 /* print styling */
@@ -1063,6 +1079,7 @@ left: 320px;
     height: 309.4mm; 
     width: 215.9mm;
     width: 100%;
+    display: block;
   }
 
   .imprimir{

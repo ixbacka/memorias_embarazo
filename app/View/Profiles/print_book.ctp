@@ -139,7 +139,7 @@
           <?php if( isset($cover_pic) ){ ?>
             <img id="cover-photo-" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ', '%20', $cover_pic); ?>">
           <?php } else { ?>
-            <img id="cover-photo- marco-fondo"  src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png">
+            <img id="cover-photo- marco-fondo" class="cover-photo-fondo" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png">
           <?php } ?>
       </div>
      <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/print-footer.png">
@@ -1384,7 +1384,7 @@
             <?php if( isset($firstkick['FirstkickPage']['photo']) ){ ?>
               <img class="fondo-vert" id="first-kick-fondo" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$firstkick['FirstkickPage']['photo']); ?>" />
             <?php } else { ?>
-              <img class="fondo-vert" id="marco-fondo first-kick-fondo" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png" />            
+              <img class="fondo-vert first-kick-fondo" id="marco-fondo first-kick-fondo" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png" />            
             <?php } ?>
 
             <span id="datepickerCongrats1"> 
@@ -1513,7 +1513,7 @@
             <?php if( isset($bellymonth['BellymonthPage']['photo']) ){ ?>
               <img class="fondo-vert" id="bellymonth-fondo" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$bellymonth['BellymonthPage']['photo']); ?>" />
             <?php } else { ?>
-              <img id="marco-fondo bellymonth-fondo" class="fondo-vert" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png" />            
+              <img id="marco-fondo bellymonth-fondo" class="fondo-vert bellymonth-fondo" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png" />            
             <?php } ?>
 
             <span  id="datepickerCongrats">
@@ -1851,7 +1851,7 @@
           <?php if( isset($bbyshower['BabyshowerPage']['photo1']) ){ ?>
             <img id="photo1_back_bbyshower" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$bbyshower['BabyshowerPage']['photo1']); ?>">
           <?php } else { ?>
-            <img id="photo1_back_bbyshower marco-fondo" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png">
+            <img id="photo1_back_bbyshower marco-fondo" class="photo1_back_bbyshower" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png">
           <?php } ?> 
           <img id="photo1-bbyshower" class="marco" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/marco.png">
 
@@ -1859,7 +1859,7 @@
           <?php if( isset($bbyshower['BabyshowerPage']['photo2']) ){ ?>
             <img id="photo2_back_bbyshower" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$bbyshower['BabyshowerPage']['photo2']); ?>">
           <?php } else { ?>
-            <img id="photo2_back_bbyshower marco-fondo" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png">
+            <img id="photo2_back_bbyshower marco-fondo" class="photo2_back_bbyshower" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png">
           <?php } ?> 
           <img id="photo2-bbyshower" class="marco" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/marco.png">
 
@@ -1940,7 +1940,7 @@
           <?php if( isset($cool['CoolultrasoundPage']['photo']) ){ ?>
             <img id="photo_back_coolultrasound" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$cool['CoolultrasoundPage']['photo']); ?>">
           <?php } else { ?>
-            <img id="photo2_back_bbyshower marco-fondo" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png">
+            <img id="marco-fondo" class="photo_back_coolultrasound" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png">
           <?php } ?> 
 
           <img id="photo-coolultrasound" class="marco" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/marco.png">
@@ -2129,7 +2129,7 @@
           <?php if( isset($nesting['NestingPage']['room_photo']) ){ ?>
             <img id="room_photo_back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$nesting['NestingPage']['room_photo']); ?>">
           <?php } else { ?>
-            <img id="room_photo_back marco-fondo" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png">
+            <img id="marco-fondo" class="room_photo_back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png">
           <?php } ?>
 
           <img id="room_photo" class="marco" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco.png">
@@ -2348,7 +2348,7 @@
               ?>">
 
           <?php } else { ?>
-            <img id="photo-back-specialdel marco-fondo" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png">
+            <img id="marco-fondo" class="photo-back-specialdel" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png">
           <?php } ?>
           
           <img id="photo-specialdel" class="marco" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco.png">

@@ -178,8 +178,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
       <?php } elseif(strpos($_SERVER['REQUEST_URI'], 'fangate') == TRUE){ ?>
         console.log('canvas');
         FB.Canvas.setSize({height:840});
-      <?php } elseif(strpos($_SERVER['REQUEST_URI'],  'familytree' ) == TRUE){ ?>
-        FB.Canvas.setSize({height:1170});
       <?php } else { ?>
       FB.Canvas.setSize({height:1150});
       //setTimeout("FB.Canvas.setAutoGrow()",500);
@@ -238,11 +236,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
           <ul class="ul_settings">
             <li class="personalizar"> Personalizar </li>
             <!--li class="vermemorias"> Ver Memorias </li> -->
-            <li><a href="//momtomom.mx/apps/memorias_embarazo/profiles/view_book/<?php echo $profileid;?>" target="_blank" class="vermemorias">Ver Diario</a></li>
+            <li><a href="//operacionxperia.com/momtomom/memorias_embarazo/profiles/view_book/<?php echo $profileid;?>" target="_blank" class="vermemorias">Ver Diario</a></li>
 
             <li><a href="#dialog-box" class="compartir"  id="share-this"> Compartir </a></li>
-            <li><a href="//momtomom.mx/apps/memorias_embarazo/profiles/print_book/<?php echo $profileid;?>" class="imprimir"  id="share-this"> Imprimir </a></li>
-
           </ul>
         </div> <!--your content end-->
 
