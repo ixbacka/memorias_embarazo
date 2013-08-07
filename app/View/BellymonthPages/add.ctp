@@ -225,7 +225,7 @@ function readURL(input) {
     <div id="moments_popup">
         <div id="popup_moments"> <!--your content start-->
           <?php echo $this->element('moments'); ?>
-          <a href="2" class="addnew-momento" id="mayiadd-moments" >Agrega un momento</a>
+          <a href="2" class="addnew-momento" id="mayiadd-moments" >Agrega una memoria</a>
         </div> <!--your content end-->
     </div> <!--toPopup end-->
 
@@ -317,7 +317,7 @@ function readURL(input) {
         </p>
         <p class="opcion">
           <input type="radio" name="data[BellymonthPage][apetite]" value="3" <?php if($apetite == 3){ echo 'checked="checked"'; } ?> />
-          <label>Raton</label>
+          <label>Rat&oacute;n</label>
         </p>
       </div>
       <div class="miss">

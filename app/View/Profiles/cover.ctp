@@ -196,9 +196,10 @@ fbphotoSelect = function(id) {
         <span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
 	        <ul class="ul_settings">
             <li class="personalizar"> Personalizar </li>
-            <li><a href="//operacionxperia.com/momtomom/memorias_embarazo/profiles/view_book/<?php echo $profileid;?>" target="_blank" class="vermemorias">Ver Diario</a></li>
+            <li><a href="//momtomom.mx/apps/memorias_embarazo/profiles/view_book/<?php echo $profileid;?>" target="_blank" class="vermemorias">Ver Diario</a></li>
 
             <li><a href="#dialog-box" class="compartir"  id="share-this"> Compartir </a></li>
+            <li><a href="//momtomom.mx/apps/memorias_embarazo/profiles/print_book/<?php echo $profileid;?>" class="imprimir"  id="share-this"> Imprimir </a></li>
 
           </ul>   
         <div id="popup_settings"> <!--your content start-->
@@ -286,7 +287,7 @@ fbphotoSelect = function(id) {
 				);
 			 ?>
       <a href="#dialog-box" class="share_bt"  id="sharepopo"> Compartir </a>
-			<a href="//operacionxperia.com/momtomom/memorias_embarazo/profiles/view_book/<?php echo $profileid;?>" target="_blank" class="watch_bt">Ver Diario</a>
+			<a href="//momtomom.mx/apps/memorias_embarazo/profiles/view_book/<?php echo $profileid;?>" target="_blank" class="watch_bt">Ver Diario</a>
 		</div>
 
 	  <a href="#" class="instructions_bt" id="instructions">Instrucciones</a>

@@ -407,7 +407,7 @@ class ProfilesController extends AppController {
     	$id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' => $uid ) ) );
     }
 
-    if( $id['Profile']['cover_photo'] != null && !empty($id['Profile']['cover_photo']) ){
+    if( isset($id['Profile']['cover_photo']) && $id['Profile']['cover_photo'] != null && !empty($id['Profile']['cover_photo']) ){
 	    $this->set('cover_pic', $id['Profile']['cover_photo']); 
     }
     if( $id['Profile']['font'] != null && !empty($id['Profile']['font']) ){
@@ -567,7 +567,7 @@ class ProfilesController extends AppController {
             $returnarr = array('mensaje' => $returning);
         } else {
 
-            $pic = 'https://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/'.$imgname;
+            $pic = 'https://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$imgname;
             $returning =  "successfully";
 
             $returnarr = array('mensaje' => $returning, 'imagen' => $pic, 'nombre' => $imgname, 'usuarioid' => $profileid);    
@@ -578,11 +578,14 @@ class ProfilesController extends AppController {
     }
    
     public function postDiary($msg,$url,$pid,$uid){
-        $facebook = new Facebook(array(
+        /*$facebook = new Facebook(array(
 	        'appId' => "163480813810636",
 	        'secret' => "3ccf0a83049aa75bd8f0bc9707b9e7a0",
 	        'cookie' => true
-	    ));
+	    ));*/
+
+	    $facebook = $this->Session->read("facebook");
+	    $session = $facebook->getUser();
 
         $facebook->setFileUploadSupport(true);
 
@@ -594,10 +597,10 @@ class ProfilesController extends AppController {
             $returning = 'No se podido publicar tu diario. Por favor, escribe un mensaje.';
             $returnarr = array('mensaje' => $returning);
 
-        } else {
+        } elseif ($session) {
 
-            $args = array('message' => $msg.' <3 Accede al siguiente link para ver mi diario: http://operacionxperia.com/momtomom/memorias_embarazo/profiles/view_book/'.$pid); 
-            $args['url'] = 'https://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/'.$url;
+            $args = array('message' => $msg.' <3 Accede al siguiente link para ver mi diario: http://momtomom.mx/apps/memorias_embarazo/profiles/view_book/'.$pid); 
+            $args['url'] = 'https://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$url;
             
             $user_profile_img = $facebook->api('/'.$uid.'/photos','POST', $args);
 
@@ -634,7 +637,7 @@ class ProfilesController extends AppController {
 
         if(!empty($u_id)){
 
-        	$path = 'https://operacionxperia.com/momtomom/memorias_embarazo/';
+        	$path = 'https://momtomom.mx/apps/memorias_embarazo/';
 
         	if($tema == 1){
 	            $pattern = imagecreatefrompng(WWW_ROOT.'img/ForTheCover.png');
