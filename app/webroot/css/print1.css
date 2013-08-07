@@ -838,6 +838,13 @@ top: 242px;
 left: 256px;
 position: absolute;
 }
+
+#whoamiwhoami{
+  width: 200px;
+  height: 250px;
+}
+
+
 /*special delivery*/
 
 #photo-back-specialdel, .photo-back-specialdel {

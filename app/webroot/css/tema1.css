@@ -1488,6 +1488,10 @@ text-align: center;
   z-index: -1;
   position: absolute;
   top: 206px;
+  height: 257px;
+z-index: -1;
+position: absolute;
+top: 202px;
   left: 46px;
 }
 

@@ -39,6 +39,7 @@
 
 <SCRIPT TYPE="text/javascript">
 $(document).ready(function() {
+  $(':radio').disabled=true;
   // Handler for .ready() called.
   $('#mybook').booklet({
         width:  900,
