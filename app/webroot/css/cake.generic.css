@@ -353,6 +353,10 @@ span.arrow {
   text-align: center;
 }
 
+.personalizar {
+  cursor: pointer;
+  cursor: hand;
+}
 .personalizar:before {
   content: '';
   background-image: url(../img/personalizar.png);
@@ -400,6 +404,21 @@ left: 11px;
 .compartir:hover:before{
   background-position-y: 35px;
 }
+
+.imprimir:before{
+  content: '';
+  background-image: url(../img/imprimir.png);
+  width: 40px;
+height: 35px;
+position: absolute;
+top: 98px;
+left: 11px;
+}
+
+.imprimir:hover:before{
+  background-position-y: 35px;
+}
+
 
 .ul_settings{
 position: fixed;
