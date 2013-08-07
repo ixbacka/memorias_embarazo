@@ -146,7 +146,7 @@
   </div>
 
   <div class="pagina"> 
-      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
 
       <div class="print-content">
 
@@ -240,12 +240,12 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png" width="100%" height="205">
 
   </div>
 
   <div class="pagina"> 
-      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
 
       <div class="print-content">
 
@@ -325,13 +325,13 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png" width="100%" height="205">
 
   </div>
 
 
     <div class="pagina"> 
-      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
 
       <div class="print-content">
 
@@ -420,13 +420,13 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png" width="100%" height="205">
 
   </div>
 
 
     <div class="pagina"> 
-      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
 
       <div class="print-content">
 
@@ -591,12 +591,12 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png" width="100%" height="205">
 
   </div>
 
   <div class="pagina"> 
-      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
 
       <div class="print-content">
 
@@ -737,12 +737,12 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png" width="100%" height="205">
 
   </div>
 
   <div class="pagina"> 
-      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
 
       <div class="print-content">
 
@@ -824,12 +824,12 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png" width="100%" height="205">
 
   </div>
 
   <div class="pagina"> 
-      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
 
       <div class="print-content">
 
@@ -1066,13 +1066,13 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png" width="100%" height="205">
 
   </div>
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
 
       <div class="print-content">
 
@@ -1148,13 +1148,13 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png" width="100%" height="205">
 
   </div>
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
 
       <div class="print-content">
 
@@ -1250,14 +1250,14 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png" width="100%" height="205">
 
   </div>
 
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
 
       <div class="print-content">
 
@@ -1442,13 +1442,13 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png" width="100%" height="205">
 
   </div>
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
 
       <div class="print-content">
 
@@ -1581,7 +1581,7 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png" width="100%" height="205">
 
   </div>
 
@@ -1589,7 +1589,7 @@
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
 
       <div class="print-content">
 
@@ -1737,7 +1737,7 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png" width="100%" height="205">
 
   </div>
 
@@ -1745,7 +1745,7 @@
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
 
       <div class="print-content">
 
@@ -1866,14 +1866,14 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png" width="100%" height="205">
 
   </div>
 
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
 
       <div class="print-content">
 
@@ -2044,13 +2044,13 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png" width="100%" height="205">
 
   </div>
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
 
       <div class="print-content">
 
@@ -2137,12 +2137,12 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png" width="100%" height="205">
 
   </div>
 
   <div class="pagina"> 
-      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
 
       <div class="print-content">
 
@@ -2271,13 +2271,13 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png" width="100%" height="205">
 
   </div>
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
 
       <div class="print-content">
 
@@ -2419,13 +2419,13 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png" width="100%" height="205">
 
   </div>
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
 
       <div class="print-content">
 
@@ -2528,13 +2528,13 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png" width="100%" height="205">
 
   </div>
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
 
       <div class="print-content">
 
@@ -2584,13 +2584,13 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png" width="100%" height="205">
 
   </div>
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
 
       <div class="print-content">
 
@@ -2626,7 +2626,7 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png" width="100%" height="205">
 
   </div>
 
@@ -2635,7 +2635,7 @@
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
 
       <div class="print-content">
 
