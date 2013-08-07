@@ -44,7 +44,7 @@ body{
     </ul>
   </div>
   <div class="like">
-    <h3>Bienvenida mama</h3>
+    <h3>Bienvenida mam&aacute;</h3>
     <p>Para comenzar da clic en <b>Me Gusta</b></p>
   </div>
   <div class="content">

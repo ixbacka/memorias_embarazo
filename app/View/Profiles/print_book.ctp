@@ -26,53 +26,53 @@
   $(document).ready(function() {
 
     <?php if($tema == 2){  ?>
-      $(".print-header").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/print-header.png");  
-      $(".print-footer").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/print-footer.png");  
-      $(".marco").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/marco.png");  
-      $(".marco_vert").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/marco_whoami.png");  
-      $("#marco-fondo").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/marco_fondo.png");  
+      $(".print-header").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/print-header.png");  
+      $(".print-footer").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/print-footer.png");  
+      $(".marco").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/marco.png");  
+      $(".marco_vert").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/marco_whoami.png");  
+      $("#marco-fondo").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/marco_fondo.png");  
       //marco-circular
-      $(".marco-circular").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/marco_circular.png");  
+      $(".marco-circular").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/marco_circular.png");  
 
-      $(".print-title-page").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/titulo_back.png");  
+      $(".print-title-page").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/titulo_back.png");  
 
-      $("#caballo").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/caballo.png");  
-      $("#mar").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/mar.png");  
-      $("#tambor").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/tambor.png");  
-      $("#losbeibis").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/bebesotes.png");  
+      $("#caballo").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/caballo.png");  
+      $("#mar").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/mar.png");  
+      $("#tambor").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/tambor.png");  
+      $("#losbeibis").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/bebesotes.png");  
 
 
     <?php } ?>
 
     <?php if($tema == 3){  ?>
-      $(".print-header").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/print-header.png");  
-      $(".print-footer").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/print-footer.png");  
-      $(".marco").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/marco.png");  
-      $(".marco_vert").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/marco_whoami.png");  
-      $("#marco-fondo").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/marco_fondo.png");  
-      $(".print-title-page").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/titulo_back.png");  
-      $(".marco-circular").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/marco_circular.png");  
+      $(".print-header").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/print-header.png");  
+      $(".print-footer").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/print-footer.png");  
+      $(".marco").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/marco.png");  
+      $(".marco_vert").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/marco_whoami.png");  
+      $("#marco-fondo").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/marco_fondo.png");  
+      $(".print-title-page").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/titulo_back.png");  
+      $(".marco-circular").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/marco_circular.png");  
 
-      $("#caballo").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/caballo.png");  
-      $("#mar").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/mar.png");  
-      $("#tambor").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/tambor.png");  
-      $("#losbeibis").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/bebesotes.png");  
+      $("#caballo").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/caballo.png");  
+      $("#mar").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/mar.png");  
+      $("#tambor").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/tambor.png");  
+      $("#losbeibis").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/bebesotes.png");  
 
     <?php } ?>
 
     <?php if($tema == 4){  ?>
-      $(".print-header").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/print-header.png");  
-      $(".print-footer").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/print-footer.png");  
-      $(".marco").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/marco.png");  
-      $(".marco_vert").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/marco_whoami.png");  
-      $("#marco-fondo").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/marco_fondo.png");  
-      $(".print-title-page").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/titulo_back.png");  
-      $(".marco-circular").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/marco_circular.png");  
+      $(".print-header").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/print-header.png");  
+      $(".print-footer").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/print-footer.png");  
+      $(".marco").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/marco.png");  
+      $(".marco_vert").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/marco_whoami.png");  
+      $("#marco-fondo").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/marco_fondo.png");  
+      $(".print-title-page").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/titulo_back.png");  
+      $(".marco-circular").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/marco_circular.png");  
 
-      $("#caballo").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/caballo.png");  
-      $("#mar").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/mar.png");  
-      $("#tambor").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/tambor.png");  
-      $("#losbeibis").attr("src", "http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/bebesotes.png");  
+      $("#caballo").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/caballo.png");  
+      $("#mar").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/mar.png");  
+      $("#tambor").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/tambor.png");  
+      $("#losbeibis").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/bebesotes.png");  
 
     <?php } ?>
 
@@ -133,25 +133,25 @@
 <input type="button" class="imprimir" onClick="window.print()" value="Print This"/>
 
   <div class="pagina"> 
-     <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/print-header.png">
+     <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
       <div class="print-content">
-          <img class="marco" id="cover-photo" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco.png">        
+          <img class="marco" id="cover-photo" src="http://momtomom.mx/apps/memorias_embarazo/img/marco.png">        
           <?php if( isset($cover_pic) ){ ?>
-            <img id="cover-photo-" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ', '%20', $cover_pic); ?>">
+            <img id="cover-photo-" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ', '%20', $cover_pic); ?>">
           <?php } else { ?>
-            <img id="cover-photo- marco-fondo"  src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png">
+            <img id="cover-photo- marco-fondo" class="cover-photo-fondo" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png">
           <?php } ?>
       </div>
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/print-footer.png">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png">
   </div>
 
   <div class="pagina"> 
-      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
       <div class="print-content">
 
       <div class="print-page-title">
-        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
         <p>&iexcl;Felicidades!</p><br> 
         <span>La prueba es positiva</span>
       </div>
@@ -240,17 +240,17 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
   <div class="pagina"> 
-      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
       <div class="print-content">
 
       <div class="print-page-title">
-        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
         <p>Mi Primer visita</p><br> 
         <span>al ginec&oacute;logo</span>
       </div>
@@ -325,30 +325,30 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
 
     <div class="pagina"> 
-      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
       <div class="print-content">
 
       <div class="print-page-title">
-        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
         <p>Yo Soy...</p>
       </div>
 
       <div class="print-form"> 
 
         <div class="whoami_photo"> 
-          <img class="marco_vert" id="whoami-photo" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/marco_whoami.png">
+          <img class="marco_vert" id="whoami-photo" src="https://momtomom.mx/apps/memorias_embarazo/img/marco_whoami.png">
 
           <?php if( isset($whoami['WhoamiPage']['photo']) ){ ?>
-            <img class="whoami-photo" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$whoami['WhoamiPage']['photo']); ?>">
+            <img class="whoami-photo" src="https://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$whoami['WhoamiPage']['photo']); ?>">
           <?php } else { ?>
-            <img class="whoami-photo" id="marco-fondo" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png">
+            <img id="marco-fondo whoamiwhoami" class="fondo-vert whoami-photo" src="https://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png">
           <?php } ?>
 
         </div>
@@ -420,18 +420,18 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
 
     <div class="pagina"> 
-      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
       <div class="print-content">
 
       <div class="print-page-title">
-        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
         <p>Primeros</p> 
         <span>S&iacute;ntomas y malestares</span>
       </div>
@@ -591,17 +591,17 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
   <div class="pagina"> 
-      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
       <div class="print-content">
 
       <div class="print-page-title">
-        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
         <p>s&uacute;per cool</p>
         <span>fotos del ultrasonido</span>
       </div>
@@ -661,42 +661,42 @@
             }
 
             if( isset($ultrasound['UltrasoundPage']['first_photo']) ){ 
-              $first_photo = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/'.$ultrasound['UltrasoundPage']['first_photo'];
+              $first_photo = 'http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$ultrasound['UltrasoundPage']['first_photo'];
             } else{
               if($tema == 1){ 
-                $first_photo = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png';
+                $first_photo = 'http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png';
               }
               if($tema == 2){ 
-                $first_photo = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/marco_fondo.png';
+                $first_photo = 'http://momtomom.mx/apps/memorias_embarazo/img/tema2/marco_fondo.png';
               }
               if($tema == 3){ 
-                $first_photo = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/marco_fondo.png';
+                $first_photo = 'http://momtomom.mx/apps/memorias_embarazo/img/tema3/marco_fondo.png';
               }
               if($tema == 4){ 
-                $first_photo = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/marco_fondo.png';
+                $first_photo = 'http://momtomom.mx/apps/memorias_embarazo/img/tema4/marco_fondo.png';
               }
             }
 
             if( isset($ultrasound['UltrasoundPage']['second_photo']) ){ 
-              $second_photo = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/'.$ultrasound['UltrasoundPage']['second_photo'];
+              $second_photo = 'http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$ultrasound['UltrasoundPage']['second_photo'];
             } else{
               if($tema == 1){ 
-                $second_photo = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png';
+                $second_photo = 'http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png';
               }
               if($tema == 2){ 
-                $second_photo = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/marco_fondo.png';
+                $second_photo = 'http://momtomom.mx/apps/memorias_embarazo/img/tema2/marco_fondo.png';
               }
               if($tema == 3){ 
-                $second_photo = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/marco_fondo.png';
+                $second_photo = 'http://momtomom.mx/apps/memorias_embarazo/img/tema3/marco_fondo.png';
               }
               if($tema == 4){ 
-                $second_photo = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/marco_fondo.png';
+                $second_photo = 'http://momtomom.mx/apps/memorias_embarazo/img/tema4/marco_fondo.png';
               }
             }
 
             ?>
             
-            <img id="ultrasound_photo_1" class="marco marco-chico" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco.png" />
+            <img id="ultrasound_photo_1" class="marco marco-chico" src="http://momtomom.mx/apps/memorias_embarazo/img/marco.png" />
             <img id="ultrasound_photo_1-back" src="<?php echo $first_photo;?>" />
 
             <div class='ultrasound-first'>
@@ -715,7 +715,7 @@
             </p>
            </div>
 
-            <img id="ultrasound_photo_2" class="marco  marco-chico" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco.png" />
+            <img id="ultrasound_photo_2" class="marco  marco-chico" src="http://momtomom.mx/apps/memorias_embarazo/img/marco.png" />
             <img id="ultrasound_photo_2-back" src="<?php echo $second_photo;?>" />
 
             <div class='ultrasound-second'>
@@ -737,17 +737,17 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
   <div class="pagina"> 
-      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
       <div class="print-content">
 
       <div class="print-page-title">
-        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
         <p>Mi pancita</p>
         <span>mes a mes</span>
       </div>
@@ -757,84 +757,84 @@
          <?php 
             if( isset($belly['BellyPage']['photo1']) ){ 
 
-              $photo1 = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/'.$belly['BellyPage']['photo1'];
+              $photo1 = 'http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$belly['BellyPage']['photo1'];
             } else{
               if($tema == 1){ 
-                $photo1 = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png';
+                $photo1 = 'http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png';
               }
               if($tema == 2){ 
-                $photo1 = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/marco_fondo.png';
+                $photo1 = 'http://momtomom.mx/apps/memorias_embarazo/img/tema2/marco_fondo.png';
               }
               if($tema == 3){ 
-                $photo1 = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/marco_fondo.png';
+                $photo1 = 'http://momtomom.mx/apps/memorias_embarazo/img/tema3/marco_fondo.png';
               }
               if($tema == 4){ 
-                $photo1 = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/marco_fondo.png';
+                $photo1 = 'http://momtomom.mx/apps/memorias_embarazo/img/tema4/marco_fondo.png';
               }
             }
 
             if( isset($belly['BellyPage']['photo2']) ){ 
-              $photo2 = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/'.$belly['BellyPage']['photo2'];
+              $photo2 = 'http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$belly['BellyPage']['photo2'];
             } else{
               if($tema == 1){ 
-                $photo2 = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png';
+                $photo2 = 'http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png';
               }
               if($tema == 2){ 
-                $photo2 = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/marco_fondo.png';
+                $photo2 = 'http://momtomom.mx/apps/memorias_embarazo/img/tema2/marco_fondo.png';
               }
               if($tema == 3){ 
-                $photo2 = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/marco_fondo.png';
+                $photo2 = 'http://momtomom.mx/apps/memorias_embarazo/img/tema3/marco_fondo.png';
               }
               if($tema == 4){ 
-                $photo2 = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/marco_fondo.png';
+                $photo2 = 'http://momtomom.mx/apps/memorias_embarazo/img/tema4/marco_fondo.png';
               }
             }
             if( isset($belly['BellyPage']['photo3']) ){ 
-              $photo3 = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/'.$belly['BellyPage']['photo3'];
+              $photo3 = 'http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$belly['BellyPage']['photo3'];
             } else{
               if($tema == 1){ 
-                $photo3 = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png';
+                $photo3 = 'http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png';
               }
               if($tema == 2){ 
-                $photo3 = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/tema2/marco_fondo.png';
+                $photo3 = 'http://momtomom.mx/apps/memorias_embarazo/img/tema2/marco_fondo.png';
               }
               if($tema == 3){ 
-                $photo3 = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/tema3/marco_fondo.png';
+                $photo3 = 'http://momtomom.mx/apps/memorias_embarazo/img/tema3/marco_fondo.png';
               }
               if($tema == 4){ 
-                $photo3 = 'http://operacionxperia.com/momtomom/memorias_embarazo/img/tema4/marco_fondo.png';
+                $photo3 = 'http://momtomom.mx/apps/memorias_embarazo/img/tema4/marco_fondo.png';
               }
             }
           ?>
           <div class="flotando_pancita">
-            <img id="photo1" class="marco marco-chico" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco.png">
+            <img id="photo1" class="marco marco-chico" src="http://momtomom.mx/apps/memorias_embarazo/img/marco.png">
             <img id="photo1-leback" src="<?php echo $photo1;?>">
             <p class="mes1">Mes 1</p>
           </div>
           <div class="flotando_pancita">
-            <img id="photo2" class="marco marco-chico" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco.png">
+            <img id="photo2" class="marco marco-chico" src="http://momtomom.mx/apps/memorias_embarazo/img/marco.png">
             <img id="photo2-leback" src="<?php echo $photo2;?>">
             <p class="mes2">Mes 2</p>
           </div>
           <div class="flotando_pancita">
-            <img id="photo3" class="marco marco-chico" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco.png">
+            <img id="photo3" class="marco marco-chico" src="http://momtomom.mx/apps/memorias_embarazo/img/marco.png">
             <img id="photo3-leback" src="<?php echo $photo3;?>">
             <p class="mes3">Mes 3</p>
           </div>
       </div>
     </div>
 
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
   <div class="pagina"> 
-      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
       <div class="print-content">
 
       <div class="print-page-title">
-        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
         <p>Mi ánimo</p>
         <span>mes a mes</span>
       </div>
@@ -1066,18 +1066,18 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
       <div class="print-content">
 
       <div class="print-page-title">
-        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
         <p>Amo a mi beb&eacute;</p> 
       </div>
 
@@ -1126,17 +1126,17 @@
           <?php if($heartbeat == 1){ ?>
           <div class="opcion">
             <label>Caballos Galopantes</label>
-            <img id="caballo" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/caballo.png">
+            <img id="caballo" src="https://momtomom.mx/apps/memorias_embarazo/img/caballo.png">
           </div>
           <?php } elseif($heartbeat == 2){ ?>
           <div class="opcion">
             <label>Como un tambor</label>
-            <img id="tambor" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/tambor.png">
+            <img id="tambor" src="https://momtomom.mx/apps/memorias_embarazo/img/tambor.png">
           </div>
           <?php } elseif($heartbeat == 3){ ?>
           <div class="opcion">
             <label>Un mar de emociones</label>
-            <img id="mar" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/mar.png">
+            <img id="mar" src="https://momtomom.mx/apps/memorias_embarazo/img/mar.png">
           </div>
           <?php } ?>
 
@@ -1148,25 +1148,25 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
       <div class="print-content">
 
       <div class="print-page-title">
-        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
         <p>¿NIÑO O NIÑA?</p>            
       </div>
 
       <div class="print-form" id="childsexform"> 
 
           <div class="bebes">
-            <img id="losbeibis" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/bebesotes.png">
+            <img id="losbeibis" src="http://momtomom.mx/apps/memorias_embarazo/img/bebesotes.png">
           </div>
 
           <?php
@@ -1250,19 +1250,19 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
       <div class="print-content">
 
       <div class="print-page-title">
-        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
         <p>¡LAS PRIMERAS!</p> 
         <span>pataditas...</span>       
       </div>
@@ -1379,12 +1379,12 @@
             <span> <?php if($week != ''){ echo $week; } ?></span>
           </p>
           <div class="colL">
-            <img class="marco_vert" id="firstkick_photo" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_whoami.png">
+            <img class="marco_vert" id="firstkick_photo" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_whoami.png">
 
             <?php if( isset($firstkick['FirstkickPage']['photo']) ){ ?>
-              <img class="fondo-vert" id="first-kick-fondo" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$firstkick['FirstkickPage']['photo']); ?>" />
+              <img class="fondo-vert" id="first-kick-fondo" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$firstkick['FirstkickPage']['photo']); ?>" />
             <?php } else { ?>
-              <img class="fondo-vert" id="marco-fondo first-kick-fondo" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png" />            
+              <img class="fondo-vert first-kick-fondo" id="marco-fondo first-kick-fondo" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png" />            
             <?php } ?>
 
             <span id="datepickerCongrats1"> 
@@ -1442,18 +1442,18 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
       <div class="print-content">
 
       <div class="print-page-title">
-        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
          <p>Mi pancita</p>
          <span>mes a mes</span>
       </div>
@@ -1508,12 +1508,12 @@
 
           <div class="colL">
 
-            <img class="marco_vert belly_photo_back" id="firstkick_photo" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_whoami.png">
+            <img class="marco_vert belly_photo_back" id="firstkick_photo" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_whoami.png">
 
             <?php if( isset($bellymonth['BellymonthPage']['photo']) ){ ?>
-              <img class="fondo-vert" id="bellymonth-fondo" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$bellymonth['BellymonthPage']['photo']); ?>" />
+              <img class="fondo-vert" id="bellymonth-fondo" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$bellymonth['BellymonthPage']['photo']); ?>" />
             <?php } else { ?>
-              <img id="marco-fondo bellymonth-fondo" class="fondo-vert" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png" />            
+              <img id="marco-fondo bellymonth-fondo" class="fondo-vert bellymonth-fondo" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png" />            
             <?php } ?>
 
             <span  id="datepickerCongrats">
@@ -1581,7 +1581,7 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
@@ -1589,12 +1589,12 @@
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
       <div class="print-content">
 
       <div class="print-page-title">
-        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
         <p>Se acerca</p>
         <span>el gran momento</span>
       </div>
@@ -1737,7 +1737,7 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
@@ -1745,12 +1745,12 @@
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
       <div class="print-content">
 
       <div class="print-page-title">
-        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
         <p>Baby shower</p>
       </div>
 
@@ -1849,36 +1849,36 @@
           </div>
 
           <?php if( isset($bbyshower['BabyshowerPage']['photo1']) ){ ?>
-            <img id="photo1_back_bbyshower" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$bbyshower['BabyshowerPage']['photo1']); ?>">
+            <img id="photo1_back_bbyshower" src="https://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$bbyshower['BabyshowerPage']['photo1']); ?>">
           <?php } else { ?>
-            <img id="photo1_back_bbyshower marco-fondo" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png">
+            <img id="photo1_back_bbyshower marco-fondo" class="photo1_back_bbyshower" src="https://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png">
           <?php } ?> 
-          <img id="photo1-bbyshower" class="marco" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/marco.png">
+          <img id="photo1-bbyshower" class="marco" src="https://momtomom.mx/apps/memorias_embarazo/img/marco.png">
 
           
           <?php if( isset($bbyshower['BabyshowerPage']['photo2']) ){ ?>
-            <img id="photo2_back_bbyshower" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$bbyshower['BabyshowerPage']['photo2']); ?>">
+            <img id="photo2_back_bbyshower" src="https://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$bbyshower['BabyshowerPage']['photo2']); ?>">
           <?php } else { ?>
-            <img id="photo2_back_bbyshower marco-fondo" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png">
+            <img id="photo2_back_bbyshower marco-fondo" class="photo2_back_bbyshower" src="https://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png">
           <?php } ?> 
-          <img id="photo2-bbyshower" class="marco" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/marco.png">
+          <img id="photo2-bbyshower" class="marco" src="https://momtomom.mx/apps/memorias_embarazo/img/marco.png">
 
       </div>
     </div>
 
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
       <div class="print-content">
 
       <div class="print-page-title">
-        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
          <p>S&uacute;per cool</p>
          <span>fotos del ultrasonido</span>
       </div>
@@ -1938,12 +1938,12 @@
           ?>
 
           <?php if( isset($cool['CoolultrasoundPage']['photo']) ){ ?>
-            <img id="photo_back_coolultrasound" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$cool['CoolultrasoundPage']['photo']); ?>">
+            <img id="photo_back_coolultrasound" src="https://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$cool['CoolultrasoundPage']['photo']); ?>">
           <?php } else { ?>
-            <img id="photo2_back_bbyshower marco-fondo" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png">
+            <img id="marco-fondo" class="photo_back_coolultrasound" src="https://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png">
           <?php } ?> 
 
-          <img id="photo-coolultrasound" class="marco" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/marco.png">
+          <img id="photo-coolultrasound" class="marco" src="https://momtomom.mx/apps/memorias_embarazo/img/marco.png">
 
           <div class="bloque uno">
             <h3>Ultrasonido</h3>
@@ -2044,18 +2044,18 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
       <div class="print-content">
 
       <div class="print-page-title">
-        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
         <p>SÍNTOMAS</p>
         <span>de anidar</span>
       </div>
@@ -2088,7 +2088,7 @@
           <p class="emociones">¡Muchas emociones! Me estoy preparando para tu llegada.</p>
           <p class="emociones">Oﬁcialmente estoy anidando.</p>
 
-          <img class="anidar" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/anidar.png">
+          <img class="anidar" src="https://momtomom.mx/apps/memorias_embarazo/img/anidar.png">
           <div class="dado">
             <p>Me ha dado por:</p>
             
@@ -2127,27 +2127,27 @@
 
 
           <?php if( isset($nesting['NestingPage']['room_photo']) ){ ?>
-            <img id="room_photo_back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$nesting['NestingPage']['room_photo']); ?>">
+            <img id="room_photo_back" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$nesting['NestingPage']['room_photo']); ?>">
           <?php } else { ?>
-            <img id="room_photo_back marco-fondo" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png">
+            <img id="marco-fondo" class="room_photo_back" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png">
           <?php } ?>
 
-          <img id="room_photo" class="marco" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco.png">
+          <img id="room_photo" class="marco" src="http://momtomom.mx/apps/memorias_embarazo/img/marco.png">
           
       </div>
     </div>
 
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
   <div class="pagina"> 
-      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
       <div class="print-content">
 
       <div class="print-page-title">
-        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
         <p>Adios pancita,</p>
         <span>bienvenido beb&eacute;</span>
       </div>
@@ -2271,18 +2271,18 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
       <div class="print-content">
 
       <div class="print-page-title">
-        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
         <p>Entrega Especial:</p>
         <span>T&uacute;</span>
       </div>
@@ -2344,14 +2344,14 @@
 
           <?php if( isset($special['SpecialdeliveryPage']['photo']) ){ ?>
 
-            <img id="photo-back-specialdel" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$special['SpecialdeliveryPage']['photo']); 
+            <img id="photo-back-specialdel" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$special['SpecialdeliveryPage']['photo']); 
               ?>">
 
           <?php } else { ?>
-            <img id="photo-back-specialdel marco-fondo" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png">
+            <img id="marco-fondo" class="photo-back-specialdel" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png">
           <?php } ?>
           
-          <img id="photo-specialdel" class="marco" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco.png">
+          <img id="photo-specialdel" class="marco" src="http://momtomom.mx/apps/memorias_embarazo/img/marco.png">
 
           <p class="eres">
             <label> Eres: </label>
@@ -2419,18 +2419,18 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
       <div class="print-content">
 
       <div class="print-page-title">
-        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
         <p>M&aacute;s detalles</p>
         <span>de tu llegada</span>
       </div>
@@ -2528,25 +2528,25 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
       <div class="print-content">
 
       <div class="print-page-title">
-        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
         <p>Ep&iacute;logo</p>
         <span>de la panza</span>
       </div>
 
       <div class="print-form" id="epilogform"> 
 
-          <img id="epilogbackground" src="https://operacionxperia.com/momtomom/memorias_embarazo/img/epilogo.png">
+          <img id="epilogbackground" src="https://momtomom.mx/apps/memorias_embarazo/img/epilogo.png">
 
           <?php 
 
@@ -2584,18 +2584,18 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
       <div class="print-content">
 
       <div class="print-page-title">
-        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
         <p>La nueva familia</p>
       </div>
 
@@ -2611,11 +2611,11 @@
           ?>
 
           <?php if( isset($new['NewfamilyPage']['photo']) ){ ?>
-            <img class="newfamily-back-photo" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$new['NewfamilyPage']['photo']); ?>">            
+            <img class="newfamily-back-photo" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$new['NewfamilyPage']['photo']); ?>">            
           <?php } else { ?>
-            <img class="newfamily-back-photo marco-fondo" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_fondo.png">    
+            <img class="newfamily-back-photo marco-fondo" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png">    
           <?php } ?>
-         <img class="newfamily-photo marco" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco.png">
+         <img class="newfamily-photo marco" src="http://momtomom.mx/apps/memorias_embarazo/img/marco.png">
 
           <p class="newfamilypar">
             <span>
@@ -2626,7 +2626,7 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
@@ -2635,12 +2635,12 @@
 
 
   <div class="pagina"> 
-      <img class="print-header" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/header.png">
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
       <div class="print-content">
 
       <div class="print-page-title">
-        <img class="print-title-page" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/titulo_back.png" >
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
         <p>&aacute;rbol Familiar</p>
       </div>
 
@@ -2693,12 +2693,12 @@
           ?>
 
           <div class="familytree">
-            <img class="familytreeFile marco-circular" id="grandpa_dad" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_circular.png">
+            <img class="familytreeFile marco-circular" id="grandpa_dad" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_circular.png">
 
             <?php if( isset($familytree['FamilytreePage']['grandpa_dad_img']) ){ ?>
-              <img class="familytreeBackBack" id="grandpa_dad-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_dad_img']); ?>" >
+              <img class="familytreeBackBack" id="grandpa_dad-back" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_dad_img']); ?>" >
             <?php } else { ?>
-              <img class="familytreeBackBack" id="grandpa_dad-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
+              <img class="familytreeBackBack" id="grandpa_dad-back" src="http://momtomom.mx/apps/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
             <?php } ?>
 
             <span class="spanfila1" id="first">
@@ -2707,12 +2707,12 @@
           </div>
 
           <div class="familytree">
-            <img class="familytreeFile marco-circular" id="grandpa_mom" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_circular.png">
+            <img class="familytreeFile marco-circular" id="grandpa_mom" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_circular.png">
 
             <?php if( isset($familytree['FamilytreePage']['grandpa_mom_img']) ){ ?>
-              <img class="familytreeBackBack" id="grandpa_mom-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_mom_img']); ?>" >
+              <img class="familytreeBackBack" id="grandpa_mom-back" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_mom_img']); ?>" >
             <?php } else { ?>
-              <img  class="familytreeBackBack" id="grandpa_mom-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
+              <img  class="familytreeBackBack" id="grandpa_mom-back" src="http://momtomom.mx/apps/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
             <?php } ?>            
 
             <span class="spanfila1" id="sec">
@@ -2721,12 +2721,12 @@
           </div>
 
           <div class="familytree">
-            <img class="familytreeFile marco-circular" id="grandma_dad" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_circular.png">
+            <img class="familytreeFile marco-circular" id="grandma_dad" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_circular.png">
 
             <?php if( isset($familytree['FamilytreePage']['grandma_dad_img']) ){ ?>
-              <img class="familytreeBackBack" id="grandma_dad-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_dad_img']); ?>" >
+              <img class="familytreeBackBack" id="grandma_dad-back" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_dad_img']); ?>" >
             <?php } else { ?>
-              <img class="familytreeBackBack" id="grandma_dad-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
+              <img class="familytreeBackBack" id="grandma_dad-back" src="http://momtomom.mx/apps/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
             <?php } ?>            
 
             <span class="spanfila1" id="ter">
@@ -2737,12 +2737,12 @@
 
 
           <div class="familytree">
-            <img class="familytreeFile marco-circular" id="grandma_mom" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_circular.png">
+            <img class="familytreeFile marco-circular" id="grandma_mom" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_circular.png">
 
             <?php if( isset($familytree['FamilytreePage']['grandma_mom_img']) ){ ?>
-              <img class="familytreeBackBack" id="grandma_mom-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_mom_img']); ?>" >
+              <img class="familytreeBackBack" id="grandma_mom-back" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_mom_img']); ?>" >
             <?php } else { ?>
-              <img class="familytreeBackBack" id="grandma_mom-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
+              <img class="familytreeBackBack" id="grandma_mom-back" src="http://momtomom.mx/apps/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
             <?php } ?>            
 
             <span class="spanfila1" id="cuart">
@@ -2753,12 +2753,12 @@
 
 
           <div class="familytree">
-            <img class="familytreeFile marco-circular" id="dad" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_circular.png">
+            <img class="familytreeFile marco-circular" id="dad" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_circular.png">
 
             <?php if( isset($familytree['FamilytreePage']['dad_img']) ){ ?>
-              <img class="familytreeBackBack" id="dad-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['dad_img']); ?>" >
+              <img class="familytreeBackBack" id="dad-back" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['dad_img']); ?>" >
             <?php } else { ?>
-              <img class="familytreeBackBack" id="dad-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
+              <img class="familytreeBackBack" id="dad-back" src="http://momtomom.mx/apps/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
             <?php } ?>            
 
             <span class="spanfila2" id="first2">
@@ -2769,12 +2769,12 @@
 
 
           <div class="familytree">
-            <img class="familytreeFile marco-circular" id="mom" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_circular.png">
+            <img class="familytreeFile marco-circular" id="mom" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_circular.png">
 
             <?php if( isset($familytree['FamilytreePage']['mom_img']) ){ ?>
-              <img class="familytreeBackBack" id="mom-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['mom_img']); ?>" >
+              <img class="familytreeBackBack" id="mom-back" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['mom_img']); ?>" >
             <?php } else { ?>
-              <img class="familytreeBackBack" id="mom-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
+              <img class="familytreeBackBack" id="mom-back" src="http://momtomom.mx/apps/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
             <?php } ?>            
 
             <span class="spanfila2" id="sec2">
@@ -2786,12 +2786,12 @@
 
 
           <div class="familytree">
-            <img class="familytreeFile marco-circular" id="baby" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/marco_circular.png">
+            <img class="familytreeFile marco-circular" id="baby" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_circular.png">
 
             <?php if( isset($familytree['FamilytreePage']['baby_img']) ){ ?>
-              <img class="familytreeBackBack" id="baby-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['baby_img']); ?>" >
+              <img class="familytreeBackBack" id="baby-back" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['baby_img']); ?>" >
             <?php } else { ?>
-              <img class="familytreeBackBack" id="baby-back" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
+              <img class="familytreeBackBack" id="baby-back" src="http://momtomom.mx/apps/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
             <?php } ?>            
 
             <span class="spanfila3" id="first3">
@@ -2805,7 +2805,7 @@
       </div>
     </div>
 
-     <img class="print-footer" src="http://operacionxperia.com/momtomom/memorias_embarazo/img/footer.png" width="100%" height="205">
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
