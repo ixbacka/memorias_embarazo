@@ -38,7 +38,7 @@ $(document).ready(function(){
 	});
 
 	$("li.home").click(function(){
-		window.location.href = 'https://operacionxperia.com/momtomom/memorias_embarazo/profiles/cover';
+		window.location.href = 'https://momtomom.mx/apps/memorias_embarazo/profiles/cover';
 	});
 
 	////////////////////////////////////////////////////////////////////////////////
@@ -89,11 +89,11 @@ $(document).ready(function(){
 	///////////////////////////////////////////////////////////////////////////////////////
 
 	$("li.home").click(function(){
-		window.location.href = 'https://operacionxperia.com/momtomom/memorias_embarazo/profiles/cover';
+		window.location.href = 'https://momtomom.mx/apps/memorias_embarazo/profiles/cover';
 	});
 
 	$('.tema1').click(function(){
-		var url = "//operacionxperia.com/momtomom/memorias_embarazo/profiles/changeTheme/"+UID+"/1";
+		var url = "//momtomom.mx/apps/memorias_embarazo/profiles/changeTheme/"+UID+"/1";
 		$.getJSON(url, function(data, textStatus) {
 			console.log(data+"  - "+textStatus);
 			if(textStatus == 'success' && data == 'Success!'){
@@ -106,7 +106,7 @@ $(document).ready(function(){
 		});
 	});
 	$('.tema2').click(function(){
-		var url = "//operacionxperia.com/momtomom/memorias_embarazo/profiles/changeTheme/"+UID+"/2";
+		var url = "//momtomom.mx/apps/memorias_embarazo/profiles/changeTheme/"+UID+"/2";
 		$.getJSON(url, function(data, textStatus) {
 			console.log(data+"  - "+textStatus);
 			if(textStatus == 'success' && data == 'Success!'){
@@ -118,7 +118,7 @@ $(document).ready(function(){
 		});
 	});
 	$('.tema3').click(function(){
-		var url = "//operacionxperia.com/momtomom/memorias_embarazo/profiles/changeTheme/"+UID+"/3";
+		var url = "//momtomom.mx/apps/memorias_embarazo/profiles/changeTheme/"+UID+"/3";
 		$.getJSON(url, function(data, textStatus) {
 			console.log(data+"  - "+textStatus);
 			if(textStatus == 'success' && data == 'Success!'){
@@ -130,7 +130,7 @@ $(document).ready(function(){
 		});
 	});
 	$('.tema4').click(function(){
-		var url = "//operacionxperia.com/momtomom/memorias_embarazo/profiles/changeTheme/"+UID+"/4";
+		var url = "//momtomom.mx/apps/memorias_embarazo/profiles/changeTheme/"+UID+"/4";
 		$.getJSON(url, function(data, textStatus) {
 			console.log(data+"  - "+textStatus);
 			if(textStatus == 'success' && data == 'Success!'){
@@ -144,7 +144,7 @@ $(document).ready(function(){
 
 	$('.font1').click(function(){
 		console.log('entrando en font 1 ....');
-		var url = "//operacionxperia.com/momtomom/memorias_embarazo/profiles/changeFont/"+UID+"/1";
+		var url = "//momtomom.mx/apps/memorias_embarazo/profiles/changeFont/"+UID+"/1";
 		$.getJSON(url, function(data, textStatus) {
 			console.log(data+"  - "+textStatus);
 			if(textStatus == 'success' && data == 'Success!'){
@@ -156,7 +156,7 @@ $(document).ready(function(){
 	});
 
 	$('.font2').click(function(){
-		var url = "//operacionxperia.com/momtomom/memorias_embarazo/profiles/changeFont/"+UID+"/2";
+		var url = "//momtomom.mx/apps/memorias_embarazo/profiles/changeFont/"+UID+"/2";
 		$.getJSON(url, function(data, textStatus) {
 			console.log(data+"  - "+textStatus);
 			if(textStatus == 'success' && data == 'Success!'){
@@ -168,7 +168,7 @@ $(document).ready(function(){
 	});
 
 	$('.font3').click(function(){
-		var url = "//operacionxperia.com/momtomom/memorias_embarazo/profiles/changeFont/"+UID+"/3";
+		var url = "//momtomom.mx/apps/memorias_embarazo/profiles/changeFont/"+UID+"/3";
 		$.getJSON(url, function(data, textStatus) {
 			console.log(data+"  - "+textStatus);
 			if(textStatus == 'success' && data == 'Success!'){
@@ -180,7 +180,7 @@ $(document).ready(function(){
 	});
 
 	$('.font4').click(function(){
-		var url = "//operacionxperia.com/momtomom/memorias_embarazo/profiles/changeFont/"+UID+"/4";
+		var url = "//momtomom.mx/apps/memorias_embarazo/profiles/changeFont/"+UID+"/4";
 		$.getJSON(url, function(data, textStatus) {
 			console.log(data+"  - "+textStatus);
 			if(textStatus == 'success' && data == 'Success!'){
@@ -198,7 +198,7 @@ $(document).ready(function(){
 			//var url = '//www.nativo-digital.mx/clientes/testing/products/postLook'; 
 			var loginBox = $(this).attr('href');
 
-			var url = '//operacionxperia.com/momtomom/memorias_embarazo/profiles/midiario/'+UID; 
+			var url = '//momtomom.mx/apps/memorias_embarazo/profiles/midiario/'+UID; 
 			//
 			 console.log(' mm ... ' + url);
 			$.getJSON(url, function(data, textStatus)
@@ -212,23 +212,21 @@ $(document).ready(function(){
 					laid = data.usuarioid;
 					if(max == 1){
 					console.log(' asd '+linkpic);
-					$('#dialog-box').append(
+					$('#dialog-box').addClass('share-pop').append(
 						'<a href="#" class="close">'+
 						'<img src="../img/tacha.png" class="btn_close" onClick="cerrarventana()" title="Close Window" alt="Close" /></a>'+
-				        '<fieldset class="textbox">'+
-				        '<label class="username">'+
-				        '<span>Mensaje</span>'+
-				        '<input id="msg" name="msg" type="text" placeholder="Mis memorias de embarazo">'+
-				        '</label><br><br><br>'+
-				        '<label class="username">'+
-				        '<span>Mis Memorias de Embarazo</span>'+
-				         '</label>'+
-				        '<img src="'+linkpic+'" width="300px"/>'+
-				        '<input type="hidden" id="ellinkd" value="'+imagename+'" ><br>'+
-				        '<input type="hidden" id="laid" value="'+laid+'" >'+
-				        '<button class="botochon" onclick="compartirmidiario()" type="button">Compartir</button>'+
-				        '</fieldset>'
-				        );
+  	        '<img class="share-img" src="'+linkpic+'" width="190px"/>'+              				        
+            '<fieldset class="textbox">'+
+            '<img class="pop-logo" src="../img/logo_pop.png">' +
+            '<label class="username">'+
+            '<span>Comparte con tus amigas y familia tus incre&iacute;bles Memorias de Embarazo</span>'+
+            '<input id="msg" name="msg" type="text" placeholder="Mis memorias de embarazo">'+
+            '</label>'+
+            '<input type="hidden" id="ellinkd" value="'+imagename+'" ><br>'+
+            '<input type="hidden" id="laid" value="'+laid+'" >'+
+            '<button class="botochon" onclick="compartirmidiario()" type="button">Compartir</button>'+
+            '</fieldset>'
+            );
 					}
 					$(loginBox).fadeIn(300);
 					//Set the center alignment padding + border see css style
@@ -255,7 +253,7 @@ $(document).ready(function(){
 			e.preventDefault();
 			var trim = $(this).attr('href');
 
-			var url = '//operacionxperia.com/momtomom/memorias_embarazo/moment_pages/howmanymoments/'+UID; 
+			var url = '//momtomom.mx/apps/memorias_embarazo/moment_pages/howmanymoments/'+UID; 
 			//
 			 console.log(' mm ... ' + url);
 			$.getJSON(url, function(data, textStatus)
@@ -263,7 +261,7 @@ $(document).ready(function(){
 				console.log(' ohoho ! ~ STATUS: '+textStatus);
 
 				if (data.mensaje == 'successfully'){
-					window.location.href= '//operacionxperia.com/momtomom/memorias_embarazo/moment_pages/add/0/'+trim;
+					window.location.href= '//momtomom.mx/apps/memorias_embarazo/moment_pages/add/0/'+trim;
 				} else {
 					$('#dialog-box-momento').append(
 						'<p> No puedes agregar otro momento! </p>'
@@ -296,7 +294,7 @@ $(document).ready(function(){
 			console.log('popopopopopop');
 			var loginBox = $(this).attr('href');
 
-			var url = '//operacionxperia.com/momtomom/memorias_embarazo/profiles/midiario/'+UID; 
+			var url = '//momtomom.mx/apps/memorias_embarazo/profiles/midiario/'+UID; 
 			//
 			 console.log(' mm ... ' + url);
 			$.getJSON(url, function(data, textStatus)
@@ -489,7 +487,7 @@ $(document).ready(function(){
 			      alert("Solo números o letras por favor.");
 
 			} else {
-				var url = '//operacionxperia.com/momtomom/memorias_embarazo/profiles/postDiary/'+msg+'/'+picurl+'/'+laid+'/'+UID; 
+				var url = '//momtomom.mx/apps/memorias_embarazo/profiles/postDiary/'+msg+'/'+picurl+'/'+laid+'/'+UID; 
 				//
 				console.log(' mm ... ' + url);
 				$.getJSON(url, function(data, textStatus)
