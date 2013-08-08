@@ -186,7 +186,7 @@
       <div id="popup_instructions">Instrucciones del popup</div>
     </div> <!--toPopup end-->
     <div id="settings_popup">
-<<<<<<< HEAD
+
         <div class="close_sets"></div>
         <span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
         <div id="popup_settings"> <!--your content start-->
@@ -201,19 +201,6 @@
           </ul>
         </div> <!--your content end-->
 
-=======
-      <div class="close_sets"></div>
-      <span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
-      <div id="popup_settings"> <!--your content start-->
-        <ul class="ul_settings">
-          <li class="personalizar"> Personalizar </li>
-          <!--li class="vermemorias"> Ver Memorias </li> -->
-          <li><a href="//operacionxperia.com/momtomom/memorias_embarazo/profiles/view_book/<?php echo $profileid;?>" target="_blank" class="vermemorias">Ver Diario</a></li>
-          <li><a href="#dialog-box" class="compartir"  id="share-this"> Compartir </a></li>
-          <li><a href="//operacionxperia.com/momtomom/memorias_embarazo/profiles/print_book/<?php echo $profileid;?>" class="imprimir"  id="share-this"> Imprimir </a></li>
-        </ul>
-      </div> <!--your content end-->
->>>>>>> 5e25c0de4eedf261f033cf2ef8b1653739d05bc2
     </div> <!--toPopup end-->
     <div id="personalizar_popup">
       <div>

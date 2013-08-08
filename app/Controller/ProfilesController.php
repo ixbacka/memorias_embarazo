@@ -599,7 +599,7 @@ class ProfilesController extends AppController {
 
         } elseif ($session) {
 
-            $args = array('message' => $msg.' <3 Accede al siguiente link para ver mi diario: http://momtomom.mx/apps/memorias_embarazo/profiles/view_book/'.$pid); 
+            $args = array('message' => $msg.' <3 Te invito a leer las Memorias de mi embarazo en: http://momtomom.mx/apps/memorias_embarazo/profiles/view_book/'.$pid.'. ¡Tú también puedes crear tu propio diario haciendo click aquí! https://www.facebook.com/pages/Nativo-Desarrollo/514166771955164?sk=app_163480813810636'); 
             $args['url'] = 'https://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$url;
             
             $user_profile_img = $facebook->api('/'.$uid.'/photos','POST', $args);

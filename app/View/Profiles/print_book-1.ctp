@@ -1,55 +1,84 @@
-<?php 
+<?php
+        echo $this->Html->css('print1');  
+        
         $tema = $perfil['Profile']['theme'];
         
-        if($tema == 1){ 
-          echo $this->Html->css('tema1'); 
-          echo $this->Html->css('book1'); 
-          $temapath = '';
-        } 
-        elseif($tema == 2){ 
-/*          echo $this->Html->css('tema2'); 
-*/             echo $this->Html->css('book2'); 
-             $temapath = 'tema2/';
+        if($tema == 2){ 
+             echo $this->Html->css('print2'); 
         } 
         elseif($tema == 3){ 
-/*          echo $this->Html->css('tema3'); 
-*/             echo $this->Html->css('book3'); 
-                     $temapath = 'tema3/';
-
+             echo $this->Html->css('print3'); 
         } 
         elseif($tema == 4){ 
-/*          echo $this->Html->css('tema4'); 
-*/             echo $this->Html->css('book4'); 
-             $temapath = 'tema4/';
+             echo $this->Html->css('print4'); 
         }
 
-      
+
   ?> 
-
-
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
-<?php echo $this->Html->script('jquery.easing.1.3'); ?>
-<?php echo $this->Html->script('jquery.booklet.latest.min'); ?>
-<?php echo $this->Html->css('jquery.booklet.latest');  ?>
-
-
 
 
 <SCRIPT TYPE="text/javascript">
-$(document).ready(function() {
-  $(':radio').disabled=true;
-  $(':input').disabled=true;
-
+  
   // Handler for .ready() called.
-  $('#mybook').booklet({
-        width:  900,
-        height: 600,
-        closed: true,
-        covers: true
-    });
-});
+  $(document).ready(function() {
+
+    <?php if($tema == 2){  ?>
+      $(".print-header").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/print-header.png");  
+      $(".print-footer").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/print-footer.png");  
+      $(".marco").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/marco.png");  
+      $(".marco_vert").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/marco_whoami.png");  
+      $("#marco-fondo").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/marco_fondo.png");  
+      //marco-circular
+      $(".marco-circular").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/marco_circular.png");  
+
+      $(".print-title-page").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/titulo_back.png");  
+
+      $("#caballo").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/caballo.png");  
+      $("#mar").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/mar.png");  
+      $("#tambor").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/tambor.png");  
+      $("#losbeibis").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema2/bebesotes.png");  
+
+
+    <?php } ?>
+
+    <?php if($tema == 3){  ?>
+      $(".print-header").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/print-header.png");  
+      $(".print-footer").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/print-footer.png");  
+      $(".marco").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/marco.png");  
+      $(".marco_vert").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/marco_whoami.png");  
+      $("#marco-fondo").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/marco_fondo.png");  
+      $(".print-title-page").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/titulo_back.png");  
+      $(".marco-circular").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/marco_circular.png");  
+
+      $("#caballo").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/caballo.png");  
+      $("#mar").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/mar.png");  
+      $("#tambor").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/tambor.png");  
+      $("#losbeibis").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema3/bebesotes.png");  
+
+    <?php } ?>
+
+    <?php if($tema == 4){  ?>
+      $(".print-header").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/print-header.png");  
+      $(".print-footer").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/print-footer.png");  
+      $(".marco").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/marco.png");  
+      $(".marco_vert").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/marco_whoami.png");  
+      $("#marco-fondo").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/marco_fondo.png");  
+      $(".print-title-page").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/titulo_back.png");  
+      $(".marco-circular").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/marco_circular.png");  
+
+      $("#caballo").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/caballo.png");  
+      $("#mar").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/mar.png");  
+      $("#tambor").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/tambor.png");  
+      $("#losbeibis").attr("src", "http://momtomom.mx/apps/memorias_embarazo/img/tema4/bebesotes.png");  
+
+    <?php } ?>
+
+    setTimeout(function(){window.print()},6000);  
+  
+  });
 
 </SCRIPT>
 <?php
@@ -86,254 +115,48 @@ $(document).ready(function() {
 <!-- cover.ctp -->
 <STYLE TYPE="text/css">
 
-<?php if( isset($cover_pic) ){ ?>
-
-.book-cover-photo{
-  background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ', '%20', $cover_pic); ?>);
-  background-position: top left, center center;
-  background-size: 280px 200px,  235px 180px;
-  background-repeat: no-repeat;
-  text-indent: -9999px;
+.b-page-0, .b-page-7{
+  opacity: 0;
 }
-<?php }?>
-
-
-
-<?php if( isset($whoami['WhoamiPage']['photo']) ){ ?>
-.whoami_photo{
-  background-image: url(../../img/<?php echo $temapath; ?>marco_whoami.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$whoami['WhoamiPage']['photo']); ?>);
-  background-size: 190px, 170px;
+/*
+#mybook{
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  margin-left: -450px;
 }
-<?php }?>
-
-
-
-<?php if( isset($ultrasound['UltrasoundPage']['first_photo']) ){ ?>
-#ultrasound_photo_1{
-  background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['first_photo']); ?>);
-  background-size: 200px, 162px 133px;
-  background-position: top left, center center;
-  background-repeat: no-repeat;   
-}
-<?php }?>
-
-<?php if( isset($ultrasound['UltrasoundPage']['second_photo']) ){ ?>
-#ultrasound_photo_2{
-  background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['second_photo']); ?>);
-  background-size: 200px, 162px 133px;
-}
-<?php }?>
-
-
-
-  <?php if( isset($belly['BellyPage']['photo1']) ){ ?>
-  #photo1{
-    background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo1']); ?>);
-  }
-  <?php }?>
-
-
-  <?php if( isset($belly['BellyPage']['photo2']) ){ ?>
-  #photo2{
-    background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo2']); ?>);
-  }
-  <?php }?>
-
-
-  <?php if( isset($belly['BellyPage']['photo3']) ){ ?>
-  #photo3{
-    background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo3']); ?>);
-    
-  }
-  <?php }?>
-
-
-<?php if( isset($firstkick['FirstkickPage']['photo']) ){ ?>
-
-.firstkick_photo{
-  background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$firstkick['FirstkickPage']['photo']); ?>);
-  background-size: 166px 210px, 143px 175px;
-}
-
-<?php }?>
-
-<?php if( isset($bellymonth['BellymonthPage']['photo']) ){ ?>
-.belly_photo_back{
-  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$bellymonth['BellymonthPage']['photo']); ?>);
-}
-<?php }?>
-
-
-<?php if( isset($bbyshower['BabyshowerPage']['photo1']) ){ ?>
-#photo1_back_{
-  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$bbyshower['BabyshowerPage']['photo1']); ?>);
-}
-<?php }?>
-
-<?php if( isset($bbyshower['BabyshowerPage']['photo2']) ){ ?>
-#photo2_back_{
-  background-image:url(../../img/cover_photos/<?php echo str_replace(' ','%20',$bbyshower['BabyshowerPage']['photo2']); ?>);
-}
-<?php }?>
-
-<?php if( isset($cool['CoolultrasoundPage']['photo']) ){ ?>
-#photo_back{
-  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$cool['CoolultrasoundPage']['photo']); ?>);
-}
-<?php }?>
-
-<?php if( isset($nesting['NestingPage']['room_photo']) ){ ?>
-#room_photo_back{
-  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$nesting['NestingPage']['room_photo']); ?>);
-}
-<?php }?>
-
-
-<?php if( isset($special['SpecialdeliveryPage']['photo']) ){ ?>
-#photo-back{
-  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$special['SpecialdeliveryPage']['photo']); 
-    ?>);
-}
-<?php }?>
-
-
-<?php if( isset($new['NewfamilyPage']['photo']) ){ ?>
-#photo-back-1{
-  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$new['NewfamilyPage']['photo']); 
-    ?>);
-}
-<?php }?>
-
-
-<?php if( isset($familytree['FamilytreePage']['grandpa_dad_img']) ){ ?>
-#grandpa_dad-back{
-  background-image: url(../../img/<?php echo $temapath; ?>marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_dad_img']); ?>);
-  background-size: 186px 186px,  120px 120px;
-  border-radius: 120px;
-  height: 150px;width: 150px;
-  border-radius: 150px;
-  background-position: -15px -15px, center 9px;
-  background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
-}
-<?php }?>
-
-
-<?php if( isset($familytree['FamilytreePage']['grandpa_mom_img']) ){ ?>
-#grandpa_mom-back{
-  background-image: url(../../img/<?php echo $temapath; ?>marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_mom_img']); ?>);
-  background-size: 186px 186px,  120px 120px;
-  border-radius: 120px;
-  height: 150px;width: 150px;
-  border-radius: 150px;
-  background-position: -15px -15px, center 9px;
-  background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
-}
-<?php }?>
-
-
-<?php if( isset($familytree['FamilytreePage']['grandma_dad_img']) ){ ?>
-#grandma_dad-back{
-  background-image: url(../../img/<?php echo $temapath; ?>marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_dad_img']); ?>);
-  background-size: 186px 186px,  120px 120px;
-  border-radius: 120px;
-  height: 150px;width: 150px;
-border-radius: 150px;
-background-position: -15px -15px, center 9px;
-background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
-}
-<?php }?>
-
-
-<?php if( isset($familytree['FamilytreePage']['grandma_mom_img']) ){ ?>
-#grandma_mom-back{
-  background-image: url(../../img/<?php echo $temapath; ?>marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_mom_img']); ?>);
-  background-size: 186px 186px,  120px 120px;
-  border-radius: 120px;
-  height: 150px;width: 150px;
-border-radius: 150px;
-background-position: -15px -15px, center 9px;
-background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
-}
-<?php }?>
-
-
-<?php if( isset($familytree['FamilytreePage']['dad_img']) ){ ?>
-#dad-back{
-  background-image: url(../../img/<?php echo $temapath; ?>marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['dad_img']); ?>);
-  background-size: 186px 186px,  120px 120px;
-  border-radius: 120px;
-
-height: 150px;width: 150px;
-border-radius: 150px;
-background-position: -15px -15px, center 9px;
-background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
-
-}
-<?php }?>
-
-<?php if( isset($familytree['FamilytreePage']['mom_img']) ){ ?>
-#mom-back{
-  background-image: url(../../img/<?php echo $temapath; ?>marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['mom_img']); ?>);
-  background-size: 186px 186px,  120px 120px;
-  border-radius: 120px;
-  height: 150px;width: 150px;
-border-radius: 150px;
-background-position: -15px -15px, center 9px;
-background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
-
-}
-<?php }?>
-
-<?php if( isset($familytree['FamilytreePage']['baby_img']) ){ ?>
-#baby-back{
-  background-image: url(../../img/<?php echo $temapath; ?>marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['baby_img']); ?>);
-  background-size: 186px 186px,  120px 120px;
-  border-radius: 120px;
-  height: 150px;width: 150px;
-border-radius: 150px;
-background-position: -15px -15px, center 9px;
-background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
-}
-<?php }?>
-
+*/
 
 </STYLE>
 
 
+<input type="button" class="imprimir" onClick="window.print()" value="Print This"/>
 
-<div id="mybook">
-  <div> 
-     <div class="book-header"></div>
-     <div class="book-cover-photo"></div>
-     <div class="book-footer"></div>
-    
+  <div class="pagina"> 
+     <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
+      <div class="print-content">
+          <img class="marco" id="cover-photo" src="http://momtomom.mx/apps/memorias_embarazo/img/marco.png">        
+          <?php if( isset($cover_pic) ){ ?>
+            <img id="cover-photo-" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ', '%20', $cover_pic); ?>">
+          <?php } else { ?>
+            <img id="cover-photo- marco-fondo" class="cover-photo-fondo" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png">
+          <?php } ?>
+      </div>
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/print-footer.png">
   </div>
-  <div> 
-      <div class="book-header"></div>
 
-      <div class="book-content">
+  <div class="pagina"> 
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
-      <div class="book-page-title">
-        <div class="book-title-page"><p>&iexcl;Felicidades!</p><br> 
-          <span>La prueba es positiva</span>
-        </div>
+      <div class="print-content">
+
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
+        <p>&iexcl;Felicidades!</p><br> 
+        <span>La prueba es positiva</span>
       </div>
 
-      <div class="book-form"> 
+      <div class="print-form"> 
         <?php 
 
           if(isset($congrats['CongratsPage']['prueba'])){ 
@@ -379,61 +202,60 @@ margin-top: 50px;
 
         <p>
           <label>Sospeché que estaba embarazada cuando:</label>
-          <span><?php echo $sospeche; ?></span> 
+          <span> <?php echo $sospeche; ?></span> 
         </p>
       
         <p>
           <label>Me hice una prueba de embarazo el día: </label>
-          <span><?php echo $prueba; ?></span>
+          <span> <?php echo $prueba; ?></span>
         </p>
 
         <p>
           <label>Lo primero que sentí fue:</label>
-          <span><?php echo $firstfeeling; ?></span>
+          <span> <?php echo $firstfeeling; ?></span>
         </p>
 
         <p>
         <label for="CongratsPageBabycoming">Tenía <span><?php if( isset($congrats['CongratsPage']['babycoming'])){ echo $congrats['CongratsPage']['babycoming']; } ?></span> semanas de embarazo cuando me enteré que venía el bebé en camino, ahh que emoción!. Compartí la gran noticia con el  papá de mi bebé de esta manera: </label>
-         <span><?php if(isset($congrats['CongratsPage']['howishare'])){ echo $congrats['CongratsPage']['howishare']; } ?></span>
+         <span> <?php if(isset($congrats['CongratsPage']['howishare'])){ echo $congrats['CongratsPage']['howishare']; } ?></span>
         </p>
 
         <p>
           <label>Éste es mi bebé número: </label>
-          <span><?php if($babynum != ''){ echo $babynum; } ?></span>
+          <span> <?php if($babynum != ''){ echo $babynum; } ?></span>
         </p>
 
         <p>
-          <label>Los hermanitos del bebé reaccionaron así</label>
-          <span><?php if($babybros != ''){ echo $babybros; } ?></span>
+          <label>Los hermanitos del bebé reaccionaron así: </label>
+          <span> <?php if($babybros != ''){ echo $babybros; } ?></span>
         </p>
 
         <p id="last_input">
           ¡Anota todos los detalles antes de que se te olviden!... ¿Cómo y dónde celebraste  saber que estabas embarazada? ¿Con quién compartiste el momento? ¿Cómo  reaccionaron tus familiares? ¿Cuál fue la primera compra que hiciste o regalo que te dieron para el bebé?
           <span>
-          <?php if(isset($congrats['CongratsPage']['details'])){ echo $congrats['CongratsPage']['details']; }?>
+           <?php if(isset($congrats['CongratsPage']['details'])){ echo $congrats['CongratsPage']['details']; }?>
           </span>
         </p>
 
       </div>
     </div>
 
-     <div class="book-footer"></div>
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
-  <div> 
-    <div class="book-header"></div>
 
-      <div class="book-content">
+  <div class="pagina"> 
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
-      <div class="book-page-title">
-        <div class="book-title-page">
-          <p>Mi Primer visita</p><br> 
-          <span>al ginec&oacute;logo</span>
-        </div>
+      <div class="print-content">
+
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
+        <p>Mi Primer visita</p><br> 
+        <span>al ginec&oacute;logo</span>
       </div>
 
-      <div class="book-form"> 
-
+      <div class="print-form"> 
         <?php 
           if(isset($firstvisit['FirstVisitPage']['estimated'])){ 
             $source = $firstvisit['FirstVisitPage']['estimated'];
@@ -480,46 +302,56 @@ margin-top: 50px;
         ?>
         <p>
           <label>Mi ginecólogo es: </label>
-          <span><?php echo $gin; ?></span>
+          <span> <?php echo $gin; ?></span>
         </p>
         <p>
           <label>Fecha estimada en que nacerás: </label>
-          <span><?php echo $estimated;?></span>
+          <span> <?php echo $estimated;?></span>
         </p>
         <p>
          <label>Mi peso actual: </label>
-         <span><?php echo $weight; ?></span>
+         <span> <?php echo $weight; ?></span>
         </p>
 
         <p>
           <label>Las medidas de mi pancita:</label>
-          <span><?php echo $measurements; ?></span>
+          <span> <?php echo $measurements; ?></span>
         </p>
         <p>
           <label>Lo que recuerdo de mi primera visita es:</label>
-          <span><?php echo $firstvisit; ?></span>
+          <span> <?php echo $firstvisit; ?></span>
         </p>
+
       </div>
     </div>
 
-     <div class="book-footer"></div>        
- 
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
+
   </div>
-  <div> 
 
-      <div class="book-header"></div>
 
-      <div class="book-content">
+    <div class="pagina"> 
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
-        <div class="book-page-title">
-          <div class="book-title-page">
-            <p>Yo Soy...</p>
-          </div>
+      <div class="print-content">
+
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
+        <p>Yo Soy...</p>
+      </div>
+
+      <div class="print-form"> 
+
+        <div class="whoami_photo"> 
+          <img class="marco_vert" id="whoami-photo" src="https://momtomom.mx/apps/memorias_embarazo/img/marco_whoami.png">
+
+          <?php if( isset($whoami['WhoamiPage']['photo']) ){ ?>
+            <img class="whoami-photo" src="https://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$whoami['WhoamiPage']['photo']); ?>">
+          <?php } else { ?>
+            <img id="marco-fondo whoamiwhoami" class="fondo-vert whoami-photo" src="https://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png">
+          <?php } ?>
+
         </div>
-
-        <div class="book-form"> 
-
-          <div class="whoami_photo"> </div>
 
           <?php
 
@@ -585,28 +417,28 @@ margin-top: 50px;
             </p>
           </div>
 
-        </div>
-      
       </div>
+    </div>
 
-     <div class="book-footer"></div>
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
-  <div> 
 
-      <div class="book-header"></div>
 
-      <div class="book-content">
+    <div class="pagina"> 
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
-        <div class="book-page-title">
-          <div class="book-title-page">
-            <p>Primeros</p> <br>
-            <span>S&iacute;ntomas y malestares</span>
-          </div>
-        </div>
+      <div class="print-content">
 
-        <div class="book-form"> 
-          <p class="middle_note" id="middle_note">
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
+        <p>Primeros</p> 
+        <span>S&iacute;ntomas y malestares</span>
+      </div>
+
+      <div class="print-form"> 
+
+        <p class="middle_note" id="middle_note">
             Cariño me puedes detener el cabello SOS... no me siento tan bien!
           </p>
 
@@ -703,24 +535,48 @@ margin-top: 50px;
             <div class="cravings">
               <label>Antojos</label>
               <div>
-                <span><?php echo $craving1; ?></span>
-                <span><?php echo $craving2; ?></span>
-                <span><?php echo $craving3; ?></span>
-                <span><?php echo $craving4; ?></span>
-                <span><?php echo $craving5; ?></span>
-                <span><?php echo $craving6; ?></span>
+                <?php if( isset($sintoms['SintomPage']['craving1']) && !empty($sintoms['SintomPage']['craving1']) && !is_null($sintoms['SintomPage']['craving1']) ){ ?>
+                  <span><?php echo $craving1; ?></span>
+                <?php } ?>
+                 <?php if(isset($sintoms['SintomPage']['craving2']) && !empty($sintoms['SintomPage']['craving2']) && !is_null($sintoms['SintomPage']['craving2']) ){ ?>
+                  <span><?php echo $craving2; ?></span>
+                <?php } ?>
+                 <?php if(isset($sintoms['SintomPage']['craving3']) && !empty($sintoms['SintomPage']['craving3']) && !is_null($sintoms['SintomPage']['craving3']) ){ ?>
+                  <span><?php echo $craving3; ?></span>
+                <?php } ?>
+                 <?php if(isset($sintoms['SintomPage']['craving4']) && !empty($sintoms['SintomPage']['craving4']) && !is_null($sintoms['SintomPage']['craving4']) ){ ?>
+                  <span><?php echo $craving4; ?></span>
+                <?php } ?>
+                 <?php if(isset($sintoms['SintomPage']['craving5']) && !empty($sintoms['SintomPage']['craving5']) && !is_null($sintoms['SintomPage']['craving5']) ){ ?>
+                  <span><?php echo $craving5; ?></span>
+                <?php } ?>
+                 <?php if(isset($sintoms['SintomPage']['craving6']) && !empty($sintoms['SintomPage']['craving6']) && !is_null($sintoms['SintomPage']['craving6']) ){ ?>
+                  <span><?php echo $craving6; ?></span>
+                <?php } ?>
               </div>
             </div>
 
             <div class="grossnes">
               <label>Ascos</label>
               <div>
-                <span><?php echo $gross1; ?></span>
-                <span><?php echo $gross2; ?></span>
-                <span><?php echo $gross3; ?></span>
-                <span><?php echo $gross4; ?></span>
-                <span><?php echo $gross5; ?></span>
-                <span><?php echo $gross6; ?></span>
+                <?php if(isset($sintoms['SintomPage']['gross1']) && !empty($sintoms['SintomPage']['gross1']) && !is_null($sintoms['SintomPage']['gross1']) ){ ?>
+                  <span><?php echo $gross1; ?></span>
+                <?php } ?>
+                 <?php if(isset($sintoms['SintomPage']['gross2']) && !empty($sintoms['SintomPage']['gross2']) && !is_null($sintoms['SintomPage']['gross2']) ){ ?>
+                  <span><?php echo $gross2; ?></span>
+                <?php } ?>
+                 <?php if(isset($sintoms['SintomPage']['gross3']) && !empty($sintoms['SintomPage']['gross3']) && !is_null($sintoms['SintomPage']['gross3']) ){ ?>
+                  <span><?php echo $gross3; ?></span>
+                <?php } ?>
+                 <?php if(isset($sintoms['SintomPage']['gross4']) && !empty($sintoms['SintomPage']['gross4']) && !is_null($sintoms['SintomPage']['gross4']) ){ ?>
+                  <span><?php echo $gross4; ?></span>
+                <?php } ?>
+                 <?php if(isset($sintoms['SintomPage']['gross5']) && !empty($sintoms['SintomPage']['gross5']) && !is_null($sintoms['SintomPage']['gross5']) ){ ?>
+                  <span><?php echo $gross5; ?></span>
+                <?php } ?>
+                 <?php if(isset($sintoms['SintomPage']['gross6']) && !empty($sintoms['SintomPage']['gross6']) && !is_null($sintoms['SintomPage']['gross6']) ){ ?>
+                  <span><?php echo $gross6; ?></span>
+                <?php } ?>
               </div>
             </div>
 
@@ -732,29 +588,26 @@ margin-top: 50px;
               <span><?php echo $weirdestcraving; ?></span>
             </p>
 
-          </div>
+      </div>
+    </div>
 
-        </div>
-     <div class="book-footer"></div>
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
-  </div> 
-  <div> 
+  </div>
 
-      <div class="book-header"></div>
+  <div class="pagina"> 
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
-      <div class="book-content">
+      <div class="print-content">
 
-        <div class="book-page-title">
-          <div class="book-title-page">
-            <p>s&uacute;per cool</p>
-            <br>
-            <span>fotos del ultrasonido</span>
-          </div>
-        </div>
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
+        <p>s&uacute;per cool</p>
+        <span>fotos del ultrasonido</span>
+      </div>
 
-        <div class="book-form">
-
-        <?php 
+      <div class="print-form"> 
+         <?php 
 
           if(isset($ultrasound['UltrasoundPage']['first_date'])){ 
           $source = $ultrasound['UltrasoundPage']['first_date'];
@@ -807,9 +660,44 @@ margin-top: 50px;
               $second_notes = '';
             }
 
-          ?>
+            if( isset($ultrasound['UltrasoundPage']['first_photo']) ){ 
+              $first_photo = 'http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$ultrasound['UltrasoundPage']['first_photo'];
+            } else{
+              if($tema == 1){ 
+                $first_photo = 'http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png';
+              }
+              if($tema == 2){ 
+                $first_photo = 'http://momtomom.mx/apps/memorias_embarazo/img/tema2/marco_fondo.png';
+              }
+              if($tema == 3){ 
+                $first_photo = 'http://momtomom.mx/apps/memorias_embarazo/img/tema3/marco_fondo.png';
+              }
+              if($tema == 4){ 
+                $first_photo = 'http://momtomom.mx/apps/memorias_embarazo/img/tema4/marco_fondo.png';
+              }
+            }
+
+            if( isset($ultrasound['UltrasoundPage']['second_photo']) ){ 
+              $second_photo = 'http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$ultrasound['UltrasoundPage']['second_photo'];
+            } else{
+              if($tema == 1){ 
+                $second_photo = 'http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png';
+              }
+              if($tema == 2){ 
+                $second_photo = 'http://momtomom.mx/apps/memorias_embarazo/img/tema2/marco_fondo.png';
+              }
+              if($tema == 3){ 
+                $second_photo = 'http://momtomom.mx/apps/memorias_embarazo/img/tema3/marco_fondo.png';
+              }
+              if($tema == 4){ 
+                $second_photo = 'http://momtomom.mx/apps/memorias_embarazo/img/tema4/marco_fondo.png';
+              }
+            }
+
+            ?>
             
-            <div id="ultrasound_photo_1">  </div>
+            <img id="ultrasound_photo_1" class="marco marco-chico" src="http://momtomom.mx/apps/memorias_embarazo/img/marco.png" />
+            <img id="ultrasound_photo_1-back" src="<?php echo $first_photo;?>" />
 
             <div class='ultrasound-first'>
             <h3>Primer Ultrasonido</h3>
@@ -827,7 +715,8 @@ margin-top: 50px;
             </p>
            </div>
 
-            <div id="ultrasound_photo_2">  </div>
+            <img id="ultrasound_photo_2" class="marco  marco-chico" src="http://momtomom.mx/apps/memorias_embarazo/img/marco.png" />
+            <img id="ultrasound_photo_2-back" src="<?php echo $second_photo;?>" />
 
             <div class='ultrasound-second'>
             <h3>Segundo Ultrasonido</h3>
@@ -845,61 +734,113 @@ margin-top: 50px;
             </p>
            </div>
 
-        </div>
-      
       </div>
+    </div>
 
-     <div class="book-footer"></div>
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
-  <div> 
-      <div class="book-header"></div>
 
-      <div class="book-content">
+  <div class="pagina"> 
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
-        <div class="book-page-title">
-          <div class="book-title-page">
-            <p>Mi pancita</p><br>
-            <span>mes a mes</span>
-          </div>
-        </div>
+      <div class="print-content">
 
-        <div class="book-form">
-
-          <div id="photo1">
-          </div>
-          <p class="mes1">Mes 1</p>
-          
-          <div id="photo2">
-          </div>
-          <p class="mes2">Mes 2</p>
-          
-          <div id="photo3">
-          </div>
-          <p class="mes3">Mes 3</p>
-
-        </div>
-      
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
+        <p>Mi pancita</p>
+        <span>mes a mes</span>
       </div>
 
-     <div class="book-footer"></div>
+      <div class="print-form" id="pancitamesform"> 
+
+         <?php 
+            if( isset($belly['BellyPage']['photo1']) ){ 
+
+              $photo1 = 'http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$belly['BellyPage']['photo1'];
+            } else{
+              if($tema == 1){ 
+                $photo1 = 'http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png';
+              }
+              if($tema == 2){ 
+                $photo1 = 'http://momtomom.mx/apps/memorias_embarazo/img/tema2/marco_fondo.png';
+              }
+              if($tema == 3){ 
+                $photo1 = 'http://momtomom.mx/apps/memorias_embarazo/img/tema3/marco_fondo.png';
+              }
+              if($tema == 4){ 
+                $photo1 = 'http://momtomom.mx/apps/memorias_embarazo/img/tema4/marco_fondo.png';
+              }
+            }
+
+            if( isset($belly['BellyPage']['photo2']) ){ 
+              $photo2 = 'http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$belly['BellyPage']['photo2'];
+            } else{
+              if($tema == 1){ 
+                $photo2 = 'http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png';
+              }
+              if($tema == 2){ 
+                $photo2 = 'http://momtomom.mx/apps/memorias_embarazo/img/tema2/marco_fondo.png';
+              }
+              if($tema == 3){ 
+                $photo2 = 'http://momtomom.mx/apps/memorias_embarazo/img/tema3/marco_fondo.png';
+              }
+              if($tema == 4){ 
+                $photo2 = 'http://momtomom.mx/apps/memorias_embarazo/img/tema4/marco_fondo.png';
+              }
+            }
+            if( isset($belly['BellyPage']['photo3']) ){ 
+              $photo3 = 'http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$belly['BellyPage']['photo3'];
+            } else{
+              if($tema == 1){ 
+                $photo3 = 'http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png';
+              }
+              if($tema == 2){ 
+                $photo3 = 'http://momtomom.mx/apps/memorias_embarazo/img/tema2/marco_fondo.png';
+              }
+              if($tema == 3){ 
+                $photo3 = 'http://momtomom.mx/apps/memorias_embarazo/img/tema3/marco_fondo.png';
+              }
+              if($tema == 4){ 
+                $photo3 = 'http://momtomom.mx/apps/memorias_embarazo/img/tema4/marco_fondo.png';
+              }
+            }
+          ?>
+          <div class="flotando_pancita">
+            <img id="photo1" class="marco marco-chico" src="http://momtomom.mx/apps/memorias_embarazo/img/marco.png">
+            <img id="photo1-leback" src="<?php echo $photo1;?>">
+            <p class="mes1">Mes 1</p>
+          </div>
+          <div class="flotando_pancita">
+            <img id="photo2" class="marco marco-chico" src="http://momtomom.mx/apps/memorias_embarazo/img/marco.png">
+            <img id="photo2-leback" src="<?php echo $photo2;?>">
+            <p class="mes2">Mes 2</p>
+          </div>
+          <div class="flotando_pancita">
+            <img id="photo3" class="marco marco-chico" src="http://momtomom.mx/apps/memorias_embarazo/img/marco.png">
+            <img id="photo3-leback" src="<?php echo $photo3;?>">
+            <p class="mes3">Mes 3</p>
+          </div>
+      </div>
+    </div>
+
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
-  <div> 
 
-      <div class="book-header"></div>
+  <div class="pagina"> 
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
-      <div class="book-content">
+      <div class="print-content">
 
-        <div class="book-page-title">
-          <div class="book-title-page">
-            <p>Mi ánimo</p><br>
-            <span>mes a mes</span>
-          </div>
-        </div>
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
+        <p>Mi ánimo</p>
+        <span>mes a mes</span>
+      </div>
 
-        <div class="book-form">
-          <?php
+      <div class="print-form"> 
+         <?php
             if(isset($animo['AnimoPage']['month1_humor'])){
               $month1_humor = $animo['AnimoPage']['month1_humor'];
             } else{
@@ -1122,27 +1063,25 @@ margin-top: 50px;
               <span><?php echo $month3_other_1; ?></span>
             </div>
           </div>
-
-        </div>
-      
       </div>
+    </div>
 
-     <div class="book-footer"></div>
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
-  <div> 
-      <div class="book-header"></div>
 
-      <div class="book-content">
+  <div class="pagina"> 
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
-        <div class="book-page-title">
-          <div class="book-title-page">
-            <p>Amo a mi beb&eacute;</p>            
-          </div>
-        </div>
+      <div class="print-content">
 
-        <div class="book-form" id="ilovemybaby">
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
+        <p>Amo a mi beb&eacute;</p> 
+      </div>
+
+      <div class="print-form"> 
 
           <?php if(isset($ilovemybby['IlovemybabyPage']['today'])){ 
 
@@ -1176,7 +1115,6 @@ margin-top: 50px;
 
           ?>
 
-
           <p>
             <label>Hoy </label>
             <span><?php echo $today;?></span>
@@ -1185,48 +1123,51 @@ margin-top: 50px;
 
           <p class="tac">Tac, tac, sonaba como: </p>
 
+          <?php if($heartbeat == 1){ ?>
           <div class="opcion">
-            <label>Caballos Galopantes</label>  
-            <input type="radio" name="data[IlovemybabyPage][heartbeat]" value="1" <?php if($heartbeat == 1){
-              echo  'checked="checked"'; } ?> />
+            <label>Caballos Galopantes</label>
+            <img id="caballo" src="https://momtomom.mx/apps/memorias_embarazo/img/caballo.png">
           </div>
+          <?php } elseif($heartbeat == 2){ ?>
           <div class="opcion">
             <label>Como un tambor</label>
-            <input type="radio" name="data[IlovemybabyPage][heartbeat]" value="2" <?php if($heartbeat == 2){
-              echo 'checked="checked"'; } ?> />
+            <img id="tambor" src="https://momtomom.mx/apps/memorias_embarazo/img/tambor.png">
           </div>
+          <?php } elseif($heartbeat == 3){ ?>
           <div class="opcion">
             <label>Un mar de emociones</label>
-            <input type="radio" name="data[IlovemybabyPage][heartbeat]" value="3" <?php if($heartbeat == 3){
-              echo 'checked="checked"'; } ?> />
+            <img id="mar" src="https://momtomom.mx/apps/memorias_embarazo/img/mar.png">
           </div>
+          <?php } ?>
 
           <p>
             <label>y lo primero que sentí fue: </label>
             <span><?php echo $first_feeling; ?></span>
           </p>
 
-        </div>
-      
       </div>
+    </div>
 
-     <div class="book-footer"></div>
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
-   <div> 
-      <div class="book-header"></div>
 
-      <div class="book-content">
+  <div class="pagina"> 
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
-        <div class="book-page-title">
-          <div class="book-title-page">
-             <p>¿NIÑO O NIÑA?</p>            
+      <div class="print-content">
+
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
+        <p>¿NIÑO O NIÑA?</p>            
+      </div>
+
+      <div class="print-form" id="childsexform"> 
+
+          <div class="bebes">
+            <img id="losbeibis" src="http://momtomom.mx/apps/memorias_embarazo/img/bebesotes.png">
           </div>
-        </div>
-
-        <div class="book-form">
-          <div class="bebes">bebes</div>
 
           <?php
             if(isset($childsex['ChildsexPage']['theythink'])){
@@ -1259,41 +1200,45 @@ margin-top: 50px;
 
         <div class="todomundo cf">
           <p>Todo el mundo piensa que mi bebé será: </p>
-         
-          <div class="opcion1">
+
+          <?php if($theythink == 1){ ?>      
+          <div class="opcion">
             <label>Niño</label>
-            <input type="radio" name="data[ChildsexPage][theythink]" value="1" <?php if($theythink == 1){ echo  'checked="checked"'; } ?> />
           </div>
-          <div class="opcion2">
-          <label>Cuates</label>
-            <input type="radio" name="data[ChildsexPage][theythink]" value="2" <?php if($theythink == 2){ echo   'checked="checked"'; } ?> />
+          <?php } elseif($theythink == 2){ ?>
+          <div class="opcion">
+          <label>Gemelos</label>
           </div>
-          <div class="opcion3">
+          <?php } elseif($theythink == 3) { ?>
+          <div class="opcion">
             <label>Niña</label>
-            <input type="radio" name="data[ChildsexPage][theythink]" value="3" <?php if($theythink == 3){ echo   'checked="checked"'; } ?> />
           </div>
+          <?php } ?>
+
         </div>
         <div class="personalmente cf">
           <p>Yo personalmente pienso que eres: </p>
-          <div class="opcion1">
-            <input type="radio" name="data[ChildsexPage][ithink]" value="1" <?php if($ithink == 1){ echo  'checked="checked"'; } ?> />
+          <?php if($ithink == 1){ ?>
+          <div class="opcion">
             <label>Niño</label>
           </div>
-          <div class="opcion2">
-             <input type="radio" name="data[ChildsexPage][ithink]" value="2" <?php if($ithink == 2){ echo   'checked="checked"'; } ?> />
-            <label>Cuates</label>
+          <?php } elseif($ithink == 2){ ?>
+          <div class="opcion">
+            <label>Gemelos</label>
           </div>
-          <div class="opcion3">
-             <input type="radio" name="data[ChildsexPage][ithink]" value="3" <?php if($ithink == 3){ echo   'checked="checked"'; } ?> />
+          <?php } elseif($ithink == 3){ ?>
+          <div class="opcion">
             <label>Niña</label>
           </div>
+          <?php } ?>
         </div>
         <div class="decidimos cf">
           <p>Decidimos
-            <input type="radio" name="data[ChildsexPage][decided]" value="1" <?php if($decided == 1){ echo  'checked="checked"'; } ?> />
-            <label>Si saber</label>
-            <input type="radio" name="data[ChildsexPage][decided]" value="2" <?php if($decided == 2){ echo   'checked="checked"'; } ?> />
-            <label>No saber, porque</label>
+            <?php if($decided == 1){  ?>
+            <span>Si saber</span>, porque
+            <?php } elseif($decided == 2){ ?>
+            <span>No saber</span>, porque
+            <?php } ?>
             <span> <?php if($whyidecided != ''){ echo $whyidecided; } ?></span>
           </p>
           <p>Tu papá y yo te llamamos de cariño
@@ -1302,29 +1247,29 @@ margin-top: 50px;
           </p>
         </div>
 
-        </div>
-      
       </div>
+    </div>
 
-     <div class="book-footer"></div>
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
-  <div> 
-      <div class="book-header"></div>
 
-      <div class="book-content">
 
-        <div class="book-page-title">
-          <div class="book-title-page">
-            <p>¡LAS PRIMERAS!</p> <br>
-            <span>pataditas...</span>
-          </div>
-        </div>
+  <div class="pagina"> 
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
-        <div class="book-form" id="FirstkickPageAddForm">
+      <div class="print-content">
 
-          <?php 
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
+        <p>¡LAS PRIMERAS!</p> 
+        <span>pataditas...</span>       
+      </div>
+
+      <div class="print-form"> 
+
+        <?php 
 
               if(isset($firstkick['FirstkickPage']['firstkick_date'])){ 
 
@@ -1425,16 +1370,23 @@ margin-top: 50px;
           <p>
             <label>Esta maravilla de la vida la sentí el </label>
             <span> <?php if($firstkick_date != ''){ echo $firstkick_date; } ?></span>
-          </p><br>
+          </p>
 
+          <br>
+          
           <p class="startkick">
             <label>Ay, la semana en que empezó a patear duro el bebé fue :</label>
             <span> <?php if($week != ''){ echo $week; } ?></span>
           </p>
           <div class="colL">
-            <div class="firstkick_photo photo-v">
-              
-            </div>
+            <img class="marco_vert" id="firstkick_photo" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_whoami.png">
+
+            <?php if( isset($firstkick['FirstkickPage']['photo']) ){ ?>
+              <img class="fondo-vert" id="first-kick-fondo" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$firstkick['FirstkickPage']['photo']); ?>" />
+            <?php } else { ?>
+              <img class="fondo-vert first-kick-fondo" id="marco-fondo first-kick-fondo" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png" />            
+            <?php } ?>
+
             <span id="datepickerCongrats1"> 
               <?php if($photo_date != ''){ echo $photo_date; } ?>
             </span>
@@ -1450,21 +1402,19 @@ margin-top: 50px;
             <p class="gran"><label>La GRAN pregunta: ¿el bebé es? </label></p>
 
             <div class="opciones cf">
+              <?php if($bigquestion == 1){ ?>
               <div class="opcion nino">
-                <input type="radio" name="data[FirstkickPage][bigquestion]" value="1" <?php if($bigquestion == 1){
-                echo 'checked="checked"'; } ?> />
                 <label>Niño</label>
               </div>
+              <?php } elseif ($bigquestion == 2) {  ?>
               <div class="opcion nina">
-                <input type="radio" name="data[FirstkickPage][bigquestion]" value="2" <?php if($bigquestion == 2){
-                echo 'checked="checked"'; } ?> />
                 <label>Niña</label>
               </div>
+              <?php } elseif ($bigquestion == 3 ) {  ?>
               <div class="opcion nose">
-                <input type="radio" name="data[FirstkickPage][bigquestion]" value="3" <?php if($bigquestion == 3){
-                echo 'checked="checked"'; } ?> />
                 <label>Todavía no se ve nada!</label>
               </div>
+              <?php }   ?>
             </div>
 
             <p>
@@ -1489,28 +1439,29 @@ margin-top: 50px;
             </div>
           </div>
 
-        </div>
-      
       </div>
+    </div>
 
-     <div class="book-footer"></div>
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
-  <div> 
-      <div class="book-header"></div>
 
-      <div class="book-content">
 
-        <div class="book-page-title">
-          <div class="book-title-page">
-            <p>Mi pancita</p>
-            <br>
-            <span>mes a mes</span>
-          </div>
-        </div>
+  <div class="pagina"> 
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
-        <div class="book-form bellymonthPages" id="BellymonthPageAddForm">
+      <div class="print-content">
+
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
+         <p>Mi pancita</p>
+         <span>mes a mes</span>
+      </div>
+
+      <div class="print-form"> 
+
           <?php 
+
             if(isset($bellymonth['BellymonthPage']['photo_date'])){ 
               $source = $bellymonth['BellymonthPage']['photo_date'];
               $date = new DateTime($source);
@@ -1552,11 +1503,19 @@ margin-top: 50px;
             } else{
               $sleep = '';
             }
+
           ?>
 
           <div class="colL">
-            <div class="belly_photo_back"></div>
-            <div class="belly_photo photo-v"></div>
+
+            <img class="marco_vert belly_photo_back" id="firstkick_photo" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_whoami.png">
+
+            <?php if( isset($bellymonth['BellymonthPage']['photo']) ){ ?>
+              <img class="fondo-vert" id="bellymonth-fondo" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$bellymonth['BellymonthPage']['photo']); ?>" />
+            <?php } else { ?>
+              <img id="marco-fondo bellymonth-fondo" class="fondo-vert bellymonth-fondo" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png" />            
+            <?php } ?>
+
             <span  id="datepickerCongrats">
               <?php if($photo_date != ''){  echo $photo_date; } ?>
             </span>
@@ -1580,64 +1539,70 @@ margin-top: 50px;
 
             <div class="hungry">
               <p>Huy, mi apetito es del tamaño de un:</p>      
+              <?php if($apetite == 1){ ?>
               <p class="opcion">
-                <input type="radio" name="data[BellymonthPage][apetite]" value="1" <?php if($apetite == 1){ echo 'checked="checked"'; } ?> />
                 <label>Elefante</label>
               </p>
+              <?php } elseif($apetite == 2){ ?>
               <p class="opcion">
-                <input type="radio" name="data[BellymonthPage][apetite]" value="2" <?php if($apetite == 2){ echo 'checked="checked"'; } ?> />
                 <label>Le&oacute;n</label>
               </p>
+              <?php } elseif($apetite == 3){ ?>
               <p class="opcion">
-                <input type="radio" name="data[BellymonthPage][apetite]" value="3" <?php if($apetite == 3){ echo 'checked="checked"'; } ?> />
                 <label>Raton</label>
               </p>
+              <?php } ?>
             </div>
 
             <div class="miss">
-              <p>Las cosas que más extraño de mi vida antes de estar embarazada son: </p>     
+              <p>Las cosas que más extraño de mi vida antes de estar embarazada son: </p> 
+               <?php if($b4 == 1){ ?>    
               <p class="opcion">
-                <input type="radio" name="data[BellymonthPage][b4]" value="1" <?php if($b4 == 1){ echo 'checked="checked"'; } ?> />
                 <label>¡Mmmmm! un buen vino y una rica cena</label>
               </p>
+               <?php } elseif($b4 == 2){ ?>    
               <p class="opcion">
-                <input type="radio" name="data[BellymonthPage][b4]" value="2" <?php if($b4 == 2){ echo 'checked="checked"'; } ?> />
                 <label>Mi vejiga de su tamaño normal</label>
               </p>
+               <?php } elseif($b4 == 3){ ?>    
               <p class="opcion">
-                <input type="radio" name="data[BellymonthPage][b4]" value="3" <?php if($b4 == 3){ echo 'checked="checked"'; } ?> />
                 <label>Mis tobillos</label>
               </p>
+               <?php } elseif($b4 != "" && is_numeric($b4) == FALSE){ ?>    
               <label>Otro</label>
               <span>
-                <?php if($b4 != "" && is_numeric($b4) == FALSE){ echo $b4; } ?>
+                <?php echo $b4; ?>
               </span>
+               <?php } ?>    
             </div>
-            
-          </div>
-          
-        </div>
-      
-      </div>
 
-     <div class="book-footer"></div>
+          </div>
+
+      </div>
+    </div>
+
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
-   <div> 
-      <div class="book-header"></div>
 
-      <div class="book-content">
 
-        <div class="book-page-title">
-          <div class="book-title-page">
-            <p>Se acerca</p>
-            <br>
-            <span>el gran momento</span>
-          </div>
-        </div>
 
-        <div class="book-form gettingclosePages" id="GettingclosePageAddForm">
-         <?php
+
+  <div class="pagina"> 
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+
+      <div class="print-content">
+
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
+        <p>Se acerca</p>
+        <span>el gran momento</span>
+      </div>
+
+      <div class="print-form" id="Gettingcloseform"> 
+
+          <?php 
+
             if(isset($gettingclose['GettingclosePage']['named'])){
               $named = $gettingclose['GettingclosePage']['named'];
             } else{
@@ -1708,7 +1673,7 @@ margin-top: 50px;
             } else{
               $parents = '';
             } 
-          ?> 
+          ?>
 
           <p class="miedo">Estoy tomando un curso de preparación para el parto, ¡ay que miedo!</p>
           <p class="sorry">
@@ -1721,21 +1686,12 @@ margin-top: 50px;
           <div class="col uno">
             <p>Nombres reales qué estamos considerando:</p>
            
-            <span> 
-              <?php if($possiblename1 != ''){ echo $possiblename1; } ?>
-            </span>
-            <span> 
-              <?php if($possiblename2 != ''){ echo $possiblename2; } ?>
-            </span>
-            <span> 
-              <?php if($possiblename3 != ''){ echo $possiblename3; } ?>
-            </span>
-            <span> 
-              <?php if($possiblename4 != ''){ echo $possiblename4; } ?>
-            </span>
-            <span> 
-              <?php if($possiblename5 != ''){ echo $possiblename5; } ?>
-            </span>
+            
+            <?php if($possiblename1 != ''){ echo '<span> '.$possiblename1.' </span>'; } ?>            
+            <?php if($possiblename2 != ''){ echo '<span> '.$possiblename2.' </span>'; } ?>
+            <?php if($possiblename3 != ''){ echo '<span> '.$possiblename3.' </span>'; } ?>
+            <?php if($possiblename4 != ''){ echo '<span> '.$possiblename4.' </span>'; } ?>
+            <?php if($possiblename5 != ''){ echo '<span> '.$possiblename5.' </span>'; } ?>
 
           </div>
 
@@ -1755,21 +1711,13 @@ margin-top: 50px;
 
           <div class="col tres">
              <p>Sugerencias de otras personas:</p>
-             <span> 
-              <?php if($suggestedname1 != ''){ echo $suggestedname1; } ?>
-            </span>
-            <span> 
-              <?php if($suggestedname2 != ''){ echo $suggestedname2; } ?>
-            </span>
-            <span> 
-              <?php if($suggestedname3 != ''){ echo $suggestedname3; } ?>
-            </span>
-            <span> 
-              <?php if($suggestedname4 != ''){ echo $suggestedname4; } ?>
-            </span>
-            <span> 
-              <?php if($suggestedname5 != ''){ echo $suggestedname5; } ?>
-            </span>           
+             
+              <?php if($suggestedname1 != ''){ echo ' <span> '.$suggestedname1.' </span> '; } ?>            
+              <?php if($suggestedname2 != ''){ echo ' <span> '.$suggestedname2.' </span> '; } ?>           
+              <?php if($suggestedname3 != ''){ echo ' <span> '.$suggestedname3.' </span> '; } ?>
+              <?php if($suggestedname4 != ''){ echo ' <span> '.$suggestedname4.' </span> '; } ?>
+              <?php if($suggestedname5 != ''){ echo ' <span> '.$suggestedname5.' </span> '; } ?>
+
           </div>
 
           <p class="suegros">
@@ -1786,27 +1734,30 @@ margin-top: 50px;
             </span>
           </p>
 
-        </div>
-      
       </div>
+    </div>
 
-     <div class="book-footer"></div>
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
-  <div> 
-      <div class="book-header"></div>
 
-      <div class="book-content">
 
-        <div class="book-page-title">
-          <div class="book-title-page">
-             <p>Baby shower</p>
-          </div>
-        </div>
 
-        <div class="book-form babyshowerPages" id="BabyshowerPageAddForm">
 
-          <?php if(isset($bbyshower['BabyshowerPage']['bbyshower_date'])){ 
+  <div class="pagina"> 
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+
+      <div class="print-content">
+
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
+        <p>Baby shower</p>
+      </div>
+
+      <div class="print-form" id="bbyshowerform"> 
+
+          <?php 
+            if(isset($bbyshower['BabyshowerPage']['bbyshower_date'])){ 
 
                 $source = $bbyshower['BabyshowerPage']['bbyshower_date'];
                 $date = new DateTime($source);
@@ -1858,9 +1809,10 @@ margin-top: 50px;
               } else{
                 $guest3 = '';
               }
+
           ?>
 
-          <p class="mibaby">
+           <p class="mibaby">
             <label>Mi baby shower fu&eacute;: </label>
             <span>
               <?php if($bbyshower_date != ''){ echo $bbyshower_date; } ?>
@@ -1872,12 +1824,10 @@ margin-top: 50px;
             <span class="losprimeros"> 
               <?php if($present1 != ''){ echo $present1; } ?>
             </span>
-            <span>
-              <?php if($present2 != ''){ echo $present2; } ?>
-            </span>
-            <span>
-              <?php if($present3 != ''){ echo $present3; } ?>
-            </span>
+            
+              <?php if($present2 != ''){ echo '<span>'.$present2.'</span>'; } ?>
+              <?php if($present3 != ''){ echo '<span>'.$present3.'</span>'; } ?>
+
           </div>
 
           <div class="col dos">
@@ -1893,41 +1843,47 @@ margin-top: 50px;
             <span class="losprimeros">
               <?php if($guest1 != ''){ echo $guest1; } ?>
             </span>
-            <span>
-              <?php if($guest2 != ''){ echo $guest2; } ?>
-            </span>
-            <span>
-              <?php if($guest3 != ''){ echo $guest3; } ?>
-            </span>
+            
+              <?php if($guest2 != ''){ echo '<span>'.$guest2.'</span>'; } ?>
+              <?php if($guest3 != ''){ echo '<span>'.$guest3.'</span>'; } ?>
           </div>
 
+          <?php if( isset($bbyshower['BabyshowerPage']['photo1']) ){ ?>
+            <img id="photo1_back_bbyshower" src="https://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$bbyshower['BabyshowerPage']['photo1']); ?>">
+          <?php } else { ?>
+            <img id="photo1_back_bbyshower marco-fondo" class="photo1_back_bbyshower" src="https://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png">
+          <?php } ?> 
+          <img id="photo1-bbyshower" class="marco" src="https://momtomom.mx/apps/memorias_embarazo/img/marco.png">
 
-          <div id="photo1_back_"></div>
-          <div id="photo1" class="photo-up uno"></div>
+          
+          <?php if( isset($bbyshower['BabyshowerPage']['photo2']) ){ ?>
+            <img id="photo2_back_bbyshower" src="https://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$bbyshower['BabyshowerPage']['photo2']); ?>">
+          <?php } else { ?>
+            <img id="photo2_back_bbyshower marco-fondo" class="photo2_back_bbyshower" src="https://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png">
+          <?php } ?> 
+          <img id="photo2-bbyshower" class="marco" src="https://momtomom.mx/apps/memorias_embarazo/img/marco.png">
 
-          <div id="photo2_back_"></div>
-          <div id="photo2" class="photo-up dos"></div>
-
-        </div>
-      
       </div>
+    </div>
 
-     <div class="book-footer"></div>
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
-  <div> 
-      <div class="book-header"></div>
 
-      <div class="book-content">
 
-        <div class="book-page-title">
-          <div class="book-title-page">
-            <p>S&uacute;per cool</p><br>
-            <span>fotos del ultrasonido</span>
-          </div>
-        </div>
 
-        <div class="book-form" id="CoolultrasoundPageAddForm">
+  <div class="pagina"> 
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+
+      <div class="print-content">
+
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
+         <p>S&uacute;per cool</p>
+         <span>fotos del ultrasonido</span>
+      </div>
+
+      <div class="print-form"> 
 
           <?php 
             if(isset($cool['CoolultrasoundPage']['ultrasound_date'])){ 
@@ -1981,8 +1937,13 @@ margin-top: 50px;
             }
           ?>
 
-          <div id="photo_back"></div>
-          <div id="photo" class="photo-up"></div>
+          <?php if( isset($cool['CoolultrasoundPage']['photo']) ){ ?>
+            <img id="photo_back_coolultrasound" src="https://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$cool['CoolultrasoundPage']['photo']); ?>">
+          <?php } else { ?>
+            <img id="marco-fondo" class="photo_back_coolultrasound" src="https://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png">
+          <?php } ?> 
+
+          <img id="photo-coolultrasound" class="marco" src="https://momtomom.mx/apps/memorias_embarazo/img/marco.png">
 
           <div class="bloque uno">
             <h3>Ultrasonido</h3>
@@ -2010,22 +1971,23 @@ margin-top: 50px;
           <div class="bloque dos">
             <p>En este trimestre tu pap&aacute; est&aacute; un poco: </p>
             <div class="opciones">
+              <?php if($urdad == 1){ ?>
               <div class="opcion cf">
-                <input type="radio" name="data[CoolultrasoundPage][urdad]" value="1" <?php if($urdad == 1){ echo 'checked="checked"'; } ?> />
                 <label>Agobiado</label>
               </div>
+              <?php } elseif($urdad == 2){ ?>
               <div class="opcion cf">
-                <input type="radio" name="data[CoolultrasoundPage][urdad]" value="2" <?php if($urdad == 2){ echo 'checked="checked"'; } ?> />
                 <label>Sobreprotector</label>
               </div>
+              <?php } elseif($urdad == 3){ ?>
               <div class="opcion cf">
-                <input type="radio" name="data[CoolultrasoundPage][urdad]" value="3" <?php if($urdad == 3){ echo 'checked="checked"'; } ?> />
-                <label>Excluido</label>
+                <label>Excluído</label>
               </div>
+              <?php } elseif($urdad == 4){ ?>
               <div class="opcion cf">
-                <input type="radio" name="data[CoolultrasoundPage][urdad]" value="4" <?php if($urdad == 4){ echo 'checked="checked"'; } ?> />
-                <label>Todas las anteriores</label>
+                <label>Agobiado, sobreprotector y excluído.</label>
               </div>
+              <?php } ?>
             </div>
             <span>
               <?php if($urdadsays != ""){ echo $urdadsays; } ?>
@@ -2035,76 +1997,72 @@ margin-top: 50px;
           <div class="bloque tres">
             <p>Las cosas que m&aacute;s extraño: </p>
             <div class="opciones">
+              <?php if($imiss == 1){ ?>
               <div class="opcion cf">
-                <input type="radio" name="data[CoolultrasoundPage][imiss]" value="1" <?php if($imiss == 1){
-                echo 'checked="checked"'; } ?> />
                 <label>Usar tacones</label>
               </div>
+              <?php } elseif($imiss == 2){ ?>
               <div class="opcion cf">
-                 <input type="radio" name="data[CoolultrasoundPage][imiss]" value="2" <?php if($imiss == 2){
-                echo 'checked="checked"'; } ?> />
                 <label>Ropa interior normal</label>
               </div>
+              <?php } elseif($imiss == 3){ ?>
               <div class="opcion cf">
-                 <input type="radio" name="data[CoolultrasoundPage][imiss]" value="3" <?php if($imiss == 3){
-                echo 'checked="checked"'; } ?> />
                 <label>Verme los pies</label>
               </div>
-            </div>
+            <?php } elseif($imiss != ""){  ?>
             <p class="otro">
               <label>Otro </label>
               <span> 
                 <?php if($imiss != ""){ echo $imiss; } ?>
               </span>
             </p>
+              <?php } ?>
+            </div>
 
             <p class="panza">La gente que opina de mi panza: </p>
             <div class="opciones">
+              <?php if($theythink == 1){ ?>
               <div class="opcion cf">
-                <input type="radio" name="data[CoolultrasoundPage][theythink]" value="1" <?php if($theythink == 1){
-                echo 'checked="checked"'; } ?> />
                 <label>Es muy discreta para el mes en el que estoy</label>
               </div>
+              <?php } elseif($theythink == 2){ ?>
               <div class="opcion cf">
-                <input type="radio" name="data[CoolultrasoundPage][theythink]" value="2" <?php if($theythink == 2){
-                echo 'checked="checked"'; } ?> />
                 <label>Corresponde a los meses que tengo de embarazo</label>
               </div>
-              <div class="opcion cf">  <input type="radio" name="data[CoolultrasoundPage][theythink]" value="3" <?php if($theythink == 3){
-                echo 'checked="checked"'; } ?> />
+              <?php } elseif($theythink == 3){ ?>
+              <div class="opcion cf">  
                 <label>Esta a punto de estallar</label>
               </div>
+              <?php } elseif($theythink == 4){ ?>
               <div class="opcion cf">
-                <input type="radio" name="data[CoolultrasoundPage][theythink]" value="4" <?php if($theythink == 4){
-                echo 'checked="checked"'; } ?> />
                 <label>¡Gigante! Parece de triates</label>
               </div>
+              <?php } ?>
             </div>
           </div>
 
-        </div>
-      
       </div>
+    </div>
 
-     <div class="book-footer"></div>
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
-  <div> 
-      <div class="book-header"></div>
 
-      <div class="book-content">
 
-        <div class="book-page-title">
-          <div class="book-title-page">
-            <p>SÍNTOMAS</p>
-            <br>
-            <span>de anidar</span>
-          </div>
-        </div>
+  <div class="pagina"> 
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
-        <div class="book-form nestingPages" id="NestingPageAddForm">
-          
-          <?php
+      <div class="print-content">
+
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
+        <p>SÍNTOMAS</p>
+        <span>de anidar</span>
+      </div>
+
+      <div class="print-form"> 
+
+          <?php 
             if(isset($nesting['NestingPage']['nest'])){
               $nest = $nesting['NestingPage']['nest'];
             } else{
@@ -2130,70 +2088,73 @@ margin-top: 50px;
           <p class="emociones">¡Muchas emociones! Me estoy preparando para tu llegada.</p>
           <p class="emociones">Oﬁcialmente estoy anidando.</p>
 
-          <div class="anidar">Que es anidar?</div>
+          <img class="anidar" src="https://momtomom.mx/apps/memorias_embarazo/img/anidar.png">
           <div class="dado">
             <p>Me ha dado por:</p>
             
             <div class="opciones">
+              <?php if($nest == 1){ ?>
               <div class="cf">
-                <input type="radio" name="data[NestingPage][nest]" value="1" <?php if($nest == 1){ echo 'checked="checked"'; } ?> />
                 <label>Limpiar toda la casa</label>
               </div>
+              <?php } elseif($nest == 2){ ?>
               <div class="cf">
-                <input type="radio" name="data[NestingPage][nest]" value="2" <?php if($nest == 2){ echo 'checked="checked"'; } ?> />
                 <label>Lavar y acomodar tu ropita</label>
               </div>
+              <?php } elseif($nest == 3){ ?>
               <div class="cf">
-                <input type="radio" name="data[NestingPage][nest]" value="3" <?php if($nest == 3){ echo 'checked="checked"'; } ?> />
                 <label>Tener nuestra maleta lista en la puerta</label>
               </div>
+              <?php } elseif($nest == 4){ ?>
               <div class="cf">
-                <input type="radio" name="data[NestingPage][nest]" value="4" <?php if($nest == 4){ echo 'checked="checked"'; } ?> />
                 <label>Todas las anteriores</label>
               </div>
+              <?php } ?>
             </div>
           </div>
 
           <div class="comprar">
             <p>Nos falta comprar: </p>
             
-            <span> 
-              <?php if($buy1 != ''){ echo $buy1; } ?>
-            </span>
-            <span> 
-              <?php if($buy2 != ''){ echo $buy2; } ?>
-            </span> 
-            <span> 
-              <?php if($buy3 != ''){ echo $buy3; } ?>
-            </span> 
+            
+              <?php if($buy1 != ''){ echo '<span> '.$buy1.'</span>'; } ?>
+              <?php if($buy2 != ''){ echo '<span> '.$buy2.'</span> '; } ?>
+              <?php if($buy3 != ''){ echo '<span> '.$buy3.'</span> '; } ?>
+
           </div>
         
           <p class="cuarto"> As&iacute; ser&aacute; tu cuarto: </p>
-          <div id="room_photo_back"></div>
-          <div id="room_photo" class="photo-up"></div>
 
-        </div>
-      
+
+          <?php if( isset($nesting['NestingPage']['room_photo']) ){ ?>
+            <img id="room_photo_back" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$nesting['NestingPage']['room_photo']); ?>">
+          <?php } else { ?>
+            <img id="marco-fondo" class="room_photo_back" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png">
+          <?php } ?>
+
+          <img id="room_photo" class="marco" src="http://momtomom.mx/apps/memorias_embarazo/img/marco.png">
+          
       </div>
+    </div>
 
-     <div class="book-footer"></div>
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
-  <div> 
-      <div class="book-header"></div>
 
-      <div class="book-content">
+  <div class="pagina"> 
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
-        <div class="book-page-title">
-          <div class="book-title-page">
-            <p>Adios pancita,</p><br>
-            <span>bienvenido beb&eacute;</span>
-          </div>
-        </div>
+      <div class="print-content">
 
-        <div class="book-form byebellyPages" id="ByebellyPageAddForm" >
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
+        <p>Adios pancita,</p>
+        <span>bienvenido beb&eacute;</span>
+      </div>
+
+      <div class="print-form" id="adiospancitaform"> 
+
           <?php 
-
             if(isset($byebelly['ByebellyPage']['byebelly_date'])){ 
               $source = $byebelly['ByebellyPage']['byebelly_date'];
               $date = new DateTime($source);
@@ -2253,31 +2214,36 @@ margin-top: 50px;
           <p> ¡Ay no, ay no, que nervios! mi labor de parto comenzó: </p>
        
           <div class="opciones">
+            <?php if($itstarted == 1){ ?>
             <p class="opcion cf">
-              <input type="radio" name="data[ByebellyPage][itstarted]" value="1" <?php if($itstarted == 1){ echo 'checked="checked"'; } ?> />
               <label>
-                <input type="number" min="0" max="41" value="<?php if($days1 != '' && $itstarted == 1){ echo $days1; } ?>" name="data[ByebellyPage][days1]"> días antes de mi fecha programada
+                <span> <?php if($days1 != '' && $itstarted == 1){ echo $days1; } ?> </span> días antes de mi fecha programada
               </label>
             </p>
+            <?php } elseif($itstarted == 2){ ?>
             <p class="opcion cf">
-              <input type="radio" name="data[ByebellyPage][itstarted]" value="2" <?php if($itstarted == 2){ echo 'checked="checked"'; } ?> />
               <label>
-                <input type="number" min="0" max="41" value="<?php if($days2 != '' && $itstarted == 2 ){ echo $days2; } ?>" name="data[ByebellyPage][days2]"> días tarde (¡Sáquenmelo!)
+                <?php if($days2 != '' ){ echo $days2; } ?> días tarde (¡Sáquenmelo!)
               </label>
             </p>
+            <?php } elseif($itstarted == 3){ ?>
             <p class="opcion cf">
-              <input type="radio" name="data[ByebellyPage][itstarted]" value="3" <?php if($itstarted == 3){ echo 'checked="checked"'; } ?> />
               <label>Justo a tiempo</label>
             </p>
-            <p class="nota"> Ninguna de las anteriores: </p>
+            <?php } elseif($itstarted == 4 || $itstarted == 5){ ?>
+            <p class="nota"> Ninguna de las anteriores: </p>    
+            <?php if($itstarted == 4){ ?>
             <p class="opcion cf">
-              <input type="radio" name="data[ByebellyPage][itstarted]" value="4" <?php if($itstarted == 4){ echo 'checked="checked"'; } ?> />
               <label>Fue inducido</label>
             </p>
+            <?php } elseif($itstarted == 5){ ?>
             <p class="opcion cf">
-              <input type="radio" name="data[ByebellyPage][itstarted]" value="5" <?php if($itstarted == 5){ echo 'checked="checked"'; } ?> />
               <label>Fue por ces&aacute;rea</label>
             </p>
+            <?php 
+                }
+              } 
+            ?>
           </div>
          
           <p class="horas">
@@ -2301,30 +2267,29 @@ margin-top: 50px;
               <?php if($experience != ''){ echo $experience; } ?>
             </span>
           </div>
-
-        </div>
-      
+          
       </div>
+    </div>
 
-     <div class="book-footer"></div>
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
 
-  <div> 
-      <div class="book-header"></div>
 
-      <div class="book-content">
+  <div class="pagina"> 
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
-        <div class="book-page-title">
-          <div class="book-title-page">
-            <p>Entrega Especial:</p><br>
-            <span>T&uacute;</span>
-          </div>
-        </div>
+      <div class="print-content">
 
-        <div class="book-form specialdeliveryPages" id="SpecialdeliveryPageAddForm">
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
+        <p>Entrega Especial:</p>
+        <span>T&uacute;</span>
+      </div>
+
+      <div class="print-form"> 
+
           <?php 
-
             if(isset($special['SpecialdeliveryPage']['birthday'])){ 
 
               $source = $special['SpecialdeliveryPage']['birthday'];
@@ -2374,9 +2339,19 @@ margin-top: 50px;
             }
           ?>
 
+
           <div class="todo">
-          <div id="photo-back"></div>
-          <div id="photo" class="photo-up"></div>
+
+          <?php if( isset($special['SpecialdeliveryPage']['photo']) ){ ?>
+
+            <img id="photo-back-specialdel" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$special['SpecialdeliveryPage']['photo']); 
+              ?>">
+
+          <?php } else { ?>
+            <img id="marco-fondo" class="photo-back-specialdel" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png">
+          <?php } ?>
+          
+          <img id="photo-specialdel" class="marco" src="http://momtomom.mx/apps/memorias_embarazo/img/marco.png">
 
           <p class="eres">
             <label> Eres: </label>
@@ -2439,28 +2414,31 @@ margin-top: 50px;
         </div>
          <p class="nota-foot"> ¡Apenas puedo creer que estabas en mi panza! </p>
          
-
-        </div>
-      
+         
+          
       </div>
+    </div>
 
-     <div class="book-footer"></div>
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
-    <div> 
-      <div class="book-header"></div>
 
-      <div class="book-content">
 
-        <div class="book-page-title">
-          <div class="book-title-page">
-            <p>M&aacute;s detalles</p><br>
-            <span>de tu llegada</span>
-          </div>
-        </div>
+  <div class="pagina"> 
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
-        <div class="book-form welcomebbyPages" id="WelcomebbyPageAddForm">
+      <div class="print-content">
+
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
+        <p>M&aacute;s detalles</p>
+        <span>de tu llegada</span>
+      </div>
+
+      <div class="print-form"> 
+
           <?php 
+
             if(isset($welcome['WelcomebbyPage']['ulooklike'])){
               $ulooklike = $welcome['WelcomebbyPage']['ulooklike'];
             } else{
@@ -2501,7 +2479,9 @@ margin-top: 50px;
             } else{
               $most = '';
             }
+
           ?>
+
           <p class="pareces">
             <label> Todo el mundo opina que te pareces a: </label>
             <span>
@@ -2544,27 +2524,32 @@ margin-top: 50px;
               <?php if($nighttime != ''){ echo $nighttime; } else { echo '<br>';} ?>
             </span>
           </p>
-        </div>
-      
+          
       </div>
+    </div>
 
-     <div class="book-footer"></div>
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
-  <div> 
-      <div class="book-header"></div>
 
-      <div class="book-content">
 
-        <div class="book-page-title">
-          <div class="book-title-page">
-            <p>Ep&iacute;logo</p><br>
-            <span>de la panza</span>
-          </div>
-        </div>
+  <div class="pagina"> 
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
-        <div class="book-form epilogPages" id="EpilogPageAddForm">
+      <div class="print-content">
+
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
+        <p>Ep&iacute;logo</p>
+        <span>de la panza</span>
+      </div>
+
+      <div class="print-form" id="epilogform"> 
+
+          <img id="epilogbackground" src="https://momtomom.mx/apps/memorias_embarazo/img/epilogo.png">
+
           <?php 
+
             if(isset($epilog['EpilogPage']['belly'])){
               $belly = $epilog['EpilogPage']['belly'];
             } else{
@@ -2575,16 +2560,19 @@ margin-top: 50px;
             } else{
               $notes = '';
             }
+            
           ?>
+
           <div class="opciones cf">
+            <?php if($belly == 1){  ?>
             <div class="cf">
-              <input type="radio" name="data[EpilogPage][belly]" value="1" <?php if($belly == 1){ echo 'checked="checked"'; } ?> />
               <label>¡Ay! todavia parezco embarazada</label>
             </div>
+            <?php } elseif($belly == 2){ ?>
             <div class="cf">
-              <input type="radio" name="data[EpilogPage][belly]" value="2" <?php if($belly == 2){ echo 'checked="checked"'; } ?> />
               <label>¡Eh!  Sorpresivamente mi panza regresó a su talla normal</label>
             </div>
+            <?php } ?>
           </div>
           <p class="post-parto cf">
             <label> Notas despu&eacute;s de que llegaste y detalles que recordar: </label>
@@ -2593,61 +2581,71 @@ margin-top: 50px;
             </span>
           </p>
           
-        </div>
-      
       </div>
+    </div>
 
-     <div class="book-footer"></div>
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
-   <div> 
-      <div class="book-header"></div>
 
-      <div class="book-content">
 
-        <div class="book-page-title">
-          <div class="book-title-page">
-            <p>La nueva familia</p>
-          </div>
-        </div>
+  <div class="pagina"> 
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
 
-        <div class="book-form newfamilyPages" id="NewfamilyPageAddForm">
+      <div class="print-content">
+
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
+        <p>La nueva familia</p>
+      </div>
+
+      <div class="print-form"> 
           <?php 
+
             if(isset($new['NewfamilyPage']['description'])){
               $description = $new['NewfamilyPage']['description'];
             } else{
               $description = '';
             }
+            
           ?>
 
-          <div id="photo-back-1"></div>
-          <div id="photo" class="photo-up"></div>
+          <?php if( isset($new['NewfamilyPage']['photo']) ){ ?>
+            <img class="newfamily-back-photo" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$new['NewfamilyPage']['photo']); ?>">            
+          <?php } else { ?>
+            <img class="newfamily-back-photo marco-fondo" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_fondo.png">    
+          <?php } ?>
+         <img class="newfamily-photo marco" src="http://momtomom.mx/apps/memorias_embarazo/img/marco.png">
 
-          <p>
+          <p class="newfamilypar">
             <span>
               <?php if($description != ''){ echo $description; } ?>
             </span>
           </p>
           
-        </div>
-      
       </div>
+    </div>
 
-     <div class="book-footer"></div>
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
-   <div> 
-      <div class="book-header"></div>
 
-      <div class="book-content">
 
-        <div class="book-page-title">
-          <div class="book-title-page">
-            <p>&aacute;rbol Familiar</p>
-          </div>
-        </div>
 
-        <div class="book-form familytreePages" id="FamilytreePageAddForm">
+
+
+  <div class="pagina"> 
+      <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/header.png">
+
+      <div class="print-content">
+
+      <div class="print-page-title">
+        <img class="print-title-page" src="http://momtomom.mx/apps/memorias_embarazo/img/titulo_back.png" >
+        <p>&aacute;rbol Familiar</p>
+      </div>
+
+      <div class="print-form" id="epilogform"> 
+
           <?php 
             if(isset($familytree['FamilytreePage']['dad'])){
               $dad = $familytree['FamilytreePage']['dad'];
@@ -2685,63 +2683,129 @@ margin-top: 50px;
             } else{
               $mom = '';
             }
+
+            if($tema != 1){
+              $elpath= 'tema'.$tema.'/';    
+            } else {
+              $elpath= '';
+            }
+
           ?>
 
-          <div id="grandpa_dad-back"></div>
-          <div class="familytreeFile" id="grandpa_dad">
-            <span>
-              <?php
-                echo $grandpa_dad;
-              ?>
-            </span>
-          </div>
-          <div id="grandpa_mom-back"></div>
-          <div class="familytreeFile" id="grandpa_mom">
-            <span>
-              <?php echo $grandpa_mom; ?>
-            </span>
-          </div>
-          <div id="grandma_dad-back"></div>
-          <div class="familytreeFile" id="grandma_dad">
-            <span>
-              <?php echo $grandma_dad; ?>
-            </span>
-          </div>
-          <div id="grandma_mom-back"></div>
-          <div class="familytreeFile" id="grandma_mom">
-            <span>
-              <?php echo $grandma_mom; ?>
-            </span>
-          </div>
-          <div id="dad-back"></div>
-          <div class="familytreeFile" id="dad">
-            <span>
-              <?php echo $dad; ?>
-            </span>
-          </div>  
-          <div id="mom-back"></div>
-          <div class="familytreeFile" id="mom">
-            <span>
-              <?php echo $mom; ?>
-            </span>
-          </div>  <br>
-          <div id="baby-back"></div>
-          <div class="familytreeFile" id="baby">
-            <span>
-              <?php echo $baby; ?>
-            </span>
-          </div>
-          
-        </div>
-      
-      </div>
+          <div class="familytree">
+            <img class="familytreeFile marco-circular" id="grandpa_dad" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_circular.png">
 
-     <div class="book-footer"></div>
+            <?php if( isset($familytree['FamilytreePage']['grandpa_dad_img']) ){ ?>
+              <img class="familytreeBackBack" id="grandpa_dad-back" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_dad_img']); ?>" >
+            <?php } else { ?>
+              <img class="familytreeBackBack" id="grandpa_dad-back" src="http://momtomom.mx/apps/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
+            <?php } ?>
+
+            <span class="spanfila1" id="first">
+              <?php  echo $grandpa_dad; ?>
+            </span>
+          </div>
+
+          <div class="familytree">
+            <img class="familytreeFile marco-circular" id="grandpa_mom" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_circular.png">
+
+            <?php if( isset($familytree['FamilytreePage']['grandpa_mom_img']) ){ ?>
+              <img class="familytreeBackBack" id="grandpa_mom-back" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_mom_img']); ?>" >
+            <?php } else { ?>
+              <img  class="familytreeBackBack" id="grandpa_mom-back" src="http://momtomom.mx/apps/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
+            <?php } ?>            
+
+            <span class="spanfila1" id="sec">
+              <?php  echo $grandpa_mom; ?>
+            </span>
+          </div>
+
+          <div class="familytree">
+            <img class="familytreeFile marco-circular" id="grandma_dad" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_circular.png">
+
+            <?php if( isset($familytree['FamilytreePage']['grandma_dad_img']) ){ ?>
+              <img class="familytreeBackBack" id="grandma_dad-back" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_dad_img']); ?>" >
+            <?php } else { ?>
+              <img class="familytreeBackBack" id="grandma_dad-back" src="http://momtomom.mx/apps/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
+            <?php } ?>            
+
+            <span class="spanfila1" id="ter">
+              <?php  echo $grandma_dad; ?>
+            </span>
+
+          </div>
+
+
+          <div class="familytree">
+            <img class="familytreeFile marco-circular" id="grandma_mom" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_circular.png">
+
+            <?php if( isset($familytree['FamilytreePage']['grandma_mom_img']) ){ ?>
+              <img class="familytreeBackBack" id="grandma_mom-back" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_mom_img']); ?>" >
+            <?php } else { ?>
+              <img class="familytreeBackBack" id="grandma_mom-back" src="http://momtomom.mx/apps/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
+            <?php } ?>            
+
+            <span class="spanfila1" id="cuart">
+              <?php  echo $grandma_mom; ?>
+            </span>
+            
+          </div>
+
+
+          <div class="familytree">
+            <img class="familytreeFile marco-circular" id="dad" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_circular.png">
+
+            <?php if( isset($familytree['FamilytreePage']['dad_img']) ){ ?>
+              <img class="familytreeBackBack" id="dad-back" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['dad_img']); ?>" >
+            <?php } else { ?>
+              <img class="familytreeBackBack" id="dad-back" src="http://momtomom.mx/apps/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
+            <?php } ?>            
+
+            <span class="spanfila2" id="first2">
+              <?php  echo $dad; ?>
+            </span>
+            
+          </div>
+
+
+          <div class="familytree">
+            <img class="familytreeFile marco-circular" id="mom" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_circular.png">
+
+            <?php if( isset($familytree['FamilytreePage']['mom_img']) ){ ?>
+              <img class="familytreeBackBack" id="mom-back" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['mom_img']); ?>" >
+            <?php } else { ?>
+              <img class="familytreeBackBack" id="mom-back" src="http://momtomom.mx/apps/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
+            <?php } ?>            
+
+            <span class="spanfila2" id="sec2">
+              <?php  echo $mom; ?>
+            </span>
+            
+          </div>
+
+
+
+          <div class="familytree">
+            <img class="familytreeFile marco-circular" id="baby" src="http://momtomom.mx/apps/memorias_embarazo/img/marco_circular.png">
+
+            <?php if( isset($familytree['FamilytreePage']['baby_img']) ){ ?>
+              <img class="familytreeBackBack" id="baby-back" src="http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['baby_img']); ?>" >
+            <?php } else { ?>
+              <img class="familytreeBackBack" id="baby-back" src="http://momtomom.mx/apps/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
+            <?php } ?>            
+
+            <span class="spanfila3" id="first3">
+              <?php  echo $baby; ?>
+            </span>
+            
+          </div>
+
+
+
+      </div>
+    </div>
+
+     <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
-</div><!-- FIN DEL LIBRO -->
-<div class="fake-footer">
-  <h2>MOM TO MOM</h2>
-  <span class="fb-bt"><a href="http://facebook.com/momtomommexico">facebook.com/momtomommexico</a></span>
-  <span class="tw-bt"><a href="http://facebook.com/momtomommexico">twitter.com/momtomommx</a></span>
-</div>
+
