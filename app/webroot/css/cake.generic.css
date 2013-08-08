@@ -369,8 +369,11 @@ left: 5px;
 
 .personalizar:hover, 
 .vermemorias:hover,
-.compartir:hover {
+.compartir:hover,
+.imprimir:hover {
   color: #147cc1;
+  cursor: pointer;
+  cursor: hand;
 }
 
 .personalizar:hover:before{
@@ -380,11 +383,11 @@ left: 5px;
 .vermemorias:before{
   content: '';
   background-image: url(../img/vermemorias.png);
-width: 50px;
-height: 28px;
-position: absolute;
-top: 55px;
-left: 5px;
+  width: 50px;
+  height: 28px;
+  position: absolute;
+  top: 55px;
+  left: 5px;
 }
 
 .vermemorias:hover:before{
@@ -395,10 +398,10 @@ left: 5px;
   content: '';
   background-image: url(../img/compartir.png);
   width: 40px;
-height: 35px;
-position: absolute;
-top: 98px;
-left: 11px;
+  height: 35px;
+  position: absolute;
+  top: 98px;
+  left: 11px;
 }
 
 .compartir:hover:before{
@@ -409,25 +412,25 @@ left: 11px;
   content: '';
   background-image: url(../img/imprimir.png);
   width: 40px;
-height: 35px;
-position: absolute;
-top: 98px;
-left: 11px;
+  height: 35px;
+  position: absolute;
+  top: 139px;
+  left: 11px;
 }
 
 .imprimir:hover:before{
-  background-position-y: 35px;
+  background-position-y: 36px;
 }
 
 
 .ul_settings{
 position: fixed;
-top: 235px;
+top: 220px;
 color: #aeaeae;
 font-size: 20px;
 line-height: 45px;
 list-style: none;
-left: 439px;
+left: 435px;
 }
 
 #personalizar_popup{
@@ -612,8 +615,7 @@ text-align: center;
 }
 
 img.btn_close {
-/*    Position the close button
-*/  margin: -7px -10px 0 0;
+/*    Position the close button*/
   float: right;
 }
 
@@ -624,6 +626,52 @@ fieldset {
 #dialog-box .textbox label {
     display: block;
     padding-bottom: 7px;
+}
+
+#dialog-box.share-pop {
+  width: 630px;
+  left: 220px;
+  top: 510px;
+  border-radius: 20px;
+}
+
+#dialog-box.share-pop .close img {
+  float: right;
+}
+
+#dialog-box.share-pop .share-img,
+#dialog-box.share-pop fieldset {
+  float: left;
+}
+
+#dialog-box.share-pop fieldset {
+  width: 380px;
+  margin: 0 20px;
+}
+
+#dialog-box.share-pop span {
+  color: #000;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: left;
+}
+
+#dialog-box.share-pop input[type="text"] {
+  width: 100%;
+  border: 1px solid #CCC;
+  border-radius: 16px;
+  margin: 10px 0;
+}
+
+#dialog-box.share-pop .botochon {
+  width: 96px;
+  border: 1px solid white;
+  background: #ccc;
+  border-radius: 68px;
+  color: white;
+  line-height: 10px;
+  padding-bottom: 7px;
+  font-size: 13px;
 }
 
 .textbox span {
