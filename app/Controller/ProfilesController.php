@@ -26,7 +26,9 @@ class ProfilesController extends AppController {
 
 	public function view_book($id = null){
 
-		$leid = $id;
+		$profid = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' => $id ) ) );
+
+		$leid = $profid['Profile']['id'];
       	
       	$this->set('animo',$this->AnimoPage->find('first', array( 'conditions' => array( 'AnimoPage.profile_id' => $leid ) )));
    	    $this->set('bbyshower',$this->BabyshowerPage->find('first', array( 'conditions' => array( 'BabyshowerPage.profile_id' => $leid ) )));
@@ -223,6 +225,7 @@ class ProfilesController extends AppController {
 	        if($user_saved >= 1){ //user saved, so not welcome page, but cover page
 
 		        $this->Session->write('User.id', $user_saved1['Profile']['id']);
+		        $this->Session->write('User.uid', $user_saved1['Profile']['uid']);
 	        	$this->Session->write("User.theme", $user_saved1['Profile']['theme']);
 		        $this->Session->write('User.font', $user_saved1['Profile']['font']);
 	        	$this->redirect(array('controller' => 'profiles', 'action' => 'cover'));
@@ -342,6 +345,7 @@ class ProfilesController extends AppController {
       if ($this->Profile->save()) {
         $id = $this->Profile->id;
         $this->Session->write('User.id', $id);
+        $this->Session->write('User.uid', $uidi);
 
       } else {
         $this->Session->setFlash(__('Tu perfil no se ha podido guardar.'));
@@ -415,6 +419,7 @@ class ProfilesController extends AppController {
     }
 
 	    $this->set('profileid', $id['Profile']['id']); 
+	    $this->set('facebookid', $id['Profile']['uid']); 
 
 	}
 
@@ -599,7 +604,7 @@ class ProfilesController extends AppController {
 
         } elseif ($session) {
 
-            $args = array('message' => $msg.' <3 Te invito a leer las Memorias de mi embarazo en: http://momtomom.mx/apps/memorias_embarazo/profiles/view_book/'.$pid.'. ¡Tú también puedes crear tu propio diario haciendo click aquí! https://www.facebook.com/pages/Nativo-Desarrollo/514166771955164?sk=app_163480813810636'); 
+            $args = array('message' => $msg.' <3 Te invito a leer las Memorias de mi embarazo en: http://momtomom.mx/apps/memorias_embarazo/profiles/view_book/'.$uid.'. ¡Tú también puedes crear tu propio diario haciendo click aquí! https://www.facebook.com/pages/Nativo-Desarrollo/514166771955164?sk=app_163480813810636'); 
             $args['url'] = 'https://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$url;
             
             $user_profile_img = $facebook->api('/'.$uid.'/photos','POST', $args);
@@ -685,7 +690,7 @@ class ProfilesController extends AppController {
 		            	die();*/
 		           
 				               
-		            imagecopy($mapImage, $tileImg, 266, 448, 0, 0, 298, 212);
+		            imagecopy($mapImage, $tileImg, 256, 537, 0, 0, 298, 212);
 
 		            imagedestroy($tileImg);
 	        	}
