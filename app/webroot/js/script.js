@@ -308,22 +308,20 @@ $(document).ready(function(){
 					laid = data.usuarioid;
 					if(max == 1){
 					console.log(' asd '+linkpic);
-					$('#dialog-box').append(
-						'<a href="#" class="close">'+
+					$('#dialog-box').addClass('share-pop').append(
+				        '<a href="#" class="close">'+
 						'<img src="../img/tacha.png" class="btn_close" onClick="cerrarventana()" title="Close Window" alt="Close" /></a>'+
-				        '<fieldset class="textbox">'+
-				        '<label class="username">'+
-				        '<span>Mensaje</span>'+
-				        '<input id="msg" name="msg" type="text" placeholder="Mis memorias de embarazo">'+
-				        '</label><br><br><br>'+
-				        '<label class="username">'+
-				        '<span>Mis Memorias de Embarazo</span>'+
-				         '</label>'+
-				        '<img src="'+linkpic+'" width="300px"/>'+
-				        '<input type="hidden" id="ellinkd" value="'+imagename+'" ><br>'+
-				        '<input type="hidden" id="laid" value="'+laid+'" >'+
-				        '<button class="botochon" onclick="compartirmidiario()" type="button">Compartir</button>'+
-				        '</fieldset>'
+			  	        '<img class="share-img" src="'+linkpic+'" width="190px"/>'+              				        
+			            '<fieldset class="textbox">'+
+			            '<img class="pop-logo" src="../img/logo_pop.png">' +
+			            '<label class="username">'+
+			            '<span>Comparte con tus amigas y familia tus incre&iacute;bles Memorias de Embarazo</span>'+
+			            '<input id="msg" name="msg" type="text" placeholder="Mis memorias de embarazo">'+
+			            '</label>'+
+			            '<input type="hidden" id="ellinkd" value="'+imagename+'" ><br>'+
+			            '<input type="hidden" id="laid" value="'+laid+'" >'+
+			            '<button class="botochon" onclick="compartirmidiario()" type="button">Compartir</button>'+
+			            '</fieldset>'
 				        );
 
 						

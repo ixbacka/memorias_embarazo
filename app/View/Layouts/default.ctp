@@ -91,6 +91,7 @@
     }
   ?>
   <?php $profileid = $this->Session->read("User.id");
+    $facebookid = $this->Session->read("User.uid");
     $font = $this->Session->read("User.font");
     if($font == 1){ echo $this->Html->css('letra1'); }
     elseif($font == 2){ echo $this->Html->css('letra2'); }
@@ -193,7 +194,7 @@
           <ul class="ul_settings">
             <li class="personalizar"> Personalizar </li>
             <!--li class="vermemorias"> Ver Memorias </li> -->
-            <li><a href="//momtomom.mx/apps/memorias_embarazo/profiles/view_book/<?php echo $profileid;?>" target="_blank" class="vermemorias">Ver Diario</a></li>
+            <li><a href="//momtomom.mx/apps/memorias_embarazo/profiles/view_book/<?php echo $facebookid;?>" target="_blank" class="vermemorias">Ver Diario</a></li>
 
             <li><a href="#dialog-box" class="compartir"  id="share-this"> Compartir </a></li>
             <li><a href="//momtomom.mx/apps/memorias_embarazo/profiles/print_book/<?php echo $profileid;?>" class="imprimir"  id="share-this"> Imprimir </a></li>
