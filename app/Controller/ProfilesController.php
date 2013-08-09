@@ -685,12 +685,18 @@ class ProfilesController extends AppController {
 					        break;
 					}
 					    
-					   /* print_r($tam);
-		            	var_dump($tileImg);
-		            	die();*/
-		           
+				   /* print_r($tam);
+	            	var_dump($tileImg);
+	            	die();*/
+
+		            // See below for definition of imagecreatealpha
+		            //255 444  , 553 655 | width : 298 . 211
+		            $height = imagesy($tileImg);
+    				$imgdest = $this->imagecreatealpha(298, 211);	
+
+		            imagecopy($imgdest, $tileImg, 0, 0, 0, 0, 298, $height);
 				               
-		            imagecopy($mapImage, $tileImg, 256, 537, 0, 0, 298, 212);
+		            imagecopy($mapImage, $imgdest, 255, 444, 0, 0, 298, 211);
 
 		            imagedestroy($tileImg);
 	        	}
@@ -707,6 +713,27 @@ class ProfilesController extends AppController {
             return 'No images';
         }
     }
+
+	// Creates a new image of the size specified with a blank background (transparent)
+	function imagecreatealpha($width, $height) {
+
+	    // Create a normal image and apply required settings
+	    $img = imagecreatetruecolor($width, $height);
+	    imagealphablending($img, false);
+	    imagesavealpha($img, true);
+	    
+	    // Apply the transparent background
+	    $trans = imagecolorallocatealpha($img, 0, 0, 0, 127);
+	    for ($x = 0; $x < $width; $x++)
+	    {
+	        for ($y = 0; $y < $height; $y++)
+	        {
+	            imagesetpixel($img, $x, $y, $trans);
+	        }
+	    }
+	    
+	    return $img;
+	}    
 
     public function imagefillfromfile($image, $width, $height) {
         $imageWidth = imagesx($image);
