@@ -1,4 +1,25 @@
 <!-- cover.ctp -->
+<?php
+  // Start Session Fix
+  if( isset($_GET["start_session"]) ){
+   session_start();
+  }
+  $page_url = "https://www.facebook.com/pages/Nativo-Desarrollo/514166771955164?id=514166771955164&sk=app_419722851452946";
+  if (isset($_GET["start_session"]))
+      die(header("Location:" . $page_url));
+  $sid = session_id();
+  if (!isset($_GET["sid"]))
+  {
+      if(isset($_POST["signed_request"]))
+         $_SESSION["signed_request"] = $_POST["signed_request"];
+      die(header("Location:?sid=" . $sid));
+  }
+  if (empty($sid) || $_GET["sid"] != $sid)
+      die('<script>top.window.location="?start_session=true";</script>');
+  // End Session Fix
+?>
+
+
 <STYLE TYPE="text/css">
 /*
 body{
