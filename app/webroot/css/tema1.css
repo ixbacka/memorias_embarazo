@@ -740,12 +740,12 @@ form .input {
 
 .familytreeFile input[type="file"].upload_bt {
   background-image: url(../img/bt_subir_foto.png);
-  width: 104px;
-  height: 17px;
+  width: 107px;
+  height: 20px;
   text-indent: -9999px;
-  top: 60px;
+  top: 85px;
   left: 29px;
-  position: relative;
+  position: absolute;
 }
 
 .name_input{
