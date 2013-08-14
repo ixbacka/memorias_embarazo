@@ -365,8 +365,46 @@ h3{
   left: 188px;
 }
 
+.mi-humor, .mi-humor, .mi-energia, .mi-fisico, .mi-otros {
+  margin-bottom: 0px
+}
+
 .meses {
-  margin-left: 50px;
+  margin-left: 190px;
+}
+
+.meses h3 {
+  display: inline-block;
+  margin-left: 22px;
+}
+
+.mi-humor, .mi-humor, .mi-energia, .mi-fisico, .mi-otros {
+  font-size: 12px;
+}
+.mi-humor h4, .mi-humor h4, .mi-energia h4, .mi-fisico h4, .mi-otros h4 {
+    font-weight: bold;
+}
+
+.col1 {
+  width: 225px;
+}
+
+.col1 p {
+  position: relative;
+  margin-bottom: 11px;
+}
+
+.col1 p:after {
+  top: 10px;
+}
+
+.col2, .col3, .col4 {
+  width: 20px;
+  margin: 14px 0 0px 48px;
+}
+
+.col2 {
+  margin-left: 0;
 }
 
 .tac{
