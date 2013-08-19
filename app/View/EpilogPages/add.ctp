@@ -66,9 +66,7 @@
     <p class="post-parto cf">
     	<label> Notas despu&eacute;s de que llegaste y detalles que recordar: </label>
     	<!-- <input type="text" name="data[EpilogPage][notes]" value="<?php if($notes != ''){ echo $notes; } ?>" > -->
-    	<textarea name="data[EpilogPage][notes]">
-			<?php if($notes != ''){ echo $notes; } ?>
-    	</textarea>
+      <textarea name="data[EpilogPage][notes]"><?php if($notes != ''){ echo $notes; } ?></textarea>
     </p>
 	<?php
 		echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));

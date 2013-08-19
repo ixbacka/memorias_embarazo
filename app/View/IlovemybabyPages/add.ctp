@@ -147,9 +147,7 @@ $(document).ready(function(){
     }
   ?>
   <label for="IlovemybabyPageFirstFeeling">y lo primero que sentí fue: </label>
-  <textarea name="data[IlovemybabyPage][first_feeling]" id="senti">
-    <?php if($first_feeling != ''){ echo $first_feeling; } ?>
-  </textarea>
+  <textarea name="data[IlovemybabyPage][first_feeling]" id="senti"><?php if($first_feeling != ''){ echo $first_feeling; } ?></textarea>
 
     <?php
       echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
