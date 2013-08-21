@@ -1267,9 +1267,11 @@ height: 15px;
   display: inline-block;
 }
 
-
-#grandpa_dad{
-  margin-left: 20px;
+#grandpa_dad {
+margin-left: 0px;
+margin-top: 0px;
+top: 0px;
+left: 0px;
 }
 
 #grandma_dad{
