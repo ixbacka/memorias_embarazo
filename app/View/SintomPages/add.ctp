@@ -158,13 +158,7 @@ echo $this->Html->link(
   </div>
 </div>
 <div class="sintom_rite">
-<<<<<<< HEAD
 <?php
-=======
-<!--   <label>Mmmm! cuando se trata de antojos<br>El antojito más raro que he tenido es: </label>
- -->    <?php
->>>>>>> origin/master
-
     if(isset($sintoms['SintomPage']['weirdestcraving'])){
       $weirdestcraving = $sintoms['SintomPage']['weirdestcraving'];
     } else{

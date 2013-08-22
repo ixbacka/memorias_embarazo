@@ -420,9 +420,7 @@ function readURL(input) {
       }
     ?>
     <label>Yo me siento:</label>
-    <textarea name="data[FirstkickPage][ifeel]">
-      <?php if($ifeel != ''){ echo $ifeel; } ?>
-    </textarea>
+    <textarea name="data[FirstkickPage][ifeel]"><?php if($ifeel != ''){ echo $ifeel; } ?></textarea>
 
 
     <?php

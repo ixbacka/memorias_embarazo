@@ -1,39 +1,16 @@
-<?php 
-        $tema = $perfil['Profile']['theme'];
-        
-        if($tema == 1){ 
-          echo $this->Html->css('tema1'); 
-          echo $this->Html->css('book1'); 
-          $temapath = '';
-        } 
-        elseif($tema == 2){ 
-/*          echo $this->Html->css('tema2'); 
-*/             echo $this->Html->css('book2'); 
-             $temapath = 'tema2/';
-        } 
-        elseif($tema == 3){ 
-/*          echo $this->Html->css('tema3'); 
-*/             echo $this->Html->css('book3'); 
-                     $temapath = 'tema3/';
-
-        } 
-        elseif($tema == 4){ 
-/*          echo $this->Html->css('tema4'); 
-*/             echo $this->Html->css('book4'); 
-             $temapath = 'tema4/';
-        }
-
-      
-  ?> 
-
-
-
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
 <?php echo $this->Html->script('jquery.easing.1.3'); ?>
 <?php echo $this->Html->script('jquery.booklet.latest.min'); ?>
 <?php echo $this->Html->css('jquery.booklet.latest');  ?>
 
+<div class="fake-header">
+  <h2><a href="#">MOM TO MOM</a></h2>
+  <div class="social">
+    <a href="http://facebook.com/momtomommexico" class="bt-fb">facebook.com/momtomommexico</a>
+    <a href="http://twitter.com/momtomommx" class="bt-tw">twitter.com/momtomommx</a>
+  </div>
+</div>
 
 
 
@@ -213,13 +190,15 @@ background-repeat: no-repeat;
 #grandpa_dad-back{
   background-image:url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_dad_img']); ?>);
   border-radius: 120px;
-  height: 100px;
-  width: 100px;
+   height: 80px;
+  width: 80px;
   border-radius: 150px;
-  background-position: -15px -15px, center 9px;
-  background-size: 100px 100px;
+  background-position: center;
+  background-size: 80px;
   position: absolute;
     z-index: 0;
+  top: 14px;
+  left: 13px;
 }
 <?php }?>
 
@@ -228,13 +207,15 @@ background-repeat: no-repeat;
 #grandpa_mom-back{
   background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_mom_img']); ?>);
   border-radius: 120px;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   border-radius: 150px;
   background-position: center;
-  background-size: 100px 100px;
+  background-size: 80px;
   position: absolute;
-    z-index: 0;
+  z-index: 0;
+  top: 14px;
+  left: 113px;
 }
 <?php }?>
 
@@ -243,13 +224,15 @@ background-repeat: no-repeat;
 #grandma_dad-back{
   background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_dad_img']); ?>);
    border-radius: 120px;
-  height: 100px;
-  width: 100px;
+   height: 80px;
+  width: 80px;
   border-radius: 150px;
   background-position: center;
-  background-size: 100px 100px;
+  background-size: 80px;
   position: absolute;
-    z-index: 0;
+  z-index: 0;
+  top: 14px;
+  left: 223px;
 }
 <?php }?>
 
@@ -258,13 +241,15 @@ background-repeat: no-repeat;
 #grandma_mom-back{
   background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_mom_img']); ?>);
   border-radius: 120px;
-  height: 100px;
-  width: 100px;
+   height: 80px;
+  width: 80px;
   border-radius: 150px;
   background-position: center;
-  background-size: 100px 100px;
+  background-size: 80px;
   position: absolute;
     z-index: 0;
+  top: 14px;
+  left: 333px;
 }
 <?php }?>
 
@@ -273,13 +258,15 @@ background-repeat: no-repeat;
 #dad-back{
   background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['dad_img']); ?>);
    border-radius: 120px;
-  height: 100px;
-  width: 100px;
+   height: 80px;
+  width: 80px;
   border-radius: 150px;
   background-position: center;
-  background-size: 100px 100px;
+  background-size: 80px;
   position: absolute;
   z-index: 0;
+  top: 139px;
+  left: 106px;
 }
 <?php }?>
 
@@ -287,14 +274,15 @@ background-repeat: no-repeat;
 #mom-back{
   background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['mom_img']); ?>);
    border-radius: 120px;
-  height: 100px;
-  width: 100px;
+   height: 80px;
+  width: 80px;
   border-radius: 150px;
   background-position: center;
-  background-size: 100px 100px;
+  background-size: 80px;
   position: absolute;
   z-index: 0;
-
+  top: 139px;
+  left: 236px;
 }
 <?php }?>
 
@@ -302,37 +290,18 @@ background-repeat: no-repeat;
 #baby-back{
   background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['baby_img']); ?>);
    border-radius: 120px;
-  height: 100px;
-  width: 100px;
+   height: 80px;
+  width: 80px;
   border-radius: 150px;
   background-position: center;
-  background-size: 100px 100px;
+  background-size: 80px;
   position: absolute;
   z-index: 0;
+  top: 244px;
+  left: 172px;
 }
 <?php }?>
 
-
-.familytreeFile {
-width: 120px;
-height: 120px;
-left: 10px;
-margin-top: 0px;
-margin-left: 0px;
-background-image: url(../../img/marco_circular.png);
-background-position: center center;
-text-indent: -9999px;
-background-repeat: no-repeat;
-float: left;
-display: inline-block;
-background-size: 100px;
-}
-
-.b-page-22 .familytreePages {
-position: relative;
-border: none;
-margin: 0;
-}
 
 </STYLE>
 
@@ -2763,11 +2732,6 @@ margin: 0;
 
   </div>
 </div><!-- FIN DEL LIBRO -->
-<div class="fake-footer">
-  <h2>MOM TO MOM</h2>
-  <span class="fb-bt"><a href="http://facebook.com/momtomommexico">facebook.com/momtomommexico</a></span>
-  <span class="tw-bt"><a href="http://facebook.com/momtomommexico">twitter.com/momtomommx</a></span>
-</div>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -435,7 +435,7 @@ p.whatdo{
 
 .footer_twitter{
   background-image: url(../img/footer_twitter.png);
-  width: 100px;
+  width: 116px;
   height: 18px;
   text-indent: -9999px;
   position: absolute;
@@ -740,12 +740,12 @@ form .input {
 
 .familytreeFile input[type="file"].upload_bt {
   background-image: url(../img/bt_subir_foto.png);
-  width: 104px;
-  height: 17px;
+  width: 107px;
+  height: 20px;
   text-indent: -9999px;
-  top: 60px;
+  top: 85px;
   left: 29px;
-  position: relative;
+  position: absolute;
 }
 
 .name_input{
@@ -935,6 +935,11 @@ form p{
 #last_input{
   color: #007EC4;
   text-align: center;
+  line-height: 1.2;
+}
+
+#last_input span {
+  margin-top: 10px;
 }
 
 .aux_text{
@@ -1850,12 +1855,12 @@ top: 202px;
 
 #CoolultrasoundPageAddForm .bloque {
   display: block;
-  width: 320px;
+  width: 370px;
   position: absolute;
 }
 
 #CoolultrasoundPageAddForm .bloque.uno {
-  left: 410px;
+  left: 390px;
 }
 
 #CoolultrasoundPageAddForm .bloque.dos {
@@ -1868,7 +1873,7 @@ top: 202px;
 
 #CoolultrasoundPageAddForm .bloque.tres {
   top: 240px;
-  left: 410px;
+  left: 390px;
   width: 370px;
 }
 
@@ -1881,8 +1886,8 @@ top: 202px;
 
 #CoolultrasoundPageAddForm .bloque p {
   margin: 0;
-  margin-bottom: 20px;
-  line-height: 30px;
+  margin-bottom: 12px;
+  line-height: 15px;
   width: 100%;
 }
 

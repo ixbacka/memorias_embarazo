@@ -163,9 +163,7 @@ function get_date_spanish( $time, $part = false, $formatDate = '' ){
 
 		<!-- <input name="data[CongratsPage][details]" maxlength="400" type="text" id="CongratsPageDetails" value="<?php if(isset($congrats['CongratsPage']['details'])){ echo $congrats['CongratsPage']['details']; }?>"> -->
 
-		<textarea name="data[CongratsPage][details]" maxlength="600" id="CongratsPageDetails">
-			<?php if(isset($congrats['CongratsPage']['details'])){ echo $congrats['CongratsPage']['details']; }?>
-		</textarea>
+		<textarea name="data[CongratsPage][details]" maxlength="600" id="CongratsPageDetails"><?php if(isset($congrats['CongratsPage']['details'])){ echo $congrats['CongratsPage']['details']; }?></textarea>
 
 	</span></p>
 	</div>
