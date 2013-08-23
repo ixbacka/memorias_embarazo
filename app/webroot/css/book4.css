@@ -128,3 +128,8 @@ background-image: url(../img/tema4/marco.png), url(../img/tema4/marco_fondo.png)
   text-indent: -10000px;
   background-size: 330px;
 }
+
+
+.familytreeFile {
+background-image: url(../img/tema4/marco_circular.png);
+}

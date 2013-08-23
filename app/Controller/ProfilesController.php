@@ -335,6 +335,7 @@ class ProfilesController extends AppController {
 		} else {
 
 			$this->Profile->id = $exists['Profile']['id'];
+			$uidi = $user_profile["id"];
 
 			$this->Profile->set(array( 
 		        'theme' => $theme

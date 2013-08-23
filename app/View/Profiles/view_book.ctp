@@ -72,11 +72,15 @@ $(document).ready(function() {
   background-repeat: no-repeat;
   text-indent: -9999px;
 }
-<?php }?>
+<?php } else { ?>
+.book-cover-photo {
+background-size: 280px 200px, 235px 168px;
+background-position: center;
+background-repeat: no-repeat;
+}
 
 
-
-<?php if( isset($whoami['WhoamiPage']['photo']) ){ ?>
+<?php } if( isset($whoami['WhoamiPage']['photo']) ){ ?>
 .whoami_photo{
   background-image: url(../../img/<?php echo $temapath; ?>marco_whoami.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$whoami['WhoamiPage']['photo']); ?>);
   background-size: 190px, 170px;
@@ -184,106 +188,117 @@ $(document).ready(function() {
 
 <?php if( isset($familytree['FamilytreePage']['grandpa_dad_img']) ){ ?>
 #grandpa_dad-back{
-  background-image: url(../../img/<?php echo $temapath; ?>marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_dad_img']); ?>);
-  background-size: 186px 186px,  120px 120px;
+  background-image:url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_dad_img']); ?>);
   border-radius: 120px;
-  height: 150px;width: 150px;
+   height: 80px;
+  width: 80px;
   border-radius: 150px;
-  background-position: -15px -15px, center 9px;
-  background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
+  background-position: center;
+  background-size: 80px;
+  position: absolute;
+    z-index: 0;
+  top: 14px;
+  left: 13px;
 }
 <?php }?>
 
 
 <?php if( isset($familytree['FamilytreePage']['grandpa_mom_img']) ){ ?>
 #grandpa_mom-back{
-  background-image: url(../../img/<?php echo $temapath; ?>marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_mom_img']); ?>);
-  background-size: 186px 186px,  120px 120px;
+  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandpa_mom_img']); ?>);
   border-radius: 120px;
-  height: 150px;width: 150px;
+  height: 80px;
+  width: 80px;
   border-radius: 150px;
-  background-position: -15px -15px, center 9px;
-  background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
+  background-position: center;
+  background-size: 80px;
+  position: absolute;
+  z-index: 0;
+  top: 14px;
+  left: 113px;
 }
 <?php }?>
 
 
 <?php if( isset($familytree['FamilytreePage']['grandma_dad_img']) ){ ?>
 #grandma_dad-back{
-  background-image: url(../../img/<?php echo $temapath; ?>marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_dad_img']); ?>);
-  background-size: 186px 186px,  120px 120px;
-  border-radius: 120px;
-  height: 150px;width: 150px;
-border-radius: 150px;
-background-position: -15px -15px, center 9px;
-background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
+  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_dad_img']); ?>);
+   border-radius: 120px;
+   height: 80px;
+  width: 80px;
+  border-radius: 150px;
+  background-position: center;
+  background-size: 80px;
+  position: absolute;
+  z-index: 0;
+  top: 14px;
+  left: 223px;
 }
 <?php }?>
 
 
 <?php if( isset($familytree['FamilytreePage']['grandma_mom_img']) ){ ?>
 #grandma_mom-back{
-  background-image: url(../../img/<?php echo $temapath; ?>marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_mom_img']); ?>);
-  background-size: 186px 186px,  120px 120px;
+  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['grandma_mom_img']); ?>);
   border-radius: 120px;
-  height: 150px;width: 150px;
-border-radius: 150px;
-background-position: -15px -15px, center 9px;
-background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
+   height: 80px;
+  width: 80px;
+  border-radius: 150px;
+  background-position: center;
+  background-size: 80px;
+  position: absolute;
+    z-index: 0;
+  top: 14px;
+  left: 333px;
 }
 <?php }?>
 
 
 <?php if( isset($familytree['FamilytreePage']['dad_img']) ){ ?>
 #dad-back{
-  background-image: url(../../img/<?php echo $temapath; ?>marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['dad_img']); ?>);
-  background-size: 186px 186px,  120px 120px;
-  border-radius: 120px;
-
-height: 150px;width: 150px;
-border-radius: 150px;
-background-position: -15px -15px, center 9px;
-background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
-
+  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['dad_img']); ?>);
+   border-radius: 120px;
+   height: 80px;
+  width: 80px;
+  border-radius: 150px;
+  background-position: center;
+  background-size: 80px;
+  position: absolute;
+  z-index: 0;
+  top: 139px;
+  left: 106px;
 }
 <?php }?>
 
 <?php if( isset($familytree['FamilytreePage']['mom_img']) ){ ?>
 #mom-back{
-  background-image: url(../../img/<?php echo $temapath; ?>marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['mom_img']); ?>);
-  background-size: 186px 186px,  120px 120px;
-  border-radius: 120px;
-  height: 150px;width: 150px;
-border-radius: 150px;
-background-position: -15px -15px, center 9px;
-background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
-
+  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['mom_img']); ?>);
+   border-radius: 120px;
+   height: 80px;
+  width: 80px;
+  border-radius: 150px;
+  background-position: center;
+  background-size: 80px;
+  position: absolute;
+  z-index: 0;
+  top: 139px;
+  left: 236px;
 }
 <?php }?>
 
 <?php if( isset($familytree['FamilytreePage']['baby_img']) ){ ?>
 #baby-back{
-  background-image: url(../../img/<?php echo $temapath; ?>marco_circular.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['baby_img']); ?>);
-  background-size: 186px 186px,  120px 120px;
-  border-radius: 120px;
-  height: 150px;width: 150px;
-border-radius: 150px;
-background-position: -15px -15px, center 9px;
-background-size: 186px 186px, 140px 140px;
-margin-left: 30px;
-margin-top: 50px;
+  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$familytree['FamilytreePage']['baby_img']); ?>);
+   border-radius: 120px;
+   height: 80px;
+  width: 80px;
+  border-radius: 150px;
+  background-position: center;
+  background-size: 80px;
+  position: absolute;
+  z-index: 0;
+  top: 244px;
+  left: 172px;
 }
 <?php }?>
 
