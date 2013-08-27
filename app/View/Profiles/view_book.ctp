@@ -1065,7 +1065,7 @@ background-repeat: no-repeat;
               echo  'checked="checked"'; } ?> />
               <input type="radio" name="data[AnimoPage][month1_physical]" value="2" <?php if($month1_physical == 2){
               echo  'checked="checked"'; } ?> />
-              <input type="radio" name="data[AnimoPage][month1_physical]" value="3" <?php if($month1_physical == 2){
+              <input type="radio" name="data[AnimoPage][month1_physical]" value="3" <?php if($month1_physical == 3){
               echo 'checked="checked"'; } ?> />
             </div>
 
@@ -1075,7 +1075,7 @@ background-repeat: no-repeat;
               echo  'checked="checked"'; } ?> />
               <input type="radio" name="data[AnimoPage][month2_physical]" value="2" <?php if($month2_physical == 2){
               echo  'checked="checked"'; } ?> />
-              <input type="radio" name="data[AnimoPage][month2_physical]" value="3" <?php if($month2_physical == 2){
+              <input type="radio" name="data[AnimoPage][month2_physical]" value="3" <?php if($month2_physical == 3){
               echo  'checked="checked"'; } ?> />
             </div>
 
@@ -1088,7 +1088,7 @@ background-repeat: no-repeat;
               echo  'checked="checked"'; } ?> />
               <input type="radio" name="data[AnimoPage][month3_physical]" value="2" <?php if($month3_physical == 2){
               echo  'checked="checked"'; } ?> />
-              <input type="radio" name="data[AnimoPage][month3_physical]" value="3" <?php if($month3_physical == 2){
+              <input type="radio" name="data[AnimoPage][month3_physical]" value="3" <?php if($month3_physical == 3){
                 echo  'checked="checked"'; } ?> />
             </div>
           </div>

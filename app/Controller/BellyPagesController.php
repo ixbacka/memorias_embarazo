@@ -110,7 +110,7 @@ var $uses = array('BellyPage','Profile');
         } elseif (!empty($this->request->data['BellyPage']['photo3_url']['url_photo'])) {
 
           $avatar = imagecreatefromjpeg($this->request->data['BellyPage']['photo3_url']['url_photo']);
-          $nameIMG = 'belly_1_'.$uid.'.png';
+          $nameIMG = 'belly_3_'.$uid.'.png';
           imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 
           $this->BellyPage->set(array( 
