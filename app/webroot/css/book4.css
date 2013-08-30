@@ -30,8 +30,24 @@ body{
 
 .book-title-page{
   background-image: url(../img/tema4/titulo_back.png);
+  top: 75px;
 }
 
+.book-title-page p {
+position: absolute;
+width: 149px;
+top: 5px;
+left: 17px;
+font-size: 17px;
+}
+
+.book-title-page span {
+font-size: 10px;
+position: absolute;
+top: 25px;
+width: 200px;
+left: -3px;
+}
 
 #ultrasound_photo_1{
 background-image: url(../img/tema4/marco.png), url(../img/tema4/marco_fondo.png);

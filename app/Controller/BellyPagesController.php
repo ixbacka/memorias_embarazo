@@ -137,6 +137,42 @@ var $uses = array('BellyPage','Profile');
 	}
 
 
+  /**
+   * resample method
+   *
+   * @return new file name
+   */
+
+  protected function resample($jpgFile, $orientation, $nameIMG) { //$thumbFile, $width
+    // Get new dimensions
+    list($width_orig, $height_orig) = getimagesize($jpgFile['tmp_name']);
+
+    //$height = (int) (($width / $width_orig) * $height_orig);
+    // Resample
+    $image_p = imagecreatetruecolor($width_orig, $height_orig);
+    $image   = imagecreatefromjpeg($jpgFile['tmp_name']);
+    imagecopyresampled($image_p, $image, 0, 0, 0, 0, $width_orig, $height_orig, $width_orig, $height_orig);
+
+
+    // Fix Orientation
+    switch($orientation) {
+        case 3:
+            $image_p = imagerotate($image_p, 180, 0);
+            break;
+        case 6:
+            $image_p = imagerotate($image_p, -90, 0);
+            break;
+        case 8:
+            $image_p = imagerotate($image_p, 90, 0);
+            break;
+    }
+    // Output
+    imagejpeg($image_p, WWW_ROOT.'img/cover_photos/'.$nameIMG);
+}
+
+
+
+
 
  /**
    * generateUniqueFilename method
@@ -183,25 +219,38 @@ var $uses = array('BellyPage','Profile');
       $error = 'Invalid file type'; 
     } else { 
       //Data looks OK at this stage. Let's proceed. 
-        if ($fileData['error'] == UPLOAD_ERR_OK) { 
-        //Oops!! File size is zero. Error! 
-            if ($fileData['size'] == 0) { 
-                $error = 'Zero size file found.'; 
-            } else { 
-                if (is_uploaded_file($fileData['tmp_name'])) 
-                { 
-                    //Finally we can upload file now. Let's do it and return without errors if success in moving. 
-                    if (move_uploaded_file($fileData['tmp_name'], WWW_ROOT.'img/cover_photos/'.$fileName) == true) 
-                    { 
-                        $error = false; 
-                    } else {
-                      $error = true; 
-                    }
-                } else { 
-                    return true; 
-                } 
-            } 
-        } 
+      $exif = exif_read_data($fileData['tmp_name']);
+        $ort = $exif['Orientation'];
+        $ext1 = $fileData['type'];
+    
+        $image_extensions_allowed_1 = array('image/jpeg', 'image/jpg', 'image/tiff');  
+
+        if(in_array($ext1, $image_extensions_allowed_1)){        
+          
+          $this->resample($fileData,$ort,$fileName);
+          $error = false;
+
+        } else {
+          if ($fileData['error'] == UPLOAD_ERR_OK) { 
+          //Oops!! File size is zero. Error! 
+              if ($fileData['size'] == 0) { 
+                  $error = 'Zero size file found.'; 
+              } else { 
+                  if (is_uploaded_file($fileData['tmp_name'])) 
+                  { 
+                      //Finally we can upload file now. Let's do it and return without errors if success in moving. 
+                      if (move_uploaded_file($fileData['tmp_name'], WWW_ROOT.'img/cover_photos/'.$fileName) == true) 
+                      { 
+                          $error = false; 
+                      } else {
+                        $error = true; 
+                      }
+                  } else { 
+                      return true; 
+                  } 
+              } 
+          }
+      } 
     } 
     return $error; 
   }

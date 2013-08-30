@@ -12,7 +12,18 @@
   </div>
 </div>
 
-
+<? 
+  $tema = $perfil['Profile']['theme'];
+  $temapath = ''; 
+  if($tema == 2){
+    $temapath = 'tema2/'; 
+  } elseif($tema == 3){
+    $temapath = 'tema3/'; 
+  } elseif($tema == 4){
+    $temapath = 'tema4/'; 
+  }
+  
+?>
 
 <SCRIPT TYPE="text/javascript">
 $(document).ready(function() {
@@ -63,7 +74,7 @@ $(document).ready(function() {
 <!-- cover.ctp -->
 <STYLE TYPE="text/css">
 
-<?php if( isset($cover_pic) ){ ?>
+<?php if( isset($cover_pic)){ ?>
 
 .book-cover-photo{
   background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ', '%20', $cover_pic); ?>);
