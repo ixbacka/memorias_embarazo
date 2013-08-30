@@ -911,7 +911,9 @@ font-size: 10px;
 
 
 #CoolultrasoundPageAddForm .opciones label{
-  line-height: 25px;
+  line-height: 0.9px;
+  padding: 8px 0;
+  padding-top:
   margin-left: 10px;
   height: 10px;
   width: 182px;
