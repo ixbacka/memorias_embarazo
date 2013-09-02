@@ -2296,3 +2296,7 @@ top: 202px;
   top: -90px;
 }
 
+textarea {
+  font-size: 1em;
+  line-height: 1;
+}
