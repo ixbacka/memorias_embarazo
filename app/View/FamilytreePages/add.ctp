@@ -21,25 +21,6 @@ form div.submit{
 	z-index: 9999;
 }
 
-form .submit input[type=submit]{
-	background-image: url(../img/bt_aceptar.png);
-width: 55px;
-height: 55px;
-border: none;
-background-color: transparent;
-box-shadow: none;
-text-indent: -9999px;
-cursor: pointer;
-}
-
-form .submit input[type=submit]:hover{
-	background-image: url(../img/bt_aceptar.png);
-	background-color: rgba(0,0,0,0.3);
-	border-radius: 25px;
-}
-
-
-
 <?php 
 
 	$tema = $this->Session->read("User.theme");
