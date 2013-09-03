@@ -158,7 +158,7 @@
     ?>
     <div class="page_title">
 	    <div class="title_page">
-		    <p><input type="text" name="data[MomentPage][title]" value="<?php if($title != ''){ echo $title; } ?>"/></p>
+		    <p><input type="text" name="data[MomentPage][title]" value="<?php if($title != ''){ echo $title; } ?>" maxlength="20"/></p>
 	    </div>
     </div>
     <div class="momentPages form">
