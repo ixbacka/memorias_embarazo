@@ -40,7 +40,7 @@ body{
 }*/
 
 .cover_photo_back{
-	background-image: url(../img/cover_photos/<?php echo str_replace(' ', '%20', $cover_pic); ?>);
+	background-image: url(https://momtomom.mx/apps/memorias_embarazo/img/cover_photos/<?php echo str_replace(' ', '%20', $cover_pic); ?>);
 }
 
 <?php }?>
