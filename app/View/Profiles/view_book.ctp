@@ -96,7 +96,7 @@ background-repeat: no-repeat;
 <?php } if( isset($whoami['WhoamiPage']['photo']) ){ ?>
 .whoami_photo{
   background-image: url(../../img/<?php echo $temapath; ?>marco_whoami.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$whoami['WhoamiPage']['photo']); ?>);
-  background-size: 190px, 170px;
+  background-size: 190px, 170px 200px;
 }
 <?php }?>
 
@@ -211,7 +211,7 @@ background-repeat: no-repeat;
   position: absolute;
     z-index: 0;
   top: 14px;
-  left: 0;
+  left: 13px;
 }
 <?php }?>
 
