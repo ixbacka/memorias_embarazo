@@ -1,4 +1,4 @@
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
 <?php echo $this->Html->script('jquery.easing.1.3'); ?>
 <?php echo $this->Html->script('jquery.booklet.latest.min'); ?>
@@ -37,6 +37,8 @@ $(document).ready(function() {
         closed: true,
         covers: true
     });
+
+  $('input:radio').attr('disabled', 'disabled');
 });
 
 </SCRIPT>
