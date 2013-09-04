@@ -211,7 +211,7 @@ background-repeat: no-repeat;
   position: absolute;
     z-index: 0;
   top: 14px;
-  left: 13px;
+  left: 0;
 }
 <?php }?>
 

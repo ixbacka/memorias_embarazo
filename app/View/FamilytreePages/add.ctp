@@ -19,7 +19,7 @@ form div.submit{
 	top: 765px;
 	left: 350px;
 	z-index: 9999;
-}
+#grandpa_dad}
 
 <?php 
 
@@ -38,7 +38,7 @@ if( isset($familytree['FamilytreePage']['grandpa_dad_img']) ){ ?>
   border-radius: 120px;
   height: 150px;width: 150px;
   border-radius: 150px;
-  background-position: -15px -15px, center 9px;
+  background-position: -18px -15px, center 9px;
   background-size: 186px 186px, 140px 140px;
   margin-top: 8px;
 }
