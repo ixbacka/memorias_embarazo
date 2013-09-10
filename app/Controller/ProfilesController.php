@@ -264,7 +264,7 @@ class ProfilesController extends AppController {
 
 			$exists = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' =>  $uid ) ) );
 	  
-	    	if( empty($exists['Profile']['id']) ){
+	    	if( empty($exists['Profile']['id']) && empty($user_profile["id"])==FALSE ){
 
 				if( !empty($user_profile["first_name"] ) ){
 					$fname = $user_profile["first_name"];

@@ -76,6 +76,11 @@ $(document).ready(function() {
 <!-- cover.ctp -->
 <STYLE TYPE="text/css">
 
+
+input[type="text"], input[type="number"], textarea {
+  font-size: 11px;
+}
+
 <?php if( isset($cover_pic)){ ?>
 
 .book-cover-photo{
