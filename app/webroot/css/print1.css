@@ -143,6 +143,7 @@ padding: 0px 10px 0px 10px;
   z-index: 2;
 }
 
+
 .marco-chico {
     width: 275px;
     height: 180px;
@@ -1050,7 +1051,21 @@ top: 502px;
 left: 320px;
 }
 
+#photo-back-momento {
+position: absolute;
+top: 102px;
+left: 294px;
+width: 253px;
+height: 183px;
+}
 
+#momento_p {
+position: absolute;
+top: 341px;
+left: 50%;
+width: 300px;
+margin-left: -150px;
+}
 
 
 

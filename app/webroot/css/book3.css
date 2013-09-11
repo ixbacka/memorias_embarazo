@@ -24,6 +24,12 @@ body{
 }
 
 
+.photo-up, .photo-v {
+  background-image: url(http://momtomom.mx/apps/memorias_embarazo/img/tema3/marco.png);
+}
+
+
+
 .book-footer{
  background-image: url(../img/tema3/footer.png);
 

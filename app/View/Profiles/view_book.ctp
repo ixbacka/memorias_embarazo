@@ -1,8 +1,53 @@
+
+
+<?php  
+
+function findit( $ele , $momentos){
+  $elreturn = false;
+  foreach ($momentos as $moment) {
+    if($moment['MomentPage']['trimester'] == $ele){
+      $elreturn = true;
+    }
+  }
+  return $elreturn;
+} 
+
+?>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
 <?php echo $this->Html->script('jquery.easing.1.3'); ?>
 <?php echo $this->Html->script('jquery.booklet.latest.min'); ?>
 <?php echo $this->Html->css('jquery.booklet.latest');  ?>
+
+<?php 
+    /*
+    $tema = $this->Session->read("User.theme");
+    echo $this->Html->css('tema1');
+    echo $this->Html->css('book1');
+
+    if($tema == 2){
+         echo $this->Html->css('book2');
+    }
+    elseif($tema == 3){
+         echo $this->Html->css('book3');
+    }
+    elseif($tema == 4){
+         echo $this->Html->css('book4');
+    }
+  ?>
+  <?php 
+
+    $font = $this->Session->read("User.font");
+    if($font == 1){ echo $this->Html->css('letra1'); }
+    elseif($font == 2){ echo $this->Html->css('letra2'); }
+    elseif($font == 3){ echo $this->Html->css('letra3'); }
+    elseif($font == 4){ echo $this->Html->css('letra4'); }
+    elseif ($font == NULL || empty($font)) {
+      echo $this->Html->css('letra1');
+    }
+    */
+  ?>
 
 <div class="fake-header">
   <h2><a href="#">MOM TO MOM</a></h2>
@@ -217,6 +262,7 @@ background-repeat: no-repeat;
     z-index: 0;
   top: 14px;
   left: 13px;
+  left: 4px;
 }
 <?php }?>
 
@@ -1141,6 +1187,8 @@ background-repeat: no-repeat;
 
   </div>
 
+  <?php if( findit(1, $momentos) ){ echo $this->element('viewbookfirst', array( "trimestre" => 1)); } ?>
+
   <div> 
       <div class="book-header"></div>
 
@@ -1633,6 +1681,9 @@ background-repeat: no-repeat;
      <div class="book-footer"></div>
 
   </div>
+
+  <?php if( findit(2, $momentos) ){ echo $this->element('viewbooksecond', array( "trimestre" => 2)); } ?>
+
    <div> 
       <div class="book-header"></div>
 
@@ -2749,6 +2800,8 @@ background-repeat: no-repeat;
      <div class="book-footer"></div>
 
   </div>
+  <?php if( findit(3, $momentos) ){ echo $this->element('viewbookthird', array( "trimestre" => 3)); } ?>
+
 </div><!-- FIN DEL LIBRO -->
 
 <script>

@@ -16,6 +16,18 @@
 
   ?> 
 
+
+<?php  function findit( $ele , $momentos){
+  $elreturn = false;
+  foreach ($momentos as $moment) {
+    if($moment['MomentPage']['trimester'] == $ele){
+      $elreturn = true;
+    }
+  }
+  return $elreturn;
+} ?>
+
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
 
@@ -1070,6 +1082,8 @@
 
   </div>
 
+    <?php if( findit(1, $momentos) ){ echo $this->element('printbook', array( "trimestre" => 1)); } ?>
+
 
   <div class="pagina"> 
       <img class="print-header" src="http://momtomom.mx/apps/memorias_embarazo/img/print-header.png">
@@ -1585,6 +1599,7 @@
 
   </div>
 
+    <?php if( findit(2, $momentos) ){ echo $this->element('printbook', array( "trimestre" => 2)); } ?>
 
 
 
@@ -2808,6 +2823,8 @@
      <img class="print-footer" src="http://momtomom.mx/apps/memorias_embarazo/img/footer.png" width="100%" height="205">
 
   </div>
+  <?php if( findit(3, $momentos) ){ echo $this->element('printbook', array( "trimestre" => 3)); } ?>
+
 <div class="fake-body">
   <div class="fake-marco"></div>
   <img src="http://momtomom.mx/apps/memorias_embarazo/app/webroot/img/Imprimir_header.png">

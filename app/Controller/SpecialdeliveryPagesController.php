@@ -179,12 +179,11 @@ class SpecialdeliveryPagesController extends AppController {
     } else { 
       //Data looks OK at this stage. Let's proceed. 
       $exif = exif_read_data($fileData['tmp_name']);
-        $ort = $exif['Orientation'];
-        $ext1 = $fileData['type'];
-    
-        $image_extensions_allowed_1 = array('image/jpeg', 'image/jpg', 'image/tiff');  
+      $ext1 = $fileData['type']; 
+      $image_extensions_allowed_1 = array('image/jpeg', 'image/jpg', 'image/tiff');  
 
-        if(in_array($ext1, $image_extensions_allowed_1)){        
+        if(in_array($ext1, $image_extensions_allowed_1)){       
+           $ort = $exif['Orientation'];
           
           $this->resample($fileData,$ort,$fileName);
           $error = false;

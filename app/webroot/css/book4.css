@@ -60,6 +60,10 @@ background-image: url(../img/tema4/marco.png), url(../img/tema4/marco_fondo.png)
 }
 
 
+.photo-up, .photo-v {
+  background-image: url(http://momtomom.mx/apps/memorias_embarazo/img/tema4/marco.png);
+}
+
 #photo1{
   background-image: url(../img/tema4/marco.png), url(../img/tema4/marco_fondo.png);
 }
