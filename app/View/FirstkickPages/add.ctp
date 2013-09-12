@@ -357,7 +357,7 @@ function readURL(input) {
   </p>
   <p class="startkick">
     <label>Ay, la semana en que empezó a patear duro el bebé fue :</label>
-    <input type="text" name="data[FirstkickPage][week]" value="<?php if($week != ''){ echo $week; } ?>"/>
+    <input type="text" name="data[FirstkickPage][week]" value="<?php if($week != ''){ echo $week; } ?>" maxlength="100"/>
   </p>
   <div class="colL">
     <div class="firstkick_photo_back"></div>
@@ -384,7 +384,7 @@ function readURL(input) {
           $photogenic = '';
         }
       ?>
-      <input type="text" name="data[FirstkickPage][photogenic]" value="<?php if($photogenic != ''){ echo $photogenic; } ?>"/>
+      <input type="text" name="data[FirstkickPage][photogenic]" maxlength="42" value="<?php if($photogenic != ''){ echo $photogenic; } ?>"/>
     </p>
     <p class="gran"><label>La GRAN pregunta: ¿el bebé es? </label></p>
     <?php
@@ -420,7 +420,7 @@ function readURL(input) {
       }
     ?>
     <label>Yo me siento:</label>
-    <textarea name="data[FirstkickPage][ifeel]"><?php if($ifeel != ''){ echo $ifeel; } ?></textarea>
+    <textarea name="data[FirstkickPage][ifeel]" maxlength="110"><?php if($ifeel != ''){ echo $ifeel; } ?></textarea>
 
 
     <?php
@@ -447,10 +447,10 @@ function readURL(input) {
     ?>
     <div class="antojos">
       <label>Antojos</label>
-      <input type="text" name="data[FirstkickPage][craving1]" value="<?php if($craving1 != ''){ echo $craving1; } ?>"/>
-      <input type="text" name="data[FirstkickPage][craving2]" value="<?php if($craving2 != ''){ echo $craving2; } ?>"/>
-      <input type="text" name="data[FirstkickPage][craving3]" value="<?php if($craving3 != ''){ echo $craving3; } ?>"/>
-      <input type="text" name="data[FirstkickPage][craving4]" value="<?php if($craving4 != ''){ echo $craving4; } ?>"/>
+      <input type="text" name="data[FirstkickPage][craving1]" value="<?php if($craving1 != ''){ echo $craving1; } ?>" maxlength="21"/>
+      <input type="text" name="data[FirstkickPage][craving2]" value="<?php if($craving2 != ''){ echo $craving2; } ?>" maxlength="21"/>
+      <input type="text" name="data[FirstkickPage][craving3]" value="<?php if($craving3 != ''){ echo $craving3; } ?>" maxlength="21"/>
+      <input type="text" name="data[FirstkickPage][craving4]" value="<?php if($craving4 != ''){ echo $craving4; } ?>" maxlength="21"/>
     </div>
     <?php
       if(isset($firstkick['FirstkickPage']['gross1'])){
@@ -476,10 +476,10 @@ function readURL(input) {
     ?>
     <div class="antojos">
       <label>Ascos</label>
-      <input type="text" name="data[FirstkickPage][gross1]" value="<?php if($gross1 != ''){ echo $gross1; } ?>"/>
-      <input type="text" name="data[FirstkickPage][gross2]" value="<?php if($gross2 != ''){ echo $gross2; } ?>"/>
-      <input type="text" name="data[FirstkickPage][gross3]" value="<?php if($gross3 != ''){ echo $gross3; } ?>"/>
-      <input type="text" name="data[FirstkickPage][gross4]" value="<?php if($gross4 != ''){ echo $gross4; } ?>"/>
+      <input type="text" name="data[FirstkickPage][gross1]" value="<?php if($gross1 != ''){ echo $gross1; } ?>" maxlength="21"/>
+      <input type="text" name="data[FirstkickPage][gross2]" value="<?php if($gross2 != ''){ echo $gross2; } ?>" maxlength="21"/>
+      <input type="text" name="data[FirstkickPage][gross3]" value="<?php if($gross3 != ''){ echo $gross3; } ?>" maxlength="21"/>
+      <input type="text" name="data[FirstkickPage][gross4]" value="<?php if($gross4 != ''){ echo $gross4; } ?>" maxlength="21"/>
     </div>
   </div>
 	<?php
