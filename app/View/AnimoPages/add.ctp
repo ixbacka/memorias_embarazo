@@ -280,7 +280,7 @@ $(document).ready(function(){
             $month1_other = '';
           }
         ?>
-        <input type="text" name="data[AnimoPage][month1_other]" value="<?php if($month1_other != ''){
+        <input type="text" name="data[AnimoPage][month1_other]" maxlength="10" value="<?php if($month1_other != ''){
         echo $month1_other; } ?>" />
         <?php
           if(isset($animo['AnimoPage']['month1_other_1'])){
@@ -289,7 +289,7 @@ $(document).ready(function(){
             $month1_other_1 = '';
           }
         ?>
-        <input type="text" name="data[AnimoPage][month1_other_1]" value="<?php if($month1_other_1 != ''){
+        <input type="text" name="data[AnimoPage][month1_other_1]" maxlength="10" value="<?php if($month1_other_1 != ''){
         echo $month1_other_1; } ?>" />
       </div>
       <div class="col3">
@@ -301,7 +301,7 @@ $(document).ready(function(){
             $month2_other = '';
           }
         ?>
-        <input type="text" name="data[AnimoPage][month2_other]" value="<?php if($month2_other != ''){
+        <input type="text" name="data[AnimoPage][month2_other]" maxlength="10" value="<?php if($month2_other != ''){
         echo $month2_other; } ?>" />
           <?php
           if(isset($animo['AnimoPage']['month2_other_1'])){
@@ -310,7 +310,7 @@ $(document).ready(function(){
             $month2_other_1 = '';
           }
         ?>
-        <input type="text" name="data[AnimoPage][month2_other_1]" value="<?php if($month2_other_1 != ''){
+        <input type="text" name="data[AnimoPage][month2_other_1]" maxlength="10" value="<?php if($month2_other_1 != ''){
         echo $month2_other_1; } ?>" />
       </div>
       <div class="col4">
@@ -322,7 +322,7 @@ $(document).ready(function(){
             $month3_other = '';
           }
         ?>
-        <input type="text" name="data[AnimoPage][month3_other]" value="<?php if($month3_other != ''){
+        <input type="text" name="data[AnimoPage][month3_other]" maxlength="10" value="<?php if($month3_other != ''){
         echo $month3_other; } ?>" />
         <?php
           if(isset($animo['AnimoPage']['month3_other_1'])){
@@ -331,7 +331,7 @@ $(document).ready(function(){
             $month3_other_1 = '';
           }
         ?>
-        <input type="text" name="data[AnimoPage][month3_other_1]" value="<?php if($month3_other_1 != ''){
+        <input type="text" name="data[AnimoPage][month3_other_1]" maxlength="10" value="<?php if($month3_other_1 != ''){
           echo $month3_other_1; } ?>" />
       </div>
     </div>

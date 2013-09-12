@@ -64,14 +64,14 @@ echo $this->Html->link(
   } else{
     $matutinos = '';
   }
-    echo $this->Form->input('matutinos', array('label' => 'Ouch, empiezan los malestares matutinos y yo me siento: ', 'value' => $matutinos )); 
+    echo $this->Form->input('matutinos', array('label' => 'Ouch, empiezan los malestares matutinos y yo me siento: ', 'value' => $matutinos, 'maxlength' => 34 )); 
 
   if(isset($sintoms['SintomPage']['worst'])){
     $worst = $sintoms['SintomPage']['worst'];
   } else{
     $worst = '';
   }
-    echo $this->Form->input('worst', array('label' => 'Pero cuando me siento peor es: ','after' => '</span>','between' => '<span>', 'value' => $worst));?>
+    echo $this->Form->input('worst', array('label' => 'Pero cuando me siento peor es: ','after' => '</span>','between' => '<span>', 'value' => $worst, 'maxlength' => 50 ));?>
   <div class="sintom_left">
   <p class="title_form" id="cravings">Antojos</p>
   <div class="sintom_inputs" id="cravings_">
@@ -106,12 +106,12 @@ echo $this->Html->link(
   } else{
     $craving6 = '';
   }
-      echo $this->Form->input('craving1', array('label' => false, 'div' => false, 'value' => $craving1));
-      echo $this->Form->input('craving2', array('label' => false, 'div' => false, 'value' => $craving2));
-      echo $this->Form->input('craving3', array('label' => false, 'div' => false, 'value' => $craving3));
-      echo $this->Form->input('craving4', array('label' => false, 'div' => false, 'value' => $craving4));
-      echo $this->Form->input('craving5', array('label' => false, 'div' => false, 'value' => $craving5));
-      echo $this->Form->input('craving6', array('label' => false, 'div' => false, 'value' => $craving6));
+      echo $this->Form->input('craving1', array('label' => false, 'div' => false, 'value' => $craving1, 'maxlength' => 13));
+      echo $this->Form->input('craving2', array('label' => false, 'div' => false, 'value' => $craving2, 'maxlength' => 13));
+      echo $this->Form->input('craving3', array('label' => false, 'div' => false, 'value' => $craving3, 'maxlength' => 13));
+      echo $this->Form->input('craving4', array('label' => false, 'div' => false, 'value' => $craving4, 'maxlength' => 13));
+      echo $this->Form->input('craving5', array('label' => false, 'div' => false, 'value' => $craving5, 'maxlength' => 13));
+      echo $this->Form->input('craving6', array('label' => false, 'div' => false, 'value' => $craving6, 'maxlength' => 13));
   ?>
   </div>
   <p class="title_form" id="gross">Ascos</p>
@@ -148,12 +148,12 @@ echo $this->Html->link(
     } else{
       $gross6 = '';
     }
-        echo $this->Form->input('gross1', array('label' => false, 'div' => false, 'value' => $gross1));
-        echo $this->Form->input('gross2', array('label' => false, 'div' => false, 'value' => $gross2));
-        echo $this->Form->input('gross3', array('label' => false, 'div' => false, 'value' => $gross3));
-        echo $this->Form->input('gross4', array('label' => false, 'div' => false, 'value' => $gross4));
-        echo $this->Form->input('gross5', array('label' => false, 'div' => false, 'value' => $gross5));
-        echo $this->Form->input('gross6', array('label' => false, 'div' => false, 'value' => $gross6));
+        echo $this->Form->input('gross1', array('label' => false, 'div' => false, 'value' => $gross1, 'maxlength' => 13));
+        echo $this->Form->input('gross2', array('label' => false, 'div' => false, 'value' => $gross2, 'maxlength' => 13));
+        echo $this->Form->input('gross3', array('label' => false, 'div' => false, 'value' => $gross3, 'maxlength' => 13));
+        echo $this->Form->input('gross4', array('label' => false, 'div' => false, 'value' => $gross4, 'maxlength' => 13));
+        echo $this->Form->input('gross5', array('label' => false, 'div' => false, 'value' => $gross5, 'maxlength' => 13));
+        echo $this->Form->input('gross6', array('label' => false, 'div' => false, 'value' => $gross6, 'maxlength' => 13));
     ?>
   </div>
 </div>
@@ -164,7 +164,7 @@ echo $this->Html->link(
     } else{
       $weirdestcraving = '';
     }
-      echo $this->Form->input('weirdestcraving', array('type' => 'textarea', 'label' => 'Mmmm! cuando se trata de antojos<br>El antojito más raro que he tenido es: ', 'value' => $weirdestcraving )); 
+      echo $this->Form->input('weirdestcraving', array('type' => 'textarea', 'label' => 'Mmmm! cuando se trata de antojos<br>El antojito más raro que he tenido es: ', 'value' => $weirdestcraving, 'maxlength' => 279 )); 
 
   ?>
 </div>

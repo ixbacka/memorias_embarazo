@@ -105,7 +105,7 @@
           $whyidecided = '';
         }
       ?>
-      <input type="text" name="data[ChildsexPage][whyidecided]" value="<?php if($whyidecided != ''){ echo $whyidecided; } ?>" class="decid"/>
+      <input maxlength="37" type="text" name="data[ChildsexPage][whyidecided]" value="<?php if($whyidecided != ''){ echo $whyidecided; } ?>" class="decid"/>
     </p>
     <?php
       if(isset($childsex['ChildsexPage']['nickname'])){
@@ -115,7 +115,7 @@
       }
     ?>
     <p>Tu papá y yo te llamamos de cariño
-      <input type="text" name="data[ChildsexPage][nickname]" value="<?php if($nickname != ''){ echo $nickname; } ?>" class="nick"/> 
+      <input maxlength="15" type="text" name="data[ChildsexPage][nickname]" value="<?php if($nickname != ''){ echo $nickname; } ?>" class="nick"/> 
       ahora que estás dentro de mi pancita.
     </p>
   </div>

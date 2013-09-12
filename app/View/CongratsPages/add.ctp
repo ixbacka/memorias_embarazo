@@ -152,8 +152,7 @@ function get_date_spanish( $time, $part = false, $formatDate = '' ){
 		$babybros = '';
 	}
 		echo $this->Form->input('babynum', array('label' => 'Éste es mi bebé número: ', 'value' => $babynum, 'min' => 0, 'max' => '41'));
-		echo $this->Form->input('babybros',array('label' => 'Los hermanitos del bebé reaccionaron así: ', 'after' => '</span>','between' => '<span>', 'value' => $babybros,'maxlength' =>
-'50')));
+		echo $this->Form->input('babybros',array('label' => 'Los hermanitos del bebé reaccionaron así: ', 'after' => '</span>','between' => '<span>', 'value' => $babybros,'maxlength' => '50'));
 		/*
 		echo $this->Form->input('details',array('label' => '¡Anota todos los detalles antes de que se te olviden!... ¿Cómo y dónde celebraste  saber que estabas embarazada? ¿Con quién compartiste el momento? ¿Cómo  reaccionaron tus familiares? ¿Cuál fue la primera compra que hiciste o regalo que te dieron para el bebé?', 'after' => '</span>','between' => '<span>'));
 		*/

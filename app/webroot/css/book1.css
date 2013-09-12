@@ -206,6 +206,12 @@ height: 245px;
   top: 115px;
 }
 
+.weirdest-craving span {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 0;
+}
+
 .grossnes{
 width: 150px;
 position: absolute;
@@ -221,7 +227,7 @@ left: 33px;
 
 .grossnes span{
 float: left;
-width: 55px;
+width: 115px;
 margin-left: 10px;
 }
 
@@ -239,7 +245,7 @@ left: 33px;
 }
 .cravings span{
 float: left;
-width: 65px;
+width: 115px;
 margin-left: 10px;
 }
 
@@ -314,7 +320,7 @@ h3{
   height: 148px;
   background-position: top left, center;
   background-repeat: no-repeat;
-  top: 20px;
+  top: 10px;
   position: absolute;
   left: 0px;
 }
@@ -323,7 +329,7 @@ h3{
   color: #1082AC;
   font-size: 14px;
   position: absolute;
-  top: 174px;
+  top: 154px;
   left: 75px;
 }
 
@@ -335,14 +341,14 @@ h3{
   background-position: top left, center;
   background-repeat: no-repeat;
   position: absolute;
-  top: 20px;
+  top: 10px;
   left: 215px;
 }
 .mes2{
   color: #1082AC;
   font-size: 14px;
   position: absolute;
-  top: 174px;
+  top: 154px;
   left: 290px;
 }
 
@@ -354,14 +360,14 @@ h3{
   background-position: top left, center;
   background-repeat: no-repeat;
   position: absolute;
-  top: 200px;
+  top: 174px;
   left: 110px;
 }
 .mes3{
   color: #1082AC;
   font-size: 14px;
   position: absolute;
-  top: 347px;
+  top: 319px;
   left: 188px;
 }
 
@@ -502,6 +508,10 @@ top: 239px;
   float: left;
   width: 233px;
   padding-top: 10px;
+}
+
+#FirstkickPageAddForm .colR .opciones {
+  margin: 0;
 }
 
 .photo-v {
@@ -1041,7 +1051,7 @@ width: 232px;
 /* ByebellyPageAddForm */
 
 #ByebellyPageAddForm p {
-  margin: 0 0 10px 0;
+  margin: 0;
   line-height: 15px;
   float: none;
   position: relative;
@@ -1061,7 +1071,7 @@ width: 232px;
   position: absolute;
   width: 193px;
   right: 0;
-  top: 126px;
+  top: 96px;
 }
 
 #ByebellyPageAddForm .horas input {
@@ -1069,13 +1079,13 @@ width: 232px;
 }
 
 #ByebellyPageAddForm .opciones p {
-  margin: 0 0 5px;
-  height: 30px;
-  line-height: 25px;
+  margin: 0;
+  height: 26px;
+  line-height: 20px;
 }
 
 #ByebellyPageAddForm .opciones input[type="radio"] {
-  margin-right: 0px;
+  margin: 2px 8px 0;
 }
 
 #ByebellyPageAddForm .opcion label {
@@ -1102,7 +1112,7 @@ width: 232px;
 }
 
 #ByebellyPageAddForm .opciones {
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 
