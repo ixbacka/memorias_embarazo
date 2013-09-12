@@ -1483,7 +1483,7 @@ background-repeat: no-repeat;
           <p>
             <label>Esta maravilla de la vida la sentí el </label>
             <span> <?php if($firstkick_date != ''){ echo $firstkick_date; } ?></span>
-          </p><br>
+          </p>
 
           <p class="startkick">
             <label>Ay, la semana en que empezó a patear duro el bebé fue :</label>

@@ -77,7 +77,7 @@ $(document).ready(function(){
 		$sospeche = '';
 	}
 		echo $this->Form->input('sospeche', array('label' => 'Sospeché que estaba embarazada cuando: '
-			, 'after' => '</span>','between' => '<span>', 'value' => $sospeche )); 
+			, 'after' => '</span>','between' => '<span>', 'value' => $sospeche, 'maxlength' => '48' )); 
 
 #Power by nicolaspar 2007 - especific proyect
 function get_date_spanish( $time, $part = false, $formatDate = '' ){
@@ -126,7 +126,7 @@ function get_date_spanish( $time, $part = false, $formatDate = '' ){
 	} else{
 		$firstfeeling = '';
 	}
-		echo $this->Form->input('firstfeeling', array('label' => 'Lo primero que sentí fue: ','after' => '</span>','between' => '<span>', 'value' => $firstfeeling));
+		echo $this->Form->input('firstfeeling', array('label' => 'Lo primero que sentí fue: ','after' => '</span>','between' => '<span>', 'value' => $firstfeeling, 'maxlength' => '61'));
 		/*
 		echo $this->Form->input('babycoming', array('label' => 'Tenía '));
 		echo $this->Form->input('howishare', array('label' => 'semanas de embarazo cuando me enteré que venía el bebé en camino, ahh que emoción!. Compartí la gran noticia con el papá de mi bebé de esta manera: ', 'after' => '</span>','between' => '<span>',  'before' => '<p>semanas de embarazo cuando me enteré que venía el bebé en camino, ahh que emoción!. Compartí la gran noticia con el papá de mi bebé de esta manera:</p>', 'label' => false));
@@ -135,7 +135,7 @@ function get_date_spanish( $time, $part = false, $formatDate = '' ){
 		<label for="CongratsPageBabycoming">Tenía </label>
 		<input name="data[CongratsPage][babycoming]" type="number" min="0" max="41" id="CongratsPageBabycoming" value="<?php if( isset($congrats['CongratsPage']['babycoming'])){ echo $congrats['CongratsPage']['babycoming']; }?>">
 		 semanas de embarazo cuando me enteré que venía el bebé en camino, ahh que emoción!. Compartí la gran noticia con el papá de mi bebé de esta manera:
-		 <input name="data[CongratsPage][howishare]" type="text" id="CongratsPageHowishare" value="<?php if(isset($congrats['CongratsPage']['howishare'])){ echo $congrats['CongratsPage']['howishare']; } ?>">
+		 <input name="data[CongratsPage][howishare]" maxlength="81" type="text" id="CongratsPageHowishare" value="<?php if(isset($congrats['CongratsPage']['howishare'])){ echo $congrats['CongratsPage']['howishare']; } ?>">
 		</p>
 		</div>
 		<?php
@@ -152,7 +152,8 @@ function get_date_spanish( $time, $part = false, $formatDate = '' ){
 		$babybros = '';
 	}
 		echo $this->Form->input('babynum', array('label' => 'Éste es mi bebé número: ', 'value' => $babynum, 'min' => 0, 'max' => '41'));
-		echo $this->Form->input('babybros',array('label' => 'Los hermanitos del bebé reaccionaron así: ', 'after' => '</span>','between' => '<span>', 'value' => $babybros));
+		echo $this->Form->input('babybros',array('label' => 'Los hermanitos del bebé reaccionaron así: ', 'after' => '</span>','between' => '<span>', 'value' => $babybros,'maxlength' =>
+'50')));
 		/*
 		echo $this->Form->input('details',array('label' => '¡Anota todos los detalles antes de que se te olviden!... ¿Cómo y dónde celebraste  saber que estabas embarazada? ¿Con quién compartiste el momento? ¿Cómo  reaccionaron tus familiares? ¿Cuál fue la primera compra que hiciste o regalo que te dieron para el bebé?', 'after' => '</span>','between' => '<span>'));
 		*/

@@ -175,7 +175,7 @@ function get_date_spanish( $time, $part = false, $formatDate = '' ){
     <div class="estaba">
       <label>Cuando comenzaron las contracciones yo estaba: </label>
        <!-- <input type="text" name="data[ByebellyPage][iwas]" value="<?php if($iwas != ''){ echo $iwas; } ?>" > -->
-      <textarea name="data[ByebellyPage][iwas]"><?php if($iwas != ''){echo$iwas;}?></textarea>
+      <textarea name="data[ByebellyPage][iwas]" maxlength="180"><?php if($iwas != ''){echo$iwas;}?></textarea>
     </div>
 
     <?php if(isset($byebelly['ByebellyPage']['experience'])){
@@ -186,7 +186,7 @@ function get_date_spanish( $time, $part = false, $formatDate = '' ){
     <div class="exp">
       <label>La experiencia completa de la labor de parto: </label>
       <!-- <input type="text" name="data[ByebellyPage][experience]" value="<?php if($experience != ''){ echo $experience; } ?>" > -->
-      <textarea name="data[ByebellyPage][experience]"><?php if($experience != ''){ echo $experience; } ?></textarea>
+      <textarea name="data[ByebellyPage][experience]" maxlength="180"><?php if($experience != ''){ echo $experience; } ?></textarea>
     </div>
 
     <?php echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid)); ?>
