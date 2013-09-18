@@ -2827,7 +2827,6 @@
 
 <div class="fake-body">
   <div class="fake-marco"></div>
-  <img src="http://momtomom.mx/apps/memorias_embarazo/app/webroot/img/Imprimir_header.png">
   <a href="#" class="btn print-btn" onClick="window.print()">imprimir</a>
   <a href="http://momtomom.mx/apps/memorias_embarazo/profiles/cover" class="btn back-btn">regresar</a>
 </div>
