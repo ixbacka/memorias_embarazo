@@ -980,6 +980,14 @@ z-index: -1;
   border-radius: 100px;
 }
 
+#familytreeback {
+z-index: -1;
+position: absolute;
+top: 135px;
+left: 86px;
+}
+
+
 .familytreeBackBack1{
   z-index: -1;
   position: absolute;
@@ -1229,7 +1237,7 @@ margin-left: -150px;
   }
 
   .print-page-title p, .print-page-title span{
-    color: #fff;
+    color: #000;
   }
 
 /*  .weirdest-craving {

@@ -2659,7 +2659,8 @@
         <p>&aacute;rbol Familiar</p>
       </div>
 
-      <div class="print-form" id="epilogform"> 
+      <div class="print-form" id="familytreeform"> 
+        <img src="http://momtomom.mx/apps/memorias_embarazo/img/arbol.png" id="familytreeback">
 
           <?php 
             if(isset($familytree['FamilytreePage']['dad'])){
@@ -2716,9 +2717,6 @@
               <img class="familytreeBackBack" id="grandpa_dad-back" src="http://momtomom.mx/apps/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
             <?php } ?>
 
-            <span class="spanfila1" id="first">
-              <?php  echo $grandpa_dad; ?>
-            </span>
           </div>
 
           <div class="familytree">
@@ -2730,9 +2728,6 @@
               <img  class="familytreeBackBack" id="grandpa_mom-back" src="http://momtomom.mx/apps/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
             <?php } ?>            
 
-            <span class="spanfila1" id="sec">
-              <?php  echo $grandpa_mom; ?>
-            </span>
           </div>
 
           <div class="familytree">
@@ -2743,10 +2738,6 @@
             <?php } else { ?>
               <img class="familytreeBackBack" id="grandma_dad-back" src="http://momtomom.mx/apps/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
             <?php } ?>            
-
-            <span class="spanfila1" id="ter">
-              <?php  echo $grandma_dad; ?>
-            </span>
 
           </div>
 
@@ -2760,10 +2751,6 @@
               <img class="familytreeBackBack" id="grandma_mom-back" src="http://momtomom.mx/apps/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
             <?php } ?>            
 
-            <span class="spanfila1" id="cuart">
-              <?php  echo $grandma_mom; ?>
-            </span>
-            
           </div>
 
 
@@ -2776,10 +2763,6 @@
               <img class="familytreeBackBack" id="dad-back" src="http://momtomom.mx/apps/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
             <?php } ?>            
 
-            <span class="spanfila2" id="first2">
-              <?php  echo $dad; ?>
-            </span>
-            
           </div>
 
 
@@ -2792,10 +2775,6 @@
               <img class="familytreeBackBack" id="mom-back" src="http://momtomom.mx/apps/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
             <?php } ?>            
 
-            <span class="spanfila2" id="sec2">
-              <?php  echo $mom; ?>
-            </span>
-            
           </div>
 
 
@@ -2808,10 +2787,6 @@
             <?php } else { ?>
               <img class="familytreeBackBack" id="baby-back" src="http://momtomom.mx/apps/memorias_embarazo/img/<?php echo $elpath;?>marco_circular_back.png" >
             <?php } ?>            
-
-            <span class="spanfila3" id="first3">
-              <?php  echo $baby; ?>
-            </span>
             
           </div>
 
