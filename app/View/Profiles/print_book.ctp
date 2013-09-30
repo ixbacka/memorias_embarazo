@@ -1137,22 +1137,28 @@
 
           <p class="tac">Tac, tac, sonaba como: </p>
 
-          <?php if($heartbeat == 1){ ?>
+          <?php //if($heartbeat == 1){ ?>
           <div class="opcion">
             <label>Caballos Galopantes</label>
+            <input type="radio" name="data[IlovemybabyPage][heartbeat]" value="1" <?php if($heartbeat == 1){
+              echo  'checked="checked"'; } ?> />
             <img id="caballo" src="https://momtomom.mx/apps/memorias_embarazo/img/caballo.png">
           </div>
-          <?php } elseif($heartbeat == 2){ ?>
+          <?php //} elseif($heartbeat == 2){ ?>
           <div class="opcion">
             <label>Como un tambor</label>
+            <input type="radio" name="data[IlovemybabyPage][heartbeat]" value="2" <?php if($heartbeat == 2){
+              echo  'checked="checked"'; } ?> />
             <img id="tambor" src="https://momtomom.mx/apps/memorias_embarazo/img/tambor.png">
           </div>
-          <?php } elseif($heartbeat == 3){ ?>
+          <?php //} elseif($heartbeat == 3){ ?>
           <div class="opcion">
             <label>Un mar de emociones</label>
+            <input type="radio" name="data[IlovemybabyPage][heartbeat]" value="3" <?php if($heartbeat == 3){
+              echo  'checked="checked"'; } ?> />
             <img id="mar" src="https://momtomom.mx/apps/memorias_embarazo/img/mar.png">
           </div>
-          <?php } ?>
+          <?php //} ?>
 
           <p>
             <label>y lo primero que sentí fue: </label>

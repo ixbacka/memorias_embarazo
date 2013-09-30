@@ -259,6 +259,11 @@ margin-top: 20px;
   left: 305px;
 }
 
+.weirdest-craving span {
+width: 210px;
+display: block;
+}
+
 /* animo */
 
 .meses {
@@ -447,20 +452,32 @@ margin-bottom: 14px;
 /* i love my bby pages */
 
 .opcion {
-    padding: 20px;
-    width: 170px;
-    height: 138px;
-    padding-left: 165px;
+  padding: 0px;
+  width: 196px;
+  height: 203px;
+  padding-left: 20px;
+  float: left;
+  text-align: center;
 }
+
+.opcion input[type="radio"] {
+  display: inline-block;
+  width: 101px;
+  float: left;
+}
+
 .opcion label {
     text-align: center;
     float: left;
     color: #157dc1;
+  display: inline-block;
 }
+
 .opcion img {
     float: left;
     width: 96px;
     height: 96px;
+  display: inline-block;
 }
 
 /* childsex */
@@ -874,7 +891,7 @@ width: 100px;
 position: absolute;
 height: 117px;
 top: 310px;
-left: 295px;
+left: 345px;
 }
 .bplace {
     float: left;
@@ -937,6 +954,10 @@ z-index: -1;
     width: 350px;
     left: 50%;
     margin-left: -175px;
+}
+
+.post-parto span {
+width: 350px;
 }
 
 /*new familyy*/

@@ -235,4 +235,6 @@ input[type="text"] {
   border-top: 1px dashed rgba(135, 119, 153, 0.47);
 }
 
-
+#MomentPageAddForm .page_title input[type="text"]{
+  color: #808080;
+}

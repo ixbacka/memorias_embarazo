@@ -253,3 +253,7 @@ ul.vertical_menu_1 li.:hover a {
 input[type="text"]{
   border-bottom: 1px solid #877799;
 }
+
+#MomentPageAddForm .page_title input[type="text"] {
+  color: #877799;
+}

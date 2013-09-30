@@ -298,3 +298,6 @@ p.middle_note {
   top: 190px;
 }
 
+#MomentPageAddForm .page_title input[type="text"] {
+  color: #511114;
+}
