@@ -45,7 +45,12 @@ class BabyshowerPagesController extends AppController {
 
         if(!empty($this->request->data['BabyshowerPage']['photo1']['tmp_name']) ) { 
 
-        $fileName = $this->generateUniqueFilename('bbyshower_1_'.$id['Profile']['uid'].'.png'); 
+          if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.'bbyshower_1_'.$id['Profile']['uid'].'.png')) {
+            //"El fichero existe"
+            $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.'bbyshower_1_'.$id['Profile']['uid'].'.png');
+          } 
+
+        $fileName = $this->generateUniqueFilename('bbyshower_1_'.$id['Profile']['uid'].'.png');
         $error = $this->handleFileUpload($this->request->data['BabyshowerPage']['photo1'], $fileName); 
 
           if ($error == false) { 
@@ -57,6 +62,12 @@ class BabyshowerPagesController extends AppController {
         } elseif (!empty($this->request->data['BabyshowerPage']['url_photo_1'])) {
           $avatar = imagecreatefromjpeg($this->request->data['BabyshowerPage']['url_photo_1']);
           $nameIMG = 'bbyshower_1_'.$uid.'.png';
+          
+          if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG)) {
+            //"El fichero existe"
+            $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG);
+          } 
+
           imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 
           $this->BabyshowerPage->set(array( 
@@ -66,6 +77,10 @@ class BabyshowerPagesController extends AppController {
         }
 
         if(!empty($this->request->data['BabyshowerPage']['photo2']['tmp_name']) ) { 
+          if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.'bbyshower_2_'.$id['Profile']['uid'].'.png')) {
+            //"El fichero existe"
+            $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.'bbyshower_2_'.$id['Profile']['uid'].'.png');
+          } 
 
         $fileName = $this->generateUniqueFilename('bbyshower_2_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['BabyshowerPage']['photo2'], $fileName); 
@@ -79,6 +94,10 @@ class BabyshowerPagesController extends AppController {
         } elseif (!empty($this->request->data['BabyshowerPage']['url_photo_2'])) {
           $avatar = imagecreatefromjpeg($this->request->data['BabyshowerPage']['url_photo_2']);
           $nameIMG = 'bbyshower_2_'.$uid.'.png';
+          if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG)) {
+            //"El fichero existe"
+            $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG);
+          } 
           imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 
           $this->BabyshowerPage->set(array( 

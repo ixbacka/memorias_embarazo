@@ -45,6 +45,10 @@ class UltrasoundPagesController extends AppController {
 
         if(!empty($this->request->data['UltrasoundPage']['first_photo']['tmp_name']) ) { 
 
+          if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.'ultrasound_1_1_'.$id['Profile']['uid'].'.png')){
+            $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.'ultrasound_1_1_'.$id['Profile']['uid'].'.png');
+          } 
+
         $fileName = $this->generateUniqueFilename('ultrasound_1_1_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['UltrasoundPage']['first_photo'], $fileName); 
 
@@ -61,6 +65,9 @@ class UltrasoundPagesController extends AppController {
 
           $avatar = imagecreatefromjpeg($this->request->data['UltrasoundPage']['url_photo']);
           $nameIMG = $this->generateUniqueFilename('ultrasound_1_1_'.$uid.'.png'); 
+          if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG)){
+            $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG);
+          } 
           imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 
           $this->UltrasoundPage->set(array( 
@@ -70,6 +77,9 @@ class UltrasoundPagesController extends AppController {
         } 
 
         if(!empty($this->request->data['UltrasoundPage']['second_photo']['tmp_name']) ) { 
+          if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.'ultrasound_1_2_'.$id['Profile']['uid'].'.png')){
+            $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.'ultrasound_1_2_'.$id['Profile']['uid'].'.png');
+          } 
 
         $fileName = $this->generateUniqueFilename('ultrasound_1_2_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['UltrasoundPage']['second_photo'], $fileName); 
@@ -87,6 +97,9 @@ class UltrasoundPagesController extends AppController {
 
           $avatar = imagecreatefromjpeg($this->request->data['UltrasoundPage']['url_photo_1']);
           $nameIMG = $this->generateUniqueFilename('ultrasound_1_2_'.$uid.'.png'); 
+          if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG)){
+            $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG);
+          } 
           imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 
           $this->UltrasoundPage->set(array( 

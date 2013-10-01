@@ -44,6 +44,11 @@ class NewfamilyPagesController extends AppController {
 
         if(!empty($this->request->data['NewfamilyPage']['photo']['tmp_name']) ) { 
 
+        if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.'newfamily_'.$id['Profile']['uid'].'.png')){
+            //"El fichero existe"
+            $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.'newfamily_'.$id['Profile']['uid'].'.png');
+          } 
+
         $fileName = $this->generateUniqueFilename('newfamily_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['NewfamilyPage']['photo'], $fileName); 
 
@@ -56,6 +61,10 @@ class NewfamilyPagesController extends AppController {
         } elseif (!empty($this->request->data['NewfamilyPage']['url_photo'])) {
           $avatar = imagecreatefromjpeg($this->request->data['NewfamilyPage']['url_photo']);
           $nameIMG = 'newfamily_'.$uid.'.png';
+          if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG)){
+            //"El fichero existe"
+            $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG);
+          } 
           imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 
           $this->NewfamilyPage->set(array( 

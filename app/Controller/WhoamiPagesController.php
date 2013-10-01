@@ -43,7 +43,10 @@ class WhoamiPagesController extends AppController {
           $this->WhoamiPage->id = $idf['WhoamiPage']['id'];
         }
 
-        if(!empty($this->request->data['WhoamiPage']['photo']['tmp_name']) ) { 
+        if(!empty($this->request->data['WhoamiPage']['photo']['tmp_name']) ) {
+          if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.'whoami_'.$id['Profile']['uid'].'.png')){
+            $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.'whoami_'.$id['Profile']['uid'].'.png');
+          }  
 
         $fileName = $this->generateUniqueFilename('whoami_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['WhoamiPage']['photo'], $fileName); 
@@ -61,6 +64,9 @@ class WhoamiPagesController extends AppController {
 
           $avatar = imagecreatefromjpeg($this->request->data['WhoamiPage']['url_photo']);
           $nameIMG = $this->generateUniqueFilename('whoami_'.$uid.'.png'); 
+            if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG)){
+            $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG);
+          } 
 
           imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 

@@ -45,6 +45,10 @@ class SpecialdeliveryPagesController extends AppController {
 
         if(!empty($this->request->data['SpecialdeliveryPage']['photo']['tmp_name']) ) { 
 
+          if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.'special_delivery_'.$id['Profile']['uid'].'.png')) {
+            $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.'special_delivery_'.$id['Profile']['uid'].'.png');
+          } 
+
         $fileName = $this->generateUniqueFilename('special_delivery_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['SpecialdeliveryPage']['photo'], $fileName); 
 
@@ -57,6 +61,9 @@ class SpecialdeliveryPagesController extends AppController {
         } elseif (!empty($this->request->data['SpecialdeliveryPage']['url_photo'])) {
           $avatar = imagecreatefromjpeg($this->request->data['SpecialdeliveryPage']['url_photo']);
           $nameIMG = 'special_delivery_'.$uid.'.png';
+          if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG)){
+            $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG);
+          } 
           imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 
           $this->SpecialdeliveryPage->set(array( 

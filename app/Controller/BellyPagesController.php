@@ -45,6 +45,11 @@ var $uses = array('BellyPage','Profile');
 
         if(!empty($this->request->data['BellyPage']['photo1']['tmp_name']) ) { 
 
+          if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.'bellypages_1_'.$id['Profile']['uid'].'.png')) {
+            //"El fichero existe"
+            $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.'bellypages_1_'.$id['Profile']['uid'].'.png');
+          } 
+
  //       $fileName = $this->generateUniqueFilename($this->request->data['BellyPage']['photo1']['name']); 
         $fileName = $this->generateUniqueFilename('bellypages_1_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['BellyPage']['photo1'], $fileName); 
@@ -61,6 +66,12 @@ var $uses = array('BellyPage','Profile');
 
           $avatar = imagecreatefromjpeg($this->request->data['BellyPage']['photo1_url']['url_photo']);
           $nameIMG = 'belly_1_'.$uid.'.png';
+
+          if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG)) {
+            //"El fichero existe"
+            $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG);
+          } 
+
           imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 
           $this->BellyPage->set(array( 
@@ -70,6 +81,11 @@ var $uses = array('BellyPage','Profile');
         }
 
         if(!empty($this->request->data['BellyPage']['photo2']['tmp_name']) ) { 
+
+           if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.'bellypages_2_'.$id['Profile']['uid'].'.png')) {
+            //"El fichero existe"
+            $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.'bellypages_2_'.$id['Profile']['uid'].'.png');
+          } 
 
         $fileName = $this->generateUniqueFilename('bellypages_2_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['BellyPage']['photo2'], $fileName); 
@@ -86,6 +102,10 @@ var $uses = array('BellyPage','Profile');
 
           $avatar = imagecreatefromjpeg($this->request->data['BellyPage']['photo2_url']['url_photo']);
           $nameIMG = 'belly_2_'.$uid.'.png';
+          if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG)) {
+            //"El fichero existe"
+            $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG);
+          } 
           imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 
           $this->BellyPage->set(array( 
@@ -95,6 +115,11 @@ var $uses = array('BellyPage','Profile');
         }
 
         if(!empty($this->request->data['BellyPage']['photo3']['tmp_name']) ) { 
+
+         if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.'bellypages_3_'.$id['Profile']['uid'].'.png')) {
+            //"El fichero existe"
+            $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.'bellypages_3_'.$id['Profile']['uid'].'.png');
+          }  
 
         $fileName = $this->generateUniqueFilename('bellypages_3_'.$id['Profile']['uid'].'.png'); 
         $error = $this->handleFileUpload($this->request->data['BellyPage']['photo3'], $fileName); 
@@ -111,6 +136,10 @@ var $uses = array('BellyPage','Profile');
 
           $avatar = imagecreatefromjpeg($this->request->data['BellyPage']['photo3_url']['url_photo']);
           $nameIMG = 'belly_3_'.$uid.'.png';
+          if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG)) {
+            //"El fichero existe"
+            $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG);
+          } 
           imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 
           $this->BellyPage->set(array( 
