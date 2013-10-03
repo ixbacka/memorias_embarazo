@@ -686,9 +686,14 @@ top: 239px;
     width: 230px;
 }
 #GettingclosePageAddForm .col.uno span{
-    width: 290px;
+        width: 290px;
+    display: block;
+    margin-bottom: 6px;
 }
 
+#GettingclosePageAddForm .col>:first-child {
+  margin-bottom: 20px;
+}
 
 #GettingclosePageAddForm .miedo,
 #GettingclosePageAddForm .sorry {
@@ -717,6 +722,8 @@ top: 239px;
 
 #GettingclosePageAddForm .col.tres span{
     width: 168px;
+    display: block;
+    margin-bottom: 6px;
 }
 
 .papas span,

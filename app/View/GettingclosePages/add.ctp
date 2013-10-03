@@ -101,9 +101,9 @@
     echo   'checked="checked"'; } ?> />
     <input type="radio" name="data[GettingclosePage][favoritename]" value="3" <?php if($favoritename == 3){
     echo   'checked="checked"'; } ?> />
-    <input type="radio" name="data[GettingclosePage][favoritename]" value="4" <?php if($favoritename == 3){
+    <input type="radio" name="data[GettingclosePage][favoritename]" value="4" <?php if($favoritename == 4){
     echo   'checked="checked"'; } ?> />
-    <input type="radio" name="data[GettingclosePage][favoritename]" value="5" <?php if($favoritename == 3){
+    <input type="radio" name="data[GettingclosePage][favoritename]" value="5" <?php if($favoritename == 5){
     echo   'checked="checked"'; } ?> />
   </div>
   <div class="col tres">
