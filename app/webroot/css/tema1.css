@@ -955,27 +955,15 @@ form p{
   left: 367px;
 }
 
-.submit:after {
-  content: 'Mamá, aunque tus textos no aparezcan en el campo, si se está guardando todo lo que escribes en la versión para compartir, guardar e imprimir.';
-  background: white;
-  display: none;
-  position: absolute;
-  width: 230px;
-  padding: 10px;
-  border-radius: 10px;
-  top: -134px;
-  left: -85px;
-}
 .submit:before {
   content: '';
+  background: url(../img/nube_copy.png) center no-repeat;
   display: none;
-  width: 0;
-  height: 0;
-  border: 10px solid rgba(0, 0, 0, 0);
-  border-top: 10px solid white;
+  width: 324px;
+  height: 156px;
   position: absolute;
-  top: -9px;
-  left: 23px;
+  top: -150px;
+  left: -127px;
 }
 
 .submit:hover:after,
