@@ -955,6 +955,34 @@ form p{
   left: 367px;
 }
 
+.submit:after {
+  content: 'Mamá, aunque tus textos no aparezcan en el campo, si se está guardando todo lo que escribes en la versión para compartir, guardar e imprimir.';
+  background: white;
+  display: none;
+  position: absolute;
+  width: 230px;
+  padding: 10px;
+  border-radius: 10px;
+  top: -134px;
+  left: -85px;
+}
+.submit:before {
+  content: '';
+  display: none;
+  width: 0;
+  height: 0;
+  border: 10px solid rgba(0, 0, 0, 0);
+  border-top: 10px solid white;
+  position: absolute;
+  top: -9px;
+  left: 23px;
+}
+
+.submit:hover:after,
+.submit:hover:before {
+  display: block;
+}
+
 form .submit input[type="submit"]{
   text-indent: -9999px;
   width: 68px;
