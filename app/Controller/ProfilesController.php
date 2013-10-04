@@ -168,7 +168,12 @@ class ProfilesController extends AppController {
 	 */
 	public function fangate(){
 		
-		$facebook = $this->Session->read("facebook");
+		//$facebook = $this->Session->read("facebook");
+		$facebook = new Facebook(array(
+			'appId' => "163480813810636",
+			'secret' => "3ccf0a83049aa75bd8f0bc9707b9e7a0",
+			'cookie' => true
+		));
 
 		$access_token = $facebook->getAccessToken();
 		$signed_request = $facebook->getSignedRequest();
@@ -180,7 +185,8 @@ class ProfilesController extends AppController {
 			$loginUrl = $facebook->getLoginUrl(
 			    array(
 			        'scope' => 'publish_actions,user_birthday,email,user_photos',
-			        'redirect_uri' => 'https://www.facebook.com/pages/Nativo-Desarrollo/514166771955164?id=514166771955164&sk=app_163480813810636'     
+			        'redirect_uri' => 'https://www.facebook.com/pages/Nativo-Desarrollo/514166771955164?id=514166771955164&sk=app_163480813810636' 
+			        //https://www.facebook.com/pages/Nativo-Desarrollo/514166771955164?id=514166771955164&sk=app_163480813810636    
 			    )
 			);
 
