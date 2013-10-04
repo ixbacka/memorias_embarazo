@@ -971,6 +971,12 @@ form p{
   display: block;
 }
 
+.photo-up .submit:hover:before,
+.photo-v .submit:hover:before,
+.cover_photo .submit:hover:before {
+  display: none;
+}
+
 form .submit input[type="submit"]{
   text-indent: -9999px;
   width: 68px;
