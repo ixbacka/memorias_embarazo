@@ -95,7 +95,7 @@ class CoolultrasoundPagesController extends AppController {
 
         }*/
 
-         if( isset($this->request->data['CoolultrasoundPage']['imiss']) ){
+         if( isset($this->request->data['CoolultrasoundPage']['imiss']) && $this->request->data['CoolultrasoundPage']['imiss']!= NULL ) ){
           $this->CoolultrasoundPage->set(array( 
             'imiss' => $this->request->data['CoolultrasoundPage']['imiss']
             ));

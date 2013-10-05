@@ -138,6 +138,18 @@
   margin-left: -450px;
 }
 */
+<?php if($tema == 4){  ?>
+  
+.print-page-title p{
+  top: 8px;
+  
+}
+
+.print-page-title span{
+  top: 33px;
+}
+
+  <?php } ?>
 
 </STYLE>
 
@@ -2114,15 +2126,15 @@
             <p>Me ha dado por:</p>
             
             <div class="opciones">
-              <?php if($nest == 1){ ?>
+              <?php if($nest == 1 || $nest == 4){ ?>
               <div class="cf">
                 <label>Limpiar toda la casa</label>
               </div>
-              <?php } elseif($nest == 2){ ?>
+              <?php } elseif($nest == 2 || $nest == 4){ ?>
               <div class="cf">
                 <label>Lavar y acomodar tu ropita</label>
               </div>
-              <?php } elseif($nest == 3){ ?>
+              <?php } elseif($nest == 3 || $nest == 4){ ?>
               <div class="cf">
                 <label>Tener nuestra maleta lista en la puerta</label>
               </div>

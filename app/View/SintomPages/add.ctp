@@ -22,7 +22,7 @@ body{
     <div id="moments_popup">
         <div id="popup_moments"> <!--your content start-->
           <?php echo $this->element('moments'); ?>
-          <a href="1" class="addnew-momento" id="mayiadd-moments" >Agrega un momento</a>
+          <a href="1" class="addnew-momento" id="mayiadd-moments" >Agrega una memoria</a>
         </div> <!--your content end-->
     </div> <!--toPopup end-->
 

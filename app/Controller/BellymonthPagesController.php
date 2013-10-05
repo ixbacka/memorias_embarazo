@@ -81,7 +81,7 @@ class BellymonthPagesController extends AppController {
             ));
         }
 
-        if( isset($this->request->data['BellymonthPage']['b4']) ){
+        if( isset($this->request->data['BellymonthPage']['b4']) && $this->request->data['BellymonthPage']['b4']!= NULL ){
 
           $this->BellymonthPage->set(array( 
             'b4' => $this->request->data['BellymonthPage']['b4']
