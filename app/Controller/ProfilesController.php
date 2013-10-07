@@ -185,8 +185,8 @@ class ProfilesController extends AppController {
 			$loginUrl = $facebook->getLoginUrl(
 			    array(
 			        'scope' => 'publish_actions,user_birthday,email,user_photos',
-			        'redirect_uri' => 'https://www.facebook.com/pages/Nativo-Desarrollo/514166771955164?id=514166771955164&sk=app_163480813810636' 
-			        //https://www.facebook.com/pages/Nativo-Desarrollo/514166771955164?id=514166771955164&sk=app_163480813810636    
+			        'redirect_uri' => 'https://www.facebook.com/momtomommexico/app_163480813810636'
+			        //'redirect_uri' => 'https://www.facebook.com/pages/Nativo-Desarrollo/514166771955164?id=514166771955164&sk=app_163480813810636' 
 			    )
 			);
 
@@ -666,7 +666,7 @@ class ProfilesController extends AppController {
 
         } elseif ($session) {
 
-            $args = array('message' => $msg.' <3 Te invito a leer las Memorias de mi embarazo en: http://momtomom.mx/apps/memorias_embarazo/profiles/view_book/'.$uid.'. ¡Tú también puedes crear tu propio diario haciendo click aquí! https://www.facebook.com/pages/Nativo-Desarrollo/514166771955164?sk=app_163480813810636'); 
+            $args = array('message' => $msg.' <3 Te invito a leer las Memorias de mi embarazo en: http://momtomom.mx/apps/memorias_embarazo/profiles/view_book/'.$uid.'. ¡Tú también puedes crear tu propio diario haciendo click aquí! https://www.facebook.com/momtomommexico/app_163480813810636'); 
             $args['url'] = 'https://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$url;
             
             $user_profile_img = $facebook->api('/'.$uid.'/photos','POST', $args);
