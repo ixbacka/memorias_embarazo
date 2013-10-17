@@ -617,6 +617,8 @@ input[type="number"] {
 
 #FamilytreePageAddForm .submit {
   z-index: 1;
+  top: 714px;
+  left: 481px;
 }
 
 form#familytreePageAddForm{

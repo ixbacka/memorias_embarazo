@@ -91,7 +91,7 @@ $(document).ready(function() {
       #Power by nicolaspar 2007 - especific proyect
       function get_date_spanish( $time, $part = false, $formatDate = '' ){
         #Declare n compatible arrays
-        $month = array("","enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiempre", "diciembre");#n
+        $month = array("","enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiempre", "octubre", "noviembre", "diciembre");#n
         $month_execute = "n"; #format for array month
 
         $month_mini = array("","ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "DIC");#n
@@ -1397,6 +1397,7 @@ background-repeat: no-repeat;
 
                 $firstkick_date = $dia.' '.$mes.' '.$ano;
                 $monthi = ($date->format('m'))-1;
+                $montha = $date->format('m');
               } else{
                 $firstkick_date = '';
               }
