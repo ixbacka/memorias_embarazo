@@ -141,3 +141,17 @@ background-image: url(../img/tema3/marco.png), url(../img/tema3/marco_fondo.png)
 .familytreeFile {
 background-image: url(../img/tema3/marco_circular.png);
 }
+
+
+         
+#ilovemybaby .opcion {
+    background-image: url(http://momtomom.mx/apps/memorias_embarazo/img/tema3/caballo.png);
+}
+
+#ilovemybaby .opcion+.opcion {
+    background-image: url(http://momtomom.mx/apps/memorias_embarazo/img/tema3/tambor.png);
+}
+
+#ilovemybaby .opcion+.opcion+.opcion {
+    background-image: url(http://momtomom.mx/apps/memorias_embarazo/img/tema3/mar.png);
+}

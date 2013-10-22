@@ -434,19 +434,38 @@ h3{
 .opcion{
   display: block;
 width: 140px;
-height: 60px;
+height: 140px;
 float: left;
 margin-bottom: 40px;
 }
 
 .opcion label{
   width: 100%;
-text-align: center;
+  text-align: center;
 }
 
 #ilovemybaby .opcion input[type="radio"]{
-  margin-left: 70px;
+  margin-left: 70px;  
+  margin-top: 106px;
 }
+
+                   
+#ilovemybaby .opcion {
+    background-image: url(http://momtomom.mx/apps/memorias_embarazo/img/caballo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#ilovemybaby .opcion+.opcion {
+    background-image: url(http://momtomom.mx/apps/memorias_embarazo/img/tambor.png);
+    background-position: 25px 18px;
+}
+
+#ilovemybaby .opcion+.opcion+.opcion {
+    background-image: url(http://momtomom.mx/apps/memorias_embarazo/img/mar.png);
+}
+
+
 
 .bebes{
   
