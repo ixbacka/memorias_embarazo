@@ -625,6 +625,10 @@ top: 239px;
   top: 175px;
 }
 
+#BellymonthPageAddForm .miss span {
+  display: inline-block;
+}
+
 #BellymonthPageAddForm .cerca {
   position: absolute;
   bottom: 40px;
