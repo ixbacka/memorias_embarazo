@@ -49,7 +49,7 @@
         $named = '';
       }
     ?> 
-    <input type="text" name="data[GettingclosePage][named]" value="<?php if($named != ''){ echo $named; } ?>">
+    <input type="text" name="data[GettingclosePage][named]" maxlength="27" value="<?php if($named != ''){ echo $named; } ?>">
   </p>
   <div class="col uno">
     <p>Nombres reales qué estamos considerando:</p>
