@@ -94,7 +94,7 @@ background-image: url(../img/tema4/marco.png), url(../img/tema4/marco_fondo.png)
 
 #photo2_back_{
   background-image: url(../img/tema4/marco_fondo.png);
-  margin-top: 0;
+
 }
 
 
@@ -136,6 +136,10 @@ background-image: url(../img/tema4/marco.png), url(../img/tema4/marco_fondo.png)
 
   background-image: url(../img/tema4/marco_circular.png), url(../img/tema4/marco_circular_back.png);
 
+}
+
+.familytreePages {
+  margin-top: 0;
 }
 
 
