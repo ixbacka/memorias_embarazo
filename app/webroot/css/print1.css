@@ -250,7 +250,7 @@ margin-top: 20px;
     position: absolute;
     width: 300px;
     height: 100px;
-    top: 181px;
+    top: 230px;
 }
 .weirdest-craving {
   width: 230px;
@@ -479,6 +479,10 @@ margin-bottom: 14px;
     width: 96px;
     height: 96px;
   display: inline-block;
+}
+
+input[name="data[IlovemybabyPage][heartbeat]"] {
+  margin: 10px 46px;
 }
 
 /* childsex */
