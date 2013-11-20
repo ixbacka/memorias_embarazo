@@ -242,8 +242,9 @@ margin-top: 20px;
 
 .cravings span, .grossnes span{
     float: left;
-    width: 100px;
+    width: 120px;
     margin-right: 8px;
+    line-height: 1;
 }
 .grossnes {
     position: absolute;
