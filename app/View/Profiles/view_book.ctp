@@ -2297,6 +2297,11 @@ background-repeat: no-repeat;
             } else{
               $iwas = '';
             }
+            if(isset($byebelly['ByebellyPage']['noneofabove'])){
+              $noneofabove = $byebelly['ByebellyPage']['noneofabove'];
+            } else{
+              $noneofabove = '';
+            }
             if(isset($byebelly['ByebellyPage']['experience'])){
               $experience = $byebelly['ByebellyPage']['experience'];
             } else{
@@ -2333,11 +2338,11 @@ background-repeat: no-repeat;
             </p>
             <p class="nota"> Ninguna de las anteriores: </p>
             <p class="opcion cf">
-              <input type="radio" name="data[ByebellyPage][itstarted]" value="4" <?php if($itstarted == 4){ echo 'checked="checked"'; } ?> />
+              <input type="radio" name="data[ByebellyPage][itstarted]" value="1" <?php if($noneofabove == 1){ echo 'checked="checked"'; } ?> />
               <label>Fue inducido</label>
             </p>
             <p class="opcion cf">
-              <input type="radio" name="data[ByebellyPage][itstarted]" value="5" <?php if($itstarted == 5){ echo 'checked="checked"'; } ?> />
+              <input type="radio" name="data[ByebellyPage][itstarted]" value="2" <?php if($noneofabove == 2){ echo 'checked="checked"'; } ?> />
               <label>Fue por ces&aacute;rea</label>
             </p>
           </div>
