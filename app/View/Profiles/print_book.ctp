@@ -97,10 +97,10 @@
       #Power by nicolaspar 2007 - especific proyect
       function get_date_spanish( $time, $part = false, $formatDate = '' ){
         #Declare n compatible arrays
-        $month = array("","enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiempre", "diciembre");#n
+        $month = array("","enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiempre", "octubre", "noviembre", "diciembre");#n
         $month_execute = "n"; #format for array month
 
-        $month_mini = array("","ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "DIC");#n
+        $month_mini = array("","ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT","NOV","DIC");#n
         $month_mini_execute = "n"; #format for array month
 
         $day = array("domingo","lunes","martes","miércoles","jueves","viernes","sábado"); #w
