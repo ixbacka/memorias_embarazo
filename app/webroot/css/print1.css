@@ -1111,7 +1111,7 @@ margin-left: -150px;
 }
 
 .pagina{
-  display: none;  
+  margin-left: -99999px;
 }
 
 .fake-body {
@@ -1164,7 +1164,7 @@ margin-left: -150px;
     height: 309.4mm; 
     width: 215.9mm;
     width: 100%;
-    display: block;
+    margin-left: 0;
   }
 
   .imprimir{

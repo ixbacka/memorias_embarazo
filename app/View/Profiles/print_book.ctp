@@ -88,19 +88,21 @@
 
     <?php } ?>
 
-    setTimeout(function(){window.print()},6000);  
-  
   });
+	$(window).load(function() {
+
+    	window.print();  
+	  });
 
 </SCRIPT>
 <?php
       #Power by nicolaspar 2007 - especific proyect
       function get_date_spanish( $time, $part = false, $formatDate = '' ){
         #Declare n compatible arrays
-        $month = array("","enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiempre", "octubre", "noviembre", "diciembre");#n
+        $month = array("","enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre");#n
         $month_execute = "n"; #format for array month
 
-        $month_mini = array("","ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT","NOV","DIC");#n
+        $month_mini = array("","ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP","OCT","NOV","DIC");#n
         $month_mini_execute = "n"; #format for array month
 
         $day = array("domingo","lunes","martes","miércoles","jueves","viernes","sábado"); #w
@@ -138,6 +140,7 @@
   margin-left: -450px;
 }
 */
+
 <?php if($tema == 4){  ?>
   
 .print-page-title p{
@@ -150,7 +153,6 @@
 }
 
   <?php } ?>
-
 </STYLE>
 
 
@@ -1398,7 +1400,7 @@
               }
           ?>
 
-          <p>Hay una sensación muy dificil de describir, y es cuando sentí a mi bebé revoloteando en mi pancita, pero lo intentaré:</p>
+          <p>Hay una sensación muy difícil de describir, y es cuando sentí a mi bebé revoloteando en mi pancita...</p>
           <p>
             <label>Esta maravilla de la vida la sentí el </label>
             <span> <?php if($firstkick_date != ''){ echo $firstkick_date; } ?></span>
@@ -2821,6 +2823,6 @@
 <div class="fake-body">
   <div class="fake-marco"></div>
   <a href="#" class="btn print-btn" onClick="window.print()">imprimir</a>
-  <a href="http://momtomom.mx/apps/memorias_embarazo/profiles/cover" class="btn back-btn">regresar</a>
+  <a href="https://momtomom.mx/apps/memorias_embarazo/profiles/cover" class="btn back-btn">regresar</a>
 </div>
 
