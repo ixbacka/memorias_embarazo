@@ -61,6 +61,8 @@ input[type="text"], input[type="number"], textarea {
 #photo-back-1 {
   background-image: url(../img/tema3/marco_fondo.png);
 }
+.firstkick_photo_back{ top: 180px;}
+
 
 .pick_fb{
   background-image: url(../img/tema3/bt_elegir.png);

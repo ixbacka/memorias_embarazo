@@ -43,11 +43,12 @@
   </script>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <link href='//fonts.googleapis.com/css?family=Crafty+Girls' rel='stylesheet' type='text/css'>
+  <!--link href='//fonts.googleapis.com/css?family=Crafty+Girls' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Loved+by+the+King' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'> 
-  <link href='//fonts.googleapis.com/css?family=Waiting+for+the+Sunrise' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Waiting+for+the+Sunrise' rel='stylesheet' type='text/css'-->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <?php echo $this->Html->css('letras'); ?>
   <?php echo $this->Html->script('clickoutside'); ?>
   <?php //echo $this->Html->script('lightbox'); ?>
   <?php echo $this->Html->script('script'); ?>
@@ -92,14 +93,14 @@
   ?>
   <?php $profileid = $this->Session->read("User.id");
     $facebookid = $this->Session->read("User.uid");
-    $font = $this->Session->read("User.font");
-    if($font == 1){ echo $this->Html->css('letra1'); }
-    elseif($font == 2){ echo $this->Html->css('letra2'); }
-    elseif($font == 3){ echo $this->Html->css('letra3'); }
-    elseif($font == 4){ echo $this->Html->css('letra4'); }
-    elseif ($font == NULL || empty($font)) {
-      echo $this->Html->css('letra1');
-    }
+    //if( strpos($_SERVER['REQUEST_URI'], 'print_book') == FALSE ){      
+      $font = $this->Session->read("User.font");
+      if($font == 1){ echo $this->Html->css('letra1'); }
+      elseif($font == 2){ echo $this->Html->css('letra2'); }
+      elseif($font == 3){ echo $this->Html->css('letra3'); }
+      elseif($font == 4){ echo $this->Html->css('letra4'); }
+      elseif ($font == NULL || empty($font)) {  echo $this->Html->css('letra1'); }
+    //}
   ?>
   <style type="text/css">
     <?php if($tema == 2){ ?>

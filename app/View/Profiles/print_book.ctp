@@ -2006,15 +2006,15 @@
             <div class="opciones">
               <?php if($urdad == 1){ ?>
               <div class="opcion cf">
-                <label>Agobiado</label>
+                <span>Agobiado</span>
               </div>
               <?php } elseif($urdad == 2){ ?>
               <div class="opcion cf">
-                <label>Sobreprotector</label>
+                <span>Sobreprotector</span>
               </div>
               <?php } elseif($urdad == 3){ ?>
               <div class="opcion cf">
-                <label>Excluído</label>
+                <span>Excluído</span>
               </div>
               <?php } elseif($urdad == 4){ ?>
               <div class="opcion cf">
@@ -2032,15 +2032,15 @@
             <div class="opciones">
               <?php if($imiss == 1){ ?>
               <div class="opcion cf">
-                <label>Usar tacones</label>
+                <span>Usar tacones</span>
               </div>
               <?php } elseif($imiss == 2){ ?>
               <div class="opcion cf">
-                <label>Ropa interior normal</label>
+                <span>Ropa interior normal</span>
               </div>
               <?php } elseif($imiss == 3){ ?>
               <div class="opcion cf">
-                <label>Verme los pies</label>
+                <span>Verme los pies</span>
               </div>
             <?php } elseif($imiss != ""){  ?>
             <p class="otro">
@@ -2056,19 +2056,19 @@
             <div class="opciones">
               <?php if($theythink == 1){ ?>
               <div class="opcion cf">
-                <label>Es muy discreta para el mes en el que estoy</label>
+                <span>Es muy discreta para el mes en el que estoy</span>
               </div>
               <?php } elseif($theythink == 2){ ?>
               <div class="opcion cf">
-                <label>Corresponde a los meses que tengo de embarazo</label>
+                <span>Corresponde a los meses que tengo de embarazo</span>
               </div>
               <?php } elseif($theythink == 3){ ?>
               <div class="opcion cf">  
-                <label>Esta a punto de estallar</label>
+                <span>Esta a punto de estallar</span>
               </div>
               <?php } elseif($theythink == 4){ ?>
               <div class="opcion cf">
-                <label>¡Gigante! Parece de triates</label>
+                <span>¡Gigante! Parece de triates</span>
               </div>
               <?php } ?>
             </div>
