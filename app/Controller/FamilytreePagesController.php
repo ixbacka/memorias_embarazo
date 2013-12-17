@@ -101,11 +101,6 @@ public function beforeFilter() {
               'grandma_mom_img' => $fileName
             ));
             
-              if ($this->FamilytreePage->save()) {
-                //$this->Session->setFlash(__('The Cover photo has been saved'));
-              } else {
-                $this->Session->setFlash(__('The image photo could not be saved. Please, try again.'));
-              }
           }
 
         } elseif (!empty($this->request->data['FamilytreePage']['grandma_mom_url']['url_photo'])) {
@@ -131,12 +126,6 @@ public function beforeFilter() {
             $this->FamilytreePage->set(array( 
               'grandpa_dad_img' => $fileName
             ));
-            
-              if ($this->FamilytreePage->save()) {
-                //$this->Session->setFlash(__('The Cover photo has been saved'));
-              } else {
-                $this->Session->setFlash(__('The image photo could not be saved. Please, try again.'));
-              }
           }
 
         } elseif (!empty($this->request->data['FamilytreePage']['grandpa_dad_url']['url_photo'])) {
@@ -162,12 +151,6 @@ public function beforeFilter() {
             $this->FamilytreePage->set(array( 
               'grandpa_mom_img' => $fileName
             ));
-            
-              if ($this->FamilytreePage->save()) {
-                //$this->Session->setFlash(__('The Cover photo has been saved'));
-              } else {
-                $this->Session->setFlash(__('The image photo could not be saved. Please, try again.'));
-              }
           }
 
         } elseif (!empty($this->request->data['FamilytreePage']['grandpa_mom_url']['url_photo'])) {
@@ -194,11 +177,6 @@ public function beforeFilter() {
               'dad_img' => $fileName
             ));
             
-              if ($this->FamilytreePage->save()) {
-                //$this->Session->setFlash(__('The Cover photo has been saved'));
-              } else {
-                $this->Session->setFlash(__('The image photo could not be saved. Please, try again.'));
-              }
           }
 
         } elseif (!empty($this->request->data['FamilytreePage']['dad_url']['url_photo'])) {
@@ -225,12 +203,6 @@ public function beforeFilter() {
             $this->FamilytreePage->set(array( 
               'mom_img' => $fileName
             ));
-            
-              if ($this->FamilytreePage->save()) {
-                //$this->Session->setFlash(__('The Cover photo has been saved'));
-              } else {
-                $this->Session->setFlash(__('The image photo could not be saved. Please, try again.'));
-              }
           }
 
         } elseif (!empty($this->request->data['FamilytreePage']['mom_url']['url_photo'])) {
