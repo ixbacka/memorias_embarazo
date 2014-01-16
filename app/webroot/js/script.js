@@ -9,7 +9,7 @@ $(document).ready(function(){
 	return false;
 	});
 
-	
+	$( "#mayiadd-moments" ).attr( "oncontextmenu", "return false;" );
 
 	/* event for close the popup */
 	$("div.close").hover(

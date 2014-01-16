@@ -94,7 +94,7 @@ $(document).ready(function() {
         $month = array("","enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiempre", "octubre", "noviembre", "diciembre");#n
         $month_execute = "n"; #format for array month
 
-        $month_mini = array("","ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "DIC");#n
+        $month_mini = array("","ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC");#n
         $month_mini_execute = "n"; #format for array month
 
         $day = array("domingo","lunes","martes","miércoles","jueves","viernes","sábado"); #w
@@ -466,7 +466,7 @@ background-repeat: no-repeat;
         <p id="last_input">
           ¡Anota todos los detalles antes de que se te olviden!... ¿Cómo y dónde celebraste  saber que estabas embarazada? ¿Con quién compartiste el momento? ¿Cómo  reaccionaron tus familiares? ¿Cuál fue la primera compra que hiciste o regalo que te dieron para el bebé?
           <span>
-          <?php if(isset($congrats['CongratsPage']['details'])){ echo $congrats['CongratsPage']['details']; }?>
+          <?php if(isset($congrats['CongratsPage']['details'])){ echo nl2br($congrats['CongratsPage']['details']); }?>
           </span>
         </p>
 
@@ -785,7 +785,7 @@ background-repeat: no-repeat;
                 Mmmm! cuando se trata de antojos<br>
                 El antojito más raro que he tenido es: 
               </label>
-              <span><?php echo $weirdestcraving; ?></span>
+              <span><?php echo nl2br($weirdestcraving); ?></span>
             </p>
 
           </div>
@@ -1261,7 +1261,7 @@ background-repeat: no-repeat;
 
           <p>
             <label>y lo primero que sentí fue: </label>
-            <span><?php echo $first_feeling; ?></span>
+            <span><?php echo nl2br($first_feeling); ?></span>
           </p>
 
         </div>
@@ -1390,14 +1390,16 @@ background-repeat: no-repeat;
                 $date = new DateTime($source);
                 $letime = strtotime($source);
 
+                //$mes = get_date_spanish($source, true, 'month'); # return Enero
                 $mes = get_date_spanish($letime, true, 'month'); # return Enero
+
+    //echo 'el mes es::: '.$mes.' la fecha es::: '.$letime.' '.$source;
 
                 $dia = $date->format('d'); // 31.07.2012
                 $ano = $date->format('Y'); // 31-07-2012
 
                 $firstkick_date = $dia.' '.$mes.' '.$ano;
                 $monthi = ($date->format('m'))-1;
-                $montha = $date->format('m');
               } else{
                 $firstkick_date = '';
               }
@@ -1480,7 +1482,7 @@ background-repeat: no-repeat;
               }
           ?>
 
-          <p>Hay una sensación muy dificil de describir, y es cuando sentí a mi bebé revoloteando en mi pancita, pero lo intentaré:</p>
+          <p>Hay una sensación muy difícil de describir, y es cuando sentí a mi bebé revoloteando en mi pancita...</p>
           <p>
             <label>Esta maravilla de la vida la sentí el </label>
             <span> <?php if($firstkick_date != ''){ echo $firstkick_date; } ?></span>
@@ -1869,7 +1871,7 @@ background-repeat: no-repeat;
         <div class="book-form babyshowerPages" id="BabyshowerPageAddForm">
 
           <?php if(isset($bbyshower['BabyshowerPage']['bbyshower_date'])){ 
-        
+
                 $source = $bbyshower['BabyshowerPage']['bbyshower_date'];
                 $date = new DateTime($source);
                 $letime = strtotime($source);
@@ -2297,15 +2299,15 @@ background-repeat: no-repeat;
             } else{
               $iwas = '';
             }
-            if(isset($byebelly['ByebellyPage']['noneofabove'])){
-              $noneofabove = $byebelly['ByebellyPage']['noneofabove'];
-            } else{
-              $noneofabove = '';
-            }
             if(isset($byebelly['ByebellyPage']['experience'])){
               $experience = $byebelly['ByebellyPage']['experience'];
             } else{
               $experience = '';
+            }
+      if(isset($byebelly['ByebellyPage']['noneofabove'])){
+              $noneofabove = $byebelly['ByebellyPage']['noneofabove'];
+            } else{
+              $noneofabove = '';
             }
           ?>
 
@@ -2338,11 +2340,11 @@ background-repeat: no-repeat;
             </p>
             <p class="nota"> Ninguna de las anteriores: </p>
             <p class="opcion cf">
-              <input type="radio" name="data[ByebellyPage][itstarted]" value="1" <?php if($noneofabove == 1){ echo 'checked="checked"'; } ?> />
+              <input type="radio" name="data[ByebellyPage][noneofabove]" value="4" <?php if($noneofabove == 1){ echo 'checked="checked"'; } ?> />
               <label>Fue inducido</label>
             </p>
             <p class="opcion cf">
-              <input type="radio" name="data[ByebellyPage][itstarted]" value="2" <?php if($noneofabove == 2){ echo 'checked="checked"'; } ?> />
+              <input type="radio" name="data[ByebellyPage][noneofabove]" value="5" <?php if($noneofabove == 2){ echo 'checked="checked"'; } ?> />
               <label>Fue por ces&aacute;rea</label>
             </p>
           </div>
@@ -2358,14 +2360,14 @@ background-repeat: no-repeat;
           <div class="estaba">
             <label>Cuando comenzaron las contracciones yo estaba: </label>
             <span>
-              <?php if($iwas != ''){ echo $iwas; } ?>
+              <?php if($iwas != ''){ echo nl2br($iwas); } ?>
             </span>
           </div>
 
           <div class="exp">
             <label>La experiencia completa de la labor de parto: </label>
             <span> 
-              <?php if($experience != ''){ echo $experience; } ?>
+              <?php if($experience != ''){ echo nl2br($experience); } ?>
             </span>
           </div>
 
@@ -2608,7 +2610,7 @@ background-repeat: no-repeat;
           <p class="noche">
             <label> y la experiencia de la primera noche en casa es digna de contarse: </label>           
             <span>
-              <?php if($nighttime != ''){ echo $nighttime; } else { echo '<br>';} ?>
+              <?php if($nighttime != ''){ echo nl2br($nighttime); } else { echo '<br>';} ?>
             </span>
           </p>
         </div>
@@ -2656,7 +2658,7 @@ background-repeat: no-repeat;
           <p class="post-parto cf">
             <label> Notas despu&eacute;s de que llegaste y detalles que recordar: </label>
             <span>  
-              <?php if($notes != ''){ echo $notes; } else { echo '<br>'; } ?>
+              <?php if($notes != ''){ echo nl2br($notes); } else { echo '<br>'; } ?>
             </span>
           </p>
           
@@ -2692,7 +2694,7 @@ background-repeat: no-repeat;
 
           <p>
             <span>
-              <?php if($description != ''){ echo $description; } ?>
+              <?php if($description != ''){ echo nl2br($description); } ?>
             </span>
           </p>
           

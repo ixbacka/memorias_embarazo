@@ -32,7 +32,7 @@
 		  <?php	}
     } ?>
   </ul>
-  <?php if( findit(2,$momentos) ){ ?>
+  <?php if( findit(3,$momentos) ){ ?>
     <h3>Tercer Trimestre</h3>
   <?php } ?>
   <ul>

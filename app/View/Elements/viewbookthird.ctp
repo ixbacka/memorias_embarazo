@@ -37,7 +37,7 @@
 
                 <div id="<?php echo $photoback; ?>" class="ph-bg"></div>
                 <div id="photo_moment_view"></div>
-                <span id="momento_p"><?php echo $moment['MomentPage']['description']; ?></span>
+                <span id="momento_p"><?php echo nl2br($moment['MomentPage']['description']); ?></span>
 
               </div>
             
