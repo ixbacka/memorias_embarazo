@@ -1,3 +1,9 @@
+<style  type="text/css">
+label {
+  margin-left: 5px;
+}
+</style>
+
 <?php echo $this->element('menu', array( "trimestre" => 3, "pag" => "epilog")); ?>
 
 <a href="#" class="add_moment" id="my-moments">Moments</a>
