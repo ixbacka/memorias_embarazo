@@ -60,7 +60,7 @@ class NestingPagesController extends AppController {
 
         } elseif (!empty($this->request->data['NestingPage']['url_photo'])) {
           $avatar = imagecreatefromjpeg($this->request->data['NestingPage']['url_photo']);
-          $nameIMG = 'nesting_'.$uid.'.png';
+          $nameIMG =  $this->generateUniqueFilename('nesting_'.$uid.'.png');
           if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG)){
             //"El fichero existe"
             $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG);

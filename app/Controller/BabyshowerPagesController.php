@@ -62,6 +62,7 @@ class BabyshowerPagesController extends AppController {
         } elseif (!empty($this->request->data['BabyshowerPage']['url_photo_1'])) {
           $avatar = imagecreatefromjpeg($this->request->data['BabyshowerPage']['url_photo_1']);
           $nameIMG = 'bbyshower_1_'.$uid.'.png';
+          $nameIMG = $this->generateUniqueFilename('bbyshower_1_'.$uid.'.png');
           
           if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG)) {
             //"El fichero existe"
@@ -94,6 +95,9 @@ class BabyshowerPagesController extends AppController {
         } elseif (!empty($this->request->data['BabyshowerPage']['url_photo_2'])) {
           $avatar = imagecreatefromjpeg($this->request->data['BabyshowerPage']['url_photo_2']);
           $nameIMG = 'bbyshower_2_'.$uid.'.png';
+
+          $nameIMG = $this->generateUniqueFilename('bbyshower_2_'.$uid.'.png'); 
+  
           if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG)) {
             //"El fichero existe"
             $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG);

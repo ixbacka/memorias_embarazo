@@ -62,7 +62,9 @@ class BellymonthPagesController extends AppController {
 
         } elseif (!empty($this->request->data['BellymonthPage']['url_photo'])) {
           $avatar = imagecreatefromjpeg($this->request->data['BellymonthPage']['url_photo']);
-          $nameIMG = 'bellymonth_'.$uid.'.png';
+          //$nameIMG = 'bellymonth_'.$uid.'.png';
+          $nameIMG = $this->generateUniqueFilename('bellymonth_'.$uid.'.png'); 
+
           if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG)) {
             //"El fichero existe"
             $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG);

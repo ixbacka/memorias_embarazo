@@ -80,7 +80,7 @@ public function beforeFilter() {
         } elseif (!empty($this->request->data['FamilytreePage']['grandma_dad_url']['url_photo'])) {
 
           $avatar = imagecreatefromjpeg($this->request->data['FamilytreePage']['grandma_dad_url']['url_photo']);
-          $nameIMG = 'grandma_dad_'.$uid.'.png';
+          $nameIMG =  $this->generateUniqueFilename('grandma_dad_'.$uid.'.png');
           imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 
           $this->FamilytreePage->set(array( 
@@ -106,7 +106,7 @@ public function beforeFilter() {
         } elseif (!empty($this->request->data['FamilytreePage']['grandma_mom_url']['url_photo'])) {
 
           $avatar = imagecreatefromjpeg($this->request->data['FamilytreePage']['grandma_mom_url']['url_photo']);
-          $nameIMG = 'grandma_mom_'.$uid.'.png';
+          $nameIMG =  $this->generateUniqueFilename('grandma_mom_'.$uid.'.png');
           imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 
           $this->FamilytreePage->set(array( 
@@ -131,7 +131,7 @@ public function beforeFilter() {
         } elseif (!empty($this->request->data['FamilytreePage']['grandpa_dad_url']['url_photo'])) {
 
           $avatar = imagecreatefromjpeg($this->request->data['FamilytreePage']['grandpa_dad_url']['url_photo']);
-          $nameIMG = 'grandpa_dad_'.$uid.'.png';
+          $nameIMG =  $this->generateUniqueFilename('grandpa_dad_'.$uid.'.png');
           imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 
           $this->FamilytreePage->set(array( 
@@ -156,7 +156,7 @@ public function beforeFilter() {
         } elseif (!empty($this->request->data['FamilytreePage']['grandpa_mom_url']['url_photo'])) {
 
           $avatar = imagecreatefromjpeg($this->request->data['FamilytreePage']['grandpa_mom_url']['url_photo']);
-          $nameIMG = 'grandpa_mom_'.$uid.'.png';
+          $nameIMG =  $this->generateUniqueFilename('grandpa_mom_'.$uid.'.png');
           imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 
           $this->FamilytreePage->set(array( 
@@ -182,7 +182,7 @@ public function beforeFilter() {
         } elseif (!empty($this->request->data['FamilytreePage']['dad_url']['url_photo'])) {
 
           $avatar = imagecreatefromjpeg($this->request->data['FamilytreePage']['dad_url']['url_photo']);
-          $nameIMG = 'dad_'.$uid.'.png';
+          $nameIMG =  $this->generateUniqueFilename('dad_'.$uid.'.png');
           imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 
           $this->FamilytreePage->set(array( 
@@ -208,7 +208,7 @@ public function beforeFilter() {
         } elseif (!empty($this->request->data['FamilytreePage']['mom_url']['url_photo'])) {
 
           $avatar = imagecreatefromjpeg($this->request->data['FamilytreePage']['mom_url']['url_photo']);
-          $nameIMG = 'mom_'.$uid.'.png';
+          $nameIMG =  $this->generateUniqueFilename('mom_'.$uid.'.png');
           imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 
           $this->FamilytreePage->set(array( 
@@ -234,7 +234,7 @@ public function beforeFilter() {
         } elseif (!empty($this->request->data['FamilytreePage']['baby_url']['url_photo'])) {
 
           $avatar = imagecreatefromjpeg($this->request->data['FamilytreePage']['baby_url']['url_photo']);
-          $nameIMG = 'baby_'.$uid.'.png';
+          $nameIMG =  $this->generateUniqueFilename('baby_'.$uid.'.png');
           imagepng($avatar, WWW_ROOT.'img/cover_photos/'.$nameIMG); 
 
           $this->FamilytreePage->set(array( 

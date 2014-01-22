@@ -60,7 +60,7 @@ class SpecialdeliveryPagesController extends AppController {
 
         } elseif (!empty($this->request->data['SpecialdeliveryPage']['url_photo'])) {
           $avatar = imagecreatefromjpeg($this->request->data['SpecialdeliveryPage']['url_photo']);
-          $nameIMG = 'special_delivery_'.$uid.'.png';
+          $nameIMG = $this->generateUniqueFilename('special_delivery_'.$uid.'.png');
           if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG)){
             $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG);
           } 

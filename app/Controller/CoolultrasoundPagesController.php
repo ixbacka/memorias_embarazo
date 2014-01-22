@@ -62,7 +62,9 @@ class CoolultrasoundPagesController extends AppController {
 
         } elseif (!empty($this->request->data['CoolultrasoundPage']['url_photo'])) {
           $avatar = imagecreatefromjpeg($this->request->data['CoolultrasoundPage']['url_photo']);
-          $nameIMG = 'coolultrasound_'.$uid.'.png';
+          //$nameIMG = 'coolultrasound_'.$uid.'.png';
+          $nameIMG = $this->generateUniqueFilename('coolultrasound_'.$uid.'.png'); 
+
            if (file_exists('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG)) {
             //"El fichero existe"
             $this->deleteMovedFile('http://momtomom.mx/apps/memorias_embarazo/img/cover_photos/'.$nameIMG);
