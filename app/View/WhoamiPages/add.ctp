@@ -159,7 +159,7 @@
 				array('controller' => 'first_visit_pages', 'action' => 'add'),
 				array('class' => 'ant')
 			); ?>
-	    <div class="title_page">Qui&eacute;n Soy Yo...</div>
+	    <div class="title_page">Yo soy</div>
     	<?php echo $this->Html->link(
 			  'Siguiente',
 				array('controller' => 'sintom_pages', 'action' => 'add'),

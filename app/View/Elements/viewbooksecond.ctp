@@ -1,4 +1,4 @@
-<?php $momentos = $this->requestAction('moment_pages/index'); ?>
+<?php $momentos = $this->requestAction('moment_pages/index/'.$lauid); ?>
 <?php if(isset($momentos) && !empty($momentos)) {  ?>
 
 

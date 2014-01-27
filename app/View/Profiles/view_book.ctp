@@ -1183,11 +1183,11 @@ background-repeat: no-repeat;
       
       </div>
 
-     <div class="book-footer"></div>
+     <div class="book-footer"> </div>
 
   </div>
 
-  <?php if( findit(1, $momentos) ){ echo $this->element('viewbookfirst', array( "trimestre" => 1)); } ?>
+  <?php if( findit(1, $momentos) ){ echo $this->element('viewbookfirst', array( "trimestre" => 1, "lauid" => $this->request->params['pass'][0])); } ?>
 
   <div> 
       <div class="book-header"></div>

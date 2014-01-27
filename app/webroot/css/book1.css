@@ -1239,6 +1239,10 @@ height: 15px;
   padding-top: 20px;
 }
 /* EpilogPageAddForm  */
+#EpilogPageAddForm {
+height: 355px;
+}
+
 .epilogPages {
   background-image: url(../img/epilogo.png);
   background-size: 386px;

@@ -19,15 +19,15 @@ class MomentPagesController extends AppController {
     );	
 	}
 
-  public function index(){
-    $facebook = $this->Session->read("facebook");
-    $uid  = $facebook->getUser();
+  public function index($uid){
+    //$facebook = $this->Session->read("facebook");
+    //$uid  = $facebook->getUser();
 
-     if( $this->Session->read('User.uid') ){
-        $id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' =>  $this->Session->read('User.uid') ) ) );
-      } else {
+     //if( $this->Session->read('User.uid') ){
+      //  $id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' =>  $this->Session->read('User.uid') ) ) );
+      //} else {
         $id = $this->Profile->find('first', array( 'conditions' => array( 'Profile.uid' => $uid ) ) );
-      }
+      //}
 
       $leid = $id['Profile']['id'];
 
