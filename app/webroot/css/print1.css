@@ -102,7 +102,7 @@ padding: 0px 10px 0px 10px;
 }
 
 .print-page-title{
-  width: 300px;
+  width: 308px;
   height: 105px;
   position: absolute;
   top: 25px;
@@ -115,7 +115,7 @@ padding: 0px 10px 0px 10px;
 }
 
 .print-title-page{
-  width: 300px;
+  width: 308px;
   height: 105px;
 }
 
@@ -123,14 +123,14 @@ padding: 0px 10px 0px 10px;
   position: absolute;
   top: 28px;
   text-align: center;
-  width: 300px;
+  width: 308px;
   font-size: 25px;
 }
 
 .print-page-title span{
   position: absolute;
   top: 53px;
-  width: 300px;
+  width: 308px;
   text-align: center;
   left: 0;
   color: #fff;
@@ -485,6 +485,10 @@ input[name="data[IlovemybabyPage][heartbeat]"] {
   margin: 10px 46px;
 }
 
+.primerosenti {
+  width: 100%;
+  float: left;
+}
 /* childsex */
 
 #childsexform {
@@ -778,6 +782,7 @@ position: relative;
 #adiospancitaform .opcion {
     width: 315px;
 }
+
 .contacciones {
     width: 400px;
 }
@@ -795,9 +800,20 @@ position: relative;
 }
 
 #adiospancitaform .opciones {
-width: 372px;
+width: 100%;
 }
-
+#adiospancitaform .horas {
+width: 50%;
+}
+#adiospancitaform .estaba {
+width: 50%;
+float: left;
+height: 200px;
+}
+#adiospancitaform .exp {
+width: 100%;
+float: left;
+}
 .nota-foot {
     position: absolute;
     top: 520px;
@@ -938,10 +954,10 @@ z-index: -1;
 
 #epilogbackground {
     position: absolute;
-    z-index: -5;
-    width: 550px;
+    z-index: -10;
+    width: 600px;
     left: 50%;
-    margin-left: -275px;
+    margin-left: -300px;
 }
 #epilogform .opciones {
     width: 400px;
@@ -955,7 +971,7 @@ z-index: -1;
 }
 .post-parto {
     position: absolute;
-    top: 204px;
+    top: 134px;
     width: 350px;
     left: 50%;
     margin-left: -175px;

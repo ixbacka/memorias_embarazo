@@ -1174,7 +1174,7 @@
           </div>
           <?php //} ?>
 
-          <p>
+          <p class="primerosenti">
             <label>y lo primero que sentí fue: </label>
             <span><?php echo $first_feeling; ?></span>
           </p>

@@ -129,12 +129,38 @@ input[type="text"], input[type="number"], textarea {
 <?php if( isset($cover_pic)){ ?>
 
 .book-cover-photo{
+  background-image: url(../../img/<?php echo $temapath; ?>marco.png); ?>);
+  background-position: top left;
+  background-size: 280px 200px;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+}
+
+.book-cover-back{
+  background-image: url(../../img/cover_photos/<?php echo str_replace(' ', '%20', $cover_pic); ?>);
+  background-position:center center;
+    background-size: cover;
+  width: 235px;
+  height: 180px;
+  background-repeat: no-repeat;
+  position: relative;
+top: 203px;
+left: 92px;
+
+  text-indent: -9999px; 
+}
+/*
+
+.book-cover-photo{
   background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ', '%20', $cover_pic); ?>);
   background-position: top left, center center;
   background-size: 280px 200px,  235px 180px;
   background-repeat: no-repeat;
   text-indent: -9999px;
 }
+*/
+
+
 <?php } else { ?>
 .book-cover-photo {
 background-size: 280px 200px, 235px 168px;
@@ -145,26 +171,53 @@ background-repeat: no-repeat;
 
 <?php } if( isset($whoami['WhoamiPage']['photo']) ){ ?>
 .whoami_photo{
-  background-image: url(../../img/<?php echo $temapath; ?>marco_whoami.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$whoami['WhoamiPage']['photo']); ?>);
-  background-size: 190px, 170px 200px;
+  background-image: url(../../img/<?php echo $temapath; ?>marco_whoami.png);
+  width: 190px;
 }
+.whoami_photo_back{
+  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$whoami['WhoamiPage']['photo']); ?>);
+  width: 170px ;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+}
+
 <?php }?>
 
 
 
 <?php if( isset($ultrasound['UltrasoundPage']['first_photo']) ){ ?>
+
 #ultrasound_photo_1{
-  background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['first_photo']); ?>);
-  background-size: 200px, 162px 133px;
-  background-position: top left, center center;
+  background-image: url(../../img/<?php echo $temapath; ?>marco.png);
+  background-size: 200px;
+  width: 200px;
+  background-position: top left;
   background-repeat: no-repeat;   
+}
+#ultrasound_photo_1_back{
+  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['first_photo']); ?>);
+  background-size: cover;
+  width:  162px;
+  height: 133px;
+  background-position: center center;
+  background-repeat: no-repeat;   
+  position: relative;
 }
 <?php }?>
 
 <?php if( isset($ultrasound['UltrasoundPage']['second_photo']) ){ ?>
 #ultrasound_photo_2{
-  background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['second_photo']); ?>);
-  background-size: 200px, 162px 133px;
+  background-image: url(../../img/<?php echo $temapath; ?>marco.png)?>);
+  width: 200px;
+}
+#ultrasound_photo_2_back{
+  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$ultrasound['UltrasoundPage']['second_photo']); ?>);
+  background-size: cover;
+  width:162px;
+  height: 133px;
 }
 <?php }?>
 
@@ -172,31 +225,73 @@ background-repeat: no-repeat;
 
   <?php if( isset($belly['BellyPage']['photo1']) ){ ?>
   #photo1{
-    background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo1']); ?>);
+    background-image: url(../../img/<?php echo $temapath; ?>marco.png);
+  }
+ #photo1_back{
+    background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo1']); ?>);
+width: 169px;
+height: 125px;
+top: 22px;
+left: 11px;
+position: relative;
+float: left;
+background-size: cover;
   }
   <?php }?>
 
 
   <?php if( isset($belly['BellyPage']['photo2']) ){ ?>
   #photo2{
-    background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo2']); ?>);
+    background-image: url(../../img/<?php echo $temapath; ?>marco.png);
+  }
+#photo2_back{
+    background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo2']); ?>);
+position: relative;
+top: 21px;
+left: 57px;
+width: 169px;
+float: left;
+height: 124px;
+background-size: cover;
   }
   <?php }?>
 
 
   <?php if( isset($belly['BellyPage']['photo3']) ){ ?>
   #photo3{
-    background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo3']); ?>);
-    
+    background-image: url(../../img/<?php echo $temapath; ?>marco.png);
+  }
+#photo3_back{
+    background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$belly['BellyPage']['photo3']); ?>);    
+position: relative;
+top: 186px;
+left: 121px;
+width: 170px;
+height: 123px;
+background-size: cover;
   }
   <?php }?>
-
 
 <?php if( isset($firstkick['FirstkickPage']['photo']) ){ ?>
 
 .firstkick_photo{
-  background-image: url(../../img/<?php echo $temapath; ?>marco.png), url(../../img/cover_photos/<?php echo str_replace(' ','%20',$firstkick['FirstkickPage']['photo']); ?>);
-  background-size: 166px 210px, 143px 175px;
+  background-image: url(../../img/<?php echo $temapath; ?>marco.png);
+  background-size: 166px 210px;
+width: 166px;
+height: 210px;
+position: absolute;
+top: 86px;
+left: 0px;
+}
+
+.firstkick_photo_back{
+  background-image: url(../../img/cover_photos/<?php echo str_replace(' ','%20',$firstkick['FirstkickPage']['photo']); ?>);
+  width: 141px;
+height: 175px;
+background-size: cover;
+position: absolute;
+top: 101px;
+left: 9px;
 }
 
 <?php }?>
@@ -374,6 +469,7 @@ background-repeat: no-repeat;
 <div id="mybook">
   <div> 
      <div class="book-header"></div>
+     <div class="book-cover-back"></div>
      <div class="book-cover-photo"></div>
      <div class="book-footer"></div>
     
@@ -574,7 +670,7 @@ background-repeat: no-repeat;
         </div>
 
         <div class="book-form"> 
-
+          <div class="whoami_photo_back"> </div>
           <div class="whoami_photo"> </div>
 
           <?php
@@ -1493,6 +1589,7 @@ background-repeat: no-repeat;
             <span> <?php if($week != ''){ echo $week; } ?></span>
           </p>
           <div class="colL">
+            <div class="firstkick_photo_back"></div>
             <div class="firstkick_photo photo-v">
               
             </div>
