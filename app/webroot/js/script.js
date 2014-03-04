@@ -349,7 +349,9 @@ $(document).ready(function(){
 
 	
 
-
+  $('input[type="submit"]').click( function() {
+    $('body').addClass('loading');
+  });
 
 });// jQuery End
 
