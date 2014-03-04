@@ -74,6 +74,7 @@ function findit( $ele , $momentos){
 $(document).ready(function() {
   $(':radio').disabled=true;
   $(':input').disabled=true;
+  $(':input[type="number"]').disabled=true;
 
   // Handler for .ready() called.
   $('#mybook').booklet({

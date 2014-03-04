@@ -127,7 +127,7 @@
   <a href="#" class="add_moment" id="my-moments">Moments</a>
   <div id="moments_popup">
     <div id="popup_moments"> <!--your content start-->
-      <?php echo $this->element('moments'); ?>
+          <?php echo $this->element('moments', array( "profyid" => $profileid)); ?>
       <?php // echo $this->Html->link(
         //     'Agrega un momento',
         //     array('controller' => 'moment_pages', 'action' => 'add',0,1)

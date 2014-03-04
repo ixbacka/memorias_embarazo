@@ -50,7 +50,7 @@ $(document).ready(function(){
 
     <div id="moments_popup">
         <div id="popup_moments"> <!--your content start-->
-          <?php echo $this->element('moments'); ?>
+          <?php echo $this->element('moments', array( "profyid" => $profileid)); ?>
           <?php 
             // echo $this->Html->link(
             //     'Agrega un momento',

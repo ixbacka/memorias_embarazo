@@ -436,7 +436,7 @@ h3{
 width: 140px;
 height: 140px;
 float: left;
-margin-bottom: 40px;
+margin-bottom: 20px;
 }
 
 .opcion label{
@@ -465,7 +465,11 @@ margin-bottom: 40px;
     background-image: url(http://momtomom.mx/apps/memorias_embarazo/img/mar.png);
 }
 
-
+#ilovemybaby span:last-child {
+display: inline-block;
+margin-top: 8px;
+margin-left: -3px;
+}
 
 .bebes{
   
@@ -637,6 +641,7 @@ top: 239px;
   position: absolute;
   top: 200px;
   text-align: center;
+  left: 0px;
 }
 
 #BellymonthPageAddForm .miss {
@@ -870,6 +875,34 @@ position: absolute;
 #BabyshowerPageAddForm #photo1, #BabyshowerPageAddForm #photo2 {
   background-image: url(../img/marco.png);
 }
+
+#photo1_back {
+width: 171px;
+height: 130px;
+z-index: -1;
+position: absolute;
+top: 20px;
+left: 10px;
+}
+
+#photo2_back {
+width: 170px;
+height: 128px;
+z-index: -1;
+position: absolute;
+top: 21px;
+left: 226px;
+}
+
+#photo3_back {
+width: 172px;
+height: 130px;
+z-index: -1;
+position: absolute;
+top: 184px;
+left: 120px;
+}
+
 
 #photo1_back_{
   background-image: url(../img/marco_fondo.png);
@@ -1132,6 +1165,11 @@ width: 232px;
   margin-bottom: 30px;
   width: 200px;
   float: left;
+}
+
+#ByebellyPageAddForm .estaba span {
+width: 185px;
+display: block;
 }
 
 #ByebellyPageAddForm  .estaba input {

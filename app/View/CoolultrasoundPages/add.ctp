@@ -220,7 +220,7 @@ function readURL(input) {
 
     <div id="moments_popup">
         <div id="popup_moments"> <!--your content start-->
-          <?php echo $this->element('moments'); ?>
+          <?php echo $this->element('moments', array( "profyid" => $profileid)); ?>
           <a href="3" class="addnew-momento" id="mayiadd-moments" >Agrega un momento</a>
         </div> <!--your content end-->
     </div> <!--toPopup end-->
@@ -309,23 +309,23 @@ function readURL(input) {
       } ?>
       <div class="opciones">
         <div class="opcion cf">
-          <input type="radio" name="data[CoolultrasoundPage][urdad]" value="1" <?php if($urdad == 1){ echo 'checked="checked"'; } ?> />
+          <input type="radio" name="data[CoolultrasoundPage][urdad]" value="1" <?php if($urdad == 1 && $urdadsays == ""){ echo 'checked="checked"'; } ?> />
           <label>Agobiado</label>
         </div>
         <div class="opcion cf">
-          <input type="radio" name="data[CoolultrasoundPage][urdad]" value="2" <?php if($urdad == 2){ echo 'checked="checked"'; } ?> />
+          <input type="radio" name="data[CoolultrasoundPage][urdad]" value="2" <?php if($urdad == 2 && $urdadsays == ""){ echo 'checked="checked"'; } ?> />
           <label>Sobreprotector</label>
         </div>
         <div class="opcion cf">
-          <input type="radio" name="data[CoolultrasoundPage][urdad]" value="3" <?php if($urdad == 3){ echo 'checked="checked"'; } ?> />
+          <input type="radio" name="data[CoolultrasoundPage][urdad]" value="3" <?php if($urdad == 3 && $urdadsays == ""){ echo 'checked="checked"'; } ?> />
           <label>Excluido</label>
         </div>
         <div class="opcion cf">
-          <input type="radio" name="data[CoolultrasoundPage][urdad]" value="4" <?php if($urdad == 4){ echo 'checked="checked"'; } ?> />
+          <input type="radio" name="data[CoolultrasoundPage][urdad]" value="4" <?php if($urdad == 4 && $urdadsays == ""){ echo 'checked="checked"'; } ?> />
           <label>Todas las anteriores</label>
         </div>
       </div>
-      <input type="text" name="data[CoolultrasoundPage][urdadsays]" value="<?php if($urdadsays != ""){ echo $urdadsays; } ?>" />
+      <span>Otro</span><input type="text" name="data[CoolultrasoundPage][urdadsays]" value="<?php if($urdadsays != ""){ echo $urdadsays; } ?>" />
     </div>
     <div class="bloque tres">
       <p>Las cosas que m&aacute;s extraño: </p>

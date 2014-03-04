@@ -1,4 +1,4 @@
-<?php $momentos = $this->requestAction('moment_pages/index'); ?>
+<?php $momentos = $this->requestAction('moment_pages/index/'.$profyid); ?>
 <?php if(isset($momentos) && !empty($momentos)) {  ?>
   <?php if( findit(1, $momentos) ){ ?>
     <h3>Primer Trimestre</h3>

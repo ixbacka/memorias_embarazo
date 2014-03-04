@@ -224,7 +224,7 @@ function readURL(input) {
 
     <div id="moments_popup">
         <div id="popup_moments"> <!--your content start-->
-          <?php echo $this->element('moments'); ?>
+          <?php echo $this->element('moments', array( "profyid" => $profileid)); ?>
           <a href="2" class="addnew-momento" id="mayiadd-moments" >Agrega una memoria</a>
         </div> <!--your content end-->
     </div> <!--toPopup end-->
