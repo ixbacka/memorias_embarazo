@@ -277,7 +277,7 @@ function readURL(input) {
     ?>
       <p class="eres">
         <label> Eres: </label>
-        <input type="text" name="data[SpecialdeliveryPage][uare]" value="<?php if($uare != ''){ echo $uare; } ?>"/>
+        <input type="text" maxlength="35" name="data[SpecialdeliveryPage][uare]" value="<?php if($uare != ''){ echo $uare; } ?>"/>
       </p>
       <?php
         if(isset($special['SpecialdeliveryPage']['hour'])){

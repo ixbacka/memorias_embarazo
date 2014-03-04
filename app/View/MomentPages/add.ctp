@@ -168,7 +168,7 @@
         <div class="pick_fb">Elegir de Facebook</div>
         <?php echo $this->Form->file('photo', array('class' => 'upload_bt', 'onchange' => 'readURL(this);' )); ?>
       </div>
-      <textarea class="mom-desc" name="data[MomentPage][description]"><?php if($description != ''){ echo $description; }?></textarea>
+      <textarea maxlength="220" class="mom-desc" name="data[MomentPage][description]"><?php if($description != ''){ echo $description; }?></textarea>
       <?php echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));
         echo $this->Form->input('trimester', array('type' => 'hidden', 'value' => $trim));
         echo $this->Form->input('id', array('type' => 'hidden', 'value' => $id_));
