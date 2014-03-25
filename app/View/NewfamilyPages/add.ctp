@@ -216,9 +216,7 @@ function readURL(input) {
         $description = '';
       }
     ?>
-	<textarea name="date[NewfamilyPage][description]">
-		<?php if($description != ''){ echo $description; } ?>
-	</textarea>
+	<textarea name="date[NewfamilyPage][description]" maxlength="650"><?php if($description != '') { echo $description; } ?></textarea>
 
 	<?php
 		echo $this->Form->input('profile_id', array('type' => 'hidden', 'value' => $profileid));

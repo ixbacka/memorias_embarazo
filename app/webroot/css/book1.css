@@ -206,10 +206,17 @@ height: 245px;
   top: 115px;
 }
 
+.weirdest-craving label {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
 .weirdest-craving span {
-  display: inline-block;
+  display: block;
   margin: 10px 0;
   padding: 0;
+  text-align: left;
 }
 
 .grossnes{
@@ -552,7 +559,7 @@ top: 239px;
 
 #FirstkickPageAddForm .opcion label {
   line-height: 12px;
-  margin-left: 6px;
+  margin-left: -2px;
   padding: 0;
 }
 
@@ -1324,12 +1331,13 @@ height: 355px;
   left: 113px;
 }
 
-#NewfamilyPageAddForm p{
+#NewfamilyPageAddForm p {
   position: absolute;
-  top: 215px;
-  width: 200px;
+  top: 205px;
+  width: 300px;
   text-align: left;
-  left: 113px;
+  left: 60px;
+  line-height: 1;
 }
 
 #photo-back-1{
